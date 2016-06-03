@@ -1,9 +1,9 @@
 # [Anlama ve Keşfetme](/understand-explore/what-is-ata)
-# [Planlama ve Tasarlama](/plan-design/ata-capacity-planning)
-# [Dağıtma ve Kullanma](/deploy-use/install-ata)
-# [Sorunları Giderme](/troubleshoot/troubleshooting-ata-using-logs)
+# [Planlama ve Tasarlama](/plan-design/ata-architecture)
+# [Dağıtma ve Kullanma](/deploy-use/preinstall-ata)
+# [Sorunları Gider](/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO1-->
 
 
