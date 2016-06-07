@@ -9,9 +9,9 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 18
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 29
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 28
 [ In Sync Handback Files ](#insync-handback-success-list)| 3
-[ Ignored Files ](#ignored-list)| 479
+[ Ignored Files ](#ignored-list)| 480
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
 
@@ -65,7 +65,6 @@
  [ATADocs\DeployUse\modifying-ata-config-dcpassword.md](https://github.com/Microsoft/ATADocs-pr/blob/e1c5b6e0ea8a9ad06c19d050a1edf99813f26d72/ATADocs/DeployUse/modifying-ata-config-dcpassword.md) | OutofSyncHandedBackSuccess | [Details](#f01e0ddc665e5b0620e023b8b7bb06e581092316115)
  [ATADocs\DeployUse\modifying-ata-config-iiscert.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/modifying-ata-config-iiscert.md) | OutofSyncHandedBackSuccess | [Details](#29080677d0a2afe12f8d872bcf32ba8b03e93117116)
  [ATADocs\DeployUse\modifying-ata-configuration.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/modifying-ata-configuration.md) | OutofSyncHandedBackSuccess | [Details](#6040bba509af74f553e038ffd308c784efd97f29117)
- [ATADocs\DeployUse\setting-ata-alerts.md](https://github.com/Microsoft/ATADocs-pr/blob/283d8383a6e7674e3a9fba06f3a8f73dcb038ea2/ATADocs/DeployUse/setting-ata-alerts.md) | OutofSyncHandedBackSuccess | [Details](#36e55ceddbfa5ef72c29f9077fab373fdf1e5125120)
  [ATADocs\DeployUse\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/71c28b976639ffc67638ab2d4df3ef0d862da4b2/ATADocs/DeployUse/TOC.md) | OutofSyncHandedBackSuccess | [Details](#76dd524dd48e6d79029e308c6c77440b0e4e0b27122)
  [ATADocs\DeployUse\working-with-detection-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/f2c8aeb67a0fa6034513d1c5d35c7acec4e8dbf1/ATADocs/DeployUse/working-with-detection-settings.md) | OutofSyncHandedBackSuccess | [Details](#e4816f70b26843d4ee3c15d9aefb7e64139ab5d5125)
  [ATADocs\DeployUse\working-with-suspicious-activities.md](https://github.com/Microsoft/ATADocs-pr/blob/f2c8aeb67a0fa6034513d1c5d35c7acec4e8dbf1/ATADocs/DeployUse/working-with-suspicious-activities.md) | OutofSyncHandedBackSuccess | [Details](#90386f9abae36811a6543e9ef4bd1b17bfaece79126)
@@ -188,6 +187,7 @@
  [ATADocs\DeployUse\media\wef_ad-event-log-reader-popup.png](https://github.com/Microsoft/ATADocs-pr/blob/51b6e578f9367b1baef0f6fb47165aabff6f8045/ATADocs/DeployUse/media/wef_ad-event-log-reader-popup.png) | Ignored | [Details](#ae46394f83c94ae0f48d6a7d9a7cd6d18b58adf0108)
  [ATADocs\DeployUse\media\wef_http.png](https://github.com/Microsoft/ATADocs-pr/blob/51b6e578f9367b1baef0f6fb47165aabff6f8045/ATADocs/DeployUse/media/wef_http.png) | Ignored | [Details](#d4d9ac890b80451972fbe194c30577b0655be0cd110)
  [ATADocs\DeployUse\media\wef_subscription-prop.png](https://github.com/Microsoft/ATADocs-pr/blob/51b6e578f9367b1baef0f6fb47165aabff6f8045/ATADocs/DeployUse/media/wef_subscription-prop.png) | Ignored | [Details](#9b8562feafa85324c9a6e3e9020450535df920c6111)
+ [ATADocs\DeployUse\setting-ata-alerts.md](https://github.com/Microsoft/ATADocs-pr/blob/51b6e578f9367b1baef0f6fb47165aabff6f8045/ATADocs/DeployUse/setting-ata-alerts.md) | Ignored | [Details](#6fc3c03e0933203437b0b3885f0b9f19539fed05120)
  [ATADocs\docfx.json](https://github.com/Microsoft/ATADocs-pr/blob/51b6e578f9367b1baef0f6fb47165aabff6f8045/ATADocs/docfx.json) | Ignored | [Details](#158500e561ef65c6163007f55591740d56f942e5127)
  [ATADocs\Image\150x150.png](https://github.com/Microsoft/ATADocs-pr/blob/51b6e578f9367b1baef0f6fb47165aabff6f8045/ATADocs/Image/150x150.png) | Ignored | [Details](#84421bf7f4ba657e685239fb27f4798a46485f71128)
  [ATADocs\Image\ATA_center_fullpartial.png](https://github.com/Microsoft/ATADocs-pr/blob/51b6e578f9367b1baef0f6fb47165aabff6f8045/ATADocs/Image/ATA_center_fullpartial.png) | Ignored | [Details](#6349405da0cc5437d4907c1b377ebe448ef3810d195)
@@ -2058,19 +2058,16 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='36e55ceddbfa5ef72c29f9077fab373fdf1e5125120'></a> Source: [ATADocs\DeployUse\setting-ata-alerts.md](https://github.com/Microsoft/ATADocs-pr/blob/283d8383a6e7674e3a9fba06f3a8f73dcb038ea2/ATADocs/DeployUse/setting-ata-alerts.md)
-* Status: OutofSyncHandedBackSuccess
+##### <a name='6fc3c03e0933203437b0b3885f0b9f19539fed05120'></a> Source: [ATADocs\DeployUse\setting-ata-alerts.md](https://github.com/Microsoft/ATADocs-pr/blob/51b6e578f9367b1baef0f6fb47165aabff6f8045/ATADocs/DeployUse/setting-ata-alerts.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.tr-tr.xlf](https://github.com/Microsoft/EM.handoff/blob/bff914209ac6cf3bd7c58154161cedde58c9b3ba/ol-handoff/Microsoft/ATADocs-pr.tr-tr/master/setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.tr-tr.xlf)
-* Handoff Datetime: 2016-05-18 17:42:56
-* Handoff Reason: Include
-* Archive File: [setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.tr-tr.xlf](https://github.com/Microsoft/EM.handoff/blob/fbddb9a0d15cdc7c6649bdf567dea20f30c1f346/ol-handoff/Microsoft/ATADocs-pr.tr-tr/master/archive/setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.tr-tr.xlf)
-* Archive Datetime: 2016-06-02 02:43:24
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [ATADocs\DeployUse\setting-ata-alerts.md](https://github.com/Microsoft/ATADocs-pr.tr-tr/blob/0becff77431da5ea1b132c923b881a7777173699/ATADocs/DeployUse/setting-ata-alerts.md)
-* Current Handback File: [setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.tr-tr.xlf](https://github.com/Microsoft/EM.handback/blob/aa7375b034f1a7300af6168097dd14a8c712e07c/ol-handback/Microsoft/ATADocs-pr.tr-tr/master/setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.tr-tr.xlf)
-* Current Handback Datetime: 2016-05-25 12:16:22
 * [Back to Top](#report-top)
 
 ##### <a name='69407ab44e09c309fd19cac34ca0c89f942c8095121'></a> Source: [ATADocs\DeployUse\setting-syslog-email-server-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/f2c8aeb67a0fa6034513d1c5d35c7acec4e8dbf1/ATADocs/DeployUse/setting-syslog-email-server-settings.md)
