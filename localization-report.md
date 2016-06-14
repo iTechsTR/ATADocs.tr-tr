@@ -7,10 +7,10 @@
 [ Handoff Failed Files ](#handoff-failed-list)| 0
 [ Handoff Success Files ](#handoff-success-list)| 1
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 1
+[ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 1
-[ In Sync Handback Files ](#insync-handback-success-list)| 48
+[ In Sync Handback Files ](#insync-handback-success-list)| 49
 [ Ignored Files ](#ignored-list)| 479
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -23,9 +23,6 @@
 ## <a name='archive-failed-list'></a> Archive Failed File List
 
 ## <a name='archive-success-list'></a> Archive Success File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [ATADocs\DeployUse\working-with-ata-console.md](https://github.com/Microsoft/ATADocs-pr/blob/283d8383a6e7674e3a9fba06f3a8f73dcb038ea2/ATADocs/DeployUse/working-with-ata-console.md) | ArchivedSuccess | [Details](#ce3f8bd462a560c505b5430ff730782e1f016974124)
 
 ## <a name='handback-failed-list'></a> Handback Failed File List
 
@@ -61,6 +58,7 @@
  [ATADocs\DeployUse\setting-syslog-email-server-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/f2c8aeb67a0fa6034513d1c5d35c7acec4e8dbf1/ATADocs/DeployUse/setting-syslog-email-server-settings.md) | InSyncHandedBackSuccess | [Details](#69407ab44e09c309fd19cac34ca0c89f942c8095121)
  [ATADocs\DeployUse\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/71c28b976639ffc67638ab2d4df3ef0d862da4b2/ATADocs/DeployUse/TOC.md) | InSyncHandedBackSuccess | [Details](#76dd524dd48e6d79029e308c6c77440b0e4e0b27122)
  [ATADocs\DeployUse\validate-port-mirroring.md](https://github.com/Microsoft/ATADocs-pr/blob/954fa96db02f15965fc9c2f1ef09d50f21d8ca74/ATADocs/DeployUse/validate-port-mirroring.md) | InSyncHandedBackSuccess | [Details](#965032eec59f602c3d012eb596d1ebfdca309433123)
+ [ATADocs\DeployUse\working-with-ata-console.md](https://github.com/Microsoft/ATADocs-pr/blob/283d8383a6e7674e3a9fba06f3a8f73dcb038ea2/ATADocs/DeployUse/working-with-ata-console.md) | InSyncHandedBackSuccess | [Details](#ce3f8bd462a560c505b5430ff730782e1f016974124)
  [ATADocs\DeployUse\working-with-detection-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/f2c8aeb67a0fa6034513d1c5d35c7acec4e8dbf1/ATADocs/DeployUse/working-with-detection-settings.md) | InSyncHandedBackSuccess | [Details](#e4816f70b26843d4ee3c15d9aefb7e64139ab5d5125)
  [ATADocs\DeployUse\working-with-suspicious-activities.md](https://github.com/Microsoft/ATADocs-pr/blob/f2c8aeb67a0fa6034513d1c5d35c7acec4e8dbf1/ATADocs/DeployUse/working-with-suspicious-activities.md) | InSyncHandedBackSuccess | [Details](#90386f9abae36811a6543e9ef4bd1b17bfaece79126)
  [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/5cc0a757bf0983eb4026e641f802a111b3d0e0e1/ATADocs/index.md) | InSyncHandedBackSuccess | [Details](#54bb8923b2033f36a7682a19fbd45107ca97d432221)
@@ -2062,15 +2060,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='ce3f8bd462a560c505b5430ff730782e1f016974124'></a> Source: [ATADocs\DeployUse\working-with-ata-console.md](https://github.com/Microsoft/ATADocs-pr/blob/283d8383a6e7674e3a9fba06f3a8f73dcb038ea2/ATADocs/DeployUse/working-with-ata-console.md)
-* Status: ArchivedSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [ATADocs\DeployUse\working-with-ata-console.md](https://github.com/Microsoft/ATADocs-pr.tr-tr/blob/2f45ffe8fd24feaf5bce56188fba67394de72b53/ATADocs/DeployUse/working-with-ata-console.md)
 * Handoff File: [working-with-ata-console.3cae6c5a1945b7c0d2da65952fc41d520e9ae029.tr-tr.xlf](https://github.com/Microsoft/EM.handoff/blob/bff914209ac6cf3bd7c58154161cedde58c9b3ba/ol-handoff/Microsoft/ATADocs-pr.tr-tr/master/working-with-ata-console.3cae6c5a1945b7c0d2da65952fc41d520e9ae029.tr-tr.xlf)
 * Handoff Datetime: 2016-05-18 17:42:56
 * Handoff Reason: Include
 * Archive File: [working-with-ata-console.3cae6c5a1945b7c0d2da65952fc41d520e9ae029.tr-tr.xlf](https://github.com/Microsoft/EM.handoff/blob/fbddb9a0d15cdc7c6649bdf567dea20f30c1f346/ol-handoff/Microsoft/ATADocs-pr.tr-tr/master/archive/working-with-ata-console.3cae6c5a1945b7c0d2da65952fc41d520e9ae029.tr-tr.xlf)
 * Archive Datetime: 2016-06-02 02:43:24
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [working-with-ata-console.3cae6c5a1945b7c0d2da65952fc41d520e9ae029.tr-tr.xlf](https://github.com/Microsoft/EM.handback/blob/099d4d2a0b0eb72802406d92ac4b7a6f84e1402b/ol-handback/Microsoft/ATADocs-pr.tr-tr/master/working-with-ata-console.3cae6c5a1945b7c0d2da65952fc41d520e9ae029.tr-tr.xlf)
+* Handback Datetime: 2016-06-14 17:58:53
 * [Back to Top](#report-top)
 
 ##### <a name='e4816f70b26843d4ee3c15d9aefb7e64139ab5d5125'></a> Source: [ATADocs\DeployUse\working-with-detection-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/f2c8aeb67a0fa6034513d1c5d35c7acec4e8dbf1/ATADocs/DeployUse/working-with-detection-settings.md)

@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [ATADocs\DeployUse\working-with-ata-console.md](https://github.com/Microsoft/ATADocs-pr/blob/283d8383a6e7674e3a9fba06f3a8f73dcb038ea2/ATADocs/DeployUse/working-with-ata-console.md) | InSyncHandedBackSuccess | [Details](#ce3f8bd462a560c505b5430ff730782e1f016974124)
 
 ## Item Details
+##### <a name='ce3f8bd462a560c505b5430ff730782e1f016974124'></a> Source: [ATADocs\DeployUse\working-with-ata-console.md](https://github.com/Microsoft/ATADocs-pr/blob/283d8383a6e7674e3a9fba06f3a8f73dcb038ea2/ATADocs/DeployUse/working-with-ata-console.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [ATADocs\DeployUse\working-with-ata-console.md](https://github.com/Microsoft/ATADocs-pr.tr-tr/blob/2f45ffe8fd24feaf5bce56188fba67394de72b53/ATADocs/DeployUse/working-with-ata-console.md)
+* Handoff File: [working-with-ata-console.3cae6c5a1945b7c0d2da65952fc41d520e9ae029.tr-tr.xlf](https://github.com/Microsoft/EM.handoff/blob/bff914209ac6cf3bd7c58154161cedde58c9b3ba/ol-handoff/Microsoft/ATADocs-pr.tr-tr/master/working-with-ata-console.3cae6c5a1945b7c0d2da65952fc41d520e9ae029.tr-tr.xlf)
+* Handoff Datetime: 2016-05-18 17:42:56
+* Handoff Reason: Include
+* Archive File: [working-with-ata-console.3cae6c5a1945b7c0d2da65952fc41d520e9ae029.tr-tr.xlf](https://github.com/Microsoft/EM.handoff/blob/fbddb9a0d15cdc7c6649bdf567dea20f30c1f346/ol-handoff/Microsoft/ATADocs-pr.tr-tr/master/archive/working-with-ata-console.3cae6c5a1945b7c0d2da65952fc41d520e9ae029.tr-tr.xlf)
+* Archive Datetime: 2016-06-02 02:43:24
+* Handback File: [working-with-ata-console.3cae6c5a1945b7c0d2da65952fc41d520e9ae029.tr-tr.xlf](https://github.com/Microsoft/EM.handback/blob/099d4d2a0b0eb72802406d92ac4b7a6f84e1402b/ol-handback/Microsoft/ATADocs-pr.tr-tr/master/working-with-ata-console.3cae6c5a1945b7c0d2da65952fc41d520e9ae029.tr-tr.xlf)
+* Handback Datetime: 2016-06-14 17:58:53
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
