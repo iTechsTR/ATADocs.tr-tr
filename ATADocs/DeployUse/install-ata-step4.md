@@ -32,7 +32,9 @@ ms.suite: ems
 [5. Adım »](install-ata-step5.md)
 
 ## 4. Adım ATA Gateway’i yükleme
-ATA Gateway’i yüklemeden önce, bağlantı noktası yansıtmanın düzgün yapılandırıldığını ve ATA Gateway’i etki alanı denetleyicilerinden gelen ve giden trafiği görebildiğini doğrulayın. Daha fazla bilgi için bkz. [Bağlantı noktası yansıtmayı doğrulama](/advanced-threat-analytics/plan-design/validate-port-mirroring).
+
+Ayrılmış bir sunucuya ATA Gateway’i yüklemeden önce, bağlantı noktası yansıtmanın düzgün yapılandırıldığını ve ATA Gateway’i etki alanı denetleyicilerinden gelen ve giden trafiği görebildiğini doğrulayın. Daha fazla bilgi için bkz. [Bağlantı noktası yansıtmayı doğrulama](validate-port-mirroring.md).
+
 
 > [!IMPORTANT]
 > [KB2919355](http://support.microsoft.com/kb/2919355/)’in yüklendiğinden emin olun.  Düzeltmenin yüklenip yüklenmediğini denetlemek için aşağıdaki PowerShell cmdlet’ini çalıştırın:
@@ -41,9 +43,10 @@ ATA Gateway’i yüklemeden önce, bağlantı noktası yansıtmanın düzgün ya
 
 ATA Gateway sunucusunda aşağıdaki adımları gerçekleştirin.
 
-1.  Zip dosyasından dosyaları ayıklayın.
+1.  Zip dosyasından dosyaları ayıklayın. 
+> [!NOTE] Doğrudan zip dosyasından yükleme başarısız olur.
 
-2.  Yükseltilmiş bir komut isteminde Microsoft ATA Gateway Setup.exe’yi çalıştırın ve kurulum sihirbazını izleyin.
+2.  Yükseltilmiş bir komut isteminde **Microsoft ATA Gateway Setup.exe**’yi çalıştırın ve kurulum sihirbazını izleyin.
 
 3.  **Hoş Geldiniz** sayfasında dilinizi seçin ve **İleri**’ye tıklayın..
 
@@ -51,7 +54,7 @@ ATA Gateway sunucusunda aşağıdaki adımları gerçekleştirin.
 
     ![ATA Gateway yapılandırmasının resmi](media/ATA-Gateway-Configuration.JPG)
 
-    |Alan|Açıklama|Notlar|
+    |Alan|Açıklama|Açıklamalar|
     |---------|---------------|------------|
     |Yükleme Yolu|Bu, ATA Gateway’in yükleneceği konumdur. Varsayılan olarak %programfiles%\Microsoft Advanced Threat Analytics\Gateway yoludur.|Varsayılan değeri olduğu gibi bırakın.|
     |ATA Gateway Hizmeti SSL sertifikası|Bu, ATA Gateway tarafından kullanılacak olan sertifikadır.|Yalnızca laboratuvar ortamları için otomatik olarak imzalanan bir sertifika kullanın.|
@@ -61,7 +64,7 @@ ATA Gateway sunucusunda aşağıdaki adımları gerçekleştirin.
     -   KB 3047154
 
         > [!IMPORTANT]
-        > -   KB 3047154’ü sanallaştırma ana bilgisayarına yüklemeyin. Bu, bağlantı noktası yansıtma işleminin düzgün çalışmayı durdurmasına neden olur.
+        > -   KB 3047154’ü bir sanallaştırma konağına yüklemeyin (sanallaştırmayı çalıştıran konak; sanal makinede çalıştırılmasında sorun yoktur). Bu, bağlantı noktası yansıtma işleminin düzgün çalışmayı durdurmasına neden olur. 
         > -   ATA Gateway’e Message Analyzer, Wireshark veya başka bir ağ yakalama yazılımı yüklemeyin. Ağ trafiğini yakalamanız gerekiyorsa, Microsoft Network Monitor 3.4’ü yükleyin ve kullanın.
 
     -   ATA Gateway hizmeti
@@ -70,7 +73,7 @@ ATA Gateway sunucusunda aşağıdaki adımları gerçekleştirin.
 
     -   Özel Performans İzleyicisi veri koleksiyonu kümesi
 
-5.  Yükleme tamamlandıktan sonra, tarayıcınızı açmak ve ATA Konsolu’nda oturum açmak için **Başlat**’a tıklayın.
+5.  Yükleme tamamlandıktan sonra, ATA Gateway için, **Başlat**’a tıklayarak tarayıcınızı açın ve ATA Konsolu’nda oturum açın, ATA Lightweight Gateway için, **Son**’a tıklayın.
 
 
 >[!div class="step-by-step"]
@@ -79,11 +82,12 @@ ATA Gateway sunucusunda aşağıdaki adımları gerçekleştirin.
 
 ## Ayrıca Bkz.
 
-- [Destek için forumumuzu gözden geçirin!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=May16_HO1-->
 
 

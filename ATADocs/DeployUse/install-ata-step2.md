@@ -27,43 +27,44 @@ ms.suite: ems
 
 # ATA’yı Yükleme - 2. Adım
 
->[!div class="step-by-step"]
-[« 1. Adım](install-ata-step1.md)
+>[!div class="step-by-step"] [« 1. Adım](install-ata-step1.md)
 [3. Adım »](install-ata-step3.md)
 
-## 2. Adım ATA Gateway etki alanı bağlantı ayarlarını yapılandırma
-Etki alanı bağlantı ayarları bölümündeki ayarlar, ATA Center tarafından yönetimen tüm ATA Gateway bileşenlerine uygulanır.
+## 2. Adım ATA Gateway genel ayarlarını yapılandırma
+**Genel** ayarlar sekmesindeki ayarlar, ATA Center tarafından yönetilen tüm ATA Gateway bileşenlerine uygulanır.
 
-Etki alanı bağlantı ayarlarını yapılandırmak için, ATA Center sunucusunda aşağıdakileri gerçekleştirin.
+Genel ATA Gateway ayarlarını yapılandırmak için aşağıdakileri gerçekleştirin:
 
-1.  ATA Konsolu’nu açın ve oturum açın. Yönergeler için bkz. [ATA Konsolu’yla çalışma](/advanced-threat-analytics/understand-explore/working-with-ata-console).
+1.  ATA Konsolu’nu açın ve oturum açın. Yönergeler için bkz. [ATA Konsolu’yla çalışma](working-with-ata-console.md)
 
-2.  ATA Center yüklendikten sonra ATA Konsolu’nda ilk kez oturum açtığınızda, otomatik olarak ATA Gateway bileşenleri yapılandırma sayfasına gidersiniz. Bundan sonra ayarlardan herhangi birinde değişiklik yapmanız gerektiğinde, Ayarlar simgesine tıklayın ve **Yapılandırma**’yı seçin..
+2.  Ayarlar simgesine tıklayın ve **Yapılandırma**’yı seçin.
 
     ![ATA Gateway yapılandırma ayarları](media/ATA-config-icon.JPG)
 
-3.  **Gateway Bileşenleri** sayfasında **Etki alanı bağlantı ayarları**’na tıklayın, aşağıdaki bilgileri girin ve **Kaydet**’e tıklayın..
+3.  **Genel** sekmesinde, **ATA Gateway Bileşenleri** altında, aşağıdaki bilgileri girip **kaydet**’e tıklayın.
 
     |Alan|Açıklamalar|
     |---------|------------|
-    |**Kullanıcı adı** (gerekli)|Salt okunur kullanıcı adını girin, örneğin: **kullanıcı1**.|
+    |**Kullanıcı adı** (gerekli)|Salt okunur kullanıcı adını girin, örneğin: **kullanıcı1**|
     |**Parola** (gerekli)|Salt okunur kullanıcının parolasını girin, örneğin: **Kalem1**. **Not:** Bu parolanın doğru olduğundan emin olun. Yanlış parola kaydederseniz, ATA Gateway sunucularında ATA Hizmeti çalışmayı durdurur.|
-    |**Etki alanı** (gerekli)|Salt okunur kullanıcının etki alanını girin, örneğin: **contoso.com**. **Not:** Kullanıcının bulunduğu etki alanının tam FQDN değerini girmeniz önemlidir. Örneğin, kullanıcının hesabı corp.contoso.com etki alanındaysa, contoso.com değil `corp.contoso.com` girmeniz gerekir.|
-    ![ATA Etki Alanı bağlantı ayarlarının resmi](media/ATA-Domain-Connectivity-User.JPG)
+    |**Etki alanı** (gerekli)|Salt okunur kullanıcının etki alanını girin, örneğin, **contoso.com**. **Not:** Kullanıcının bulunduğu etki alanının tam FQDN’sini girmek önemlidir. Örneğin, kullanıcının hesabı corp.contoso.com etki alanındaysa, contoso.com değil `corp.contoso.com` girmeniz gerekir.|
+    |Tüm ATA Gateway bileşenlerini otomatik olarak güncelleştir |Bu ayarı etkinleştirirseniz, gelecek sürümlerde ATA Center’ı güncelleştirdiğinizde tüm ATA Gateway bileşenleri otomatik olarak güncelleştirilir.|
+
+    ![ATA Etki Alanı bağlantı ayarlarının resmi](media/ata-domain-connectivity-user.jpg)
 
 
->[!div class="step-by-step"]
-[« 1. Adım](install-ata-step1.md)
+
+>[!div class="step-by-step"] [« 1. Adım](install-ata-step1.md)
 [3. Adım »](install-ata-step3.md)
 
 
 ## Ayrıca Bkz.
 
-- [Destek için forumumuzu gözden geçirin!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

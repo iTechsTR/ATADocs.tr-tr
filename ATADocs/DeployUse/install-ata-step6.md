@@ -42,7 +42,7 @@ Kısa süreli kiralık alt ağlar, IP adresi atamasının çok hızlı, saniyele
 3.  Honeytoken hesabı SID’leri için, ağ etkinliği olmayacak kullanıcı hesabının SID değerini girin ve artı işaretine tıklayın. Örneğin: `S-1-5-21-72081277-1610778489-2625714895-10511`.
 
     > [!NOTE]
-    > Kullanıcının SID değerini bulmak için şu Windows PowerShell cmdlet’ini çalıştırın `Get-ADUser UserName`.
+    > Bir kullanıcının SID’ini bulmak için, ATA Konsolu’nda kullanıcıyı arayın ve **Hesap Bilgileri** sekmesine tıklayın. 
 
 4.  Özel durumları yapılandırın: Belirli kuşkulu etkinliklerden dışlanmak üzere IP adresleri yapılandırabilirsiniz. Daha fazla bilgi için bkz. [ATA algılama ayarlarıyla çalışma](working-with-detection-settings.md).
 
@@ -54,7 +54,7 @@ Tebrikler, Microsoft Advanced Threat Analytics dağıtımını başarıyla tamam
 
 Algılanan kuşkulu etkinlikleri görüntülemek için saldırı zaman çizelgesini gözden geçirin ve kullanıcıları veya bilgisayarları arayın ve profillerini görüntüleyin.
 
-ATA’nın davranış profillerini oluşturmasının en az üç hafta sürdüğünü, dolayısıyla ilk üç hafta boyunca hiçbir kuşkulu davranış etkinliği görmeyeceğinizi unutmayın.
+ATA hemen şüpheli etkinlikler için tarama yapmaya başlar. ATA, davranış profilleri (en az üç haftalık) oluşturmak için zaman bulana kadar, bazı şüpheli davranış etkinlikleri gibi bazı etkinlikler kullanılamaz.
 
 
 >[!div class="step-by-step"]
@@ -63,11 +63,12 @@ ATA’nın davranış profillerini oluşturmasının en az üç hafta sürdüğ�
 
 ## Ayrıca Bkz.
 
-- [Destek için forumumuzu gözden geçirin!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=May16_HO1-->
 
 

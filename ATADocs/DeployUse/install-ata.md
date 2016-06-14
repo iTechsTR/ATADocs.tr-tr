@@ -31,7 +31,6 @@ Aşağıda, ATA’yı dağıtmak, yapılandırmak ve çalıştırmak için gerek
 
 ATA’yı yapılandırmak için bu adımları izleyin:
 
--   [Yükleme öncesi adımları](install-ata-preinstall.md)
 
 -   [1. Adım ATA Center’ı indirme ve yükleme](install-ata-step1.md)
 
@@ -48,11 +47,12 @@ ATA’yı yapılandırmak için bu adımları izleyin:
 
 ## Ayrıca Bkz.
 
-- [Destek için forumumuzu gözden geçirin!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=May16_HO1-->
 
 

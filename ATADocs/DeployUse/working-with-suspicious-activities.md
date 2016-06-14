@@ -42,7 +42,7 @@ Her kuşkulu etkinliğin aşağıdaki bilgileri bulunur:
 
 -   Yapılabilecekler
 
-    -   Kuşkulu etkinliği e-postayla kuruluşunuzdaki diğer kişilere gönderme. Bu, göz atmak için kullandığınız bilgisayarda bir e-posta istemcisinin yüklü olmasını gerektirir.
+    -   Kuşkulu etkinliği e-postayla kuruluşunuzdaki diğer kişilerle paylaşın.
 
     -   Kuşkulu etkinliği Excel’e aktarma.
 
@@ -97,7 +97,7 @@ Kuşkulu etkinlikler listesini filtrelemek için:
     Bunlar, el ile çıkardığınız etkinliklerdir. ATA benzer bir kuşkulu etkinlik algılarsa, yeni bir algılama oluşturulur.
 
 ## Kuşkulu etkinlik için giriş sağlama
-ATA’nın sizinle ağınız hakkında daha fazla bilgi edinebilmesi için, ileriye dönük olarak kuşkulu etkinliklerin algılanmasını iyileştirmek amacıyla bazı kuşkulu etkinliklerde (DNS keşfi, Anahtar Geçişi, Anormal Davranış ve Uzaktan Yürütme) sizden giriş istenir.
+ATA’nın sizinle ağınız hakkında daha fazla bilgi edinebilmesi için, ileriye dönük olarak kuşkulu etkinliklerin algılanmasını iyileştirmek amacıyla bazı kuşkulu etkinliklerde (DNS keşfi, Anahtar Geçişi, SMB Oturumu Numaralandırma, Anormal Davranış ve Uzaktan Yürütme) sizden giriş istenir.
 
 1.  Giriş sağlamanıza olanak tanıyan kuşkulu etkinlikler için, giriş sorusu otomatik olarak açılır. Ağınızdaki etkinlikler hakkındaki soruları yanıtlamanız istenir ve bunların kuşkulu olarak kabul edilmesinin gerekip gerekmediği sorulur. Aşağıdaki örnekte, belirli bir bilgisayardan tarama araçlarının çalıştırılmasına izin verilip verilmeyeceği sorulmaktadır.
 
@@ -113,11 +113,11 @@ ATA’nın sizinle ağınız hakkında daha fazla bilgi edinebilmesi için, iler
 Kuşkulu etkinliğin geçerli durumuna tıklayıp **Açık**, **Çözüldü** veya **Çıkarıldı** ayarlarından birini seçerek, kuşkulu etkinliğin durumunu değiştirebilirsiniz..
 
 ## Ayrıca Bkz.
-- [Destek için forumumuzu gözden geçirin!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 - [ATA algılama ayarlarıyla çalışma](working-with-detection-settings.md)
 - [ATA yapılandırmasında değişiklik yapma](modifying-ata-configuration.md)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO1-->
 
 

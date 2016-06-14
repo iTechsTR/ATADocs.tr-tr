@@ -52,7 +52,7 @@ ATA Gateway bileşenleri bağlanmaları gereken ATA Center’ın IP adresini yer
 
     ![ATA yapılandırma ayarları simgesi](media/ATA-config-icon.JPG)
 
-3.  **ATA Center**’ı seçin..
+3.  **Genel**’i seçin.
 
 4.  **ATA Center Service IP adresi: bağlantı noktası**’nın altında, var olan IP adreslerinden birini seçin veya **Özel IP adresi ekle**’yi seçip bir IP adresi girin.
 
@@ -61,6 +61,12 @@ ATA Gateway bileşenleri bağlanmaları gereken ATA Center’ın IP adresini yer
 6.  Kaç ATA Gateway’in en son yapılandırmayla eşitlendiğine ilişkin bir bildirim görürsünüz.
 
     ![ATA Center ile eşitlenen Gateway bileşenlerinin resmi](media/ATA-chge-IP-after-clicking-save.png)
+
+    >[!IMPORTANT]
+    >Yeni yapılandırmayı etkinleştirmeden önce, tüm ATA Gateway bileşenlerinin en son yapılandırmayla eşitlendiğini doğrulayın. Tüm ATA Gateway bileşenleri eşitlenmeden yeni yapılandırmayı etkinleştirmek, ATA Gateway’in beklendiği şekilde çalışmaya son vermesine neden olabilir. ATA Gateway bileşenlerinden herhangi biri eşitlenmemişse, Etkinleştir’e tıkladığınızda şu hatayla karşılaşırsınız:
+    >
+    >    ![ATA Gateway eşitleme hatası](media/ataGW-not-synced.png)
+
 
 7.  Tüm ATA Gateway’ler eşitlendikten sonra, yeni IP adresini etkinleştirmek için **Etkinleştir**’e tıklayın.
 
@@ -74,11 +80,11 @@ ATA Gateway bileşenleri bağlanmaları gereken ATA Center’ın IP adresini yer
 
 
 ## Ayrıca Bkz.
-- [ATA Konsolu’yla çalışma](/advanced-threat-analytics/understand-explore/working-with-ata-console)
+- [ATA Konsolu’yla çalışma](working-with-ata-console.md)
 - [ATA’yı yükleme](install-ata.md)
-- [Destek için forumumuzu gözden geçirin!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO1-->
 
 

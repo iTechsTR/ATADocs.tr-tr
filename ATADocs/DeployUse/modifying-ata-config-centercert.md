@@ -58,6 +58,10 @@ Sertifikalarınızın süresi sona eriyorsa ve ATA Center sunucusundaki yerel bi
 6.  Kaç ATA Gateway’in en son yapılandırmayla eşitlendiğini gösteren bir bildirim görürsünüz.
 
 7.  Tüm ATA Gateway’ler eşitlendikten sonra, yeni sertifikayı etkinleştirmek için **Etkinleştir**’e tıklayın.
+    >[!IMPORTANT]
+    >Yeni yapılandırmayı etkinleştirmeden önce, tüm ATA Gateway bileşenlerinin en son yapılandırmayla eşitlendiğini doğrulayın. Tüm ATA Gateway bileşenleri eşitlenmeden yeni yapılandırmayı etkinleştirmek, ATA Gateway’in beklendiği şekilde çalışmaya son vermesine neden olabilir. ATA Gateway bileşenlerinden herhangi biri eşitlenmemişse, Etkinleştir’e tıkladığınızda şu hatayla karşılaşırsınız:
+    >
+    >    ![ATA Gateway eşitleme hatası](media/ataGW-not-synced.png)
 
 8.  Değişiklikler etkinleştirildikten sonra tüm ATA Gateway bileşenlerinin yapılandırmalarını eşitleyebildiklerinden emin olun.
 
@@ -66,11 +70,11 @@ Sertifikalarınızın süresi sona eriyorsa ve ATA Center sunucusundaki yerel bi
 [ATA Konsolu IP adresi »](modifying-ata-config-consoleip.md)
 
 ## Ayrıca Bkz.
-- [ATA Konsolu’yla çalışma](/advanced-threat-analytics/understand-explore/working-with-ata-console)
+- [ATA Konsolu’yla çalışma](working-with-ata-console.md)
 - [ATA’yı yükleme](install-ata.md)
-- [Destek için forumumuzu gözden geçirin!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO1-->
 
 

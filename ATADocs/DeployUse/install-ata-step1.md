@@ -28,75 +28,83 @@ ms.suite: ems
 # ATA’yı Yükleme - 1. Adım
 
 >[!div class="step-by-step"]
-[« Yükleme öncesi](install-ata-preinstall.md)
+
 [2. Adım »](install-ata-step2.md)
+
+Bu yükleme yordamı, sıfırdan bir ATA 1.6 yüklemesi gerçekleştirme yönergeleri sağlar. Var olan bir ATA dağıtımını önceki bir sürümünden güncelleştirme hakkında daha fazla bilgi için bkz. [Sürüm 1.6 için ATA geçiş kılavuzu](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide).
+
+> [!IMPORTANT] Yüklemeye başlamadan önce ATA Center sunucusunda ve ATA Gateway sunucularında KB2934520’yi yükleyin. Bunu yüklemezseniz, ATA yüklemesi bu güncelleştirmeyi yükler ve ATA yüklemesinin ortasında bir yeniden başlatma gerektirir.
 
 ## 1. Adım ATA Center’ı indirme ve yükleme
 Sunucunun gereksinimleri karşıladığını doğruladıktan sonra, ATA Center’ın yüklemesiyle devam edebilirsiniz.
 
 ATA Center sunucusunda aşağıdaki adımları gerçekleştirin.
 
-1.  ATA’yı [TechNet Değerlendirme Merkezi](http://www.microsoft.com/en-us/evalcenter/)’nden indirin..
+1.  [Microsoft Toplu Lisanslama Servis Merkezi](https://www.microsoft.com/Licensing/servicecenter/default.aspx)’nden veya [TechNet Değerlendirme Merkezi](http://www.microsoft.com/en-us/evalcenter/)’nden ya da [MSDN](https://msdn.microsoft.com/en-us/subscriptions/downloads)’den ATA’yı indirin.
 
-2.  Yerel Administrators grubunun bir üyesi olarak kullanıcıyla oturum açın.
+2.  ATA Center yükleyeceğiniz bilgisayarda, yerel yöneticiler grubunun üyesi olan bir kullanıcı olarak oturum açın.
 
-3.  Yükseltilmiş bir komut isteminde Microsoft ATA Center Setup.EXE’yi çalıştırın ve kurulum sihirbazını izleyin.
+3.  **Microsoft ATA Center Setup.EXE**’yi çalıştırın ve kurulum sihirbazını izleyin.
 
-4.  **Hoş Geldiniz** sayfasında dilinizi seçin ve **İleri**’ye tıklayın..
+4.  Microsoft .Net Framework yüklü değilse, yüklemeyi başlattığınızda yüklemeniz istenir. .NET Framework yüklemesinden sonra bilgisayarı yeniden başlatmanız istenebilir.
+5.  **Hoş Geldiniz** sayfasında, ATA yükleme ekranları için kullanılacak dili seçin ve **İleri**’ye tıklayın.
 
-5.  Son Kullanıcı Lisans Sözleşmesi’ni okuyun ve koşulları kabul ediyorsanız **İleri**’ye tıklayın..
+6.  Microsoft Yazılım Lisans Koşulları’nı okuyun ve onay kutusuna tıklayıp ardından **İleri**’ye tıklayın.
 
-6.  **Center Yapılandırması** sayfasında, ortamınıza bağlı olarak aşağıdaki bilgileri girin:
+7.  ATA’yı otomatik olarak güncelleştirmeye ayarlamanız önerilir. Windows bilgisayarınızda bunu yapacak şekilde ayarlanmamışsa, **Bilgisayarınızı güvenli ve güncel tutmaya yardımcı olmak için Microsoft Update'i kullanın** ekranıyla karşılaşırsınız. 
+    ![ATA’yı güncel tutma görüntüsü](media/ata_ms_update.png)
+
+8. **Güncelleştirmeleri denetlediğimde Microsoft Update'i kullan (önerilir)** öğesini seçin. Bu, burada görüldüğü gibi, Windows ayarlarını diğer Microsoft ürünleri (ATA dahil) için güncelleştirmeleri etkinleştirecek şekilde ayarlar. 
+    ![Windows otomatik güncelleştirme resmi](media/ata_installupdatesautomatically.png)
+
+8.  **ATA Center Yapılandırması** sayfasında, ortamınıza bağlı olarak aşağıdaki bilgileri girin:
 
     |Alan|Açıklama|Açıklamalar|
     |---------|---------------|------------|
     |Yükleme Yolu|Bu, ATA Center’ın yükleneceği konumdur. Varsayılan olarak %programfiles%\Microsoft Advanced Threat Analytics\Center yoludur.|Varsayılan değeri olduğu gibi bırakın.|
     |Veritabanı Veri Yolu|Bu MongoDB veritabanı dosyalarının yer alacağı konumdur. Varsayılan olarak %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data yoludur.|Boyutunuza bağlı olarak büyümek için yeriniz olan başka bir konumla değiştirin. **Not:** <ul><li>Üretim ortamlarında, kapasite planlamasına göre yeterli yeri olan bir sürücü kullanmalısınız.</li><li>Büyük dağıtımlar için veritabanı ayrı bir fiziksel diskte yer almalıdır.</li></ul>Boyutlandırma bilgileri için bkz. [ATA kapasite planlaması](/advanced-threat-analytics/plan-design/ata-capacity-planning).|
-    |Veritabanı Günlük Yolu|Bu veritabanı günlük dosyalarının yer alacağı konumdur. Varsayılan olarak %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data\journal yoludur.|Büyük dağıtımlar için, Veritabanı Günlüğü veritabanından ve sistem sürücüsünden ayrı bir fiziksel diskte yer almalıdır. Veritabanı Günlüğünüz için yeriniz olan başka bir konumla değiştirin.|
     |ATA Center Hizmeti IP adresi: Bağlantı Noktası|Bu, ATA Center’ın ATA Gateway bileşenlerinden gelen iletişimi dinleyecekleri IP adresidir.<br /><br />**Varsayılan bağlantı noktası:** 443|ATA Center hizmeti tarafından kullanılacak IP adresini seçmek için aşağı oka tıklayın.<br /><br />ATA Center’ın IP adresi ve bağlantı noktası, ATA Konsolu’nun IP adresi ve bağlantı noktasıyla aynı olamaz. ATA Konsolu’nun bağlantı noktasını değiştirdiğinizden emin olun.|
     |ATA Center Hizmeti SSL Sertifikası|Bu, ATA Center hizmeti tarafından kullanılacak olan sertifikadır.|Yüklü bir sertifika seçmek için anahtar simgesine tıklayın veya laboratuvar ortamında dağıtım yaparken otomatik olarak imzalanan sertifikayı işaretleyin.|
     |ATA Konsolu IP adresi|Bu, IIS tarafından ATA Konsolu için kullanılacak olan IP adresidir.|ATA Konsolu tarafından kullanılan IP adresini seçmek için aşağı oka tıklayın. **Not:** ATA Gateway’den ATA Konsolu’na daha kolay erişmek için bu IP adresini not alın.|
     |ATA Konsolu SSL sertifikası|Bu, IIS tarafından kullanılacak olan sertifikadır.|Yüklü bir sertifika seçmek için anahtar simgesine tıklayın veya laboratuvar ortamında dağıtım yaparken otomatik olarak imzalanan sertifikayı işaretleyin.|
+
     ![ATA Center yapılandırmasının resmi](media/ATA-Center-Configuration.JPG)
 
-7.  ATA’yı ve bileşenlerini yüklemek ve ATA Center’la ATA Konsolu arasında bağlantı oluşturmak için **Yükle**’ye tıklayın.
-
-8.  Yükleme tamamlandığında, ATA Konsolu’na bağlanmak için **Başlat**’a tıklayın.
-
+10.  ATA Center ve bileşenlerini yüklemek için **Yükle**’ye tıklayın.
     ATA Center’ın yüklemesi sırasında aşağıdaki bileşenler yüklenir ve yapılandırılır:
 
     -   Internet Information Services (IIS)
 
-    -   MongoDB
-
     -   ATA Center hizmeti ve ATA Konsolu IIS sitesi
+
+    -   MongoDB
 
     -   Özel Performans İzleyicisi veri koleksiyonu kümesi
 
     -   Otomatik olarak imzalanan sertifikalar (yükleme sırasında seçildiyse)
 
-> [!NOTE]
-> Sorun giderme ve ürün iyileştirme işlemlerinde yardımcı olması için, MongoVue veya başka bir MongoDB eklentisini ya da tercih ettiğiniz başka bir üçüncü taraf aracını yüklemenizi öneririz. MongoVue’nun yüklenmesi için .Net Framework 3.5 gerekir.
+11.  Yükleme tamamlandığında, ATA Konsolu’na bağlanmak için **Başlat**’a tıklayın.
+Bu aşamada, ATA Gateway bileşenlerinin yapılandırma ve dağıtımına devam etmek için otomatik olarak **Genel** sayfasına gidersiniz.
+Siteye bir IP adresi kullanarak oturum açtığınız için, sertifikayla ilgili bir uyarı alırsınız; bu normaldir ve **Bu Web sitesine devam et**’e tıklamanız gerekir.
 
 ### Yüklemeyi doğrulama
 
-1.  Microsoft Advanced Threat Analytics Center hizmetinin çalışıp çalışmadığını denetleyin.
+1.  **Microsoft Advanced Threat Analytics Center** adlı hizmetin çalışıp çalışmadığını denetleyin.
+2.  ATA Konsolu’na bağlanmak için masaüstünde **Microsoft Advanced Threat Analytics** kısayoluna tıklayın. ATA Center’ı yüklerken kullandığınız kullanıcı kimlik bilgileriyle oturum açın.
 
-2.  ATA Konsolu’na bağlanmak için masaüstünde Microsoft Advanced Threat Analytics kısayoluna tıklayın. ATA Center’ı yüklerken kullandığınız kullanıcı kimlik bilgileriyle oturum açın. ATA Konsolu’nda ilk kez oturum açtığınızda, yapılandırmaya ve ATA Gateway bileşenlerinin dağıtımına devam etmek için otomatik olarak **Etki alanı bağlantı ayarları** sayfasına gidersiniz.
 
-3.  %programfiles%\Microsoft Advanced Threat Analytics\Center\Logs varsayılan konumunda yer alan **Microsoft.Tri.Center-Errors.log** dosyasındaki hata dosyasını gözden geçirin.
 
->[!div class="step-by-step"]
-[« Yükleme öncesi](install-ata-preinstall.md)
+>[!div class="step-by-step"] [« Yükleme öncesi](preinstall-ata.md)
 [2. Adım »](install-ata-step2.md)
 
 ## Ayrıca Bkz.
 
-- [Destek için forumumuzu gözden geçirin!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=May16_HO4-->
 
 

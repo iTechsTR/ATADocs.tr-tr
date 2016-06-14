@@ -27,82 +27,73 @@ ms.suite: ems
 
 # ATA’yı Yükleme - 5. Adım
 
->[!div class="step-by-step"]
-[« 4. Adım](install-ata-step4.md)
+>[!div class="step-by-step"] [« 4. Adım](install-ata-step4.md)
 [6. Adım »](install-ata-step6.md)
 
 
-## 5. Adım ATA Gateway ayarlarını yapılandırma
+## Adım 5. ATA Gateway ayarlarını yapılandırma
 ATA Gateway yüklendikten sonra, ATA Gateway’in ayarlarını yapılandırmak için aşağıdaki adımları gerçekleştirin.
 
-1.  ATA Gateway makinesinde, ATA Konsolu’nda **Yapılandırma**’ya tıklayın ve **ATA Gateway Bileşenleri** sayfasını seçin.
+1.  ATA Konsolu’nda **Yapılandırma**’ya tıklayın ve **ATA Gateway Bileşenleri** sayfasını seçin.
 
 2.  Aşağıdaki bilgileri girin.
 
-
-
   - **Açıklama**: <br>ATA Gateway’in açıklamasını girin (isteğe bağlı).
-  - **Etki alanı denetleyicileri** (gerekli): <br>Denetleyicilerin listesi hakkında ek bilgi için aşağıya bakın.<br>Etki alanı denetleyicinizin tam FQDN değerini girin ve bunu listeye eklemek için artı işaretine tıklayın. Örneğin, **dc01.contoso.com**<br /><br />![Örnek FDQN resmi](media/ATAGWDomainController.png)<br>Listedeki ilk etki alanı denetleyicisinde yer alan nesneler LDAP sorguları yoluyla eşitlenir. Etki alanının boyutuna bağlı olarak bu işlem biraz zaman alabilir.<br>
-  **Not:** <br>İlk etki alanı denetleyicisinin salt okunur **olmamasına** dikkat edin. Salt okunur etki alanı denetleyicileri ancak ilk eşitleme tamamlandıktan sonra eklenmelidir.<br>
+  - **Bağlantı Noktası Yansıtılmış Etki Alanı Denetleyicileri (FQDN)** (ATA Gateway için gerekli olup, ATA Lightweight Gateway için ayarlanamaz): <br>Etki alanı denetleyicinizin tam FQDN değerini girin ve bunu listeye eklemek için artı işaretine tıklayın. Örneğin, **dc01.contoso.com**<br /><br />![Örnek FDQN resmi](media/ATAGWDomainController.png)
 
-
- - **Yakalama Ağ bağdaştırıcıları** (gerekli):<br>Etki alanı trafiğini almak üzere hedef yansıtma etki alanı olarak yapılandırılmış anahtara bağlanan ağ bağdaştırıcılarını seçin.|Yakalama ağ bağdaştırıcısını seçin.
-    ![Gateway ayarlarını yapılandırma resmi](media/ATA-Config-GW-Settings.jpg)
-
-3.  **Kaydet**'e tıklayın..
-
-    > [!NOTE]
-    > ATA Gateway hizmetinin ilk kez başlatılması birkaç dakika sürebilir çünkü ATA Gateway tarafından kullanılan ağ yakalama ayrıştırıcılarının önbelleğini oluşturur.
-
-Aşağıdaki bilgiler, **Etki Alanı Denetleyicileri** listesine girdiğiniz sunucular için geçerlidir.
-
--   Listedeki ilk etki alanı denetleyicisi, ATA Gateway tarafından etki alanındaki nesnelerin LDAP sorguları yoluyla eşitlenmesinde kullanılır. Etki alanının boyutuna bağlı olarak bu işlem biraz zaman alabilir.
-
--   ATA Gateway tarafından bağlantı noktası yansıtma yoluyla trafiği izlenmekte olan tüm etki alanı denetleyicilerinin, **Etki Alanı Denetleyicileri** listesinde yer alması gerekir. Bir etki alanı denetleyicisi **Etki Alanı Denetleyicileri** listesinde yer almıyorsa, kuşkulu etkinlikleri algılama özelliği beklendiği gibi çalışmayabilir.
-
--   İlk etki alanı denetleyicisinin salt okunur bir etki alanı denetleyicisi (RODC) **olmamasına** dikkat edin.
-
-    Salt okunur etki alanı denetleyicileri ancak ilk eşitleme tamamlandıktan sonra eklenmelidir.
-
+Aşağıdaki bilgiler, **Etki Alanı Denetleyicileri** listesine girdiğiniz sunucular için geçerlidir: -   ATA Gateway tarafından bağlantı noktası yansıtma yoluyla trafiği izlenmekte olan tüm etki alanı denetleyicilerinin, **Etki Alanı Denetleyicileri** listesinde yer alması gerekir. Bir etki alanı denetleyicisi **Etki Alanı Denetleyicileri** listesinde yer almıyorsa, kuşkulu etkinlikleri algılama özelliği beklendiği gibi çalışmayabilir.
 -   Listedeki en az bir etki alanı denetleyicisi genel katalog sunucusu olmalıdır. Bu ATA’nın ormandaki diğer etkin alanlarında yer alan bilgisayar ve kullanıcı nesnelerini çözümleyebilmesine olanak tanır.
 
+ - **Yakalama Ağ bağdaştırıcıları** (gerekli):<br>
+     - Ayrılmış bir sunucudaki bir ATA Gateway için, hedef yansıtma bağlantı noktası olarak yapılandırılan ağ bağdaştırıcılarını seçin. Böylece, yansıtılmış etki alanı denetleyicisi trafiği alınır.
+     - Bir ATA Lightweight Gateway söz konusu olduğunda bu, kuruluşunuzdaki diğer bilgisayarlarla iletişim için kullanılan tüm ağ bağdaştırıcıları olmalıdır.
+
+![Gateway ayarlarını yapılandırma resmi](media/ATA-Config-GW-Settings.jpg)
+
+ - **Etki alanı eşitleyici adayı**<br>
+Bir etki alanı eşitleyici adayı olarak ayarlanan herhangi bir ATA Gateway bileşeni, ATA ile Active Directory etki alanınız arasında eşitlemeden sorumlu olabilir. Etki alanının büyüklüğüne bağlı olarak, ilk eşitleme biraz zaman alabilir ve yoğun kaynak kullanır. Varsayılan olarak, yalnızca ATA Gateway bileşenleri Etki Alanı eşitleyici adayı olarak ayarlanabilir. <br>Uzak yerde bulunan ATA Gateway bileşenlerinin Etki Alanı eşitleyici adayı olmasının engellenmesi önerilir.<br>Etki alanı denetleyiciniz salt okunur ise, onu Etki Alanı eşitleyici adayı olarak ayarlamayın. Daha fazla bilgi için bkz. [ATA mimarisi](/advanced-threat-analytics/plan-design/ata-architecture#ata-lightweight-gateway-features)
+
+> [!NOTE] ATA Gateway hizmetinin ilk kez başlatılması birkaç dakika sürebilir çünkü ağ yakalama ayrıştırıcılarının önbelleğini oluşturur.<br>
 Yapılandırma değişiklikleri, ATA Gateway ile ATA Center arasındaki bir sonraki zamanlanmış eşitlemede ATA Gateway’e uygulanır.
 
-### Yüklemeyi doğrulama:
+
+
+    
+
+3. İsterseniz, [Syslog dinleyici ve Windows Olay İletme Koleksiyonu](configure-event-collection.md)’nu ayarlayabilirsiniz. 
+4. Gelecek sürümlerde ATA Center’ı güncelleştirirken, bu ATA Gateway’in otomatik olarak güncelleştirilmesi için **ATA Gateway’i otomatik olarak güncelleştir**’i etkinleştirin.
+3.  **Kaydet**'e tıklayın.
+
+
+## Yüklemeleri doğrulama
 ATA Gateway’in başarıyla dağıtıldığını doğrulamak için aşağıdakileri denetleyin:
 
-1.  Microsoft Advanced Threat Analytics Gateway hizmetinin çalışıp çalışmadığını denetleyin. ATA Gateway ayarlarını kaydettikten sonra, hizmetin başlatılması birkaç dakika sürebilir.
+1.  **Microsoft Advanced Threat Analytics Gateway** adlı hizmetin çalışıp çalışmadığını denetleyin. ATA Gateway ayarlarını kaydettikten sonra, hizmetin başlatılması birkaç dakika sürebilir.
 
-2.  Hizmet başlatılmazsa, “%programfiles%\Microsoft Advanced Threat Analytics\Gateway\Logs” varsayılan klasöründe yer alan “Microsoft.Tri.Gateway-Errors.log” dosyasını gözden geçirin ve “transfer” veya “service start” girdilerini arayın.
+2.  Hizmet başlatılmazsa, “%programfiles%\Microsoft Advanced Threat Analytics\Gateway\Logs” varsayılan klasöründe yer alan “Microsoft.Tri.Gateway-Errors.log” dosyasını gözden geçirin.
 
-3.  Şu Microsoft ATA Gateway performans sayaçlarını denetleyin:
-
-    -   **AğDinleyicisi Yakalanan İleti Sayısı/Sn**: Bu sayaç ATA tarafından saniyede yakalanan ileti sayısını izler. Değer, izlenen etki alanı denetleyicilerinin sayısına ve her etki alanı denetleyicisinin ne kadar meşgul olduğuna bağlı olarak, 150 dolayında olabileceği gibi binlerce de olabilir. Tek veya çift basamaklı değerler, bağlantı noktası yansıtma yapılandırması bir sorun olduğunu gösteriyor olabilir.
-
-    -   **VarlıkAktarımı Etkinlik Aktarım Sayısı/Sn**: Bu değer, her birkaç saniyede bir birkaç yüz dolayında olmalıdır.
+3.  Yardım için bkz. [ATA Sorunlarını Giderme](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors).
 
 4.  Bu yüklenen ilk ATA Gateway ise, birkaç dakika sonra ATA Konsolu’nda oturum açın ve açık ekranın sağ tarafından çekerek bildirim bölmesini açın. Konsolun sağ tarafındaki bildirim çubuğunda **Son Öğrenilen Varlıklar** listesini görmelisiniz.
 
-5.  Yüklemenin başarıyla tamamlandığını doğrulamak için:
-
-    Konsolda, arama çubuğunda bir şey için (etki alanınızdaki bir kullanıcı veya grup gibi) arama yapın.
-
-    Performans İzleyicisi'ni açın. Performans ağacında **Performans İzleyicisi**’ne tıklayın ve ardından **Sayaç Eklemek** için artı simgesine tıklayın. **Microsoft ATA Gateway**’i genişletin, ekranı aşağı kaydırarak **Ağ Dinleyicisi Saniyede Yakalanan İleti Sayısı**’na gelin ve bunu ekleyin. Ardından, etkinliği grafikte gördüğünüzden emin olun.
+5.  ATA Konsolu’na bağlanmak için masaüstünde **Microsoft Advanced Threat Analytics** kısayoluna tıklayın. ATA Center’ı yüklerken kullandığınız kullanıcı kimlik bilgileriyle oturum açın.
+6.  Konsolda, arama çubuğunda bir şey için (etki alanınızdaki bir kullanıcı veya grup gibi) arama yapın.
+7.  Performans İzleyicisi'ni açın. Performans ağacında **Performans İzleyicisi**’ne tıklayın ve ardından **Sayaç Eklemek** için artı simgesine tıklayın. **Microsoft ATA Gateway**’i genişletin, ekranı aşağı kaydırarak **Ağ Dinleyicisi Saniyede Yakalanan PEF İleti Sayısı**’na gelin ve bunu ekleyin. Ardından, etkinliği grafikte gördüğünüzden emin olun.
 
     ![Performans sayaçlarını ekleme resmi](media/ATA-performance-monitoring-add-counters.png)
 
 
->[!div class="step-by-step"]
-[« 4. Adım](install-ata-step4.md)
+>[!div class="step-by-step"] [« 4. Adım](install-ata-step4.md)
 [6. Adım »](install-ata-step6.md)
 
 ## Ayrıca Bkz.
 
-- [Destek için forumumuzu gözden geçirin!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=May16_HO3-->
 
 

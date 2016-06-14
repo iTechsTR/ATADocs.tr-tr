@@ -32,17 +32,18 @@ ms.suite: ems
 [4. Adım »](install-ata-step4.md)
 
 ## 3. Adım ATA Gateway kurulum paketini indirme
-Etki alanı bağlantı ayarlarını yapılandırdıktan sonra, ATA Gateway kurulum paketini indirebilirsiniz.
+Etki alanı bağlantı ayarlarını yapılandırdıktan sonra, ATA Gateway kurulum paketini indirebilirsiniz. ATA Gateway ayrılmış bir sunucuya veya bir etki alanı denetleyicisine yüklenebilir. Bir etki alanı denetleyicisine yüklerseniz, bir ATA Lightweight Gateway olarak yüklenir. ATA Lightweight Gateway hakkında daha fazla bilgi için bkz. [ATA Mimarisi](/advanced-threat-analytics/plan-design/ata-architecture). 
 
 ATA Gateway paketini indirmek için:
 
-1.  ATA Gateway makinesinde, bir tarayıcı açın ve ATA Center’da ATA Konsolu için yapılandırdığınız IP adresini girin. ATA Konsolu açıldığında, ayarlar simgesine tıklayın ve **Yapılandırma**’yı seçin..
+1.  ATA Konsolu’ndan, ayarlar simgesine tıklayın ve **Yapılandırma**’yı seçin..
 
     ![ATA Gateway yapılandırma ayarları](media/ATA-config-icon.JPG)
 
 2.  **ATA Gateway Bileşenleri** sekmesinde **ATA Gateway Kurulumunu İndir**’e tıklayın..
 
 3.  Paketi yerel olarak kaydedin.
+4.  Paketi, ATA Gateway yükleyeceğiniz ayrılmış sunucuya veya etki alanı denetleyicisine kopyalayın. Alternatif olarak, ATA Konsolu’nu ayrılmış sunucudan veya etki alanı denetleyicisinden açabilir ve bu adımı atlayabilirsiniz.
 
 Zip dosyası şunları içerir:
 
@@ -57,11 +58,11 @@ Zip dosyası şunları içerir:
 
 ## Ayrıca Bkz.
 
-- [Destek için forumumuzu gözden geçirin!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO1-->
 
 

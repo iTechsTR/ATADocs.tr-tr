@@ -29,6 +29,8 @@ ms.suite: ems
 ATA günlükleri, ATA’nın her bileşeninin belirli bir anda neler yaptığı konusunda fikir edinmenizi sağlar.
 
 ## ATA Gateway günlükleri
+Bu bölümde, ATA Gateway’e yapılan her gönderme aynı zamanda ATA Lightweight Gateway için de uygundur. 
+
 ATA Gateway günlükleri, **Logs** adlı alt klasörde yer alır. Varsayılan yükleme konumunda, şu yolda bulunabilir: **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
 
 ATA Gateway’in günlükleri şunlardır:
@@ -90,13 +92,20 @@ ATA Center dağıtım günlükleri:
 
 -   **Microsoft Advanced Threat Analytics Center_20150601104213_1_MsiPackage.log** - Bu günlük dosyası, ATA Center ikili dosyalarının dağıtım işlemindeki adımları listeler. Ana kullanım alanı, ATA Center ikili dosyalarının dağıtımını izlemektir.
 
-ATA Gateway dağıtım günlükleri:
+ATA Gateway ve ATA Lightweight Gateway dağıtım günlükleri:
 
 -   **Microsoft Advanced Threat Analytics Gateway_20151214014801.log** - Bu günlük, ATA Gateway’in dağıtım işlemindeki adımları listeler. Ana kullanım alanı, ATA Gateway dağıtım işlemini izlemektir.
 
 -   **Microsoft Advanced Threat Analytics Gateway_20151214014801_001_MsiPackage.log** - Bu günlük dosyası, ATA Gateway ikili dosyalarının dağıtım işlemindeki adımları listeler. Ana kullanım alanı, ATA Gateway ikili dosyalarının dağıtımını izlemektir.
 
+## Ayrıca Bkz.
+- [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
+- [ATA kapasite planlaması](/advanced-threat-analytics/plan-design/ata-capacity-planning)
+- [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection)
+- [Windows olay iletme özelliğini yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=May16_HO3-->
 
 

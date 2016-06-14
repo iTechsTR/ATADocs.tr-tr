@@ -58,14 +58,17 @@ ATA veritabanını taşımanız, yedeklemeniz veya geri yüklemeniz gerekiyorsa,
 
 8.  Şu komutu çalıştırın: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}}) Instead of <New DB Location>` burada &lt;New DB Location&gt;, yeni klasör yoludur.
 
+9.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath değerini yeni klasör yoluna güncelleştirin.
+
 9. **Microsoft Advanced Threat Analytics Center** hizmetini başlatın.
 
 ## Ayrıca Bkz.
-- [ATA mimarisi](/advanced-threat-analytics/understand-explore/ata-architecture)
+- [ATA mimarisi](/advanced-threat-analytics/plan-design/ata-architecture)
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [Destek için forumumuzu gözden geçirin!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=May16_HO1-->
 
 

@@ -29,10 +29,10 @@ ms.suite: ems
 
 >[!div class="step-by-step"]
 [« IIS sertifikası](modifying-ata-config-iiscert.md)
-[Yakalama ağ bağdaştırıcısının adı »](modifying-ata-config-nicname.md)
+
 
 ## Etki alanı bağlantı parolasını değiştirme
-Etki Alanı Bağlantısı Parolası’nı değiştirirseniz, girdiğiniz parolanın doğru olduğundan emin olun. Doğru olmazsa, ATA Gateway bileşenleri üzerinde ATA Hizmeti çalışmayı durdurur.
+Etki Alanı Bağlantısı Parolası’nı değiştirirseniz, girdiğiniz parolanın doğru olduğundan emin olun. Doğru olmazsa, ATA Gateway hizmeti ATA Gateway bileşenleri üzerinde çalışmayı durdurur.
 
 Böyle bir durum oluştuğundan kuşkulanırsanız, Microsoft.Tri.Gateway-Errors.log dosyasında şunu arayın:
 `The supplied credential is invalid.`
@@ -45,11 +45,11 @@ Bunu düzeltmek için, bu yordamı izleyerek ATA Gateway’de Etki Alanı Bağla
 
     ![ATA yapılandırma ayarları simgesi](media/ATA-config-icon.JPG)
 
-3.  **ATA Gateway**’i seçin..
+3.  **Genel**’i seçin.
 
     ![ATA Gateway parola değiştirme resmi](media/ATA-GW-change-DC-password.JPG)
 
-4.  **Etki Alanı Bağlantı Ayarları**’nın altında parolayı değiştirin.
+4.  **Genel** altında, parolayı değiştirin.
 
 5.  **Kaydet**'e tıklayın..
 
@@ -57,14 +57,13 @@ Bunu düzeltmek için, bu yordamı izleyerek ATA Gateway’de Etki Alanı Bağla
 
 >[!div class="step-by-step"]
 [« IIS sertifikası](modifying-ata-config-iiscert.md)
-[Yakalama ağ bağdaştırıcısının adı »](modifying-ata-config-nicname.md)
 
 ## Ayrıca Bkz.
-- [ATA Konsolu’yla çalışma](/advanced-threat-analytics/understand-explore/working-with-ata-console)
+- [ATA Konsolu’yla çalışma](working-with-ata-console.md)
 - [ATA’yı yükleme](install-ata.md)
-- [Destek için forumumuzu gözden geçirin!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO1-->
 
 

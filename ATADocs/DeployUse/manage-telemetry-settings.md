@@ -29,7 +29,7 @@ ms.suite: ems
 Advanced Threat Analytics (ATA), ATA hakkında anonim telemetri verileri toplar ve bu verileri HTTPS bağlantısı üzerinden Microsoft sunucularına iletir.  Bu veriler Microsoft tarafından ATA’nın gelecek sürümlerini geliştirmeye yardımcı olmak için kullanılır.
 
 ## Toplanan veriler
-Şu veriler toplanır:
+Şu anonim veriler toplanır:
 
 -   Hem ATA Center’dan hem de ATA Gateway’den performans sayaçları
 
@@ -39,7 +39,7 @@ Advanced Threat Analytics (ATA), ATA hakkında anonim telemetri verileri toplar 
 
 -   Dağıtılan ATA Gateway bileşenlerinin sayısı
 
--   Aşağıdaki Active Directory bilgileri:
+-   Aşağıdaki anonim Active Directory bilgileri:
 
     -   Alfabetik sıralamada adı en başta yer alan etki alanının Etki Alanı Kimliği
 
@@ -55,7 +55,7 @@ Advanced Threat Analytics (ATA), ATA hakkında anonim telemetri verileri toplar 
 
     -   Kullanıcı sayısı
 
--   Kuşkulu Etkinlikler – Her kuşkulu etkinlik için aşağıdaki veriler toplanır:
+-   Kuşkulu Etkinlikler – Her kuşkulu etkinlik için aşağıdaki anonim veriler toplanır:
 
     (Bilgisayar adları, kullanıcı adları ve IP adresleri **toplanmaz**)
 
@@ -72,16 +72,15 @@ Advanced Threat Analytics (ATA), ATA hakkında anonim telemetri verileri toplar 
 ### Veri toplamayı devre dışı bırakma
 Telemetri verilerinin toplanmasını ve Microsoft’a gönderilmesini durdurmak için aşağıdaki adımları izleyin:
 
-1.  ATA Konsolu’nda oturum açın, araç çubuğundaki üç noktaya tıklayın ve **Hakkında**’yı seçin..
+1.  ATA Konsolu’nda oturum açın, araç çubuğundaki üç noktaya tıklayın ve **Hakkında**’yı seçin.
 
-2.  **Gelecekte müşteri deneyiminizi geliştirmeye yardımcı olmak için bize kullanım bilgilerini gönderin** kutusunun işaretini kaldırın..
+2.  **Gelecekte müşteri deneyiminizi geliştirmeye yardımcı olmak için bize kullanım bilgilerini gönderin** kutusunun işaretini kaldırın.
 
 ## Ayrıca Bkz.
-- [Sürüm 1.5’teki yenilikler](whats-new-version-1.5.md)
-- [Sürüm 1.4’teki yenilikler](whats-new-version-1.4.md)
-- [Destek için forumumuzu gözden geçirin!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Sürüm 1.6’daki yenilikler](/advanced-threat-analytics/understand-explore/whats-new-version-1.6)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

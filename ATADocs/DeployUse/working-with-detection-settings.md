@@ -44,9 +44,9 @@ IP adreslerini aşağıdaki algılamaların dışında bırakabilirsiniz. Bu lis
 ## Ayrıca Bkz.
 - [Kuşkulu etkinliklerle çalışma](working-with-suspicious-activities.md)
 - [ATA yapılandırmasında değişiklik yapma](modifying-ata-configuration.md)
-- [Destek için forumumuzu gözden geçirin!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO1-->
 
 

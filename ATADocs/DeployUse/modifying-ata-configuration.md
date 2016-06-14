@@ -39,14 +39,12 @@ ATA’nın ilk yüklemesinden ve dağıtımından sonra yapılandırmanızı gü
 
 -   [Etki alanı bağlantı parolasını değiştirme](modifying-ata-config-dcpassword.md)
 
--   [Yakalama ağ bağdaştırıcısının adını değiştirme](modifying-ata-config-nicname.md)
-
 ## Ayrıca Bkz.
-- [ATA Konsolu’yla çalışma](/advanced-threat-analytics/understand-explore/working-with-ata-console)
+- [ATA Konsolu’yla çalışma](working-with-ata-console.md)
 - [ATA’yı yükleme](install-ata.md)
-- [Destek için forumumuzu gözden geçirin!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO1-->
 
 
