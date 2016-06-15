@@ -2,7 +2,7 @@
 # required metadata
 
 title: ATA Bildirimlerini Ayarlama | Microsoft Advanced Threat Analytics
-description: ATA’nın kuşkulu etkinlikler algıladığında size nasıl bildireceği (e-postayla veya ATA olay iletme yoluyla) açıklanır 
+description: Şüpheli etkinlikler algılandığında bildirim almak için ATA uyarıları oluşturma adımları açıklanmaktadır.
 keywords:
 author: rkarlin
 manager: stevenpo
@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 # ATA Bildirimlerini Ayarlama
-ATA kuşkulu bir etkinlik algıladığında e-postayla veya ATA olay iletme özelliğini kullanıp olayı SIEM/syslog sunucunuza ileterek size bildirebilir. Hangi bildirimleri almak istediğinizi seçmeden önce, [e-posta sunucunuzu ve Syslog sunucunuzu ayarlamanız](setting-syslog-email-server-settings.md) gerekir.
+ATA şüpheli bir etkinlik algıladığında, e-postayla veya ATA olay iletme özelliğini kullanıp olayı SIEM/syslog sunucunuza ileterek size bildirebilir. Hangi bildirimleri almak istediğinizi seçmeden önce, [e-posta sunucunuzu ve Syslog sunucunuzu ayarlamanız](setting-syslog-email-server-settings.md) gerekir.
 
 > [!NOTE]
 > -   E-posta bildirimleri kullanıcıyı doğrudan algılanan kuşkulu etkinliğe götüren bir bağlantı içerir. Bağlantının ana bilgisayar adı bölümü ATA Center sayfasındaki ATA Konsolu URL’si ayarından alınır. Varsayılan olarak, ATA Konsolu URL’si ATA Center’ın yüklemesi sırasında seçilen IP adresidir.  E-posta bildirimlerini yapılandıracaksanız, ATA Konsolu URL’si olarak FQDN kullanmanız önerilir.
@@ -48,7 +48,7 @@ E-posta bildirimleri almak için aşağıdakileri ayarlayın:
 
 4. E-posta yoluyla bildirimleri alacak alıcıları belirtin.
 
-    [!Not:] Kuşkulu etkinlikler için e-posta uyarıları, yalnızca kuşkulu etkinlik oluşturulduğunda gönderilir.
+    [!Not:] Şüpheli etkinlikler için e-posta uyarıları, yalnızca şüpheli etkinlik oluşturulduğunda gönderilir.
 
 
 5. **Kaydet**'e tıklayın.
@@ -64,7 +64,7 @@ Syslog bildirimleri almak için aşağıdakileri ayarlayın:
 
 
     - Yeni şüpheli etkinlik algılandı
-    - Varolan şüpheli etkinlik güncelleştirildi
+    - Mevcut şüpheli etkinlik güncelleştirildi
     - Yeni bir sistem durumu sorunu algılandı
 5. **Kaydet**'e tıklayın.
 ![ATA bildirim ayarları görüntüsü](media/ATA-notification-settings.png)
@@ -76,6 +76,6 @@ Syslog bildirimleri almak için aşağıdakileri ayarlayın:
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 
