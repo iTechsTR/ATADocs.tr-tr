@@ -21,12 +21,12 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
     <section id="hero-content">
       <h1>Microsoft Advanced Threat Analytics Belgeleri</h1>
       <h2>BT güvenlik uzmanlarının kuruluşlarını ileri düzey hedeflenmiş saldırılara karşı korumalarına yardımcı olmaya yönelik bir şirket içi ürünü olan Microsoft Advanced Threat Analytics’in (ATA) nasıl dağıtıldığını ve yönetildiğini öğrenin.</h2>
-      <h3>ATA’yı kullanmaya yeni mi başladınız? <a href="https://www.microsoft.com/en-us/server-cloud/products/advanced-threat-analytics/" target="_blank">Ürün sayfamızı ziyaret edin &rarr;</a></h3>
+      <h3>ATA’yı kullanmaya yeni mi başladınız? <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Ürün sayfamızı ziyaret edin &rarr;</a></h3>
     </section>
     <aside class="alert section-border">
       <p>Başlamaya hazır mısınız?</p>
       <ol class="action-list">
-        <li><a href="https://www.microsoft.com/en-us/evalcenter/evaluate-microsoft-advanced-threat-analytics" target="_blank" class="button-bordered button-translucent">Şimdi Deneyin</a></li>
+        <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics" target="_blank" class="button-bordered button-translucent">Şimdi Deneyin</a></li>
       </ol>
     </aside>
     <section id="featured" class="container">
@@ -191,6 +191,6 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
 </article>
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 
