@@ -1,26 +1,58 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 3
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/b2baf22d6ec0d0c2453e850b7f34f084138ccd01/ATADocs/index.md) | OutofSyncHandedBackSuccess | [Details](#2a191da2646d91c3740c2f6fa8f638baf346e0f2221)
+ [ATADocs\DeployUse\validate-port-mirroring.md](https://github.com/Microsoft/ATADocs-pr/blob/22eda500aff8e7cace4186d83c8b25184c713aae/ATADocs/DeployUse/validate-port-mirroring.md) | OutofSyncHandedBackSuccess | [Details](#4ecf76afdbcc60b0e8f92a0ff04573d7b178bc82123)
+ [ATADocs\Understand\ata-technical-faq.md](https://github.com/Microsoft/ATADocs-pr/blob/22eda500aff8e7cace4186d83c8b25184c713aae/ATADocs/Understand/ata-technical-faq.md) | OutofSyncHandedBackSuccess | [Details](#cc780e15499c4a43f98bf829e8fbbaa877427653423)
+ [ATADocs\Understand\ata-update-1.6-migration-guide.md](https://github.com/Microsoft/ATADocs-pr/blob/22eda500aff8e7cace4186d83c8b25184c713aae/ATADocs/Understand/ata-update-1.6-migration-guide.md) | OutofSyncHandedBackSuccess | [Details](#f178c0246671a1465090cca040d5d1be5d299716425)
 
 ## Item Details
-##### <a name='2a191da2646d91c3740c2f6fa8f638baf346e0f2221'></a> Source: [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/b2baf22d6ec0d0c2453e850b7f34f084138ccd01/ATADocs/index.md)
+##### <a name='4ecf76afdbcc60b0e8f92a0ff04573d7b178bc82123'></a> Source: [ATADocs\DeployUse\validate-port-mirroring.md](https://github.com/Microsoft/ATADocs-pr/blob/22eda500aff8e7cace4186d83c8b25184c713aae/ATADocs/DeployUse/validate-port-mirroring.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.tr-tr.xlf](https://github.com/Microsoft/EM.handoff/blob/e03a4dab4640e10384ca3476e883d89644417917/ol-handoff/Microsoft/ATADocs-pr.tr-tr/master/index.cc3e62ac6c9901731450d753a0ecebc990048809.tr-tr.xlf)
-* Handoff Datetime: 2016-06-23 22:54:39
+* Handoff File: [validate-port-mirroring.efb9ffcfc3a0f0dbd2cf5317e76edadca57c4d9d.tr-tr.xlf](https://github.com/Microsoft/EM.handoff/blob/685b766a58817646b8b74684ac178dafe0071659/ol-handoff/Microsoft/ATADocs-pr.tr-tr/master/validate-port-mirroring.efb9ffcfc3a0f0dbd2cf5317e76edadca57c4d9d.tr-tr.xlf)
+* Handoff Datetime: 2016-06-25 00:25:52
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr.tr-tr/blob/c19e0c71c1bbb60c0b493625b18dcdef42da19e0/ATADocs/index.md)
-* Current Handback File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.tr-tr.xlf](https://github.com/Microsoft/EM.handback/blob/6bbd25980a1f543330e58651ebf0ca1bbce38315/ol-handback/Microsoft/ATADocs-pr.tr-tr/master/index.cc3e62ac6c9901731450d753a0ecebc990048809.tr-tr.xlf)
+* Current Target File: [ATADocs\DeployUse\validate-port-mirroring.md](https://github.com/Microsoft/ATADocs-pr.tr-tr/blob/c19e0c71c1bbb60c0b493625b18dcdef42da19e0/ATADocs/DeployUse/validate-port-mirroring.md)
+* Current Handback File: [validate-port-mirroring.efb9ffcfc3a0f0dbd2cf5317e76edadca57c4d9d.tr-tr.xlf](https://github.com/Microsoft/EM.handback/blob/6bbd25980a1f543330e58651ebf0ca1bbce38315/ol-handback/Microsoft/ATADocs-pr.tr-tr/master/validate-port-mirroring.efb9ffcfc3a0f0dbd2cf5317e76edadca57c4d9d.tr-tr.xlf)
+* Current Handback Datetime: 2016-06-14 14:16:42
+* [Back to Top](#report-top)
+
+##### <a name='cc780e15499c4a43f98bf829e8fbbaa877427653423'></a> Source: [ATADocs\Understand\ata-technical-faq.md](https://github.com/Microsoft/ATADocs-pr/blob/22eda500aff8e7cace4186d83c8b25184c713aae/ATADocs/Understand/ata-technical-faq.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [ata-technical-faq.938a847200169f6a473355460f812f482e6eb068.tr-tr.xlf](https://github.com/Microsoft/EM.handoff/blob/685b766a58817646b8b74684ac178dafe0071659/ol-handoff/Microsoft/ATADocs-pr.tr-tr/master/ata-technical-faq.938a847200169f6a473355460f812f482e6eb068.tr-tr.xlf)
+* Handoff Datetime: 2016-06-25 00:25:52
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [ATADocs\Understand\ata-technical-faq.md](https://github.com/Microsoft/ATADocs-pr.tr-tr/blob/c19e0c71c1bbb60c0b493625b18dcdef42da19e0/ATADocs/Understand/ata-technical-faq.md)
+* Current Handback File: [ata-technical-faq.938a847200169f6a473355460f812f482e6eb068.tr-tr.xlf](https://github.com/Microsoft/EM.handback/blob/6bbd25980a1f543330e58651ebf0ca1bbce38315/ol-handback/Microsoft/ATADocs-pr.tr-tr/master/ata-technical-faq.938a847200169f6a473355460f812f482e6eb068.tr-tr.xlf)
+* Current Handback Datetime: 2016-06-14 14:16:42
+* [Back to Top](#report-top)
+
+##### <a name='f178c0246671a1465090cca040d5d1be5d299716425'></a> Source: [ATADocs\Understand\ata-update-1.6-migration-guide.md](https://github.com/Microsoft/ATADocs-pr/blob/22eda500aff8e7cace4186d83c8b25184c713aae/ATADocs/Understand/ata-update-1.6-migration-guide.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [ata-update-1.6-migration-guide.fe715980eb0702f6dda7862931a6921ccd723d15.tr-tr.xlf](https://github.com/Microsoft/EM.handoff/blob/685b766a58817646b8b74684ac178dafe0071659/ol-handoff/Microsoft/ATADocs-pr.tr-tr/master/ata-update-1.6-migration-guide.fe715980eb0702f6dda7862931a6921ccd723d15.tr-tr.xlf)
+* Handoff Datetime: 2016-06-25 00:25:52
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [ATADocs\Understand\ata-update-1.6-migration-guide.md](https://github.com/Microsoft/ATADocs-pr.tr-tr/blob/c19e0c71c1bbb60c0b493625b18dcdef42da19e0/ATADocs/Understand/ata-update-1.6-migration-guide.md)
+* Current Handback File: [ata-update-1.6-migration-guide.fe715980eb0702f6dda7862931a6921ccd723d15.tr-tr.xlf](https://github.com/Microsoft/EM.handback/blob/6bbd25980a1f543330e58651ebf0ca1bbce38315/ol-handback/Microsoft/ATADocs-pr.tr-tr/master/ata-update-1.6-migration-guide.fe715980eb0702f6dda7862931a6921ccd723d15.tr-tr.xlf)
 * Current Handback Datetime: 2016-06-14 14:16:42
 * [Back to Top](#report-top)
 
