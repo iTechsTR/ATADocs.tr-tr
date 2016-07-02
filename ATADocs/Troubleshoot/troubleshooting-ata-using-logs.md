@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA günlüklerini kullanarak ATA sorunlarını giderme | Microsoft Advanced Threat Analytics
-description: Sorunları gidermek için ATA günlüklerini nasıl kullanabileceğiniz açıklanır
-keywords:
+title: "ATA günlüklerini kullanarak ATA sorunlarını giderme | Microsoft Advanced Threat Analytics"
+description: "Sorunları gidermek için ATA günlüklerini nasıl kullanabileceğiniz açıklanır"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 4f02b0fba381eb76ad500e198392ec7624a3028a
+
 
 ---
 
@@ -47,7 +41,7 @@ ATA Gateway’in günlükleri şunlardır:
 > [!NOTE]
 > İlk üç günlük dosyasının boyut üst sınırı 50 MB’dir. Bu boyuta ulaşıldığında, yeni günlük dosyası açılır ve önceki dosya "&lt;özgün dosya adı&gt;-Arşivlendi-00000" olarak yeniden adlandırılır; buradaki sayı her yeniden adlandırmada artar.
 
-### ATA Center günlükleri
+## ATA Center günlükleri
 ATA Center günlükleri, **Logs** adlı alt klasörde yer alır. Varsayılan yükleme konumunda, şu yolda bulunabilir: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs**".
 
 ATA Center’ın günlükleri şunlardır:
@@ -64,7 +58,7 @@ ATA Center’ın günlükleri şunlardır:
 > [!NOTE]
 > İlk üç günlük dosyasının boyut üst sınırı 50 MB’dir. Bu boyuta ulaşıldığında, yeni günlük dosyası açılır ve önceki dosya "&lt;özgün dosya adı&gt;-Arşivlendi-00000" olarak yeniden adlandırılır; buradaki sayı her yeniden adlandırmada artar.
 
-### ATA Konsolu günlükleri
+## ATA Konsolu günlükleri
 ATA Konsolu günlükleri (yönetim API’si günlükleri) **Logs** adlı alt klasörde yer alır. Varsayılan yükleme konumunda, şu yolda bulunabilir: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Management\Logs**.
 
 ATA Konsolu’nun günlükleri şunlardır:
@@ -81,7 +75,7 @@ ATA Konsolu’nun günlükleri şunlardır:
 > [!NOTE]
 > İlk iki günlük dosyasının boyut üst sınırı 50 MB’dir. Bu boyuta ulaşıldığında, yeni günlük dosyası açılır ve önceki dosya "&lt;özgün dosya adı&gt;-Arşivlendi-00000" olarak yeniden adlandırılır; buradaki sayı her yeniden adlandırmada artar.
 
-### ATA Dağıtım günlükleri
+## ATA Dağıtım günlükleri
 ATA dağıtım günlükleri, ürünü yükleyen kullanıcının Temp dizininde yer alır. Varsayılan yükleme konumunda, şu yolda bulunabilir: **C:\Users\Administrator\AppData\Local\Temp** (veya %temp% dizininden bir dizin yukarıda).
 
 ATA Center dağıtım günlükleri:
@@ -103,9 +97,10 @@ ATA Gateway ve ATA Lightweight Gateway dağıtım günlükleri:
 - [ATA kapasite planlaması](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Windows olay iletme özelliğini yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

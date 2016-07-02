@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Telemetri Ayarlarını Yönetme | Microsoft Advanced Threat Analytics
-description: ATA tarafından toplanan veriler açıklanır ve veri toplamayı kapatma adımları sağlanır.
-keywords:
+title: "Telemetri Ayarlarını Yönetme | Microsoft Advanced Threat Analytics"
+description: "ATA tarafından toplanan veriler açıklanır ve veri toplamayı kapatma adımları sağlanır."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: c6b3196f6093b909e8d97f9a9ac230e35807eb72
+
 
 ---
 
@@ -78,9 +72,10 @@ Telemetri verilerinin toplanmasını ve Microsoft’a gönderilmesini durdurmak 
 
 ## Ayrıca Bkz.
 - [Sürüm 1.6’daki yenilikler](/advanced-threat-analytics/understand-explore/whats-new-version-1.6)
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
