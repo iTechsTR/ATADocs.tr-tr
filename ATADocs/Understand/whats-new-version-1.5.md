@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA sürüm 1.5’teki yenilikler | Microsoft Advanced Threat Analytics
-description: ATA sürüm 1.5’teki yenilikleri ve bilinen sorunları listeler
-keywords:
+title: "ATA sürüm 1.5’teki yenilikler | Microsoft Advanced Threat Analytics"
+description: "ATA sürüm 1.5’teki yenilikleri ve bilinen sorunları listeler"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 5836792bcfadb2585d05d4a195979bd6003c84cf
+
 
 ---
 
@@ -65,7 +59,7 @@ ATA Gateway’i yüklerken, dosyaları zip dosyasından bir yerel dizine ayıkla
 ATA Gateway’in yapılandırması ayarlandıktan sonra ATA Gateway ilk kez başlatıldığında, hizmet tümüyle başlatılana kadar "Eşitlenmedi" etiketi görüntülenir; hizmetin ilk kez başlatılması 10 dakika kadar sürebilir.
 
 ### Ağ Yakalama Yazılımı
-ATA Gateway’de, yükleyebileceğiniz desteklenen tek ağ yakalama yazılımı [Microsoft Network Monitor 3.4](http://www.microsoft.com/en-us/download/details.aspx?id=4865)’tür. Microsoft Message Analyzer’ı veya başka bir ağ yakalama yazılımını yüklemeyin. Başka bir yazılımın yüklenmesi ATA Gateway’in düzgün çalışmayı durdurmasına neden olur.
+ATA Gateway’de, yükleyebileceğiniz desteklenen tek ağ yakalama yazılımı [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865)’tür. Microsoft Message Analyzer’ı veya başka bir ağ yakalama yazılımını yüklemeyin. Başka bir yazılımın yüklenmesi ATA Gateway’in düzgün çalışmayı durdurmasına neden olur.
 
 ### Sanallaştırma ana bilgisayarında KB
 Sanallaştırma ana bilgisayarına KB 3047154’ü yüklemeyin. Bu, bağlantı noktası yansıtma işleminin düzgün çalışmayı durdurmasına neden olur.
@@ -76,9 +70,10 @@ Sanallaştırma ana bilgisayarına KB 3047154’ü yüklemeyin. Bu, bağlantı n
 
 [ATA’yı 1.6 sürümüne güncelleştirme - geçiş kılavuzu](ata-update-1.6-migration-guide.md)
 
-[ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

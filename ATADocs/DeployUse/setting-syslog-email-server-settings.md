@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: ATA Bildirimlerini Ayarlama | Microsoft Advanced Threat Analytics
-description: ATA’nın kuşkulu etkinlikler algıladığında size nasıl bildireceği (e-postayla veya ATA olay iletme yoluyla) açıklanır 
-keywords:
+description: "ATA’nın kuşkulu etkinlikler algıladığında size nasıl bildireceği (e-postayla veya ATA olay iletme yoluyla) açıklanır"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 66194d89c3e937923e576004a3ab4b7177f179c4
+
 
 ---
 
@@ -30,9 +24,9 @@ ATA, kuşkulu bir etkinlik algıladığında size bildirebilir. ATA’nın e-pos
 
 1.  ATA Center sunucusunda, masaüstündeki **Microsoft Advanced Threat Analytics Yönetimi** simgesine tıklayın.
 
-2.  Kullanıcı adınızla parolanızı girin ve **Oturum aç**’a tıklayın..
+2.  Kullanıcı adınızla parolanızı girin ve **Oturum aç**’a tıklayın.
 
-3.  Araç çubuğunda ayarlar seçeneğini belirtin ve **Yapılandırma**’yı seçin..
+3.  Araç çubuğunda ayarlar seçeneğini belirtin ve **Yapılandırma**’yı seçin.
 
     ![ATA yapılandırma ayarları simgesi](media/ATA-config-icon.JPG)
 
@@ -61,9 +55,9 @@ ATA kuşkulu bir etkinlik algıladığında Syslog sunucunuza bildirim gönderer
 
 2.  ATA Center sunucusunda, masaüstündeki **Microsoft Advanced Threat Analytics Yönetimi** simgesine tıklayın.
 
-3.  Kullanıcı adınızla parolanızı girin ve **Oturum aç**’a tıklayın..
+3.  Kullanıcı adınızla parolanızı girin ve **Oturum aç**’a tıklayın.
 
-4.  Araç çubuğunda ayarlar seçeneğini belirtin ve **Yapılandırma**’yı seçin..
+4.  Araç çubuğunda ayarlar seçeneğini belirtin ve **Yapılandırma**’yı seçin.
 
     ![ATA yapılandırma ayarları simgesi](media/ATA-config-icon.JPG)
 
@@ -80,9 +74,10 @@ ATA kuşkulu bir etkinlik algıladığında Syslog sunucunuza bildirim gönderer
 
 
 ## Ayrıca Bkz.
-[ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

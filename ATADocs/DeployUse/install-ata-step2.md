@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA’yı Yükleme - 2. Adım | Microsoft Advanced Threat Analytics
-description: ATA’yı yükleme işleminin ikinci adımı, ATA Center sunucunuzda etki alanı bağlantı ayarlarını yapılandırmanıza yardımcı olur.
-keywords:
+title: "ATA’yı Yükleme - 2. Adım | Microsoft Advanced Threat Analytics"
+description: "ATA’yı yükleme işleminin ikinci adımı, ATA Center sunucunuzda etki alanı bağlantı ayarlarını yapılandırmanıza yardımcı olur."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,19 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 73e2eb84e1e21cbc5afcb7a100f9a67da63c66a5
+
 
 ---
 
 # ATA’yı Yükleme - 2. Adım
 
->[!div class="step-by-step"] [« 1. Adım](install-ata-step1.md)
+>[!div class="step-by-step"]
+[« 1. Adım](install-ata-step1.md)
 [3. Adım »](install-ata-step3.md)
 
 ## 2. Adım ATA Gateway genel ayarlarını yapılandırma
@@ -54,17 +49,19 @@ Genel ATA Gateway ayarlarını yapılandırmak için aşağıdakileri gerçekle�
 
 
 
->[!div class="step-by-step"] [« 1. Adım](install-ata-step1.md)
+>[!div class="step-by-step"]
+[« 1. Adım](install-ata-step1.md)
 [3. Adım »](install-ata-step3.md)
 
 
 ## Ayrıca Bkz.
 
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

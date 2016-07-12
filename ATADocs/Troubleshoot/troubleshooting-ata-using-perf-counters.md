@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Performans sayaçlarını kullanarak ATA sorunlarını giderme | Microsoft Advanced Threat Analytics
-description: ATA’yla ilgili sorunları gidermek için performans sayaçlarını nasıl kullanabileceğiniz açıklanır
-keywords:
+title: "Performans sayaçlarını kullanarak ATA sorunlarını giderme | Microsoft Advanced Threat Analytics"
+description: "ATA’yla ilgili sorunları gidermek için performans sayaçlarını nasıl kullanabileceğiniz açıklanır"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,21 +10,17 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 21d87591c9c791aa431c273479921e1c11825e09
+
 
 ---
 
 # Performans sayaçlarını kullanarak ATA sorunlarını giderme
-ATA performans sayaçları, ATA’nın her bileşeninin ne kadar iyi çalıştığı konusunda fikir sağlar. ATA’daki bileşenler verileri sıralı olarak işlediğinden, bir sorun olduğunda zincirleme tepki ortaya çıkar ve bu da trafiğin bırakılmasına neden olur. Sorunu çözmek için, hangi bileşende istenmeyen sonuç alındığını saptamanız ve sorunu zincirin başında çözmeniz gerekir.
+ATA performans sayaçları, ATA’nın her bileşeninin ne kadar iyi çalıştığı konusunda fikir sağlar. ATA’daki bileşenler verileri sıralı olarak işlediğinden, bir sorun çıktığında, bileşen zincirinin herhangi bir yerinde trafiğin kısmi olarak bırakılmasına neden olabilir. Sorunu çözmek için, hangi bileşende istenmeyen sonuç alındığını saptamanız ve sorunu zincirin başında çözmeniz gerekir. Her bileşenin nasıl çalıştığını anlamak için, performans sayaçlarında bulunan verileri kullanın.
 İç ATA bileşenlerinin akışını anlamak için [ATA mimarisi](/advanced-threat-analytics/plan-design/ata-architecture) konusuna bakın.
 
 **ATA bileşeni işlemi**:
@@ -37,7 +31,6 @@ ATA performans sayaçları, ATA’nın her bileşeninin ne kadar iyi çalıştı
 
 3.  Bu durum geriye doğru ilk AğDinleyicisi bileşenine kadar devam eder ve o bileşen de artık varlıkları iletemediğinde trafiği bırakır.
 
-4. Her bileşenin nasıl çalıştığını anlamak için, performans sayaçlarında bulunan verileri kullanın.
 
 ## ATA Gateway performans sayaçları
 
@@ -98,7 +91,7 @@ Aşağıda, dikkat edilmesi gereken ana işletim sistemi sayaçları listelenmi�
 |MantıksalDisk(&#42;)\Ort. Disk sn/Yazma|Diske veri yazmak için ortalama gecikme süresi (örnek olarak veritabanı sürücüsünü seçmelisiniz).|10 milisaniyeden kısa olmalıdır.|Veritabanı sürücüsünü gerektiğinden fazla kullanan belirli bir işlem bulunup bulunmadığını denetleyin.<br /><br />Bu sürücünün 10 ms’den daha kısa bir gecikme süresiyle geçerli iş yükünü sağlayıp sağlayamayacağını öğrenmek için depolama ekibinize/satıcınıza danışın. Geçerli iş yükü, disk kullanım sayaçları aracılığıyla belirlenebilir.|
 |\MantıksalDisk(&#42;)\Disk Okuma/sn|Diskte okuma işlemlerini gerçekleştirme hızı.|Eşik yok|Disk kullanım sayaçları, depolama gecikmesi sorunlarını giderirken fikir verebilir.|
 |\MantıksalDisk(&#42;)\Disk Okuma Bayt/sn|Diskten bir saniyede okunan bayt sayısı.|Eşik yok|Disk kullanım sayaçları, depolama gecikmesi sorunlarını giderirken fikir verebilir.|
-|\MantıksalDisk(&#42;)\Disk Yazma/sn|Diskte yazma işlemlerini gerçekleştirme hızı.|Eşik yok|Disk kullanım sayaçları (depolama gecikmesi sorunlarını giderirken fikir verebilir).|
+|\MantıksalDisk&#42;\Disk Yazma/sn|Diskte yazma işlemlerini gerçekleştirme hızı.|Eşik yok|Disk kullanım sayaçları (depolama gecikmesi sorunlarını giderirken fikir verebilir).|
 |\MantıksalDisk(&#42;)\Disk Yazma Bayt/sn|Diske bir saniyede yazılan bayt sayısı.|Eşik yok|Disk kullanım sayaçları, depolama gecikmesi sorunlarını giderirken fikir verebilir.|
 
 ## Ayrıca Bkz.
@@ -106,9 +99,10 @@ Aşağıda, dikkat edilmesi gereken ana işletim sistemi sayaçları listelenmi�
 - [ATA kapasite planlaması](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Windows olay iletme özelliğini yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

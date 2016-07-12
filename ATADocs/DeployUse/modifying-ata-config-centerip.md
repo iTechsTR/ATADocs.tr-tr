@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA yapılandırmasını değiştirme - ATA Center IP adresi | Microsoft Advanced Threat Analytics
-description: ATA Center bileşeninizin IP adresini, bağlantı noktasını veya sertifikasını nasıl değiştireceğiniz açıklanır.
-keywords:
+title: "ATA yapılandırmasını değiştirme - ATA Center IP adresi | Microsoft Advanced Threat Analytics"
+description: "ATA Center bileşeninizin IP adresini, bağlantı noktasını veya sertifikasını nasıl değiştireceğiniz açıklanır."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 373eb5722a5450bca87cf66933990249286138ab
+
 
 ---
 
@@ -37,7 +31,7 @@ ATA Center IP adresini ve bağlantı noktasını veya sertifikasını değiştir
 
 ATA Gateway bileşenleri bağlanmaları gereken ATA Center’ın IP adresini yerel olarak depolar. Düzenli aralıklarla ATA Center’a bağlanır ve yapılandırma değişikliklerini alırlar. ATA Gateway bileşenlerinin ATA Center’a bağlanma şeklinde yapılacak değişiklikler iki aşamada yapılır.
 
--   Birinci aşama – ATA Center hizmetinin IP adresini ve bağlantı noktasını ATA Center hizmeti tarafından kullanılmasını istediğiniz gibi güncelleştirin. Bu noktada ATA Center özgün IP adresinde dinlemeye devam eder ve ATA Gateway’in yapılandırmasını bir sonraki eşitleyişinde ATA Center için iki IP adresi olur. ATA Gateway özgün (ilk) IP adresini kullanarak bağlanabildiği sürece, yeni IP adresini ve bağlantı noktasını denemez.
+-   Birinci aşama – IP adresini ve bağlantı noktasını ATA Center hizmeti tarafından kullanılmasını istediğiniz gibi güncelleştirin. Bu noktada ATA Center özgün IP adresinde dinlemeye devam eder ve ATA Gateway’in yapılandırmasını bir sonraki eşitleyişinde ATA Center için iki IP adresi olur. ATA Gateway özgün (ilk) IP adresini kullanarak bağlanabildiği sürece, yeni IP adresini ve bağlantı noktasını denemez.
 
 -   İkinci aşama – Tüm ATA Gateway bileşenleri güncelleştirilmiş yapılandırmayla eşitlendiğinde, ATA Center’ın dinlemesi için yeni IP adresini ve bağlantı noktasını etkinleştirin. Yeni IP adresini etkinleştirdiğinizde, ATA Center hizmeti yeni IP adresine bağlanır. ATA Gateway bileşenleri özgün adrese bağlanamaz ve şimdi ATA Center için var olan ikinci (yeni) IP adresiyle bağlanmayı dener. Yeni IP adresiyle ATA Center’a bağlandıktan sonra, ATA Gateway en yeni yapılandırmayı alır ve ATA Center için tek bir IP adresine sahip olur. (İşlemi yeniden başlatmadığınız sürece bu durum geçerli olur.)
 
@@ -48,7 +42,7 @@ ATA Gateway bileşenleri bağlanmaları gereken ATA Center’ın IP adresini yer
 
 1.  ATA Konsolu’nu açın.
 
-2.  Araç çubuğunda ayarlar seçeneğini belirtin ve **Yapılandırma**’yı seçin..
+2.  Araç çubuğunda ayarlar seçeneğini belirtin ve **Yapılandırma**’yı seçin.
 
     ![ATA yapılandırma ayarları simgesi](media/ATA-config-icon.JPG)
 
@@ -56,7 +50,7 @@ ATA Gateway bileşenleri bağlanmaları gereken ATA Center’ın IP adresini yer
 
 4.  **ATA Center Service IP adresi: bağlantı noktası**’nın altında, var olan IP adreslerinden birini seçin veya **Özel IP adresi ekle**’yi seçip bir IP adresi girin.
 
-5.  **Kaydet**'e tıklayın..
+5.  **Kaydet**'e tıklayın.
 
 6.  Kaç ATA Gateway’in en son yapılandırmayla eşitlendiğine ilişkin bir bildirim görürsünüz.
 
@@ -82,9 +76,10 @@ ATA Gateway bileşenleri bağlanmaları gereken ATA Center’ın IP adresini yer
 ## Ayrıca Bkz.
 - [ATA Konsolu’yla çalışma](working-with-ata-console.md)
 - [ATA’yı yükleme](install-ata.md)
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

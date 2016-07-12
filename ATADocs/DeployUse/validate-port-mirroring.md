@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Bağlantı Noktası Yansıtmayı Doğrulama | Microsoft Advanced Threat Analytics
-description: Bağlantı noktası yansıtmanın düzgün yapılandırıldığını nasıl doğrulayabileceğiniz açıklanır
-keywords:
+title: "Bağlantı Noktası Yansıtmayı Doğrulama | Microsoft Advanced Threat Analytics"
+description: "Bağlantı noktası yansıtmanın düzgün yapılandırıldığını nasıl doğrulayabileceğiniz açıklanır"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,21 +10,18 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: e1ce20c48323e1fca04211c2691f6dfb6fa57fe5
+
 
 ---
 
 # Bağlantı Noktası Yansıtmayı Doğrulama
-> [!NOTE] Bu makale yalnızca ATA Lightweight Gateway bileşenleri yerine ATA Gateway bileşenleri dağıttığınızda geçerlidir. ATA Gateway bileşenleri kullanmanız gerekip gerekmediğini belirlemek için bkz. [Dağıtımınız için doğru ağ geçitlerini seçme](/advanced-threat-analytics/plan-design/ata-capacity-planning#Choosing-the-right-gateway-type-for-your-deployment)
+> [!NOTE] 
+> Bu makale yalnızca ATA Lightweight Gateway bileşenleri yerine ATA Gateway bileşenleri dağıttığınızda geçerlidir. ATA Gateway bileşenleri kullanmanız gerekip gerekmediğini belirlemek için bkz. [Dağıtımınız için doğru ağ geçitlerini seçme](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment).
  
 Aşağıdaki adımlar, bağlantı noktası yansıtmanın düzgün yapılandırıldığını doğrulama işleminde size yol gösterir. ATA’nın düzgün çalışması için, ATA Gateway’in etki alanı denetleyicisinden gelen ve giden trafiği görebilmesi gerekir. ATA tarafından kullanılan ana veri kaynağı, etki alanı denetleyicilerinizden gelen ve giden ağ trafiğinin derin paket incelemesidir. ATA’nın ağ trafiğini görebilmesi için, bağlantı noktası yansıtma yapılandırılmalıdır. Bağlantı noktası yansıtma, bir bağlantı noktasındaki trafiği (kaynak bağlantı noktası) başka bir bağlantı noktasına (hedef bağlantı noktası) kopyalar.
 
@@ -193,7 +188,7 @@ Betiğin çalıştırılmasına örnek:
     
     
 ## Net Mon kullanarak bağlantı noktası yansıtmayı doğrulama
-1.  [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865)’ü yükleme.
+1.  [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865)’ü yükleyin.
 
     > [!IMPORTANT]
     > ATA Gateway’e Microsoft Message Analyzer’ı veya başka herhangi bir trafik yakalama yazılımını yüklemeyin.
@@ -204,11 +199,11 @@ Betiğin çalıştırılmasına örnek:
 
     2.  P-Modu’nun etkinleştirildiğinden emin olun.
 
-    3.  **Yeni Yakalama**’ya tıklayın..
+    3.  **Yeni Yakalama**’ya tıklayın.
 
         ![Yeni yakalama sekmesi oluşturma resmi](media/ATA-Port-Mirroring-Capture.jpg)
 
-3.  Görüntüleme Filtresi penceresinde **KerberosV5 VEYA LDAP** filtresini girin ve ardından **Uygula**’ya tıklayın..
+3.  Görüntüleme Filtresi penceresinde **KerberosV5 VEYA LDAP** filtresini girin ve ardından **Uygula**’ya tıklayın.
 
     ![KerberosV5 veya LDAP filtresini uygulama resmi](media/ATA-Port-Mirroring-filter-settings.jpg)
 
@@ -225,9 +220,10 @@ Betiğin çalıştırılmasına örnek:
 ## Ayrıca Bkz.
 
 - [Bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md)
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

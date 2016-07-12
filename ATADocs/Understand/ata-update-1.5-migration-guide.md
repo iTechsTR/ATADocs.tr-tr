@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA’yı 1.5’e güncelleştirme geçiş kılavuzu | Microsoft Advanced Threat Analytics
-description: ATA’yı sürüm 1.5’e güncelleştirme yordamları
-keywords:
+title: "ATA’yı 1.5’e güncelleştirme geçiş kılavuzu | Microsoft Advanced Threat Analytics"
+description: "ATA’yı sürüm 1.5’e güncelleştirme yordamları"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 87293e71e053e2d7a962a5b7362b92e5df677c77
+
 
 ---
 
@@ -44,7 +38,7 @@ ATA 1.5 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 
 ## ATA’yı sürüm 1.5’e güncelleştirme
 > [!NOTE]
-> ATA ortamınızda yüklü değilse, ATA’nın sürüm 1.5’i de içeren tam sürümünü indirin ve [ATA’yı Yükleme](/advanced-threat-analytics/deploy-use/install-ata) başlığı altında açıklanan standart yükleme yordamını izleyin..
+> ATA ortamınızda yüklü değilse, ATA’nın sürüm 1.5’i de içeren tam sürümünü indirin ve [ATA’yı Yükleme](/advanced-threat-analytics/deploy-use/install-ata) başlığı altında açıklanan standart yükleme yordamını izleyin.
 
 ATA sürüm 1.4’ü önceden dağıttıysanız, bu yordam yüklemenizi güncelleştirmek için gereken adımlarda size yol gösterir.
 
@@ -70,13 +64,13 @@ ATA sürüm 1.5’e güncelleştirmek için bu adımları izleyin:
 
     -   ATA Center sanal makinede çalışıyorsa ve bir denetim noktası almak istiyorsanız, önce sanal makineyi kapatın.
 
-    -   ATA Center fiziksel sunucuda çalışıyorsa, [MongoDB’yi yapılandırmak](https://docs.mongodb.org/manual/core/backups/) için önerilen yordamı izleyin..
+    -   ATA Center fiziksel sunucuda çalışıyorsa, [MongoDB’yi yapılandırmak](https://docs.mongodb.org/manual/core/backups/) için önerilen yordamı izleyin.
 
 2.  Microsoft ATA Center Update.exe güncelleştirme dosyasını çalıştırın ve ekrandaki yönergeleri izleyerek güncelleştirmeyi yükleyin.
 
-    1.  **Hoş Geldiniz** sayfasında dilinizi seçin ve **İleri**’ye tıklayın..
+    1.  **Hoş Geldiniz** sayfasında dilinizi seçin ve **İleri**’ye tıklayın.
 
-    2.  Son Kullanıcı Lisans Sözleşmesi’ni okuyun ve koşulları kabul ediyorsanız, onay kutusuna tıklayın ve ardından **İleri**’ye tıklayın..
+    2.  Son Kullanıcı Lisans Sözleşmesi’ni okuyun ve koşulları kabul ediyorsanız, onay kutusuna tıklayın ve ardından **İleri**’ye tıklayın.
 
     3.  Tam (varsayılan) geçişi mi yoksa kısmı geçişi mi çalıştırmak istediğinizi seçin.
 
@@ -102,11 +96,11 @@ ATA Gateway paketini indirmek için:
 
 1.  ATA Gateway paketinin daha önce indirmiş olduğunuz tüm önceki sürümlerini silin.
 
-2.  ATA Gateway makinesinde, bir tarayıcı açın ve ATA Center’da ATA Konsolu için yapılandırdığınız IP adresini girin. ATA Konsolu açıldığında, ayarlar simgesine tıklayın ve **Yapılandırma**’yı seçin..
+2.  ATA Gateway makinesinde, bir tarayıcı açın ve ATA Center’da ATA Konsolu için yapılandırdığınız IP adresini girin. ATA Konsolu açıldığında, ayarlar simgesine tıklayın ve **Yapılandırma**’yı seçin.
 
     ![Yapılandırma ayarları simgesi](media/ATA-config-icon.JPG)
 
-3.  **ATA Gateway Bileşenleri** sekmesinde **ATA Gateway Kurulumunu İndir**’e tıklayın..
+3.  **ATA Gateway Bileşenleri** sekmesinde **ATA Gateway Kurulumunu İndir**’e tıklayın.
 
 4.  Paketi yerel olarak kaydedin.
 
@@ -136,9 +130,10 @@ Tüm ATA Gateway bileşenleri başarıyla eşitlendiklerini bildirdiklerinde ve 
 
 ## Ayrıca Bkz.
 
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

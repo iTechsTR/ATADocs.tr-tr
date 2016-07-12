@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA Veritabanı Yönetimi | Microsoft Advanced Threat Analytics
-description: ATA veritabanını taşımanıza, yedeklemenize veya geri yüklemenize yardımcı olacak yordamlar.
-keywords:
+title: "ATA Veritabanı Yönetimi | Microsoft Advanced Threat Analytics"
+description: "ATA veritabanını taşımanıza, yedeklemenize veya geri yüklemenize yardımcı olacak yordamlar."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 6c0e2abe43da5351568cf8db4e6ffe6fa919d835
+
 
 ---
 
@@ -29,10 +23,10 @@ ms.suite: ems
 ATA veritabanını taşımanız, yedeklemeniz veya geri yüklemeniz gerekiyorsa, MongoDB ile çalışmak için bu yordamları kullanın.
 
 ## ATA veritabanını yedekleme
-[İlgili MongoDB belgelerine](http://docs.mongodb.org/manual/administration/backup/) bakın..
+[İlgili MongoDB belgelerine](http://docs.mongodb.org/manual/administration/backup/) bakın.
 
 ## ATA veritabanını geri yükleme
-[İlgili MongoDB belgelerine](http://docs.mongodb.org/manual/administration/backup/) bakın..
+[İlgili MongoDB belgelerine](http://docs.mongodb.org/manual/administration/backup/) bakın.
 
 ## ATA veritabanını başka bir sürücüye taşıma
 
@@ -52,11 +46,14 @@ ATA veritabanını taşımanız, yedeklemeniz veya geri yüklemeniz gerekiyorsa,
 
 6.  **MongoDB** hizmetini başlatın.
 
-7.  Komut istemini açın ve Mongo kabuğunu çalıştırmak için şu komutu çalıştırın: `mongo.exe ATA` .
+7.  Komut istemini açın ve `mongo.exe ATA` komutuyla Mongo kabuğunu çalıştırın.
 
     Varsayılan olarak, mongo.exe dosyası C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin yolunda bulunur.
 
-8.  Şu komutu çalıştırın: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}}) Instead of <New DB Location>` burada &lt;New DB Location&gt;, yeni klasör yoludur.
+8.  Şu komutu çalıştırın: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}})`
+
+
+    <New DB Location> (burada `&lt;New DB Location&gt;`, yeni klasör yoludur) yerine onu kullanın.
 
 9.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath değerini yeni klasör yoluna güncelleştirin.
 
@@ -65,10 +62,12 @@ ATA veritabanını taşımanız, yedeklemeniz veya geri yüklemeniz gerekiyorsa,
 ## Ayrıca Bkz.
 - [ATA mimarisi](/advanced-threat-analytics/plan-design/ata-architecture)
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [FCheck out the ATA forum!](https://social.technet.microsoft.com/Forums/security/
+- home?forum=mata)
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 
