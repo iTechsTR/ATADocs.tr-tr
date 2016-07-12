@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Kuşkulu Etkinliklerle Çalışma | Microsoft Advanced Threat Analytics
-description: ATA tarafından belirlenen kuşkulu etkinliklerin nasıl gözden geçirileceğini açıklar
-keywords:
+title: "Kuşkulu Etkinliklerle Çalışma | Microsoft Advanced Threat Analytics"
+description: "ATA tarafından belirlenen kuşkulu etkinliklerin nasıl gözden geçirileceğini açıklar"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 1214560096227e00af36ff7cb1a0a95988a2ad40
+
 
 ---
 
@@ -61,9 +55,9 @@ Her kuşkulu etkinliğin aşağıdaki bilgileri bulunur:
 ## Kuşkulu etkinlikler listesini filtreleme
 Kuşkulu etkinlikler listesini filtrelemek için:
 
-1.  Ekranın sol tarafındaki **Filtre ölçütü** bölmesinde şunlardan birini seçin: **Tümü**, **Açık**, **Çözüldü** veya **Çıkarıldı**..
+1.  Ekranın sol tarafındaki **Filtre ölçütü** bölmesinde şunlardan birini seçin: **Tümü**, **Açık**, **Çözüldü** veya **Çıkarıldı**.
 
-2.  Listeyi daha fazla filtrelemek için, **Yüksek**, **Orta** veya **Düşük** ayarını seçin..
+2.  Listeyi daha fazla filtrelemek için, **Yüksek**, **Orta** veya **Düşük** ayarını seçin.
 
 **Kuşkulu etkinliğin önem derecesi**
 
@@ -107,17 +101,18 @@ ATA’nın sizinle ağınız hakkında daha fazla bilgi edinebilmesi için, iler
 
 3.  Öte yandan evet yanıtı verirseniz, kuşkulu etkinlik çıkarılabilir ve gelecekte bu bilgisayardan bu tür etkinlikler kuşkulu etkinlik oluşturmayabilir veya otomatik olarak çıkarılan bir etkinlik oluşturabilir.
 
-4.  Bilmiyorsanız, **İptal**’e tıklayabilirsiniz..
+4.  Bilmiyorsanız, **İptal**’e tıklayabilirsiniz.
 
 ## Kuşkulu etkinliğin durumunu değiştirme
-Kuşkulu etkinliğin geçerli durumuna tıklayıp **Açık**, **Çözüldü** veya **Çıkarıldı** ayarlarından birini seçerek, kuşkulu etkinliğin durumunu değiştirebilirsiniz..
+Kuşkulu etkinliğin geçerli durumuna tıklayıp **Açık**, **Çözüldü** veya **Çıkarıldı** ayarlarından birini seçerek, kuşkulu etkinliğin durumunu değiştirebilirsiniz.
 
 ## Ayrıca Bkz.
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [ATA algılama ayarlarıyla çalışma](working-with-detection-settings.md)
 - [ATA yapılandırmasında değişiklik yapma](modifying-ata-configuration.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

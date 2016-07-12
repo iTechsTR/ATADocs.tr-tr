@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA’yı Yükleme - 1. Adım | Microsoft Advanced Threat Analytics
-description: ATA’yı yüklemenin ilk adımı, seçtiğiniz sunucuya ATA Center’ı indirmeyi ve yüklemeyi kapsar.
-keywords:
+title: "ATA’yı Yükleme - 1. Adım | Microsoft Advanced Threat Analytics"
+description: "ATA’yı yüklemenin ilk adımı, seçtiğiniz sunucuya ATA Center’ı indirmeyi ve yüklemeyi kapsar."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: c89d4d6f6af58bcc822b9599dcda65d0719a7419
+
 
 ---
 
@@ -33,14 +27,15 @@ ms.suite: ems
 
 Bu yükleme yordamı, sıfırdan bir ATA 1.6 yüklemesi gerçekleştirme yönergeleri sağlar. Var olan bir ATA dağıtımını önceki bir sürümünden güncelleştirme hakkında daha fazla bilgi için bkz. [Sürüm 1.6 için ATA geçiş kılavuzu](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide).
 
-> [!IMPORTANT] Yüklemeye başlamadan önce ATA Center sunucusunda ve ATA Gateway sunucularında KB2934520’yi yükleyin. Bunu yüklemezseniz, ATA yüklemesi bu güncelleştirmeyi yükler ve ATA yüklemesinin ortasında bir yeniden başlatma gerektirir.
+> [!IMPORTANT] 
+> Yüklemeye başlamadan önce ATA Center sunucusunda ve ATA Gateway sunucularında KB2934520’yi yükleyin. Bunu yüklemezseniz, ATA yüklemesi bu güncelleştirmeyi yükler ve ATA yüklemesinin ortasında bir yeniden başlatma gerektirir.
 
 ## 1. Adım ATA Center’ı indirme ve yükleme
 Sunucunun gereksinimleri karşıladığını doğruladıktan sonra, ATA Center’ın yüklemesiyle devam edebilirsiniz.
 
 ATA Center sunucusunda aşağıdaki adımları gerçekleştirin.
 
-1.  [Microsoft Toplu Lisanslama Servis Merkezi](https://www.microsoft.com/Licensing/servicecenter/default.aspx)’nden veya [TechNet Değerlendirme Merkezi](http://www.microsoft.com/en-us/evalcenter/)’nden ya da [MSDN](https://msdn.microsoft.com/en-us/subscriptions/downloads)’den ATA’yı indirin.
+1.  [Microsoft Toplu Lisanslama Hizmeti Merkezi](https://www.microsoft.com/Licensing/servicecenter/default.aspx)’nden, [TechNet Değerlendirme Merkezi](http://www.microsoft.com/evalcenter/)’nden ya da [MSDN](https://msdn.microsoft.com/subscriptions/downloads)’den ATA’yı indirin.
 
 2.  ATA Center yükleyeceğiniz bilgisayarda, yerel yöneticiler grubunun üyesi olan bir kullanıcı olarak oturum açın.
 
@@ -94,17 +89,20 @@ Siteye bir IP adresi kullanarak oturum açtığınız için, sertifikayla ilgili
 
 
 
->[!div class="step-by-step"] [« Yükleme öncesi](preinstall-ata.md)
+>[!div class="step-by-step"]
+[« Yükleme öncesi](preinstall-ata.md)
 [2. Adım »](install-ata-step2.md)
 
 ## Ayrıca Bkz.
 
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/
+- home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

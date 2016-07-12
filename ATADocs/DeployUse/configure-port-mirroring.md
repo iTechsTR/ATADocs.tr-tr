@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Bağlantı Noktası Yansıtmayı Yapılandırma | Microsoft Advanced Threat Analytics
-description: Bağlantı noktası yansıtma seçenekleri ve bunların ATA için nasıl yapılandırılacağı açıklanır.
-keywords:
+title: "Bağlantı Noktası Yansıtmayı Yapılandırma | Microsoft Advanced Threat Analytics"
+description: "Bağlantı noktası yansıtma seçenekleri ve bunların ATA için nasıl yapılandırılacağı açıklanır."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,21 +10,18 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 121f54e6d8da8220f1827188039e9a89c038f7ac
+ms.openlocfilehash: a4befce4003951b18a5e1a9d8bc1addf9e7ea255
+
 
 ---
 
 # Bağlantı Noktası Yansıtmayı Yapılandırma
-> [!NOTE] Bu makale yalnızca ATA Lightweight Gateway bileşenleri yerine ATA Gateway bileşenleri dağıttığınızda geçerlidir. ATA Gateway bileşenleri kullanmanız gerekip gerekmediğini belirlemek için bkz. [Dağıtımınız için doğru ağ geçitlerini seçme](/advanced-threat-analytics/plan-design/ata-capacity-planning#Choosing-the-right-gateway-type-for-your-deployment)
+> [!NOTE] 
+> Bu makale yalnızca ATA Lightweight Gateway bileşenleri yerine ATA Gateway bileşenleri dağıttığınızda geçerlidir. ATA Gateway bileşenleri kullanmanız gerekip gerekmediğini belirlemek için bkz. [Dağıtımınız için doğru ağ geçitlerini seçme](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment).
  
 ATA tarafından kullanılan ana veri kaynağı, etki alanı denetleyicilerinizden gelen ve giden ağ trafiğinin derin paket incelemesidir. ATA’nın ağ trafiğini görebilmesi için, bağlantı noktası yansıtmayı yapılandırmanız veya bir Ağ TAP kullanmanız gerekir.
 
@@ -72,9 +67,10 @@ Bağlantı noktası yansıtma yapılandırıldıktan sonra, ATA Gateway’i yük
 ## Ayrıca Bkz.
 - [Bağlantı noktası yansıtmayı doğrulama](validate-port-mirroring.md)
 - [ATA’yı yükleme](install-ata.md)
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO5-->
 
 

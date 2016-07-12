@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA Sık sorulan sorular | Microsoft Advanced Threat Analytics
-description: ATA hakkında sık sorulan soruların ve bunlarla ilişkili yanıtların listesini sağlar
-keywords:
+title: "ATA Sık sorulan sorular | Microsoft Advanced Threat Analytics"
+description: "ATA hakkında sık sorulan soruların ve bunlarla ilişkili yanıtların listesini sağlar"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: bb6bc2bf0d0df3112ecfdb33c8e9d6e41f183145
+
 
 ---
 
@@ -30,7 +24,7 @@ Bu makalede, ATA hakkında sık sorulan soruların listesi ve öngörülerle yan
 
 
 ## ATA nasıl lisanslanır?
-Lisans bilgileri için bkz. [Advanced Threat Analytics satın alma](https://www.microsoft.com/en-us/server-cloud/products/advanced-threat-analytics/Purchasing.aspx)
+Lisans bilgileri için bkz. [Advanced Threat Analytics satın alma](https://www.microsoft.com/server-cloud/products/advanced-threat-analytics/Purchasing.aspx)
 
 
 ## ATA Gateway başlatılmazsa ne yapmalıyım?
@@ -54,7 +48,7 @@ Dizindeki komut isteminden şu komutu çalıştırabilirsiniz:  **\Program Files
 Esnek Kimlik Doğrulaması Güvenli Tüneli (FAST) olarak da bilinen Kerberos Koruması’nın etkinleştirilmesi ATA tarafından desteklenir; yalnızca karma değeri atlayarak geçiş algılaması çalışmaz.
 ## Kaç tane ATA Gateway’e ihtiyacım vardır?
 
-İlk olarak, uyum sağlayabilecek tüm etki alanı denetleyicilerinde ATA Lightweight Gateway bileşenlerini kullanmanız önerilir; bunu saptamak için bkz. [ATA Lightweight Gateway Boyutu](/advanced-threat-analytics/plan-design/ata-capacity-planning#ATA-Lightweight-Gateway-Sizing). 
+İlk olarak, uyum sağlayabilecek tüm etki alanı denetleyicilerinde ATA Lightweight Gateway bileşenlerini kullanmanız önerilir; bunu saptamak için bkz. [ATA Lightweight Gateway Boyutu](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
 
 Tüm etki alanı denetleyicileri ATA Lightweight Gateway bileşenleri kapsamına alınabiliyorsa, ATA Gateway gerekmez.
 
@@ -101,7 +95,7 @@ ATA Gateway’e en az iki ağ bağdaştırıcısı gerekir:<br>1. İç ağa ve A
 ATA’nın SIEM’lerle şöyle çift yönlü bir tümleştirmesi vardır:
 
 1. ATA, kuşkulu bir etkinlik olduğunda CEF biçimini kullanan herhangi bir SIEM sunucusuna Syslog uyarısı gönderecek şekilde yapılandırılabilir.
-2. ATA, kimliği 4776 olan her Windows olayında [bu SIEM’lerden](/advanced-threat-analytics/deploy-use/configure-event-collection#SIEM-support) Syslog iletileri alacak şekilde yapılandırılabilir.
+2. ATA, kimliği 4776 olan her Windows olayında [bu SIEM’lerden](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support) Syslog iletileri alacak şekilde yapılandırılabilir.
 
 ## ATA, IaaS çözümünüzde görselleştirilen etki alanı denetleyicilerini izleyebilir mi?
 
@@ -143,10 +137,11 @@ Evet, hem dağıtımın gelen durumunu hem de yapılandırma, bağlantı, vb. il
 - [ATA kapasite planlaması](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Windows olay iletme özelliğini yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection#Configuring-Windows-Event-Forwarding)
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

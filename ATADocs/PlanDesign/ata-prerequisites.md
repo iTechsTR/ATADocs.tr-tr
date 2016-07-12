@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA Önkoşulları | Microsoft Gelişmiş Tehdit Analizi
-description: Ortamınızda başarılı bir ATA dağıtımının gereksinimlerini açıklar
-keywords:
+title: "ATA Önkoşulları | Microsoft Gelişmiş Tehdit Analizi"
+description: "Ortamınızda başarılı bir ATA dağıtımının gereksinimlerini açıklar"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,23 +10,20 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1f85b9a0f51bd18edaa91ea208d6e6c7c7de56cc
+ms.openlocfilehash: da887431d8e63a7ae8ceeb3e7e22011d356e3590
+
 
 ---
 
 # ATA Önkoşulları
 Bu makalede, ortamınızda başarılı bir ATA dağıtımı için gereksinimler açıklanır.
 
->[!NOTE] Kaynakları ve kapasiteyi planlama hakkında daha fazla bilgi için bkz. [ATA kapasite planlaması](ata-capacity-planning.md).
+>[!NOTE]
+> Kaynakları ve kapasiteyi planlama hakkında daha fazla bilgi için bkz. [ATA kapasite planlaması](ata-capacity-planning.md).
 
 
 ATA yazılımı ATA Center, ATA Gateway ve/veya ATA Lightweight Gateway’den oluşur. ATA bileşenleri hakkında daha fazla bilgi için bkz. [ATA mimarisi](ata-architecture.md)
@@ -52,7 +47,8 @@ Bu bölümde, ATA yüklemesine başlamadan önce toplamanız gereken bilgiler ve
 
 -   İzlenecek etki alanlarındaki tüm nesnelere okuma erişimi olan kullanıcı hesabı ve parolası.
 
-    > [!NOTE] Etki alanınızdaki çeşitli Kurumsal Birimlerde (OU) özel ACL’ler ayarladıysanız, seçili kullanıcının bu OU’lar üzerinde okuma izinleri olmasına dikkat edin.
+    > [!NOTE]
+    > Etki alanınızdaki çeşitli Kurumsal Birimlerde (OU) özel ACL’ler ayarladıysanız, seçili kullanıcının bu OU’lar üzerinde okuma izinleri olmasına dikkat edin.
 
 -   Ağınızda VPN ve Wi-Fi için kullanılan ve IP adreslerini cihazlar arasında çok kısa sürede (saniyeler veya dakikalar içinde) atayan tüm alt ağların bir listesine sahip olmalısınız.  Bu kısa süreli kiralık alt ağları tanımlamak istersiniz, çünkü böylece ATA cihazlar arasında hızlı yeniden atamayı yapabilmek için önbellek yaşam sürelerini kısaltabilir. Kısa süreli kiralık alt ağ yapılandırması için bkz. [ATA’yı Yükleme](/advanced-threat-analytics/deploy-use/install-ata).
 -   İleti Çözümleyicisi ve Wire Shark’ın ATA Gateway veya ATA Center’a yüklenmediğinden emin olun.
@@ -68,13 +64,20 @@ Bu bölümde, ATA Center’ın gereksinimleri listelenir.
 ### Genel
 ATA Center, Windows Server 2012 R2 çalıştıran sunuculara yüklemeyi destekler. ATA Center bir etki alanının veya çalışma grubunun üyesi olan sunuculara yüklenebilir.
 
+ATA Center’ı yüklemeden önce şu güncelleştirmenin yüklendiğini onaylayın: [KB2919355](https://support.microsoft.com/kb/2919355/).
+
+Şu Windows PowerShell cmdlet’ini çalıştırarak bunu denetleyebilirsiniz: `[Get-HotFix -Id kb2919355]`.
+
 ATA Center’ın bir sanal makine olarak yüklenmesi desteklenir. 
 
 ATA Center’ı sanal makine olarak çalıştırıyorsanız, olası veritabanı bozulmalarını önlemek için yeni bir denetim noktası oluşturmadan önce sunucuyu kapatın.
 ### Sunucu belirtimleri
-ATA veritabanı için, BIOS’ta tekdüzen olmayan bellek erişimini (NUMA) **devre dışı bırakmanız** gerekir. Sisteminizde NUMA Düğüm Araya Ekleme (Node Interleaving) olarak geçiyor olabilir ve bu durumda NUMA’yı devre dışı bırakmak için Düğüm Araya Ekleme’yi **etkinleştirmeniz** gerekecektir. Daha fazla bilgi için BIOS belgelerinize bakın.<br>
+Fiziksel bir sunucuda çalışırken, ATA veritabanı için BIOS’ta tekdüzen olmayan bellek erişimini (NUMA) **devre dışı bırakmanız** gerekir. Sisteminizde NUMA Düğüm Araya Ekleme (Node Interleaving) olarak geçiyor olabilir ve bu durumda NUMA’yı devre dışı bırakmak için Düğüm Araya Ekleme’yi **etkinleştirmeniz** gerekecektir. Daha fazla bilgi için BIOS belgelerinize bakın. ATA Center bir sanal sunucuda çalışırken bunun geçerli olmadığını unutmayın.<br>
 En iyi performans için, ATA Center’ın **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.<br>
 İzlediğiniz etki alanı denetleyicilerinin sayısı ve etki alanı denetleyicilerinden her birinin yükü sunucu belirtimlerini belirler; daha ayrıntılı bilgi için bkz. [ATA kapasite planlaması](ata-capacity-planning.md).
+
+>[!NOTE] 
+> Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
 
 ### Zaman eşitleme
 ATA Center sunucusu, ATA Gateway sunucuları ve etki alanı denetleyicilerinin zamanlarının 5 dakika içinde birbiriyle eşitlenmesi gerekir.
@@ -88,7 +91,8 @@ Aşağıdakilere sahip olmanız gerekir:
 
 ATA Center ile ATA Gateway arasındaki iletişim, bağlantı noktası 443 üzerinde SSL kullanılarak şifrelenir. Buna ek olarak, ATA Konsolu IIS üzerinde çalışır ve bağlantı noktası 443 üzerinde SSL kullanılarak güvenlik altına alınır. **İki IP adresi** kullanılması önerilir. ATA Center hizmeti bağlantı noktası 443’ü ilk IP adresine bağlar ve IIS de bağlantı noktası 443’ü ikinci IP adresine bağlar.
 
-> [!NOTE] İki farklı bağlantı noktasıyla tek IP adresi kullanılabilir, ama iki IP adresi kullanılması önerilir.
+> [!NOTE]
+> İki farklı bağlantı noktasıyla tek IP adresi kullanılabilir, ama iki IP adresi kullanılması önerilir.
 
 ### Bağlantı noktaları
 Aşağıdaki tabloda, ATA Center’ın düzgün çalışması için açılması gereken minimum bağlantı noktaları listelenir.
@@ -105,10 +109,11 @@ Bu tabloda, IP adresi 1 ATA Center hizmetine ve IP adresi 2 de ATA Konsolu için
 |**Syslog** (isteğe bağlı)|TCP|514|Syslog sunucusu|Giden|IP adresi 2|
 
 ### Sertifikalar
-ATA Center’ın CRL dağıtım noktanıza erişimi olduğundan emin olun. ATA Gateway bileşenlerinin İnternet erişimi yoksa, [CRL’yi el ile içeri aktarma yordamını](https://technet.microsoft.com/en-us/library/aa996972%28v=exchg.65%29.aspx) izleyin ve tüm zincir için CRL dağıtım noktalarının tümünü yükleme işlemini gerçekleştirin.
+ATA Center’ın CRL dağıtım noktanıza erişimi olduğundan emin olun. ATA Gateway bileşenlerinin İnternet erişimi yoksa, [CRL’yi el ile içeri aktarma yordamını](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) izleyin ve tüm zincir için CRL dağıtım noktalarının tümünü yükleme işlemini gerçekleştirin.
 
 ATA Center’ın yüklemesini kolaylaştırmak için, ATA Center’ın yüklemesi sırasında otomatik olarak imzalanan sertifikalar yükleyebilirsiniz. Dağıtım sonrasında otomatik olarak imzalanan sertifikayı ATA Gateway tarafından kullanılacak bir iç Sertifika Yetkilisi’nin sertifikasıyla değiştirebilirsiniz.<br>
-> [!NOTE] Sertifikanın Sağlayıcı Türü, Şifreleme Hizmeti Sağlayıcısı (CSP) olmalıdır.
+> [!NOTE]
+> Sertifikanın Sağlayıcı Türü, Şifreleme Hizmeti Sağlayıcısı (CSP) olmalıdır.
 
 
 ATA Center’a aşağıdaki hizmetler için sertifika gerekir:
@@ -117,7 +122,8 @@ ATA Center’a aşağıdaki hizmetler için sertifika gerekir:
 
 -   ATA Center hizmeti – Sunucu kimlik doğrulama sertifikası
 
-> [!NOTE] ATA Konsolu’na başka bilgisayarlardan erişecekseniz, söz konusu bilgisayarların IIS tarafından kullanılan sertifikaya güvendiğinden emin olmaz; aksi takdirde sayfada oturum açmadan önce web sitesinin güvenlik sertifikasında sorun olduğunu bildiren bir uyarı sayfası alırsınız.
+> [!NOTE]
+> ATA Konsolu’na başka bilgisayarlardan erişecekseniz, söz konusu bilgisayarların IIS tarafından kullanılan sertifikaya güvendiğinden emin olmaz; aksi takdirde sayfada oturum açmadan önce web sitesinin güvenlik sertifikasında sorun olduğunu bildiren bir uyarı sayfası alırsınız.
 
 ## ATA Gateway gereksinimleri
 Bu bölümde, ATA Gateway’in gereksinimleri listelenir.
@@ -125,7 +131,7 @@ Bu bölümde, ATA Gateway’in gereksinimleri listelenir.
 ATA Gateway, Windows Server 2012 R2 çalıştıran sunuculara yüklemeyi destekler.
 ATA Gateway bir etki alanının veya çalışma grubunun üyesi olan sunuculara yüklenebilir.
 
-ATA Gateway’i yüklemeden önce şu güncelleştirmenin yüklendiğini onaylayın: [KB2919355](https://support.microsoft.com/en-us/kb/2919355/)
+ATA Gateway’i yüklemeden önce şu güncelleştirmenin yüklendiğini onaylayın: [KB2919355](https://support.microsoft.com/kb/2919355/).
 
 Şu Windows PowerShell cmdlet’ini çalıştırarak bunu denetleyebilirsiniz: `[Get-HotFix -Id kb2919355]`.
 
@@ -135,6 +141,8 @@ ATA Gateway ile sanal makineleri kullanma hakkında bilgi için bkz. [Bağlantı
 En iyi performans için, ATA Gateway’in **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.<br>
 ATA Gateway, etki alanı denetleyicilerinden gelen ve giden ağ trafiği miktarına bağlı olarak, birden çok etki alanı denetleyicisinin izlenmesini destekleyebilir.
 
+>[!NOTE] 
+> Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
 
 ### Zaman eşitleme
 ATA Center sunucusu, ATA Gateway sunucuları ve etki alanı denetleyicilerinin zamanlarının 5 dakika içinde birbiriyle eşitlenmesi gerekir.
@@ -152,7 +160,8 @@ ATA Gateway için en az bir Yönetim bağdaştırıcısı ve en az bir Yakalama 
 
         ![Gelişmiş TCP/IP ayarlarında DNS son ekini yapılandırma](media/ATA-DNS-Suffix.png)
 
-        > [!NOTE] ATA Gateway etki alanının üyesiyse, bu otomatik olarak yapılandırılır.
+        > [!NOTE]
+        > ATA Gateway etki alanının üyesiyse, bu otomatik olarak yapılandırılır.
 
 -   **Yakalama bağdaştırıcısı** - etki alanı denetleyicilerinden gelen ve giden trafiği yakalamak için kullanılır.
 
@@ -178,7 +187,8 @@ Aşağıdaki tabloda, ATA Gateway için yönetim bağdaştırıcısında yapıla
 |SSL|TCP|443 veya Center Hizmeti için yapılandırılmış olan|ATA Center:<br /><br />-   Center Hizmeti IP Adresi<br />-   IIS IP Adresi|Giden|
 |Syslog (isteğe bağlı)|UDP|514|SIEM Sunucusu|Gelen|
 
-> [!NOTE] ATA Gateway tarafından yapılan çözümleme işlemi kapsamında, ATA Gateway bileşenlerinden aşağıdaki bağlantı noktaları ağdaki cihazlarda gelen trafik için açılmalıdır.
+> [!NOTE]
+> ATA Gateway tarafından yapılan çözümleme işlemi kapsamında, ATA Gateway bileşenlerinden aşağıdaki bağlantı noktaları ağdaki cihazlarda gelen trafik için açılmalıdır.
 >
 > -   RPC üzerinden NTLM
 > -   NetBIOS
@@ -188,24 +198,31 @@ ATA Center’ın CRL dağıtım noktanıza erişimi olduğundan emin olun. ATA G
 ATA Center’ın yüklemesini kolaylaştırmak için, ATA Center’ın yüklemesi sırasında otomatik olarak imzalanan sertifikalar yükleyebilirsiniz. Dağıtım sonrasında otomatik olarak imzalanan sertifikayı ATA Gateway tarafından kullanılacak bir iç Sertifika Yetkilisi’nin sertifikasıyla değiştirebilirsiniz.
 
 > [!NOTE]
-Sertifikanın Sağlayıcı Türü, Şifreleme Hizmeti Sağlayıcısı (CSP) olmalıdır.<br>
+> Sertifikanın Sağlayıcı Türü, Şifreleme Hizmeti Sağlayıcısı (CSP) olmalıdır.<br>
 
 Yerel Bilgisayar deposunda yer alan ATA Gateway’in Bilgisayar deposunda **Sunucu Kimlik Doğrulaması**’nı destekleyen bir sertifikanın yüklenmesi gerekir. ATA Center tarafından bu sertifikaya güvenilmelidir.
 
 ## ATA Lightweight Gateway gereksinimleri
 Bu bölümde, ATA Lightweight Gateway’in gereksinimleri listelenir.
 ### Genel
-ATA Lightweight Gateway; Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 çalıştıran bir etki alanı denetleyicisi yüklemesini destekler.
+ATA Lightweight Gateway; Windows Server 2008 R2 SP1, Windows Server 2012 veya Windows Server 2012 R2 çalıştıran bir etki alanı denetleyicisine yüklemeyi destekler.
 
 Etki alanı denetleyicisi salt okunur bir etki alanı denetleyicisi (RODC) olabilir.
 
 Etki alanı denetleyicisi Sunucu Çekirdeği olamaz.
+
+ATA Lightweight Gateway bileşenini Windows Server 2012 R2 SP1 çalıştıran bir etki alanı denetleyicisine yüklemeden önce, şu güncelleştirmenin yüklendiğini onaylayın: [KB2919355](https://support.microsoft.com/kb/2919355/).
+Şu Windows PowerShell cmdlet’ini çalıştırarak bunu denetleyebilirsiniz: `[Get-HotFix -Id kb2919355]`.
 
 ### Sunucu belirtimleri
 
 ATA Lightweight Gateway, etki alanı denetleyicisinde en az 2 çekirdek ve 6 GB RAM kurulu olmasını gerektirir.
 En iyi performans için, ATA Lightweight Gateway’in **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.
 ATA Lightweight Gateway, etki alanı denetleyicilerinden gelen ve giden ağ trafiğinin miktarına ve bu etki alanında kurulu kaynakların miktarına bağlı olarak çeşitli yük ve büyüklükte etki alanı denetleyicilerinde dağıtılabilir.
+
+>[!NOTE] 
+> Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
+
 
 ### Zaman eşitleme
 ATA Center sunucusu, ATA Lightweight Gateway sunucuları ve etki alanı denetleyicilerinin zamanlarının 5 dakika içinde birbiriyle eşitlenmesi gerekir.
@@ -224,7 +241,8 @@ Aşağıdaki tabloda, ATA Lightweight Gateway için gereken minimum bağlantı n
 |SSL|TCP|443 veya Center Hizmeti için yapılandırılmış olan|ATA Center:<br /><br />-   Center Hizmeti IP Adresi<br />-   IIS IP Adresi|Giden|
 |Syslog (isteğe bağlı)|UDP|514|SIEM Sunucusu|Gelen|
 
-> [!NOTE] ATA Lightweight Gateway tarafından yapılan çözümleme işlemi kapsamında, ATA Lightweight Gateway bileşenlerinden aşağıdaki bağlantı noktaları ağdaki cihazlarda gelen trafik için açılmalıdır.
+> [!NOTE]
+> ATA Lightweight Gateway tarafından yapılan çözümleme işlemi kapsamında, ATA Lightweight Gateway bileşenlerinden aşağıdaki bağlantı noktaları ağdaki cihazlarda gelen trafik için açılmalıdır.
 >
 > -   RPC üzerinden NTLM
 > -   NetBIOS
@@ -233,7 +251,7 @@ Aşağıdaki tabloda, ATA Lightweight Gateway için gereken minimum bağlantı n
 ATA Center’ın CRL dağıtım noktanıza erişimi olduğundan emin olun. ATA Lightweight Gateway bileşenlerinin İnternet erişimi yoksa, CRL’yi el ile içeri aktarma yordamını izleyin ve tüm zincir için CRL dağıtım noktalarının tümünü yükleme işlemini gerçekleştirin.
 ATA Center’ın yüklemesini kolaylaştırmak için, ATA Center’ın yüklemesi sırasında otomatik olarak imzalanan sertifikalar yükleyebilirsiniz. Dağıtım sonrasında otomatik olarak imzalanan sertifikayı ATA Lightweight Gateway tarafından kullanılacak bir iç Sertifika Yetkilisi’nin sertifikasıyla değiştirebilirsiniz.
 > [!NOTE]
-Sertifikanın Sağlayıcı Türü, Şifreleme Hizmeti Sağlayıcısı (CSP) olmalıdır.
+> Sertifikanın Sağlayıcı Türü, Şifreleme Hizmeti Sağlayıcısı (CSP) olmalıdır.
 
 Yerel Bilgisayar deposunda yer alan ATA Lightweight Gateway’in Bilgisayar deposunda Sunucu Kimlik Doğrulaması’nı destekleyen bir sertifikanın yüklenmesi gerekir. ATA Center tarafından bu sertifikaya güvenilmelidir.
 
@@ -250,10 +268,11 @@ ATA Konsolu’na tarayıcı yoluyla erişilir ve aşağıdakiler desteklenir:
 
 - [ATA mimarisi](ata-architecture.md)
 - [ATA’yı yükleme](/advanced-threat-analytics/deploy-use/install-ata)
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jun16_HO5-->
 
 

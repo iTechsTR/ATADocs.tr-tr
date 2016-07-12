@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA’yı Sessiz Yükleme | Microsoft Advanced Threat Analytics
-description: Burada ATA’nın sessizce yüklenmesi açıklanmaktadır.
-keywords:
+title: "ATA’yı Sessiz Yükleme | Microsoft Advanced Threat Analytics"
+description: "Burada ATA’nın sessizce yüklenmesi açıklanmaktadır."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: 2e51bc9cac43ff90000ca74cccd158e119cc6ec0
+
 
 ---
 
@@ -33,8 +27,9 @@ Microsoft ATA v1.6 için Microsoft .NET Framework 4.6.1 yüklemesi gerekir.
 
 ATA’yı yüklediğiniz veya güncelleştirdiğiniz zaman, .Net Framework 4.6.1, Microsoft ATA dağıtımının parçası olarak otomatik yüklenir.
 
-> [!Note] .Net Framework 4.6.1 yüklemesi için sunucunun yeniden başlatılması gerekebilir. Etki Alanı Denetleyicilerinde ATA Gateway’i yüklerken, bu Etki Alanı Denetleyicileri için bir bakım penceresi zamanlamayı dikkate alın.
-ATA’yı sessiz yükleme yöntemini kullanırken, yükleyici yükleme sonunda sunucuyu (gerekirse) otomatik olarak yeniden başlatmak üzere yapılandırılır. Yükleme dahilinde sunucunun yeniden başlatılmasını önlemek için `-NoRestart` bayrağını kullanın. `-NoRestart` bayrağını kullanırken ve yükleme dahilinde yeniden başlatma gerekecekse, sunucu yeniden başlatılana kadar yükleyici duraklatılır. Dağıtımın ilerleme durumunu izlemek için, **%AppData%\Local\Temp** konumunda bulunan ATA yükleyici günlüklerini takip edin.
+> [!Note] 
+> .Net Framework 4.6.1 yüklemesi için sunucunun yeniden başlatılması gerekebilir. Etki Alanı Denetleyicilerinde ATA Gateway’i yüklerken, bu Etki Alanı Denetleyicileri için bir bakım penceresi zamanlamayı dikkate alın.
+ATA’yı sessiz yükleme yöntemini kullanırken, yükleyici yükleme sonunda sunucuyu (gerekirse) otomatik olarak yeniden başlatmak üzere yapılandırılır. Yükleme dahilinde sunucunun yeniden başlatılmasını önlemek için `-NoRestart` bayrağını kullanın. `-NoRestart` bayrağını kullanırken ve yükleme dahilinde yeniden başlatma gerekecekse, sunucu yeniden başlatılana kadar yükleyici duraklatılır. Dağıtımın ilerleme durumunu izlemek için, **%AppData%\Local\Temp** konumunda bulunan ATA yükleyici günlüklerine bakın.
 
 
 ## ATA Center’ı yükleme
@@ -68,8 +63,7 @@ ATA Center’ı yüklemek için aşağıdaki komutu kullanın:
 |ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Evet|ATA Konsolunun IP adresini ayarlar|
 |ConsoleCertificateThumbprint|ConsoleCertificateThumbprint=”<CertThumbprint >”|Hayır|ATA Konsolu için sertifika parmak izini ayarlar. Bu Sertifika ATA Konsolu web sitesinin kimliğini doğrulamak için kullanılır. Belirtilmezse yükleme otomatik olarak imzalanan bir sertifika oluşturur|
 
-**Örnekler**:
-ATA Center’ı varsayılan yükleme yolları ve tek bir IP adresi yüklemek için:
+**Örnekler**: ATA Center’ı varsayılan yükleme yolları ve tek bir IP adresi yüklemek için:
 
     “Microsoft ATA Center Setup.exe” /quiet --LicenseAccepted NetFrameworkCommandLineArguments="/q" CenterIpAddress=192.168.0.10
     CenterPort=444 ConsoleIpAddress=192.168.0.10
@@ -100,15 +94,13 @@ ATA Center’ı güncelleştirmek için aşağıdaki komutu kullanın:
 
 ATA’yı güncelleştirirken, yükleyici ATA’nın sunucuda zaten yüklü olduğunu ve hiçbir güncelleştirme yükleme seçeneği gerekmediğini otomatik olarak algılar.
 
-**Örnekler**:
-ATA Center’ı sessizce güncelleştirmek için. Büyük ortamlarda, ATA Center güncelleştirmesinin tamamlanması biraz zaman alabilir. Güncelleştirmenin ilerleme durumunu izlemek için ATA günlüklerini takip edin.
+**Örnekler**: ATA Center’ı sessizce güncelleştirmek için. Büyük ortamlarda, ATA Center güncelleştirmesinin tamamlanması biraz zaman alabilir. Güncelleştirmenin ilerleme durumunu izlemek için ATA günlüklerini takip edin.
 
         “Microsoft ATA Center Setup.exe” /quiet NetFrameworkCommandLineArguments="/q"
 
 ## ATA Center’ı sessizce kaldırma
 
-ATA Center’ı sessizce kaldırma işlemini gerçekleştirmek için aşağıdaki komutu kullanın:
-**Söz dizimi**:
+ATA Center’ı sessizce kaldırma işlemini gerçekleştirmek için şu komutu kullanın: **Söz dizimi**:
 
     Microsoft ATA Center Setup.exe [/quiet] [/Uninstall] [/NoRestart] [/Help]
      [--DeleteExistingDatabaseData]
@@ -128,8 +120,7 @@ ATA Center’ı sessizce kaldırma işlemini gerçekleştirmek için aşağıdak
 |-------------|----------|---------|---------|
 |DeleteExistingDatabaseData|DeleteExistingDatabaseData|Hayır|Var olan veritabanındaki tüm dosyaları siler.|
 
-**Örnekler**:
-Var olan tüm veritabanı verilerini kaldırarak sunucudan ATA Center’ı sessizce kaldırmak için:
+**Örnekler**: Var olan tüm veritabanı verilerini kaldırarak sunucudan ATA Center’ı sessizce kaldırmak için:
 
 
     “Microsoft ATA Center Setup.exe” /quiet /uninstall --DeleteExistingDatabaseData
@@ -161,8 +152,7 @@ ATA Gateway’i sessizce yüklemek için aşağıdaki komutu kullanın:
 |ConsoleAccountName|ConsoleAccountName=”<AccountName>”|Evet|ATA Gateway’i ATA Center’a kaydetmek için kullanılan kullanıcı hesabının (kullanıcı@etkialani.com) adını ayarlar.|
 |ConsoleAccountPassword|ConsoleAccountPassword=”<AccountPassword>”|Evet|ATA Gateway’i ATA Center’a kaydetmek için kullanılan kullanıcı hesabının (kullanıcı@etkialani.com) parolasını ayarlar.|
 
-**Örnekler**:
-ATA Gateway’i sessizce yüklemek ve belirtilen kimlik bilgilerini kullanarak ATA Center’a kaydetmek için:
+**Örnekler**: ATA Gateway’i sessizce yüklemek ve belirtilen kimlik bilgilerini kullanarak ATA Center’a kaydetmek için:
 
     “Microsoft ATA Gateway Setup.exe” /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName=”user@contoso.com” ConsoleAccountPassword=“userpwd”
@@ -187,15 +177,13 @@ ATA Gateway’i sessizce güncelleştirmek için aşağıdaki komutu kullanın:
 |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Evet|.Net Framework yüklemesi için parametreleri belirtir. .Net Framework sessiz yüklemesini zorunlu kılmak üzere ayarlanmalıdır.|
 
 
-**Örnekler**:
-ATA Gateway’i sessizce güncelleştirmek için:
+**Örnekler**: ATA Gateway’i sessizce güncelleştirmek için:
 
         Microsoft ATA Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
 ## ATA Gateway’i sessizce kaldırma
 
-ATA Gateway’i sessizce kaldırma işlemini gerçekleştirmek için aşağıdaki komutu kullanın:
-**Söz dizimi**:
+ATA Gateway’i sessizce kaldırma işlemini gerçekleştirmek için şu komutu kullanın: **Söz dizimi**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/NoRestart] [/Help]
     
@@ -208,8 +196,7 @@ ATA Gateway’i sessizce kaldırma işlemini gerçekleştirmek için aşağıdak
 |NoRestart|/norestart|Hayır|Yeniden başlatma girişimlerini engeller. Varsayılan olarak, kullanıcı arabirimi yeniden başlatmadan önce sizden onay ister.|
 |Yardım|/help|Hayır|Yardım ve hızlı başvuru sağlar. Tüm seçenek ve davranışların bir listesi dahil olmak üzere kurulum komutunun doğru kullanımını gösterir.|
 
-**Örnekler**:
-Sunucudan ATA Gateway’i sessizce kaldırmak için:
+**Örnekler**: Sunucudan ATA Gateway’i sessizce kaldırmak için:
 
 
     Microsoft ATA Gateway Setup.exe /quiet /uninstall
@@ -225,10 +212,11 @@ Sunucudan ATA Gateway’i sessizce kaldırmak için:
 
 ## Ayrıca Bkz.
 
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: ATA Mimarisi | Microsoft Advanced Threat Analytics
-description: Microsoft Advance Threat Analytics’in (ATA) mimarisini açıklar
-keywords:
+description: "Microsoft Advance Threat Analytics’in (ATA) mimarisini açıklar"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 2d753060f30cbcc7d16959355b86d64fdaa2ecd8
+
 
 ---
 
@@ -96,7 +90,7 @@ Ağınızda kaç ATA Center bileşeninin dağıtımını yapacağınıza karar v
 
 -   ATA Center tek bir Active Directory ormanını izleyebilir. Birden çok Active Directory ormanınız varsa, her Active Directory ormanı için en az bir ATA Center’a ihtiyacınız olacaktır.
 
--    Çok büyük Active Directory dağıtımlarında, tek bir ATA Center tüm etki alanı denetleyicilerinizin trafiğinin tamamını işleyemeyebilir. Bu durumda, birden fazla ATA Center gerekir. ATA Center bileşenlerinin sayısı, [ATA kapasite planlaması](ata-capacity-planning.md) tarafından belirlenmelidir..
+-    Çok büyük Active Directory dağıtımlarında, tek bir ATA Center tüm etki alanı denetleyicilerinizin trafiğinin tamamını işleyemeyebilir. Bu durumda, birden fazla ATA Center gerekir. ATA Center bileşenlerinin sayısı, [ATA kapasite planlaması](ata-capacity-planning.md) tarafından belirlenmelidir.
 
 ## ATA Gateway ve ATA Lightweight Gateway
 
@@ -182,10 +176,11 @@ ATA’nın Karma Değer Geçişi, Deneme Yanılma ve Bal Kapları algılamasın�
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Windows olay iletme özelliğini yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

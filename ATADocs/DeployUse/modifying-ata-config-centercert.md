@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA yapılandırmasını değiştirme - ATA Center sertifikası | Microsoft Advanced Threat Analytics
-description: ATA Center sunucusundaki yerel bilgisayar deposunda yer alan sertifikayı yenileme veya değiştirmeye yönelik iki aşamalı işlem açıklanır. 
-keywords:
+title: "ATA yapılandırmasını değiştirme - ATA Center sertifikası | Microsoft Advanced Threat Analytics"
+description: "ATA Center sunucusundaki yerel bilgisayar deposunda yer alan sertifikayı yenileme veya değiştirmeye yönelik iki aşamalı işlem açıklanır."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,23 +10,19 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 0cfeb67e663489d7264c88aafe04e77fcb63377f
+
 
 ---
 
 # Ata yapılandırmasını değiştirme - ATA Center sertifikası
 
 >[!div class="step-by-step"]
-[ATA Center sunucusu IP adresi](modifying-ata-config-centerip.md)
+[« ATA Center sunucusu IP adresi](modifying-ata-config-centerip.md)
 [ATA Konsolu IP adresi »](modifying-ata-config-consoleip.md)
 
 ## ATA Center sertifikasını değiştirme
@@ -45,15 +39,15 @@ Sertifikalarınızın süresi sona eriyorsa ve ATA Center sunucusundaki yerel bi
 
 1.  ATA Konsolu’nu açın.
 
-2.  Araç çubuğunda ayarlar seçeneğini belirtin ve **Yapılandırma**’yı seçin..
+2.  Araç çubuğunda ayarlar seçeneğini belirtin ve **Yapılandırma**’yı seçin.
 
     ![ATA yapılandırma ayarları simgesi](media/ATA-config-icon.JPG)
 
-3.  **ATA Center**’ı seçin..
+3.  **ATA Center**’ı seçin.
 
 4.  **Sertifika**’nın altında, listedeki sertifikalardan birini seçin.
 
-5.  **Kaydet**'e tıklayın..
+5.  **Kaydet**'e tıklayın.
 
 6.  Kaç ATA Gateway’in en son yapılandırmayla eşitlendiğini gösteren bir bildirim görürsünüz.
 
@@ -66,15 +60,16 @@ Sertifikalarınızın süresi sona eriyorsa ve ATA Center sunucusundaki yerel bi
 8.  Değişiklikler etkinleştirildikten sonra tüm ATA Gateway bileşenlerinin yapılandırmalarını eşitleyebildiklerinden emin olun.
 
 >[!div class="step-by-step"]
-[ATA Center sunucusu IP adresi](modifying-ata-config-centerip.md)
+[« ATA Center sunucusu IP adresi](modifying-ata-config-centerip.md)
 [ATA Konsolu IP adresi »](modifying-ata-config-consoleip.md)
 
 ## Ayrıca Bkz.
 - [ATA Konsolu’yla çalışma](working-with-ata-console.md)
 - [ATA’yı yükleme](install-ata.md)
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

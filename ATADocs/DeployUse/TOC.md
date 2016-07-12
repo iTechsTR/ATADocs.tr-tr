@@ -19,7 +19,7 @@
 #### [ATA Center sertifikasını değiştirme](modifying-ata-config-centercert.md)
 #### [ATA konsolu IP adresini değiştirme](modifying-ata-config-consoleip.md)
 #### [IIS sertifikasını değiştirme](modifying-ata-config-iiscert.md)
-#### [Etki alanı denetleyicisi parolasını değiştirme](modifying-ata-config-dcpassword.md)
+#### [Etki alanı bağlantı parolasını değiştirme](modifying-ata-config-dcpassword.md)
 ### [ATA Konsolu’yla çalışma](working-with-ata-console.md)
 ### [ATA uyarılarını ayarlama](setting-ata-alerts.md)
 ### [Syslog ve E-posta sunucusu ayarlarını belirleme](setting-syslog-email-server-settings.md)
@@ -31,6 +31,6 @@
 # [Sorunları Gider](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO3-->
 
 

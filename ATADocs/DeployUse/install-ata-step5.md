@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA’yı Yükleme - 5. Adım | Microsoft Advanced Threat Analytics
-description: ATA’yı yükleme işleminin beşinci adımı, ATA Gateway bileşeniniz için ayarları yapılandırmanıza yardımcı olur.
-keywords:
+title: "ATA’yı Yükleme - 5. Adım | Microsoft Advanced Threat Analytics"
+description: "ATA’yı yükleme işleminin beşinci adımı, ATA Gateway bileşeniniz için ayarları yapılandırmanıza yardımcı olur."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,19 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: 6400a0eabefac91b418e00eb670b1329fa1b5fb5
+
 
 ---
 
 # ATA’yı Yükleme - 5. Adım
 
->[!div class="step-by-step"] [« 4. Adım](install-ata-step4.md)
+>[!div class="step-by-step"]
+[« 4. Adım](install-ata-step4.md)
 [6. Adım »](install-ata-step6.md)
 
 
@@ -53,8 +48,9 @@ Aşağıdaki bilgiler, **Etki Alanı Denetleyicileri** listesine girdiğiniz sun
  - **Etki alanı eşitleyici adayı**<br>
 Bir etki alanı eşitleyici adayı olarak ayarlanan herhangi bir ATA Gateway bileşeni, ATA ile Active Directory etki alanınız arasında eşitlemeden sorumlu olabilir. Etki alanının büyüklüğüne bağlı olarak, ilk eşitleme biraz zaman alabilir ve yoğun kaynak kullanır. Varsayılan olarak, yalnızca ATA Gateway bileşenleri Etki Alanı eşitleyici adayı olarak ayarlanabilir. <br>Uzak yerde bulunan ATA Gateway bileşenlerinin Etki Alanı eşitleyici adayı olmasının engellenmesi önerilir.<br>Etki alanı denetleyiciniz salt okunur ise, onu Etki Alanı eşitleyici adayı olarak ayarlamayın. Daha fazla bilgi için bkz. [ATA mimarisi](/advanced-threat-analytics/plan-design/ata-architecture#ata-lightweight-gateway-features)
 
-> [!NOTE] ATA Gateway hizmetinin ilk kez başlatılması birkaç dakika sürebilir çünkü ağ yakalama ayrıştırıcılarının önbelleğini oluşturur.<br>
-Yapılandırma değişiklikleri, ATA Gateway ile ATA Center arasındaki bir sonraki zamanlanmış eşitlemede ATA Gateway’e uygulanır.
+> [!NOTE] 
+> ATA Gateway hizmetinin ilk kez başlatılması birkaç dakika sürebilir çünkü ağ yakalama ayrıştırıcılarının önbelleğini oluşturur.<br>
+> Yapılandırma değişiklikleri, ATA Gateway ile ATA Center arasındaki bir sonraki zamanlanmış eşitlemede ATA Gateway’e uygulanır.
 
 
 
@@ -83,17 +79,19 @@ ATA Gateway’in başarıyla dağıtıldığını doğrulamak için aşağıdaki
     ![Performans sayaçlarını ekleme resmi](media/ATA-performance-monitoring-add-counters.png)
 
 
->[!div class="step-by-step"] [« 4. Adım](install-ata-step4.md)
+>[!div class="step-by-step"]
+[« 4. Adım](install-ata-step4.md)
 [6. Adım »](install-ata-step6.md)
 
 ## Ayrıca Bkz.
 
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

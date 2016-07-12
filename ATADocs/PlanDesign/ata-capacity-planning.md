@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA Dağıtımınızı Planlama | Microsoft Advanced Threat Analytics
-description: Dağıtımınızı planlamanıza ve ağınızı desteklemek için kaç adet ATA sunucusu gerekeceğine karar vermenize yardımcı olur
-keywords:
+title: "ATA Dağıtımınızı Planlama | Microsoft Advanced Threat Analytics"
+description: "Dağıtımınızı planlamanıza ve ağınızı desteklemek için kaç adet ATA sunucusu gerekeceğine karar vermenize yardımcı olur"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: ff8eb5361d3dfeaa3715d325ed91c0ad422211ed
+
 
 ---
 
@@ -30,6 +24,8 @@ Bu konu, kaç adet ATA Gateway ve ATA Lightweight Gateway bileşenine ihtiyacın
 
 ## ATA Center Boyutlandırması
 Kullanıcı davranış analizi için ATA Center’a en az 30 günlük veri gerekir. Etki alanı denetleyicisi başına ATA veritabanına gereken disk alanı aşağıda tanımlanmıştır. Birden çok etki alanı denetleyiciniz varsa, ATA veritabanına gereken tüm alan miktarını hesaplamak için etki alanı denetleyicisi başına gereken disk alanlarını toplayın.
+> [!NOTE] 
+> Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
 
 |Paket/saniye&#42;|CPU (çekirdekler&#42;&#42;)|Bellek (GB)|Günlük veritabanı depolaması (GB)|Aylık veritabanı depolaması (GB)|IOPS&#42;&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
@@ -51,18 +47,38 @@ Kullanıcı davranış analizi için ATA Center’a en az 30 günlük veri gerek
 > -  Okuma ve yazma etkinlikleri arasındaki oran, saniyede 100.000 paketin altında yaklaşık 1:3 ve saniyede 100.000 paketin üstünde 1:6’dır.
 
 ## Dağıtımınız için doğru ağ geçidi türünü seçme
-Etki alanı denetleyicileriniz aşağıdaki büyüklük tablosuyla uyumluysa, mümkün oldukça ATA Gateway yerine ATA Lightweight Gateway kullanmanız önerilir.
-Etki alanı denetleyicileriniz [ATA Lightweight Gateway büyüklük tablosundaki](#ata-lightweight-gateway-sizing) gereksinimlere uymuyorsa çoğu etki alanı denetleyicisi ATA Lightweight Gateway kapsamında olabilir ve olmalıdır.
-Aşağıda, tüm etki alanlarının ATA Lightweight Gateway bileşenleri kapsamında olmasının gerektiği örnek senaryolar verilmiştir:
+ATA dağıtımında, ATA Gateway türlerinin tüm bileşimleri desteklenir:
 
--   Şube yerleri
--   Herhangi bir IaaS sağlayıcısından sanal etki alanı denetleyicileri
+- Yalnızca ATA Gateway bileşenleri
+- Yalnızca ATA Lightweight Gateway bileşenleri
+- Her ikisinin birleşimi
+
+Ağ Geçidi dağıtım türüne karar verirken aşağıdakileri göz önünde bulundurun:
+
+|Ağ Geçidi türü|Yararları|Maliyet|Dağıtım topolojisi|Etki alanı denetleyicisi kullanımı|
+|----|----|----|----|-----|
+|ATA Gateway|Bant dışı dağıtım, saldırganların ATA’nın var olduğunu keşfetmesini zorlaştırır|Daha yüksek|Etki alanı denetleyicisinin yanı sıra yüklenir (bant dışı)|Saniyede en çok 50.000 paketi destekler|
+|ATA Lightweight Gateway|Ayrılmış bir sunucu ve bağlantı noktası yansıtma yapılandırması gerektirmez|Daha düşük|Etki alanı denetleyicisine yüklenir|Saniyede en çok 10.000 paketi destekler|
+
+Aşağıda, etki alanı denetleyicilerinin ATA Lightweight Gateway kapsamında olmasının gerektiği örnek senaryolar verilmiştir:
+
+
+- Şube yerleri
+
+- Bulutta dağıtılan sanam etki alanı denetleyicileri (IaaS)
+
+
+Aşağıda, etki alanı denetleyicilerinin ATA Gateway kapsamında olmasının gerektiği örnek senaryolar verilmiştir:
+
+
+- Yönetim veri merkezleri (saniyedeki paket sayısı 10.000’i aşan etki alanı denetleyicilerine sahip)
 
 
 ## ATA Lightweight Gateway Boyutu
-Etki alanı denetleyicileriniz buradaki büyüklük tablosuyla uyumluysa, mümkün oldukça ATA Gateway yerine ATA Lightweight Gateway kullanmanız önerilir.
 
 Bir ATA Lightweight Gateway, etki alanı denetleyicisinin oluşturduğu ağ trafiği miktarına bağlı olarak bir etki alanı denetleyicisinin izlenmesini destekleyebilir. 
+> [!NOTE] 
+> Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
 
 |Paket/saniye&#42;|CPU (çekirdekler&#42;&#42;)|Bellek (GB)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
@@ -75,16 +91,13 @@ Bir ATA Lightweight Gateway, etki alanı denetleyicisinin oluşturduğu ağ traf
 &#42;&#42;Bu etki alanı denetleyicisinde takılı hiper iş parçacıklı olmayan çekirdeklerin toplamı.<br>Hiper iş parçacığı oluşturma ATA Lightweight Gateway için kabul edilebilir olmakla birlikte, kapasite planlaması yaparken hiper iş parçacıklı çekirdekleri değil gerçek çekirdekleri saymanız gerekir.
 
 &#42;&#42;&#42;Bu etki alanı denetleyicisinde takılı belleğin toplam miktarı.
-> [!NOTE]   Etki alanı denetleyicisinde, ATA Lightweight Gateway için gereken miktarda kaynak yoksa, etki alanı denetleyicisi performansı etkilenmez, ancak ATA Lightweight Gateway beklendiği gibi çalışmayabilir.
+> [!NOTE]   
+> Etki alanı denetleyicisinde, ATA Lightweight Gateway için gereken miktarda kaynak yoksa, etki alanı denetleyicisi performansı etkilenmez, ancak ATA Lightweight Gateway beklendiği gibi çalışmayabilir.
 
 
 ## ATA Gateway Boyutlandırması
 
 Kaç adet ATA Gateway bileşeninin dağıtımını yapacağınıza karar verirken aşağıdaki noktaları dikkate alın.
-
-Çoğu etki alanı denetleyicileri bir ATA Lightweight Gateway kapsamında olabilir ve bu da yukarıdaki ATA Lightweight Gateway büyüklük tablosuna göre planlanmalıdır.
-
-ATA Gateway bileşenleri yine de gerekliyse, kaç adet ATA Gateway bileşeni gerektiğiyle ilgili olarak aşağıdakiler dikkate alınmalıdır:<br>
 
 -   **Active Directory ormanları ve etki alanları**<br>
     ATA tek bir Active Directory ormanındaki birden çok etki alanından trafiği izleyebilir. Birden çok Active Directory ormanını izlemek için ayrı ATA dağıtımları gerekir. Tek bir ATA dağıtımı farklı ormanlardaki etki alanı denetleyicilerinin ağ trafiğini izlemek için yapılandırılmamalıdır.
@@ -95,6 +108,9 @@ Bağlantı noktası yansıtmayla ilgili önemli noktalar, her bir veri merkezi v
 -   **Kapasite**<br>
     ATA Gateway, izlenmekte olan etki alanı denetleyicilerinin ağ trafiği miktarına bağlı olarak, birden çok etki alanı denetleyicisinin izlenmesini destekleyebilir. 
 <br>
+
+> [!NOTE] 
+> Dinamik bellek desteklenmez.
 
 |Paket/saniye&#42;|CPU (çekirdekler&#42;&#42;)|Bellek (GB)|
 |---------------------------|-------------------------|---------------|
@@ -138,7 +154,8 @@ Saniyedeki paket sayısını belirlemek için, her etki alanı denetleyicisinde 
 
 7.  **Ağ Bağdaştırıcısı**’nı genişletin, **Paket/sn**’yi seçin ve doğru örneği seçin. Emin değilseniz, **&lt;Tüm örnekler&gt;**’i seçebilir, ardından **Ekle**’ye ve **Tamam**’a tıklayabilirsiniz.
 
-    > [!NOTE] Bunu yapmak için, komut satırında `ipconfig /all` komutunu çalıştırarak bağdaştırıcının ve yapılandırmanın adını görüntüleyin.
+    > [!NOTE]
+    > Bunu yapmak için, komut satırında `ipconfig /all` komutunu çalıştırarak bağdaştırıcının ve yapılandırmanın adını görüntüleyin.
 
     ![Performans sayaçlarını ekleme resmi](media/ATA-traffic-estimation-7.png)
 
@@ -163,9 +180,10 @@ Saniyedeki paket sayısını belirlemek için, her etki alanı denetleyicisinde 
 ## Ayrıca Bkz.
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA mimarisi](ata-architecture.md)
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

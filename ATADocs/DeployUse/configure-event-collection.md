@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Olay Koleksiyonunu Yapılandırma | Microsoft Advanced Threat Analytics
-description: ATA’yla olay koleksiyonunu yapılandırmaya yönelik seçeneklerinizi açıklar
-keywords:
+title: "Olay Koleksiyonunu Yapılandırma | Microsoft Advanced Threat Analytics"
+description: "ATA’yla olay koleksiyonunu yapılandırmaya yönelik seçeneklerinizi açıklar"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,24 +10,20 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: 17f30cbe478a868f3b6887bf48d8084934624191
+
 
 ---
 
 # Olay Koleksiyonunu Yapılandırma
-ATA, algılama yeteneklerini geliştirmek için Windows Olay günlüğü ID 4776’ya gereksinim duyar. Bu ATA Gateway’e iki yoldan biriyle, ATA Gateway’i SIEM olaylarını dinleyecek şekilde yapılandırarak veya [Windows Olay İletme’yi yapılandırarak](#configuring-windows-event-forwarding) iletilebilir..
+ATA, algılama yeteneklerini geliştirmek için Windows Olay günlüğü ID 4776’ya gereksinim duyar. Bu ATA Gateway’e iki yoldan biriyle, ATA Gateway’i SIEM olaylarını dinleyecek şekilde yapılandırarak veya [Windows Olay İletme’yi yapılandırarak](#configuring-windows-event-forwarding) iletilebilir.
 
 ## Olay koleksiyonu
-Etki alanı denetleyicilerinden gelen ve giden ağ trafiğini toplamaya ve çözümlemeye ek olarak, ATA Windows olayı 4776’yı kullanarak ATA Karma Değer Geçişi algılamasını daha da geliştirir. Bu SIEM sistemlerinizden alınabileceği gibi, etki alanı denetleyicinizden Windows Olay İletme’yi ayarlayarak da alınabilir. Toplanan olaylar ATA’ya etki alanı denetleyicisi ağ trafiği yoluyla sağlanmayan ek bilgiler sağlar.
+Etki alanı denetleyicilerinden gelen ve giden ağ trafiğini toplamaya ve çözümlemeye ek olarak, ATA Windows olayı 4776’yı kullanarak ATA Karma Değeri Geçirme algılamasını daha da geliştirir. Bu SIEM sistemlerinizden alınabileceği gibi, etki alanı denetleyicinizden Windows Olay İletme’yi ayarlayarak da alınabilir. Toplanan olaylar ATA’ya etki alanı denetleyicisi ağ trafiği yoluyla sağlanmayan ek bilgiler sağlar.
 
 ### SIEM/Syslog
 ATA’nın Syslog sunucusundan verileri kullanabilmesi için, aşağıdakileri yapmalısınız:
@@ -49,13 +43,13 @@ SIEM/Syslog sunucusunu kullanmazsanız, Windows etki alanı denetleyicilerinizi 
 
 ## ATA Gateway’i SIEM olaylarını dinleyecek şekilde yapılandırma
 
-1.  ATA Gateway yapılandırmasında **Syslog Dinleyicisi UDP**’yi etkinleştirin..
+1.  ATA Gateway yapılandırmasında **Syslog Dinleyicisi UDP**’yi etkinleştirin.
 
     Dinleyici IP Adresini aşağıdaki resimde açıklandığı gibi ayarlayın. Varsayılan bağlantı noktası 514'tür.
 
-    ![Syslog dinleyicisi UDP’yi etkinleştirme](media/ATA-enable-siem-forward-events.png)
+    ![Syslog dinleyicisi UDP’yi etkinleştirme görüntüsü](media/ATA-enable-siem-forward-events.png)
 
-2.  SIEM veya Syslog sunucunuzu, Windows Olay Kimliği 4776’yı yukarıda seçilen IP adresine iletecek şekilde yapılandırın. SIEM sunucunuzu yapılandırma hakkında ek bilgi için, her SIEM sunucusunun belirli biçimlendirme yönergeleriyle ilgili olarak SIEM çevrimiçi yardımını veya teknik destek seçeneklerini kullanın.
+2.  SIEM veya Syslog sunucunuzu, Windows Olay Kimliği 4776’yı yukarıda seçilen IP adresine iletecek şekilde yapılandırın. SIEM sunucunuzu yapılandırma hakkında ek bilgi için, her SIEM sunucusuna özgü belirli biçimlendirme yönergeleriyle ilgili olarak SIEM sunucunuzun çevrimiçi yardımına veya teknik destek seçeneklerine bakın.
 
 ### SIEM desteği
 ATA, aşağıdaki biçimlerde olan SIEM olaylarını destekler:
@@ -176,7 +170,8 @@ Message, Windows olayından alınan özgün olay metnidir
 
 key=value çiftleri arasında \t bulunduğundan emin olun.
 
->[!NOTE] Windows olay koleksiyonu için WinCollect kullanımı desteklenmez.
+>[!NOTE] 
+> Windows olay koleksiyonu için WinCollect kullanımı desteklenmez.
 
 ## Windows Olay İletme’yi yapılandırma
 SIEM sunucunuz yoksa, etki alanı denetleyicilerinizi Windows Olay Kimliği 4776’yı doğrudan ATA Gateway’lerinizden birine iletecek şekilde yapılandırabilirsiniz.
@@ -195,34 +190,34 @@ wecutil qc
 ![wef_ad_eventlogreaders](media/wef_ad_eventlogreaders.png)<br>
 Buna sağ tıklayın ve **Özellikler**’i seçin. **Üyeler** sekmesinde, her ATA Gateway için bilgisayar hesabını ekleyin.
 ![wef_ad event log reader popup](media/wef_ad-event-log-reader-popup.png)
-6.  ATA Gateway’de Olay Görüntüleyicisi’ni açın, **Abonelikler**’e sağ tıklayın ve **Abonelik Oluştur**’u seçin..  
+6.  ATA Gateway’de Olay Görüntüleyicisi’ni açın, **Abonelikler**’e sağ tıklayın ve **Abonelik Oluştur**’u seçin.  
 
     a. **Abonelik türü ve kaynak bilgisayarlar**’ın altında **Bilgisayarları Seçin** öğesine tıklayın, etki alanı denetleyicilerini ekleyin ve bağlantıyı test edin.
     ![wef_subscription prop](media/wef_subscription-prop.png)
 
-    b. **Toplanacak olaylar**’ın altında **Olay Seç**’e tıklayın. **Günlüğe göre** öğesini seçin ve ekranı aşağı kaydırarak **Güvenlik**’i seçin. Ardından, **Olay Kimliklerini Ekler/Çıkarır** alanına **4776** yazın..<br>
+    b. **Toplanacak olaylar**’ın altında **Olay Seç**’e tıklayın. **Günlüğe göre** öğesini seçin ve ekranı aşağı kaydırarak **Güvenlik**’i seçin. Ardından, **Olay Kimliklerini Ekler/Çıkarır** alanına **4776** yazın.<br>
     ![wef_4776](media/wef_4776.png)
 
     c. **Kullanıcı hesabını değiştir veya gelişmiş ayarları yapılandır** alanında **Gelişmiş**’e tıklayın.
-**Protokol** olarak **HTTP**’yi ve **Bağlantı Noktası** olarak **5985**’i ayarlayın..<br>
+**Protokol** olarak **HTTP**’yi ve **Bağlantı Noktası** olarak **5985**’i ayarlayın.<br>
     ![wef_http](media/wef_http.png)
 
 7.  [İsteğe bağlı] Daha kısa bir yoklama aralığı istiyorsanız, daha yüksek yoklama hızı için ATA Gateway’de abonelik sinyalini 5 saniyeye ayarlayın.
-    wecutil ss <CollectionName>/cm:custom
-    wecutil ss <CollectionName> /hi:5000
+    wecutil ss <CollectionName>/cm:custom wecutil ss <CollectionName> /hi:5000
 
-8. ATA Gateway yapılandırma sayfasında **Windows Olay İletme Koleksiyonu**’nu etkinleştirin..
+8. ATA Gateway yapılandırma sayfasında **Windows Olay İletme Koleksiyonu**’nu etkinleştirin.
 
 > [!NOTE]
-Bu ayarı etkinleştirdiğinizde, ATA Gateway İletilen Olaylar günlüğünde etki alanı denetleyicilerinden kendisine iletilmiş olan Windows Olaylarını arar.
+> Bu ayarı etkinleştirdiğinizde, ATA Gateway İletilen Olaylar günlüğünde etki alanı denetleyicilerinden kendisine iletilmiş olan Windows Olaylarını arar.
 
-Daha fazla bilgi için bkz. [Olayları iletmek ve toplamak için bilgisayarları yapılandırma](https://technet.microsoft.com/en-us/library/cc748890)
+Daha fazla bilgi için bkz. [Olayları iletmek ve toplamak için bilgisayarları yapılandırma](https://technet.microsoft.com/library/cc748890).
 
 ## Ayrıca Bkz.
 - [ATA’yı yükleme](install-ata.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

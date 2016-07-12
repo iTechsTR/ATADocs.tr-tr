@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA hata günlüğü sorunlarını giderme | Microsoft Advanced Threat Analytics
-description: ATA’da sık karşılaşılan hataları nasıl giderebileceğinizi açıklar 
-keywords:
+title: "ATA hata günlüğü sorunlarını giderme | Microsoft Advanced Threat Analytics"
+description: "ATA’da sık karşılaşılan hataları nasıl giderebileceğinizi açıklar"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 351541d28e0f30a33d76990f2ac00a4d506f5450
+
 
 ---
 
@@ -50,7 +44,7 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 ## Dağıtım hataları
 |Hata|Açıklama|Çözüm|
 |-------------|----------|---------|
-|.Net Framework 4.6.1 yüklemesi 0x800713ec hatasıyla başarısız oldu|.Net Framework 4.6.1 ön koşulları sunucuda yüklü değil. |ATA yüklemeden önce, [KB2919442](https://www.microsoft.com/en-us/download/details.aspx?id=42135) ve [KB2919355](https://support.microsoft.com/en-us/kb/2919355) Windows güncelleştirmelerinin sunucuda yüklü olduğunu doğrulayın.|
+|.Net Framework 4.6.1 yüklemesi 0x800713ec hatasıyla başarısız oldu|.Net Framework 4.6.1 ön koşulları sunucuda yüklü değil. |ATA’yı yüklemeden önce, [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) ve [KB2919355](https://support.microsoft.com/kb/2919355) Windows güncelleştirmelerinin sunucuda yüklü olduğunu doğrulayın.|
 
 ![ATA .NET yükleme hatası görüntüsü](media/netinstallerror.png)
 
@@ -60,9 +54,10 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 - [ATA kapasite planlaması](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Windows olay iletme özelliğini yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection#ATA_event_WEF)
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA yapılandırmasını değiştirme - ATA Konsolu IP adresi | Microsoft Advanced Threat Analytics
-description: ATA Gateway bileşenleri üzerindeki ATA Konsolu’nun kısayolunu oluşturmak için kullanılan ATA Konsolu IP adresinin nasıl değiştirileceği açıklanır.
-keywords:
+title: "ATA yapılandırmasını değiştirme - ATA Konsolu IP adresi | Microsoft Advanced Threat Analytics"
+description: "ATA Gateway bileşenleri üzerindeki ATA Konsolu’nun kısayolunu oluşturmak için kullanılan ATA Konsolu IP adresinin nasıl değiştirileceği açıklanır."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 50118465-df34-4e04-b0cc-48808b6a96b1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: ee775e66de1a56b5270b0d32c7d5ca33d4d7980c
+
 
 ---
 
@@ -29,7 +23,7 @@ ms.suite: ems
 
 >[!div class="step-by-step"]
 [« ATA Center sertifikası](modifying-ata-config-centercert.md)
-[IIS sertifikası»](modifying-ata-config-iiscert.md)
+[IIS sertifikası »](modifying-ata-config-iiscert.md)
 
 ## ATA Konsolu IP adresini değiştirme
 Varsayılan olarak, ATA Konsolu URL'si ATA Center’ı yüklerken seçilen ATA Konsolu IP adresidir.
@@ -53,9 +47,9 @@ IIS tarafından ATA Konsolu için kullanılan IP adresini değiştirmeniz gereki
 
 2.  Internet Information Services (IIS) Yöneticisi’ni açın.
 
-3.  Sunucunun adını genişletin ve **Siteler**’i genişletin..
+3.  Sunucunun adını genişletin ve **Siteler**’i genişletin.
 
-4.  Microsoft ATA Konsolu sitesini seçin ve **Eylemler** bölmesinde **Bağlamalar**’a tıklayın..
+4.  Microsoft ATA Konsolu sitesini seçin ve **Eylemler** bölmesinde **Bağlamalar**’a tıklayın.
 
     ![ATA Konsolu bağlamalar eyleminin resmi](media/ATA-console-change-IP-bindings.jpg)
 
@@ -63,7 +57,7 @@ IIS tarafından ATA Konsolu için kullanılan IP adresini değiştirmeniz gereki
 
     ![Site bağlamasını düzenleme resmi](media/ATA-change-console-IP.jpg)
 
-6.  **Eylem** bölmesinde, **Web Sitesini Yönet**’in altında **Yeniden Başlat**’a tıklayın..
+6.  **Eylem** bölmesinde, **Web Sitesini Yönet**’in altında **Yeniden Başlat**’a tıklayın.
 
 7.  Yönetici komut istemini açın ve HTTP.SYS sürücüsünü güncelleştirmek için aşağıdaki komutları yazın:
 
@@ -79,15 +73,16 @@ IIS tarafından ATA Konsolu için kullanılan IP adresini değiştirmeniz gereki
 
 >[!div class="step-by-step"]
 [« ATA Center sertifikası](modifying-ata-config-centercert.md)
-[IIS sertifikası»](modifying-ata-config-iiscert.md)
+[IIS sertifikası »](modifying-ata-config-iiscert.md)
 
 
 ## Ayrıca Bkz.
 - [ATA Konsolu’yla çalışma](working-with-ata-console.md)
 - [ATA’yı yükleme](install-ata.md)
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 
