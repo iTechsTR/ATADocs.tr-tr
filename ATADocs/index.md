@@ -1,9 +1,8 @@
 ---
 asset_id: c4a97980-6e19-4d10-bf69-f0b338266efa
 layout: HubPage
-
-title: Advanced Threat Analytics Documentation
-description: Technical documentation for Microsoft Intune - Mobile Device and Application Management
+title: Advanced Threat Analytics Belgeleri
+description: "Microsoft Intune için teknik belgeler - Mobil Cihaz ve Uygulama Yönetimi"
 keywords: Advanced Threat Analytics Documentation, ATA documentation
 author: msstevenpo
 manager: stevenpo
@@ -14,31 +13,35 @@ ms.service: advanced-threat-analytics
 ms.technology: security
 ms.suite: ems
 ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
+translationtype: Human Translation
+ms.sourcegitcommit: 121f54e6d8da8220f1827188039e9a89c038f7ac
+ms.openlocfilehash: 91fe130cb37f40efd90d7e8023b93075f76a5ba4
+
 
 ---
-# Microsoft Advanced Threat Analytics Documentation
+# Microsoft Advanced Threat Analytics Belgeleri
 <article id="main">
     <section id="hero-content">
-      <h1>Microsoft Advanced Threat Analytics Documentation</h1>
-      <h2>Learn how to deploy and manage Microsoft Advanced Threat Analytics (ATA), an on-premises product that helps IT security professionals protect their enterprise from advanced targeted attacks.</h2>
-      <h3>New to ATA? <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Visit our product page &rarr;</a></h3>
+      <h1>Microsoft Advanced Threat Analytics Belgeleri</h1>
+      <h2>BT güvenlik uzmanlarının kuruluşlarını ileri düzey hedeflenmiş saldırılara karşı korumalarına yardımcı olmaya yönelik bir şirket içi ürünü olan Microsoft Advanced Threat Analytics’in (ATA) nasıl dağıtıldığını ve yönetildiğini öğrenin.</h2>
+      <h3>ATA’yı kullanmaya yeni mi başladınız? <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Ürün sayfamızı ziyaret edin &rarr;</a></h3>
     </section>
     <aside class="alert section-border">
-      <p>Ready to get hands-on?</p>
+      <p>Başlamaya hazır mısınız?</p>
       <ol class="action-list">
-        <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics" target="_blank" class="button-bordered button-translucent">Try Now</a></li>
+        <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics" target="_blank" class="button-bordered button-translucent">Şimdi Deneyin</a></li>
       </ol>
     </aside>
     <section id="featured" class="container">
-      <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
+      <h2 class="section-heading"><span class="icon icon-warning"></span> Sunulan İçerik</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="/advanced-threat-analytics/understand-explore/what-is-ata">What is Advanced Threat Analytics?</a></li>
-          <li><a href="/advanced-threat-analytics/understand-explore/ata-technical-faq">Frequently asked questions</a></li>
+          <li><a href="/advanced-threat-analytics/understand-explore/what-is-ata">Advanced Threat Analytics nedir?</a></li>
+          <li><a href="/advanced-threat-analytics/understand-explore/ata-technical-faq">Sık sorulan sorular</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="/advanced-threat-analytics/plan-design/ata-architecture">ATA Architecture</a></li>
-          <li><a href="/advanced-threat-analytics/plan-design/ata-capacity-planning">ATA capacity planning</a></li>        </ul>
+          <li><a href="/advanced-threat-analytics/plan-design/ata-architecture">ATA Mimarisi</a></li>
+          <li><a href="/advanced-threat-analytics/plan-design/ata-capacity-planning">ATA kapasite planlaması</a></li>        </ul>
       </div>
     </section>
     <div id="journeys">
@@ -49,9 +52,9 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <a href="/advanced-threat-analytics/understand-explore/what-is-ata">
                 <div class="title column-third">
                   <span class="step-number">1</span>
-                  <p>Understand &amp; Explore</p>
+                  <p>Anlama &amp; Keşfetme</p>
                 </div>
-                <p class="description column-two-thirds">Learn the high-level concepts, features, and capabilities of Microsoft Advanced Threat Analytics.
+                <p class="description column-two-thirds">Microsoft Advanced Threat Analytics’in üst düzey kavramlarını, özelliklerini ve yeteneklerini öğrenin.
                 </p>
               </a>
             </header>
@@ -59,20 +62,20 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <ul class="row">
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/understand-explore/what-is-ata">
-                    <h3>What is ATA?</h3>
-                    <p>Learn how ATA helps IT security professionals protect their enterprise from advanced targeted attacks.</p>
+                    <h3>ATA nedir?</h3>
+                    <p>ATA’nin BT güvenlik uzmanlarının işletmelerini gelişmiş hedeflenen saldırılara karşı korumasına nasıl yardımcı olduğunu öğrenin.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/understand-explore/ata-technical-faq">
-                    <h3>Frequently asked questions</h3>
-                    <p>Get answers to all your technical questions about ATA.</p>
+                    <h3>Sık sorulan sorular</h3>
+                    <p>ATA hakkında tüm teknik sorularınıza yanıtlar alın.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/understand-explore/ata-release-notes">
-                    <h3>ATA release notes</h3>
-                    <p>See a list of what was updated in the latest versions along with known issues and migration guides.</p>
+                    <h3>ATA sürüm notları</h3>
+                    <p>Bilinen sorunlar ve geçiş kılavuzlarının yanı sıra, en son sürümlerde nelerin güncelleştirildiğinin tam bir listesine bakın.</p>
                   </a>
                 </li>
               </ul>
@@ -83,9 +86,9 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <a href="/advanced-threat-analytics/plan-design/ata-architecture">
                 <div class="title column-third">
                   <span class="step-number">2</span>
-                  <p>Plan &amp; Design</p>
+                  <p>Planlama &amp; Tasarım</p>
                 </div>
-                <p class="description column-two-thirds">Plan and design ATA.
+                <p class="description column-two-thirds">ATA’yı planlayın ve tasarlayın.
                 </p>
               </a>
             </header>
@@ -93,20 +96,20 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <ul class="row">
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/plan-design/ata-architecture">
-                    <h3>ATA Architecture</h3>
-                    <p>Understand what your architecture should look like to support ATA.</p>
+                    <h3>ATA Mimarisi</h3>
+                    <p>Mimarinizin ATA’yı desteklemek için nasıl olması gerektiğini anlayın.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/plan-design/ata-capacity-planning">
-                    <h3>Capacity planning</h3>
-                    <p>Determine how many ATA servers will be needed to support your network.</p>
+                    <h3>Kapasite planlama</h3>
+                    <p>Ağınızı desteklemek için kaç ATA sunucusu gerektiğini saptayın.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/plan-design/ata-prerequisites">
-                    <h3>ATA prerequisites</h3>
-                    <p>Plan the requirements for a successful deployment of ATA in your environment.</p>
+                    <h3>ATA önkoşulları</h3>
+                    <p>Ortamınızda başarılı bir ATA dağıtımının gereksinimlerini planlayın.</p>
                   </a>
                 </li>
               </ul>
@@ -117,9 +120,9 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <a href="/advanced-threat-analytics/deploy-use/preinstall-ata">
                 <div class="title column-third">
                   <span class="step-number">3</span>
-                  <p>Deploy &amp; Use</p>
+                  <p>Dağıtma &amp; Kullanma</p>
                 </div>
-                <p class="description column-two-thirds">Deploy and use ATA.
+                <p class="description column-two-thirds">ATA’yı dağıtın ve kullanın.
                 </p>
               </a>
             </header>
@@ -127,20 +130,20 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <ul class="row">
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/deploy-use/preinstall-ata">
-                    <h3>Before you install ATA</h3>
-                    <p>Follow these steps before installing ATA.</p>
+                    <h3>ATA yüklemeden önce</h3>
+                    <p>ATA’yı yüklemeden önce aşağıdaki adımları izleyin.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/deploy-use/install-ata">
-                    <h3>Install ATA</h3>
-                    <p>Follow the detailed step-by-step installation guide.</p>
+                    <h3>ATA’yı yükleme</h3>
+                    <p>Ayrıntılı adım adım yükleme kılavuzunu takip edin.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/deploy-use/operate-ata">
-                    <h3>Operate ATA</h3>
-                    <p>Modify ATA configuration and perform daily monitoring using ATA.</p>
+                    <h3>ATA Çalıştırma</h3>
+                    <p>ATA yapılandırmasını değiştirin ve ATA kullanarak günlük izleme yapın.</p>
                   </a>
                 </li>
             </section>
@@ -150,9 +153,9 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors">
                 <div class="title column-third">
                   <span class="step-number">4</span>
-                  <p>Troubleshoot</p>
+                  <p>Sorunları Gider</p>
                 </div>
-                <p class="description column-two-thirds">Troubleshoot ATA.
+                <p class="description column-two-thirds">ATA ile ilgili sorunları giderin.
                 </p>
               </a>
             </header>
@@ -160,20 +163,20 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <ul class="row">
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors">
-                    <h3>Troubleshoot ATA known errors</h3>
-                    <p>Review the steps to remedy ATA known errors.</p>
+                    <h3>Bilinen ATA hatalarını giderme</h3>
+                    <p>ATA bilinen hatalarını gidermek için adımları gözden geçirin.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs">
-                    <h3>Use logs to troubleshoot</h3>
-                    <p>Understand what each component of ATA is doing at any given point in time.</p>
+                    <h3>Sorun gidermek için günlükleri kullanma</h3>
+                    <p>ATA’nın her bileşeninin belirli bir anda neler yaptığını öğrenin.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters">
-                    <h3>Use performance counters to troubleshoot</h3>
-                    <p>Understand how well each component of ATA is performing.</p>
+                    <h3>Sorun giderme için performans sayaçlarını kullanma</h3>
+                    <p>Her bir ATA bileşeninin nasıl performans gösterdiğini anlayın.</p>
                   </a>
                 </li>
               </ul>
@@ -183,9 +186,15 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
       </section>
     </div>
     <aside class="alert alert-social">
-      <p>Keep up with news about ATA</p>
+      <p>ATA hakkında haberleri takip edin</p>
       <ol class="action-list">
-        <li><a href="http://blogs.technet.com/b/ata/" target="_blank" class="button-bordered button-translucent">official Microsoft ATA blog</a></li>
+        <li><a href="http://blogs.technet.com/b/ata/" target="_blank" class="button-bordered button-translucent">resmi Microsoft ATA blogu</a></li>
       </ol>
     </aside>
 </article>
+
+
+
+<!--HONumber=Jun16_HO5-->
+
+

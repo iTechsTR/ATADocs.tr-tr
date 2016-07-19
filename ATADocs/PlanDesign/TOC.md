@@ -1,7 +1,12 @@
-# [Understand and Explore](/advanced-threat-analytics/understand-explore/what-is-ata)
-# [Plan and Design](ata-capacity-planning.md)
-## [ATA Architecture](ata-architecture.md)
-## [Plan your ATA capacity](ata-capacity-planning.md)
-## [ATA Prerequisites](ata-prerequisites.md)
-# [Deploy and Use](/advanced-threat-analytics/deploy-use/install-ata)
-# [Troubleshoot](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+# [Anlama ve Keşfetme](/advanced-threat-analytics/understand-explore/what-is-ata)
+# [Planlama ve Tasarlama](ata-capacity-planning.md)
+## [ATA Mimarisi](ata-architecture.md)
+## [ATA kapasitenizi planlama](ata-capacity-planning.md)
+## [ATA Önkoşulları](ata-prerequisites.md)
+# [Dağıtma ve Kullanma](/advanced-threat-analytics/deploy-use/install-ata)
+# [Sorunları Gider](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+
+
+<!--HONumber=Jun16_HO4-->
+
+

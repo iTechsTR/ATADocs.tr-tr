@@ -1,4 +1,9 @@
-# [Understand and Explore](/understand-explore/what-is-ata)
-# [Plan and Design](/plan-design/ata-architecture)
-# [Deploy and Use](/deploy-use/preinstall-ata)
-# [Troubleshoot](/troubleshoot/troubleshooting-ata-known-errors)
+# [Anlama ve Keşfetme](/understand-explore/what-is-ata)
+# [Planlama ve Tasarlama](/plan-design/ata-architecture)
+# [Dağıtma ve Kullanma](/deploy-use/preinstall-ata)
+# [Sorunları Gider](/troubleshoot/troubleshooting-ata-known-errors)
+
+
+<!--HONumber=Jun16_HO4-->
+
+
