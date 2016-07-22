@@ -8,6 +8,6 @@
 ## [Veritabanını kullanarak sorun giderme](troubleshooting-ata-using-ata-database.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
