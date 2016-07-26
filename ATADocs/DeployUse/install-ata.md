@@ -1,5 +1,5 @@
 ---
-title: "ATA’yı Yükleme - Tamamlandı | Microsoft Advanced Threat Analytics"
+title: "ATA’yı Yükleme - Tamamlama | Microsoft ATA"
 description: "ATA’nın dağıtılması, yapılandırması ve çalıştırılmasında sağlamak için gereken adımlarda size yol gösterir."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 697da5ddc701c353ab1cc1b39c15939af9964497
+ms.sourcegitcommit: c512fd20f913c53ac936f7de288eb024d91cf9f1
+ms.openlocfilehash: 4587b384314bbc1ee89a82134386ce1ffd5beef5
 
 
 ---
@@ -41,14 +41,13 @@ ATA’yı yapılandırmak için bu adımları izleyin:
 
 ## Ayrıca Bkz.
 
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/
-- home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

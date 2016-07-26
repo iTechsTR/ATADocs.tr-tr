@@ -1,5 +1,5 @@
 ---
-title: ATA Sistem Durumu Merkezi | Microsoft Advanced Threat Analytics
+title: ATA Sistem Durumu Merkezi | Microsoft ATA
 description: "ATA hizmetinin nasıl çalıştığını denetlemek ve olası sorunlarda uyarı almak için ATA Sistem Durumu Merkezi’ni kullanın."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: b38b96f0b2e6061e97d8b46163a04d2310709491
+ms.sourcegitcommit: c512fd20f913c53ac936f7de288eb024d91cf9f1
+ms.openlocfilehash: 87c92ce4ca7834df7483071a18f78ca6c6bfccd0
 
 
 ---
@@ -41,11 +41,10 @@ Sisteminizin bir bütün olarak durumunu denetlemek için, menü çubuğunda Sis
 ## Ayrıca Bkz.
 - [ATA algılama ayarlarıyla çalışma](working-with-detection-settings.md)
 - [Kuşkulu etkinliklerle çalışma](working-with-suspicious-activities.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/
-- home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

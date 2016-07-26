@@ -1,5 +1,5 @@
 ---
-title: "ATA’yı 1.5’e güncelleştirme geçiş kılavuzu | Microsoft Advanced Threat Analytics"
+title: "ATA’yı 1.5 sürümüne güncelleştirme geçiş kılavuzu | Microsoft ATA"
 description: "ATA’yı sürüm 1.5’e güncelleştirme yordamları"
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 87293e71e053e2d7a962a5b7362b92e5df677c77
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 4c82467c8830b1e602edbe720cd6107664e433b9
 
 
 ---
@@ -134,6 +134,6 @@ Tüm ATA Gateway bileşenleri başarıyla eşitlendiklerini bildirdiklerinde ve 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
