@@ -3,26 +3,43 @@ title: "ATA Dağıtımınızı planlama | Microsoft ATA"
 description: "Dağıtımınızı planlamanıza ve ağınızı desteklemek için kaç adet ATA sunucusu gerekeceğine karar vermenize yardımcı olur"
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: a43184e0efa1de110f5c287c6079e80e1a9dd3de
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: e0174ecac39b2a8cd469ed698853c447a85e4251
 
 
 ---
 
 # ATA Kapasite Planlaması
-Bu konu, kaç adet ATA Gateway ve ATA Lightweight Gateway bileşenine ihtiyacınız olduğunu ve ATA Center ve ATA Gateway bileşenleri için sunucu kapasitesini anlamak da dahil olmak üzere, ağınızı desteklemek için kaç adet ATA sunucusu gerekeceğini belirlemenize yardımcı olur.
+Bu konu, kaç adet ATA Gateway ve/veya ATA Lightweight Gateway bileşenine ihtiyacınız olduğunu ve ATA Center ve ATA Gateway için gerekli sunucu kapasitesini anlamanın yanı sıra ağınızı görüntülemek için kaç adet ATA sunucusu gerekeceğini belirlemenize yardımcı olur.
 
-## ATA Center Boyutlandırması
+##Boyutlandırma aracını kullanma
+ATA dağıtımızın kapasitesini belirlemek için önerilen en kolay yol [ATA Boyutlandırma Aracı](http://aka.ms/atasizingtool)’nı kullanmaktır. ATA Boyutlandırma Aracı’nı çalıştırın ve Excel dosyasındaki sonuçlarda, ihtiyaç duyduğunuz ATA kapasitesini belirlemek için aşağıdaki alanları kullanın:
+
+- ATA Center CPU ve Bellek: Sonuç dosyasındaki ATA Center tablosunda bulunan **Meşgul Paket/sn** bölümünü, [ATA Center tablosundaki](#ata-center-sizing) **SANİYE BAŞINA PAKET** bölümüyle eşleştirin.
+
+- ATA Center Depolama: Sonuç dosyasındaki ATA Center tablosunda bulunan **Ortalama Paket/sn** bölümünü, [ATA Center tablosundaki](#ata-center-sizing) **SANİYE BAŞINA PAKET** bölümüyle eşleştirin.
+- ATA Gateway: Sonuç dosyasındaki ATA Gateway tablosunda bulunan **Meşgul Paket/sn** bölümünü, [seçtiğiniz ağ geçidi türüne](#choosing-the-right-gateway-type-for-your-deployment) bağlı olarak [Ata Gateway tablosundaki](#ata-gateway-sizing) veya [ATA Lightweight Gateway tablosundaki](#ata-lightweight-gateway-sizing) **SANİYE BAŞINA PAKET** bölümüyle eşleştirin.
+
+
+![Kapasite planlama aracı örneği](media/capacity tool.png)
+
+
+
+Çeşitli nedenlerle ATA Boyutlandırma Aracını kullanamıyorsanız, paket/sn sayaç bilgilerinizi, tüm Etki Alanı Denetleyicilerinizden 24 saat boyunca düşük toplama aralığıyla (yaklaşık 5 saniyede bir) kendiniz toplamanız gerekir. Sonrasında, her Etki Alanı Denetleyicisi için günlük ortalamanızı ve en meşgul zaman aralığı (15 dakikalık) ortalamanızı hesaplamanız gerekir.
+Aşağıdaki bölüm, bir Etki Alanı Denetleyicisi’nden paket/sn sayacı bilgilerini nasıl alabileceğinizi gösteren yönergeleri içerir.
+
+
+
+### ATA Center Boyutlandırması
 Kullanıcı davranış analizi için ATA Center’a en az 30 günlük veri gerekir. Etki alanı denetleyicisi başına ATA veritabanına gereken disk alanı aşağıda tanımlanmıştır. Birden çok etki alanı denetleyiciniz varsa, ATA veritabanına gereken tüm alan miktarını hesaplamak için etki alanı denetleyicisi başına gereken disk alanlarını toplayın.
 > [!NOTE] 
 > Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
@@ -74,7 +91,7 @@ Aşağıda, etki alanı denetleyicilerinin ATA Gateway kapsamında olmasının g
 - Yönetim veri merkezleri (saniyedeki paket sayısı 10.000’i aşan etki alanı denetleyicilerine sahip)
 
 
-## ATA Lightweight Gateway Boyutu
+### ATA Lightweight Gateway Boyutu
 
 Bir ATA Lightweight Gateway, etki alanı denetleyicisinin oluşturduğu ağ trafiği miktarına bağlı olarak bir etki alanı denetleyicisinin izlenmesini destekleyebilir. 
 > [!NOTE] 
@@ -95,7 +112,7 @@ Bir ATA Lightweight Gateway, etki alanı denetleyicisinin oluşturduğu ağ traf
 > Etki alanı denetleyicisinde, ATA Lightweight Gateway için gereken miktarda kaynak yoksa, etki alanı denetleyicisi performansı etkilenmez, ancak ATA Lightweight Gateway beklendiği gibi çalışmayabilir.
 
 
-## ATA Gateway Boyutlandırması
+### ATA Gateway Boyutlandırması
 
 Kaç adet ATA Gateway bileşeninin dağıtımını yapacağınıza karar verirken aşağıdaki noktaları dikkate alın.
 
@@ -184,6 +201,6 @@ Saniyedeki paket sayısını belirlemek için, her etki alanı denetleyicisinde 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
