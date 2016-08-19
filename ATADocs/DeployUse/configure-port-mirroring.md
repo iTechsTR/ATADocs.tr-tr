@@ -1,20 +1,20 @@
 ---
-title: "Bağlantı Noktası Yansıtmayı Yapılandırma | Microsoft Advanced Threat Analytics"
+title: "Bağlantı Noktası Yansıtmayı Yapılandırma | Microsoft ATA"
 description: "Bağlantı noktası yansıtma seçenekleri ve bunların ATA için nasıl yapılandırılacağı açıklanır."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 121f54e6d8da8220f1827188039e9a89c038f7ac
-ms.openlocfilehash: a4befce4003951b18a5e1a9d8bc1addf9e7ea255
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 92d14179f9177aba824dd5c42c2ef5797af108cb
 
 
 ---
@@ -71,6 +71,6 @@ Bağlantı noktası yansıtma yapılandırıldıktan sonra, ATA Gateway’i yük
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO4-->
 
 

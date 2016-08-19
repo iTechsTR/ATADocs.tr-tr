@@ -1,20 +1,20 @@
 ---
-title: "ATA’yı Yükleme - 1. Adım | Microsoft Advanced Threat Analytics"
+title: "ATA’yı Yükleme - 1. Adım | Microsoft ATA"
 description: "ATA’yı yüklemenin ilk adımı, seçtiğiniz sunucuya ATA Center’ı indirmeyi ve yüklemeyi kapsar."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
-ms.openlocfilehash: c89d4d6f6af58bcc822b9599dcda65d0719a7419
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 29b3abd4308ec766e8b01b0b07f384130e1d14eb
 
 
 ---
@@ -95,14 +95,13 @@ Siteye bir IP adresi kullanarak oturum açtığınız için, sertifikayla ilgili
 
 ## Ayrıca Bkz.
 
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/
-- home?forum=mata)
+- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

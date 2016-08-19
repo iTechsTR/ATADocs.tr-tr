@@ -1,20 +1,20 @@
 ---
-title: "ATA sürüm 1.6’daki yenilikler | Microsoft Advanced Threat Analytics"
+title: "ATA sürüm 1.6’daki yenilikler | Microsoft ATA"
 description: "ATA sürüm 1.6’daki yenilikleri ve bilinen sorunları listeler"
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: eee114a62e1854b5821c0ca4a6f276e9dcd121c8
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 0f801b4d5f2ab9a103b2ca292c75f26040699dd0
 
 
 ---
@@ -146,6 +146,6 @@ Gelecekte araştırmak amacıyla istemeniz halinde, ATA güncelleştirme yordam�
 [ATA’yı 1.6 sürümüne güncelleştirme - geçiş kılavuzu](ata-update-1.6-migration-guide.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

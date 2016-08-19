@@ -1,20 +1,20 @@
 ---
-title: "Olay Koleksiyonunu Yapılandırma | Microsoft Advanced Threat Analytics"
+title: "Olay Koleksiyonunu Yapılandırma | Microsoft ATA"
 description: "ATA’yla olay koleksiyonunu yapılandırmaya yönelik seçeneklerinizi açıklar"
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
-ms.openlocfilehash: 17f30cbe478a868f3b6887bf48d8084934624191
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: fd0b2539841e6938e0f82a81bce04ffb9b5202b4
 
 
 ---
@@ -218,6 +218,6 @@ Daha fazla bilgi için bkz. [Olayları iletmek ve toplamak için bilgisayarları
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

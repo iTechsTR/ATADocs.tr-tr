@@ -1,20 +1,20 @@
 ---
-title: "ATA’yı Yükleme - 2. Adım | Microsoft Advanced Threat Analytics"
+title: "ATA’yı Yükleme - 2. Adım | Microsoft ATA"
 description: "ATA’yı yükleme işleminin ikinci adımı, ATA Center sunucunuzda etki alanı bağlantı ayarlarını yapılandırmanıza yardımcı olur."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 73e2eb84e1e21cbc5afcb7a100f9a67da63c66a5
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 65ec5c86478e9ded096b899d64eb257257095eaf
 
 
 ---
@@ -62,6 +62,6 @@ Genel ATA Gateway ayarlarını yapılandırmak için aşağıdakileri gerçekle�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 
