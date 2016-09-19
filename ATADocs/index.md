@@ -14,8 +14,8 @@ ms.technology:
 ms.suite: ems
 ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: c9914415db42c9bb7dbf25717fb0b51fa5edaae1
+ms.sourcegitcommit: 6d95045842d8bb19dba2e8d0fe13b1bf96e2e304
+ms.openlocfilehash: be7f4c021a6da9d58bb7e8329d9320db9ae19716
 
 
 ---
@@ -33,9 +33,10 @@ ms.openlocfilehash: c9914415db42c9bb7dbf25717fb0b51fa5edaae1
       </ol>
     </aside>
     <section id="featured" class="container">
-      <h2 class="section-heading"><span class="icon icon-warning"></span> Sunulan İçerik</h2>
+      <h2 class="section-heading"><span class="icon icon-warning"></span> Öne Çıkan İçerik</h2>
       <div class="features row">
         <ul class="column column-half">
+          <li><mark><b>YENİ</b></mark> <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">ATA 1.7 sürümünün yayımlanması</a></li>
           <li><a href="/advanced-threat-analytics/understand-explore/what-is-ata">Advanced Threat Analytics nedir?</a></li>
           <li><a href="/advanced-threat-analytics/understand-explore/ata-technical-faq">Sık sorulan sorular</a></li>
         </ul>
@@ -195,6 +196,6 @@ ms.openlocfilehash: c9914415db42c9bb7dbf25717fb0b51fa5edaae1
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 
