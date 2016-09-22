@@ -13,8 +13,8 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: 579e49a8dd9a5cc67961af14259bb8bb27130de5
+ms.sourcegitcommit: ae6a3295d2fffabdb8e5f713674379e4af499ac2
+ms.openlocfilehash: af9101260b1a0d5d9da32398f638f76e0c8c40a7
 
 
 ---
@@ -63,10 +63,53 @@ Bu sürümün bilinen sorunları şunlardır:
 ### Ağ geçidi otomatik güncelleştirme işlemi başarısız olabilir
 **Belirtiler:** Yavaş WAN bağlantılarına sahip ortamlarda, ATA Gateway güncelleştirmesi güncelleştirme zaman aşımına (100 saniye) ulaşabilir ve başarıyla tamamlanamayabilir.
 ATA Konsolunda, ATA Gateway uzun bir süre “Güncelleştiriliyor (paket indiriliyor)” durumuna sahip olur ve sonunda başarısız olur.
+
 **Geçici çözüm:** Bu sorunu çözmek için en son ATA Gateway paketini ATA Konsolundan indirin ve ATA Gateway’i el ile güncelleştirin.
 
- > [!IMPORTANT]
- ATA tarafından kullanılan sertifikalar için otomatik sertifika yenileme desteklenmez. Bu sertifikaların kullanılması sertifika otomatik olarak yenilendiğinde ATA’nın çalışmasının durmasına neden olabilir. 
+### ATA 1.6’dan güncelleştirirken geçiş hatası
+ATA 1.7’ye güncelleştirirken, güncelleştirme işlemi *0x80070643* hata koduyla başarısız olabilir:
+
+![ATA’yı 1.7’ye güncelleştirme hatası](media/ata-update-error.png)
+
+Hatanın nedenini bulmak için dağıtım günlüğünü gözden geçirin. Dağıtım günlüğü **%temp%\..\Microsoft Advanced Thread Analytics Center_{date_stamp}_MsiPackage.log** konumunda bulunur. 
+
+Aşağıdaki tabloda aranacak hataların ve hatayı çözmek için ilgili Mongo betiklerinin listesi verilmiştir. Mongo betiğinin nasıl çalıştırılacağını gösteren aşağıdaki örneği inceleyin:
+
+| Dağıtım günlüğü dosyasında hata                                                                                                                  | Mongo betiği                                                                                                                                                                         |
+|---|---|
+| System.FormatException: Size {size},is larger than MaxDocumentSize 16777216 <br>Dosyada ilerleyin:<br>  Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateUniqueEntityProfiles(Boolean isPartial)                                                                                        | db.UniqueEntityProfile.find().forEach(function(obj){if(Object.bsonsize(obj) > 12582912) {print(obj._id);print(Object.bsonsize(obj));db.UniqueEntityProfile.remove({_id:obj._id});}}) |
+| System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown<br>Dosyada ilerleyin:<br>Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.ReduceSuspiciousActivityDetailsRecords(IMongoCollection`1 suspiciousActivityCollection, Int32 deletedDetailRecordMaxCount) | db.SuspiciousActivity.find().forEach(function(obj){if(Object.bsonsize(obj) > 500000),{print(obj._id);print(Object.bsonsize(obj));db.SuspiciousActivity.remove({_id:obj._id});}})     |
+|System.Security.Cryptography.CryptographicException: Bad Length<br>Dosyada ilerleyin:<br> Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateCenterSystemProfile(IMongoCollection`1 systemProfileCollection)| CenterThumbprint db =. SystemProfile.find({_t:"CenterSystemProfile"}).toArray() [0]. Configuration.SecretManagerConfiguration.CertificateThumbprint;db. SystemProfile.update ({_t: "CenterSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}})|
+
+
+Uygun betiği çalıştırmak için aşağıdaki adımları izleyin. 
+
+1.  Yükseltilmiş komut isteminden **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** konumuna göz atın.
+2.  Tür: **Mongo.exe ATA**   (*Not*: ATA büyük harfle yazılmalıdır.)
+3.  Yukarıda bulunan tablodaki dağıtım günlüğünden hatayla eşleşen betiği yapıştırın.
+
+![ATA Mongo Betiği](media/ATA-mongoDB-script.png)
+
+Bu noktada, yükseltmeyi yeniden başlatabiliyor olmanız gerekir.
+
+### ATA birçok "*Dizin hizmetleri listeleme keşfi *" şüpheli etkinlikleri bildirir:
+ 
+Bu, kuruluştaki istemci makinelerinin hepsinde (veya çoğunda) ağ tarayan araç bulunmasından kaynaklanıyor olabilir. Bu sorunu görüyorsanız:
+
+1. Sebebi veya istemci makinelerde çalışan belirli uygulamaları tanımlayabiliyorsanız, Microsoft.com’dan ATAEval’e gereken bilgiyi içeren bir e-posta atın.
+2. Bu olayların hepsini iptal etmek için aşağıdaki mongo betiklerini kullanın (mongo betiklerinin nasıl yürütüleceğini öğrenmek için yukarıyı inceleyin):
+
+db.SuspiciousActivity.update({_t: "SamrReconnaissanceSuspiciousActivity"}, {$set: {Status: "Dismissed"}}, {multi: true})
+
+### ATA kapatılmış şüpheli etkinlikler için bildirim gönderir:
+Bildirimler yapılandırıldıysa, ATA kapatılmış şüpheli etkinlikler için bildirim (e-posta, syslog ve olay günlükleri) göndermeye devam edebilir.
+Şu an sorun için geçici çözüm yoktur. 
+
+### ATA Gateway, TLS 1.0 ve TLS 1.1 devre dışı bırakılmazsa ATA Center’a kaydolmayabilir:
+TLS 1.0 ve TLS 1.1 ATA Gateway’de (veya Lightweight Gateway’de) devre dışı bırakılırsa, ağ geçidi kendini ATA Center’a kaydedemeyebilir
+
+### ATA tarafından kullanılan sertifikalar için otomatik sertifika yenileme desteklenmez
+Otomatik sertifika yenilemenin kullanılması, sertifika otomatik olarak yenilendiğinde ATA’nın çalışmasının durmasına neden olabilir. 
 
 
 ## Ayrıca Bkz.
@@ -77,6 +120,6 @@ ATA Konsolunda, ATA Gateway uzun bir süre “Güncelleştiriliyor (paket indiri
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 
