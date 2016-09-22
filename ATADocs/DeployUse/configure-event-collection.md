@@ -13,11 +13,15 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: fd0b2539841e6938e0f82a81bce04ffb9b5202b4
+ms.sourcegitcommit: 54e5105e78b6db9f33488135601381af5503aa4a
+ms.openlocfilehash: 118eb5bf505426f1947e96a4e01d0206abdce88d
 
 
 ---
+
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.6 ve 1.7*
+
+
 
 # Olay Koleksiyonunu Yapılandırma
 ATA, algılama yeteneklerini geliştirmek için Windows Olay günlüğü ID 4776’ya gereksinim duyar. Bu ATA Gateway’e iki yoldan biriyle, ATA Gateway’i SIEM olaylarını dinleyecek şekilde yapılandırarak veya [Windows Olay İletme’yi yapılandırarak](#configuring-windows-event-forwarding) iletilebilir.
@@ -28,7 +32,7 @@ Etki alanı denetleyicilerinden gelen ve giden ağ trafiğini toplamaya ve çöz
 ### SIEM/Syslog
 ATA’nın Syslog sunucusundan verileri kullanabilmesi için, aşağıdakileri yapmalısınız:
 
--   ATA Gateway sunucularınızdan birini SIEM/Syslog sunucusundan iletilen olayları dinleyecek ve kabul edecek şekilde yapılandırın.
+-   ATA Gateway sunucularınızı SIEM/Syslog sunucusundan iletilen olayları dinleyecek ve kabul edecek şekilde yapılandırın.
 
 -   SIEM/Syslog sunucunuzu belirli olayları ATA Gateway’e iletecek şekilde yapılandırın.
 
@@ -43,13 +47,11 @@ SIEM/Syslog sunucusunu kullanmazsanız, Windows etki alanı denetleyicilerinizi 
 
 ## ATA Gateway’i SIEM olaylarını dinleyecek şekilde yapılandırma
 
-1.  ATA Gateway yapılandırmasında **Syslog Dinleyicisi UDP**’yi etkinleştirin.
-
-    Dinleyici IP Adresini aşağıdaki resimde açıklandığı gibi ayarlayın. Varsayılan bağlantı noktası 514'tür.
+1.  ATA yapılandırmasında, "Olaylar" sekmesi altında **Syslog**’u etkinleştirip **Kaydet**’e basın.
 
     ![Syslog dinleyicisi UDP’yi etkinleştirme görüntüsü](media/ATA-enable-siem-forward-events.png)
 
-2.  SIEM veya Syslog sunucunuzu, Windows Olay Kimliği 4776’yı yukarıda seçilen IP adresine iletecek şekilde yapılandırın. SIEM sunucunuzu yapılandırma hakkında ek bilgi için, her SIEM sunucusuna özgü belirli biçimlendirme yönergeleriyle ilgili olarak SIEM sunucunuzun çevrimiçi yardımına veya teknik destek seçeneklerine bakın.
+2.  SIEM veya Syslog sunucunuzu, Windows Olay Kimliği 4776’yı ATA Gateway’lerinden birinin IP adresine iletecek şekilde yapılandırın. SIEM sunucunuzu yapılandırma hakkında ek bilgi için, her SIEM sunucusuna özgü belirli biçimlendirme yönergeleriyle ilgili olarak SIEM sunucunuzun çevrimiçi yardımına veya teknik destek seçeneklerine bakın.
 
 ### SIEM desteği
 ATA, aşağıdaki biçimlerde olan SIEM olaylarını destekler:
@@ -174,41 +176,107 @@ key=value çiftleri arasında \t bulunduğundan emin olun.
 > Windows olay koleksiyonu için WinCollect kullanımı desteklenmez.
 
 ## Windows Olay İletme’yi yapılandırma
-SIEM sunucunuz yoksa, etki alanı denetleyicilerinizi Windows Olay Kimliği 4776’yı doğrudan ATA Gateway’lerinizden birine iletecek şekilde yapılandırabilirsiniz.
 
-1.  Yönetici ayrıcalıklarına sahip bir etki alanı hesabı kullanarak tüm etki alanı denetleyicilerinden ve ATA Gateway makinelerinde oturum açın.
-2. Bağlandığınız ATA Gateway makinelerinin ve tüm etki alanı denetleyicilerinin aynı etki alanına katıldığından emin olun.
-3.  Etki alanı denetleyicilerinin her birinde, yükseltilmiş komut istemine şunları yazın:
-```
-winrm quickconfig
-```
-4.  ATA Gateway’de, yükseltilmiş komut istemine şunları yazın:
-```
-wecutil qc
-```
-5.  Her etki alanı denetleyicisinde, **Active Directory Kullanıcıları ve Bilgisayarları**’nda **Builtin** klasörüne gidin ve **Event Log Readers** grubunu seçin.<br>
-![wef_ad_eventlogreaders](media/wef_ad_eventlogreaders.png)<br>
-Buna sağ tıklayın ve **Özellikler**’i seçin. **Üyeler** sekmesinde, her ATA Gateway için bilgisayar hesabını ekleyin.
-![wef_ad event log reader popup](media/wef_ad-event-log-reader-popup.png)
-6.  ATA Gateway’de Olay Görüntüleyicisi’ni açın, **Abonelikler**’e sağ tıklayın ve **Abonelik Oluştur**’u seçin.  
+### Bağlantı noktası yansıtma ile ATA Gateway’ler için WEF yapılandırması
 
-    a. **Abonelik türü ve kaynak bilgisayarlar**’ın altında **Bilgisayarları Seçin** öğesine tıklayın, etki alanı denetleyicilerini ekleyin ve bağlantıyı test edin.
-    ![wef_subscription prop](media/wef_subscription-prop.png)
+Etki alanı denetleyicilerinden ATA Gateway’e bağlantı noktası yansıtmayı yapılandırdıktan sonra, Windows Olay iletmeyi Kaynak Tarafından Başlatılan yapılandırmasını kullanarak yapılandırmak için aşağıdaki yönergeleri uygulayın. Windows Olay İletme’yi yapılandırmanın bir yolu budur. 
 
-    b. **Toplanacak olaylar**’ın altında **Olay Seç**’e tıklayın. **Günlüğe göre** öğesini seçin ve ekranı aşağı kaydırarak **Güvenlik**’i seçin. Ardından, **Olay Kimliklerini Ekler/Çıkarır** alanına **4776** yazın.<br>
-    ![wef_4776](media/wef_4776.png)
+**1. Adım: Ağ hizmeti hesabını etki alanının Event Log Readers grubuna ekleyin.** 
 
-    c. **Kullanıcı hesabını değiştir veya gelişmiş ayarları yapılandır** alanında **Gelişmiş**’e tıklayın.
-**Protokol** olarak **HTTP**’yi ve **Bağlantı Noktası** olarak **5985**’i ayarlayın.<br>
-    ![wef_http](media/wef_http.png)
+Bu senaryoda ATA Gateway’in etki alanı üyesi olduğunu varsayıyoruz.
 
-7.  [İsteğe bağlı] Daha kısa bir yoklama aralığı istiyorsanız, daha yüksek yoklama hızı için ATA Gateway’de abonelik sinyalini 5 saniyeye ayarlayın.
-    wecutil ss <CollectionName>/cm:custom wecutil ss <CollectionName> /hi:5000
+1.  Active Directory Kullanıcıları ve Bilgisayarları’nı açın, **Yerleşik** klasörüne gidin ve **Event Log Readers**’a çift tıklayın. 
+2.  **Üyeler**’i seçin.
+4.  **Ağ Hizmeti** listede yoksa **Ekle**’ye tıklayın, **Seçilecek nesne adlarını girin** alanına **Ağ Hizmeti** yazın. Sonra, **Adları Denetle**’ye tıklayın ve **Tamam**’a çift tıklayın. 
 
-8. ATA Gateway yapılandırma sayfasında **Windows Olay İletme Koleksiyonu**’nu etkinleştirin.
+**2. Adım: Hedef Abonelik Yöneticisi ayarını Yapılandırmak için etki alanı denetleyicilerinde bir ilke oluşturun.** 
+> [!Note] 
+> Bu ayarlar için bir grup ilkesi oluşturabilir ve grup ilkesini ATA Gateway tarafından izlenen her etki alanı denetleyicisine uygulayabilirsiniz. Aşağıdaki adımlar etki alanı denetleyicisinin yerel ilkesini değiştirir.     
 
-> [!NOTE]
-> Bu ayarı etkinleştirdiğinizde, ATA Gateway İletilen Olaylar günlüğünde etki alanı denetleyicilerinden kendisine iletilmiş olan Windows Olaylarını arar.
+1.  Her etki alanı denetleyicisinde aşağıdaki komutu çalıştırın: *winrm quickconfig*
+2.  Bir komut isteminde *gpedit.msc* yazın.
+3.  **Bilgisayar Yapılandırması > Yönetim Şablonları > Windows Bileşenleri > Olay İletme**’yi genişletin
+
+ ![Yerel ilke grubu düzenleyicisi resmi](media/wef 1 local group policy editor.png)
+
+4.  **Hedef Abonelik Yöneticisini yapılandır**’a çift tıklayın.
+   
+    1.  **Etkin**’i seçin.
+    2.  **Seçenekler** altında **Göster**’e tıklayın.
+    3.  **SubscriptionManagers** altında şu değeri girin ve **Tamam**’a tıklayın:  *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Örneğin: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+ 
+   ![Hedef aboneliği yapılandırma resmi](media/wef 2 config target sub manager.png)
+   
+    5.  **Tamam**’a tıklayın.
+    6.  Yükseltilmiş bir komut isteminden şunu yazın: *gpupdate /force*. 
+
+**3. Adım: ATA Gateway’de aşağıdaki adımları gerçekleştirin** 
+
+1.  Yükseltilmiş bir komut istemi açın ve *wecutil qc* yazın
+2.  **Olay Görüntüleyicisi**’ni açın. 
+3.  **Abonelikler**’e sağ tıklayın ve **Abonelik Oluştur**’u seçin. 
+
+   1.   Abonelik için bir ad ve açıklama girin. 
+   2.   **Hedef Günlük** için **İletilen Olaylar**’ın seçili olduğunu doğrulayın. ATA’nın olayları okuması için hedef günlüğün **İletilen Olaylar** olması gerekir. 
+   3.   **Kaynak bilgisayar tarafından başlatılan**’ı seçin ve **Bilgisayar Gruplarını Seç**’e tıklayın.
+        1.  **Etki Alanı Bilgisayarı Ekle**’ye tıklayın.
+        2.  Etki alanı denetleyicisinin adını **Seçilecek nesne adını girin** alanına girin. Sonra, **Adları Denetle**’ye ve **Tamam**’a tıklayın. 
+       
+        ![Olay Görüntüleyicisi resmi](media/wef3 event viewer.png)
+   
+        
+        3.  **Tamam**’a tıklayın.
+   4.   **Olayları Seç**’e tıklayın.
+
+        1. **Günlüğe göre**’ye tıklayıp **Güvenlik**’i seçin.
+        2. **Olay Kimliklerini Ekler/Dışlar** alanına **4776** yazın ve **Tamam**’a tıklayın. 
+
+ ![Sorgu filtresi resmi](media/wef 4 query filter.png)
+
+   5.   Oluşturulan aboneliğe sağ tıklayın ve durumla ilgili herhangi bir sorun olup olmadığını görmek için **Çalışma Zamanı Durumu**’nu seçin. 
+   6.   Birkaç dakika sonra, olay 4776’nın ATA Gateway’deki İletilen Olaylar kısmında görünüp görünmediğine bakın.
+
+
+### ATA Lightweight Gateway için WEF yapılandırması
+ATA Lightweight Gateway’i etki alanı denetleyicilerinize yüklerken, etki alanı denetleyicilerinizi, olayları kendilerine iletecek şekilde ayarlayabilirsiniz. ATA Lightweight Gateway kullanırken Windows Olay İletme’yi yapılandırmak için aşağıdaki adımları uygulayın. Windows Olay İletme’yi yapılandırmanın bir yolu budur.  
+
+**1. Adım: Ağ hizmeti hesabını etki alanının Event Log Readers grubuna ekleyin** 
+
+1.  Active Directory Kullanıcıları ve Bilgisayarları’nı açın, **Yerleşik** klasörüne gidin ve **Event Log Readers**’a çift tıklayın. 
+2.  **Üyeler**’i seçin.
+3.  **Ağ Hizmeti** listede yoksa **Ekle**’ye tıklayın ve **Seçilecek nesne adlarını girin** alanına **Ağ Hizmeti** yazın. Sonra, **Adları Denetle**’ye tıklayın ve **Tamam**’a çift tıklayın. 
+
+**2. Adım: ATA Lightweight Gateway yüklendikten sonra etki alanı denetleyicisinde aşağıdaki adımları gerçekleştirin** 
+
+1.  Yükseltilmiş bir komut istemi açın ve *winrm quickconfig* ve *wecutil qc* yazın 
+2.  **Olay Görüntüleyicisi**’ni açın. 
+3.  **Abonelikler**’e sağ tıklayın ve **Abonelik Oluştur**’u seçin. 
+
+   1.   Abonelik için bir ad ve açıklama girin. 
+   2.   **Hedef Günlük** için **İletilen Olaylar**’ın seçili olduğunu doğrulayın. ATA’nın olayları okuması için hedef günlüğün İletilen Olaylar olması gerekir.
+
+        1.  **Toplayıcı tarafından başlatılan**’ı seçin ve **Bilgisayarları Seç**’e tıklayın. Ardından **Etki Alanı Bilgisayarı Ekle**’ye tıklayın.
+        2.  **Seçilecek nesne adını girin** alanına etki alanı denetleyicisinin adını girin. Sonra, **Adları Denetle**’ye ve **Tamam**’a tıklayın.
+
+            ![Abonelik özellikleri resmi](media/wef 5 sub properties computers.png)
+
+        3.  **Tamam**’a tıklayın.
+   3.   **Olayları Seç**’e tıklayın.
+
+        1.  **Günlüğe göre**’ye tıklayıp **Güvenlik**’i seçin.
+        2.  **Olay Kimliklerini Ekler/Dışlar** alanına *4776* yazın ve **Tamam**’a tıklayın. 
+
+![Sorgu filtresi resmi](media/wef 4 query filter.png)
+
+
+  4.    Oluşturulan aboneliğe sağ tıklayın ve durumla ilgili herhangi bir sorun olup olmadığını görmek için **Çalışma Zamanı Durumu**’nu seçin. 
+
+> [!Note] 
+> Ayarın etkin hale gelmesi için etki alanı denetleyicisini yeniden başlatmanız gerekebilir. 
+
+Birkaç dakika sonra, olay 4776’nın ATA Gateway’deki İletilen Olaylar kısmında görünüp görünmediğine bakın.
+
+
 
 Daha fazla bilgi için bkz. [Olayları iletmek ve toplamak için bilgisayarları yapılandırma](https://technet.microsoft.com/library/cc748890).
 
@@ -218,6 +286,6 @@ Daha fazla bilgi için bkz. [Olayları iletmek ve toplamak için bilgisayarları
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

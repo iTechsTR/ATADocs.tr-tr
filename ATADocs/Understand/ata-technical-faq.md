@@ -4,7 +4,7 @@ description: "ATA hakkında sık sorulan soruların ve bunlarla ilişkili yanıt
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,12 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 09de79e1f8fee6b27c7ba403df1af4431bd099a9
-ms.openlocfilehash: 51440757c89130f8454e9c2b1abe7182f2b7eb41
+ms.sourcegitcommit: b8ad2f343b8397184cd860803f06b0d59c492f5a
+ms.openlocfilehash: 96b3ce171ca07bf44163d49b50377fccd6472a08
 
 
 ---
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
 
 # ATA sık sorulan sorular
 Bu makalede, ATA hakkında sık sorulan soruların listesi ve öngörülerle yanıtlar sağlanır.
@@ -39,23 +40,26 @@ Uçtan uca bir testle aşağıdakileri yaparak kuşkulu etkinliklerin benzetimin
 Bu, izlenmekte olan etki alanı denetleyici için uzaktan çalıştırılmalı ve ATA Gateway’den çalıştırılmamalıdır.
 
 ## Windows Olay İletme’yi nasıl doğrularım?
-Dizindeki komut isteminden şu komutu çalıştırabilirsiniz:  **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**:
+Aşağıdaki kodu bir dosyaya yerleştirerek komut isteminde şu dizinden çalıştırabilirsiniz: **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**:
 
-        mongo ATA --eval "printjson(db.getCollectionNames())" | find /C "NtlmEvents"`
+mongo.exe ATA dosya adı
+
+        db.getCollectionNames().forEach(function(collection) {
+        if (collection.substring(0,10)=="NtlmEvent_") {
+                if (db[collection].count() > 0) {
+                                  print ("Found "+db[collection].count()+" NTLM events") 
+                                }
+                }
+        });
+
 ## ATA şifrelenmiş trafikle çalışır mı?
-Şifrelenmiş trafik çözümlenmez (örneğin: LDAPS, IPSEC ESP).
+ATA birden çok ağ protokolünü analiz etmeye ve SIEM’den toplanan ya da Windows Olay İletme aracılığıyla toplanan olaylara dayalıdır ve bu sayede şifrelenmiş trafik analiz edilmemesine rağmen (örneğin LDAPS ve IPSEC ESP) ATA çalışmaya devam eder ve çoğu algılama işlemi etkilenmez
+
 ## ATA Kerberos Koruması ile çalışır mı?
 Esnek Kimlik Doğrulaması Güvenli Tüneli (FAST) olarak da bilinen Kerberos Koruması’nın etkinleştirilmesi ATA tarafından desteklenir; yalnızca karma değeri atlayarak geçiş algılaması çalışmaz.
 ## Kaç tane ATA Gateway’e ihtiyacım vardır?
 
-İlk olarak, uyum sağlayabilecek tüm etki alanı denetleyicilerinde ATA Lightweight Gateway bileşenlerini kullanmanız önerilir; bunu saptamak için bkz. [ATA Lightweight Gateway Boyutu](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
-
-Tüm etki alanı denetleyicileri ATA Lightweight Gateway bileşenleri kapsamına alınabiliyorsa, ATA Gateway gerekmez.
-
-ATA Lightweight Gateway kapsamına alınamayan etki alanı denetleyicileri söz konusu olduğunda, kaç adet ATA Gateway bileşenine ihtiyacınız olduğuna karar verirken aşağıdakileri dikkate alın:
-
- - Ağ mimarisinin yanı sıra (bağlantı noktası yansıtma yapılandırmak için), etki alanı denetleyicilerinizin ürettiği toplam trafik miktarı. Etki alanı denetleyicilerinizin ürettiği trafik miktarını saptama konusunda daha fazla bilgi edinmek için bkz. [Etki alanı denetleyicisi tahmini trafiği](/advanced-threat-analytics/plan-design/ata-capacity-planning#Domain-controller-traffic-estimation).
- - Bağlantı noktası yansıtma özelliğinin işlem sınırlamaları da, etki alanı denetleyicilerinizi desteklemek için ihtiyacınız olan ATA Gateway sayısını belirler, örneğin: anahtar başına, veri merkezi başına, bölge başına (her ortamın kendine göre dikkat edilmesi gereken noktaları vardır). 
+ATA Gateway sayısı ağ düzeninize, paket hacmine ve ATA tarafından yakalanan olayların hacmine bağlıdır. Sayıyı tam olarak belirlemek için bkz: [ATA Lightweight Gateway Boyutu](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
 
 ## ATA için ne kadar depolamaya ihtiyacım vardır?
 Ortalama 1000 paket/sn ile her tam gün için 0,3 GB depolamaya ihtiyacınız vardır.<br /><br />ATA Center boyutları hakkında daha fazla bilgi için bkz. [ATA Kapasite Planlaması](/advanced-threat-analytics/plan-design/ata-capacity-planning).
@@ -79,11 +83,10 @@ Bir sanal etki alanı denetleyicisi ATA Lightweight Gateway kapsamına alınamı
 Yedeklenecek 2 öğe vardır:
 
 -   ATA tarafından depolanan trafik ve olaylar. Bunlar desteklenen herhangi bir veritabanı yedekleme yordamı kullanılarak yedeklenebilir. Daha fazla bilgi için bkz. [ATA veritabanı yönetimi](/advanced-threat-analytics/deploy-use/ata-database-management) 
--   ATA’nın yapılandırması. Bu veritabanında depolanır ve saatte bir otomatik olarak yedeklenir. 
-
+-   ATA yapılandırması. Veritabanında depolanır ve ATA Center dağıtım konumundaki **Yedekleme** klasöründe saatte bir kere yedeklenir.  Daha fazla bilgi için bkz: [ATA veritabanı yönetimi](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/ata-database-management).
 ## ATA neleri algılayabilir?
 ATA bilinen kötü amaçlı saldırıları ve teknikleri, güvenlik sorunlarını ve riskleri algılar.
-ATA algılamalarının tam listesi için bkz. [Microsoft Advanced Threat Analytics nedir?](what-is-ata.md)
+ATA algılamalarının tam listesi için bkz: [ATA hangi algılamaları gerçekleştirir?](ata-threats.md)
 
 ## ATA için ne tür bir depolamaya ihtiyacım vardır?
 Düşük gecikme süreli disk erişimi (10 ms’den kısa) olan hızlı depolama alanı önerilir (7200 RPM diskler önerilmez). RAID yapılandırması ağır yazma yüklerini desteklemelidir (RAID-5/6 ve bunların türevleri önerilmez).
@@ -97,7 +100,7 @@ ATA’nın SIEM’lerle şöyle çift yönlü bir tümleştirmesi vardır:
 1. ATA, kuşkulu bir etkinlik olduğunda CEF biçimini kullanan herhangi bir SIEM sunucusuna Syslog uyarısı gönderecek şekilde yapılandırılabilir.
 2. ATA, kimliği 4776 olan her Windows olayında [bu SIEM’lerden](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support) Syslog iletileri alacak şekilde yapılandırılabilir.
 
-## ATA, IaaS çözümünüzde görselleştirilen etki alanı denetleyicilerini izleyebilir mi?
+## ATA, IaaS çözümünüzde sanallaştırılan etki alanı denetleyicilerini izleyebilir mi?
 
 Evet, ATA Lightweight Gateway’i herhangi bir IaaS çözümündeki etki alanı denetleyicilerini izlemek için kullanabilirsiniz.
 
@@ -126,8 +129,7 @@ Hayır. ATA, ağda yer alan ve Windows dışı ve mobil cihazlar da içinde olma
 Evet. Bilgisayar hesapları (aynı diğer tüm varlıklar gibi) kötü amaçlı etkinlikler gerçekleştirmek için kullanılabildiğinden, ATA tüm bilgisayar hesaplarının davranışlarını ve ortamdaki diğer tüm varlıkları izler.
 
 ## ATA birden çok etki alanını ve birden çok ormanı destekliyor mu?
-Genel kullanıma sunulduğunda Microsoft Advanced Threat Analytics aynı orman sınırı içinde birden çok etki alanını destekleyecektir. Ormanın kendisi gerçek “güvenlik sınırını” oluşturduğundan, birden çok etki alanı desteği ATA’yla müşterilerimizin ortamlarını %100 kapsama alanına alabilmelerini sağlar.
-
+Microsoft Advanced Threat Analytics aynı orman sınırı içindeki çok etki alanlı ortamları destekler. Birden çok orman kullanımında, her orman için ayrı ATA dağıtımı gerekir.
 ## Dağıtımın bir bütün olarak durumunu görebilir misiniz?
 Evet, hem dağıtımın gelen durumunu hem de yapılandırma, bağlantı, vb. ile ilgili belirli sorunları görebilir ve bunlar ortaya çıktığında uyarılırsınız.
 
@@ -142,6 +144,6 @@ Evet, hem dağıtımın gelen durumunu hem de yapılandırma, bağlantı, vb. il
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

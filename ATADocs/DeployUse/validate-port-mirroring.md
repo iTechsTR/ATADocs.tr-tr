@@ -4,7 +4,7 @@ description: "Bağlantı noktası yansıtmanın düzgün yapılandırıldığın
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,22 +13,26 @@ ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: d95fd582362fc650dffeb6c4fbf892ba3e367f12
+ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
+ms.openlocfilehash: 59d50b0d9c5adc78aca260412872076c84db8d57
 
 
 ---
 
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+
+
+
 # Bağlantı Noktası Yansıtmayı Doğrulama
 > [!NOTE] 
-> Bu makale yalnızca ATA Lightweight Gateway bileşenleri yerine ATA Gateway bileşenleri dağıttığınızda geçerlidir. ATA Gateway bileşenleri kullanmanız gerekip gerekmediğini belirlemek için bkz. [Dağıtımınız için doğru ağ geçitlerini seçme](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment).
+> Bu makale yalnızca ATA Lightweight Gateway bileşenleri yerine ATA Gateway bileşenleri dağıttığınızda geçerlidir. ATA Gateway’ler kullanmanız gerekip gerekmediğini belirlemek için bkz. [Dağıtımınız için doğru ağ geçitlerini seçme](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment).
  
 Aşağıdaki adımlar, bağlantı noktası yansıtmanın düzgün yapılandırıldığını doğrulama işleminde size yol gösterir. ATA’nın düzgün çalışması için, ATA Gateway’in etki alanı denetleyicisinden gelen ve giden trafiği görebilmesi gerekir. ATA tarafından kullanılan ana veri kaynağı, etki alanı denetleyicilerinizden gelen ve giden ağ trafiğinin derin paket incelemesidir. ATA’nın ağ trafiğini görebilmesi için, bağlantı noktası yansıtma yapılandırılmalıdır. Bağlantı noktası yansıtma, bir bağlantı noktasındaki trafiği (kaynak bağlantı noktası) başka bir bağlantı noktasına (hedef bağlantı noktası) kopyalar.
 
 ## Windows PowerShell betiği kullanarak bağlantı noktası yansıtmayı doğrulama
 
-1. Bu betiğin metnini ATAdiag.ps1 adlı bir dosyaya kaydedin.
-2. ATA Gateway’den bu betiği çalıştırın.
+1. Bu betiğin metnini *ATAdiag.ps1* adlı bir dosyaya kaydedin.
+2. Doğrulamak istediğiniz ATA Gateway’de bu komut dosyasını çalıştırın.
 Betik ATA Gateway’den etki alanı denetleyicisine ICMP trafiği oluşturur ve etki alanı denetleyicisindeki Yakalama NIC’te bu trafiği arar.
 ATA Gateway, ATA Konsolu’na girdiğiniz etki alanı IP adresiyle aynı hedef IP adresine sahip ICMP trafiği görürse, bağlantı noktası yansıtmanın yapılandırıldığını kabul eder. 
 
@@ -188,7 +192,7 @@ Betiğin çalıştırılmasına örnek:
     
     
 ## Net Mon kullanarak bağlantı noktası yansıtmayı doğrulama
-1.  [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865)’ü yükleyin.
+1.  Doğrulamak istediğiniz ATA Gateway’de [Microsoft Ağ İzleyicisi 3.4](http://www.microsoft.com/download/details.aspx?id=4865)’ü yükleyin.
 
     > [!IMPORTANT]
     > ATA Gateway’e Microsoft Message Analyzer’ı veya başka herhangi bir trafik yakalama yazılımını yüklemeyin.
@@ -217,13 +221,13 @@ Betiğin çalıştırılmasına örnek:
 
 5.  Yalnızca bir yöndeki trafiği görüyorsanız, bağlantı noktası yansıtma yapılandırmanızdaki sorunları gidermeye yardımcı olmaları için ağ veya sanallaştırma ekiplerinizle birlikte çalışın.
 
-## Ayrıca Bkz.
+## Ayrıca bkz.
 
 - [Bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

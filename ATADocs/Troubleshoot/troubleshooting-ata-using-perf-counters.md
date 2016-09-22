@@ -4,7 +4,7 @@ description: "ATA’yla ilgili sorunları gidermek için performans sayaçların
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 4b4ff22df77b904a654b57aca824c154ea935560
+ms.sourcegitcommit: 21f28848dd22cfbcbb4b4871300621203b445fb4
+ms.openlocfilehash: a6113c106653039ca3b4337d9250d9b9baca4611
 
 
 ---
+
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+
+
 
 # Performans sayaçlarını kullanarak ATA sorunlarını giderme
 ATA performans sayaçları, ATA’nın her bileşeninin ne kadar iyi çalıştığı konusunda fikir sağlar. ATA’daki bileşenler verileri sıralı olarak işlediğinden, bir sorun çıktığında, bileşen zincirinin herhangi bir yerinde trafiğin kısmi olarak bırakılmasına neden olabilir. Sorunu çözmek için, hangi bileşende istenmeyen sonuç alındığını saptamanız ve sorunu zincirin başında çözmeniz gerekir. Her bileşenin nasıl çalıştığını anlamak için, performans sayaçlarında bulunan verileri kullanın.
@@ -29,7 +33,7 @@ ATA performans sayaçları, ATA’nın her bileşeninin ne kadar iyi çalıştı
 
 2.  Sonunda önceki bileşen **kendi** boyutunu artırmaya başlar ve bu durum kendisinden önceki bileşenin daha fazla varlık göndermesini engelleyene kadar devam eder.
 
-3.  Bu durum geriye doğru ilk AğDinleyicisi bileşenine kadar devam eder ve o bileşen de artık varlıkları iletemediğinde trafiği bırakır.
+3.  Bu durum geriye doğru NetworkListener bileşenine kadar devam eder ve o bileşen de artık varlıkları iletemediğinde trafiği bırakır.
 
 
 ## ATA Gateway performans sayaçları
@@ -39,39 +43,60 @@ Bu bölümde, ATA Gateway’e yapılan her gönderme aynı zamanda ATA Lightweig
 ATA Gateway’in performans sayaçlarını ekleyerek, ATA Gateway ile ilgili gerçek zamanlı performans durumunu gözlemleyebilirsiniz.
 Bu işlem, "Performans İzleyicisi" açılarak ve ATA Gateway için tüm sayaçlar eklenerek yapılır. Performans sayacı nesnesinin adı: "Microsoft ATA Gateway".
 
-![ATA performans sayaçlarının resmi](media/ATA-performance-counters.png)
-
 Dikkat edilmesi gereken ana ATA Gateway sayaçlarının listesi:
 
 |Sayaç|Açıklama|Eşik|Sorun giderme|
 |-----------|---------------|-------------|-------------------|
-|AğDinleyicisi PEF Ayrıştırıcı İleti Sayısı/Sn|ATA Gateway tarafından her saniyede işlenen trafik miktarı.|Eşik yok|ATA Gateway tarafından ayrıştırılmakta olan trafiğin miktarını anlamanıza yardımcı olur.|
+|Microsoft ATA Gateway\NetworkListener PEF Ayrıştırıcı İleti Sayısı/Sn|ATA Gateway tarafından her saniyede işlenen trafik miktarı.|Eşik yok|ATA Gateway tarafından ayrıştırılmakta olan trafiğin miktarını anlamanıza yardımcı olur.|
 |AğDinleyicisi Bırakılan PEF Olay Sayısı/Sn|ATA Gateway tarafından her saniyede bırakılan trafik miktarı.|Bu sayı her zaman sıfır olmalıdır (seyrek olarak bırakma artışı yaşanması kabul edilebilir).|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
-|AğDinleyicisi Bırakılan ETW Olay Sayısı/Sn|ATA Gateway tarafından her saniyede bırakılan trafik miktarı.|Bu sayı her zaman sıfır olmalıdır (seyrek olarak bırakma artışı yaşanması kabul edilebilir).|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
-|AğEtkinliğiÇeviricisi İleti Veri # Blok Boyutu|Ağ Etkinliklerine (NA) çeviri için kuyruğa alınan trafik miktarı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 100.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
-|VarlıkÇözümleyicisi Etkinlik Blok Boyutu|Çözüm için kuyruğa alınan Ağ Etkinliklerinin (NA) miktarı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 10.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
-|VarlıkGöndericisi Varlık Yığın Blok Boyutu|ATA Center’a gönderilmek üzere kuyruğa alınan Ağ Etkinliklerinin (NA) miktarı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 1.000.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
-|VarlıkGöndericisi Yığın Gönderme Zamanı|Son yığını gönderme işleminin süresi.|Çoğu durumda 1000 milisaniyeden kısa olmalıdır.|ATA Gateway ile ATA Center arasında herhangi bir ağ sorunu olup olmadığını denetleyin.|
+|ATA GW Sayacı/NetworkListener Bırakılan ETW Olay Sayısı/Sn|ATA Gateway tarafından her saniyede bırakılan trafik miktarı.|Bu sayı her zaman sıfır olmalıdır (seyrek olarak bırakma artışı yaşanması kabul edilebilir).|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
+|ATA GW Sayacı/AğEtkinliğiÇeviricisi İleti Veri # Blok Boyutu|Ağ Etkinliklerine (NA) çeviri için kuyruğa alınan trafik miktarı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 100.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
+|ATA GW Sayacı/VarlıkÇözümleyicisi Etkinlik Blok Boyutu|Çözüm için kuyruğa alınan Ağ Etkinliklerinin (NA) miktarı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 10.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
+|ATA GW Sayacı/VarlıkGöndericisi Varlık Yığın Blok Boyutu|ATA Center’a gönderilmek üzere kuyruğa alınan Ağ Etkinliklerinin (NA) miktarı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 1.000.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
+|ATA GW Sayacı/VarlıkGöndericisi Yığın Gönderme Zamanı|Son yığını gönderme işleminin süresi.|Çoğu durumda 1000 milisaniyeden kısa olmalıdır.|ATA Gateway ile ATA Center arasında herhangi bir ağ sorunu olup olmadığını denetleyin.|
 
 > [!NOTE]
 > -   Süre gösteren sayaçlar milisaniye cinsindendir.
 > -   Bazen "Rapor" grafik türü kullanılarak sayaçların tam listesi daha rahat izlenebilir (örnek: tüm sayaçları gerçek zamanlı izleme)
+
+## ATA Lightweight Gateway performans sayaçları
+Performans sayaçları, ATA’nın yüklü olduğu etki alanı denetleyicilerinde çok fazla kaynak çekmediğinden emin olmak için Lightweight Gateway’de kota yönetimi için kullanılabilir.
+ATA’nın Lightweight Gateway’de uyguladığı kaynak sınırlamalarını ölçmek için aşağıdaki sayaçları ekleyin:
+
+"Performans İzleyicisi"ni açın ve ATA Lightweight Gateway için tüm sayaçları ekleyin. Performans sayacı nesne adları: “Microsoft ATA Gateway” ve “Microsoft ATA Gateway Updater”dır.
+
+
+|Sayaç|Açıklama|Eşik|Sorun giderme|
+|-----------|---------------|-------------|-------------------|
+|Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager En Yüksek CPU Süresi %|Lightweight Gateway işleminin kullanabileceği en yüksek CPU süresi (yüzde cinsinden) miktarı. |Eşik yok. | Bu, etki alanı denetleyicisi kaynaklarının ATA Lightweight Gateway tarafından kullanılarak bitirilmesini engelleyen sınırlamadır. İşlemin belirli bir süre boyunca sık sık üst sınıra ulaştığını görüyorsanız (işlem sınıra ulaşır ve trafiği bırakmaya başlar) bu, etki alanı denetleyicisini çalıştıran sunucuya daha fazla kaynak eklemeniz gerektiği anlamına gelir.|
+|Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager İşlenen En Yüksek Bellek Boyutu|Lightweight Gateway işleminin kullanabileceği en yüksek işlenen bellek miktarı (bayt cinsinden).|Eşik yok. | Bu, etki alanı denetleyicisi kaynaklarının ATA Lightweight Gateway tarafından kullanılarak bitirilmesini engelleyen sınırlamadır. İşlemin belirli bir süre boyunca sık sık üst sınıra ulaştığını görüyorsanız (işlem sınıra ulaşır ve trafiği bırakmaya başlar) bu, etki alanı denetleyicisini çalıştıran sunucuya daha fazla kaynak eklemeniz gerektiği anlamına gelir.| 
+|Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager Çalışma Kümesi Sınırı Boyutu|Lightweight Gateway işleminin kullanabileceği en yüksek fiziksel bellek miktarı (bayt cinsinden).|Eşik yok. | Bu, etki alanı denetleyicisi kaynaklarının ATA Lightweight Gateway tarafından kullanılarak bitirilmesini engelleyen sınırlamadır. İşlemin belirli bir süre boyunca sık sık üst sınıra ulaştığını görüyorsanız (işlem sınıra ulaşır ve trafiği bırakmaya başlar) bu, etki alanı denetleyicisini çalıştıran sunucuya daha fazla kaynak eklemeniz gerektiği anlamına gelir.|
+
+
+
+Gerçek kullanımınızı görmek için aşağıdaki sayaçlara bakın:
+
+
+
+|Sayaç|Açıklama|Eşik|Sorun giderme|
+|-----------|---------------|-------------|-------------------|
+|İşlem(Microsoft.Tri.Gateway)\%İşlemci Zamanı|Lightweight Gateway işleminin gerçekte kullandığı CPU süresi (yüzde cinsinden) miktarı. |Eşik yok. | Bu sayacın sonuçlarını GatewayUpdaterResourceManager En Yüksek CPU Süresi % kısmında bulunan sınırla karşılaştırın. İşlemin belirli bir süre boyunca sık sık üst sınıra ulaştığını görüyorsanız (işlem sınıra ulaşır ve trafiği bırakmaya başlar) bu, Lightweight Gateway’e daha fazla kaynak ayırmanız gerektiği anlamına gelir.|
+|İşlem(Microsoft.Tri.Gateway)\Özel Baytlar|Lightweight Gateway işleminin gerçekte kullandığı işlenen bellek miktarı (bayt cinsinden).|Eşik yok. | Bu sayacın sonuçlarını GatewayUpdaterResourceManager İşlenen En Yüksek Bellek Boyutu kısmında bulunan sınırla karşılaştırın. İşlemin belirli bir süre boyunca sık sık üst sınıra ulaştığını görüyorsanız (işlem sınıra ulaşır ve trafiği bırakmaya başlar) bu, Lightweight Gateway’e daha fazla kaynak ayırmanız gerektiği anlamına gelir.| 
+|İşlem(Microsoft.Tri.Gateway)\Çalışma Kümesi|Lightweight Gateway işleminin gerçekte kullandığı fiziksel bellek miktarı (bayt cinsinden).|Eşik yok. |Bu sayacın sonuçlarını GatewayUpdaterResourceManager Kaydedilen Maksimum Bellek Boyutu kısmında bulunan sınırla karşılaştırın. İşlemin belirli bir süre boyunca sık sık üst sınıra ulaştığını görüyorsanız (işlem sınıra ulaşır ve trafiği bırakmaya başlar) bu, Lightweight Gateway’e daha fazla kaynak ayırmanız gerektiği anlamına gelir.|
 
 ## ATA Center performans sayaçları
 ATA Center’ın performans sayaçlarını ekleyerek, ATA Center ile ilgili gerçek zamanlı performans durumunu gözlemleyebilirsiniz.
 
 Bu işlem, "Performans İzleyicisi" açılarak ve ATA Center için tüm sayaçlar eklenerek yapılır. Performans sayacı nesnesinin adı: "Microsoft ATA Center".
 
-![ATA Center performans sayaçlarını ekleme](media/ATA-Gateway-perf-counters.png)
-
 Dikkat edilmesi gereken ana ATA Center sayaçlarının listesi:
 
 |Sayaç|Açıklama|Eşik|Sorun giderme|
 |-----------|---------------|-------------|-------------------|
-|VarlıkAlıcısı Varlık Yığın Blok Boyutu|ATA Center tarafından kuyruğa alınan varlık yığınlarının sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 10.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin.  Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
-|AğEtkinliğiİşlemcisi Ağ Etkinliği Blok Boyutu|İşleme için kuyruğa alınan Ağ Etkinliklerinin (NA) sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 50.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
-|VarlıkProfiliOluşturucu Ağ Etkinliği Blok Boyutu|Profil oluşturma için kuyruğa alınan Ağ Etkinliklerinin (NA) sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 10.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
-|CenterVeritabanı &#42; Blok Boyutu|Veritabanına yazılmak üzere kuyruğa alınan belirli bir türdeki Ağ Etkinliklerinin sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 50.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
+|Microsoft ATA Center\EntityReceiver Varlık Yığın Blok Boyutu|ATA Center tarafından kuyruğa alınan varlık yığınlarının sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 10.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin.  Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
+|Microsoft ATA Center\NetworkActivityProcessor Ağ Etkinliği Blok Boyutu|İşleme için kuyruğa alınan Ağ Etkinliklerinin (NA) sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 50.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
+|Microsoft ATA Center\EntityProfiler Ağ Etkinliği Blok Boyutu|Profil oluşturma için kuyruğa alınan Ağ Etkinliklerinin (NA) sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 10.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
+|Microsoft ATA Center\CenterDatabase &#42; Blok Boyutu|Veritabanına yazılmak üzere kuyruğa alınan belirli bir türdeki Ağ Etkinliklerinin sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 50.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
 
 
 > [!NOTE]
@@ -103,6 +128,6 @@ Aşağıda, dikkat edilmesi gereken ana işletim sistemi sayaçları listelenmi�
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

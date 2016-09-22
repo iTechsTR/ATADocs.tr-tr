@@ -4,7 +4,7 @@ description: "ATA’yı yükleme işleminin son adımında, kısa süreli kiral�
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,36 +13,47 @@ ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: c9712b0ad8d67b1e618cb75b14785f8079020864
+ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
+ms.openlocfilehash: 57fe1272e95f69ef9d614505bbef0bb6c1d8ccb6
 
 
 ---
+
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+
+
 
 # ATA’yı Yükleme - 6. Adım
 
 >[!div class="step-by-step"]
 [« 5. Adım](install-ata-step5.md)
 
-## 6. Adım. Kısa süreli kiralık alt ağları ve Honeytoken kullanıcısını yapılandırma
-Kısa süreli kiralık alt ağlar, IP adresi atamasının çok hızlı, saniyeler veya dakikalar içinde değiştiği alt ağlardır. Örneğin, VPN’leriniz için kullanılan IP adresleri ve Wi-Fi IP adresleri böyledir. Kuruluşunuzda kullanılan kısa süreli kiralık alt ağların listesi girmek için, şu adımları izleyin:
+## 6. Adım. IP adresi dışlamalarını ve Honeytoken kullanıcısını yapılandırma
+ATA, belirli IP adreslerinin ve IP alt ağlarının iki tür algılamadan dışlanmasını sağlar: **DNS Keşfi** ve **Anahtar Geçişi**. 
 
-1.  ATA Gateway makinesindeki ATA Konsolu’nda ayarlar simgesine tıklayın ve **Yapılandırma**’yı seçin.
+Örneğin, bir **DNS Keşfi dışlaması** DNS’i tarama mekanizması olarak kullanan bir güvenlik tarayıcısı olabilir. Bu dışlama işlemi ATA’nın böyle tarayıcıları yoksaymasına yardımcı olur. *Anahtar Geçişi* dışlama işlemine örnek olarak bir NAT aygıtı gösterilebilir.    
+
+ATA ayrıca, kötü amaçlı aktörler için tuzak olarak kullanılan bir Honeytoken kullanıcısının yapılandırılmasına olanak tanır. Bu hesapla (normalde etkinliği yoktur) ilişkilendirilen herhangi bir kimlik doğrulaması bir uyarının tetiklenmesine neden olur.
+
+Yukarıdakileri yapılandırmak için şu adımları izleyin:
+
+1.  ATA Konsolu’ndan, ayarlar simgesine tıklayın ve **Yapılandırma**’yı seçin.
 
     ![ATA yapılandırma ayarları](media/ATA-config-icon.JPG)
 
-2.  **Algılama**’nın altında kısa vadeli kiralık alt ağlar için şunları girin. Eğik çizgili gösterim biçimini kullanarak kısa süreli kiralık alt ağları girin (örneğin, `192.168.0.0/24`) ve artı işaretine tıklayın.
+2.  **Algılama dışlamaları** altında, *DNS keşfi* veya *Anahtar Geçişi* IP adresleri için aşağıdakileri girin. CIDR biçimini (örneğin: `192.168.1.0/24`) kullanın ve *artı* işaretine tıklayın.
 
-3.  Honeytoken hesabı SID’leri için, ağ etkinliği olmayacak kullanıcı hesabının SID değerini girin ve artı işaretine tıklayın. Örneğin: `S-1-5-21-72081277-1610778489-2625714895-10511`.
+    ![Değişiklikleri kaydedin.](media/ATA-exclusions.png)
+
+3.  **Algılama ayarları** altında Honeytoken hesap SID’lerini girin ve artı işaretine tıklayın. Örneğin: `S-1-5-21-72081277-1610778489-2625714895-10511`.
+
+    ![ATA yapılandırma ayarları](media/ATA-honeytoken.png)
 
     > [!NOTE]
     > Bir kullanıcının SID’ini bulmak için, ATA Konsolu’nda kullanıcıyı arayın ve **Hesap Bilgileri** sekmesine tıklayın. 
 
-4.  Özel durumları yapılandırın: Belirli kuşkulu etkinliklerden dışlanmak üzere IP adresleri yapılandırabilirsiniz. Daha fazla bilgi için bkz. [ATA algılama ayarlarıyla çalışma](working-with-detection-settings.md).
+4.  **Kaydet**'e tıklayın.
 
-5.  **Kaydet**'e tıklayın.
-
-![Değişiklikleri kaydedin.](media/ATA-VPN-Subnets.JPG)
 
 Tebrikler, Microsoft Advanced Threat Analytics dağıtımını başarıyla tamamladınız!
 
@@ -64,6 +75,6 @@ ATA hemen şüpheli etkinlikler için tarama yapmaya başlar. ATA, davranış pr
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

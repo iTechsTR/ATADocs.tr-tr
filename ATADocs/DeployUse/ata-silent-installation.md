@@ -13,17 +13,21 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: dce4cbaf894d383851a7039b6457a98c1d5ba5d4
+ms.sourcegitcommit: d0681cfa4ae763da9c88c8dec9b77a75494a5c9f
+ms.openlocfilehash: 7b9ba09d3757979c0b845f796a846e7e83b505af
 
 
 ---
+
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+
+
 
 # ATA’yı Sessiz Yükleme
 Bu makalede ATA’yı sessizce yüklemeye dair yönergeler mevcuttur.
 ## Önkoşullar
 
-Microsoft ATA v1.6 için Microsoft .NET Framework 4.6.1 yüklemesi gerekir. 
+Microsoft ATA v1.7 için Microsoft .NET Framework 4.6.1’in yüklü olması gerekir. 
 
 ATA’yı yüklediğiniz veya güncelleştirdiğiniz zaman, .Net Framework 4.6.1, Microsoft ATA dağıtımının parçası olarak otomatik yüklenir.
 
@@ -107,7 +111,7 @@ ATA Center’ı sessizce kaldırma işlemini gerçekleştirmek için şu komutu 
 
 **Yükleme seçenekleri**:
 
-|Ad|Sözdizimi|Sessiz kaldırma için zorunlu mu?|Açıklama|
+|Ad|Söz dizimi|Sessiz kaldırma için zorunlu mu?|Açıklama|
 |-------------|----------|---------|---------|
 |Quiet|istemci bilgisayarlara|Evet|Kullanıcı arabirimi ve istem göstermeden kaldırıcıyı çalıştırır.|
 |Kaldır|/uninstall|Evet|Sunucudan ATA Center’ı sessizce kaldırma işlemini çalıştırır.|
@@ -116,7 +120,7 @@ ATA Center’ı sessizce kaldırma işlemini gerçekleştirmek için şu komutu 
 
 **Yükleme parametreleri**:
 
-|Ad|Sözdizimi|Sessiz kaldırma için zorunlu mu?|Açıklama|
+|Ad|Söz dizimi|Sessiz kaldırma için zorunlu mu?|Açıklama|
 |-------------|----------|---------|---------|
 |DeleteExistingDatabaseData|DeleteExistingDatabaseData|Hayır|Var olan veritabanındaki tüm dosyaları siler.|
 
@@ -189,7 +193,7 @@ ATA Gateway’i sessizce kaldırma işlemini gerçekleştirmek için şu komutu 
     
 **Yükleme seçenekleri**:
 
-|Ad|Sözdizimi|Sessiz kaldırma için zorunlu mu?|Açıklama|
+|Ad|Söz dizimi|Sessiz kaldırma için zorunlu mu?|Açıklama|
 |-------------|----------|---------|---------|
 |Quiet|istemci bilgisayarlara|Evet|Kullanıcı arabirimi ve istem göstermeden kaldırıcıyı çalıştırır.|
 |Kaldır|/uninstall|Evet|Sunucudan ATA Gateway’i sessizce kaldırma işlemini çalıştırır.|
@@ -217,6 +221,6 @@ ATA Gateway’i sessizce kaldırma işlemini gerçekleştirmek için şu komutu 
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

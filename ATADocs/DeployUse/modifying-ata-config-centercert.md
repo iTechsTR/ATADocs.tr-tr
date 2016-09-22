@@ -4,7 +4,7 @@ description: "ATA Center sunucusundaki yerel bilgisayar deposunda yer alan serti
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,20 +13,24 @@ ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 5ae9f13c417459e73d85cce3ebbb0293c3e08f83
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: e707d354396f8eeed58c13ee1e9e91df9888e030
 
 
 ---
+
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+
+
 
 # Ata yapılandırmasını değiştirme - ATA Center sertifikası
 
 >[!div class="step-by-step"]
 [« ATA Center sunucusu IP adresi](modifying-ata-config-centerip.md)
-[ATA Konsolu IP adresi »](modifying-ata-config-consoleip.md)
+[ATA Konsolu URL’si »](modifying-ata-config-consoleurl.md)
 
 ## ATA Center sertifikasını değiştirme
-Sertifikalarınızın süresi sona eriyorsa ve ATA Center sunucusundaki yerel bilgisayar deposuna yeni sertifika yükledikten sonra yenilenmesi veya değiştirilmesi gerekiyorsa, şu iki aşamalı işlemi yaparak sertifikayı değiştirin:
+Sertifikalarınızın süresi sona ermek üzereyse ve ATA Center sunucusundaki yerel bilgisayar deposuna yeni sertifika yüklendikten sonra yenilenmesi veya değiştirilmesi gerekiyorsa, şu iki aşamalı işlemi yaparak sertifikayı değiştirin:
 
 -   Birinci aşama – ATA Center hizmetinin kullanmasını istediğiniz sertifikayı güncelleştirin. Bu noktada, ATA Center hizmeti hala özgün sertifikaya bağlıdır. ATA Gateway bileşenleri yapılandırmalarını eşitlediğinde, karşılıklı kimlik doğrulaması için geçerli olan iki olası sertifikaları olur. ATA Gateway özgün sertifikayı kullanarak bağlanabildiği sürece, yeni sertifikayı denemez.
 
@@ -35,6 +39,7 @@ Sertifikalarınızın süresi sona eriyorsa ve ATA Center sunucusundaki yerel bi
 > [!NOTE]
 > -   İlk aşamada ATA Gateway çevrimdışıysa ve güncelleştirilmiş yapılandırmayı hiç almadıysa, ATA Gateway’de yapılandırma JSON dosyasını el ile güncelleştirmeniz gerekir.
 > -   Kullandığınız sertifikaya ATA Gateway bileşenleri tarafından güveniliyor olmalıdır.
+> -   Sertifika ATA Konsolu için de kullanıldığından, tarayıcı uyarılarını önlemek için ATA Konsolu adresiyle de eşleşmesi gerekir
 > -   Yeni sertifikayı etkinleştirdikten sonra yeni bir ATA Gateway dağıtımı yapmanız gerekirse, ATA Gateway Kurulum paketini yeniden indirmelisiniz.
 
 1.  ATA Konsolu’nu açın.
@@ -43,7 +48,7 @@ Sertifikalarınızın süresi sona eriyorsa ve ATA Center sunucusundaki yerel bi
 
     ![ATA yapılandırma ayarları simgesi](media/ATA-config-icon.JPG)
 
-3.  **ATA Center**’ı seçin.
+3.  **Center**’ı seçin.
 
 4.  **Sertifika**’nın altında, listedeki sertifikalardan birini seçin.
 
@@ -61,15 +66,15 @@ Sertifikalarınızın süresi sona eriyorsa ve ATA Center sunucusundaki yerel bi
 
 >[!div class="step-by-step"]
 [« ATA Center sunucusu IP adresi](modifying-ata-config-centerip.md)
-[ATA Konsolu IP adresi »](modifying-ata-config-consoleip.md)
+[ATA Konsolu URL’si »](modifying-ata-config-consoleurl.md)
 
-## Ayrıca Bkz.
+## Ayrıca bkz.
 - [ATA Konsolu’yla çalışma](working-with-ata-console.md)
 - [ATA’yı yükleme](install-ata.md)
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [ATA forumuna bakın!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

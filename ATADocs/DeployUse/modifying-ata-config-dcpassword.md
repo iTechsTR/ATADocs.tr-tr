@@ -4,7 +4,7 @@ description: "ATA Gateway’de Etki Alanı Bağlantı Parolası’nın nasıl de
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,16 +13,20 @@ ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 7b8904bcb379004b2038e6b9a14c87c3914f1e1f
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: 7cee457a8959526b25a68c50efea2976bafbef75
 
 
 ---
 
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+
+
+
 # ATA yapılandırmasını değiştirme - etki alanı bağlantısı parolası
 
 >[!div class="step-by-step"]
-[« IIS sertifikası](modifying-ata-config-iiscert.md)
+[« ATA Konsolu URL’si](modifying-ata-config-consoleurl.md)
 
 
 ## Etki alanı bağlantı parolasını değiştirme
@@ -31,26 +35,28 @@ Etki Alanı Bağlantısı Parolası’nı değiştirirseniz, girdiğiniz parolan
 Böyle bir durum oluştuğundan kuşkulanırsanız, Microsoft.Tri.Gateway-Errors.log dosyasında şunu arayın:
 `The supplied credential is invalid.`
 
-Bunu düzeltmek için, bu yordamı izleyerek ATA Gateway’de Etki Alanı Bağlantı Parolası’nı güncelleştirin:
+Bunu düzeltmek için, bu yordamı izleyerek ATA Center’da Etki Alanı Bağlantısı parolasını güncelleştirin:
 
-1.  ATA Gateway’de ATA Konsolu’nu açın.
+1.  ATA Center’da ATA Konsolu’nu açın.
 
 2.  Araç çubuğunda ayarlar seçeneğini belirtin ve **Yapılandırma**’yı seçin.
 
     ![ATA yapılandırma ayarları simgesi](media/ATA-config-icon.JPG)
 
-3.  **Genel**’i seçin.
+3.  **Dizin Hizmetleri**’ni seçin.
 
-    ![ATA Gateway parola değiştirme resmi](media/ATA-GW-change-DC-password.JPG)
+    ![ATA Gateway parola değiştirme resmi](media/ATA-GW-change-DC-password.png)
 
-4.  **Genel** altında, parolayı değiştirin.
+4.  **Parola** altında, parolayı değiştirin.
+
+    ATA Center’ın etki alanına bağlantısı varsa, kimlik bilgilerini doğrulamak için **Bağlantıyı Sına** düğmesine tıklayın
 
 5.  **Kaydet**'e tıklayın.
 
 6.  Parolayı değiştirdikten sonra, ATA Gateway sunucularında ATA Gateway hizmetinin çalıştığını el ile denetleyin.
 
 >[!div class="step-by-step"]
-[« IIS sertifikası](modifying-ata-config-iiscert.md)
+[« ATA Konsolu URL’si](modifying-ata-config-consoleurl.md)
 
 ## Ayrıca Bkz.
 - [ATA Konsolu’yla çalışma](working-with-ata-console.md)
@@ -59,6 +65,6 @@ Bunu düzeltmek için, bu yordamı izleyerek ATA Gateway’de Etki Alanı Bağla
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

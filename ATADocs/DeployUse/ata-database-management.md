@@ -13,11 +13,15 @@ ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 83222c6d29434d93fa1b5ecd613de30408ccfe59
+ms.sourcegitcommit: 5cd030f3b952d08c6617a6cda121c344a9c36f51
+ms.openlocfilehash: b4e68e9e8dbd94075a34a8e3e8f42d4f534caf50
 
 
 ---
+
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+
+
 
 # ATA Veritabanı Yönetimi
 ATA veritabanını taşımanız, yedeklemeniz veya geri yüklemeniz gerekiyorsa, MongoDB ile çalışmak için bu yordamları kullanın.
@@ -46,17 +50,18 @@ ATA veritabanını taşımanız, yedeklemeniz veya geri yüklemeniz gerekiyorsa,
 
 6.  **MongoDB** hizmetini başlatın.
 
-7.  Komut istemini açın ve `mongo.exe ATA` komutuyla Mongo kabuğunu çalıştırın.
+7. **Microsoft Advanced Threat Analytics Center** hizmetini başlatın.
 
-    Varsayılan olarak, mongo.exe dosyası C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin yolunda bulunur.
+## ATA Yapılandırma dosyası
+ATA’nın yapılandırması veritabanındaki "SystemProfile" koleksiyonunda depolanır.
+Bu toplama, ATA Center hizmeti tarafından saatte bir "SystemProfile_*zamandamgası*json" adlı dosyalara yedeklenir. En son 10 sürüm depolanır.
+Bu dosya "Backup" adlı alt klasörde yer alır. ATA’nın yüklendiği varsayılan konumda, şurada bulunabilir: *C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*zamandamgası*.json*. 
 
-8.  Şu komutu çalıştırın: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}})`
+**Not**: ATA’da önemli değişiklikler yaparken bu dosyayı herhangi bir yere yedeklemenizi öneririz.
 
-   <New DB Location> (burada `&lt;New DB Location&gt;`, yeni klasör yoludur) yerine onu kullanın.
+Aşağıdaki komutu çalıştırarak ayarların tümünü geri yüklemek mümkündür:
 
-9.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath değerini yeni klasör yoluna güncelleştirin.
-
-9. **Microsoft Advanced Threat Analytics Center** hizmetini başlatın.
+`mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
 
 ## Ayrıca Bkz.
 - [ATA mimarisi](/advanced-threat-analytics/plan-design/ata-architecture)
@@ -66,6 +71,6 @@ ATA veritabanını taşımanız, yedeklemeniz veya geri yüklemeniz gerekiyorsa,
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

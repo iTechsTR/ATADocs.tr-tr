@@ -4,7 +4,7 @@ description: "Bağlantı noktası yansıtma seçenekleri ve bunların ATA için 
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,15 +13,19 @@ ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 92d14179f9177aba824dd5c42c2ef5797af108cb
+ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
+ms.openlocfilehash: d7f15f08a64a9d884a560f4f3429568cf33bdd34
 
 
 ---
 
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+
+
+
 # Bağlantı Noktası Yansıtmayı Yapılandırma
 > [!NOTE] 
-> Bu makale yalnızca ATA Lightweight Gateway bileşenleri yerine ATA Gateway bileşenleri dağıttığınızda geçerlidir. ATA Gateway bileşenleri kullanmanız gerekip gerekmediğini belirlemek için bkz. [Dağıtımınız için doğru ağ geçitlerini seçme](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment).
+> Bu makale yalnızca ATA Lightweight Gateway bileşenleri yerine ATA Gateway bileşenleri dağıttığınızda geçerlidir. ATA Gateway’ler kullanmanız gerekip gerekmediğini belirlemek için bkz. [Dağıtımınız için doğru ağ geçitlerini seçme](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment).
  
 ATA tarafından kullanılan ana veri kaynağı, etki alanı denetleyicilerinizden gelen ve giden ağ trafiğinin derin paket incelemesidir. ATA’nın ağ trafiğini görebilmesi için, bağlantı noktası yansıtmayı yapılandırmanız veya bir Ağ TAP kullanmanız gerekir.
 
@@ -71,6 +75,6 @@ Bağlantı noktası yansıtma yapılandırıldıktan sonra, ATA Gateway’i yük
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
