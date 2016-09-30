@@ -13,8 +13,8 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b8ad2f343b8397184cd860803f06b0d59c492f5a
-ms.openlocfilehash: 96b3ce171ca07bf44163d49b50377fccd6472a08
+ms.sourcegitcommit: 7d081a6e14adffc675de203001074c3435cce6b2
+ms.openlocfilehash: 8896df26157f9da903e68ac7a1d21f7f80f95026
 
 
 ---
@@ -83,7 +83,7 @@ Bir sanal etki alanı denetleyicisi ATA Lightweight Gateway kapsamına alınamı
 Yedeklenecek 2 öğe vardır:
 
 -   ATA tarafından depolanan trafik ve olaylar. Bunlar desteklenen herhangi bir veritabanı yedekleme yordamı kullanılarak yedeklenebilir. Daha fazla bilgi için bkz. [ATA veritabanı yönetimi](/advanced-threat-analytics/deploy-use/ata-database-management) 
--   ATA yapılandırması. Veritabanında depolanır ve ATA Center dağıtım konumundaki **Yedekleme** klasöründe saatte bir kere yedeklenir.  Daha fazla bilgi için bkz: [ATA veritabanı yönetimi](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/ata-database-management).
+-   ATA yapılandırması. Veritabanında depolanır ve ATA Center dağıtım konumundaki **Yedekleme** klasöründe saatte bir kere yedeklenir.  Daha fazla bilgi için bkz: [ATA veritabanı yönetimi](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management).
 ## ATA neleri algılayabilir?
 ATA bilinen kötü amaçlı saldırıları ve teknikleri, güvenlik sorunlarını ve riskleri algılar.
 ATA algılamalarının tam listesi için bkz: [ATA hangi algılamaları gerçekleştirir?](ata-threats.md)
@@ -144,6 +144,6 @@ Evet, hem dağıtımın gelen durumunu hem de yapılandırma, bağlantı, vb. il
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 
