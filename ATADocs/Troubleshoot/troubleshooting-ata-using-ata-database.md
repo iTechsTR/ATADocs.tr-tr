@@ -4,7 +4,7 @@ description: "Sorunları gidermeye yardımcı olması için ATA veritabanını n
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: c86b6dc880238e262f696e88c54bc1bc7e01a1db
+ms.sourcegitcommit: af0508f82d8cf190dcd3ff058f4c2ff37b4b0595
+ms.openlocfilehash: dfc6c902cb13b1a2bf927cd235806ec32d9fefc3
 
 
 ---
+
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+
+
 
 # ATA veritabanını kullanarak ATA sorunlarını giderme
 ATA veritabanı olarak MongoDB’yi kullanır.
@@ -45,15 +49,6 @@ Aşağıdaki örnek, yukarıda sağlanan söz diziminin kullanıldığı örnek 
 `db.UniqueEntity.find({Name: "John Doe"})`<br>"`_id`" değeri olarak gösterilen kimliğini bir yere not alın. Bizim örneğimizde, kimliğin şöyle olduğunu varsayalım: "`123bdd24-b269-h6e1-9c72-7737as875351`"<br>Ardından, aradığınız tarihten (bizim örneğimizde 20/10/2015) önceki en yakın tarihli koleksiyonu arayın.<br>Sonra, John Doe'nun hesabının NTLM etkinliklerini arayın: 
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
-## ATA Yapılandırma dosyası
-ATA’nın yapılandırması veritabanındaki "SystemProfile" koleksiyonunda depolanır.
-Bu koleksiyon, ATA Center hizmeti tarafından saatte bir "SystemProfile.json" adlı dosyaya yedeklenir. Bu dosya "Backup" adlı alt klasörde yer alır. ATA’nın yüklendiği varsayılan konumda, şurada bulunabilir: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile.json** 
-
-**Not**: ATA’da önemli değişiklikler yaparken bu dosyayı herhangi bir yere yedeklemenizi öneririz.
-
-Aşağıdaki komutu çalıştırarak ayarların tümünü geri yüklemek mümkündür:
-
-`mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
 
 ## Ayrıca Bkz.
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
@@ -64,6 +59,6 @@ Aşağıdaki komutu çalıştırarak ayarların tümünü geri yüklemek mümkü
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -4,7 +4,7 @@ description: "ATA yükleme işleminin üçüncü adımı, ATA Gateway kurulum pa
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 19c1f0f56264952fc8156040ce717c049ce32dc0
+ms.sourcegitcommit: ba090fdd4f00c001020b1fbedf527e4fd69d3992
+ms.openlocfilehash: 277d08756b456d1a61fb9fdcb5014a6a1b4782ad
 
 
 ---
+
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+
+
 
 # ATA’yı Yükleme - 3. Adım
 
@@ -28,16 +32,18 @@ ms.openlocfilehash: 19c1f0f56264952fc8156040ce717c049ce32dc0
 ## Adım 3. ATA Gateway kurulum paketini indirme
 Etki alanı bağlantı ayarlarını yapılandırdıktan sonra, ATA Gateway kurulum paketini indirebilirsiniz. ATA Gateway ayrılmış bir sunucuya veya bir etki alanı denetleyicisine yüklenebilir. Bir etki alanı denetleyicisine yüklerseniz, bir ATA Lightweight Gateway olarak yüklenir. ATA Lightweight Gateway hakkında daha fazla bilgi için bkz. [ATA Mimarisi](/advanced-threat-analytics/plan-design/ata-architecture). 
 
-ATA Gateway paketini indirmek için:
+İlk kez bir ATA Gateway indiriyorsanız aşağıdaki ekranı görürsünüz:
 
-1.  ATA Konsolu’ndan, ayarlar simgesine tıklayın ve **Yapılandırma**’yı seçin.
+![ATA Gateway yapılandırma ayarları](media/ATA_1.7-welcome-download-gateway.PNG)
 
-    ![ATA Gateway yapılandırma ayarları](media/ATA-config-icon.JPG)
+İlk kez bir ATA Gateway indirmiyorsanız bu karşılama mesajı görünmez.
 
-2.  **ATA Gateway Bileşenleri** sekmesinde **ATA Gateway Kurulumunu İndir**’e tıklayın.
+> [!NOTE] 
+> Yapılandırma ekranına daha sonra ulaşmak için **ayarlar simgesini** (sağ üst köşedeki) tıklayıp **Yapılandırma**’yı seçin ve sonra **Sistem** altında **Ağ Geçitleri**’ni tıklayın.  
 
-3.  Paketi yerel olarak kaydedin.
-4.  Paketi, ATA Gateway yükleyeceğiniz ayrılmış sunucuya veya etki alanı denetleyicisine kopyalayın. Alternatif olarak, ATA Konsolu’nu ayrılmış sunucudan veya etki alanı denetleyicisinden açabilir ve bu adımı atlayabilirsiniz.
+1.  **"Ağ Geçidi Kurulumunu İndir”**e tıklayın.
+2.  Paketi yerel olarak kaydedin.
+3.  Paketi, ATA Gateway yükleyeceğiniz ayrılmış sunucuya veya etki alanı denetleyicisine kopyalayın. Alternatif olarak, ATA Konsolu’nu ayrılmış sunucudan veya etki alanı denetleyicisinden açabilir ve bu adımı atlayabilirsiniz.
 
 Zip dosyası şunları içerir:
 
@@ -58,6 +64,6 @@ Zip dosyası şunları içerir:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

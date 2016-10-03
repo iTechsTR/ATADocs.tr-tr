@@ -4,7 +4,7 @@ description: "ATA’yı yükleme işleminin dördüncü adımı ATA Gateway’i 
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 6052a911c12f8dbb757ab8445f9e0c6ec09b530e
+ms.sourcegitcommit: 54e5105e78b6db9f33488135601381af5503aa4a
+ms.openlocfilehash: 305c939ebda636617ece6e41f0554af0e948c3ec
 
 
 ---
+
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+
+
 
 # ATA’yı Yükleme - 4. Adım
 
@@ -41,22 +45,32 @@ ATA Gateway sunucusunda aşağıdaki adımları gerçekleştirin.
 > [!NOTE] 
 > Doğrudan zip dosyasından yükleme başarısız olur.
 
-2.  Yükseltilmiş bir komut isteminde **Microsoft ATA Gateway Setup.exe**’yi çalıştırın ve kurulum sihirbazını izleyin.
+2.  **Microsoft ATA Gateway Setup.exe**’yi çalıştırın ve kurulum sihirbazını izleyin.
 
 3.  **Hoş Geldiniz** sayfasında dilinizi seçin ve **İleri**’ye tıklayın.
 
-4.  **ATA Gateway Yapılandırması**’nın altında, ortamınıza bağlı olarak aşağıdaki bilgileri girin:
+4.  Yükleme sihirbazı sunucunun bir etki alanı denetleyicisi veya adanmış bir sunucu olup olmadığını otomatik olarak denetler. Etki alanı denetleyicisi ise ATA Lightweight Gateway, adanmış bir sunucu ise ATA Gateway yüklenir. 
+    
+    Örneğin, ATA Lightweight Gateway söz konusuysa etki alanı denetleyicinize ATA Lightweight Gateway yükleneceğini bildiren aşağıdaki ekranı görürsünüz:
+    
+    ![ATA Lightweight Gateway yüklemesi](media/ATA-lightweight-gateway-install-selected.png) **İleri**’ye tıklayın.
 
-    ![ATA Gateway yapılandırmasının resmi](media/ATA-Gateway-Configuration.JPG)
+    > [!NOTE] 
+    > Etki alanı denetleyicisi veya adanmış sunucu, yükleme işlemi için en düşük donanım gereksinimlerini karşılamıyorsa bir uyarı görürsünüz. Bu, **İleri**’ye tıklamanızı ve yükleme işlemine devam etmenizi engellemez. Bu, veri depolama için fazla yere gereksinim duymayacağınız küçük bir laboratuvar testi ortamında ATA yüklemesi için doğru seçenek olabilir. Üretim ortamlarında etki alanı denetleyicilerinizin veya adanmış sunucularınızın gereksinimleri karşıladığından emin olmak için ATA’nın [kapasite planlaması](/advanced-threat-analytics/plan-design/ata-capacity-planning) kılavuzuyla çalışmanız önerilir.
+
+4.  **ATA Gateway Yapılandırması** altında, ortamınıza bağlı olarak aşağıdaki bilgileri girin:
+
+    ![ATA Gateway yapılandırmasının resmi](media/ATA-Gateway-Configuration.png)
 
     |Alan|Açıklama|Açıklamalar|
     |---------|---------------|------------|
     |Yükleme Yolu|Bu, ATA Gateway’in yükleneceği konumdur. Varsayılan olarak %programfiles%\Microsoft Advanced Threat Analytics\Gateway yoludur.|Varsayılan değeri olduğu gibi bırakın.|
-    |ATA Gateway Hizmeti SSL sertifikası|Bu, ATA Gateway tarafından kullanılacak olan sertifikadır.|Yalnızca laboratuvar ortamları için otomatik olarak imzalanan bir sertifika kullanın.|
-    |ATA Gateway Kaydı|ATA yöneticisinin Kullanıcı Adı ve Parola değerlerini girin.|ATA Gateway’in ATA Center’a kaydolması için, ATA Center’ı yükleyen kullanıcının kullanıcı adını ve parolasını girin. Bu kullanıcı, ATA Center’da aşağıdaki yerel gruplardan birinin üyesi olmalıdır.<br /><br />-   Administrators<br />-   Microsoft Advanced Threat Analytics Administrators **Not:** Bu kimlik bilgileri yalnızca kayıt için kullanılır ve ATA’da depolanmaz.|
-    ATA Gateway’in yüklemesi sırasında aşağıdaki bileşenler yüklenir ve yapılandırılır:
+    |Ağ Geçidi Hizmeti SSL sertifikası|Bu, ATA Gateway tarafından kullanılacak olan sertifikadır.|Yalnızca laboratuvar ortamları için otomatik olarak imzalanan bir sertifika kullanın.|
+    |Ağ Geçidi Kaydı|ATA yöneticisinin Kullanıcı Adı ve Parola değerlerini girin.|ATA Gateway’in ATA Center’a kaydolması için, ATA Center’ı yükleyen kullanıcının kullanıcı adını ve parolasını girin. Bu kullanıcı, ATA Center’da aşağıdaki yerel gruplardan birinin üyesi olmalıdır.<br /><br />-   Administrators<br />-   Microsoft Advanced Threat Analytics Administrators **Not:** Bu kimlik bilgileri yalnızca kayıt için kullanılır ve ATA’da depolanmaz.|
+    
+5. **Yükle**’ye tıklayın. ATA Gateway’in yüklemesi sırasında aşağıdaki bileşenler yüklenir ve yapılandırılır:
 
-    -   KB 3047154
+    -   KB 3047154 (Yalnızca Windows Server 2012 R2 için)
 
         > [!IMPORTANT]
         > -   KB 3047154’ü bir sanallaştırma konağına yüklemeyin (sanallaştırmayı çalıştıran konak; sanal makinede çalıştırılmasında sorun yoktur). Bu, bağlantı noktası yansıtma işleminin düzgün çalışmayı durdurmasına neden olur. 
@@ -84,6 +98,6 @@ ATA Gateway sunucusunda aşağıdaki adımları gerçekleştirin.
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

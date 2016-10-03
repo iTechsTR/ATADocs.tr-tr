@@ -4,7 +4,7 @@ description: "ATA’yı yükleme işleminin ikinci adımı, ATA Center sunucunuz
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 65ec5c86478e9ded096b899d64eb257257095eaf
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: fc268bcb2e3d027b09fa3349427934f60783b971
 
 
 ---
+
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+
+
 
 # ATA’yı Yükleme - 2. Adım
 
@@ -25,28 +29,24 @@ ms.openlocfilehash: 65ec5c86478e9ded096b899d64eb257257095eaf
 [« 1. Adım](install-ata-step1.md)
 [3. Adım »](install-ata-step3.md)
 
-## 2. Adım ATA Gateway genel ayarlarını yapılandırma
-**Genel** ayarlar sekmesindeki ayarlar, ATA Center tarafından yönetilen tüm ATA Gateway bileşenlerine uygulanır.
+## 2. Adım Active Directory Ormanınıza bağlanmak için bir Kullanıcı Adı ve Parola sağlayın
 
-Genel ATA Gateway ayarlarını yapılandırmak için aşağıdakileri gerçekleştirin:
+ATA Konsolunu ilk açtığınızda aşağıdaki ekran görünür:
 
-1.  ATA Konsolu’nu açın ve oturum açın. Yönergeler için bkz. [ATA Konsolu’yla çalışma](working-with-ata-console.md)
+![ATA hoş geldiniz aşaması 1](media/ATA_1.7-welcome-provide-username.png)
 
-2.  Ayarlar simgesine tıklayın ve **Yapılandırma**’yı seçin.
-
-    ![ATA Gateway yapılandırma ayarları](media/ATA-config-icon.JPG)
-
-3.  **Genel** sekmesinde, **ATA Gateway Bileşenleri** altında, aşağıdaki bilgileri girip **kaydet**’e tıklayın.
+1.  Aşağıdaki bilgileri girin ve **Kaydet**’e tıklayın:
 
     |Alan|Açıklamalar|
     |---------|------------|
-    |**Kullanıcı adı** (gerekli)|Salt okunur kullanıcı adını girin, örneğin: **kullanıcı1**|
-    |**Parola** (gerekli)|Salt okunur kullanıcının parolasını girin, örneğin: **Kalem1**. **Not:** Bu parolanın doğru olduğundan emin olun. Yanlış parola kaydederseniz, ATA Gateway sunucularında ATA Hizmeti çalışmayı durdurur.|
+    |**Kullanıcı adı** (gerekli)|Salt okunur kullanıcı adını girin, örneğin: **ATAkullanıcısı**.|
+    |**Parola** (gerekli)|Salt okunur kullanıcının parolasını girin, örneğin: **Kalem1**.|
     |**Etki alanı** (gerekli)|Salt okunur kullanıcının etki alanını girin, örneğin, **contoso.com**. **Not:** Kullanıcının bulunduğu etki alanının tam FQDN’sini girmek önemlidir. Örneğin, kullanıcının hesabı corp.contoso.com etki alanındaysa, contoso.com değil `corp.contoso.com` girmeniz gerekir.|
     |Tüm ATA Gateway bileşenlerini otomatik olarak güncelleştir |Bu ayarı etkinleştirirseniz, gelecek sürümlerde ATA Center’ı güncelleştirdiğinizde tüm ATA Gateway bileşenleri otomatik olarak güncelleştirilir.|
 
-    ![ATA Etki Alanı bağlantı ayarlarının resmi](media/ata-domain-connectivity-user.jpg)
+    Kaydedildikten sonra, Konsoldaki hoş geldiniz iletisi şu şekilde değişir: ![ATA hoş geldiniz aşaması 1 tamamlandı](media/ATA_1.7-welcome-provide-username-finished.png)
 
+2. Devam etmek için Konsolda **Ağ Geçidi kurulumunu indir ve ilk Ağ Geçidini yükle**’ye tıklayın.
 
 
 >[!div class="step-by-step"]
@@ -62,6 +62,6 @@ Genel ATA Gateway ayarlarını yapılandırmak için aşağıdakileri gerçekle�
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

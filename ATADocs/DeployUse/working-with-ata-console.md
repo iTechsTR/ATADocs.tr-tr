@@ -4,7 +4,7 @@ description: "ATA Konsolu’nda oturum açma işlemi ve konsolun bileşenleri a�
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,19 +13,22 @@ ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 1eb9397b541eb64cef553f61e8517568d16b0092
+ms.sourcegitcommit: a4ba68547d6746625a44aca5d05790c3ad138f4e
+ms.openlocfilehash: ab9abce7479971c80544476c54cbf0911d1a5822
 
 
 ---
+
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+
+
 
 # ATA Konsolu’yla çalışma
 
 ATA tarafından algılanan kuşkulu etkinliği izlemek ve yanıtlamak için ATA Konsolu’nu kullanın.
 
 ## ATA Konsolu’na erişimi etkinleştirme
-ATA Center sunucusunda yerel Administrators grubunun üyesi olan tüm kullanıcıların ATA Konsolu’nda oturum açma ve ATA ayarlarını yönetme izni vardır.
-Bir kullanıcıya, onu yerel yönetici yapmadan ATA Konsolu’nda oturum açma izni vermek için, kullanıcıyı şu yerel gruba ekleyin: **Microsoft Advanced Threat Analytics Administrators**
+ATA Konsolunda başarıyla oturum açmak amacıyla, ATA Konsoluna erişmek için doğru ATA rolünün atandığı bir kullanıcıyla oturum açmanız gerekir. ATA’da role dayalı erişim denetimi (RBAC) hakkında daha fazla bilgi için bkz. [ATA rol gruplarıyla çalışma](ata-role-groups.md).
 
 ## ATA Konsolu’nda oturum açma
 
@@ -38,10 +41,8 @@ Bir kullanıcıya, onu yerel yönetici yapmadan ATA Konsolu’nda oturum açma i
 
 2.  Kullanıcı adınızla parolanızı girin ve **Oturum aç**’a tıklayın.
 
-![ATA oturum açma ekranının resmi](media/ATA-log-in-screen.jpg)
+![ATA oturum açma ekranının resmi](media/ATA-log-in-screen.png)
 
-> [!NOTE]
-> Yerel Administrators grubunun VEYA Microsoft Advanced Threat Analytics Administrators grubunun üyesi olan bir kullanıcıyla oturum açmalısınız.
 
 ## ATA Konsolu
 
@@ -54,7 +55,7 @@ Bunlar ATA Konsolu’nun başlıca öğeleridir.
 
 Bu, ATA Konsolu’nda oturum açtığınızda gittiğiniz varsayılan giriş sayfasıdır. Varsayılan olarak, tüm kuşkulu etkinliler saldırı zaman çizelgesinde gösterilir. Saldırı zaman çizelgesine filtre uygulayarak, Tüm, Açık, Çıkarılan veya Çözülen kuşkulu etkinlikleri görüntüleyebilirsiniz. Ayrıca, her etkinliğe atanmış olan önem düzeyini de görebilirsiniz.
 
-![ATA saldırı zaman çizelgesi resmi](media/attack-timeline.png)
+![ATA saldırı zaman çizelgesi resmi](media/attack-timeline-1.7.png)
 
 Daha fazla bilgi için bkz. [Kuşkulu etkinliklerle çalışma](/advanced-threat-analytics/deploy-use/working-with-suspicious-activities)
 
@@ -62,7 +63,7 @@ Daha fazla bilgi için bkz. [Kuşkulu etkinliklerle çalışma](/advanced-threat
 
 Kuşkulu bir etkinlik algılandığında, bildirim çubuğu sağ tarafta otomatik olarak açılır. Son oturum açmanızdan bu yana yeni kuşkulu etkinlikler varsa, başarılı oturum açma işleminden sonra bildirim çubuğu açılır. İstediğiniz zaman sağ taraftaki oka tıklayarak bildirim çubuğunu açabilirsiniz.
 
-![ATA bildirim çubuğu resmi](media/notification-bar.png)
+![ATA bildirim çubuğu resmi](media/notification-bar-1.7.png)
 
 ### Filtreleme paneli
 
@@ -78,7 +79,7 @@ Kuşkulu etkinlikleri Durum ve Önem Derecesi’ne göre filtreleyerek, saldır�
 
 Sistem Durumu Merkezi, ATA dağıtımınızda düzgün çalışmayan bir şey olduğunda size uyarılar sağlar.
 
-![ATA sistem durumu merkezinin resmi](media/health-center.png)
+![ATA sistem durumu merkezinin resmi](media/ATA-Health-Issue.jpg)
 
 Sisteminizde bağlantı hatası veya bağlantısı kesik ATA Gateway gibi herhangi bir sorunla karşılaşıldığında, Sistem Durumu Merkezi simgesi kırmızı bir nokta göstererek bu durumu öğrenmenizi sağlar. ![ATA sistem durumu merkezi kırmızı noktasının resmi](media/ATA-Health-Center-Alert-red-dot.png)
 
@@ -124,6 +125,6 @@ Konsolun, kullanıcı veya bilgisayar gibi tek bir varlığın bulunduğu herhan
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

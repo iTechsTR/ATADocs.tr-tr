@@ -4,7 +4,7 @@ description: "Dağıtımınızı planlamanıza ve ağınızı desteklemek için 
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
@@ -12,11 +12,15 @@ ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: e0174ecac39b2a8cd469ed698853c447a85e4251
+ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
+ms.openlocfilehash: 09bf48be4c651af6ca1ae66a47f940d504570c8a
 
 
 ---
+
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+
+
 
 # ATA Kapasite Planlaması
 Bu konu, kaç adet ATA Gateway ve/veya ATA Lightweight Gateway bileşenine ihtiyacınız olduğunu ve ATA Center ve ATA Gateway için gerekli sunucu kapasitesini anlamanın yanı sıra ağınızı görüntülemek için kaç adet ATA sunucusu gerekeceğini belirlemenize yardımcı olur.
@@ -41,8 +45,7 @@ Aşağıdaki bölüm, bir Etki Alanı Denetleyicisi’nden paket/sn sayacı bilg
 
 ### ATA Center Boyutlandırması
 Kullanıcı davranış analizi için ATA Center’a en az 30 günlük veri gerekir. Etki alanı denetleyicisi başına ATA veritabanına gereken disk alanı aşağıda tanımlanmıştır. Birden çok etki alanı denetleyiciniz varsa, ATA veritabanına gereken tüm alan miktarını hesaplamak için etki alanı denetleyicisi başına gereken disk alanlarını toplayın.
-> [!NOTE] 
-> Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
+ 
 
 |Paket/saniye&#42;|CPU (çekirdekler&#42;&#42;)|Bellek (GB)|Günlük veritabanı depolaması (GB)|Aylık veritabanı depolaması (GB)|IOPS&#42;&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
@@ -59,9 +62,13 @@ Kullanıcı davranış analizi için ATA Center’a en az 30 günlük veri gerek
 > [!NOTE]
 > -   ATA Center, tüm izlenen etki alanı denetleyicilerinden saniyede toplam en çok 400.000 çerçeveyi (FPS) işleyebilir.
 > -   Burada belirtilen depolama miktarları net değerlerdir, gelecekteki büyümeyi de hesaba katmalı ve üzerinde veritabanının bulunduğu diskte en az %20 boş alan bulunduğundan emin olmalısınız.
-> -   Boş alanınız en az %20’ye veya 100 GB’a ulaşırsa, en eski veri koleksiyonu silinir. Bu işlem, yalnızca iki günlük veri kalana ya da boş alan %5 veya 50 GB’a inene kadar devam eder; bu noktaya ulaşıldığında veri koleksiyonu çalışmayı durdurur.
-> -  Okuma ve yazma etkinlikleri için depolama gecikmesi 10 ms’nin altında olmalıdır.
-> -  Okuma ve yazma etkinlikleri arasındaki oran, saniyede 100.000 paketin altında yaklaşık 1:3 ve saniyede 100.000 paketin üstünde 1:6’dır.
+> -   Boş alanınız en az %20’ye veya 100 GB’a ulaşırsa, en eski veri koleksiyonu silinir. Bu işlem, boş alan %5 veya 50 GB’a inene kadar devam eder; bu noktaya ulaşıldığında veri toplama işleminin çalışması durdurulur.
+> -   Okuma ve yazma etkinlikleri için depolama gecikmesi 10 ms’nin altında olmalıdır.
+> -   Okuma ve yazma etkinlikleri arasındaki oran, saniyede 100.000 paketin altında yaklaşık 1:3 ve saniyede 100.000 paketin üstünde 1:6’dır.
+> -   Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
+> -   En iyi performans için, ATA Center’ın **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.<br>
+> -   Fiziksel bir sunucuda çalışırken, ATA veritabanı için BIOS’ta tekdüzen olmayan bellek erişimini (NUMA) **devre dışı bırakmanız** gerekir. Sisteminizde NUMA Düğüm Araya Ekleme (Node Interleaving) olarak geçiyor olabilir ve bu durumda NUMA’yı devre dışı bırakmak için Düğüm Araya Ekleme’yi **etkinleştirmeniz** gerekecektir. Daha fazla bilgi için BIOS belgelerinize bakın. ATA Center bir sanal sunucuda çalışırken bunun geçerli olmadığını unutmayın.
+
 
 ## Dağıtımınız için doğru ağ geçidi türünü seçme
 ATA dağıtımında, ATA Gateway türlerinin tüm bileşimleri desteklenir:
@@ -94,8 +101,7 @@ Aşağıda, etki alanı denetleyicilerinin ATA Gateway kapsamında olmasının g
 ### ATA Lightweight Gateway Boyutu
 
 Bir ATA Lightweight Gateway, etki alanı denetleyicisinin oluşturduğu ağ trafiği miktarına bağlı olarak bir etki alanı denetleyicisinin izlenmesini destekleyebilir. 
-> [!NOTE] 
-> Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
+
 
 |Paket/saniye&#42;|CPU (çekirdekler&#42;&#42;)|Bellek (GB)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
@@ -108,8 +114,11 @@ Bir ATA Lightweight Gateway, etki alanı denetleyicisinin oluşturduğu ağ traf
 &#42;&#42;Bu etki alanı denetleyicisinde takılı hiper iş parçacıklı olmayan çekirdeklerin toplamı.<br>Hiper iş parçacığı oluşturma ATA Lightweight Gateway için kabul edilebilir olmakla birlikte, kapasite planlaması yaparken hiper iş parçacıklı çekirdekleri değil gerçek çekirdekleri saymanız gerekir.
 
 &#42;&#42;&#42;Bu etki alanı denetleyicisinde takılı belleğin toplam miktarı.
+
 > [!NOTE]   
-> Etki alanı denetleyicisinde, ATA Lightweight Gateway için gereken miktarda kaynak yoksa, etki alanı denetleyicisi performansı etkilenmez, ancak ATA Lightweight Gateway beklendiği gibi çalışmayabilir.
+> -   Etki alanı denetleyicisinde, ATA Lightweight Gateway için gereken miktarda kaynak yoksa, etki alanı denetleyicisi performansı etkilenmez, ancak ATA Lightweight Gateway beklendiği gibi çalışmayabilir.
+> -   Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
+> -   En iyi performans için, ATA Lightweight Gateway’in **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.
 
 
 ### ATA Gateway Boyutlandırması
@@ -126,8 +135,7 @@ Bağlantı noktası yansıtmayla ilgili önemli noktalar, her bir veri merkezi v
     ATA Gateway, izlenmekte olan etki alanı denetleyicilerinin ağ trafiği miktarına bağlı olarak, birden çok etki alanı denetleyicisinin izlenmesini destekleyebilir. 
 <br>
 
-> [!NOTE] 
-> Dinamik bellek desteklenmez.
+
 
 |Paket/saniye&#42;|CPU (çekirdekler&#42;&#42;)|Bellek (GB)|
 |---------------------------|-------------------------|---------------|
@@ -142,6 +150,9 @@ Bağlantı noktası yansıtmayla ilgili önemli noktalar, her bir veri merkezi v
 
 &#42;&#42;Hiper iş parçacığı devre dışı bırakılmalıdır.
 
+> [!NOTE] 
+> -   Dinamik bellek desteklenmez.
+> -   En iyi performans için, ATA Gateway’in **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.
 
 
 ## Etki alanı denetleyicisi tahmini trafiği
@@ -201,6 +212,6 @@ Saniyedeki paket sayısını belirlemek için, her etki alanı denetleyicisinde 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

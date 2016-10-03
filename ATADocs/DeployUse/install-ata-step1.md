@@ -4,7 +4,7 @@ description: "ATA’yı yüklemenin ilk adımı, seçtiğiniz sunucuya ATA Cente
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,21 +13,25 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d89f6c5e0ac9712ce2fde057c9ef8e4025e8a144
-ms.openlocfilehash: 41d538039a8fa0511a74dd6cd5d840a1dea516e8
+ms.sourcegitcommit: d0681cfa4ae763da9c88c8dec9b77a75494a5c9f
+ms.openlocfilehash: 7365b09e98d422a8670725b47a1c2380f00e23fb
 
 
 ---
+
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+
+
 
 # ATA’yı Yükleme - 1. Adım
 
 >[!div class="step-by-step"]
 [2. Adım »](install-ata-step2.md)
 
-Bu yükleme yordamı, sıfırdan bir ATA 1.6 yüklemesi gerçekleştirme yönergeleri sağlar. Var olan bir ATA dağıtımını önceki bir sürümünden güncelleştirme hakkında daha fazla bilgi için bkz. [Sürüm 1.6 için ATA geçiş kılavuzu](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide).
+Bu yükleme yordamı, sıfırdan bir ATA 1.7 yüklemesi gerçekleştirmeye yönelik yönergeleri sağlar. Mevcut bir ATA dağıtımını önceki bir sürümünden güncelleştirme hakkında daha fazla bilgi için bkz. [Sürüm 1.7 için ATA geçiş kılavuzu](/advanced-threat-analytics/understand-explore/ata-update-1.7-migration-guide).
 
 > [!IMPORTANT] 
-> Yüklemeye başlamadan önce ATA Center sunucusunda ve ATA Gateway sunucularında KB2934520’yi yükleyin. Bunu yüklemezseniz, ATA yüklemesi bu güncelleştirmeyi yükler ve ATA yüklemesinin ortasında bir yeniden başlatma gerektirir.
+> Windows 2012 R2 kullanıyorsanız, yüklemeye başlamadan önce ATA Center sunucusuna ve ATA Gateway sunucularına KB2934520’yi yükleyin. Aksi takdirde ATA yüklemesi bu güncelleştirmeyi yükler ve bu işlem sırasında bir yeniden başlatma gerektirir.
 
 ## 1. Adım ATA Center’ı indirme ve yükleme
 Sunucunun gereksinimleri karşıladığını doğruladıktan sonra, ATA Center’ın yüklemesiyle devam edebilirsiniz.
@@ -57,19 +61,16 @@ ATA Center sunucusunda aşağıdaki adımları gerçekleştirin.
     |---------|---------------|------------|
     |Yükleme Yolu|Bu, ATA Center’ın yükleneceği konumdur. Varsayılan olarak %programfiles%\Microsoft Advanced Threat Analytics\Center yoludur.|Varsayılan değeri olduğu gibi bırakın.|
     |Veritabanı Veri Yolu|Bu MongoDB veritabanı dosyalarının yer alacağı konumdur. Varsayılan olarak %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data yoludur.|Boyutunuza bağlı olarak büyümek için yeriniz olan başka bir konumla değiştirin. **Not:** <ul><li>Üretim ortamlarında, kapasite planlamasına göre yeterli yeri olan bir sürücü kullanmalısınız.</li><li>Büyük dağıtımlar için veritabanı ayrı bir fiziksel diskte yer almalıdır.</li></ul>Boyutlandırma bilgileri için bkz. [ATA kapasite planlaması](/advanced-threat-analytics/plan-design/ata-capacity-planning).|
-    |ATA Center Hizmeti IP adresi: Bağlantı Noktası|Bu, ATA Center’ın ATA Gateway bileşenlerinden gelen iletişimi dinleyecekleri IP adresidir.<br /><br />**Varsayılan bağlantı noktası:** 443|ATA Center hizmeti tarafından kullanılacak IP adresini seçmek için aşağı oka tıklayın.<br /><br />ATA Center’ın IP adresi ve bağlantı noktası, ATA Konsolu’nun IP adresi ve bağlantı noktasıyla aynı olamaz. ATA Konsolu’nun bağlantı noktasını değiştirdiğinizden emin olun.|
-    |ATA Center Hizmeti SSL Sertifikası|Bu, ATA Center hizmeti tarafından kullanılacak olan sertifikadır.|Yüklü bir sertifika seçmek için anahtar simgesine tıklayın veya laboratuvar ortamında dağıtım yaparken otomatik olarak imzalanan sertifikayı işaretleyin.|
-    |ATA Konsolu IP adresi|Bu, IIS tarafından ATA Konsolu için kullanılacak olan IP adresidir.|ATA Konsolu tarafından kullanılan IP adresini seçmek için aşağı oka tıklayın. **Not:** ATA Gateway’den ATA Konsolu’na daha kolay erişmek için bu IP adresini not alın.|
-    |ATA Konsolu SSL sertifikası|Bu, IIS tarafından kullanılacak olan sertifikadır.|Yüklü bir sertifika seçmek için anahtar simgesine tıklayın veya laboratuvar ortamında dağıtım yaparken otomatik olarak imzalanan sertifikayı işaretleyin.|
-
-    ![ATA Center yapılandırmasının resmi](media/ATA-Center-Configuration.JPG)
+    |Center Hizmeti IP adresi: Bağlantı Noktası|Bu, ATA Center’ın ATA Gateway bileşenlerinden gelen iletişimi dinleyecekleri IP adresidir.<br /><br />**Varsayılan bağlantı noktası:** 443|ATA Center hizmeti tarafından kullanılacak IP adresini seçmek için aşağı oka tıklayın.<br /><br />ATA Center’ın IP adresi ve bağlantı noktası, ATA Konsolu’nun IP adresi ve bağlantı noktasıyla aynı olamaz. ATA Konsolu’nun bağlantı noktasını değiştirdiğinizden emin olun.|
+    |Center Hizmeti SSL Sertifikası|Bu, ATA Konsolu ve ATA Center hizmeti tarafından kullanılacak olan sertifikadır.|Yüklü bir sertifika seçmek için anahtar simgesine tıklayın veya laboratuvar ortamında dağıtım yaparken otomatik olarak imzalanan sertifikayı işaretleyin.|
+    |Konsol IP adresi|Bu, ATA Konsolu için kullanılacak olan IP adresidir.|ATA Konsolu tarafından kullanılan IP adresini seçmek için aşağı oka tıklayın. **Not:** ATA Gateway’den ATA Konsolu’na daha kolay erişmek için bu IP adresini not alın.|
+    
+    ![ATA Center yapılandırmasının resmi](media/ATA-Center-Configuration.png)
 
 10.  ATA Center ve bileşenlerini yüklemek için **Yükle**’ye tıklayın.
     ATA Center’ın yüklemesi sırasında aşağıdaki bileşenler yüklenir ve yapılandırılır:
 
-    -   Internet Information Services (IIS)
-
-    -   ATA Center hizmeti ve ATA Konsolu IIS sitesi
+    -   ATA Center hizmeti
 
     -   MongoDB
 
@@ -101,6 +102,6 @@ Siteye bir IP adresi kullanarak oturum açtığınız için, sertifikayla ilgili
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 

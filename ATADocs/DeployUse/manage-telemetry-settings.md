@@ -4,7 +4,7 @@ description: "ATA tarafından toplanan veriler açıklanır ve veri toplamayı k
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 7e849e9d902873cec7140a14b6f0709d3ef9ddd1
+ms.sourcegitcommit: 3a7e375da4acd5546347310c5965394b2addfe63
+ms.openlocfilehash: 0c6b8589fffe24298d0caf2cf2eb5e7e817e4da2
 
 
 ---
+
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+
+
 
 # Telemetri Ayarlarını Yönetme
 Advanced Threat Analytics (ATA), ATA hakkında anonim telemetri verileri toplar ve bu verileri HTTPS bağlantısı üzerinden Microsoft sunucularına iletir.  Bu veriler Microsoft tarafından ATA’nın gelecek sürümlerini geliştirmeye yardımcı olmak için kullanılır.
@@ -63,6 +67,21 @@ Advanced Threat Analytics (ATA), ATA hakkında anonim telemetri verileri toplar 
 
     -   Sağlanan giriş
 
+- Sistem durumu sorunları - Aşağıdaki anonimleştirilmiş veriler her sistem durumu sorunu için toplanır:
+
+    (Bilgisayar adları, kullanıcı adları ve IP adresleri toplanmaz)
+
+    -   Sistem durumu sorunu türü
+
+    -   Sistem durumu sorunu kimliği
+
+    -   Durum
+
+    -   Başlangıç ve Bitiş Zamanı
+
+- ATA Konsolu URL adresleri - ATA Konsolu ile kullanılan (ATA Konsolu içinde ziyaret edilen) sayfaların URL adresleri.
+
+
 ### Veri toplamayı devre dışı bırakma
 Telemetri verilerinin toplanmasını ve Microsoft’a gönderilmesini durdurmak için aşağıdaki adımları izleyin:
 
@@ -76,6 +95,6 @@ Telemetri verilerinin toplanmasını ve Microsoft’a gönderilmesini durdurmak 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

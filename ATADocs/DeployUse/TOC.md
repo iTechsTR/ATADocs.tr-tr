@@ -1,6 +1,6 @@
 # [Anlama ve Keşfetme](/advanced-threat-analytics/understand-explore/what-is-ata)
 # [Planlama ve Tasarlama](/advanced-threat-analytics/plan-design/ata-capacity-planning)
-# [Dağıtma ve Kullanma](install-ata.md)
+# [Dağıtma ve Kullanma](preinstall-ata.md)
 ## [ATA yüklemeden önce](preinstall-ata.md)
 ### [Bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md)
 ### [Bağlantı noktası yansıtmayı doğrulama](validate-port-mirroring.md)
@@ -17,12 +17,12 @@
 ### [ATA yapılandırmasını değiştirme](modifying-ata-configuration.md)
 #### [ATA Center IP adresini değiştirme](modifying-ata-config-centerip.md)
 #### [ATA Center sertifikasını değiştirme](modifying-ata-config-centercert.md)
-#### [ATA konsolu IP adresini değiştirme](modifying-ata-config-consoleip.md)
-#### [IIS sertifikasını değiştirme](modifying-ata-config-iiscert.md)
+#### [ATA Konsolu URL’sini değiştirme](modifying-ata-config-consoleurl.md)
 #### [Etki alanı bağlantı parolasını değiştirme](modifying-ata-config-dcpassword.md)
 ### [ATA Konsolu’yla çalışma](working-with-ata-console.md)
-### [ATA uyarılarını ayarlama](setting-ata-alerts.md)
+### [ATA rol grupları](ata-role-groups.md)
 ### [Syslog ve E-posta sunucusu ayarlarını belirleme](setting-syslog-email-server-settings.md)
+### [ATA uyarılarını ayarlama](setting-ata-alerts.md)
 ### [Algılama ayarlarıyla çalışma](working-with-detection-settings.md)
 ### [ATA Sistem Durumu Merkezi](ata-health-center.md)
 ### [Kuşkulu etkinliklerle çalışma](working-with-suspicious-activities.md)
@@ -31,6 +31,6 @@
 # [Sorunları Gider](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 

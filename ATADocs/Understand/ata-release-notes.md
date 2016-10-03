@@ -4,7 +4,7 @@ description: "Bilinen sorunlar ve geçiş kılavuzlarının yanı sıra, her bir
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 090537e1065fcb742ed51ebcee46fdded63c90a3
+ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
+ms.openlocfilehash: 4672dc22ef36d7a835a75341d7a960186141c36f
 
 
 ---
@@ -22,6 +22,8 @@ ms.openlocfilehash: 090537e1065fcb742ed51ebcee46fdded63c90a3
 # Sürüm notları
 Aşağıdaki sürümler kullanılabilir:
 
+- [ATA sürüm 1.7’deki yenilikler](whats-new-version-1.7.md)
+   - [ATA’yı 1.7 sürümüne güncelleştirme - geçiş kılavuzu](/advanced-threat-analytics/understand-explore/ata-update-1.7-migration-guide)
 - [ATA sürüm 1.6’daki yenilikler](whats-new-version-1.6.md)
    - [ATA’yı 1.6’ya güncelleştirme - geçiş kılavuzu](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide)
 - [ATA sürüm 1.5’teki yenilikler](whats-new-version-1.5.md)
@@ -35,6 +37,6 @@ Aşağıdaki sürümler kullanılabilir:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 
