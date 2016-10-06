@@ -4,7 +4,7 @@ description: "ATA rol gruplarıyla çalışma konusunda yol gösterir."
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/20/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ba090fdd4f00c001020b1fbedf527e4fd69d3992
-ms.openlocfilehash: 41ae6655f2d69b5b879246eb03462cd7d7b091d7
+ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
+ms.openlocfilehash: 869d8f830d5dc70c927f172d77642b0c97bdcd84
 
 
 ---
@@ -29,9 +29,9 @@ ms.openlocfilehash: 41ae6655f2d69b5b879246eb03462cd7d7b091d7
 Rol grupları ATA için erişim yönetimini etkinleştirir. Rol gruplarını kullanarak güvenlik ekibinizdeki görevleri ayırabilir ve kullanıcılara sadece işlerini yapması için gereken miktarda erişim izni verebilirsiniz. Bu makalede erişim yönetimi ve ATA rol yetkilendirmesi açıklanır, ATA’daki rol gruplarını kullanmanıza yardımcı olan bilgiler sağlanır.
 ## ATA Rol Gruplarının Türleri 
 
-ATA, 3 tür Rol grubu içerir: ATA Administrators, ATA Users ve ATA Viewers. Aşağıdaki tabloda ATA’daki her rol için kullanılabilen erişim türü açıklanır. Aşağıda gösterildiği gibi, atanan role bağlı olarak ATA’daki çeşitli ekranlar ve menü seçenekleri kullanılamaz:
+ATA, 3 tür Rol grubu içerir: ATA Administrator, ATA Analyst ve ATA Executive. Aşağıdaki tabloda ATA’daki her rol için kullanılabilen erişim türü açıklanır. Aşağıda gösterildiği gibi, atanan role bağlı olarak ATA’daki çeşitli ekranlar ve menü seçenekleri kullanılamaz:
 
-|Etkinlik |Microsoft Advanced Threat Analytics Administrators|Microsoft Advanced Threat Analytics Users|Microsoft Advanced Threat Analytics Viewers|
+|Etkinlik |Microsoft Advanced Threat Analytics Administrator|Microsoft Advanced Threat Analytics Analyst|Microsoft Advanced Threat Analytics Executive|
 |----|----|----|----|
 |Oturum aç|Kullanılabilir|Kullanılabilir|Kullanılabilir|
 |Kuşkulu Etkinlikler için Giriş sağlama|Kullanılabilir|Kullanılabilir|Yok|
@@ -54,6 +54,6 @@ ATA, rol grupları için temel olarak yerel Windows gruplarını kullanır. Kull
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

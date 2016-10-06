@@ -4,7 +4,7 @@ description: "ATA sürüm 1.7’teki yenilikleri ve bilinen sorunları listeler"
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/28/2016
+ms.date: 09/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae6a3295d2fffabdb8e5f713674379e4af499ac2
-ms.openlocfilehash: af9101260b1a0d5d9da32398f638f76e0c8c40a7
+ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
+ms.openlocfilehash: 62f2aadc978547647a1dc3c27ed3453f7ed15828
 
 
 ---
@@ -29,9 +29,11 @@ ATA 1.7 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 
 -   Rol tabanlı erişim denetimi
 
--   Windows Server 2016 R2 ve Windows Server Core desteği
+-   Windows Server 2016 ve Windows Server Core desteği
 
 -   Kullanıcı deneyimi iyileştirmeleri
+
+-   Küçük değişiklikler
 
 
 ### Yeni ve güncelleştirilmiş algılamalar
@@ -63,54 +65,19 @@ Bu sürümün bilinen sorunları şunlardır:
 ### Ağ geçidi otomatik güncelleştirme işlemi başarısız olabilir
 **Belirtiler:** Yavaş WAN bağlantılarına sahip ortamlarda, ATA Gateway güncelleştirmesi güncelleştirme zaman aşımına (100 saniye) ulaşabilir ve başarıyla tamamlanamayabilir.
 ATA Konsolunda, ATA Gateway uzun bir süre “Güncelleştiriliyor (paket indiriliyor)” durumuna sahip olur ve sonunda başarısız olur.
-
 **Geçici çözüm:** Bu sorunu çözmek için en son ATA Gateway paketini ATA Konsolundan indirin ve ATA Gateway’i el ile güncelleştirin.
 
-### ATA 1.6’dan güncelleştirirken geçiş hatası
-ATA 1.7’ye güncelleştirirken, güncelleştirme işlemi *0x80070643* hata koduyla başarısız olabilir:
+ > [!IMPORTANT]
+ ATA tarafından kullanılan sertifikalar için otomatik sertifika yenileme desteklenmez. Bu sertifikaların kullanılması sertifika otomatik olarak yenilendiğinde ATA’nın çalışmasının durmasına neden olabilir. 
 
-![ATA’yı 1.7’ye güncelleştirme hatası](media/ata-update-error.png)
-
-Hatanın nedenini bulmak için dağıtım günlüğünü gözden geçirin. Dağıtım günlüğü **%temp%\..\Microsoft Advanced Thread Analytics Center_{date_stamp}_MsiPackage.log** konumunda bulunur. 
-
-Aşağıdaki tabloda aranacak hataların ve hatayı çözmek için ilgili Mongo betiklerinin listesi verilmiştir. Mongo betiğinin nasıl çalıştırılacağını gösteren aşağıdaki örneği inceleyin:
-
-| Dağıtım günlüğü dosyasında hata                                                                                                                  | Mongo betiği                                                                                                                                                                         |
-|---|---|
-| System.FormatException: Size {size},is larger than MaxDocumentSize 16777216 <br>Dosyada ilerleyin:<br>  Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateUniqueEntityProfiles(Boolean isPartial)                                                                                        | db.UniqueEntityProfile.find().forEach(function(obj){if(Object.bsonsize(obj) > 12582912) {print(obj._id);print(Object.bsonsize(obj));db.UniqueEntityProfile.remove({_id:obj._id});}}) |
-| System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown<br>Dosyada ilerleyin:<br>Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.ReduceSuspiciousActivityDetailsRecords(IMongoCollection`1 suspiciousActivityCollection, Int32 deletedDetailRecordMaxCount) | db.SuspiciousActivity.find().forEach(function(obj){if(Object.bsonsize(obj) > 500000),{print(obj._id);print(Object.bsonsize(obj));db.SuspiciousActivity.remove({_id:obj._id});}})     |
-|System.Security.Cryptography.CryptographicException: Bad Length<br>Dosyada ilerleyin:<br> Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateCenterSystemProfile(IMongoCollection`1 systemProfileCollection)| CenterThumbprint db =. SystemProfile.find({_t:"CenterSystemProfile"}).toArray() [0]. Configuration.SecretManagerConfiguration.CertificateThumbprint;db. SystemProfile.update ({_t: "CenterSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}})|
-
-
-Uygun betiği çalıştırmak için aşağıdaki adımları izleyin. 
-
-1.  Yükseltilmiş komut isteminden **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** konumuna göz atın.
-2.  Tür: **Mongo.exe ATA**   (*Not*: ATA büyük harfle yazılmalıdır.)
-3.  Yukarıda bulunan tablodaki dağıtım günlüğünden hatayla eşleşen betiği yapıştırın.
-
-![ATA Mongo Betiği](media/ATA-mongoDB-script.png)
-
-Bu noktada, yükseltmeyi yeniden başlatabiliyor olmanız gerekir.
-
-### ATA birçok "*Dizin hizmetleri listeleme keşfi *" şüpheli etkinlikleri bildirir:
+### JIS kodlama için tarayıcı desteği sağlanmıyor
+**Belirtiler:** ATA Konsolu, JIS kodlama kullanan tarayıcılarda beklendiği gibi çalışmayabilir **Geçici Çözüm:** Tarayıcının kodlamasını Unicode UTF-8 olarak değiştirin.
  
-Bu, kuruluştaki istemci makinelerinin hepsinde (veya çoğunda) ağ tarayan araç bulunmasından kaynaklanıyor olabilir. Bu sorunu görüyorsanız:
+## Küçük değişiklikler
 
-1. Sebebi veya istemci makinelerde çalışan belirli uygulamaları tanımlayabiliyorsanız, Microsoft.com’dan ATAEval’e gereken bilgiyi içeren bir e-posta atın.
-2. Bu olayların hepsini iptal etmek için aşağıdaki mongo betiklerini kullanın (mongo betiklerinin nasıl yürütüleceğini öğrenmek için yukarıyı inceleyin):
-
-db.SuspiciousActivity.update({_t: "SamrReconnaissanceSuspiciousActivity"}, {$set: {Status: "Dismissed"}}, {multi: true})
-
-### ATA kapatılmış şüpheli etkinlikler için bildirim gönderir:
-Bildirimler yapılandırıldıysa, ATA kapatılmış şüpheli etkinlikler için bildirim (e-posta, syslog ve olay günlükleri) göndermeye devam edebilir.
-Şu an sorun için geçici çözüm yoktur. 
-
-### ATA Gateway, TLS 1.0 ve TLS 1.1 devre dışı bırakılmazsa ATA Center’a kaydolmayabilir:
-TLS 1.0 ve TLS 1.1 ATA Gateway’de (veya Lightweight Gateway’de) devre dışı bırakılırsa, ağ geçidi kendini ATA Center’a kaydedemeyebilir
-
-### ATA tarafından kullanılan sertifikalar için otomatik sertifika yenileme desteklenmez
-Otomatik sertifika yenilemenin kullanılması, sertifika otomatik olarak yenilendiğinde ATA’nın çalışmasının durmasına neden olabilir. 
-
+- ATA, ATA Konsolu için artık IIS yerine OWIN kullanıyor.
+- ATA Center hizmeti kapalıysa ATA Konsolu’na erişemezsiniz.
+- ATA NNR’deki değişikliklerden dolayı artık kısa vadeli Kiralama alt ağları gerekmiyor.
 
 ## Ayrıca Bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
@@ -120,6 +87,6 @@ Otomatik sertifika yenilemenin kullanılması, sertifika otomatik olarak yenilen
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO4-->
 
 
