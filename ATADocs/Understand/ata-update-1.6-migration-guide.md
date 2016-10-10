@@ -74,7 +74,7 @@ Uygulamanın bu sürümünde, yeni bir ATA dağıtımı yüklemek ve var olan da
     1.  ATA 1.6 için .Net Framework 4.6.1 yüklü olması gerekir. Zaten yüklü değilse, ATA kendi yüklemesi kapsamında .Net Framework 4.6.1’i de yükler.
     
         > [!NOTE] 
-            .Net Framework 4.6.1 yüklemesi için sunucunun yeniden başlatılması gerekebilir. ATA yüklemesi ancak, sunucu yeniden başlatıldıktan sonra devam eder.
+        > .Net Framework 4.6.1 yüklemesi için sunucunun yeniden başlatılması gerekebilir. ATA yüklemesi ancak, sunucu yeniden başlatıldıktan sonra devam eder.
     
     2.  **Hoş Geldiniz** sayfasında dilinizi seçin ve **İleri**’ye tıklayın.
 
