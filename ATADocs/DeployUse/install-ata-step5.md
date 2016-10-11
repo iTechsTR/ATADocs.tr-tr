@@ -13,8 +13,8 @@ ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: 168a41182128a1fc91d92a4ef11b873c04ecc6b7
+ms.sourcegitcommit: 39eadb9143740741fa592f983f03def5367ada46
+ms.openlocfilehash: 14b04a771f0c18170f0c80d388ab012574d40bee
 
 
 ---
@@ -45,9 +45,9 @@ ATA Gateway yüklendikten sonra, ATA Gateway’in ayarlarını yapılandırmak i
   - **Açıklama**: ATA Gateway için bir açıklama girin (isteğe bağlı).
   - **Bağlantı Noktası Yansıtılan Etki Alanı Denetleyicileri (FQDN)** (ATA Gateway için gereklidir ve ATA Lightweight Gateway için değiştirilemez): Etki alanı denetleyicinizin tam FQDN’sini girin ve listeye eklemek için artı işaretine tıklayın. Örneğin, **dc01.contoso.com**
 
-        The following information applies to the servers you enter in the **Domain Controllers** list:
-        - All domain controllers whose traffic is being monitored via port mirroring by the ATA Gateway must be listed in the **Domain Controllers** list. If a domain controller is not listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected.
-        - At least one domain controller in the list should be a global catalog. This will enable ATA to resolve computer and user objects in other domains in the forest.
+      Aşağıdaki bilgiler, **Etki Alanı Denetleyicileri** listesine girdiğiniz sunucular için geçerlidir:
+      - ATA Gateway tarafından bağlantı noktası yansıtma yoluyla trafiği izlenmekte olan tüm etki alanı denetleyicilerinin, **Etki Alanı Denetleyicileri** listesinde yer alması gerekir. Bir etki alanı denetleyicisi **Etki Alanı Denetleyicileri** listesinde yer almıyorsa, kuşkulu etkinlikleri algılama özelliği beklendiği gibi çalışmayabilir.
+      - Listedeki etki alanı denetleyicilerinden en az biri genel katalog olmalıdır. Bu ATA’nın ormandaki diğer etkin alanlarında yer alan bilgisayar ve kullanıcı nesnelerini çözümleyebilmesine olanak tanır.
 
 - **Yakalama Ağ bağdaştırıcıları** (gerekli):
   - Ayrılmış bir sunucudaki bir ATA Gateway için, hedef yansıtma bağlantı noktası olarak yapılandırılan ağ bağdaştırıcılarını seçin. Böylece, yansıtılmış etki alanı denetleyicisi trafiği alınır.
@@ -96,6 +96,6 @@ ATA Gateway’in başarıyla dağıtıldığını doğrulamak için aşağıdaki
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

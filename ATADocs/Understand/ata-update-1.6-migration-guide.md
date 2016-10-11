@@ -13,8 +13,8 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 87cb9534a45d3a8ca29d6a803ca399a33a3d3ea6
+ms.sourcegitcommit: d3ec5d56444d618efcfc617172e93e0e8e8a1768
+ms.openlocfilehash: 6fd96a8bf2fb1e064cc05858a020cbc2e55746f4
 
 
 ---
@@ -71,23 +71,25 @@ Uygulamanın bu sürümünde, yeni bir ATA dağıtımı yüklemek ve var olan da
 
 2.  Microsoft ATA Center Setup.exe adlı yükleme dosyasını çalıştırın ve ekrandaki yönergeleri izleyerek güncelleştirmeyi yükleyin.
 
-    1.  ATA 1.6 için .Net Framework 4.6.1 yüklü olması gerekir. Zaten yüklü değilse, ATA kendi yüklemesi kapsamında .Net Framework 4.6.1’i de yükler<br>
-    > [!NOTE]
-    > .Net Framework 4.6.1 yüklemesi için sunucunun yeniden başlatılması gerekebilir. ATA yüklemesi ancak, sunucu yeniden başlatıldıktan sonra devam eder.
-5.  **Hoş Geldiniz** sayfasında dilinizi seçin ve **İleri**’ye tıklayın.
+    1.  ATA 1.6 için .Net Framework 4.6.1 yüklü olması gerekir. Zaten yüklü değilse, ATA kendi yüklemesi kapsamında .Net Framework 4.6.1’i de yükler.
+    
+        > [!NOTE] 
+        > .Net Framework 4.6.1 yüklemesi için sunucunun yeniden başlatılması gerekebilir. ATA yüklemesi ancak, sunucu yeniden başlatıldıktan sonra devam eder.
+    
+    2.  **Hoş Geldiniz** sayfasında dilinizi seçin ve **İleri**’ye tıklayın.
 
-    6.  Son Kullanıcı Lisans Sözleşmesi’ni okuyun ve koşulları kabul ediyorsanız **İleri**’ye tıklayın.
+    3.  Son Kullanıcı Lisans Sözleşmesi’ni okuyun ve koşulları kabul ediyorsanız **İleri**’ye tıklayın.
 
-    7.  Artık ATA’nın güncel kalması için, Microsoft Update'i kullanmak da mümkündür.  Microsoft Update sayfasında, **Güncelleştirmeleri denetlediğimde Microsoft Update'i kullan (önerilir)** öğesini seçin.
+    4.  Artık ATA’nın güncel kalması için, Microsoft Update'i kullanmak da mümkündür.  Microsoft Update sayfasında, **Güncelleştirmeleri denetlediğimde Microsoft Update'i kullan (önerilir)** öğesini seçin.
     ![ATA’yı güncel tutma resmi](media/ata_ms_update.png) Bu, burada görüldüğü gibi, Windows ayarlarını diğer Microsoft ürünleri (ATA dahil) için güncelleştirmeleri etkinleştirecek şekilde ayarlar. 
      ![Windows otomatik güncelleştirme resmi](media/ata_installupdatesautomatically.png)
 
-    8.  Yükleme başlamadan önce ATA bir hazırlık denetimi gerçekleştirir. Ön koşulların başarılı şekilde yapılandırıldığından ve az en azından minimum disk alanına sahip olduğunuzdan emin olmak için denetimin sonuçlarını gözden geçirin. 
+    5.  Yükleme başlamadan önce ATA bir hazırlık denetimi gerçekleştirir. Ön koşulların başarılı şekilde yapılandırıldığından ve az en azından minimum disk alanına sahip olduğunuzdan emin olmak için denetimin sonuçlarını gözden geçirin. 
     ![ATA hazırlık denetimi görüntüsü](media/ata_install_readinesschecks.png)
 
-    3.  **Güncelleştir**’e tıklayın. Güncelleştir'e tıkladıktan sonra, güncelleştirme yordamı tamamlanana kadar ATA çevrimdışı kalır.
+    6.  **Güncelleştir**’e tıklayın. Güncelleştir'e tıkladıktan sonra, güncelleştirme yordamı tamamlanana kadar ATA çevrimdışı kalır.
 
-4.  ATA Center’ı güncelleştirdikten sonra, ATA Gateway bileşenleri artık tarihi geçmiş olduklarını bildirirler.
+3.  ATA Center’ı güncelleştirdikten sonra, ATA Gateway bileşenleri artık tarihi geçmiş olduklarını bildirirler.
 
     ![Tarihi geçmiş Gateway bileşenlerinin resmi](media/ATA-center-outdated.png)
 
@@ -140,6 +142,6 @@ Tüm ATA Gateway bileşenleri başarıyla eşitlendiklerini bildirdiklerinde ve 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

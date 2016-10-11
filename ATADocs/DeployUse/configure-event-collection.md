@@ -4,7 +4,7 @@ description: "ATA’yla olay koleksiyonunu yapılandırmaya yönelik seçenekler
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
