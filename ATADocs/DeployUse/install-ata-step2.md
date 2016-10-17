@@ -13,8 +13,8 @@ ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: fc268bcb2e3d027b09fa3349427934f60783b971
+ms.sourcegitcommit: 3768cd103fc2a938d2d39fe34179d74587abc118
+ms.openlocfilehash: be58ce053a2ddb59fa1556027e432c0499f8deb4
 
 
 ---
@@ -42,7 +42,7 @@ ATA Konsolunu ilk açtığınızda aşağıdaki ekran görünür:
     |**Kullanıcı adı** (gerekli)|Salt okunur kullanıcı adını girin, örneğin: **ATAkullanıcısı**.|
     |**Parola** (gerekli)|Salt okunur kullanıcının parolasını girin, örneğin: **Kalem1**.|
     |**Etki alanı** (gerekli)|Salt okunur kullanıcının etki alanını girin, örneğin, **contoso.com**. **Not:** Kullanıcının bulunduğu etki alanının tam FQDN’sini girmek önemlidir. Örneğin, kullanıcının hesabı corp.contoso.com etki alanındaysa, contoso.com değil `corp.contoso.com` girmeniz gerekir.|
-    |Tüm ATA Gateway bileşenlerini otomatik olarak güncelleştir |Bu ayarı etkinleştirirseniz, gelecek sürümlerde ATA Center’ı güncelleştirdiğinizde tüm ATA Gateway bileşenleri otomatik olarak güncelleştirilir.|
+    
 
     Kaydedildikten sonra, Konsoldaki hoş geldiniz iletisi şu şekilde değişir: ![ATA hoş geldiniz aşaması 1 tamamlandı](media/ATA_1.7-welcome-provide-username-finished.png)
 
@@ -62,6 +62,6 @@ ATA Konsolunu ilk açtığınızda aşağıdaki ekran görünür:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 
