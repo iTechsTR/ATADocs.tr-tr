@@ -13,8 +13,8 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
-ms.openlocfilehash: 62f2aadc978547647a1dc3c27ed3453f7ed15828
+ms.sourcegitcommit: a024cab5e706b32273d563095f5d7e690d6ed055
+ms.openlocfilehash: dec9fc03cdf718627dd72ac0c48f934fe507c7ac
 
 
 ---
@@ -73,6 +73,12 @@ ATA Konsolunda, ATA Gateway uzun bir süre “Güncelleştiriliyor (paket indiri
 ### JIS kodlama için tarayıcı desteği sağlanmıyor
 **Belirtiler:** ATA Konsolu, JIS kodlama kullanan tarayıcılarda beklendiği gibi çalışmayabilir **Geçici Çözüm:** Tarayıcının kodlamasını Unicode UTF-8 olarak değiştirin.
  
+### Bağlantı noktası yansıtılmış trafik, VMware kullanırken bırakıldı
+
+Bağlantı noktası yansıtılmış trafik uyarıları, basit ağ geçidi üzerinde VMware kullanırken bırakıldı
+
+VMware sanal makinelerindeki etki alanı denetleyicileri kullanıyorsanız, **Bırakılan bağlantı noktası yansıtılmış ağ trafiği** hakkında uyarı alabilirsiniz. Bu, bir VMware yapılandırma uyuşmazlığından kaynaklanıyor olabilir. Bu uyarıları önlemek için aşağıdaki ayarların 0 veya Devre Dışı olarak ayarlandığını denetleyebilirsiniz: TsoEnable, LargeSendOffload, IPv4, TSO Veri Boşaltma. Ayrıca, IPv4 Büyük TSO Boşaltma’yı devre dışı bırakabilirsiniz. Daha fazla bilgi için VMware belgelerinize başvurun.
+
 ## Küçük değişiklikler
 
 - ATA, ATA Konsolu için artık IIS yerine OWIN kullanıyor.
@@ -87,6 +93,6 @@ ATA Konsolunda, ATA Gateway uzun bir süre “Güncelleştiriliyor (paket indiri
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 
