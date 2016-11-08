@@ -19,17 +19,17 @@ ms.openlocfilehash: be58ce053a2ddb59fa1556027e432c0499f8deb4
 
 ---
 
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
 
-# ATA’yı Yükleme - 2. Adım
+# <a name="install-ata-step-2"></a>ATA’yı Yükleme - 2. Adım
 
 >[!div class="step-by-step"]
 [« 1. Adım](install-ata-step1.md)
 [3. Adım »](install-ata-step3.md)
 
-## 2. Adım Active Directory Ormanınıza bağlanmak için bir Kullanıcı Adı ve Parola sağlayın
+## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>2. Adım Active Directory Ormanınıza bağlanmak için bir Kullanıcı Adı ve Parola sağlayın
 
 ATA Konsolunu ilk açtığınızda aşağıdaki ekran görünür:
 
@@ -44,7 +44,7 @@ ATA Konsolunu ilk açtığınızda aşağıdaki ekran görünür:
     |**Etki alanı** (gerekli)|Salt okunur kullanıcının etki alanını girin, örneğin, **contoso.com**. **Not:** Kullanıcının bulunduğu etki alanının tam FQDN’sini girmek önemlidir. Örneğin, kullanıcının hesabı corp.contoso.com etki alanındaysa, contoso.com değil `corp.contoso.com` girmeniz gerekir.|
     
 
-    Kaydedildikten sonra, Konsoldaki hoş geldiniz iletisi şu şekilde değişir: ![ATA hoş geldiniz aşaması 1 tamamlandı](media/ATA_1.7-welcome-provide-username-finished.png)
+    Kaydedildikten sonra, Konsoldaki hoş geldiniz iletisi şu şekilde değişir: ![ATA hoş geldiniz aşama 1 tamamlandı](media/ATA_1.7-welcome-provide-username-finished.png)
 
 2. Devam etmek için Konsolda **Ağ Geçidi kurulumunu indir ve ilk Ağ Geçidini yükle**’ye tıklayın.
 
@@ -54,7 +54,7 @@ ATA Konsolunu ilk açtığınızda aşağıdaki ekran görünür:
 [3. Adım »](install-ata-step3.md)
 
 
-## Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
@@ -62,6 +62,6 @@ ATA Konsolunu ilk açtığınızda aşağıdaki ekran görünür:
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO4-->
 
 
