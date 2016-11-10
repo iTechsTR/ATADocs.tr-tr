@@ -13,8 +13,8 @@ ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3768cd103fc2a938d2d39fe34179d74587abc118
-ms.openlocfilehash: be58ce053a2ddb59fa1556027e432c0499f8deb4
+ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
+ms.openlocfilehash: 3f78d0dd6b1e3f419c7e72e0449f77e7d2b3167d
 
 
 ---
@@ -42,11 +42,12 @@ ATA Konsolunu ilk açtığınızda aşağıdaki ekran görünür:
     |**Kullanıcı adı** (gerekli)|Salt okunur kullanıcı adını girin, örneğin: **ATAkullanıcısı**.|
     |**Parola** (gerekli)|Salt okunur kullanıcının parolasını girin, örneğin: **Kalem1**.|
     |**Etki alanı** (gerekli)|Salt okunur kullanıcının etki alanını girin, örneğin, **contoso.com**. **Not:** Kullanıcının bulunduğu etki alanının tam FQDN’sini girmek önemlidir. Örneğin, kullanıcının hesabı corp.contoso.com etki alanındaysa, contoso.com değil `corp.contoso.com` girmeniz gerekir.|
-    
+
+2. İsteğe bağlı olarak, **Bağlantıyı test et**’e tıklayarak etki alanı bağlantısını test edebilir ve verilen kimlik bilgilerinin erişim sağlayıp sağlamadığını kontrol edebilirsiniz. Bu, yalnızca ATA Center’ın etki alanına bağlı olması durumunda çalışır.   
 
     Kaydedildikten sonra, Konsoldaki hoş geldiniz iletisi şu şekilde değişir: ![ATA hoş geldiniz aşama 1 tamamlandı](media/ATA_1.7-welcome-provide-username-finished.png)
 
-2. Devam etmek için Konsolda **Ağ Geçidi kurulumunu indir ve ilk Ağ Geçidini yükle**’ye tıklayın.
+3. Devam etmek için Konsolda **Ağ Geçidi kurulumunu indir ve ilk Ağ Geçidini yükle**’ye tıklayın.
 
 
 >[!div class="step-by-step"]
@@ -62,6 +63,6 @@ ATA Konsolunu ilk açtığınızda aşağıdaki ekran görünür:
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Oct16_HO5-->
 
 

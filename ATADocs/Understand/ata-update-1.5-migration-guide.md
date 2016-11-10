@@ -13,8 +13,8 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: be23c15ce709b710dc48b333fc464aa190772573
+ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
+ms.openlocfilehash: 637d847af82d15a5b88fb43274f606a9b89da445
 
 
 ---
@@ -44,7 +44,7 @@ ATA sürüm 1.4’ü önceden dağıttıysanız, bu yordam yüklemenizi güncell
 
 ATA sürüm 1.5’e güncelleştirmek için bu adımları izleyin:
 
-1.  [Sürüm 1.5 güncelleştirmesini indirme](http://aka.ms/ata1_5update)
+1.  VLSC veya MSDN’den ATA v1.5’i indirin.
       > [!NOTE]
          Sürüm 1.5’e güncelleştirmek için, ATA’nın güncelleştirilmiş tam sürümünü de kullanabilirsiniz.
 
@@ -134,6 +134,6 @@ Tüm ATA Gateway bileşenleri başarıyla eşitlendiklerini bildirdiklerinde ve 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

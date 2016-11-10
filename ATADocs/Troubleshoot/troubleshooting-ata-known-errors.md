@@ -4,7 +4,7 @@ description: "ATA’da sık karşılaşılan hataları nasıl giderebileceğiniz
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,19 +13,19 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 15c1a0d7ae213876c0e3a955eaeea8887281b4e6
-ms.openlocfilehash: b073a1b969f8841c9bbe540722349a5ef70340d4
+ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
+ms.openlocfilehash: aa16eeb45272ffcf28bbb28ed9a02f30f52b15d0
 
 
 ---
 
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
 
-# ATA hata günlüğü sorunlarını giderme
+# <a name="troubleshooting-the-ata-error-log"></a>ATA hata günlüğü sorunlarını giderme
 Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için gereken adımları açıklar.
-## ATA Gateway hataları
+## <a name="ata-gateway-errors"></a>ATA Gateway hataları
 |Hata|Açıklama|Çözüm|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: Yerel bir hata oluştu|ATA Gateway, etki alanı denetleyicisine karşı kimlik doğrulaması yapamadı.|1. Etki alanı denetleyicisinin DNS kaydının DNS sunucusunda düzgün şekilde yapılandırıldığını doğrulayın. <br>2. ATA Gateway saatinin etki alanı denetleyicisinin saatiyle eşitlendiğini doğrulayın.|
@@ -44,12 +44,21 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 |System.ApplicationException: ETW oturumu MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329 başlatılamıyor|HOSTS dosyasında makinenin kısa adına işaret eden bir ana bilgisayar girişi var|Ana bilgisayar girişini C:\Windows\System32\drivers\etc\HOSTS dosyasından kaldırın ya da bir FQDN olarak değiştirin.|
 
 
-## ATA IIS hataları (ATA v1.7 ve üzeri sürümlerde uygulanamaz)
+
+## <a name="ata-lightweight-gateway-errors"></a>ATA Lightweight Gateway hataları
+
+**Hata**: VMware’de Lightweight Gateway kullanırken alınan, bağlantı noktası yansıtma trafiği bırakıldı uyarıları
+
+**Açıklama**: VMware sanal makinelerinde etki alanı denetleyicileri kullanıyorsanız, **Bağlantı noktası yansıtma trafiği bırakıldı** uyarıları alabilirsiniz. Bunun sebebi, bir VMware yapılandırma uyuşmazlığı olabilir. 
+**Çözüm**: Bu uyarıları önlemek için, şu ayarların 0 veya Devre Dışı olarak belirlendiğinden emin olun: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Ayrıca, IPv4 Büyük TSO Boşaltma’yı devre dışı bırakabilirsiniz. Daha fazla bilgi için VMware belgelerinize başvurun.
+
+
+## <a name="ata-iis-errors-not-applicable-for-ata-v17-and-above"></a>ATA IIS hataları (ATA v1.7 ve üzeri sürümlerde uygulanamaz)
 |Hata|Açıklama|Çözüm|
 |-------------|----------|---------|
-|HTTP Hatası 500.19 – İç Sunucu Hatası|IIS URL Yeniden yazma modülü düzgün şekilde yüklenemedi.|IIS URL Yeniden yazma modülünü kaldırıp yeniden yükleyin.<br>[IIS URL Yeniden yazma modülünü indirin](http://go.microsoft.com/fwlink/?LinkID=615137)|
+|HTTP Hatası 500.19 – İç Sunucu Hatası|IIS URL Yeniden yazma modülü düzgün şekilde yüklenemedi.|IIS URL Yeniden yazma modülünü kaldırıp yeniden yükleyin.<br>[IIS URL Yeniden yazma Modülü’nü indirin](http://go.microsoft.com/fwlink/?LinkID=615137)|
 
-## Dağıtım hataları
+## <a name="deployment-errors"></a>Dağıtım hataları
 |Hata|Açıklama|Çözüm|
 |-------------|----------|---------|
 |.Net Framework 4.6.1 yüklemesi 0x800713ec hatasıyla başarısız oldu|.Net Framework 4.6.1 ön koşulları sunucuda yüklü değil. |ATA’yı yüklemeden önce, [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) ve [KB2919355](https://support.microsoft.com/kb/2919355) Windows güncelleştirmelerinin sunucuda yüklü olduğunu doğrulayın.|
@@ -57,7 +66,7 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 ![ATA .NET yükleme hatası görüntüsü](media/netinstallerror.png)
 
 
-## Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA kapasite planlaması](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection)
@@ -66,6 +75,6 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO5-->
 
 
