@@ -13,8 +13,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: a3fcf3b2ba7f90f2329d86ab9e8d19619cc7e28f
+ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
+ms.openlocfilehash: a6fe3a8f042ca7f35180e99e5bc3ffd14f0ea6d8
 
 
 ---
@@ -117,7 +117,7 @@ Bu tabloda IP adresi 1, ATA Center hizmetine ve IP adresi 2 de ATA Konsoluna ba�
 ### Sertifikalar
 ATA Center’ın CRL dağıtım noktanıza erişimi olduğundan emin olun. ATA Gateway bileşenlerinin İnternet erişimi yoksa, [CRL’yi el ile içeri aktarma yordamını](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) izleyin ve tüm zincir için CRL dağıtım noktalarının tümünü yükleme işlemini gerçekleştirin.
 
-ATA Center’ın yüklemesini kolaylaştırmak için, ATA Center’ın yüklemesi sırasında otomatik olarak imzalanan sertifikalar yükleyebilirsiniz. Dağıtım sonrasında otomatik olarak imzalanan sertifikayı ATA Gateway tarafından kullanılacak bir iç Sertifika Yetkilisi’nin sertifikasıyla değiştirebilirsiniz.<br>
+ATA’nın yüklenmesini kolaylaştırmak için, işlem sırasında otomatik olarak imzalanan sertifikalar yükleyebilirsiniz. Dağıtım sonrasında otomatik olarak imzalanan sertifikayı ATA Gateway tarafından kullanılacak bir iç Sertifika Yetkilisi’nin sertifikasıyla değiştirebilirsiniz.<br>
 > [!NOTE]
 > Sertifikanın Sağlayıcı Türü, Şifreleme Hizmeti Sağlayıcısı (CSP) olmalıdır.
 
@@ -201,7 +201,7 @@ Aşağıdaki tabloda, ATA Gateway için yönetim bağdaştırıcısında yapıla
 
 ### Sertifikalar
 ATA Center’ın CRL dağıtım noktanıza erişimi olduğundan emin olun. ATA Gateway bileşenlerinin İnternet erişimi yoksa, CRL’yi el ile içeri aktarma yordamını izleyin ve tüm zincir için CRL dağıtım noktalarının tümünü yükleme işlemini gerçekleştirin.<br>
-ATA Center’ın yüklemesini kolaylaştırmak için, ATA Center’ın yüklemesi sırasında otomatik olarak imzalanan sertifikalar yükleyebilirsiniz. Dağıtım sonrasında otomatik olarak imzalanan sertifikayı ATA Gateway tarafından kullanılacak bir iç Sertifika Yetkilisi’nin sertifikasıyla değiştirebilirsiniz.
+ATA’nın yüklenmesini kolaylaştırmak için, işlem sırasında otomatik olarak imzalanan sertifikalar yükleyebilirsiniz. Dağıtım sonrasında otomatik olarak imzalanan sertifikayı ATA Gateway tarafından kullanılacak bir iç Sertifika Yetkilisi’nin sertifikasıyla değiştirebilirsiniz.
 
 > [!NOTE]
 > Sertifikanın Sağlayıcı Türü, Şifreleme Hizmeti Sağlayıcısı (CSP) olmalıdır.<br>
@@ -254,7 +254,7 @@ Aşağıdaki tabloda, ATA Lightweight Gateway için gereken minimum bağlantı n
 
 ### Sertifikalar
 ATA Center’ın CRL dağıtım noktanıza erişimi olduğundan emin olun. ATA Lightweight Gateway bileşenlerinin İnternet erişimi yoksa, CRL’yi el ile içeri aktarma yordamını izleyin ve tüm zincir için CRL dağıtım noktalarının tümünü yükleme işlemini gerçekleştirin.
-ATA Center’ın yüklemesini kolaylaştırmak için, ATA Center’ın yüklemesi sırasında otomatik olarak imzalanan sertifikalar yükleyebilirsiniz. Dağıtım sonrasında otomatik olarak imzalanan sertifikayı ATA Lightweight Gateway tarafından kullanılacak bir iç Sertifika Yetkilisi’nin sertifikasıyla değiştirebilirsiniz.
+ATA’nın yüklenmesini kolaylaştırmak için, işlem sırasında otomatik olarak imzalanan sertifikalar yükleyebilirsiniz. Dağıtım sonrasında otomatik olarak imzalanan sertifikayı ATA Lightweight Gateway tarafından kullanılacak bir iç Sertifika Yetkilisi’nin sertifikasıyla değiştirebilirsiniz.
 > [!NOTE]
 > Sertifikanın Sağlayıcı Türü, Şifreleme Hizmeti Sağlayıcısı (CSP) olmalıdır.
 
@@ -281,6 +281,6 @@ ATA Konsolu’na tarayıcı yoluyla erişilir ve aşağıdakiler desteklenir:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 

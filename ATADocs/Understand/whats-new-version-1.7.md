@@ -4,7 +4,7 @@ description: "ATA sürüm 1.7’teki yenilikleri ve bilinen sorunları listeler"
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 09/20/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,16 +13,16 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a024cab5e706b32273d563095f5d7e690d6ed055
-ms.openlocfilehash: dec9fc03cdf718627dd72ac0c48f934fe507c7ac
+ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
+ms.openlocfilehash: 03a5e6a5398ffcc43e712bd4a3c2f872cd91c0b4
 
 
 ---
 
-# ATA sürüm 1.7’deki yenilikler
+# <a name="whats-new-in-ata-version-17"></a>ATA sürüm 1.7’deki yenilikler
 Bu sürüm notları, Advanced Threat Analytics’in bu sürümündeki bilinen sorunlar hakkında bilgi sağlar.
 
-## ATA 1.7 güncelleştirmesindeki yenilikler
+## <a name="whats-new-in-the-ata-17-update"></a>ATA 1.7 güncelleştirmesindeki yenilikler
 ATA 1.7 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 
 -   Yeni ve güncelleştirilmiş algılamalar
@@ -36,7 +36,7 @@ ATA 1.7 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 -   Küçük değişiklikler
 
 
-### Yeni ve güncelleştirilmiş algılamalar
+### <a name="new-updated-detections"></a>Yeni ve güncelleştirilmiş algılamalar
 
 
 - **Dizin Hizmetleri Numaralandırması kullanarak keşif** Keşif aşamasının bir parçası olarak, saldırganlar farklı yöntemler kullanarak ağdaki varlıklar hakkında bilgi toplar. SAM-R protokolünü kullanan Dizin hizmetleri numaralandırması saldırganların bir etki alanındaki kullanıcıların ve grupların listesini ele geçirmesini ve farklı varlıklar arasındaki etkileşimi anlamasını sağlar. 
@@ -50,19 +50,19 @@ ATA 1.7 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 - **Olağan Dışı Protokol Uygulaması Geliştirmeleri** ATA artık Kerberos protokolünde olağan dışı protokol uygulamalarını ve NTLM protokolündeki ek anormallikleri algılamaktadır. Özellikle, Kerberos’taki bu yeni anormallikler Karma Değeri Atlayarak Geçiş saldırılarında yaygın olarak kullanılır.
 
 
-### Altyapı
+### <a name="infrastructure"></a>Altyapı
 
 - **Rol tabanlı erişim denetimi** Rol Tabanlı Erişim Denetimi (RBAC) kapasitesi. ATA 1.7 üç rol içerir: ATA Yöneticisi, ATA Analisti ve ATA İdarecisi.
 
 - **Windows Server 2016 ve Windows Server Core Desteği** ATA 1.7, Windows Server 2012 için Server Core ve Windows Server 2012 R2 için Server Core çalıştıran etki alanı denetleyicilerinde Lightweight Gateway bileşenlerinin dağıtımını destekler. Ayrıca, bu sürüm Windows Server 2016’yı hem ATA Center hem de ATA Gateway bileşenleri için destekler.
 
-### Kullanıcı Deneyimi
+### <a name="user-experience"></a>Kullanıcı Deneyimi
 - **Yapılandırma Deneyimi** Bu sürümde, ATA yapılandırması deneyimi daha iyi bir kullanıcı deneyimi sağlama amacıyla ve birden çok ATA Gateway bileşenine sahip ortamları daha iyi destekleyecek şekilde tasarlanmıştır. Bu sürüm ayrıca, çeşitli Ağ Geçitlerinin otomatik güncelleştirme işlemlerinin daha kolay, daha iyi yönetilmesi için ATA Gateway güncelleştirme sayfasını getirmiştir.
 
-## Bilinen sorunlar
+## <a name="known-issues"></a>Bilinen sorunlar
 Bu sürümün bilinen sorunları şunlardır:
 
-### Ağ geçidi otomatik güncelleştirme işlemi başarısız olabilir
+### <a name="gateway-automatic-update-may-fail"></a>Ağ geçidi otomatik güncelleştirme işlemi başarısız olabilir
 **Belirtiler:** Yavaş WAN bağlantılarına sahip ortamlarda, ATA Gateway güncelleştirmesi güncelleştirme zaman aşımına (100 saniye) ulaşabilir ve başarıyla tamamlanamayabilir.
 ATA Konsolunda, ATA Gateway uzun bir süre “Güncelleştiriliyor (paket indiriliyor)” durumuna sahip olur ve sonunda başarısız olur.
 **Geçici çözüm:** Bu sorunu çözmek için en son ATA Gateway paketini ATA Konsolundan indirin ve ATA Gateway’i el ile güncelleştirin.
@@ -70,29 +70,46 @@ ATA Konsolunda, ATA Gateway uzun bir süre “Güncelleştiriliyor (paket indiri
  > [!IMPORTANT]
  ATA tarafından kullanılan sertifikalar için otomatik sertifika yenileme desteklenmez. Bu sertifikaların kullanılması sertifika otomatik olarak yenilendiğinde ATA’nın çalışmasının durmasına neden olabilir. 
 
-### JIS kodlama için tarayıcı desteği sağlanmıyor
+### <a name="no-browser-support-for-jis-encoding"></a>JIS kodlama için tarayıcı desteği sağlanmıyor
 **Belirtiler:** ATA Konsolu, JIS kodlama kullanan tarayıcılarda beklendiği gibi çalışmayabilir **Geçici Çözüm:** Tarayıcının kodlamasını Unicode UTF-8 olarak değiştirin.
  
-### Bağlantı noktası yansıtılmış trafik, VMware kullanırken bırakıldı
+### <a name="dropped-port-mirror-traffic-when-using-vmware"></a>Bağlantı noktası yansıtılmış trafik, VMware kullanırken bırakıldı
 
 Bağlantı noktası yansıtılmış trafik uyarıları, basit ağ geçidi üzerinde VMware kullanırken bırakıldı
 
 VMware sanal makinelerindeki etki alanı denetleyicileri kullanıyorsanız, **Bırakılan bağlantı noktası yansıtılmış ağ trafiği** hakkında uyarı alabilirsiniz. Bu, bir VMware yapılandırma uyuşmazlığından kaynaklanıyor olabilir. Bu uyarıları önlemek için aşağıdaki ayarların 0 veya Devre Dışı olarak ayarlandığını denetleyebilirsiniz: TsoEnable, LargeSendOffload, IPv4, TSO Veri Boşaltma. Ayrıca, IPv4 Büyük TSO Boşaltma’yı devre dışı bırakabilirsiniz. Daha fazla bilgi için VMware belgelerinize başvurun.
 
-## Küçük değişiklikler
+### <a name="automatic-gateway-update-fail-when-updating-to-17-update-1"></a>1.7 güncelleştirme 1’e güncelleştirirken Automatic Gateway güncelleştirme hatası
+
+ATA 1.7’den ATA 1.7 güncelleştirme 1 sürümüne geçilirken, ATA Gateway otomatik güncelleştirme işlemi ve ağ geçitlerini Gateway paketi aracılığıyla el ile yükleme işlemi beklendiği gibi çalışmayabilir.
+ATA Center tarafından kullanılan sertifika, ATA güncelleştirilmeden önce değiştirildiyse bu sorun oluşur.
+Bu sorunu doğrulamak için, ATA Gateway’deki **Microsoft.Tri.Gateway.Updater.log** günlüğünü gözden geçirin ve şu özel durumları arayın: **System.Net.Http.HttpRequestException: İstek gönderilirken bir hata oluştu. ---> System.Net.WebException: Ana bağlantı kesildi: Gönderme sırasında beklenmeyen bir hata oluştu. ---> System.IdentityModel.Tokens.SecurityTokenValidationException: Sertifika parmak izi doğrulanamadı**
+
+![ATA ağ geçidi güncelleştirme hatası](media/17update_gatewaybug.png)
+
+Bu sorunu çözmek için, sertifikayı değiştirdikten sonra yükseltilmiş komut isteminden **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** konumuna gidin ve şu komutu çalıştırın:
+
+1. Mongo.exe ATA (ATA büyük harfle yazılmalıdır) 
+
+2. CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;
+
+3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
+
+
+## <a name="minor-changes"></a>Küçük değişiklikler
 
 - ATA, ATA Konsolu için artık IIS yerine OWIN kullanıyor.
 - ATA Center hizmeti kapalıysa ATA Konsolu’na erişemezsiniz.
 - ATA NNR’deki değişikliklerden dolayı artık kısa vadeli Kiralama alt ağları gerekmiyor.
 
-## Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
-[ATA 1.7’ye güncelleştirme - taşıma rehberi](ata-update-1.7-migration-guide.md)
+[ATA 1.7’ye güncelleştirme - geçiş rehberi](ata-update-1.7-migration-guide.md)
 
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO5-->
 
 
