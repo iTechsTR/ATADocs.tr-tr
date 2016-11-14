@@ -1,9 +1,10 @@
 # [Anlama ve Keşfetme](/understand-explore/what-is-ata)
 # [Planlama ve Tasarlama](/plan-design/ata-architecture)
-# [Dağıtma ve Kullanma](/deploy-use/preinstall-ata)
-# [Sorunları Gider](/troubleshoot/troubleshooting-ata-known-errors)
+# [Dağıtma](/advanced-threat-analytics/deploy-use/preinstall-ata)
+# [Kullanma](/advanced-threat-analytics/deploy-use/operate-ata)
+# [Sorun Giderme](/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Oct16_HO5-->
 
 

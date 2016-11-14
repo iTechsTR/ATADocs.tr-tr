@@ -3,10 +3,11 @@
 ## [ATA Mimarisi](ata-architecture.md)
 ## [ATA kapasitenizi planlama](ata-capacity-planning.md)
 ## [ATA Önkoşulları](ata-prerequisites.md)
-# [Dağıtma ve Kullanma](/advanced-threat-analytics/deploy-use/preinstall-ata)
-# [Sorunları Gider](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+# [Dağıtma](/advanced-threat-analytics/deploy-use/preinstall-ata)
+# [Kullanma](/advanced-threat-analytics/deploy-use/operate-ata)
+# [Sorun Giderme](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO5-->
 
 
