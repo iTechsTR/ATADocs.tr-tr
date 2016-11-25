@@ -1,28 +1,29 @@
 ---
-title: "ATA sürüm 1.6’daki yenilikler | Microsoft ATA"
+title: "ATA sürüm 1.6’daki yenilikler | Microsoft Docs"
 description: "ATA sürüm 1.6’daki yenilikleri ve bilinen sorunları listeler"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
+ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 0f801b4d5f2ab9a103b2ca292c75f26040699dd0
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: 2cf155b0a54d12e78b5cac5be1ac077786e8cd07
 
 
 ---
 
-# ATA sürüm 1.6’daki yenilikler
+# <a name="whats-new-in-ata-version-16"></a>ATA sürüm 1.6’daki yenilikler
 Bu sürüm notları, Advanced Threat Analytics’in bu sürümündeki bilinen sorunlar hakkında bilgi sağlar.
 
-## ATA 1.6 güncelleştirmesindeki yenilikler
+## <a name="whats-new-in-the-ata-16-update"></a>ATA 1.6 güncelleştirmesindeki yenilikler
 ATA 1.6 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 
 -   Yeni algılamalar
@@ -39,7 +40,7 @@ ATA 1.6 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 
 -   IBM QRadar desteği
 
-### Yeni algılamalar
+### <a name="new-detections"></a>Yeni algılamalar
 
 
 - **Kötü Amaçlı Veri Koruma Özel Bilgi İsteği** Veri Koruma API’si (DPAPI) parola tabanlı bir veri koruma hizmetidir. Bu koruma hizmeti web sitesi parolaları ve dosya paylaşımı kimlik bilgileri gibi kullanıcının gizli bilgilerini depolayan çeşitli uygulamalar tarafından kullanılır. Parolanın kaybolması senaryolarını desteklemek için, kullanıcılar parolalarını içermeyen bir kurtarma anahtarı kullanılarak korunan verilerin şifresini çözebilir. Bir etki alanı ortamında, saldırganlar uzaktan kurtarma anahtarını çalabilir ve tüm etki alanına katılmış bilgisayarlarda korunan verilerin şifresini çözmek için kullanabilirler.
@@ -57,31 +58,31 @@ ATA 1.6 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 - **Olağan dışı protokol uygulanması** Kimlik doğrulama istekleri (Kerberos veya NTLM) genellikle standart bir dizi yöntem ve protokoller kullanılarak gerçekleştirilir. Ancak başarıyla kimlik doğrulamak için, isteğin yalnızca belirli gereksinimleri karşılaması gerekir. Saldırganlar bu protokolleri, ortamda standart uygulamadan küçük sapmalarla uygulayabilir. Bu sapmalar Karma Değer Geçişi, Deneme Yanılma vb. saldırılar uygulamaya çalışan bir saldırganın varlığına işaret edebilir.
 
 
-### Var olan algılamalarda geliştirmeler
+### <a name="improvements-to-existing-detections"></a>Var olan algılamalarda geliştirmeler
 ATA 1.6 Altın Anahtar, Şanslı Belirteç, Deneme Yanılma ve Uzak Yürütme gibi var olan algılamalar için hatalı pozitif ve hatalı negatif senaryoları azaltan geliştirilmiş bir algılama mantığına sahiptir.
 
-### ATA Lightweight Gateway
+### <a name="the-ata-lightweight-gateway"></a>ATA Lightweight Gateway
 ATA’nın bu sürümü ATA Gateway için, doğrudan Etki Alanı Denetleyicisine ATA Gateway yüklenmesine olanak sağlayan yeni bir dağıtım seçeneği sunar. Bu dağıtım seçeneği ATA Gateway’in kritik olmayan işlevlerini kaldırır ve etki alanı denetleyicisindeki kullanılabilir kaynaklara dayalı olarak dinamik kaynak yönetimi sunar ve bu da etki alanı denetleyicisindeki var olan işlemlerin etkilenmemesini sağlar. ATA Lightweight Gateway, ATA dağıtımının maliyetini azaltır. Aynı zamanda, bağlantı noktası yansıtma desteği kurmak için donanım kaynak kapasitesinin veya olanaklarının sınırlı olduğu şubelerde dağıtımı kolaylaştırır.
 ATA Lightweight Gateway hakkında daha fazla bilgi için bkz. [ATA mimarisi](/advanced-threat-analytics/plan-design/ata-architecture#ata-gateway-and-ata-lightweight-gateway)
 
 Dağıtım hakkında önemli noktalar ve sizin için doğru türde ağ geçitlerini seçme konusunda daha fazla bilgi için bkz. [ATA kapasite planlaması](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment)
 
 
-### Otomatik güncelleştirmeler
+### <a name="automatic-updates"></a>Otomatik güncelleştirmeler
 Sürüm 1.6 ile başlayarak, Microsoft Update kullanarak ATA Center’ı güncelleştirmek mümkündür. Ayrıca, ATA Gateway’ler artık ATA Center’a kendi standart iletişim kanalı kullanılarak otomatik olarak güncelleştirilebilir.
-### Geliştirilmiş ATA Center performansı
+### <a name="improved-ata-center-performance"></a>Geliştirilmiş ATA Center performansı
 Bu sürümde daha basit bir veritabanı yükü ve tüm algılamaların daha verimli bir şekilde çalıştırılması, daha pek çok etki alanı denetleyicisin tek bir ATA Center ile izlenmesine olanak sağlar.
 
-### Daha az depolama alanı gereksinimleri
+### <a name="lower-storage-requirements"></a>Daha az depolama alanı gereksinimleri
 ATA 1.6, ATA Veritabanını çalıştırmak için önemli ölçüde daha az depolama alanı gerektirir; şimdi önceki sürümlerde kullanılanın %20’si kadar alan gerekir.
 
-### IBM QRadar desteği
+### <a name="support-for-ibm-qradar"></a>IBM QRadar desteği
 ATA daha önce desteklenen SIEM çözümlerinin yanı sıra şimdi IBM'in QRadar SIEM çözümünden gelen olayları alabilmektedir.
 
-## Bilinen sorunlar
+## <a name="known-issues"></a>Bilinen sorunlar
 Bu sürümün bilinen sorunları şunlardır:
 
-### El ile taşınan veritabanlarında yeni yolu tanıma hatası
+### <a name="failure-to-recognize-new-path-in-manually-moved-databases"></a>El ile taşınan veritabanlarında yeni yolu tanıma hatası
 
 Veritabanı yolunun el ile taşındığı dağıtımlarda, ATA dağıtımı güncelleştirme için yeni veritabanı yolunu kullanmaz. Bu aşağıdaki sorunlara neden olabilir:
 
@@ -92,12 +93,12 @@ Veritabanı yolunun el ile taşındığı dağıtımlarda, ATA dağıtımı gün
 - ATA’yı 1.6 sürümüne güncelleştirmek, aşağıdaki resimde gösterilen güncelleştirme öncesi Hazırlık Denetimlerinde başarısız olabilir.
     ![Başarısız hazırlık denetimi](media/ata_failed_readinesschecks.png)
     >[!Important]
-ATA’yı 1.6 sürümüne güncelleştirmeden önce, aşağıdaki kayıt defteri anahtarını doğru veritabanı yoluyla güncelleştirin:  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath`
+ATA’yı 1.6 sürümüne güncelleştirmeden önce, aşağıdaki kayıt defteri anahtarını doğru veritabanı yoluyla güncelleştirin: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath`
 
-### ATA 1.5’ten güncelleştirirken geçiş hatası
+### <a name="migration-failure-when-updating-from-ata-15"></a>ATA 1.5’ten güncelleştirirken geçiş hatası
 ATA 1.6’ya güncelleştirirken, güncelleştirme işlemi şu hata koduyla başarısız olabilir:
 
-![ATA’yı 1.6 sürümüne güncelleştirme hatası](http://i.imgur.com/QrLSApr.png) Bu hatayı görürseniz, **C:\Users\<User>\AppData\Local\Temp** konumundaki dağıtım günlüğünde gözden geçirin ve aşağıdaki özel durumları arayın:
+![ATA’yı 1.6 sürümüne güncelleştirme hatası](http://i.imgur.com/QrLSApr.png) Bu hatayı görürseniz, **C:\Users\<User>\AppData\Local\Temp** konumundaki dağıtım günlüğünü gözden geçirin ve aşağıdaki özel durumu arayın:
 
     System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error. E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.  E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
 
@@ -130,22 +131,22 @@ Bu hatalardan herhangi biriyle karşılaşırsanız, aşağıdaki geçici çöz�
 Bu bir WriteResult({ "nRemoved" : XX }) döndürebilir; burada “XX” silinen Şüpheli Etkinlik sayısıdır. Sayı 0'dan büyükse, komut isteminden çıkın ve güncelleştirme işlemine devam.
 
 
-### NET Framework 4.6.1, sunucunun yeniden başlatılmasını gerektirir
+### <a name="net-framework-461-requires-restarting-the-server"></a>NET Framework 4.6.1, sunucunun yeniden başlatılmasını gerektirir
 
 Bazı durumlarda, .Net Framework 4.6.1 yüklemesi sunucuyu yeniden başlatmanızı gerekebilir. **Microsoft Advanced Threat Analytics Center Kurulumu** iletişim kutusunda Tamam düğmesine tıkladığınızda sunucunun otomatik olarak yeniden başlatıldığına dikkat edin. Kurulumdan önce bir bakım penceresi planlamak isteyebileceğinizden, bu özellikle ATA Lightweight Gateway’i bir etki alanı denetleyicisine yüklerken önemlidir.
-    ![.Net Framework yeniden başlatması](media/ata-net-framework-restart.png)
+    ![.NET Framework’ü yeniden başlatma](media/ata-net-framework-restart.png)
 
-### Geçmiş ağ etkinlikleri artık geçirilmez
+### <a name="historical-network-activities-no-longer-migrated"></a>Geçmiş ağ etkinlikleri artık geçirilmez
 ATA’nın bu sürümü daha doğru algılama sunan ve özellikle Karma Değer Geçirme için birçok hatalı pozitif senaryosunu azaltan geliştirilmiş bir algılama altyapısı sunar.
 Yeni ve geliştirilmiş algılama altyapısı hat içi algılama teknolojisini kullanarak, ATA Center’ın performansını önemli ölçüde artırmak için, geçmiş ağ etkinliğine erişmeksizin algılamaya olanak sağlar. Bu aynı zamanda, güncelleştirme işlemi sırasında geçmiş ağ etkinliğinin aktarılmasına gerek kalmadığı anlamına gelir.
 Gelecekte araştırmak amacıyla istemeniz halinde, ATA güncelleştirme yordamı verileri JSON dosyası olarak `<Center Installation Path>\Migration` uygulamasına aktarır.
 
-## Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
-[ATA’yı 1.6 sürümüne güncelleştirme - geçiş kılavuzu](ata-update-1.6-migration-guide.md)
+[ATA’yı 1.6 sürümüne güncelleştirme: geçiş kılavuzu](ata-update-1.6-migration-guide.md)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Nov16_HO3-->
 
 

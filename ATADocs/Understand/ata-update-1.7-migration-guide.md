@@ -1,25 +1,26 @@
 ---
-title: "ATA’yı 1.7 sürümüne güncelleştirme geçiş kılavuzu | Microsoft ATA"
+title: "ATA’yı 1.7 sürümüne güncelleştirme geçiş kılavuzu | Microsoft Docs"
 description: "ATA’yı 1.7 sürümüne güncelleştirme yordamları"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
+ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3a821bf1479af529fd65e2153f8b722999c83a4f
-ms.openlocfilehash: 444bc4744834219d9db7bc8c209f33c039f90dad
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: 4fa8b77aeffff327672396e9819215cc536af918
 
 
 ---
 
-# ATA’yı 1.7 sürümüne güncelleştirme geçiş kılavuzu
+# <a name="ata-update-to-17-migration-guide"></a>ATA’yı 1.7 sürümüne güncelleştirme geçiş kılavuzu
 ATA 1.7 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 
 -   Yeni algılamalar
@@ -27,7 +28,7 @@ ATA 1.7 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 -   Var olan algılamalarda geliştirmeler
   
 
-## ATA’yı 1.7 sürümüne güncelleştirme
+## <a name="updating-ata-to-version-17"></a>ATA’yı 1.7 sürümüne güncelleştirme
 
 > [!NOTE] 
 > ATA ortamınızda yüklü değilse, ATA’nın sürüm 1.7’yi da içeren tam sürümünü indirin ve [ATA’yı Yükleme](/advanced-threat-analytics/deploy-use/install-ata) başlığı altında açıklanan standart yükleme yordamını izleyin.
@@ -49,7 +50,7 @@ Uygulamanın bu sürümünde, yeni bir ATA dağıtımı yüklemek ve var olan da
     > [!IMPORTANT]
     > ATA’nın düzgün çalıştığından emin olmak için tüm ATA Gateway bileşenlerini güncelleştirin.
 
-### 1. Adım: ATA Center’ı güncelleştirme
+### <a name="step-1-update-the-ata-center"></a>1. Adım: ATA Center’ı güncelleştirme
 
 1.  Veritabanınızı yedekleyin: (isteğe bağlı)
 
@@ -62,7 +63,7 @@ Uygulamanın bu sürümünde, yeni bir ATA dağıtımı yüklemek ve var olan da
     -  **Hoş Geldiniz** sayfasında dilinizi seçin ve **İleri**’ye tıklayın.
 
     -  Sürüm 1.6’da otomatik güncelleştirmeleri etkinleştirmediyseniz, ATA’nın güncel kalması için ATA’yı Microsoft Update kullanacak şekilde ayarlamanız istenir.  Microsoft Update sayfasında, **Güncelleştirmeleri denetlediğimde Microsoft Update'i kullan (önerilir)** öğesini seçin.
-    ![ATA’yı güncel tutma resmi](media/ata_ms_update.png) Bu, burada görüldüğü gibi, Windows ayarlarını diğer Microsoft ürünleri (ATA dahil) için güncelleştirmeleri etkinleştirecek şekilde ayarlar. 
+    ![ATA’yı güncel tutma resmi](media/ata_ms_update.png) Görüldüğü gibi, bu işlem Windows ayarlarını diğer Microsoft ürünleri (ATA dahil) için güncelleştirmeleri etkinleştirecek şekilde ayarlar. 
      ![Windows otomatik güncelleştirme resmi](media/ata_installupdatesautomatically.png)
 
     -  **Veri geçişi** ekranında, verilerin tümünü veya bir kısmını geçirmek istediğinizi seçin. Verilerin yalnızca bir kısmını taşımak isterseniz, daha önceden yakalanan ağ trafiğiniz ve davranış profilleriniz geçirilmez. Bu, anormal davranış algılama özelliğinin olağan dışı etkinlik algılamayı etkinleştirmek için tam bir profil oluşturmasının üç hafta süreceği anlamına gelir. Bu üç hafta boyunca diğer tüm ATA algılamaları düzgün çalışır. **Kısmi** veri geçişinin yüklenmesi çok daha kısa sürer. **Tam** veri geçişini seçerseniz, yüklemenin tamamlanması oldukça uzun sürebilir. **Veri Geçişi** ekranında belirtilen tahmini süre ve gerekli disk alanı, ATA’nın eski sürümlerinde kaydettiğiniz önceden yakalanan ağ trafiği miktarına bağlıdır. **Kısmi** veya **Tam** seçimini yapmadan önce bu gereksinimleri kontrol ettiğinizden emin olun.  
@@ -87,12 +88,12 @@ Uygulamanın bu sürümünde, yeni bir ATA dağıtımı yüklemek ve var olan da
 
 
 
-## Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO3-->
 
 

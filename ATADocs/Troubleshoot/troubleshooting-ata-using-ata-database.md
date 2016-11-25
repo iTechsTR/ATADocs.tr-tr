@@ -1,33 +1,34 @@
 ---
-title: "ATA veritabanını kullanarak ATA sorunlarını giderme | Microsoft ATA"
+title: "ATA veritabanını kullanarak ATA sorunlarını giderme | Microsoft Docs"
 description: "Sorunları gidermeye yardımcı olması için ATA veritabanını nasıl kullanabileceğiniz açıklanır"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: af0508f82d8cf190dcd3ff058f4c2ff37b4b0595
-ms.openlocfilehash: dfc6c902cb13b1a2bf927cd235806ec32d9fefc3
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: bff3224736981f38616172a6b1717d7d125c3c0a
 
 
 ---
 
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
 
-# ATA veritabanını kullanarak ATA sorunlarını giderme
+# <a name="troubleshooting-ata-using-the-ata-database"></a>ATA veritabanını kullanarak ATA sorunlarını giderme
 ATA veritabanı olarak MongoDB’yi kullanır.
 Varsayılan komut satırını kullanarak veya gelişmiş görevler ve sorun giderme işlemleri yapmak için bir kullanıcı arabirimini kullanarak veritabanıyla etkileşim kurabilirsiniz.
 
-## Veritabanıyla etkileşim kurma
+## <a name="interacting-with-the-database"></a>Veritabanıyla etkileşim kurma
 Veritabanını sorgulamanın varsayılan ve en temel yolu Mongo kabuğunu kullanmaktır:
 
 1.  Komut satırı penceresi açın ve yolu MongoDB bin klasörüyle değiştirin. Varsayılan yol: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**
@@ -50,7 +51,7 @@ Aşağıdaki örnek, yukarıda sağlanan söz diziminin kullanıldığı örnek 
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 
-## Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA kapasite planlaması](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection)
@@ -59,6 +60,6 @@ Aşağıdaki örnek, yukarıda sağlanan söz diziminin kullanıldığı örnek 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 
