@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -36,7 +36,6 @@ ATA veritabanını taşımanız, yedeklemeniz veya geri yüklemeniz gerekiyorsa,
 ## <a name="moving-the-ata-database-to-another-drive"></a>ATA veritabanını başka bir sürücüye taşıma
 
 1.  **Microsoft Advanced Threat Analytics Center** hizmetini durdurun.
-
 > [!Important] 
 > Sonraki adıma geçmeden önce ATA Center hizmetinin durdurulduğundan emin olun.
 
