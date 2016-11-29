@@ -1,8 +1,9 @@
 ---
-title: "ATA hata günlüğü sorunlarını giderme | Microsoft ATA"
+title: "ATA hata günlüğü sorunlarını giderme | Microsoft Docs"
 description: "ATA’da sık karşılaşılan hataları nasıl giderebileceğinizi açıklar"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/25/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
-ms.openlocfilehash: aa16eeb45272ffcf28bbb28ed9a02f30f52b15d0
+ms.sourcegitcommit: 3ba53b7b1c34359f00da9fc9717496cfc7d4271d
+ms.openlocfilehash: 8687263977c7bfdf12581a200bba3a60633fca4d
 
 
 ---
@@ -42,6 +43,7 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 |System.InvalidOperationException: 'Microsoft.Tri.Gateway' örneği belirtilen Kategoride yok.|ATA Gateway’deki işlem adları için PID’ler etkinleştirilmiş|İşlem adlarında PID’leri devre dışı bırakmak için [KB281884](https://support.microsoft.com/en-us/kb/281884)’yi kullanın|
 |System.InvalidOperationException: Kategori yok.|Sayaçlar kayıt defterinde devre dışı bırakılmış olabilir|Performans Sayaçlarını yeniden oluşturmak için [KB2554336](https://support.microsoft.com/en-us/kb/2554336)’yı kullanın|
 |System.ApplicationException: ETW oturumu MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329 başlatılamıyor|HOSTS dosyasında makinenin kısa adına işaret eden bir ana bilgisayar girişi var|Ana bilgisayar girişini C:\Windows\System32\drivers\etc\HOSTS dosyasından kaldırın ya da bir FQDN olarak değiştirin.|
+|System.IO.IOException: Uzak taraf taşıma akışını kapattığından kimlik doğrulaması başarısız oldu.|TLS 1.0, ATA Gateway’de devre dışı bırakıldı ancak .Net, TLS 1.2 kullanmak üzere ayarlanmış|Aşağıdaki seçeneklerden birini kullanın: </br> TLS 1.0 ‘ı ATA Gateway’de etkinleştirme </br>TLS 1.2’yi .Net üzerinde etkinleştirmek amacıyla kayıt defteri anahtarlarını LLS ve TLS için işletim sistemi varsayılanları kullanacak şekilde ayarlayın: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"`|
 
 
 
@@ -75,6 +77,6 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Nov16_HO4-->
 
 

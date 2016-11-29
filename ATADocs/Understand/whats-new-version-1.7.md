@@ -1,20 +1,21 @@
 ---
-title: "ATA sürüm 1.7’daki yenilikler | Microsoft ATA"
+title: "ATA sürüm 1.7’deki yenilikler | Microsoft Docs"
 description: "ATA sürüm 1.7’teki yenilikleri ve bilinen sorunları listeler"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: 
+ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
-ms.openlocfilehash: 03a5e6a5398ffcc43e712bd4a3c2f872cd91c0b4
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: 8032e373567ce500c7741480d56d232f34b05446
 
 
 ---
@@ -75,9 +76,15 @@ ATA Konsolunda, ATA Gateway uzun bir süre “Güncelleştiriliyor (paket indiri
  
 ### <a name="dropped-port-mirror-traffic-when-using-vmware"></a>Bağlantı noktası yansıtılmış trafik, VMware kullanırken bırakıldı
 
-Bağlantı noktası yansıtılmış trafik uyarıları, basit ağ geçidi üzerinde VMware kullanırken bırakıldı
+VMware üzerinde basit ağ geçidi kullanılırken bağlantı noktası yansıtılmış trafik uyarıları bırakıldı.
 
-VMware sanal makinelerindeki etki alanı denetleyicileri kullanıyorsanız, **Bırakılan bağlantı noktası yansıtılmış ağ trafiği** hakkında uyarı alabilirsiniz. Bu, bir VMware yapılandırma uyuşmazlığından kaynaklanıyor olabilir. Bu uyarıları önlemek için aşağıdaki ayarların 0 veya Devre Dışı olarak ayarlandığını denetleyebilirsiniz: TsoEnable, LargeSendOffload, IPv4, TSO Veri Boşaltma. Ayrıca, IPv4 Büyük TSO Boşaltma’yı devre dışı bırakabilirsiniz. Daha fazla bilgi için VMware belgelerinize başvurun.
+VMware sanal makinelerindeki etki alanı denetleyicileri kullanıyorsanız, **Bırakılan bağlantı noktası yansıtılmış ağ trafiği** hakkında uyarı alabilirsiniz. Bu, bir VMware yapılandırma uyuşmazlığından kaynaklanıyor olabilir. Bu uyarıları önlemek için aşağıdaki ayarların sanal makinede 0 veya Devre Dışı olarak ayarlandığını denetleyebilirsiniz:  
+
+- TsoEnable
+- LargeSendOffload(IPv4)
+- IPv4 TSO Boşaltma
+
+Ayrıca, IPv4 Büyük TSO Boşaltma’yı devre dışı bırakabilirsiniz. Daha fazla bilgi için VMware belgelerinize başvurun.
 
 ### <a name="automatic-gateway-update-fail-when-updating-to-17-update-1"></a>1.7 güncelleştirme 1’e güncelleştirirken Automatic Gateway güncelleştirme hatası
 
@@ -110,6 +117,6 @@ Bu sorunu çözmek için, sertifikayı değiştirdikten sonra yükseltilmiş kom
 
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 

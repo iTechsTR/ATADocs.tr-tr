@@ -1,29 +1,30 @@
 ---
-title: ATA Bildirimlerini Ayarlama | Microsoft ATA
+title: "E-posta ayarlarını yapılandırma | Microsoft Docs"
 description: "ATA’nın kuşkulu etkinlikler algıladığında size nasıl bildireceği (e-postayla veya ATA olay iletme yoluyla) açıklanır"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
+ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4ba68547d6746625a44aca5d05790c3ad138f4e
-ms.openlocfilehash: 9a8461da7ff8b0f939a11f85e5e8dc21d191cc52
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: d967cbf2674c5f561e63f66b64640ac08daad6c0
 
 
 ---
 
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
 
-## ATA’ya e-posta sunucusu ayarlarınızı belirtin
+## <a name="provide-ata-with-up-your-email-server-settings"></a>ATA’ya e-posta sunucusu ayarlarınızı belirtin
 ATA, kuşkulu bir etkinlik algıladığında size bildirebilir. ATA’nın e-posta bildirimleri gönderebilmesi için öncelikle **E-posta sunucusu ayarları**’nı yapılandırmanız gerekir.
 
 1.  ATA Center sunucusunda, masaüstündeki **Microsoft Advanced Threat Analytics Yönetimi** simgesine tıklayın.
@@ -44,7 +45,7 @@ ATA, kuşkulu bir etkinlik algıladığında size bildirebilir. ATA’nın e-pos
     |Gönderen (gerekli)|E-postayı gönderecek olan e-posta adresini girin.|Örneğin:<br />ATA@contoso.com|
     ![ATA e-posta sunucu ayarları resmi](media/ATA-email-server-1.7.png)
 
-## ATA’ya Syslog sunucusu ayarlarınızı belirtin
+## <a name="provide-ata-with-your-syslog-server-settings"></a>ATA’ya Syslog sunucusu ayarlarınızı belirtin
 ATA kuşkulu bir etkinlik algıladığında Syslog sunucunuza bildirim göndererek size bildirebilir. Syslog bildirimlerini etkinleştirirseniz, bu uyarılar için aşağıdakileri ayarlayabilirsiniz.
 
 1.  Syslog bildirimlerini yapılandırmadan önce, SIEM yöneticinizle birlikte çalışarak aşağıdaki bilgileri bulun:
@@ -77,11 +78,11 @@ ATA kuşkulu bir etkinlik algıladığında Syslog sunucunuza bildirim gönderer
 
 
 
-## Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 
