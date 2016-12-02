@@ -1,10 +1,11 @@
 ---
-title: "ATA yapılandırmasını değiştirme - ATA Center IP adresi | Microsoft ATA"
+title: "ATA yapılandırmasını değiştirme: ATA Center IP adresi | Microsoft Docs"
 description: "ATA Center bileşeninizin IP adresini, bağlantı noktasını veya sertifikasını nasıl değiştireceğiniz açıklanır."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,24 +14,24 @@ ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: e6d42610d1c785da5b7c7b1cf035d94c2fddff4b
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: d0fed03deb5f50747383a398dfb2eca74ad0cdf0
 
 
 ---
 
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
 
-# Ata yapılandırmasını değiştirme - ATA Center IP adresi
+# <a name="change-ata-configuration---ata-center-ip-address"></a>Ata yapılandırmasını değiştirme - ATA Center IP adresi
 
 >[!div class="step-by-step"]
 [ATA Center sertifikası »](modifying-ata-config-centercert.md)
 
 İlk dağıtımdan sonra, ATA Center’da değişiklik yaparken dikkatli olmak gerekir. IP adresini ve bağlantı noktasını veya sertifikayı güncelleştirirken aşağıdaki yordamları kullanın.
 
-## ATA Center sunucusunda kullanılan IP adresini değiştirme
+## <a name="change-the-ip-address-used-by-the-ata-center-server"></a>ATA Center sunucusunda kullanılan IP adresini değiştirme
 ATA Center IP adresini ve bağlantı noktasını veya sertifikasını değiştirmeniz gerekiyorsa, aşağıdaki noktaları dikkate alın.
 
 ATA Gateway bileşenleri bağlanmaları gereken ATA Center’ın IP adresini yerel olarak depolar. Düzenli aralıklarla ATA Center’a bağlanır ve yapılandırma değişikliklerini alırlar. ATA Gateway bileşenlerinin ATA Center’a bağlanma şeklinde yapılacak değişiklikler iki aşamada yapılır.
@@ -77,13 +78,12 @@ ATA Gateway bileşenleri bağlanmaları gereken ATA Center’ın IP adresini yer
 [ATA Center sertifikasını değiştirme »](modifying-ata-config-centercert.md)
 
 
-## Ayrıca Bkz.
-- [ATA Konsolu’yla çalışma](working-with-ata-console.md)
-- [ATA’yı yükleme](install-ata.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ATA Konsolu ile çalışma](working-with-ata-console.md)
 - [ATA forumuna bakın!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
