@@ -1,10 +1,11 @@
 ---
-title: "ATA yapılandırmasını değiştirme - ATA Center sertifikası | Microsoft ATA"
+title: "ATA yapılandırmasını değiştirme: ATA Center sertifikası | Microsoft Docs"
 description: "ATA Center sunucusundaki yerel bilgisayar deposunda yer alan sertifikayı yenileme veya değiştirmeye yönelik iki aşamalı işlem açıklanır."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,23 +14,23 @@ ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: e707d354396f8eeed58c13ee1e9e91df9888e030
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: 534b5f476e580919b11327ddbf9a35edad130515
 
 
 ---
 
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
 
-# Ata yapılandırmasını değiştirme - ATA Center sertifikası
+# <a name="change-ata-configuration---ata-center-certificate"></a>Ata yapılandırmasını değiştirme - ATA Center sertifikası
 
 >[!div class="step-by-step"]
 [« ATA Center sunucusu IP adresi](modifying-ata-config-centerip.md)
 [ATA Konsolu URL’si »](modifying-ata-config-consoleurl.md)
 
-## ATA Center sertifikasını değiştirme
+## <a name="change-the-ata-center-certificate"></a>ATA Center sertifikasını değiştirme
 Sertifikalarınızın süresi sona ermek üzereyse ve ATA Center sunucusundaki yerel bilgisayar deposuna yeni sertifika yüklendikten sonra yenilenmesi veya değiştirilmesi gerekiyorsa, şu iki aşamalı işlemi yaparak sertifikayı değiştirin:
 
 -   Birinci aşama – ATA Center hizmetinin kullanmasını istediğiniz sertifikayı güncelleştirin. Bu noktada, ATA Center hizmeti hala özgün sertifikaya bağlıdır. ATA Gateway bileşenleri yapılandırmalarını eşitlediğinde, karşılıklı kimlik doğrulaması için geçerli olan iki olası sertifikaları olur. ATA Gateway özgün sertifikayı kullanarak bağlanabildiği sürece, yeni sertifikayı denemez.
@@ -68,13 +69,12 @@ Sertifikalarınızın süresi sona ermek üzereyse ve ATA Center sunucusundaki y
 [« ATA Center sunucusu IP adresi](modifying-ata-config-centerip.md)
 [ATA Konsolu URL’si »](modifying-ata-config-consoleurl.md)
 
-## Ayrıca bkz.
-- [ATA Konsolu’yla çalışma](working-with-ata-console.md)
-- [ATA’yı yükleme](install-ata.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ATA Konsolu ile çalışma](working-with-ata-console.md)
 - [ATA forumuna bakın!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
