@@ -1,10 +1,11 @@
 ---
-title: "Bağlantı Noktası Yansıtmayı Yapılandırma | Microsoft ATA"
+title: "Bağlantı Noktası Yansıtmayı Yapılandırma | Microsoft Docs"
 description: "Bağlantı noktası yansıtma seçenekleri ve bunların ATA için nasıl yapılandırılacağı açıklanır."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/28/2016
+ms.date: 11/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,17 +14,17 @@ ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: d7f15f08a64a9d884a560f4f3429568cf33bdd34
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: 9312287da04f393282857005b68799f82e0bdfa5
 
 
 ---
 
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
 
-# Bağlantı Noktası Yansıtmayı Yapılandırma
+# <a name="configure-port-mirroring"></a>Bağlantı Noktası Yansıtmayı Yapılandırma
 > [!NOTE] 
 > Bu makale yalnızca ATA Lightweight Gateway bileşenleri yerine ATA Gateway bileşenleri dağıttığınızda geçerlidir. ATA Gateway’ler kullanmanız gerekip gerekmediğini belirlemek için bkz. [Dağıtımınız için doğru ağ geçitlerini seçme](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment).
  
@@ -43,7 +44,7 @@ Etki alanı denetleyicileriniz ve ATA Gateway sunucularınız fiziksel veya sana
 > [!NOTE]
 > Bağlantı noktası yansıtılan etki alanı denetleyicisi bir WAN bağlantısı üzerinden bağlanıyorsa, WAN bağlantısının ERSPAN trafiğinden gelen ek yükü işleyebileceğinden emin olun.
 
-## Desteklenen bağlantı noktası yansıtma seçenekleri
+## <a name="supported-port-mirroring-options"></a>Desteklenen bağlantı noktası yansıtma seçenekleri
 
 |ATA Gateway|Etki Alanı Denetleyicisi|Dikkat Edilecekler|
 |---------------|---------------------|------------------|
@@ -68,13 +69,12 @@ Etki alanı denetleyicileriniz ve ATA Gateway sunucularınız fiziksel veya sana
 
 Bağlantı noktası yansıtma yapılandırıldıktan sonra, ATA Gateway’i yüklemeden önce bağlantı noktası yansıtmanın çalışır durumda olduğunu doğrulayın.
 
-## Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Bağlantı noktası yansıtmayı doğrulama](validate-port-mirroring.md)
-- [ATA’yı yükleme](install-ata.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 

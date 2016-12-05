@@ -1,10 +1,11 @@
 ---
-title: "Olay Koleksiyonunu Yapılandırma | Microsoft ATA"
+title: "Olay Koleksiyonunu Yapılandırma | Microsoft Docs"
 description: "ATA’yla olay koleksiyonunu yapılandırmaya yönelik seçeneklerinizi açıklar"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/28/2016
+ms.date: 11/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d2c1c00ff649557c1a0a16385e025c9d597c3bbf
-ms.openlocfilehash: 91ce3a3fef27673712a708aa1e92c32298cedd84
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: 2932fd80fd3a5ff6830f8629df824591e3fc47c3
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: 91ce3a3fef27673712a708aa1e92c32298cedd84
 
 
 
-# Olay Koleksiyonunu Yapılandırma
+# <a name="configure-event-collection"></a>Olay Koleksiyonunu Yapılandırma
 ATA, algılama yeteneklerini geliştirmek için Windows Olay günlüğü ID 4776’ya gereksinim duyar. Bu ATA Gateway’e iki yoldan biriyle, ATA Gateway’i SIEM olaylarını dinleyecek şekilde yapılandırarak veya [Windows Olay İletme’yi yapılandırarak](#configuring-windows-event-forwarding) iletilebilir.
 
-## Olay koleksiyonu
+## <a name="event-collection"></a>Olay koleksiyonu
 Etki alanı denetleyicilerinden gelen ve giden ağ trafiğini toplamaya ve çözümlemeye ek olarak, ATA Windows olayı 4776’yı kullanarak ATA Karma Değeri Geçirme algılamasını daha da geliştirir. Bu SIEM sistemlerinizden alınabileceği gibi, etki alanı denetleyicinizden Windows Olay İletme’yi ayarlayarak da alınabilir. Toplanan olaylar ATA’ya etki alanı denetleyicisi ağ trafiği yoluyla sağlanmayan ek bilgiler sağlar.
 
-### SIEM/Syslog
+### <a name="siemsyslog"></a>SIEM/Syslog
 ATA’nın Syslog sunucusundan verileri kullanabilmesi için, aşağıdakileri yapmalısınız:
 
 -   ATA Gateway sunucularınızı SIEM/Syslog sunucusundan iletilen olayları dinleyecek ve kabul edecek şekilde yapılandırın.
@@ -42,10 +43,10 @@ ATA’nın Syslog sunucusundan verileri kullanabilmesi için, aşağıdakileri y
 
 Belirli olayları başka bir sunucuya iletme işlemini yapılandırma hakkında bilgi edinmek için, SIEM/Syslog sunucunuzun ürün belgelerine bakın. 
 
-### Windows olay iletme
+### <a name="windows-event-forwarding"></a>Windows olay iletme
 SIEM/Syslog sunucusunu kullanmazsanız, Windows etki alanı denetleyicilerinizi Windows Olay Kimliği 4776’yı ATA tarafından toplanması ve çözümlenmesi için iletecek şekilde yapılandırabilirsiniz. Windows Olay Kimliği 4776, NTLM kimlik doğrulamalarıyla ilgili verileri sağlar.
 
-## ATA Gateway’i SIEM olaylarını dinleyecek şekilde yapılandırma
+## <a name="configuring-the-ata-gateway-to-listen-for-siem-events"></a>ATA Gateway’i SIEM olaylarını dinleyecek şekilde yapılandırma
 
 1.  ATA yapılandırmasında, "Olaylar" sekmesi altında **Syslog**’u etkinleştirip **Kaydet**’e basın.
 
@@ -53,10 +54,10 @@ SIEM/Syslog sunucusunu kullanmazsanız, Windows etki alanı denetleyicilerinizi 
 
 2.  SIEM veya Syslog sunucunuzu, Windows Olay Kimliği 4776’yı ATA Gateway’lerinden birinin IP adresine iletecek şekilde yapılandırın. SIEM sunucunuzu yapılandırma hakkında ek bilgi için, her SIEM sunucusuna özgü belirli biçimlendirme yönergeleriyle ilgili olarak SIEM sunucunuzun çevrimiçi yardımına veya teknik destek seçeneklerine bakın.
 
-### SIEM desteği
+### <a name="siem-support"></a>SIEM desteği
 ATA, aşağıdaki biçimlerde olan SIEM olaylarını destekler:  
 
-#### RSA Güvenlik Analizi
+#### <a name="rsa-security-analytics"></a>RSA Güvenlik Analizi
 &lt;Syslog Üst Bilgisi&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
 
 -   Syslog üst bilgisi isteğe bağlıdır.
@@ -85,7 +86,7 @@ ATA, aşağıdaki biçimlerde olan SIEM olaylarını destekler:
 
 -   Bu değerlerin sırası önemlidir ve iletiye başka hiçbir şey eklenmemelidir.
 
-#### HP Arcsight
+#### <a name="hp-arcsight"></a>HP Arcsight
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Etki alanı denetleyicisi bir hesabın kimlik bilgilerini doğrulamaya çalıştı.|Düşük| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
 
 -   Protokol tanımıyla uyumlu olmalıdır.
@@ -116,7 +117,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Etki
 
     -   “Reason or Error Code” = NTLM sonuç kodu
 
-#### Splunk
+#### <a name="splunk"></a>Splunk
 &lt;Syslog Üst Bilgisi&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
 
 Bilgisayar bir hesabın kimlik bilgilerini doğrulamaya çalıştı.
@@ -153,7 +154,7 @@ Hata Kodu:         0x0
 
 -   Anahtar=değer çiftleri için sıra önemli değildir.
 
-#### QRadar
+#### <a name="qradar"></a>QRadar
 QRadar bir aracı üzerinden olay toplamayı sağlar. Veriler bir aracı kullanarak toplanıyorsa, saat biçimi mili saniye verisi olmadan toplanır. ATA mili saniye verisine ihtiyaç duyduğundan, QRadar’ın aracısız Windows olay toplamayı kullanacak şekilde ayarlanması gerekir. Daha fazla bilgi için bkz. [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: MSRPC Protokolünü kullanarak Aracısız Windows Olayları Koleksiyonu").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
@@ -175,9 +176,9 @@ key=value çiftleri arasında \t bulunduğundan emin olun.
 >[!NOTE] 
 > Windows olay koleksiyonu için WinCollect kullanımı desteklenmez.
 
-## Windows Olay İletme’yi yapılandırma
+## <a name="configuring-windows-event-forwarding"></a>Windows Olay İletme’yi yapılandırma
 
-### Bağlantı noktası yansıtma ile ATA Gateway’ler için WEF yapılandırması
+### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>Bağlantı noktası yansıtma ile ATA Gateway’ler için WEF yapılandırması
 
 Etki alanı denetleyicilerinden ATA Gateway’e bağlantı noktası yansıtmayı yapılandırdıktan sonra, Windows Olay iletmeyi Kaynak Tarafından Başlatılan yapılandırmasını kullanarak yapılandırmak için aşağıdaki yönergeleri uygulayın. Windows Olay İletme’yi yapılandırmanın bir yolu budur. 
 
@@ -189,7 +190,7 @@ Bu senaryoda ATA Gateway’in etki alanı üyesi olduğunu varsayıyoruz.
 2.  **Üyeler**’i seçin.
 4.  **Ağ Hizmeti** listede yoksa **Ekle**’ye tıklayın, **Seçilecek nesne adlarını girin** alanına **Ağ Hizmeti** yazın. Sonra, **Adları Denetle**’ye tıklayın ve **Tamam**’a çift tıklayın. 
 
-**2. Adım: Hedef Abonelik Yöneticisi ayarını Yapılandırmak için etki alanı denetleyicilerinde bir ilke oluşturun.** 
+**2. Adım: Hedef Abonelik Yöneticisini yapılandır ayarını belirlemek için etki alanı denetleyicilerinde bir ilke oluşturun.** 
 > [!Note] 
 > Bu ayarlar için bir grup ilkesi oluşturabilir ve grup ilkesini ATA Gateway tarafından izlenen her etki alanı denetleyicisine uygulayabilirsiniz. Aşağıdaki adımlar etki alanı denetleyicisinin yerel ilkesini değiştirir.     
 
@@ -237,7 +238,7 @@ Bu senaryoda ATA Gateway’in etki alanı üyesi olduğunu varsayıyoruz.
    6.   Birkaç dakika sonra, olay 4776’nın ATA Gateway’deki İletilen Olaylar kısmında görünüp görünmediğine bakın.
 
 
-### ATA Lightweight Gateway için WEF yapılandırması
+### <a name="wef-configuration-for-the-ata-lightweight-gateway"></a>ATA Lightweight Gateway için WEF yapılandırması
 ATA Lightweight Gateway’i etki alanı denetleyicilerinize yüklerken, etki alanı denetleyicilerinizi, olayları kendilerine iletecek şekilde ayarlayabilirsiniz. ATA Lightweight Gateway kullanırken Windows Olay İletme’yi yapılandırmak için aşağıdaki adımları uygulayın. Windows Olay İletme’yi yapılandırmanın bir yolu budur.  
 
 **1. Adım: Ağ hizmeti hesabını etki alanının Event Log Readers grubuna ekleyin** 
@@ -280,12 +281,12 @@ Birkaç dakika sonra, olay 4776’nın ATA Gateway’deki İletilen Olaylar kıs
 
 Daha fazla bilgi için bkz. [Olayları iletmek ve toplamak için bilgisayarları yapılandırma](https://technet.microsoft.com/library/cc748890).
 
-## Ayrıca Bkz.
-- [ATA’yı yükleme](install-ata.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [ATA’yı yükleme](install-ata-step1.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 
