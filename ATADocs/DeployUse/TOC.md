@@ -5,14 +5,13 @@
 ### [Bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md)
 ### [Bağlantı noktası yansıtmayı doğrulama](validate-port-mirroring.md)
 ### [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
-## [ATA’yı yükleme](install-ata.md)
-### [1. Adım](install-ata-step1.md)
-### [2. Adım](install-ata-step2.md)
-### [3. Adım](install-ata-step3.md)
-### [4. Adım](install-ata-step4.md)
-### [5. Adım](install-ata-step5.md)
-### [6. Adım](install-ata-step6.md)
-### [Sessiz yükleme](ata-silent-installation.md)
+## [ATA’yı Yükleme - 1. Adım](install-ata-step1.md)
+## [ATA’yı Yükleme - 2. Adım](install-ata-step2.md)
+## [ATA’yı Yükleme - 3. Adım](install-ata-step3.md)
+## [ATA’yı Yükleme - 4. Adım](install-ata-step4.md)
+## [ATA’yı Yükleme - 5. Adım](install-ata-step5.md)
+## [ATA’yı Yükleme - 6. Adım](install-ata-step6.md)
+## [Sessiz yükleme](ata-silent-installation.md)
 # [Kullanma](modifying-ata-config-centerip.md)
 ## [ATA Center IP adresini değiştirme](modifying-ata-config-centerip.md)
 ## [ATA Center sertifikasını değiştirme](modifying-ata-config-centercert.md)
@@ -21,16 +20,16 @@
 ## [ATA Konsolu ile çalışma](working-with-ata-console.md)
 ## [ATA rol grupları](ata-role-groups.md)
 ## [Syslog ve E-posta sunucusu ayarlarını belirleme](setting-syslog-email-server-settings.md)
-## [ATA uyarılarını ayarlama](setting-ata-alerts.md)
+## [ATA bildirimlerini ayarlama](setting-ata-alerts.md)
 ## [Algılama ayarlarıyla çalışma](working-with-detection-settings.md)
 ## [ATA Sistem Durumu Merkezi](ata-health-center.md)
 ## [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
 ## [ATA veritabanı yönetimi](ata-database-management.md)
-## [ATA yapılandırma dosyası](ata-configuration-file.md)
+## [ATA yapılandırmasını Dışarı/İçeri aktarma](ata-configuration-file.md)
 ## [ATA telemetrisini yönetme](manage-telemetry-settings.md)
 # [Sorun Giderme](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
