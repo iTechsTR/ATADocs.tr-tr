@@ -14,17 +14,17 @@ ms.technology:
 ms.suite: ems
 ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
 translationtype: Human Translation
-ms.sourcegitcommit: 6d95045842d8bb19dba2e8d0fe13b1bf96e2e304
-ms.openlocfilehash: be7f4c021a6da9d58bb7e8329d9320db9ae19716
+ms.sourcegitcommit: 1dda7ed8bb461a15ae2cc9d379822ed4a96245ff
+ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
 
 
 ---
-# Microsoft Advanced Threat Analytics Belgeleri
+# <a name="microsoft-advanced-threat-analytics-documentation"></a>Microsoft Advanced Threat Analytics Belgeleri
 <article id="main">
     <section id="hero-content">
       <h1>Microsoft Advanced Threat Analytics Belgeleri</h1>
       <h2>BT güvenlik uzmanlarının kuruluşlarını ileri düzey hedeflenmiş saldırılara karşı korumalarına yardımcı olmaya yönelik bir şirket içi ürünü olan Microsoft Advanced Threat Analytics’in (ATA) nasıl dağıtıldığını ve yönetildiğini öğrenin.</h2>
-      <h3>ATA’yı kullanmaya yeni mi başladınız? <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Ürün sayfamızı ziyaret edin &rarr;</a></h3>
+      <h3>ATA’yı kullanmaya yeni mi başladınız? <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Ürün sayfamızı ziyaret edin&rarr;</a></h3>
     </section>
     <aside class="alert section-border">
       <p>Başlamaya hazır mısınız?</p>
@@ -136,7 +136,7 @@ ms.openlocfilehash: be7f4c021a6da9d58bb7e8329d9320db9ae19716
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/install-ata">
+                  <a href="/advanced-threat-analytics/deploy-use/install-ata-step1">
                     <h3>ATA’yı yükleme</h3>
                     <p>Ayrıntılı adım adım yükleme kılavuzunu takip edin.</p>
                   </a>
@@ -196,6 +196,6 @@ ms.openlocfilehash: be7f4c021a6da9d58bb7e8329d9320db9ae19716
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Dec16_HO1-->
 
 
