@@ -1,8 +1,9 @@
 ---
-title: "Performans sayaçlarını kullanarak ATA sorunlarını giderme | Microsoft ATA"
+title: "Performans sayaçlarını kullanarak ATA sorunlarını giderme | Microsoft Docs"
 description: "ATA’yla ilgili sorunları gidermek için performans sayaçlarını nasıl kullanabileceğiniz açıklanır"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 09/20/2016
 ms.topic: article
@@ -13,17 +14,17 @@ ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
-ms.openlocfilehash: e1ff02f8d78eacc5c4fccdc1cc973d8a07f9c6ca
+ms.sourcegitcommit: 2e7e6d5b731723449ce275f810343b1e8957f6d0
+ms.openlocfilehash: a9ee5fd9a57d484e4bfe06f42766f895063ad727
 
 
 ---
 
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
 
-# Performans sayaçlarını kullanarak ATA sorunlarını giderme
+# <a name="troubleshooting-ata-using-the-performance-counters"></a>Performans sayaçlarını kullanarak ATA sorunlarını giderme
 ATA performans sayaçları, ATA’nın her bileşeninin ne kadar iyi çalıştığı konusunda fikir sağlar. ATA’daki bileşenler verileri sıralı olarak işlediğinden, bir sorun çıktığında, bileşen zincirinin herhangi bir yerinde trafiğin kısmi olarak bırakılmasına neden olabilir. Sorunu çözmek için, hangi bileşende istenmeyen sonuç alındığını saptamanız ve sorunu zincirin başında çözmeniz gerekir. Her bileşenin nasıl çalıştığını anlamak için, performans sayaçlarında bulunan verileri kullanın.
 İç ATA bileşenlerinin akışını anlamak için [ATA mimarisi](/advanced-threat-analytics/plan-design/ata-architecture) konusuna bakın.
 
@@ -36,7 +37,7 @@ ATA performans sayaçları, ATA’nın her bileşeninin ne kadar iyi çalıştı
 3.  Bu durum geriye doğru NetworkListener bileşenine kadar devam eder ve o bileşen de artık varlıkları iletemediğinde trafiği bırakır.
 
 
-## ATA Gateway performans sayaçları
+## <a name="ata-gateway-performance-counters"></a>ATA Gateway performans sayaçları
 
 Bu bölümde, ATA Gateway’e yapılan her gönderme aynı zamanda ATA Lightweight Gateway’e de yapılmıştır.
 
@@ -47,7 +48,7 @@ Dikkat edilmesi gereken ana ATA Gateway sayaçlarının listesi:
 
 |Sayaç|Açıklama|Eşik|Sorun giderme|
 |-----------|---------------|-------------|-------------------|
-|Microsoft ATA Gateway\NetworkListener PEF Ayrıştırıcı İletiler\Sn|ATA Gateway tarafından her saniyede işlenen trafik miktarı.|Eşik yok|ATA Gateway tarafından ayrıştırılmakta olan trafiğin miktarını anlamanıza yardımcı olur.|
+|Microsoft ATA Gateway\NetworkListener PEF Ayrıştırılan İletiler\Sn|ATA Gateway tarafından her saniyede işlenen trafik miktarı.|Eşik yok|ATA Gateway tarafından ayrıştırılmakta olan trafiğin miktarını anlamanıza yardımcı olur.|
 |NetworkListener PEF Bırakılan Olaylar\Sn|ATA Gateway tarafından her saniyede bırakılan trafik miktarı.|Bu sayı her zaman sıfır olmalıdır (seyrek olarak bırakma artışı yaşanması kabul edilebilir).|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
 |Microsoft ATA Gateway\NetworkListener ETW Bırakılan Olaylar\Sn|ATA Gateway tarafından her saniyede bırakılan trafik miktarı.|Bu sayı her zaman sıfır olmalıdır (seyrek olarak bırakma artışı yaşanması kabul edilebilir).|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
 |Microsoft ATA Gateway\NetworkActivityTranslator İleti Verileri Sayısı Blok Boyutu|Ağ Etkinliklerine (NA) çeviri için kuyruğa alınan trafik miktarı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 100.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
@@ -59,11 +60,11 @@ Dikkat edilmesi gereken ana ATA Gateway sayaçlarının listesi:
 > -   Süre gösteren sayaçlar milisaniye cinsindendir.
 > -   Bazen "Rapor" grafik türü kullanılarak sayaçların tam listesi daha rahat izlenebilir (örnek: tüm sayaçları gerçek zamanlı izleme)
 
-## ATA Lightweight Gateway performans sayaçları
+## <a name="ata-lightweight-gateway-performance-counters"></a>ATA Lightweight Gateway performans sayaçları
 Performans sayaçları, ATA’nın yüklü olduğu etki alanı denetleyicilerinde çok fazla kaynak çekmediğinden emin olmak için Lightweight Gateway’de kota yönetimi için kullanılabilir.
-ATA’nın Lightweight Gateway’de uyguladığı kaynak sınırlamalarını ölçmek için aşağıdaki sayaçları ekleyin:
+ATA’nın Lightweight Gateway’de uyguladığı kaynak sınırlamalarını ölçmek için şu sayaçları ekleyin.
 
-"Performans İzleyicisi"ni açın ve ATA Lightweight Gateway için tüm sayaçları ekleyin. Performans sayacı nesne adları: “Microsoft ATA Gateway” ve “Microsoft ATA Gateway Updater”dır.
+Bu işlem, "Performans İzleyicisi" açılarak ve ATA Lightweight Gateway için tüm sayaçlar eklenerek yapılır. Performans sayacı nesne adları: “Microsoft ATA Gateway” ve “Microsoft ATA Gateway Updater”dır.
 
 
 |Sayaç|Açıklama|Eşik|Sorun giderme|
@@ -84,7 +85,7 @@ Gerçek kullanımınızı görmek için aşağıdaki sayaçlara bakın:
 |İşlem(Microsoft.Tri.Gateway)\Özel Baytlar|Lightweight Gateway işleminin gerçekte kullandığı işlenen bellek miktarı (bayt cinsinden).|Eşik yok. | Bu sayacın sonuçlarını GatewayUpdaterResourceManager İşlenen En Yüksek Bellek Boyutu kısmında bulunan sınırla karşılaştırın. İşlemin belirli bir süre boyunca sık sık üst sınıra ulaştığını görüyorsanız (işlem sınıra ulaşır ve trafiği bırakmaya başlar) bu, Lightweight Gateway’e daha fazla kaynak ayırmanız gerektiği anlamına gelir.| 
 |İşlem(Microsoft.Tri.Gateway)\Çalışma Kümesi|Lightweight Gateway işleminin gerçekte kullandığı fiziksel bellek miktarı (bayt cinsinden).|Eşik yok. |Bu sayacın sonuçlarını GatewayUpdaterResourceManager Kaydedilen Maksimum Bellek Boyutu kısmında bulunan sınırla karşılaştırın. İşlemin belirli bir süre boyunca sık sık üst sınıra ulaştığını görüyorsanız (işlem sınıra ulaşır ve trafiği bırakmaya başlar) bu, Lightweight Gateway’e daha fazla kaynak ayırmanız gerektiği anlamına gelir.|
 
-## ATA Center performans sayaçları
+## <a name="ata-center-performance-counters"></a>ATA Center performans sayaçları
 ATA Center’ın performans sayaçlarını ekleyerek, ATA Center ile ilgili gerçek zamanlı performans durumunu gözlemleyebilirsiniz.
 
 Bu işlem, "Performans İzleyicisi" açılarak ve ATA Center için tüm sayaçlar eklenerek yapılır. Performans sayacı nesnesinin adı: "Microsoft ATA Center".
@@ -96,14 +97,14 @@ Dikkat edilmesi gereken ana ATA Center sayaçlarının listesi:
 |Microsoft ATA Center\EntityReceiver Varlık Yığın Blok Boyutu|ATA Center tarafından kuyruğa alınan varlık yığınlarının sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 10.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin.  Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
 |Microsoft ATA Center\NetworkActivityProcessor Ağ Etkinliği Blok Boyutu|İşleme için kuyruğa alınan Ağ Etkinliklerinin (NA) sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 50.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
 |Microsoft ATA Center\EntityProfiler Ağ Etkinliği Blok Boyutu|Profil oluşturma için kuyruğa alınan Ağ Etkinliklerinin (NA) sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 10.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
-|Microsoft ATA Center\CenterDatabase &#42; Blok Boyutu|Veritabanına yazılmak üzere kuyruğa alınan belirli bir türdeki Ağ Etkinliklerinin sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 50.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
+|Microsoft ATA Center\Database &#42; Blok Boyutu|Veritabanına yazılmak üzere kuyruğa alınan belirli bir türdeki Ağ Etkinliklerinin sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 50.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
 
 
 > [!NOTE]
 > -   Süre gösteren sayaçlar milisaniye cinsindendir.
 > -   Bazen Rapor grafik türü kullanılarak sayaçların tam listesi daha rahat izlenebilir (örnek: tüm sayaçları gerçek zamanlı izleme)
 
-## İşletim sistemi sayaçları
+## <a name="operating-system-counters"></a>İşletim sistemi sayaçları
 Aşağıda, dikkat edilmesi gereken ana işletim sistemi sayaçları listelenmiştir:
 
 |Sayaç|Açıklama|Eşik|Sorun giderme|
@@ -119,7 +120,7 @@ Aşağıda, dikkat edilmesi gereken ana işletim sistemi sayaçları listelenmi�
 |\LogicalDisk&#42;\Disk Yazma\sn|Diskte yazma işlemlerini gerçekleştirme hızı.|Eşik yok|Disk kullanım sayaçları (depolama gecikmesi sorunlarını giderirken fikir verebilir).|
 |\LogicalDisk(&#42;)\Disk Yazma Bayt\sn|Diske bir saniyede yazılan bayt sayısı.|Eşik yok|Disk kullanım sayaçları, depolama gecikmesi sorunlarını giderirken fikir verebilir.|
 
-## Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA kapasite planlaması](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection)
@@ -128,6 +129,6 @@ Aşağıda, dikkat edilmesi gereken ana işletim sistemi sayaçları listelenmi�
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 
