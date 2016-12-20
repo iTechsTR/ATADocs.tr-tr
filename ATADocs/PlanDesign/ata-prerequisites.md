@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 12/14/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: 56f397c373e0b6827aab084e21c804a135049a27
+ms.sourcegitcommit: 67b430fbed97bd08e5f538043c783e70ed2ab956
+ms.openlocfilehash: 60ec036a8c22fb34c673653a6378437ab14f9853
 
 
 ---
@@ -142,6 +142,9 @@ Windows 2012 R2 çalıştıran ATA Gateway’i yüklemeden önce şu güncelleş
 
 ATA Gateway ile sanal makineleri kullanma hakkında bilgi için bkz. [Bağlantı noktası yansıtmasını yapılandırma](/advanced-threat-analytics/deploy-use/configure-port-mirroring)
 
+> [!NOTE]
+> En az 5 GB alan gereklidir ve 10 GB önerilir. Buna, ATA ikili dosyaları, [ATA günlükleri](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs) ve [performans günlükleri](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters) için gereken alan da dahildir.
+
 ### <a name="server-specifications"></a>Sunucu belirtimleri
 En iyi performans için, ATA Gateway’in **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.<br>
 ATA Gateway, etki alanı denetleyicilerinden gelen ve giden ağ trafiği miktarına bağlı olarak, birden çok etki alanı denetleyicisinin izlenmesini destekleyebilir.
@@ -212,12 +215,15 @@ Yerel Bilgisayar deposunda yer alan ATA Gateway’in Bilgisayar deposunda **Sunu
 ## <a name="ata-lightweight-gateway-requirements"></a>ATA Lightweight Gateway gereksinimleri
 Bu bölümde, ATA Lightweight Gateway’in gereksinimleri listelenir.
 ### <a name="general"></a>Genel
-ATA Lightweight Gateway; Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2 veya Windows Server 2016 (Core dahil ancak Nano hariç) çalıştıran bir etki alanı denetleyicisine yüklemeyi destekler.
+ATA Lightweight Gateway; Windows Server 2008 R2 SP1 (Server Core içermez), Windows Server 2012, Windows Server 2012 R2 veya Windows Server 2016 (Core dahil ancak Nano hariç) çalıştıran bir etki alanı denetleyicisine yüklemeyi destekler.
 
 Etki alanı denetleyicisi salt okunur bir etki alanı denetleyicisi (RODC) olabilir.
 
 ATA Lightweight Gateway bileşenini Windows Server 2012 R2 SP1 çalıştıran bir etki alanı denetleyicisine yüklemeden önce, şu güncelleştirmenin yüklendiğini onaylayın: [KB2919355](https://support.microsoft.com/kb/2919355/).
 Şu Windows PowerShell cmdlet’ini çalıştırarak bunu denetleyebilirsiniz: `[Get-HotFix -Id kb2919355]`.
+
+> [!NOTE]
+> En az 5 GB alan gereklidir ve 10 GB önerilir. Buna, ATA ikili dosyaları, [ATA günlükleri](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) ve [performans günlükleri](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md) için gereken alan da dahildir.
 
 ### <a name="server-specifications"></a>Sunucu belirtimleri
 
@@ -282,6 +288,6 @@ ATA Konsolu’na tarayıcı yoluyla erişilir ve aşağıdakiler desteklenir:
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 
