@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 12/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
-ms.openlocfilehash: 8032e373567ce500c7741480d56d232f34b05446
+ms.sourcegitcommit: 00ddddfd927ed1ba4c52d4774085da04ce359bde
+ms.openlocfilehash: 1c8d7983c5fd86ae3ef2c906eba3f0781cffb99b
 
 
 ---
@@ -30,14 +30,14 @@ ATA 1.7 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 
 -   Rol tabanlı erişim denetimi
 
--   Windows Server 2016 ve Windows Server Core desteği
+-   Windows Server 2016 ve Windows Server 2016 Core desteği
 
 -   Kullanıcı deneyimi iyileştirmeleri
 
 -   Küçük değişiklikler
 
 
-### <a name="new-updated-detections"></a>Yeni ve güncelleştirilmiş algılamalar
+### <a name="new--updated-detections"></a>Yeni ve güncelleştirilmiş algılamalar
 
 
 - **Dizin Hizmetleri Numaralandırması kullanarak keşif** Keşif aşamasının bir parçası olarak, saldırganlar farklı yöntemler kullanarak ağdaki varlıklar hakkında bilgi toplar. SAM-R protokolünü kullanan Dizin hizmetleri numaralandırması saldırganların bir etki alanındaki kullanıcıların ve grupların listesini ele geçirmesini ve farklı varlıklar arasındaki etkileşimi anlamasını sağlar. 
@@ -55,7 +55,7 @@ ATA 1.7 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 
 - **Rol tabanlı erişim denetimi** Rol Tabanlı Erişim Denetimi (RBAC) kapasitesi. ATA 1.7 üç rol içerir: ATA Yöneticisi, ATA Analisti ve ATA İdarecisi.
 
-- **Windows Server 2016 ve Windows Server Core Desteği** ATA 1.7, Windows Server 2012 için Server Core ve Windows Server 2012 R2 için Server Core çalıştıran etki alanı denetleyicilerinde Lightweight Gateway bileşenlerinin dağıtımını destekler. Ayrıca, bu sürüm Windows Server 2016’yı hem ATA Center hem de ATA Gateway bileşenleri için destekler.
+- **Windows Server 2016 ve Windows Server Core Desteği** ATA 1.7; Windows Server 2008 R2 SP1 (Server Core içermeyen), Windows Server 2012, Windows Server 2012 R2 ve Windows Server 2016 (Core içerip Nano içermeyen) çalıştıran etki alanı denetleyicilerinde Lightweight Gateway’lerinin dağıtımını destekler. Ayrıca, bu sürüm Windows Server 2016’yı hem ATA Center hem de ATA Gateway bileşenleri için destekler.
 
 ### <a name="user-experience"></a>Kullanıcı Deneyimi
 - **Yapılandırma Deneyimi** Bu sürümde, ATA yapılandırması deneyimi daha iyi bir kullanıcı deneyimi sağlama amacıyla ve birden çok ATA Gateway bileşenine sahip ortamları daha iyi destekleyecek şekilde tasarlanmıştır. Bu sürüm ayrıca, çeşitli Ağ Geçitlerinin otomatik güncelleştirme işlemlerinin daha kolay, daha iyi yönetilmesi için ATA Gateway güncelleştirme sayfasını getirmiştir.
@@ -102,6 +102,12 @@ Bu sorunu çözmek için, sertifikayı değiştirdikten sonra yükseltilmiş kom
 
 3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
 
+### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>Şüpheli etkinlik ayrıntılarını Excel'e dışarı aktarma başarısız olabilir
+Şüpheli etkinlik ayrıntılarını bir Excel dosyasına dışarı aktarmaya çalıştığınızda, işlem şu hatayı vererek başarısız olabilir: *Error [BsonClassMapSerializer`1] System.FormatException: An error occurred while deserializing the Activity property of class Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
+
+Bu sorunu çözmek için yükseltilmiş komut isteminden **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** konumuna gidin ve şu komutu çalıştırın:
+1.  **Mongo.exe ATA** (ATA büyük harfle yazılmalıdır)
+2.  **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
 
 ## <a name="minor-changes"></a>Küçük değişiklikler
 
@@ -117,6 +123,6 @@ Bu sorunu çözmek için, sertifikayı değiştirdikten sonra yükseltilmiş kom
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 
