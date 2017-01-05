@@ -1,8 +1,9 @@
 ---
-title: "ATA hangi tehditleri algılar? | Microsoft ATA"
+title: "ATA hangi tehditleri algılar? | Microsoft Docs"
 description: "Advanced Threat Analytics’in algıladığı tehditler listesi"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
@@ -13,15 +14,15 @@ ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: bbadd975918978570d5983500b8026fa95ed1c28
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 2671937cf0ed9ff2865073b97ee735da99fa7d7f
 
 
 ---
 
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
-## ATA hangi tehditleri arar?
+## <a name="what-threats-does-ata-look-for"></a>ATA hangi tehditleri arar?
 
 ATA gelişmiş bir tehdidin çeşitli aşamaları için algılama sağlar: keşif, kimlik bilgilerinin tehlikeye atılması, yanal hareket, ayrıcalık yükseltme, etki alanı hakimiyeti ve daha fazlası. Bu algılamaların amacı, gelişmiş saldırıları ve içeriden gelen tehditleri kuruluşunuza zarar vermeden önce algılamaktır.
 Her aşamadaki algılama, söz konusu aşamayla ilgili birkaç şüpheli etkinlikle sonuçlanır ve burada her şüpheli etkinlik farklı türde olası saldırılarla ilişkilidir.
@@ -30,7 +31,7 @@ ATA’nın, ölüm zincirinde şu anda algılayabildiği bu aşamalar aşağıda
 ![ATA, saldırı ölüm zincirindeki yanal etkinliklere odaklanır](media/attack-kill-chain-small.jpg)
 
 
-### Keşif
+### <a name="reconnaissance"></a>Keşif
 ATA birçok keşif algılaması sağlar. Bu algılamalar şunları içerir:
 -   **Hesap listeleme kullanarak keşif** Saldırganların bir kullanıcının mevcut olup olmadığını keşfetmek için Kerberos protokolünü kullanarak yaptığı girişimleri algılar. Üstelik, bu etkinlik etki alanı denetleyicisinde bir olay olarak günlüğe kaydedilmemiş olsa bile algılanır.
 -   **Ağ Oturumu Listeleme** Saldırganlar, keşif aşamasının bir parçası olarak etki alanı denetleyicisini sorgulama yoluyla sunucudaki tüm etkin SMB oturumlarını bulabilir ve bu SMB oturumlarıyla ilişkili tüm kullanıcılara ve IP adreslerine erişme olanağı elde edebilir. SMB oturumu numaralandırması saldırganlar tarafından hassas hesapları hedeflemek için kullanılabilir ve bu da saldırganların ağda yanal olarak hareket etmelerine yardımcı olur.
@@ -38,7 +39,7 @@ ATA birçok keşif algılaması sağlar. Bu algılamalar şunları içerir:
 -   **Dizin hizmetleri listelemesi kullanarak keşif** Etki alanı denetleyicilerinde sorgu çalıştırmak için SAM uzak protokolü kullanılarak gerçekleştirilen varlık (kullanıcılar, gruplar vb.) keşfi işlemlerini algılama. Bu keşif yöntemi gerçek dünyadaki saldırı senaryolarında görülen birçok kötü amaçlı yazılım türünde yaygındır. 
 
 
-### Güvenliği tehlikede olan kimlik bilgileri
+### <a name="compromised-credentials"></a>Güvenliği tehlikede olan kimlik bilgileri
 ATA, güvenliği tehlikede olan kimlik bilgilerinin algılanması için hem makine öğrenimi tabanlı davranış çözümlemesi özelliğinden hem de bilinen kötü amaçlı saldırıları ve teknikleri algılama özelliğinden yararlanır.
 ATA, davranış analizi ve makine öğrenimini kullanarak, kimlik bilgileri güvenliğinin tehlike altında olduğuna işaret eden anormal oturumlar, olağan dışı kaynak erişimi ve olağan dışı çalışma saatleri gibi şüpheli etkinlikleri algılayabilir. Tehlikeye atılmış kimlik bilgilerine karşı koruma sağlamak için, ATA aşağıdaki bilinen kötü amaçlı saldırıları ve teknikleri algılar:
 -   **Deneme yanılma** Deneme yanılma saldırılarında, saldırganlar birçok kullanıcı deneyip bunları birçok parola girişimiyle eşleştirerek kullanıcı kimlik bilgilerini tahmin etmeye çalışır. Saldırganlar, sistemin izin verdiği kadar çok değerle deneme yapmak için çoğunlukla karmaşık algoritmalar veya sözlükler kullanır.
@@ -49,7 +50,7 @@ ATA, davranış analizi ve makine öğrenimini kullanarak, kimlik bilgileri güv
 -   **Kötü Amaçlı Veri Koruma Özel Bilgi İsteği** Veri Koruma API’si (DPAPI) parola tabanlı bir veri koruma hizmetidir. Bu koruma hizmeti web sitesi parolaları ve dosya paylaşımı kimlik bilgileri gibi kullanıcının gizli bilgilerini depolayan çeşitli uygulamalar tarafından kullanılır. Parolanın kaybolması senaryolarını desteklemek için, kullanıcılar parolalarını içermeyen bir kurtarma anahtarı kullanılarak korunan verilerin şifresini çözebilir. Bir etki alanı ortamında, saldırganlar uzaktan kurtarma anahtarını çalabilir ve tüm etki alanına katılmış bilgisayarlarda korunan verilerin şifresini çözmek için kullanabilirler.
 -   **Anormal Davranış** Gelişmiş saldırıların yanı sıra iç tehdit durumlarında çoğu zaman, sosyal mühendislik yöntemleri veya yeni ve henüz bilinmeyen yöntemlerle teknikler kullanılarak hesap kimlik bilgileri ele geçirilebilir. ATA varlığın davranışını analiz ederek ve varlık tarafından gerçekleştirilen işlemlerdeki anormallikleri algılayıp uyarı vererek bu tür tehditleri algılayabilir.
 
-### Yanal hareket
+### <a name="lateral-movement"></a>Yanal hareket
 Yanal hareket algılaması sağlamak için, kullanıcılar erişimleri olmaması gereken kaynaklara erişmek üzere, kaynaklara erişim sağlayan kimlik bilgilerinin avantajlarından yararlandığında, ATA bilinen kötü amaçlı saldırı ve teknikleri algılamanın yanı sıra makine eğitimi esaslı davranış analizini de kullanır.
 ATA, davranış analizini ve makine eğitimini kullanarak, anormal cihazlar kullanıldığında ve yanal hareketin kanıtı olan başka göstergelerle anormal kaynak erişimini algılar.
 Buna ek olarak, ATA saldırganlar tarafından yanal hareket yapmak için kullanılan aşağıdaki teknikleri algılama yoluyla da yanal hareketi algılayabilir:
@@ -58,13 +59,13 @@ Buna ek olarak, ATA saldırganlar tarafından yanal hareket yapmak için kullan�
 -   **Karmayı atlayarak geçiş** Karmayı atlayarak geçiş saldırıları, saldırganın Kerberos’ta kimlik doğrulaması yapmak için çalınmış bir NTLM karmasını kullanması ve geçerli bir Kerberos TGT anahtarı almasıyla gerçekleştirilir. Daha sonra bu anahtar geçerli bir kullanıcı olarak kimliği doğrulamak ve ağınızdaki kaynaklara erişmek için kullanılır.
 -   **Anormal davranış** Yanal hareket, genellikle saldırganlar tarafından, öncelikli kimlik bilgilerine veya ilgisini çeken hassas bilgilere erişim elde etmek amacıyla kurbanın ağındaki cihazlar ve alanlar arasında hareket etmek için kullanılan bir tekniktir. ATA, şirket ağı içinde kullanıcı ve cihazların davranışlarını ve ilişkilerini analiz ederek yanal hareketi algılayabilir ve bir saldırgan tarafından sergilenen bir yanal harekete işaret edebilen olağan dışı erişim kalıplarını algılayabilir.
 
-### Ayrıcalık yükseltme
+### <a name="privilege-escalation"></a>Ayrıcalık yükseltme
 ATA başarıyla gerçekleştirilen veya girişimde bulunulan ayrıcalık yükseltme saldırılarını algılar; burada saldırganlar var olan ayrıcalıkları artırmaya ve bunları birkaç kez kullanıp sonunda kurbanın ortamı üzerinde tam denetim kazanmaya çalışır.
 ATA bilinen ve kötü amaçlı saldırıları ve aşağıdaki gibi, ayrıcalıkları yükseltmek için sık kullanılan teknikleri algılamanın yanı sıra, ayrıcalıklı hesapların olağan dışı davranışlarını algılamak üzere davranış analizini birleştirerek ayrıcalık yükseltme algılamasına olanak sağlar:
 -   **MS14-068 açığından yararlanma (Forged PAC)** Sahte PAC, saldırganın geçerli TGT anahtarlarına sahte yetkilendirme üst bilgisi biçiminde yetkilendirme verileri yerleştirdiği saldırılardır ve kuruluşun kendilerine vermediği ek izinler verir. Bu senaryoda saldırgan, daha önce güvenliği aşılmış kimlik bilgileri veya yanal hareket işlemleri sırasında toplanan kimlik bilgilerini kullanır.
 -   **MS11-013 açığından yararlanma (Gümüş PAC)** MS11-013 açığından yararlanma saldırıları, bir Kerberos hizmet biletinin belirli yönlerden sahtesini üretmeye olanak sağlayan Kerberos’taki ayrıcalık güvenlik açığından yararlanılarak gerçekleştirilir. Bu güvenlik açığından yararlanmayı başaran kötü amaçlı bir kullanıcı veya saldırgan Etki Alanı Denetleyicisinde yükseltilmiş ayrıcalıklarla bir belirteç elde edebilir. Bu senaryoda saldırgan, daha önce güvenliği aşılmış kimlik bilgileri veya yanal hareket işlemleri sırasında toplanan kimlik bilgilerini kullanır.
 
-### Etki alanı hakimiyeti
+### <a name="domain-dominance"></a>Etki alanı hakimiyeti
 ATA aşağıdakiler gibi, saldırganlar tarafından bilinen teknikler sayesinde algılama gerçekleştirerek kurbanın ortamı üzerinde tam denetim veya egemenlik elde etmeye çalışan veya bunu başaran saldırganları algılar:
 -   **Maymuncuk kötü amaçlı yazılımı** Maymuncuk saldırılarında, etki alanı denetleyicinize bir yandan saldırganların herhangi bir kullanıcı olarak kimlik doğrulaması yapmalarına izin veren ve diğer yandan da normal kullanıcıların oturum açmasına olanak tanıyan kötü amaçlı bir yazılım yüklenir.
 -   **Altın bilet** Altın bilet saldırılarında, saldırgan KBTGT’nin kimlik bilgilerini (Kerberos Altın Bileti) çalar. Bu anahtar, saldırganın ağdaki kaynakları erişim kazanmak amacıyla kullanılacak çevrimdışı bir TGT anahtarı oluşturmasına olanak tanır.
@@ -72,17 +73,17 @@ ATA aşağıdakiler gibi, saldırganlar tarafından bilinen teknikler sayesinde 
 -   **Kötü amaçlı çoğaltma istekleri** Active Directory (AD) ortamlarında, Etki Alanı Denetleyicileri arasında düzenli olarak çoğaltma yapılır. Bir saldırgan (bazen bir Etki Alanı Denetleyicisinin kimliğe bürünerek), AD çoğaltma isteğini taklit edebilir ve bu da saldırganın Birim Gölge Kopyası gibi daha kullanışsız tekniklerden yararlanmadan, parola karmaları dahil olmak üzere AD’de depolanan verileri almasına izin verir.
 
 
-## Sırada ne var?
+## <a name="whats-next"></a>Sırada ne var?
 
 -   ATA’nın ağınıza nasıl uyum sağladığı hakkında daha fazla bilgi için: [ATA mimarisi](/advanced-threat-analytics/plan-design/ata-architecture)
 
 -   ATA’nın dağıtımına başlamak için: [ATA’yı yükleme](/advanced-threat-analytics/deploy-use/install-ata)
 
-## Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

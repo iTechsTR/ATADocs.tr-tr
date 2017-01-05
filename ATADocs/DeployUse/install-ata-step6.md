@@ -1,8 +1,9 @@
 ---
-title: "ATA’yı Yükleme | Microsoft ATA"
+title: "ATA’yı Yükleme | Microsoft Docs"
 description: "ATA’yı yükleme işleminin son adımında Honeytoken kullanıcısını yapılandırırsınız."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 09/20/2016
 ms.topic: get-started-article
@@ -13,23 +14,23 @@ ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
-ms.openlocfilehash: 9ee2f36d8f0b7eae061873e8735139ccc4da00d1
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 17833f000135337fce82d69efb63fc6e1f9ea307
 
 
 ---
 
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
 
-# ATA’yı Yükleme - 6. Adım
+# <a name="install-ata---step-6"></a>ATA’yı Yükleme - 6. Adım
 
 >[!div class="step-by-step"]
 [« 5. Adım](install-ata-step5.md)
 
-## 6. Adım. IP adresi dışlamalarını ve Honeytoken kullanıcısını yapılandırma
-ATA, belirli IP adreslerinin ve IP alt ağlarının iki tür algılamadan dışlanmasını sağlar: **DNS Keşfi** ve **Anahtar Geçişi**. 
+## <a name="step-6-configure--ip-address-exclusions-and-honeytoken-user"></a>6. Adım. IP adresi dışlamalarını ve Honeytoken kullanıcısını yapılandırma
+ATA, belirli IP adreslerinin iki tür algılamadan dışlanmasını sağlar: **DNS Keşfi** ve **Anahtar Geçişi**. 
 
 Örneğin, bir **DNS Keşfi dışlaması** DNS’i tarama mekanizması olarak kullanan bir güvenlik tarayıcısı olabilir. Bu dışlama işlemi ATA’nın böyle tarayıcıları yoksaymasına yardımcı olur. *Anahtar Geçişi* dışlama işlemine örnek olarak bir NAT aygıtı gösterilebilir.    
 
@@ -41,7 +42,7 @@ Yukarıdakileri yapılandırmak için şu adımları izleyin:
 
     ![ATA yapılandırma ayarları](media/ATA-config-icon.JPG)
 
-2.  **Algılama dışlamaları** altında, *DNS keşfi* veya *Anahtar Geçişi* IP adresleri için aşağıdakileri girin. CIDR biçimini (örneğin: `192.168.1.0/24`) kullanın ve *artı* işaretine tıklayın.
+2.  **Algılama dışlamaları** altında, *DNS keşfi* veya *Anahtar Geçişi* için bir IP adresi girin ve *artı* işaretine tıklayın.
 
     ![Değişiklikleri kaydedin.](media/ATA-exclusions.png)
 
@@ -66,7 +67,7 @@ ATA hemen şüpheli etkinlikler için tarama yapmaya başlar. ATA, davranış pr
 [« 5. Adım](install-ata-step5.md)
 
 
-## Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
@@ -75,6 +76,6 @@ ATA hemen şüpheli etkinlikler için tarama yapmaya başlar. ATA, davranış pr
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

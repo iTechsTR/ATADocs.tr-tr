@@ -1,8 +1,9 @@
 ---
-title: "ATA’yı 1.5 sürümüne güncelleştirme geçiş kılavuzu | Microsoft ATA"
+title: "ATA’yı 1.5 sürümüne güncelleştirme geçiş kılavuzu | Microsoft Docs"
 description: "ATA’yı sürüm 1.5’e güncelleştirme yordamları"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
@@ -13,13 +14,13 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
-ms.openlocfilehash: 637d847af82d15a5b88fb43274f606a9b89da445
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: c23512e159c2f01bc0a930f71373aa5315f0310c
 
 
 ---
 
-# ATA’yı 1.5’e güncelleştirme geçiş kılavuzu
+# <a name="ata-update-to-15-migration-guide"></a>ATA’yı 1.5’e güncelleştirme geçiş kılavuzu
 ATA 1.5 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 
 -   Daha hızlı algılama süreleri
@@ -36,7 +37,7 @@ ATA 1.5 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 
 -   İzleme ve sorun gidermeyi iyileştirmek için ek performans sayaçları
 
-## ATA’yı sürüm 1.5’e güncelleştirme
+## <a name="updating-ata-to-version-15"></a>ATA’yı sürüm 1.5’e güncelleştirme
 > [!NOTE]
 > ATA ortamınızda yüklü değilse, ATA’nın sürüm 1.5’i de içeren tam sürümünü indirin ve [ATA’yı Yükleme](/advanced-threat-analytics/deploy-use/install-ata) başlığı altında açıklanan standart yükleme yordamını izleyin.
 
@@ -58,7 +59,7 @@ ATA sürüm 1.5’e güncelleştirmek için bu adımları izleyin:
     > [!IMPORTANT]
     > ATA’nın düzgün çalıştığından emin olmak için tüm ATA Gateway bileşenlerini güncelleştirin.
 
-### 1. Adım: ATA Center’ı güncelleştirme
+### <a name="step-1-update-the-ata-center"></a>1. Adım: ATA Center’ı güncelleştirme
 
 1.  Veritabanınızı yedekleyin: (isteğe bağlı)
 
@@ -89,7 +90,7 @@ ATA sürüm 1.5’e güncelleştirmek için bu adımları izleyin:
 > [!IMPORTANT]
 > - ATA’nın düzgün çalıştığından emin olmak için tüm ATA Gateway bileşenlerini güncelleştirin.
 
-### 2. Adım ATA Gateway kurulum paketini indirme
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>2. Adım ATA Gateway kurulum paketini indirme
 Etki alanı bağlantı ayarlarını yapılandırdıktan sonra, ATA Gateway kurulum paketini indirebilirsiniz.
 
 ATA Gateway paketini indirmek için:
@@ -110,7 +111,7 @@ Zip dosyası şunları içerir:
 
 -   ATA Center’a bağlanmak için gereken bilgilerin bulunduğu yapılandırma ayarı dosyası
 
-### 3. Adım: ATA Gateway bileşenlerini yapılandırma
+### <a name="step-3-update-the-ata-gateways"></a>3. Adım: ATA Gateway bileşenlerini yapılandırma
 
 1.  ATA Gateway bileşenlerinden her birinde, ATA Gateway paketinden dosyaları ayıklayın ve Microsoft ATA Gateway Kurulumu dosyasını çalıştırın.
 
@@ -128,12 +129,12 @@ Tüm ATA Gateway bileşenleri başarıyla eşitlendiklerini bildirdiklerinde ve 
 
 ![Güncelleştirilmiş Gateway bileşenlerinin resmi](media/ATA-gw-updated.png)
 
-## Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

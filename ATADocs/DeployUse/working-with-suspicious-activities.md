@@ -1,8 +1,9 @@
 ---
-title: "Kuşkulu Etkinliklerle Çalışma | Microsoft ATA"
+title: "Kuşkulu Etkinliklerle Çalışma | Microsoft Docs"
 description: "ATA tarafından belirlenen kuşkulu etkinliklerin nasıl gözden geçirileceğini açıklar"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
@@ -13,20 +14,20 @@ ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: 30fbeb0682bd4b253d7a6eb52b8b31e487b363cb
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 29a8b5b76b4b435157f0907f0dc98731dacbc53a
 
 
 ---
 
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
 
-# Kuşkulu Etkinliklerle Çalışma
+# <a name="working-with-suspicious-activities"></a>Kuşkulu Etkinliklerle Çalışma
 Bu konu başlığı altında, Advanced Threat Analytics ile çalışmanın temelleri açıklanır.
 
-## Saldırı zaman çizelgesinde kuşkulu etkinlikleri gözden geçirme
+## <a name="review-suspicious-activities-on-the-attack-time-line"></a>Saldırı zaman çizelgesinde kuşkulu etkinlikleri gözden geçirme
 ATA Konsolu’nda oturum açtıktan sonra, otomatik olarak açık **Kuşkulu Etkinlikler Zaman Çizelgesi**’ne gelirsiniz. Kuşkulu etkinlikler, en yenileri zaman çizelgesinin en üstünde olacak şekilde kronolojik sırayla listelenir.
 Her kuşkulu etkinliğin aşağıdaki bilgileri bulunur:
 
@@ -56,7 +57,7 @@ Her kuşkulu etkinliğin aşağıdaki bilgileri bulunur:
 
 ![ATA kuşkulu etkinlikler zaman çizelgesinin resmi](media/ATA-Suspicious-Activity-Timeline.JPG)
 
-## Kuşkulu etkinlikler listesini filtreleme
+## <a name="filter-suspicious-activities-list"></a>Kuşkulu etkinlikler listesini filtreleme
 Kuşkulu etkinlikler listesini filtrelemek için:
 
 1.  Ekranın sol tarafındaki **Filtre ölçütü** bölmesinde şunlardan birini seçin: **Tümü**, **Açık**, **Çözüldü** veya **Çıkarıldı**.
@@ -83,7 +84,7 @@ Kuşkulu etkinlikler listesini filtrelemek için:
 
     Tüm yeni kuşkulu etkinlikler bu listede gösterilir
 
--   **Çözüldü**
+-   **Çözümlendi**
 
     Belirlediğiniz, araştırdığınız ve düzeltip etkisini azalttığınız kuşkulu etkinlikler için kullanılır.
 
@@ -94,7 +95,7 @@ Kuşkulu etkinlikler listesini filtrelemek için:
 
     Bunlar, el ile çıkardığınız etkinliklerdir. ATA benzer bir kuşkulu etkinlik algılarsa, yeni bir algılama oluşturulur.
 
-## Kuşkulu etkinlik için giriş sağlama
+## <a name="provide-input-on-a-suspicious-activity"></a>Kuşkulu etkinlik için giriş sağlama
 ATA’nın sizinle ağınız hakkında daha fazla bilgi edinebilmesi için, ileriye dönük olarak kuşkulu etkinliklerin algılanmasını iyileştirmek amacıyla bazı kuşkulu etkinliklerde (DNS keşfi, Anahtar Geçişi, SMB Oturumu Numaralandırma, Anormal Davranış ve Uzaktan Yürütme) sizden giriş istenir.
 
 1.  Giriş sağlamanıza olanak tanıyan kuşkulu etkinlikler için, giriş sorusu otomatik olarak açılır. Ağınızdaki etkinlikler hakkındaki soruları yanıtlamanız istenir ve bunların kuşkulu olarak kabul edilmesinin gerekip gerekmediği sorulur. Aşağıdaki örnekte, belirli bir bilgisayardan tarama araçlarının çalıştırılmasına izin verilip verilmeyeceği sorulmaktadır.
@@ -107,16 +108,16 @@ ATA’nın sizinle ağınız hakkında daha fazla bilgi edinebilmesi için, iler
 
 4.  Bilmiyorsanız, **İptal**’e tıklayabilirsiniz.
 
-## Kuşkulu etkinliğin durumunu değiştirme
+## <a name="change-the-status-of-a-suspicious-activity"></a>Kuşkulu etkinliğin durumunu değiştirme
 Kuşkulu etkinliğin geçerli durumuna tıklayıp **Açık**, **Çözüldü** veya **Çıkarıldı** ayarlarından birini seçerek, kuşkulu etkinliğin durumunu değiştirebilirsiniz.
 
-## Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [ATA algılama ayarlarıyla çalışma](working-with-detection-settings.md)
 - [ATA yapılandırmasında değişiklik yapma](modifying-ata-configuration.md)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

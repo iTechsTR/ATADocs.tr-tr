@@ -1,8 +1,9 @@
 ---
-title: "ATA’yı Yükleme - 1. Adım | Microsoft ATA"
+title: "ATA’yı Yükleme: 1. Adım | Microsoft Docs"
 description: "ATA’yı yüklemenin ilk adımı, seçtiğiniz sunucuya ATA Center’ı indirmeyi ve yüklemeyi kapsar."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/25/2016
 ms.topic: get-started-article
@@ -13,17 +14,17 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
-ms.openlocfilehash: cf7ae4eccdf70e4e8661ac55ec15fff00bc9c62e
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: c946aa6cfde5bcb72ce8c6efba626c31c2413893
 
 
 ---
 
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
 
-# ATA’yı Yükleme - 1. Adım
+# <a name="install-ata---step-1"></a>ATA’yı Yükleme - 1. Adım
 
 >[!div class="step-by-step"]
 [2. Adım »](install-ata-step2.md)
@@ -33,7 +34,7 @@ Bu yükleme yordamı, sıfırdan bir ATA 1.7 yüklemesi gerçekleştirmeye yöne
 > [!IMPORTANT] 
 > Windows 2012 R2 kullanıyorsanız, yüklemeye başlamadan önce ATA Center sunucusuna ve ATA Gateway sunucularına KB2934520’yi yükleyin. Aksi takdirde ATA yüklemesi bu güncelleştirmeyi yükler ve bu işlem sırasında bir yeniden başlatma gerektirir.
 
-## 1. Adım ATA Center’ı indirme ve yükleme
+## <a name="step-1-download-and-install-the-ata-center"></a>1. Adım ATA Center’ı indirme ve yükleme
 Sunucunun gereksinimleri karşıladığını doğruladıktan sonra, ATA Center’ın yüklemesiyle devam edebilirsiniz.
 
 ATA Center sunucusunda aşağıdaki adımları gerçekleştirin.
@@ -53,7 +54,7 @@ ATA Center sunucusunda aşağıdaki adımları gerçekleştirin.
 6.  Microsoft Yazılım Lisans Koşulları’nı okuyun ve onay kutusuna tıklayıp ardından **İleri**’ye tıklayın.
 
 7.  ATA’yı otomatik olarak güncelleştirmeye ayarlamanız önerilir. Windows bilgisayarınızda bunu yapacak şekilde ayarlanmamışsa, **Bilgisayarınızı güvenli ve güncel tutmaya yardımcı olmak için Microsoft Update'i kullanın** ekranıyla karşılaşırsınız. 
-    ![ATA’yı güncel tutma görüntüsü](media/ata_ms_update.png)
+    ![ATA’yı güncel tutma resmi](media/ata_ms_update.png)
 
 8. **Güncelleştirmeleri denetlediğimde Microsoft Update'i kullan (önerilir)** öğesini seçin. Bu, burada görüldüğü gibi, Windows ayarlarını diğer Microsoft ürünleri (ATA dahil) için güncelleştirmeleri etkinleştirecek şekilde ayarlar. 
     ![Windows otomatik güncelleştirme resmi](media/ata_installupdatesautomatically.png)
@@ -85,7 +86,7 @@ ATA Center sunucusunda aşağıdaki adımları gerçekleştirin.
 Bu aşamada, ATA Gateway bileşenlerinin yapılandırma ve dağıtımına devam etmek için otomatik olarak **Genel** sayfasına gidersiniz.
 Siteye bir IP adresi kullanarak oturum açtığınız için, sertifikayla ilgili bir uyarı alırsınız; bu normaldir ve **Bu Web sitesine devam et**’e tıklamanız gerekir.
 
-### Yüklemeyi doğrulama
+### <a name="validate-installation"></a>Yüklemeyi doğrulama
 
 1.  **Microsoft Advanced Threat Analytics Center** adlı hizmetin çalışıp çalışmadığını denetleyin.
 2.  ATA Konsolu’na bağlanmak için masaüstünde **Microsoft Advanced Threat Analytics** kısayoluna tıklayın. ATA Center’ı yüklerken kullandığınız kullanıcı kimlik bilgileriyle oturum açın.
@@ -96,7 +97,7 @@ Siteye bir IP adresi kullanarak oturum açtığınız için, sertifikayla ilgili
 [« Yükleme öncesi](preinstall-ata.md)
 [2. Adım »](install-ata-step2.md)
 
-## Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
@@ -105,6 +106,6 @@ Siteye bir IP adresi kullanarak oturum açtığınız için, sertifikayla ilgili
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

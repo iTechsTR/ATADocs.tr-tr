@@ -1,8 +1,9 @@
 ---
-title: Microsoft Advanced Threat Analytics (ATA) nedir? | Microsoft ATA
+title: Microsoft Advanced Threat Analytics (ATA) nedir? | Microsoft Docs
 description: "Microsoft Advanced Threat Analytics (ATA) çözümünün ne olduğu ve ne tür kuşkulu etkinlikleri algılayabildiği açıklanır"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 09/28/2016
 ms.topic: article
@@ -13,19 +14,19 @@ ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3768cd103fc2a938d2d39fe34179d74587abc118
-ms.openlocfilehash: 0bc2bcc42b2b59cf297b4af86f0c38aafebc379f
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 70d66bccfda484722afa63a7f85dc8f85013f54f
 
 
 ---
 
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
-## Advanced Threat Analytics nedir?
+## <a name="what-is-advanced-threat-analytics"></a>Advanced Threat Analytics nedir?
 Advanced Threat Analytics (ATA), kuruluşunuzu çeşitli türlerdeki, gelişmiş ve hedefe yönelik siber saldırıların yanı sıra dahili tehditlerden de korumaya yardımcı olan şirket içi bir platformdur.
 
-## ATA nasıl çalışır?
+## <a name="how-ata-works"></a>ATA nasıl çalışır?
 ATA, kuruluştaki kullanıcıların ve diğer varlıkların davranışlarını öğrenmek ve bunlar hakkında davranışsal bir profil oluşturmak için ağınızdaki günlükler ve olaylar gibi birden fazla veri kaynağından bilgiler alır.
 ATA, olayları ve günlükleri şuralardan alabilir:
 
@@ -39,7 +40,7 @@ ATA ayrıca, kimlik doğrulaması, yetkilendirme ve bilgi toplama için birden �
 
 ATA mimarisi hakkında daha fazla bilgi için bkz. [ATA Mimarisi](/advanced-threat-analytics/plan-design/ata-architecture).
 
-## ATA ne yapar?
+## <a name="what-does-ata-do"></a>ATA ne yapar?
 
 ATA teknolojisi siber saldırı ölüm zincirinin aşağıda belirtilen çeşitli aşamalarına odaklanarak birden çok şüpheli etkinliği algılar:
 
@@ -90,17 +91,17 @@ Bu tür şüpheli etkinlikleri ATA Panosunda görüntüleyebilirsiniz. Aşağıd
   ![Örnek ATA ekranı bozulmuş güven](media/sample screen broken trust.png)
 
 
-## Sırada ne var?
+## <a name="whats-next"></a>Sırada ne var?
 
 -   ATA’nın ağınıza nasıl uyum sağladığı hakkında daha fazla bilgi için: [ATA mimarisi](/advanced-threat-analytics/plan-design/ata-architecture)
 
 -   ATA’nın dağıtımına başlamak için: [ATA’yı yükleme](/advanced-threat-analytics/deploy-use/install-ata)
 
-## Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 
