@@ -23,7 +23,7 @@ ms.openlocfilehash: 70d66bccfda484722afa63a7f85dc8f85013f54f
 *Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
-## <a name="what-is-advanced-threat-analytics"></a>Advanced Threat Analytics nedir?
+# <a name="what-is-advanced-threat-analytics"></a>Advanced Threat Analytics nedir?
 Advanced Threat Analytics (ATA), kuruluşunuzu çeşitli türlerdeki, gelişmiş ve hedefe yönelik siber saldırıların yanı sıra dahili tehditlerden de korumaya yardımcı olan şirket içi bir platformdur.
 
 ## <a name="how-ata-works"></a>ATA nasıl çalışır?

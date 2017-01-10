@@ -22,7 +22,7 @@ ms.openlocfilehash: 2671937cf0ed9ff2865073b97ee735da99fa7d7f
 
 *Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
-## <a name="what-threats-does-ata-look-for"></a>ATA hangi tehditleri arar?
+# <a name="what-threats-does-ata-look-for"></a>ATA hangi tehditleri arar?
 
 ATA gelişmiş bir tehdidin çeşitli aşamaları için algılama sağlar: keşif, kimlik bilgilerinin tehlikeye atılması, yanal hareket, ayrıcalık yükseltme, etki alanı hakimiyeti ve daha fazlası. Bu algılamaların amacı, gelişmiş saldırıları ve içeriden gelen tehditleri kuruluşunuza zarar vermeden önce algılamaktır.
 Her aşamadaki algılama, söz konusu aşamayla ilgili birkaç şüpheli etkinlikle sonuçlanır ve burada her şüpheli etkinlik farklı türde olası saldırılarla ilişkilidir.
