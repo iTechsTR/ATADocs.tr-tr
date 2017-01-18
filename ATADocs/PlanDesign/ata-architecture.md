@@ -1,8 +1,9 @@
 ---
-title: ATA Mimarisi | Microsoft ATA
+title: ATA Mimarisi | Microsoft Docs
 description: "Microsoft Advance Threat Analytics’in (ATA) mimarisini açıklar"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
@@ -13,18 +14,18 @@ ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: c416fba5aace73cf585e7f6ca604a8c61c3c6fcc
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 06cc0de7e335a120d9e4c988dcc6a74087f027c6
 
 
 ---
 
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
 
 
-# ATA Mimarisi
+# <a name="ata-architecture"></a>ATA Mimarisi
 Advanced Threat Analytics mimarisi bu diyagramda ayrıntılı olarak açıklanmıştır:
 
 ![ATA mimarisi topoloji diyagramı](media/ATA-architecture-topology.jpg)
@@ -35,7 +36,7 @@ Bu bölümde, ağ akışı ve olay yakalama açıklanmıştır ve ATA’nın şu
 
 ![ATA trafik akışı diyagramı](media/ATA-traffic-flow.jpg)
 
-## ATA Bileşenleri
+## <a name="ata-components"></a>ATA Bileşenleri
 ATA şunlardan oluşur:
 
 -   **ATA Center** <br>
@@ -48,14 +49,14 @@ ATA Lightweight Gateway doğrudan etki alanı denetleyicilerinize yüklenir ve a
 Bir ATA dağıtımı tüm ATA Gateway bileşenlerine, tüm ATA Lightweight Gateway bileşenlerine veya ATA Gateway ve ATA Lightweight Gateway bileşenlerinin bir birleşimine bağlı olan tek bir ATA Center’dan oluşabilir.
 
 
-## Dağıtım seçenekleri
+## <a name="deployment-options"></a>Dağıtım seçenekleri
 Aşağıdaki ağ geçitlerinin birleşimini kullanarak ATA dağıtabilirsiniz:
 
 -   **Yalnızca ATA Gateway bileşenleri kullanma** <br>
 ATA dağıtımınız herhangi bir ATA Lightweight Gateway bileşeni olmadan yalnızca ATA Gateway bileşenleri içeriyorsa, tüm etki alanı denetleyicilerinin bir ATA Gateway bileşenine bağlantı noktası yansıtmaya olanak verecek şekilde yapılandırılması veya ağ TAP’ları bulunması gerekir.
 -   **Yalnızca ATA Lightweight Gateway bileşenleri kullanma**<br>
 ATA dağıtımınız yalnızca ATA Lightweight Gateway bileşenleri içeriyorsa, ATA Lightweight Gateway bileşenleri her bir etki alanı denetleyicisinde dağıtılır ve ek sunucu veya bağlantı noktası yansıtma yapılandırması gerekmez.
--   **Hem ATA Gateway bileşenleri hem de ATA Lightweight Gateway bileşenleri kullanma**<br>
+-   **Hem ATA Gateway hem de ATA Lightweight Gateway bileşenleri kullanma**<br>
 ATA dağıtımınız hem ATA Gateway bileşenleri hem de ATA Lightweight Gateway bileşenleri içeriyorsa, bazı etki alanı denetleyicilerinize ATA Lightweight Gateway yüklenirken (örneğin, şubelerinizdeki tüm etki alanı denetleyicileri), diğer etki alanı denetleyicileri ATA Gateway bileşenleri tarafından izlenir (örneğin, ana veri merkezlerinizdeki daha büyük etki alanı denetleyicileri).
 
 3 senaryonun hepsinde, tüm ağ geçitleri verilerini ATA Center’a gönderir.
@@ -63,7 +64,7 @@ ATA dağıtımınız hem ATA Gateway bileşenleri hem de ATA Lightweight Gateway
 
 
 
-## ATA Center
+## <a name="ata-center"></a>ATA Center
 **ATA Center** aşağıdaki işlevleri gerçekleştirir:
 
 -   ATA Gateway ve ATA Lightweight Gateway yapılandırma ayarlarını yönetir
@@ -97,9 +98,9 @@ Ağınızda kaç ATA Center bileşeninin dağıtımını yapacağınıza karar v
 
 -    Çok büyük Active Directory dağıtımlarında, tek bir ATA Center tüm etki alanı denetleyicilerinizin trafiğinin tamamını işleyemeyebilir. Bu durumda, birden fazla ATA Center gerekir. ATA Center bileşenlerinin sayısı, [ATA kapasite planlaması](ata-capacity-planning.md) tarafından belirlenmelidir.
 
-## ATA Gateway ve ATA Lightweight Gateway
+## <a name="ata-gateway-and-ata-lightweight-gateway"></a>ATA Gateway ve ATA Lightweight Gateway
 
-### Gateway çekirdek işlevleri
+### <a name="gateway-core-functionality"></a>Gateway çekirdek işlevleri
 **ATA Gateway** ve **ATA Lightweight Gateway**’in her ikisi de aynı çekirdek işlevlere sahiptir:
 
 -   Etki alanı denetleyicisi ağ trafiğini yakalama ve inceleme (ATA Gateway söz konusu olduğunda bağlantı noktası yansıtılmış trafik ve ATA Lightweight Gateway söz konusu olduğunda etki alanı denetleyicisinin yerel trafiği) 
@@ -125,7 +126,7 @@ ATA Gateway ağınızdan ağ trafiğini ve Windows Olaylarını alır ve aşağ�
 |Varlık Çözümleyicisi|Varlık Çözümleyicisi ayrıştırılan verileri (ağ trafiği ve olaylar) alır, sonra da hesap ve kimlik bilgilerini bulmak için bunları Active Directory ile çözümler. Ardından bunlar ayrıştırılan verilerde bulunan IP adresleriyle eşleştirilir. Varlık Çözümleyicisi, makine adları, özellikler ve kimlikler için kimlik doğrulama paketlerinin ayrıştırılabilmesi için, paket üst bilgilerini verimli bir şekilde inceler. Varlık Çözümleyicisi ayrıştırılmış kimlik doğrulama paketlerini gerçek paketteki verilerle birleştirir.|
 |Varlık Göndericisi|Varlık Göndericisi, ayrıştırılmış ve eşleştirilmiş verileri ATA Center’a göndermekten sorumludur.|
 
-## ATA Lightweight Gateway özellikleri
+## <a name="ata-lightweight-gateway-features"></a>ATA Lightweight Gateway özellikleri
 
 Aşağıdaki özellikler, bir ATA Gateway ya da ATA Lightweight Gateway bileşeni çalıştırdığınıza bağlı olarak farklı şekilde çalışır.
 
@@ -158,10 +159,10 @@ Active Directory daha fazla bilgi işleme gereksinim duyuyorsa, ATA Lightweight 
 
 
 
-## Ağ bileşenleriniz
+## <a name="your-network-components"></a>Ağ bileşenleriniz
 ATA ile çalışabilmesi için aşağıdakilerden emin olun:
 
-### Bağlantı noktası yansıtma
+### <a name="port-mirroring"></a>Bağlantı noktası yansıtma
 ATA Gateway bileşenleri kullanıyorsanız, izlenecek etki alanları için bağlantı noktası yansıtmayı ayarlamanız ve ATA Gateway’i fiziksel veya sanal anahtarlar kullanan hedef olarak ayarlamanız gerekir. Başka bir seçenek de ağ TAP’ları kullanmaktır. Etki alanı denetleyicilerinizin hepsi olmasa da bir kısmı izleniyorsa ATA çalışır, ancak algılamalar daha az etkili olur.
 
 Bağlantı noktası yansıtma etki alanı denetleyicisi ağ trafiğinin tümünü ATA Gateway’e yansıtsa da, bu trafiğin yalnızca küçük bir yüzdesi sıkıştırılıp çözümlenmek üzere ATA Center’a gönderilir.
@@ -169,14 +170,14 @@ Bağlantı noktası yansıtma etki alanı denetleyicisi ağ trafiğinin tümün�
 Etki alanı denetleyicileriniz ve ATA Gateway bileşenleri fiziksel veya sanal olabilir. Daha fazla bilgi için bkz. [Bağlantı noktası yansıtmayı yapılandırma](/advanced-threat-analytics/deploy-use/configure-port-mirroring).
 
 
-### Olaylar
+### <a name="events"></a>Olaylar
 ATA’nın Karma Değer Geçişi, Deneme Yanılma ve Bal Kapları algılamasını iyileştirmek için ATA’ya Windows Olay günlüğü kimliği 4776 gerekir. Bu ATA Gateway’e iki yoldan biriyle, ATA Gateway’i SIEM olaylarını dinleyecek şekilde yapılandırarak veya Windows Olay İletme’yi kullanarak iletilebilir.
 
 -   ATA Gateway’i SIEM olaylarını dinleyecek şekilde yapılandırma <br>SIEM sisteminizi belirli Windows olaylarını ATA’ya iletecek şekilde yapılandırın. ATA, bir dizi SIEM satıcısını destekler. Daha fazla bilgi için bkz. [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection).
 
 -   Windows Olay İletme’yi yapılandırma<br>ATA’nın olaylarınızı almasının bir diğer yolu da, etki alanı denetleyicilerinizi Windows olayı 4776’yı ATA Gateway bileşeninize iletecek şekilde yapılandırmaktır. Bir SIEM’iniz olmadığında veya SIEM’iniz şu anda ATA tarafından desteklenmediğinde, bu özellikle yararlı olur. ATA’da Windows Olay İletme hakkında daha fazla bilgi için bkz. [Windows olay iletme özelliğini yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding).
 
-## Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection)
@@ -186,6 +187,6 @@ ATA’nın Karma Değer Geçişi, Deneme Yanılma ve Bal Kapları algılamasın�
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

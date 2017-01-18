@@ -1,8 +1,9 @@
 ---
-title: "ATA’yı Yükleme - 5. Adım | Microsoft ATA"
+title: "ATA’yı Yükleme: 5. Adım | Microsoft Docs"
 description: "ATA’yı yükleme işleminin beşinci adımı, ATA Gateway bileşeniniz için ayarları yapılandırmanıza yardımcı olur."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
@@ -13,24 +14,24 @@ ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 39eadb9143740741fa592f983f03def5367ada46
-ms.openlocfilehash: 14b04a771f0c18170f0c80d388ab012574d40bee
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: b30fe6bc977184fb8cc297e10724c7fe48ee6934
 
 
 ---
 
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
 
-# ATA’yı Yükleme - 5. Adım
+# <a name="install-ata---step-5"></a>ATA’yı Yükleme - 5. Adım
 
 >[!div class="step-by-step"]
 [« 4. Adım](install-ata-step4.md)
 [6. Adım »](install-ata-step6.md)
 
 
-## Adım 5. ATA Gateway ayarlarını yapılandırma
+## <a name="step-5-configure-the-ata-gateway-settings"></a>Adım 5. ATA Gateway ayarlarını yapılandırma
 ATA Gateway yüklendikten sonra, ATA Gateway’in ayarlarını yapılandırmak için aşağıdaki adımları gerçekleştirin.
 
 1.  ATA konsolunda, **Yapılandırma**’ya gidin ve **Sistem** altında **Ağ Geçitleri**’ni seçin.
@@ -67,7 +68,7 @@ ATA Gateway yüklendikten sonra, ATA Gateway’in ayarlarını yapılandırmak i
 3. **Kaydet**'e tıklayın.
 
 
-## Yüklemeleri doğrulama
+## <a name="validate-installations"></a>Yüklemeleri doğrulama
 ATA Gateway’in başarıyla dağıtıldığını doğrulamak için aşağıdakileri denetleyin:
 
 1.  **Microsoft Advanced Threat Analytics Gateway** adlı hizmetin çalışıp çalışmadığını denetleyin. ATA Gateway ayarlarını kaydettikten sonra, hizmetin başlatılması birkaç dakika sürebilir.
@@ -87,7 +88,7 @@ ATA Gateway’in başarıyla dağıtıldığını doğrulamak için aşağıdaki
 [« 4. Adım](install-ata-step4.md)
 [6. Adım »](install-ata-step6.md)
 
-## Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
@@ -96,6 +97,6 @@ ATA Gateway’in başarıyla dağıtıldığını doğrulamak için aşağıdaki
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 
