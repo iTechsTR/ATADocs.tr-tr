@@ -24,7 +24,7 @@ ms.openlocfilehash: d967cbf2674c5f561e63f66b64640ac08daad6c0
 
 
 
-## <a name="provide-ata-with-up-your-email-server-settings"></a>ATA’ya e-posta sunucusu ayarlarınızı belirtin
+# <a name="provide-ata-with-up-your-email-server-settings"></a>ATA’ya e-posta sunucusu ayarlarınızı belirtin
 ATA, kuşkulu bir etkinlik algıladığında size bildirebilir. ATA’nın e-posta bildirimleri gönderebilmesi için öncelikle **E-posta sunucusu ayarları**’nı yapılandırmanız gerekir.
 
 1.  ATA Center sunucusunda, masaüstündeki **Microsoft Advanced Threat Analytics Yönetimi** simgesine tıklayın.

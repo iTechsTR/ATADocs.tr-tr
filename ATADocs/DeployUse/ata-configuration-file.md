@@ -1,8 +1,9 @@
 ---
-title: "ATA Yapılandırma Dosyası | Microsoft ATA"
-description: "ATA yapılandırmasını yedekleme."
+title: "ATA Yapılandırmasını Dışarı ve İçeri Aktarma | Microsoft Docs"
+description: "ATA yapılandırmasını dışarı ve içeri aktarma."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/31/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
-ms.openlocfilehash: 542bdf983e26fa98c036de55860b482d0b1d734d
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: f0307ae2e8f222e7c58db234b0fb393072ac7444
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: 542bdf983e26fa98c036de55860b482d0b1d734d
 
 
 
-# <a name="ata-configuration-file"></a>ATA Yapılandırma dosyası
+# <a name="export-and-import-the-ata-configuration"></a>ATA Yapılandırmasını Dışarı ve İçeri Aktarma
 ATA’nın yapılandırması veritabanındaki "SystemProfile" koleksiyonunda depolanır.
 Bu toplama, ATA Center hizmeti tarafından saatte bir "SystemProfile_*zamandamgası*json" adlı dosyalara yedeklenir. En son 10 sürüm depolanır.
 Bu dosya "Backup" adlı alt klasörde yer alır. ATA’nın yüklendiği varsayılan konumda, şurada bulunabilir: *C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*zamandamgası*.json*. 
@@ -42,6 +43,6 @@ Aşağıdaki komutu çalıştırarak ayarların tümünü geri yüklemek mümkü
 
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

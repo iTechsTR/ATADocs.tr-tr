@@ -1,8 +1,9 @@
 ---
-title: ATA Sistem Durumu Merkezi | Microsoft ATA
+title: ATA Sistem Durumu Merkezi | Microsoft Docs
 description: "ATA hizmetinin nasıl çalıştığını denetlemek ve olası sorunlarda uyarı almak için ATA Sistem Durumu Merkezi’ni kullanın."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
@@ -13,25 +14,25 @@ ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: 9f408d7c2cb9c14caee175a1dd1c9ddb1baf9faa
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: bff593f07d70cd559a1ee75d3b75c61b6534432d
 
 
 ---
 
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
 
-# ATA Sistem Durumu Merkezi
+# <a name="ata-health-center"></a>ATA Sistem Durumu Merkezi
 ATA Sistem Durumu Merkezi, ATA hizmetinizin nasıl performans gösterdiğini öğrenmenizi sağlar ve sorunlar olduğunda sizi uyarır.
 
-## ATA Sistem Durumu Merkezi’yle çalışma
+## <a name="working-with-the-ata-health-center"></a>ATA Sistem Durumu Merkezi’yle çalışma
 ATA Sistem Durumu Merkezi, menü çubuğundaki Sistem Durum Merkezi’nin üst kısmında bir uyarı (kırmızı nokta) göstererek sorun olduğunu bilmenizi sağlar.
 
 ![ATA Sistem Durumu Merkezi kırmızı nokta araç çubuğu](media/ATA-Health-Center-Alert-red-dot.png)
 
-### ATA sistem durumunu yönetme
+### <a name="managing-ata-health"></a>ATA sistem durumunu yönetme
 Sisteminizin bir bütün olarak durumunu denetlemek için, menü çubuğunda Sistem Durumu Merkezi simgesine tıklayın. ![ATA Sistem Durumu Merkezi simgesi](media/ATA-red-dot.png)
 
 -   Tüm açık uyarılar, **Çözüldü** veya **Çıkarıldı** olarak ayarlanarak yönetilebilir. Uyarıda **Açık** seçeneğine tıklayın ve ekranı aşağı kaydırarak **Çözüldü** veya **Çıkarıldı** seçeneğine gelin.
@@ -42,13 +43,13 @@ Sisteminizin bir bütün olarak durumunu denetlemek için, menü çubuğunda Sis
 
 ![ATA Sistem Durumu Merkezi sorunlarının resmi](media/ATA-Health-Issue.JPG)
 
-## Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [ATA algılama ayarlarıyla çalışma](working-with-detection-settings.md)
-- [Kuşkulu etkinliklerle çalışma](working-with-suspicious-activities.md)
+- [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

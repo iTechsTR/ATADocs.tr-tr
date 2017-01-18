@@ -1,8 +1,9 @@
 ---
-title: "ATA’yı Yükleme - 4. Adım | Microsoft ATA"
+title: "ATA’yı Yükleme: 4. Adım | Microsoft Docs"
 description: "ATA’yı yükleme işleminin dördüncü adımı ATA Gateway’i yüklemenize yardımcı olur."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
@@ -13,23 +14,23 @@ ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 54e5105e78b6db9f33488135601381af5503aa4a
-ms.openlocfilehash: 305c939ebda636617ece6e41f0554af0e948c3ec
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: ebaab5e8768d6b78c6d9ff93fa1430673827e483
 
 
 ---
 
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.7*
+*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
 
-# ATA’yı Yükleme - 4. Adım
+# <a name="install-ata---step-4"></a>ATA’yı Yükleme - 4. Adım
 
 >[!div class="step-by-step"]
 [« 3. Adım](install-ata-step3.md)
 [5. Adım »](install-ata-step5.md)
 
-## Adım 4. ATA Gateway’i yükleme
+## <a name="step-4-install-the-ata-gateway"></a>Adım 4. ATA Gateway’i yükleme
 
 Ayrılmış bir sunucuya ATA Gateway’i yüklemeden önce, bağlantı noktası yansıtmanın düzgün yapılandırıldığını ve ATA Gateway’i etki alanı denetleyicilerinden gelen ve giden trafiği görebildiğini doğrulayın. Daha fazla bilgi için bkz. [Bağlantı noktası yansıtmayı doğrulama](validate-port-mirroring.md).
 
@@ -89,7 +90,7 @@ ATA Gateway sunucusunda aşağıdaki adımları gerçekleştirin.
 [« 3. Adım](install-ata-step3.md)
 [5. Adım »](install-ata-step5.md)
 
-## Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
@@ -98,6 +99,6 @@ ATA Gateway sunucusunda aşağıdaki adımları gerçekleştirin.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 
