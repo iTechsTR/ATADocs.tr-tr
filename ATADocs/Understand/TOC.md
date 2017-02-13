@@ -20,12 +20,12 @@
 ### [2. Bağlantı noktası yansıtmayı doğrulama](/advanced-threat-analytics/deploy-use/validate-port-mirroring)
 ### [3. Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection)
 ## ATA’yı yükleme
-### [1. Adım Merkezi indirip yükleme](/advanced-threat-analytics/deploy-use/install-ata-step1.md)
-### [2. Adım AD’ye bağlanma](/advanced-threat-analytics/deploy-use/install-ata-step2.md)
-### [3. Adım GW paketini indirme](/advanced-threat-analytics/deploy-use/install-ata-step3.md)
-### [4. Adım GW’yi yükleme](/advanced-threat-analytics/deploy-use/install-ata-step4.md)
-### [5. Adım GW’yi yapılandırma](/advanced-threat-analytics/deploy-use/install-ata-step5.md)
-### [6. Adım Özel durumlar ve Sanal belirteç](/advanced-threat-analytics/deploy-use/install-ata-step6.md)
+### [1. Adım Merkezi indirip yükleme](/advanced-threat-analytics/deploy-use/install-ata-step1)
+### [2. Adım AD’ye bağlanma](/advanced-threat-analytics/deploy-use/install-ata-step2)
+### [3. Adım GW paketini indirme](/advanced-threat-analytics/deploy-use/install-ata-step3)
+### [4. Adım GW’yi yükleme](/advanced-threat-analytics/deploy-use/install-ata-step4)
+### [5. Adım GW’yi yapılandırma](/advanced-threat-analytics/deploy-use/install-ata-step5)
+### [6. Adım Özel durumlar ve Sanal belirteç](/advanced-threat-analytics/deploy-use/install-ata-step6)
 ### [Sessiz yükleme](/advanced-threat-analytics/deploy-use/ata-silent-installation)
 # VPN ayarlarını kuruluşunuzdaki kullanıcılar ve cihazlara dağıtmak için
 ## [ATA Center IP adresini değiştirme](/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip)
