@@ -1,11 +1,11 @@
 ---
-title: "ATA Önkoşulları | Microsoft Docs"
+title: "Advanced Threat Analytics önkoşulları | Microsoft Docs"
 description: "Ortamınızda başarılı bir ATA dağıtımının gereksinimlerini açıklar"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/14/2016
+ms.date: 2/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67b430fbed97bd08e5f538043c783e70ed2ab956
-ms.openlocfilehash: 60ec036a8c22fb34c673653a6378437ab14f9853
+ms.sourcegitcommit: 88ca89f2311bf4e73b3d0b57db3e4377e99fd8b2
+ms.openlocfilehash: eae08c573fafaa3fa8643a2e115f7fc710e4d3f9
 
 
 ---
@@ -219,8 +219,9 @@ ATA Lightweight Gateway; Windows Server 2008 R2 SP1 (Server Core içermez), Wind
 
 Etki alanı denetleyicisi salt okunur bir etki alanı denetleyicisi (RODC) olabilir.
 
-ATA Lightweight Gateway bileşenini Windows Server 2012 R2 SP1 çalıştıran bir etki alanı denetleyicisine yüklemeden önce, şu güncelleştirmenin yüklendiğini onaylayın: [KB2919355](https://support.microsoft.com/kb/2919355/).
-Şu Windows PowerShell cmdlet’ini çalıştırarak bunu denetleyebilirsiniz: `[Get-HotFix -Id kb2919355]`.
+ATA Lightweight Gateway bileşenini Windows Server 2012 R2 SP1 çalıştıran bir etki alanı denetleyicisine yüklemeden önce, şu güncelleştirmelerin yüklendiğini onaylayın: [KB2919355](https://support.microsoft.com/kb/2919355/) ve [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1,-windows-8.1,-and-windows-server-2012-r2) (bu sırayla). 
+
+Şu Windows PowerShell cmdlet’ini çalıştırarak bunu denetleyebilirsiniz: `[Get-HotFix -Id kb2919355] [Get-HotFix -Id KB3000850]`.
 
 > [!NOTE]
 > En az 5 GB alan gereklidir ve 10 GB önerilir. Buna, ATA ikili dosyaları, [ATA günlükleri](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) ve [performans günlükleri](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md) için gereken alan da dahildir.
@@ -288,6 +289,6 @@ ATA Konsolu’na tarayıcı yoluyla erişilir ve aşağıdakiler desteklenir:
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 
