@@ -14,8 +14,8 @@ ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8ffbbfd96507612b8ec44f232f4ece42988eb588
-ms.openlocfilehash: 3bc9e48f1d8843aef40016a2c5a82f6c7510be3c
+ms.sourcegitcommit: e3f763f7c1cce6c451a1cc969771b73543c76673
+ms.openlocfilehash: 0669ccb78207dde1ede06a229af896bed0b19d28
 
 
 ---
@@ -30,7 +30,7 @@ Bu makalede, ATA Center işlevselliğinin kaybolduğu ancak ATA Ağ Geçitlerini
 >[!NOTE]
 > Açıklanan işlemle, daha önce algılanan şüpheli etkinlikler kurtarılmaz ancak ATA Center tam olarak işlevsel hale getirilir. Ayrıca, bazı davranış algılamaları için gereken öğrenme dönemi yeniden başlatılır ancak ATA’nın sunduğu algılamaların çoğu, ATA Center geri yüklendikten sonra çalışır duruma gelir. 
 
-## <a name="how-to-recovery-your-ata-center-after-disaster"></a>Olağanüstü durum sonrası ATA Center’ı kurtarma
+## <a name="how-to-recover-your-ata-center-after-a-disaster"></a>Olağanüstü durumdan sonra ATA Center’ınızı kurtarma
 
 1. ATA Center yapılandırması, bir dosyaya saat başı yedeklenir. ATA Center yapılandırmasının en son yedek kopyasını bulun ve ayrı bir bilgisayara kaydedin. Bu dosyaları nasıl bulacağınıza ilişkin tam açıklama için bkz. [ATA yapılandırmasını dışarı ve içeri aktarma](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
 2. ATA Center sertifikasını dışarı aktarın.
@@ -72,6 +72,6 @@ Bu makalede, ATA Center işlevselliğinin kaybolduğu ancak ATA Ağ Geçitlerini
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 
