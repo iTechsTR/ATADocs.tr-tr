@@ -20,12 +20,12 @@
 ### [2. Bağlantı noktası yansıtmayı doğrulama](validate-port-mirroring.md)
 ### [3. Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 ## ATA’yı yükleme
-### [1. Adım Merkezi indirip yükleme](/advanced-threat-analytics/deploy-use/install-ata-step1.md)
-### [2. Adım AD’ye bağlanma](/advanced-threat-analytics/deploy-use/install-ata-step2.md)
-### [3. Adım GW paketini indirme](/advanced-threat-analytics/deploy-use/install-ata-step3.md)
-### [4. Adım GW’yi yükleme](/advanced-threat-analytics/deploy-use/install-ata-step4.md)
-### [5. Adım GW’yi yapılandırma](/advanced-threat-analytics/deploy-use/install-ata-step5.md)
-### [6. Adım Özel durumlar ve Sanal belirteç](/advanced-threat-analytics/deploy-use/install-ata-step6.md)
+### [1. Adım Merkezi indirip yükleme](install-ata-step1.md)
+### [2. Adım AD’ye bağlanma](install-ata-step2.md)
+### [3. Adım GW paketini indirme](install-ata-step3.md)
+### [4. Adım GW’yi yükleme](install-ata-step4.md)
+### [5. Adım GW’yi yapılandırma](install-ata-step5.md)
+### [6. Adım Özel durumlar ve Sanal belirteç](install-ata-step6.md)
 ### [Sessiz yükleme](ata-silent-installation.md)
 # VPN ayarlarını kuruluşunuzdaki kullanıcılar ve cihazlara dağıtmak için
 ## [ATA Center IP adresini değiştirme](modifying-ata-config-centerip.md)
@@ -49,6 +49,6 @@
 ## [Veritabanını kullanarak sorun giderme](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
 ## [Olağanüstü durum kurtarma](/advanced-threat-analytics/troubleshoot/disaster-recovery)
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 
