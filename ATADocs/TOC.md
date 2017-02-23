@@ -49,6 +49,7 @@
 ## [Veritabanını kullanarak sorun giderme](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
 ## [Olağanüstü durum kurtarma](/advanced-threat-analytics/troubleshoot/disaster-recovery)
 
-<!--HONumber=Feb17_HO2-->
+
+<!--HONumber=Feb17_HO3-->
 
 
