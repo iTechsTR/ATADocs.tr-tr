@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/19/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 31fca93099bbd44f6429f9274c941ed65556d588
+ms.sourcegitcommit: 9d26567a0a9a00d4cb1a9421a4ef2e30a52c11a8
+ms.openlocfilehash: 9e550cf8fe795cb679fbcfe10ef40d2ede7875b4
 
 
 ---
@@ -43,8 +43,8 @@ ATA Center’ı yüklemek için aşağıdaki komutu kullanın:
 
 **Söz dizimi**:
 
-    “Microsoft ATA Center Setup.exe” [/quiet] [/NoRestart] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments=”/q”] [InstallationPath=“<InstallPath>”] [DatabaseDataPath= “<DBPath>”] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint=“<CertThumbprint>”] 
-    [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint=”<CertThumbprint >”]
+    "Microsoft ATA Center Setup.exe" [/quiet] [/NoRestart] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments="/q"] [InstallationPath="<InstallPath>"] [DatabaseDataPath= "<DBPath>"] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint="<CertThumbprint>"] 
+    [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint="<CertThumbprint >"]
     
 **Yükleme seçenekleri**:
 
@@ -60,23 +60,23 @@ ATA Center’ı yüklemek için aşağıdaki komutu kullanın:
 
 |Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Açıklama|
 |-------------|----------|---------|---------|
-|InstallationPath|InstallationPath=“<InstallPath>”|Hayır|ATA ikili dosyalarını yükleme yolunu ayarlar. Varsayılan yol: C:\Program Files\Microsoft Advanced Threat Analytics\Center|
-|DatabaseDataPath|DatabaseDataPath= “<DBPath>”|Hayır|ATA Veritabanı veri klasörünün yolunu ayarlar. Varsayılan yol: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
+|InstallationPath|InstallationPath="<InstallPath>"|Hayır|ATA ikili dosyalarını yükleme yolunu ayarlar. Varsayılan yol: C:\Program Files\Microsoft Advanced Threat Analytics\Center|
+|DatabaseDataPath|DatabaseDataPath= "<DBPath>"|Hayır|ATA Veritabanı veri klasörünün yolunu ayarlar. Varsayılan yol: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
 |CenterIpAddress|CenterIpAddress=<CenterIPAddress>|Evet|ATA Center Hizmetinin IP adresini ayarlar|
 |CenterPort|CenterPort=<CenterPort>|Evet|ATA Center Hizmetinin ağ bağlantı noktasını ayarlar|
-|CenterCertificateThumbprint|CenterCertificateThumbprint=“<CertThumbprint>”|Hayır|ATA Center Hizmeti için sertifika parmak izini ayarlar. Bu Sertifika ATA Center ile ATA Gateway arasındaki iletişimin güvenliğini sağlamak için kullanılır. Ayarlanmazsa, yükleme otomatik olarak imzalanan bir sertifika oluşturur.|
+|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|Hayır|ATA Center Hizmeti için sertifika parmak izini ayarlar. Bu Sertifika ATA Center ile ATA Gateway arasındaki iletişimin güvenliğini sağlamak için kullanılır. Ayarlanmazsa, yükleme otomatik olarak imzalanan bir sertifika oluşturur.|
 |ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Evet|ATA Konsolunun IP adresini ayarlar|
-|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint=”<CertThumbprint >”|Hayır|ATA Konsolu için sertifika parmak izini ayarlar. Bu Sertifika ATA Konsolu web sitesinin kimliğini doğrulamak için kullanılır. Belirtilmezse yükleme otomatik olarak imzalanan bir sertifika oluşturur|
+|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|Hayır|ATA Konsolu için sertifika parmak izini ayarlar. Bu Sertifika ATA Konsolu web sitesinin kimliğini doğrulamak için kullanılır. Belirtilmezse yükleme otomatik olarak imzalanan bir sertifika oluşturur|
 
 **Örnekler**: ATA Center’ı varsayılan yükleme yolları ve tek bir IP adresi yüklemek için:
 
-    “Microsoft ATA Center Setup.exe” /quiet --LicenseAccepted NetFrameworkCommandLineArguments="/q" CenterIpAddress=192.168.0.10
+    "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments="/q" CenterIpAddress=192.168.0.10
     CenterPort=444 ConsoleIpAddress=192.168.0.10
 
 ATA Center’ı varsayılan yükleme yolları, iki IP adresi ve kullanıcı tanımlı sertifika parmak izleri ile yüklemek için:
 
-    “Microsoft ATA Center Setup.exe” /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F”
-    ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint=”G9530253C976BFA9342FD1A716C0EC94207BFD5A”
+    "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F"
+    ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint="G9530253C976BFA9342FD1A716C0EC94207BFD5A"
 
 ## <a name="update-the-ata-center"></a>ATA Center’ı güncelleştirme
 
@@ -84,7 +84,7 @@ ATA Center’ı güncelleştirmek için aşağıdaki komutu kullanın:
 
 **Söz dizimi**:
 
-    Microsoft ATA Center Setup.exe” [/quiet] [-NoRestart] /Help] [NetFrameworkCommandLineArguments=”/q”]
+    "Microsoft ATA Center Setup.exe" [/quiet] [-NoRestart] /Help] [NetFrameworkCommandLineArguments="/q"]
 
 
 **Yükleme seçenekleri**:
@@ -101,7 +101,7 @@ ATA’yı güncelleştirirken, yükleyici ATA’nın sunucuda zaten yüklü oldu
 
 **Örnekler**: ATA Center’ı sessizce güncelleştirmek için. Büyük ortamlarda, ATA Center güncelleştirmesinin tamamlanması biraz zaman alabilir. Güncelleştirmenin ilerleme durumunu izlemek için ATA günlüklerini takip edin.
 
-        “Microsoft ATA Center Setup.exe” /quiet NetFrameworkCommandLineArguments="/q"
+        "Microsoft ATA Center Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 
 ## <a name="uninstall-the-ata-center-silently"></a>ATA Center’ı sessizce kaldırma
 
@@ -128,7 +128,7 @@ ATA Center’ı sessizce kaldırma işlemini gerçekleştirmek için şu komutu 
 **Örnekler**: Var olan tüm veritabanı verilerini kaldırarak sunucudan ATA Center’ı sessizce kaldırmak için:
 
 
-    “Microsoft ATA Center Setup.exe” /quiet /uninstall --DeleteExistingDatabaseData
+    "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
 ## <a name="ata-gateway-silent-installation"></a>ATA Gateway Sessiz Yüklemesi
 ATA Gateway’i sessizce yüklemek için aşağıdaki komutu kullanın:
@@ -136,8 +136,8 @@ ATA Gateway’i sessizce yüklemek için aşağıdaki komutu kullanın:
 **Söz dizimi**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/NoRestart] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
-    [GatewayCertificateThumbprint=”<CertThumbprint >”] [ConsoleAccountName=”<AccountName>”] 
-    [ConsoleAccountPassword=”<AccountPassword>”]
+    [GatewayCertificateThumbprint="<CertThumbprint >"] [ConsoleAccountName="<AccountName>"] 
+    [ConsoleAccountPassword="<AccountPassword>"]
 
 **Yükleme seçenekleri**:
 
@@ -152,14 +152,14 @@ ATA Gateway’i sessizce yüklemek için aşağıdaki komutu kullanın:
 
 |Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Açıklama|
 |-------------|----------|---------|---------|
-|GatewayCertificateThumbprint|GatewayCertificateThumbprint=”<CertThumbprint >”|Hayır|ATA Center hizmeti için sertifika parmak izini ayarlar. Bu sertifika ATA Center ile ATA Gateway arasındaki iletişimin güvenliğini sağlamak için kullanılır. Ayarlanmazsa, yükleme otomatik olarak imzalanan bir sertifika oluşturur.|
-|ConsoleAccountName|ConsoleAccountName=”<AccountName>”|Evet|ATA Gateway’i ATA Center’a kaydetmek için kullanılan kullanıcı hesabının (user@domain.com) adını ayarlar.|
-|ConsoleAccountPassword|ConsoleAccountPassword=”<AccountPassword>”|Evet|ATA Gateway’i ATA Center’a kaydetmek için kullanılan kullanıcı hesabının (user@domain.com) parolasını ayarlar.|
+|GatewayCertificateThumbprint|GatewayCertificateThumbprint="<CertThumbprint >"|Hayır|ATA Center hizmeti için sertifika parmak izini ayarlar. Bu sertifika ATA Center ile ATA Gateway arasındaki iletişimin güvenliğini sağlamak için kullanılır. Ayarlanmazsa, yükleme otomatik olarak imzalanan bir sertifika oluşturur.|
+|ConsoleAccountName|ConsoleAccountName="<AccountName>"|Evet|ATA Gateway’i ATA Center’a kaydetmek için kullanılan kullanıcı hesabının (user@domain.com) adını ayarlar.|
+|ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Evet|ATA Gateway’i ATA Center’a kaydetmek için kullanılan kullanıcı hesabının (user@domain.com) parolasını ayarlar.|
 
 **Örnekler**: ATA Gateway’i sessizce yüklemek ve belirtilen kimlik bilgilerini kullanarak ATA Center’a kaydetmek için:
 
-    “Microsoft ATA Gateway Setup.exe” /quiet NetFrameworkCommandLineArguments="/q" 
-    ConsoleAccountName=”user@contoso.com” ConsoleAccountPassword=“userpwd”
+    "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
+    ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
     
 
 ## <a name="update-the-ata-gateway"></a>ATA Gateway’i güncelleştirme
@@ -221,6 +221,6 @@ ATA Gateway’i sessizce kaldırma işlemini gerçekleştirmek için şu komutu 
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 
