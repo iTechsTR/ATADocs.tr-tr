@@ -1,201 +1,145 @@
 ---
-asset_id: c4a97980-6e19-4d10-bf69-f0b338266efa
-layout: HubPage
-title: "Gelişmiş Tehdit Analizi Belgeleri"
-description: "Bir Microsoft güvenlik hizmeti olan Advanced Threat Analytics için teknik belgeler."
-keywords: "Gelişmiş Tehdit Analizi Belgeleri, ATA belgeleri"
-author: msmbaldwin
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: hubpage
-ms.prod: 
-ms.service: advanced-threat-analytics
-ms.technology: 
-ms.suite: ems
-ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
+layout: LandingPage
+description: "Advanced Threat Analytics’i nasıl kullanacağınızı öğrenin."
 translationtype: Human Translation
-ms.sourcegitcommit: dc1bfcd10b1856a7b92189f5cfd3b7492cf15bcb
-ms.openlocfilehash: 22af8d46b375e86c203da1cadd89416b42c45db7
-
+ms.sourcegitcommit: c4e5418a8b5f7093792f52f1553307039f38ff5f
+ms.openlocfilehash: 1fe4d6e06150cc1425c92165445fd087544b8904
 
 ---
-# <a name="microsoft-advanced-threat-analytics-documentation"></a>Microsoft Advanced Threat Analytics Belgeleri
-<article id="main">
-    <section id="hero-content">
-      <h1>Microsoft Advanced Threat Analytics Belgeleri</h1>
-      <h2>BT güvenlik uzmanlarının kuruluşlarını ileri düzey hedeflenmiş saldırılara karşı korumalarına yardımcı olmaya yönelik bir şirket içi ürünü olan Microsoft Advanced Threat Analytics’in (ATA) nasıl dağıtıldığını ve yönetildiğini öğrenin.</h2>
-      <h3>ATA’yı kullanmaya yeni mi başladınız? <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Ürün sayfamızı ziyaret edin&rarr;</a></h3>
-    </section>
-    <aside class="alert section-border">
-      <p>Başlamaya hazır mısınız?</p>
-      <ol class="action-list">
-        <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics" target="_blank" class="button-bordered button-translucent">Şimdi Deneyin</a></li>
-      </ol>
-    </aside>
-    <section id="featured" class="container">
-      <h2 class="section-heading"><span class="icon icon-warning"></span> Öne Çıkan İçerik</h2>
-      <div class="features row">
-        <ul class="column column-half">
-          <li><mark><b>YENİ</b></mark> <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">ATA 1.7 sürümünün yayımlanması</a></li>
-          <li><a href="/advanced-threat-analytics/understand-explore/what-is-ata">Advanced Threat Analytics nedir?</a></li>
-          <li><a href="/advanced-threat-analytics/understand-explore/ata-technical-faq">Sık sorulan sorular</a></li>
-        </ul>
-        <ul class="column column-half">
-          <li><a href="/advanced-threat-analytics/plan-design/ata-architecture">ATA Mimarisi</a></li>
-          <li><a href="/advanced-threat-analytics/plan-design/ata-capacity-planning">ATA kapasite planlaması</a></li>        </ul>
-      </div>
-    </section>
-    <div id="journeys">
-      <section class="container">
-        <ul class="journeys-list">
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/advanced-threat-analytics/understand-explore/what-is-ata">
-                <div class="title column-third">
-                  <span class="step-number">1</span>
-                  <p>Anlama &amp; Keşfetme</p>
+# <a name="advanced-threat-analytics-documentation"></a>Advanced Threat Analytics Belgeleri
+
+Şirketinizin dışında paylaştığınız e-posta, belgeler ve hassas verileri denetleyin ve güvenli hale getirin. Nerede depolandığı veya kiminle paylaşıldığı fark etmeksizin, Azure Information Protection ile kolay sınıflandırmadan ekli etiketler ve izinlere kadar veri korumasını geliştirin.
+
+<ul class="panelContent cardsFTitle">
+    <li>
+        <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_whats-new.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Yenilikler</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">Microsoft Advanced Threat Analytics’in üst düzey kavramlarını, özelliklerini ve yeteneklerini öğrenin.
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/understand-explore/what-is-ata">
-                    <h3>ATA nedir?</h3>
-                    <p>ATA’nin BT güvenlik uzmanlarının işletmelerini gelişmiş hedeflenen saldırılara karşı korumasına nasıl yardımcı olduğunu öğrenin.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/understand-explore/ata-technical-faq">
-                    <h3>Sık sorulan sorular</h3>
-                    <p>ATA hakkında tüm teknik sorularınıza yanıtlar alın.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">
-                    <h3>ATA sürüm notları</h3>
-                    <p>Bilinen sorunlar ve geçiş kılavuzlarının yanı sıra, en son sürümlerde nelerin güncelleştirildiğine bakın.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/advanced-threat-analytics/plan-design/ata-architecture">
-                <div class="title column-third">
-                  <span class="step-number">2</span>
-                  <p>Planlama &amp; Tasarım</p>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="/advanced-threat-analytics/understand-explore/what-is-ata">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_learn-about.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Advanced Threat Analytics hakkında daha fazla bilgi edinin</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">ATA’yı planlayın ve tasarlayın.
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/plan-design/ata-architecture">
-                    <h3>ATA Mimarisi</h3>
-                    <p>Mimarinizin ATA’yı desteklemek için nasıl olması gerektiğini anlayın.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/plan-design/ata-capacity-planning">
-                    <h3>Kapasite planlama</h3>
-                    <p>Ağınızı desteklemek için kaç ATA sunucusu gerektiğini saptayın.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/plan-design/ata-prerequisites">
-                    <h3>ATA önkoşulları</h3>
-                    <p>Ortamınızda başarılı bir ATA dağıtımının gereksinimlerini planlayın.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/advanced-threat-analytics/deploy-use/configure-port-mirroring">
-                <div class="title column-third">
-                  <span class="step-number">3</span>
-                  <p>Dağıtma &amp; Kullanma</p>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="/advanced-threat-analytics/understand-explore/ata-technical-faq"> 
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_support.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Sık sorulan sorular</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">ATA’yı dağıtın ve kullanın.
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/configure-port-mirroring">
-                    <h3>ATA yüklemeden önce</h3>
-                    <p>ATA’yı yüklemeden önce aşağıdaki adımları izleyin.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/install-ata-step1">
-                    <h3>ATA’yı yükleme</h3>
-                    <p>Ayrıntılı adım adım yükleme kılavuzunu takip edin.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip">
-                    <h3>ATA Çalıştırma</h3>
-                    <p>ATA yapılandırmasını değiştirin ve ATA kullanarak günlük izleme yapın.</p>
-                  </a>
-                </li>
-            </section>
-          </li>
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors">
-                <div class="title column-third">
-                  <span class="step-number">4</span>
-                  <p>Sorunları Gider</p>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="/advanced-threat-analytics/plan-design/ata-architecture"> 
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_architecture.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Advanced Threat Analytics mimarisi</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">ATA ile ilgili sorunları giderin.
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors">
-                    <h3>Bilinen ATA hatalarını giderme</h3>
-                    <p>ATA bilinen hatalarını gidermek için adımları gözden geçirin.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs">
-                    <h3>Sorun gidermek için günlükleri kullanma</h3>
-                    <p>ATA’nın her bileşeninin belirli bir anda neler yaptığını öğrenin.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters">
-                    <h3>Sorun giderme için performans sayaçlarını kullanma</h3>
-                    <p>Her bir ATA bileşeninin nasıl performans gösterdiğini anlayın.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-        </ul>
-      </section>
-    </div>
-    <aside class="alert alert-social">
-      <p>ATA hakkında haberleri takip edin</p>
-      <ol class="action-list">
-        <li><a href="http://blogs.technet.com/b/ata/" target="_blank" class="button-bordered button-translucent">resmi Microsoft ATA blogu</a></li>
-      </ol>
-    </aside>
-</article>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="/advanced-threat-analytics/plan-design/ata-capacity-planning"> 
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_tasks.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Advanced Threat Analytics kapasite planlaması</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://blogs.technet.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/"> 
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_blog.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Advanced Threat Analytics blogu</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+</ul>
+
+---
+
+<h3>Şimdi deneyin</h3>
+<ul class="panelContent cardsW">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <p><a href="https://go.microsoft.com/fwlink/?linkid=836487">Değerlendirme</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>  
+</ul>
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 

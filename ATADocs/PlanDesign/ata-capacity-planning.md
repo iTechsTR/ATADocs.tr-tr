@@ -1,11 +1,11 @@
 ---
-title: "ATA Dağıtımınızı planlama | Microsoft Docs"
+title: "Advanced Threat Analytics dağıtımınızı planlama | Microsoft Docs"
 description: "Dağıtımınızı planlamanıza ve ağınızı desteklemek için kaç adet ATA sunucusu gerekeceğine karar vermenize yardımcı olur"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2016
+ms.date: 1/23/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 56eff27ffdd988d5cc9e67352859ddfedebb2144
-ms.openlocfilehash: 93ec7373a166529332d7c4809c756ab3ba240868
+ms.sourcegitcommit: 0bacaaaa543d74e9575811d64b4cd41ac0fdb140
+ms.openlocfilehash: 2cdf7e00b575ee759a54fb99fb97cbfcee5a43de
 
 
 ---
@@ -54,13 +54,13 @@ Kullanıcı davranış analizi için ATA Center’a en az 30 günlük veri gerek
 |10.000|4|48|3|90|200 (300)
 |40.000|8|64|12|360|500 (1.000)
 |100.000|12|96|30|900|1.000 (1.500)
-|400.000|40|128|120|1.800|2.000 (2.500)
+|400.000|40|128|120|3.600|4.000 (5.000)
 
 &#42;Bu fiziksel çekirdekleri içerir; hiper iş parçacıklı çekirdekleri içermez.
 
 &#42;&#42;Ortalama sayılar (En yüksek sayılar)
 > [!NOTE]
-> -   ATA Center, tüm izlenen etki alanı denetleyicilerinden saniyede toplam en çok 400.000 çerçeveyi (FPS) işleyebilir.
+> -   ATA Center, tüm izlenen etki alanı denetleyicilerinden saniyede toplam en çok 400.000 çerçeveyi (FPS) işleyebilir. Bazı ortamlarda aynı ATA Center, 400.000’i aşan genel trafikle başa çıkabilir. Bu tür ortamlar konusunda yardım almak için lütfen askcesec@microsoft.com ile iletişime geçin.
 > -   Burada belirtilen depolama miktarları net değerlerdir, gelecekteki büyümeyi de hesaba katmalı ve üzerinde veritabanının bulunduğu diskte en az %20 boş alan bulunduğundan emin olmalısınız.
 > -   Boş alanınız en az %20’ye veya 100 GB’a ulaşırsa, en eski veri koleksiyonu silinir. Bu işlem, boş alan %5 veya 50 GB’a inene kadar devam eder; bu noktaya ulaşıldığında veri toplama işleminin çalışması durdurulur.
 > -   Okuma ve yazma etkinlikleri için depolama gecikmesi 10 ms’nin altında olmalıdır.
@@ -115,7 +115,7 @@ Bir ATA Lightweight Gateway, etki alanı denetleyicisinin oluşturduğu ağ traf
 
 &#42;&#42;&#42;Bu etki alanı denetleyicisinde takılı belleğin toplam miktarı.
 
-> [!NOTE]   
+> [!NOTE]    
 > -   Etki alanı denetleyicisinde, ATA Lightweight Gateway için gereken miktarda kaynak yoksa, etki alanı denetleyicisi performansı etkilenmez, ancak ATA Lightweight Gateway beklendiği gibi çalışmayabilir.
 > -   Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
 > -   En iyi performans için, ATA Lightweight Gateway’in **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.
@@ -126,13 +126,13 @@ Bir ATA Lightweight Gateway, etki alanı denetleyicisinin oluşturduğu ağ traf
 
 Kaç adet ATA Gateway bileşeninin dağıtımını yapacağınıza karar verirken aşağıdaki noktaları dikkate alın.
 
--   **Active Directory ormanları ve etki alanları**<br>
+-    **Active Directory ormanları ve etki alanları**<br>
     ATA tek bir Active Directory ormanındaki birden çok etki alanından trafiği izleyebilir. Birden çok Active Directory ormanını izlemek için ayrı ATA dağıtımları gerekir. Tek bir ATA dağıtımı farklı ormanlardaki etki alanı denetleyicilerinin ağ trafiğini izlemek için yapılandırılmamalıdır.
 
--   **Bağlantı Noktası Yansıtma**<br>
+-    **Bağlantı Noktası Yansıtma**<br>
 Bağlantı noktası yansıtmayla ilgili önemli noktalar, her bir veri merkezi veya şube için birden fazla ATA Gateway bileşeni yapılandırmanızı gerektirebilir.
 
--   **Kapasite**<br>
+-    **Kapasite**<br>
     ATA Gateway, izlenmekte olan etki alanı denetleyicilerinin ağ trafiği miktarına bağlı olarak, birden çok etki alanı denetleyicisinin izlenmesini destekleyebilir. 
 <br>
 
@@ -214,6 +214,6 @@ Saniyedeki paket sayısını belirlemek için, her etki alanı denetleyicisinde 
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

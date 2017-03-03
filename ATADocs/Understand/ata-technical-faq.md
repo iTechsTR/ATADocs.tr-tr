@@ -1,11 +1,11 @@
 ---
-title: "ATA hakkında Sık sorulan sorular | Microsoft Docs"
+title: "Advanced Threat Analytics sık sorulan sorular | Microsoft Docs"
 description: "ATA hakkında sık sorulan soruların ve bunlarla ilişkili yanıtların listesini sağlar"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 02/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: f806437df3a2c581631e924798a367e5e48be6f8
+ms.sourcegitcommit: bdb830bb7d8ecb6e04bb9c62b40904300fc1b404
+ms.openlocfilehash: 715d6987a74d2d6222acd6747f3cf425a6a901da
 
 
 ---
@@ -27,6 +27,7 @@ Bu makalede, ATA hakkında sık sorulan soruların listesi ve öngörülerle yan
 
 ## <a name="what-should-i-do-if-the-ata-gateway-wont-start"></a>ATA Gateway başlatılmazsa ne yapmalıyım?
 Geçerli hata günlüğünde ("Logs" klasörü altında ATA’nın yüklendiği yer) en son hataya bakın.
+
 ## <a name="how-can-i-test-ata"></a>ATA’yı nasıl test edebilirim?
 Uçtan uca bir testle aşağıdakileri yaparak kuşkulu etkinliklerin benzetimini yapabilirsiniz:
 
@@ -54,6 +55,7 @@ ATA birden çok ağ protokolünü analiz etmeye ve SIEM’den toplanan ya da Win
 
 ## <a name="does-ata-work-with-kerberos-armoring"></a>ATA Kerberos Koruması ile çalışır mı?
 Esnek Kimlik Doğrulaması Güvenli Tüneli (FAST) olarak da bilinen Kerberos Koruması’nın etkinleştirilmesi ATA tarafından desteklenir; yalnızca karma değeri atlayarak geçiş algılaması çalışmaz.
+
 ## <a name="how-many-ata-gateways-do-i-need"></a>Kaç tane ATA Gateway’e ihtiyacım vardır?
 
 ATA Gateway sayısı ağ düzeninize, paket hacmine ve ATA tarafından yakalanan olayların hacmine bağlıdır. Sayıyı tam olarak belirlemek için bkz: [ATA Lightweight Gateway Boyutu](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
@@ -81,7 +83,11 @@ Yedeklenecek 2 öğe vardır:
 
 -   ATA tarafından depolanan trafik ve olaylar. Bunlar desteklenen herhangi bir veritabanı yedekleme yordamı kullanılarak yedeklenebilir. Daha fazla bilgi için bkz. [ATA veritabanı yönetimi](/advanced-threat-analytics/deploy-use/ata-database-management) 
 -   ATA yapılandırması. Veritabanında depolanır ve ATA Center dağıtım konumundaki **Yedekleme** klasöründe saatte bir kere yedeklenir.  Daha fazla bilgi için bkz: [ATA veritabanı yönetimi](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management).
+
+
+
 ## <a name="what-can-ata-detect"></a>ATA neleri algılayabilir?
+
 ATA bilinen kötü amaçlı saldırıları ve teknikleri, güvenlik sorunlarını ve riskleri algılar.
 ATA algılamalarının tam listesi için bkz: [ATA hangi algılamaları gerçekleştirir?](ata-threats.md)
 
@@ -98,7 +104,6 @@ ATA’nın SIEM’lerle şöyle çift yönlü bir tümleştirmesi vardır:
 2. ATA, kimliği 4776 olan her Windows olayında [bu SIEM’lerden](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support) Syslog iletileri alacak şekilde yapılandırılabilir.
 
 ## <a name="can-ata-monitor-domain-controllers-virtualized-on-your-iaas-solution"></a>ATA, IaaS çözümünüzde sanallaştırılan etki alanı denetleyicilerini izleyebilir mi?
-
 Evet, ATA Lightweight Gateway’i herhangi bir IaaS çözümündeki etki alanı denetleyicilerini izlemek için kullanabilirsiniz.
 
 ## <a name="is-this-an-on-premises-or-in-cloud-offering"></a>Bu şirket içi bir teklif mi yoksa bulut teklifi mi?
@@ -127,6 +132,7 @@ Evet. Bilgisayar hesapları (aynı diğer tüm varlıklar gibi) kötü amaçlı 
 
 ## <a name="can-ata-support-multi-domain-and-multi-forest"></a>ATA birden çok etki alanını ve birden çok ormanı destekliyor mu?
 Microsoft Advanced Threat Analytics aynı orman sınırı içindeki çok etki alanlı ortamları destekler. Birden çok orman kullanımında, her orman için ayrı ATA dağıtımı gerekir.
+
 ## <a name="can-you-see-the-overall-health-of-the-deployment"></a>Dağıtımın bir bütün olarak durumunu görebilir misiniz?
 Evet, hem dağıtımın gelen durumunu hem de yapılandırma, bağlantı, vb. ile ilgili belirli sorunları görebilir ve bunlar ortaya çıktığında uyarılırsınız.
 
@@ -141,6 +147,6 @@ Evet, hem dağıtımın gelen durumunu hem de yapılandırma, bağlantı, vb. il
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 
