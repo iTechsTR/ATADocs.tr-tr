@@ -1,11 +1,11 @@
 ---
-title: "Performans sayaçlarını kullanarak ATA sorunlarını giderme | Microsoft Docs"
+title: "Performans sayaçlarını kullanarak Advanced Threat Analytics sorunlarını giderme | Microsoft Docs"
 description: "ATA’yla ilgili sorunları gidermek için performans sayaçlarını nasıl kullanabileceğiniz açıklanır"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/20/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2e7e6d5b731723449ce275f810343b1e8957f6d0
-ms.openlocfilehash: a9ee5fd9a57d484e4bfe06f42766f895063ad727
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: a909388cfcd35af45ccd4eac35f81e55938db086
 
 
 ---
@@ -129,6 +129,6 @@ Aşağıda, dikkat edilmesi gereken ana işletim sistemi sayaçları listelenmi�
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

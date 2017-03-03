@@ -1,11 +1,11 @@
 ---
-title: "Olay Koleksiyonunu Yapılandırma | Microsoft Docs"
+title: "Advanced Threat Analytics’te olay koleksiyonunu yapılandırma | Microsoft Docs"
 description: "ATA’yla olay koleksiyonunu yapılandırmaya yönelik seçeneklerinizi açıklar"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/08/2016
+ms.date: 1/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d16364cd4113534c3101ebfa7750c0d0b837856d
-ms.openlocfilehash: 9ac9478512f2e5f6d15dd9b5cba9970a51ffa4da
+ms.sourcegitcommit: 6fddbbae0a0734834a21975c7690e06ac28dc64d
+ms.openlocfilehash: e31e3b8a94c8beef22be2f06ecaeb89545b3f62d
 
 
 ---
@@ -187,56 +187,58 @@ Etki alanı denetleyicilerinden ATA Gateway’e bağlantı noktası yansıtmayı
 
 Bu senaryoda ATA Gateway’in etki alanı üyesi olduğunu varsayıyoruz.
 
-1.  Active Directory Kullanıcıları ve Bilgisayarları’nı açın, **Yerleşik** klasörüne gidin ve **Event Log Readers**’a çift tıklayın. 
-2.  **Üyeler**’i seçin.
-4.  **Ağ Hizmeti** listede yoksa **Ekle**’ye tıklayın, **Seçilecek nesne adlarını girin** alanına **Ağ Hizmeti** yazın. Sonra, **Adları Denetle**’ye tıklayın ve **Tamam**’a çift tıklayın. 
+1.    Active Directory Kullanıcıları ve Bilgisayarları’nı açın, **Yerleşik** klasörüne gidin ve **Event Log Readers**’a çift tıklayın. 
+2.    **Üyeler**’i seçin.
+4.    **Ağ Hizmeti** listede yoksa **Ekle**’ye tıklayın, **Seçilecek nesne adlarını girin** alanına **Ağ Hizmeti** yazın. Sonra, **Adları Denetle**’ye tıklayın ve **Tamam**’a çift tıklayın. 
+
+**Ağ Hizmeti**’ni **Event Log Readers** grubuna kaydettikten sonra, değişikliklerin uygulanması için etki alanı denetleyicilerini yeniden başlatmanız gerekir.
 
 **2. Adım: Hedef Abonelik Yöneticisini yapılandır ayarını belirlemek için etki alanı denetleyicilerinde bir ilke oluşturun.** 
 > [!Note] 
 > Bu ayarlar için bir grup ilkesi oluşturabilir ve grup ilkesini ATA Gateway tarafından izlenen her etki alanı denetleyicisine uygulayabilirsiniz. Aşağıdaki adımlar etki alanı denetleyicisinin yerel ilkesini değiştirir.     
 
-1.  Her etki alanı denetleyicisinde aşağıdaki komutu çalıştırın: *winrm quickconfig*
+1.    Her etki alanı denetleyicisinde aşağıdaki komutu çalıştırın: *winrm quickconfig*
 2.  Bir komut isteminde *gpedit.msc* yazın.
-3.  **Bilgisayar Yapılandırması > Yönetim Şablonları > Windows Bileşenleri > Olay İletme**’yi genişletin
+3.    **Bilgisayar Yapılandırması > Yönetim Şablonları > Windows Bileşenleri > Olay İletme**’yi genişletin
 
  ![Yerel ilke grubu düzenleyicisi resmi](media/wef 1 local group policy editor.png)
 
-4.  **Hedef Abonelik Yöneticisini yapılandır**’a çift tıklayın.
+4.    **Hedef Abonelik Yöneticisini yapılandır**’a çift tıklayın.
    
-    1.  **Etkin**’i seçin.
-    2.  **Seçenekler** altında **Göster**’e tıklayın.
-    3.  **SubscriptionManagers** altında şu değeri girin ve **Tamam**’a tıklayın:  *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Örneğin: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    1.    **Etkin**’i seçin.
+    2.    **Seçenekler** altında **Göster**’e tıklayın.
+    3.    **SubscriptionManagers** altında şu değeri girin ve **Tamam**’a tıklayın: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Örneğin: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
  
    ![Hedef aboneliği yapılandırma resmi](media/wef 2 config target sub manager.png)
    
-    5.  **Tamam**’a tıklayın.
-    6.  Yükseltilmiş bir komut isteminden şunu yazın: *gpupdate /force*. 
+    5.    **Tamam**’a tıklayın.
+    6.    Yükseltilmiş bir komut isteminden şunu yazın: *gpupdate /force*. 
 
 **3. Adım: ATA Gateway’de aşağıdaki adımları gerçekleştirin** 
 
-1.  Yükseltilmiş bir komut istemi açın ve *wecutil qc* yazın
-2.  **Olay Görüntüleyicisi**’ni açın. 
-3.  **Abonelikler**’e sağ tıklayın ve **Abonelik Oluştur**’u seçin. 
+1.    Yükseltilmiş bir komut istemi açın ve *wecutil qc* yazın
+2.    **Olay Görüntüleyicisi**’ni açın. 
+3.    **Abonelikler**’e sağ tıklayın ve **Abonelik Oluştur**’u seçin. 
 
-   1.   Abonelik için bir ad ve açıklama girin. 
-   2.   **Hedef Günlük** için **İletilen Olaylar**’ın seçili olduğunu doğrulayın. ATA’nın olayları okuması için hedef günlüğün **İletilen Olaylar** olması gerekir. 
-   3.   **Kaynak bilgisayar tarafından başlatılan**’ı seçin ve **Bilgisayar Gruplarını Seç**’e tıklayın.
-        1.  **Etki Alanı Bilgisayarı Ekle**’ye tıklayın.
-        2.  Etki alanı denetleyicisinin adını **Seçilecek nesne adını girin** alanına girin. Sonra, **Adları Denetle**’ye ve **Tamam**’a tıklayın. 
+   1.    Abonelik için bir ad ve açıklama girin. 
+   2.    **Hedef Günlük** için **İletilen Olaylar**’ın seçili olduğunu doğrulayın. ATA’nın olayları okuması için hedef günlüğün **İletilen Olaylar** olması gerekir. 
+   3.    **Kaynak bilgisayar tarafından başlatılan**’ı seçin ve **Bilgisayar Gruplarını Seç**’e tıklayın.
+        1.    **Etki Alanı Bilgisayarı Ekle**’ye tıklayın.
+        2.    Etki alanı denetleyicisinin adını **Seçilecek nesne adını girin** alanına girin. Sonra, **Adları Denetle**’ye ve **Tamam**’a tıklayın. 
        
         ![Olay Görüntüleyicisi resmi](media/wef3 event viewer.png)
    
         
-        3.  **Tamam**’a tıklayın.
-   4.   **Olayları Seç**’e tıklayın.
+        3.    **Tamam**’a tıklayın.
+   4.    **Olayları Seç**’e tıklayın.
 
         1. **Günlüğe göre**’ye tıklayıp **Güvenlik**’i seçin.
         2. **Olay Kimliklerini Ekler/Dışlar** alanına **4776** yazın ve **Tamam**’a tıklayın. 
 
  ![Sorgu filtresi resmi](media/wef 4 query filter.png)
 
-   5.   Oluşturulan aboneliğe sağ tıklayın ve durumla ilgili herhangi bir sorun olup olmadığını görmek için **Çalışma Zamanı Durumu**’nu seçin. 
-   6.   Birkaç dakika sonra, olay 4776’nın ATA Gateway’deki İletilen Olaylar kısmında görünüp görünmediğine bakın.
+   5.    Oluşturulan aboneliğe sağ tıklayın ve durumla ilgili herhangi bir sorun olup olmadığını görmek için **Çalışma Zamanı Durumu**’nu seçin. 
+   6.    Birkaç dakika sonra, olay 4776’nın ATA Gateway’deki İletilen Olaylar kısmında görünüp görünmediğine bakın.
 
 
 ### <a name="wef-configuration-for-the-ata-lightweight-gateway"></a>ATA Lightweight Gateway için WEF yapılandırması
@@ -244,29 +246,29 @@ ATA Lightweight Gateway’i etki alanı denetleyicilerinize yüklerken, etki ala
 
 **1. Adım: Ağ hizmeti hesabını etki alanının Event Log Readers grubuna ekleyin** 
 
-1.  Active Directory Kullanıcıları ve Bilgisayarları’nı açın, **Yerleşik** klasörüne gidin ve **Event Log Readers**’a çift tıklayın. 
-2.  **Üyeler**’i seçin.
-3.  **Ağ Hizmeti** listede yoksa **Ekle**’ye tıklayın ve **Seçilecek nesne adlarını girin** alanına **Ağ Hizmeti** yazın. Sonra, **Adları Denetle**’ye tıklayın ve **Tamam**’a çift tıklayın. 
+1.    Active Directory Kullanıcıları ve Bilgisayarları’nı açın, **Yerleşik** klasörüne gidin ve **Event Log Readers**’a çift tıklayın. 
+2.    **Üyeler**’i seçin.
+3.    **Ağ Hizmeti** listede yoksa **Ekle**’ye tıklayın ve **Seçilecek nesne adlarını girin** alanına **Ağ Hizmeti** yazın. Sonra, **Adları Denetle**’ye tıklayın ve **Tamam**’a çift tıklayın. 
 
 **2. Adım: ATA Lightweight Gateway yüklendikten sonra etki alanı denetleyicisinde aşağıdaki adımları gerçekleştirin** 
 
-1.  Yükseltilmiş bir komut istemi açın ve *winrm quickconfig* ve *wecutil qc* yazın 
-2.  **Olay Görüntüleyicisi**’ni açın. 
-3.  **Abonelikler**’e sağ tıklayın ve **Abonelik Oluştur**’u seçin. 
+1.    Yükseltilmiş bir komut istemi açın ve *winrm quickconfig* ve *wecutil qc* yazın 
+2.    **Olay Görüntüleyicisi**’ni açın. 
+3.    **Abonelikler**’e sağ tıklayın ve **Abonelik Oluştur**’u seçin. 
 
-   1.   Abonelik için bir ad ve açıklama girin. 
-   2.   **Hedef Günlük** için **İletilen Olaylar**’ın seçili olduğunu doğrulayın. ATA’nın olayları okuması için hedef günlüğün İletilen Olaylar olması gerekir.
+   1.    Abonelik için bir ad ve açıklama girin. 
+   2.    **Hedef Günlük** için **İletilen Olaylar**’ın seçili olduğunu doğrulayın. ATA’nın olayları okuması için hedef günlüğün İletilen Olaylar olması gerekir.
 
-        1.  **Toplayıcı tarafından başlatılan**’ı seçin ve **Bilgisayarları Seç**’e tıklayın. Ardından **Etki Alanı Bilgisayarı Ekle**’ye tıklayın.
-        2.  **Seçilecek nesne adını girin** alanına etki alanı denetleyicisinin adını girin. Sonra, **Adları Denetle**’ye ve **Tamam**’a tıklayın.
+        1.    **Toplayıcı tarafından başlatılan**’ı seçin ve **Bilgisayarları Seç**’e tıklayın. Ardından **Etki Alanı Bilgisayarı Ekle**’ye tıklayın.
+        2.    **Seçilecek nesne adını girin** alanına etki alanı denetleyicisinin adını girin. Sonra, **Adları Denetle**’ye ve **Tamam**’a tıklayın.
 
             ![Abonelik özellikleri resmi](media/wef 5 sub properties computers.png)
 
-        3.  **Tamam**’a tıklayın.
-   3.   **Olayları Seç**’e tıklayın.
+        3.    **Tamam**’a tıklayın.
+   3.    **Olayları Seç**’e tıklayın.
 
-        1.  **Günlüğe göre**’ye tıklayıp **Güvenlik**’i seçin.
-        2.  **Olay Kimliklerini Ekler/Dışlar** alanına *4776* yazın ve **Tamam**’a tıklayın. 
+        1.    **Günlüğe göre**’ye tıklayıp **Güvenlik**’i seçin.
+        2.    **Olay Kimliklerini Ekler/Dışlar** alanına *4776* yazın ve **Tamam**’a tıklayın. 
 
 ![Sorgu filtresi resmi](media/wef 4 query filter.png)
 
@@ -288,6 +290,6 @@ Daha fazla bilgi için bkz. [Olayları iletmek ve toplamak için bilgisayarları
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 
