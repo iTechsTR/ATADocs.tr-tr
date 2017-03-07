@@ -48,7 +48,3 @@
 ## [Performans sayaçlarını kullanarak sorun giderme](troubleshooting-ata-using-perf-counters.md)
 ## [Veritabanını kullanarak sorun giderme](troubleshooting-ata-using-ata-database.md)
 ## [Olağanüstü durum kurtarma](/advanced-threat-analytics/troubleshoot/disaster-recovery.md)
-
-<!--HONumber=Feb17_HO2-->
-
-
