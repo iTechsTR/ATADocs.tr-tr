@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 22d08a20291b1651a36247e9ffbeff8c881aefc5
-ms.openlocfilehash: 0941d7695f51eb5662626e02b5fc8a9997dea975
-
-
+ms.openlocfilehash: 5314d56d6dc525feaddb4b7873cf03cde2ab9f53
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
@@ -30,13 +27,13 @@ Advanced Threat Analytics (ATA), kuruluşunuzu çeşitli türlerdeki, gelişmiş
 ATA, kuruluştaki kullanıcıların ve diğer varlıkların davranışlarını öğrenmek ve bunlar hakkında davranışsal bir profil oluşturmak için ağınızdaki günlükler ve olaylar gibi birden fazla veri kaynağından bilgiler alır.
 ATA, olayları ve günlükleri şuralardan alabilir:
 
--   SIEM Tümleştirmesi
--   Windows Olay İletme (WEF)
+-     SIEM Tümleştirmesi
+-     Windows Olay İletme (WEF)
 
 ATA ayrıca, kimlik doğrulaması, yetkilendirme ve bilgi toplama için birden çok protokoldeki (Kerberos, DNS, RPC, NTLM vb.) ağ trafiğini yakalamak ve ayrıştırmak üzere özel bir ağ ayrıştırma altyapısından faydalanır. Bu bilgiler ATA tarafından şu yollarla toplanır:
 
--   Etki Alanı Denetleyicilerinden ve DNS sunucularından ATA Gateway’e bağlantı noktası yansıtma
--   Doğrudan Etki Alanı Denetleyicilerinde bir ATA Lightweight Gateway (LGW) dağıtma
+-     Etki Alanı Denetleyicilerinden ve DNS sunucularından ATA Gateway’e bağlantı noktası yansıtma
+-     Doğrudan Etki Alanı Denetleyicilerinde bir ATA Lightweight Gateway (LGW) dağıtma
 
 ATA mimarisi hakkında daha fazla bilgi için bkz. [ATA Mimarisi](/advanced-threat-analytics/plan-design/ata-architecture).
 
@@ -44,24 +41,24 @@ ATA mimarisi hakkında daha fazla bilgi için bkz. [ATA Mimarisi](/advanced-thre
 
 ATA teknolojisi siber saldırı ölüm zincirinin aşağıda belirtilen çeşitli aşamalarına odaklanarak birden çok şüpheli etkinliği algılar:
 
--   Keşif aşamasında saldırganlar ortamın yapılandırılma şekli ile ortamda bulunan çeşitli varlıklar hakkında bilgi toplar ve genellikle saldırının sonraki aşamaları için planlarını oluşturur.
--   Yanal hareket döngüsü aşamasında saldırgan, ağınızdaki saldırı yüzeyini genişletmek için zaman ve çaba harcar.
--   Etki alanı üzerinde egemenlik (kalıcılık) aşamasında saldırgan, çeşitli giriş noktaları, kimlik bilgileri ve teknikler kullanarak eylemlerini sürdürmesine olanak sağlayan bilgileri yakalar. 
+-     Keşif aşamasında saldırganlar ortamın yapılandırılma şekli ile ortamda bulunan çeşitli varlıklar hakkında bilgi toplar ve genellikle saldırının sonraki aşamaları için planlarını oluşturur.
+-     Yanal hareket döngüsü aşamasında saldırgan, ağınızdaki saldırı yüzeyini genişletmek için zaman ve çaba harcar.
+-     Etki alanı üzerinde egemenlik (kalıcılık) aşamasında saldırgan, çeşitli giriş noktaları, kimlik bilgileri ve teknikler kullanarak eylemlerini sürdürmesine olanak sağlayan bilgileri yakalar. 
 
 Bu siber saldırı aşamaları, hangi türde bir şirket saldırıya uğramış veya ne tür bilgiler hedeflenmiş olursa olsun birbirine benzer ve tahmin edilebilirdir.
 ATA, başlıca üç türdeki saldırıları arar: kötü amaçlı saldırılar, olağan dışı davranışlar ve güvenlik sorunlarıyla riskleri.
 
 **Kötü amaçlı saldırılar** aşağıdakiler gibi bilinen saldırı türlerinin tam listesine bakarak belirlenimci olarak belirlenir:
 
--   Anahtar Geçişi (PtT)
--   Karma Geçişi (PtH)
--   Karmayı Atlayarak Geçiş
--   Sahte PAC (MS14-068)
--   Altın Bilet
--   Kötü amaçlı çoğaltmalar
--   Keşif
--   Deneme Yanılma
--   Uzaktan yürütme
+-     Anahtar Geçişi (PtT)
+-     Karma Geçişi (PtH)
+-     Karmayı Atlayarak Geçiş
+-     Sahte PAC (MS14-068)
+-     Altın Bilet
+-     Kötü amaçlı çoğaltmalar
+-     Keşif
+-     Deneme Yanılma
+-     Uzaktan yürütme
 
 Algılamaların ve açıklamalarının tam listesi için lütfen bkz. [ATA Hangi Şüpheli Etkinlikleri Algılayabilir?](ata-threats.md)
 ATA bu şüpheli etkinlikleri algılar ve Kim, Ne, Ne Zaman ve Nasıl sorularına yönelik net bir bakış sağlayarak bilgileri ATA konsolunda sunar. Burada, basit, kullanıcı dostu bir panoda, ATA’nın ağınızdaki İstemci 1 ve İstemci 2 bilgisayarları üzerinde Karma Geçişi saldırısı denendiğinden şüphelendiği konusundaki uyarısı görülüyor.
@@ -70,10 +67,10 @@ ATA bu şüpheli etkinlikleri algılar ve Kim, Ne, Ne Zaman ve Nasıl soruların
 
 ATA, aşağıda örnekleri verilen ve ağınızdaki kullanıcılarla cihazlarda görülen şüpheli etkinliklerle anormal davranışları ortaya çıkarmak için davranışsal analiz kullanarak ve Makine Öğrenimi özelliğinden faydalanarak **Anormal davranışları** algılar:
 
--   Anormal oturum açma işlemleri
--   Bilinmeyen tehditler
--   Parola paylaşımı
--   Yanal hareket
+-     Anormal oturum açma işlemleri
+-     Bilinmeyen tehditler
+-     Parola paylaşımı
+-     Yanal hareket
 
 
 Bu tür şüpheli etkinlikleri ATA Panosunda görüntüleyebilirsiniz. Aşağıdaki örnekte, bir kullanıcı her zaman erişmediği 4 bilgisayara erişir ve bu bir uyarı nedeni olabileceğinden, ATA sizi uyarır.
@@ -82,9 +79,9 @@ Bu tür şüpheli etkinlikleri ATA Panosunda görüntüleyebilirsiniz. Aşağıd
 
 ATA ayrıca, aşağıdakiler gibi **güvenlik sorunlarını ve risklerini** de algılar:
 
--   Bozulmuş güven
--   Zayıf protokoller
--   Bilinen protokol güvenlik açıkları
+-     Bozulmuş güven
+-     Zayıf protokoller
+-     Bilinen protokol güvenlik açıkları
 
 Bu tür şüpheli etkinlikleri ATA Panosunda görüntüleyebilirsiniz. Aşağıdaki örnekte, ATA, ağınızdaki bir bilgisayar ve etki alanı arasında bir bozulmuş güven ilişkisi olduğunu size bildirir.
 
@@ -99,9 +96,3 @@ Bu tür şüpheli etkinlikleri ATA Panosunda görüntüleyebilirsiniz. Aşağıd
 
 ## <a name="see-also"></a>Ayrıca bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

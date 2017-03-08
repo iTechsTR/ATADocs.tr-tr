@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 69127773d9c3130bd07dee0b65956b93848ec399
-
-
+ms.openlocfilehash: 3884e7d40a598aed292cc492bfa1bd5a5e360990
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 # <a name="what39s-new-in-ata-version-14"></a>ATA sürüm 1.4’teki yenilikler
 Bu sürüm notları, Advanced Threat Analytics sürüm 1.4’teki bilinen sorunlar hakkında bilgi sağlar.
 
@@ -100,8 +97,3 @@ Sanallaştırma ana bilgisayarına KB 3047154’ü yüklemeyin. Bu, bağlantı n
 [ATA’yı 1.6 sürümüne güncelleştirme: geçiş kılavuzu](ata-update-1.6-migration-guide.md)
 
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-<!--HONumber=Feb17_HO1-->
-
-
