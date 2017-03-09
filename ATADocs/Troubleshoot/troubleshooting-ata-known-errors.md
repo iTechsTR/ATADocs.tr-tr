@@ -1,22 +1,15 @@
 ---
-title: "Advanced Threat Analytics hata günlüğü sorunlarını giderme | Microsoft Docs"
-description: "ATA’da sık karşılaşılan hataları nasıl giderebileceğinizi açıklar"
-keywords: 
-author: rkarlin
-ms.author: rkarlin
-manager: mbaldwin
-ms.date: 1/23/2017
-ms.topic: article
-ms.prod: 
-ms.service: advanced-threat-analytics
-ms.technology: 
-ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-ms.reviewer: bennyl
-ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 47fe467a9244d6ea8925a255552aa0f5c785dce3
+# <a name="required-metadata"></a>gerekli meta veriler
 
+başlık: Gelişmiş Tehdit Analizi Sorunlarını Giderme hata günlüğü | Microsoft Belgeleri açıklaması: ATA anahtar kelimelerinde yaygın karşılaşılan hatalarla ilgili sorunları nasıl giderebileceğinizi açıklar: author: rkarlin ms.author: rkarlin manager: mbaldwin ms.date: 1/23/2017 ms.topic: article ms.prod: ms.service: advanced-threat-analytics ms.technology: ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+
+# <a name="optional-metadata"></a>isteğe bağlı meta veriler
+
+#<a name="robots"></a>ROBOTS:
+#<a name="audience"></a>audience:
+#<a name="msdevlang"></a>ms.devlang:
+ms.reviewer: arzinger ms.suite: ems#ms.tgt_pltfrm:
+#<a name="mscustom"></a>ms.custom:
 
 ---
 
@@ -74,9 +67,3 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 - [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Windows olay iletme özelliğini yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-
