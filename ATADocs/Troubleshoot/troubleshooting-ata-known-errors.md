@@ -1,14 +1,17 @@
----
+--
 # <a name="required-metadata"></a>gerekli meta veriler
 
-başlık: Gelişmiş Tehdit Analizi Sorunlarını Giderme hata günlüğü | Microsoft Belgeleri açıklaması: ATA anahtar kelimelerinde yaygın karşılaşılan hatalarla ilgili sorunları nasıl giderebileceğinizi açıklar: author: rkarlin ms.author: rkarlin manager: mbaldwin ms.date: 1/23/2017 ms.topic: article ms.prod: ms.service: advanced-threat-analytics ms.technology: ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+başlık: Gelişmiş Tehdit Analizi Sorunlarını Giderme hata günlüğü | Microsoft Belgeleri açıklaması: ATA anahtar kelimelerinde yaygın karşılaşılan hatalarla ilgili sorunları nasıl giderebileceğinizi açıklar: author: rkarlin ms.author: rkarlin manager: mbaldwin ms.date: 14/3/2017 ms.topic: article ms.prod: ms.service: advanced-threat-analytics ms.technology: ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 
 # <a name="optional-metadata"></a>isteğe bağlı meta veriler
 
 #<a name="robots"></a>ROBOTS:
 #<a name="audience"></a>audience:
 #<a name="msdevlang"></a>ms.devlang:
-ms.reviewer: arzinger ms.suite: ems#ms.tgt_pltfrm:
+ms.reviewer: arzinger
+
+ms.suite: ems
+#<a name="mstgtpltfrm"></a>ms.tgt_pltfrm:
 #<a name="mscustom"></a>ms.custom:
 
 ---
@@ -31,7 +34,7 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 |Microsoft.Tri.Infrastructure.ContractException: Sözleşme özel durumu|ATA Gateway, ATA Center’dan yapılandırmayı eşitleyemedi.|ATA Konsolu’nda ATA Gateway yapılandırmasını tamamlayın.|
 |System.Reflection.ReflectionTypeLoadException: İstenen türlerden bir veya birkaçı yüklenemiyor. Daha fazla bilgi için LoaderExceptions özelliğini alın.|İleti Çözümleyicisi ATA Gateway’de yüklüdür.| İleti Çözümleyicisi’ni kaldırın.|
 |Hata [Layout] System.OutOfMemoryException: 'System.OutOfMemoryException' türünde özel durum oluşturuldu.|ATA Gateway’de yeterli bellek yok.|Etki alanı denetleyicisindeki bellek miktarını artırın.|
-|Live consumer  başlatılamadı ---> Microsoft.Opn.Runtime.Monitoring.MessageSessionException: PEFNDIS olay sağlayıcısı hazır değil|PEF (İleti Çözümleyicisi) doğru şekilde yüklenmedi.|Hyper-V kullanıyorsanız, Hyper-V Tümleştirme hizmetlerini yükseltmeyi deneyin, aksi takdirde geçici bir çözüm için desteğe başvurun.|
+|Live consumer  başlatılamadı ---> Microsoft.Opn.Runtime.Monitoring.MessageSessionException: PEFNDIS olay sağlayıcısı hazır değil|PEF (İleti Çözümleyicisi) doğru şekilde yüklenmedi.|Hyper-V kullanıyorsanız Hyper-V Tümleştirme hizmetlerini yükseltmeyi deneyin; aksi takdirde, geçici bir çözüm için desteğe başvurun.|
 |Yükleme şu hatayla başarısız oldu: 0x80070652|Bilgisayarınızdaki bekleyen başka yüklemeler var.|Diğer yüklemelerin tamamlanmasını bekleyin ve gerekirse bilgisayarı yeniden başlatın.|
 |System.InvalidOperationException: 'Microsoft.Tri.Gateway' örneği belirtilen Kategoride yok.|ATA Gateway’deki işlem adları için PID’ler etkinleştirilmiş|İşlem adlarında PID’leri devre dışı bırakmak için [KB281884](https://support.microsoft.com/en-us/kb/281884)’yi kullanın|
 |System.InvalidOperationException: Kategori yok.|Sayaçlar kayıt defterinde devre dışı bırakılmış olabilir|Performans Sayaçlarını yeniden oluşturmak için [KB2554336](https://support.microsoft.com/en-us/kb/2554336)’yı kullanın|
