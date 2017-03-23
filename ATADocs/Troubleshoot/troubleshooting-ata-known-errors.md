@@ -1,28 +1,32 @@
---
-# <a name="required-metadata"></a>gerekli meta veriler
-
-başlık: Gelişmiş Tehdit Analizi Sorunlarını Giderme hata günlüğü | Microsoft Belgeleri açıklaması: ATA anahtar kelimelerinde yaygın karşılaşılan hatalarla ilgili sorunları nasıl giderebileceğinizi açıklar: author: rkarlin ms.author: rkarlin manager: mbaldwin ms.date: 14/3/2017 ms.topic: article ms.prod: ms.service: advanced-threat-analytics ms.technology: ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-
-# <a name="optional-metadata"></a>isteğe bağlı meta veriler
-
-#<a name="robots"></a>ROBOTS:
-#<a name="audience"></a>audience:
-#<a name="msdevlang"></a>ms.devlang:
-ms.reviewer: arzinger
-
-ms.suite: ems
-#<a name="mstgtpltfrm"></a>ms.tgt_pltfrm:
-#<a name="mscustom"></a>ms.custom:
-
 ---
-
+title: "Advanced Threat Analytics hata günlüğü sorunlarını giderme | Microsoft Docs"
+description: "ATA’da sık karşılaşılan hataları nasıl giderebileceğinizi açıklar"
+keywords: 
+author: rkarlin
+ms.author: rkarlin
+manager: mbaldwin
+ms.date: 3/14/2017
+ms.topic: article
+ms.prod: 
+ms.service: advanced-threat-analytics
+ms.technology: 
+ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+ms.reviewer: arzinger
+ms.suite: ems
+ms.openlocfilehash: 0c72b14a042e473c0cd59811db63ecafc4ec02d4
+ms.sourcegitcommit: f18c0841d85e54eca940c8cbf226938b3c2bc80f
+translationtype: HT
+---
 *Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
 
 # <a name="troubleshooting-the-ata-error-log"></a>ATA hata günlüğü sorunlarını giderme
+
 Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için gereken adımları açıklar.
+
 ## <a name="ata-gateway-errors"></a>ATA Gateway hataları
+
 |Hata|Açıklama|Çözüm|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: Yerel bir hata oluştu|ATA Gateway, etki alanı denetleyicisine karşı kimlik doğrulaması yapamadı.|1. Etki alanı denetleyicisinin DNS kaydının DNS sunucusunda düzgün şekilde yapılandırıldığını doğrulayın. <br>2. ATA Gateway saatinin etki alanı denetleyicisinin saatiyle eşitlendiğini doğrulayın.|
