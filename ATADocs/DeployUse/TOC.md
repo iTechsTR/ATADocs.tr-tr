@@ -25,9 +25,9 @@
 ### [3. Adım GW paketini indirme](install-ata-step3.md)
 ### [4. Adım GW’yi yükleme](install-ata-step4.md)
 ### [5. Adım GW’yi yapılandırma](install-ata-step5.md)
-### [6. Adım Özel durumlar ve Sanal belirteç](install-ata-step6.md)
+### [6. Adım Dışlamalar ve Honeytoken](install-ata-step6.md)
 ### [Sessiz yükleme](ata-silent-installation.md)
-# VPN ayarlarını kuruluşunuzdaki kullanıcılar ve cihazlara dağıtmak için
+# Kullan
 ## [ATA Center IP adresini değiştirme](modifying-ata-config-centerip.md)
 ## [ATA Center sertifikasını değiştirme](modifying-ata-config-centercert.md)
 ## [ATA Konsolu URL’sini değiştirme](modifying-ata-config-consoleurl.md)

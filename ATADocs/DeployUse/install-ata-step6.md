@@ -13,8 +13,8 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 70b8c4886f1c7459412eafc0646abfe1cc5d37d3
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+ms.openlocfilehash: da6e72ac5c2966f3e77ce3bef8fe23fcda6770a4
+ms.sourcegitcommit: 9b128d6946e32b00f595e00902b9ff95f18141ff
 translationtype: HT
 ---
 *Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
@@ -58,6 +58,8 @@ Tebrikler, Microsoft Advanced Threat Analytics dağıtımını başarıyla tamam
 Algılanan kuşkulu etkinlikleri görüntülemek için saldırı zaman çizelgesini gözden geçirin ve kullanıcıları veya bilgisayarları arayın ve profillerini görüntüleyin.
 
 ATA hemen şüpheli etkinlikler için tarama yapmaya başlar. ATA, davranış profilleri (en az üç haftalık) oluşturmak için zaman bulana kadar, bazı şüpheli davranış etkinlikleri gibi bazı etkinlikler kullanılamaz.
+
+ATA’nın çalışır durumda olduğunu ve ağınızdaki ihlalleri yakalayıp yakalamadığını denetlemek için [ATA saldırı simülasyonu senaryo kitabına](https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook) bakabilirsiniz.
 
 
 >[!div class="step-by-step"]
