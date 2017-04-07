@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 00ddddfd927ed1ba4c52d4774085da04ce359bde
-ms.openlocfilehash: 1c8d7983c5fd86ae3ef2c906eba3f0781cffb99b
-
-
+ms.openlocfilehash: b9ba013c76c785290649037c8a01af1cd2feced5
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 # <a name="whats-new-in-ata-version-17"></a>ATA sürüm 1.7’deki yenilikler
 Bu sürüm notları, Advanced Threat Analytics’in bu sürümündeki bilinen sorunlar hakkında bilgi sağlar.
 
@@ -106,8 +103,8 @@ Bu sorunu çözmek için, sertifikayı değiştirdikten sonra yükseltilmiş kom
 Şüpheli etkinlik ayrıntılarını bir Excel dosyasına dışarı aktarmaya çalıştığınızda, işlem şu hatayı vererek başarısız olabilir: *Error [BsonClassMapSerializer`1] System.FormatException: An error occurred while deserializing the Activity property of class Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
 
 Bu sorunu çözmek için yükseltilmiş komut isteminden **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** konumuna gidin ve şu komutu çalıştırın:
-1.  **Mongo.exe ATA** (ATA büyük harfle yazılmalıdır)
-2.  **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
+1.    **Mongo.exe ATA** (ATA büyük harfle yazılmalıdır)
+2.    **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
 
 ## <a name="minor-changes"></a>Küçük değişiklikler
 
@@ -119,10 +116,4 @@ Bu sorunu çözmek için yükseltilmiş komut isteminden **%ProgramFiles%\Micros
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [ATA 1.7’ye güncelleştirme - geçiş rehberi](ata-update-1.7-migration-guide.md)
-
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

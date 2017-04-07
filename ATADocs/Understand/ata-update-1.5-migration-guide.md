@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: c0efec3abdec8e44c8cf5005d756f973e64312e7
-
-
+ms.openlocfilehash: 514ae2c41338ca5e4b7d97629554df857f79cc2d
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 # <a name="ata-update-to-15-migration-guide"></a>ATA’yı 1.5’e güncelleştirme geçiş kılavuzu
 ATA 1.5 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 
@@ -132,9 +129,3 @@ Tüm ATA Gateway bileşenleri başarıyla eşitlendiklerini bildirdiklerinde ve 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

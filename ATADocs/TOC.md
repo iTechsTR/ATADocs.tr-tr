@@ -25,9 +25,9 @@
 ### [3. Adım GW paketini indirme](/advanced-threat-analytics/deploy-use/install-ata-step3)
 ### [4. Adım GW’yi yükleme](/advanced-threat-analytics/deploy-use/install-ata-step4)
 ### [5. Adım GW’yi yapılandırma](/advanced-threat-analytics/deploy-use/install-ata-step5)
-### [6. Adım Özel durumlar ve Sanal belirteç](/advanced-threat-analytics/deploy-use/install-ata-step6)
+### [6. Adım Dışlamalar ve Honeytoken](/advanced-threat-analytics/deploy-use/install-ata-step6)
 ### [Sessiz yükleme](/advanced-threat-analytics/deploy-use/ata-silent-installation)
-# VPN ayarlarını kuruluşunuzdaki kullanıcılar ve cihazlara dağıtmak için
+# Kullan
 ## [ATA Center IP adresini değiştirme](/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip)
 ## [ATA Center sertifikasını değiştirme](/advanced-threat-analytics/deploy-use/modifying-ata-config-centercert)
 ## [ATA Konsolu URL’sini değiştirme](/advanced-threat-analytics/deploy-use/modifying-ata-config-consoleurl)
@@ -48,8 +48,3 @@
 ## [Performans sayaçlarını kullanarak sorun giderme](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters)
 ## [Veritabanını kullanarak sorun giderme](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
 ## [Olağanüstü durum kurtarma](/advanced-threat-analytics/troubleshoot/disaster-recovery)
-
-
-<!--HONumber=Feb17_HO3-->
-
-

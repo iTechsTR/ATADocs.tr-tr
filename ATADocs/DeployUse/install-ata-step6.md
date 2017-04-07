@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: b5954bd6f0cd9ef8c8b0b958a92840e905189d71
-
-
+ms.openlocfilehash: da6e72ac5c2966f3e77ce3bef8fe23fcda6770a4
+ms.sourcegitcommit: 9b128d6946e32b00f595e00902b9ff95f18141ff
+translationtype: HT
 ---
-
 *Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
@@ -62,6 +59,8 @@ Algılanan kuşkulu etkinlikleri görüntülemek için saldırı zaman çizelges
 
 ATA hemen şüpheli etkinlikler için tarama yapmaya başlar. ATA, davranış profilleri (en az üç haftalık) oluşturmak için zaman bulana kadar, bazı şüpheli davranış etkinlikleri gibi bazı etkinlikler kullanılamaz.
 
+ATA’nın çalışır durumda olduğunu ve ağınızdaki ihlalleri yakalayıp yakalamadığını denetlemek için [ATA saldırı simülasyonu senaryo kitabına](https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook) bakabilirsiniz.
+
 
 >[!div class="step-by-step"]
 [« 5. Adım](install-ata-step5.md)
@@ -72,10 +71,4 @@ ATA hemen şüpheli etkinlikler için tarama yapmaya başlar. ATA, davranış pr
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
-
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

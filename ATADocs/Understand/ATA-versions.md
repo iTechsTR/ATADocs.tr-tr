@@ -12,20 +12,17 @@ ms.technology:
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: cae588383a7ea64a8e907e64cd2d7d15223feae3
-
-
+ms.openlocfilehash: 21c7486061b6945d557a42d3964b70637829f4b0
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Microsoft Advanced Threat Analytics (ATA) sürümleri için destek
 
 Microsoft, yılda birkaç kez ATA için güncelleştirmeler sağlamayı planlamaktadır ve her güncelleştirme sürümü genel kullanıma sunulma tarihinden başlayarak on iki (12) ay süreyle desteklenecektir. On iki (12) ayın tamamında teknik destek sağlanacaktır. Bununla birlikte, şimdi dinamik bir yapıya sahip olan desteğimiz en son sürümün kullanıma sunulmasına bağlı olarak iki ayrı hizmet aşamasından geçer.
 
--   Güvenlik Güncelleştirmeleri ve Kritik Güncelleştirmeler hizmet aşaması - ATA’nın en son sürümünü çalıştırırken hem Güvenlik güncelleştirmelerini hem de Kritik güncelleştirmeleri alırsınız.
+-    Güvenlik Güncelleştirmeleri ve Kritik Güncelleştirmeler hizmet aşaması - ATA’nın en son sürümünü çalıştırırken hem Güvenlik güncelleştirmelerini hem de Kritik güncelleştirmeleri alırsınız.
 
--   Güvenlik Güncelleştirmeleri (Yalnızca) hizmet aşaması - Yeni bir ATA sürümü kullanıma sunulduktan sonra, eski sürümlere verilen destek on iki (12) aylık destek yaşam döngüsünün kalan bölümü boyunca yalnızca Güvenlik güncelleştirmelerine indirilir (aşağıdaki sürüm hizmet desteği örneğinde gösterilmiştir).
+-    Güvenlik Güncelleştirmeleri (Yalnızca) hizmet aşaması - Yeni bir ATA sürümü kullanıma sunulduktan sonra, eski sürümlere verilen destek on iki (12) aylık destek yaşam döngüsünün kalan bölümü boyunca yalnızca Güvenlik güncelleştirmelerine indirilir (aşağıdaki sürüm hizmet desteği örneğinde gösterilmiştir).
  
 ![Sürüm hizmet desteği örneği](media/versions.png)
 
@@ -50,9 +47,3 @@ Microsoft, yılda birkaç kez ATA için güncelleştirmeler sağlamayı planlama
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-
