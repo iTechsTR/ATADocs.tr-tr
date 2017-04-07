@@ -1,14 +1,13 @@
 ---
 layout: LandingPage
 description: "Advanced Threat Analytics’i nasıl kullanacağınızı öğrenin."
-translationtype: Human Translation
-ms.sourcegitcommit: c4e5418a8b5f7093792f52f1553307039f38ff5f
-ms.openlocfilehash: 1fe4d6e06150cc1425c92165445fd087544b8904
-
+ms.openlocfilehash: ddf06db756bd991c49200ba35b6a515832ccc3cb
+ms.sourcegitcommit: 9b128d6946e32b00f595e00902b9ff95f18141ff
+translationtype: HT
 ---
 # <a name="advanced-threat-analytics-documentation"></a>Advanced Threat Analytics Belgeleri
 
-Şirketinizin dışında paylaştığınız e-posta, belgeler ve hassas verileri denetleyin ve güvenli hale getirin. Nerede depolandığı veya kiminle paylaşıldığı fark etmeksizin, Azure Information Protection ile kolay sınıflandırmadan ekli etiketler ve izinlere kadar veri korumasını geliştirin.
+Advanced Threat Analytics (ATA), kuruluşunuzun belirli hedeflere yönelik gelişmiş siber saldırı ve iç tehdit türlerinden korunmasına yardımcı olan bir şirket içi platformdur. Bu desteği sağlamak amacıyla, ağınızdaki birden çok veri kaynağında yer alan bilgileri kullanarak kuruluştaki kullanıcıların ve diğer varlıkların davranışını öğrenip bunlara ilişkin bir davranış profili oluşturmanın yanı sıra, ATA’nın ağ ayrıştırmaya yönelik özel ağından yararlanarak birden çok protokolün ağ trafiğini yakalar ve ayrıştırır.
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -131,15 +130,10 @@ ms.openlocfilehash: 1fe4d6e06150cc1425c92165445fd087544b8904
                 <div class="card">
                     <div class="cardText">
                         <p><a href="https://go.microsoft.com/fwlink/?linkid=836487">Değerlendirme</a></p>
+                        <p><a href="https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook">ATA saldırı benzetimi çalışma kitabını gözden geçirin</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </li>  
 </ul>
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

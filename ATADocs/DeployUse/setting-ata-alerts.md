@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 782c066e6a7ef8a5da9e2b8ceb16742da6f52506
-
-
+ms.openlocfilehash: 06aa85cededdc3647aadaaca7d594ce3bbbb0723
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
@@ -40,7 +37,7 @@ Posta bildirimleri almak için aşağıdaki ayarları yapın:
 
 2. **Bildirimler** bölümü altında, **Ayarlar**’ı seçin.
 3. **Posta alıcıları** altında e-posta yoluyla bildirim alacak olan alıcıları belirtin.
->   [!NOTE]
+>    [!NOTE]
 >   Kuşkulu etkinlikler için e-posta uyarıları, yalnızca kuşkulu etkinlik oluşturulduğunda gönderilir.
 
 4. **Bildirim zamanı:** altında, hangi bildirimlerin gönderilmesi gerektiğini seçmek için iki durumlu düğmeleri kullanın:
@@ -77,9 +74,3 @@ Syslog bildirimleri almak için aşağıdakileri ayarlayın:
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

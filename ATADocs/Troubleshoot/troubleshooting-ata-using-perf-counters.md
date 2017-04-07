@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: a909388cfcd35af45ccd4eac35f81e55938db086
-
-
+ms.openlocfilehash: 5c4662cd2d83135227cf86e339d5e30f9713f022
+ms.sourcegitcommit: 998e8aed5835b228e907aab78845723a02521741
+translationtype: HT
 ---
-
 *Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
 
 
@@ -35,6 +32,16 @@ ATA performans sayaçları, ATA’nın her bileşeninin ne kadar iyi çalıştı
 2.  Sonunda önceki bileşen **kendi** boyutunu artırmaya başlar ve bu durum kendisinden önceki bileşenin daha fazla varlık göndermesini engelleyene kadar devam eder.
 
 3.  Bu durum geriye doğru NetworkListener bileşenine kadar devam eder ve o bileşen de artık varlıkları iletemediğinde trafiği bırakır.
+
+
+## <a name="retrieving-performance-monitor-files-for-troubleshooting"></a>Sorun giderme için performans izleyicisi dosyalarını alma
+
+Çeşitli ATA bileşenlerinden performans izleyicisi dosyalarını (BLG) almak için:
+1.  Perfmon aracını açın.
+2.  Şu ada sahip veri toplayıcı grubunu durdurun "Microsoft ATA Gateway " veya “Microsoft ATA Center”.
+3.  Veri toplayıcı grubu klasörüne (varsayılan olarak "C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs\DataCollectorSets" veya “C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs\DataCollectorSets” konumundadır) gidin.
+4.  En son değiştirilen BLG dosyasını kopyalayın.
+5.  Şu ada sahip veri toplayıcı grubunu yeniden başlatın: "Microsoft ATA Gateway " veya “Microsoft ATA Center”.
 
 
 ## <a name="ata-gateway-performance-counters"></a>ATA Gateway performans sayaçları
@@ -126,9 +133,3 @@ Aşağıda, dikkat edilmesi gereken ana işletim sistemi sayaçları listelenmi�
 - [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Windows olay iletme özelliğini yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-
