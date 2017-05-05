@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/7/2017
+ms.date: 4/30/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.technology:
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 69034316493b8783cbeaaae9aac6af237da39dc8
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+ms.openlocfilehash: 6243c03af9e40b8774b2ce7089a47e54569ba45e
+ms.sourcegitcommit: cb2a4df6805d41bf030d3439ef87281fc6acc98f
 translationtype: HT
 ---
 *Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
@@ -27,7 +27,7 @@ translationtype: HT
 Rol grupları ATA için erişim yönetimini etkinleştirir. Rol gruplarını kullanarak güvenlik ekibinizdeki görevleri ayırabilir ve kullanıcılara sadece işlerini yapması için gereken miktarda erişim izni verebilirsiniz. Bu makalede erişim yönetimi ve ATA rol yetkilendirmesi açıklanır, ATA’daki rol gruplarını kullanmanıza yardımcı olan bilgiler sağlanır.
 
 > [!NOTE]
-> ATA Center’daki herhangi bir yerel yönetici, otomatik olarak Microsoft Advanced Threat Analytics yöneticisi olur.
+> ATA Center’daki herhangi bir yerel yönetici, otomatik olarak Microsoft Advanced Threat Analytics Administrator olur.
 
 ## <a name="types-of-ata-role-groups"></a>ATA Rol Gruplarının Türleri 
 
@@ -46,10 +46,13 @@ ATA, 3 tür Rol grubu içerir: ATA Administrators, ATA Users ve ATA Viewers. Aş
 |Ağ Geçidi – Silme |Kullanılabilir|Yok|Yok|
 |İzlenen DC – Ekleme |Kullanılabilir|Yok|Yok|
 |İzlenen DC – Silme|Kullanılabilir|Yok|Yok|
+|Uyarıları ve şüpheli etkinlikleri görüntüleme|Kullanılabilir|Kullanılabilir|Kullanılabilir|
+
 
 Kendi rol grupları için kullanılabilir olmayan bir sayfaya erişmeye çalışan kullanıcılar ATA yetkisiz sayfasına yönlendirilir. 
 
 ## <a name="add--remove-users---ata-role-groups"></a>Kullanıcı Ekleme / Kaldırma - ATA Rol Grupları 
 
-ATA, rol grupları için temel olarak yerel Windows gruplarını kullanır. Kullanıcı eklemek veya kaldırmak için **Yerel Kullanıcılar ve Gruplar** MMC’yi kullanın (Lusrmgr.msc). Etki alanına katılmış bir makinede yerel hesapların yanı sıra etki alanı hesapları da ekleyebilirsiniz. 
+ATA, rol grupları için temel olarak yerel Windows gruplarını kullanır. Rol grupları ATA Center sunucusunda yönetilmelidir.
+Kullanıcı eklemek veya kaldırmak için **Yerel Kullanıcılar ve Gruplar** MMC’yi kullanın (Lusrmgr.msc). Etki alanına katılmış bir makinede yerel hesapların yanı sıra etki alanı hesapları da ekleyebilirsiniz. 
 

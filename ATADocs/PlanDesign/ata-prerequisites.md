@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/16/2017
+ms.date: 4/30/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ebc02319374079ebb09bb6480ebef7f871bc9beb
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+ms.openlocfilehash: 270a16feada7db5462c5232f023c0bab9ef23c7e
+ms.sourcegitcommit: cb2a4df6805d41bf030d3439ef87281fc6acc98f
 translationtype: HT
 ---
 *Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
@@ -137,6 +137,7 @@ Windows 2012 R2 çalıştıran ATA Gateway’i yüklemeden önce şu güncelleş
 
 Şu Windows PowerShell cmdlet’ini çalıştırarak bunu denetleyebilirsiniz: `[Get-HotFix -Id kb2919355]`.
 
+
 ATA Gateway ile sanal makineleri kullanma hakkında bilgi için bkz. [Bağlantı noktası yansıtmasını yapılandırma](/advanced-threat-analytics/deploy-use/configure-port-mirroring)
 
 > [!NOTE]
@@ -223,6 +224,10 @@ Windows Server 2012 R2 çalıştıran bir etki alanı denetleyicisine ATA Lightw
 Yükleme, Windows Server 2012 R2 Sunucu Çekirdeği içinse şu güncelleştirmenin de yüklü olması gerekir:  [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1%2c-windows-8.1%2c-and-windows-server-2012-r2).
 
  Şu Windows PowerShell cmdlet’ini çalıştırarak bunu denetleyebilirsiniz: `[Get-HotFix -Id kb3000850]`
+
+
+Yükleme sırasında .Net Framework 4.6.1 yüklenir ve etki alanı denetleyicisinin yeniden başlatılmasına neden olabilir.
+
 
 > [!NOTE]
 > En az 5 GB alan gereklidir ve 10 GB önerilir. Buna, ATA ikili dosyaları, [ATA günlükleri](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) ve [performans günlükleri](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md) için gereken alan da dahildir.
