@@ -42,6 +42,7 @@
 ## [ATA veritabanı yönetimi](ata-database-management.md)
 ## [ATA yapılandırmasını Dışarı/İçeri aktarma](ata-configuration-file.md)
 ## [ATA telemetrisini yönetme](manage-telemetry-settings.md)
+## [Sahte PAC saldırılarını araştırma](use-case-forged-pac.md)
 # Sorunları Gider
 ## [Bilinen hataları kullanarak sorun giderme](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
 ## [Günlükleri kullanarak sorun giderme](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
