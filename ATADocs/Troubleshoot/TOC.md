@@ -42,7 +42,7 @@
 ## [ATA veritabanı yönetimi](/advanced-threat-analytics/deploy-use/ata-database-management)
 ## [ATA yapılandırmasını Dışarı/İçeri aktarma](/advanced-threat-analytics/deploy-use/ata-configuration-file)
 ## [ATA telemetrisini yönetme](/advanced-threat-analytics/deploy-use/manage-telemetry-settings)
-## [Sahte PAC saldırılarını araştırma](/use-case-forged-pac)
+## [Sahte PAC saldırılarını araştırma](/advanced-threat-analytics/deploy-use/use-case-forged-pac)
 # Sorunları Gider
 ## [Bilinen hataları kullanarak sorun giderme](troubleshooting-ata-known-errors.md)
 ## [Günlükleri kullanarak sorun giderme](troubleshooting-ata-using-logs.md)
