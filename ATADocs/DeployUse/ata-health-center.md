@@ -1,46 +1,8 @@
 ---
-title: "Advanced Threat Analytics Sistem Durumu Merkezi uyarılarını izleme | Microsoft Docs"
-description: "ATA hizmetinin nasıl çalıştığını denetlemek ve olası sorunlarda uyarı almak için ATA Sistem Durumu Merkezi’ni kullanın."
-keywords: 
-author: rkarlin
-ms.author: rkarlin
-manager: mbaldwin
-ms.date: 01/23/2017
-ms.topic: article
-ms.prod: 
-ms.service: advanced-threat-analytics
-ms.technology: 
-ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
-ms.reviewer: bennyl
-ms.suite: ems
-ms.openlocfilehash: e929714ca33dfaa82bdf93dbaf230abadef1b86d
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
-translationtype: HT
+redirect_url: /advanced-threat-analytics/ata-health-center
+ms.openlocfilehash: 30a177092f7ba3ea5634b789e9a1ac99602776b3
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 06/30/2017
 ---
-*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
-
-
-
-# <a name="ata-health-center"></a>ATA Sistem Durumu Merkezi
-ATA Sistem Durumu Merkezi, ATA hizmetinizin nasıl performans gösterdiğini öğrenmenizi sağlar ve sorunlar olduğunda sizi uyarır.
-
-## <a name="working-with-the-ata-health-center"></a>ATA Sistem Durumu Merkezi’yle çalışma
-ATA Sistem Durumu Merkezi, menü çubuğundaki Sistem Durum Merkezi’nin üst kısmında bir uyarı (kırmızı nokta) göstererek sorun olduğunu bilmenizi sağlar.
-
-![ATA Sistem Durumu Merkezi kırmızı nokta araç çubuğu](media/ATA-Health-Center-Alert-red-dot.png)
-
-### <a name="managing-ata-health"></a>ATA sistem durumunu yönetme
-Sisteminizin bir bütün olarak durumunu denetlemek için, menü çubuğunda Sistem Durumu Merkezi simgesine tıklayın. ![ATA Sistem Durumu Merkezi simgesi](media/ATA-red-dot.png)
-
--   Tüm açık uyarılar, **Çözüldü** veya **Çıkarıldı** olarak ayarlanarak yönetilebilir. Uyarıda **Açık** seçeneğine tıklayın ve ekranı aşağı kaydırarak **Çözüldü** veya **Çıkarıldı** seçeneğine gelin.
-
--   Bir sorunu çözerseniz ve ATA sorunun kalıcı olduğunu algılarsa, sorun otomatik olarak **Açık** sorunlar listesine geri taşınır. ATA açık bir sorunun çözüldüğünü algılarsa, sorun otomatik olarak **Çözülen** sorunlar listesine taşınır.
-
--   **Çıkarılan** sorunlar, ATA’nın denetlemeye devam etmesini istemediğiniz sorunlardır. Örneğin, var olduğunu bildiğiniz ve çözmeyi planlamadığınız bir sorunla ilgili olarak uyarılırsanız ancak bu sorun hakkında bildirim almaya devam etmek ve artık bunu **Açık** sorunlar listesinde görmek istemiyorsanız, sorunu **Çıkarıldı** olarak ayarlayabilirsiniz.
-
-![ATA Sistem Durumu Merkezi sorunlarının resmi](media/ATA-Health-Issue.JPG)
-
-## <a name="see-also"></a>Ayrıca bkz.
-- [ATA algılama ayarlarıyla çalışma](working-with-detection-settings.md)
-- [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
