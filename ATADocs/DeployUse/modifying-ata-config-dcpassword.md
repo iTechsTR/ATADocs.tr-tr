@@ -1,60 +1,8 @@
 ---
-title: "Advanced Threat Analytics yapılandırmasını değiştirme - etki alanı bağlantı parolası | Microsoft Docs"
-description: "ATA Gateway’de Etki Alanı Bağlantı Parolası’nın nasıl değiştirileceği açıklanır."
-keywords: 
-author: rkarlin
-ms.author: rkarlin
-manager: mbaldwin
-ms.date: 1/23/2017
-ms.topic: article
-ms.prod: 
-ms.service: advanced-threat-analytics
-ms.technology: 
-ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
-ms.reviewer: bennyl
-ms.suite: ems
-ms.openlocfilehash: e9cb7bcf6f32559f7b2f330df4333c3fdc55a283
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
-translationtype: HT
+redirect_url: /advanced-threat-analytics/modifying-ata-config-dcpassword
+ms.openlocfilehash: ee6dff4df1088ac7547b95fcf0a9f2f276c5913a
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 06/30/2017
 ---
-*Şunlar için geçerlidir: Advanced Threat Analytics sürüm 1.7*
-
-
-
-# <a name="change-ata-configuration---domain-connectivity-password"></a>ATA yapılandırmasını değiştirme - etki alanı bağlantısı parolası
-
->[!div class="step-by-step"]
-[« ATA Konsolu URL’si](modifying-ata-config-consoleurl.md)
-
-
-## <a name="change-the-domain-connectivity-password"></a>Etki alanı bağlantı parolasını değiştirme
-Etki Alanı Bağlantısı Parolası’nı değiştirirseniz, girdiğiniz parolanın doğru olduğundan emin olun. Doğru olmazsa, ATA Gateway hizmeti ATA Gateway bileşenleri üzerinde çalışmayı durdurur.
-
-Böyle bir durum oluştuğundan kuşkulanırsanız, Microsoft.Tri.Gateway-Errors.log dosyasında şunu arayın: `The supplied credential is invalid.`
-
-Bunu düzeltmek için, bu yordamı izleyerek ATA Center’da Etki Alanı Bağlantısı parolasını güncelleştirin:
-
-1.  ATA Center’da ATA Konsolu’nu açın.
-
-2.  Araç çubuğunda ayarlar seçeneğini belirtin ve **Yapılandırma**’yı seçin.
-
-    ![ATA yapılandırma ayarları simgesi](media/ATA-config-icon.JPG)
-
-3.  **Dizin Hizmetleri**’ni seçin.
-
-    ![ATA Gateway parola değiştirme resmi](media/ATA-GW-change-DC-password.png)
-
-4.  **Parola** altında, parolayı değiştirin.
-
-    ATA Center’ın etki alanına bağlantısı varsa, kimlik bilgilerini doğrulamak için **Bağlantıyı Sına** düğmesine tıklayın
-
-5.  **Kaydet**'e tıklayın.
-
-6.  Parolayı değiştirdikten sonra, ATA Gateway sunucularında ATA Gateway hizmetinin çalıştığını el ile denetleyin.
-
->[!div class="step-by-step"]
-[« ATA Konsolu URL’si](modifying-ata-config-consoleurl.md)
-
-## <a name="see-also"></a>Ayrıca bkz.
-- [ATA Konsolu ile çalışma](working-with-ata-console.md)
-- [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
