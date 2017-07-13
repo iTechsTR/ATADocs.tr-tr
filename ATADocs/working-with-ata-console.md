@@ -1,0 +1,170 @@
+---
+title: Advanced Threat Analytics konsolunu anlama| Microsoft Docs
+description: "ATA Konsolu’nda oturum açma işlemi ve konsolun bileşenleri açıklanır"
+keywords: 
+author: rkarlin
+ms.author: rkarlin
+manager: mbaldwin
+ms.date: 7/2/2017
+ms.topic: article
+ms.prod: 
+ms.service: advanced-threat-analytics
+ms.technology: 
+ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
+ms.reviewer: bennyl
+ms.suite: ems
+ms.openlocfilehash: 3d687087dd9e1ae7f7642f9fdd7d89420f3bec27
+ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 07/03/2017
+---
+*Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
+
+
+
+# ATA Konsolu’yla çalışma
+<a id="working-with-the-ata-console" class="xliff"></a>
+
+ATA tarafından algılanan kuşkulu etkinliği izlemek ve yanıtlamak için ATA Konsolu’nu kullanın.
+
+? anahtarını girmek, ATA Portal erişilebilirliği için klavye kısayollarını sağlayacaktır. 
+
+## ATA Konsolu’na erişimi etkinleştirme
+<a id="enabling-access-to-the-ata-console" class="xliff"></a>
+ATA Konsolunda başarıyla oturum açmak amacıyla, ATA Konsoluna erişmek için doğru ATA rolünün atandığı bir kullanıcıyla oturum açmanız gerekir. ATA’da role dayalı erişim denetimi (RBAC) hakkında daha fazla bilgi için bkz. [ATA rol gruplarıyla çalışma](ata-role-groups.md).
+
+## ATA Konsolu’nda oturum açma
+<a id="logging-into-the-ata-console" class="xliff"></a>
+
+1. ATA Center sunucusunda, masaüstündeki **Microsoft ATA Konsolu** simgesine tıklayın veya tarayıcıyı açıp ATA Konsolu’na göz atın.
+
+    ![ATA sunucusu simgesi](media/ata-server-icon.png)
+
+>[!NOTE]
+> Ayrıca ATA Center veya ATA Gateway’den tarayıcıyı açabilir ve ATA Center yüklemesinde ATA Konsolu için yapılandırdığınız IP adresine göz atabilirsiniz.    
+
+2.  ATA Center’ın yüklü olduğu bilgisayar ile ATA Konsolu’na erişmeye çalıştığınız bilgisayar etki alanına katılmışsa ATA, Windows kimlik doğrulaması ile tümleştirilmiş çoklu oturum açmayı destekler - bilgisayarınızda zaten oturum açtıysanız ATA bu belirteci kullanarak ATA Konsolu’nda sizin için oturum açar. Ayrıca bir akıllı kart kullanarak da oturum açabilirsiniz. ATA’daki izinleriniz, [yönetici rolünüze](ata-role-groups.md) karşılık gelecektir.
+
+> [!NOTE]
+> ATA Konsolu’na erişmeye çalıştığınız bilgisayarda, ATA yönetici kullanıcı adı ve parolanızla oturum açmayı unutmayın. Bunun yerine tarayıcınızı farklı bir kullanıcı olarak çalıştırabilir veya Windows oturumunuzu kapatıp ATA yönetici kullanıcınızla oturum açabilirsiniz. ATA Konsolu’ndan kimlik bilgileri talep etmesini istemek için bir IP adresi kullanarak konsola erişin, böylece kimlik bilgilerinizi girmeniz istenecektir.
+
+SSO kullanarak oturum açmak için ATA konsolunun tarayıcınızda yerel özel ağ sitesi olarak tanımlandığından ve konsola bir kısa ad veya yerel konak kullanarak erişebildiğinizden emin olun.
+
+> [!NOTE]
+> Her bir şüpheli etkinlik ve sistem durumu uyarısının günlüğe kaydedilmesinin yanı sıra, ATA Konsolu’nda yaptığınız tüm yapılandırma değişiklikleri ATA Center makinesindeki **Uygulamalar ve hizmetler günlüğü**’nün altında bulunan **Microsoft ATA** bölümündeki Windows Olay Günlüğü’nde denetlenir. ATA konsolunda gerçekleştirilen her oturum açma işlemi de denetlenir.<br></br>  ATA Gateway’i etkileyen yapılandırma da ATA Gateway makinesinin Windows Olay Günlüğü’ne kaydedilir. 
+
+
+
+## ATA Konsolu
+<a id="the-ata-console" class="xliff"></a>
+
+ATA Konsolu tarih sırasına göre tüm kuşkulu etkinliklerin hızlı bir görünümünü sağlar. Herhangi bir etkinliği detayına gitmenize ve bu etkinliklere dayalı olarak eylemler yapmanıza olanak tanır. Konsol ayrıca, ATA ağındaki sorunları veya kuşkulu sayılan yeni etkinlikleri vurgulamak için uyarılar ve bildirimler de görüntüler.
+
+Bunlar ATA Konsolu’nun başlıca öğeleridir.
+
+
+### Saldırı zaman çizelgesi
+<a id="attack-time-line" class="xliff"></a>
+
+Bu, ATA Konsolu’nda oturum açtığınızda gittiğiniz varsayılan giriş sayfasıdır. Varsayılan olarak, tüm kuşkulu etkinliler saldırı zaman çizelgesinde gösterilir. Saldırı zaman çizelgesine filtre uygulayarak, Tüm, Açık, Çıkarılan veya Çözülen kuşkulu etkinlikleri görüntüleyebilirsiniz. Ayrıca, her etkinliğe atanmış olan önem düzeyini de görebilirsiniz.
+
+![ATA saldırı zaman çizelgesi resmi](media/ATA-Suspicious-Activity-Timeline.jpg)
+
+Daha fazla bilgi için bkz. [Kuşkulu etkinliklerle çalışma](working-with-suspicious-activities.md)
+
+### Bildirim çubuğu
+<a id="notification-bar" class="xliff"></a>
+
+Kuşkulu bir etkinlik algılandığında, bildirim çubuğu sağ tarafta otomatik olarak açılır. Son oturum açmanızdan bu yana yeni kuşkulu etkinlikler varsa, başarılı oturum açma işleminden sonra bildirim çubuğu açılır. İstediğiniz zaman sağ taraftaki oka tıklayarak bildirim çubuğunu açabilirsiniz.
+
+![ATA bildirim çubuğu resmi](media/notification-bar-1.7.png)
+
+### Filtreleme paneli
+<a id="filtering-panel" class="xliff"></a>
+
+Kuşkulu etkinlikleri Durum ve Önem Derecesi’ne göre filtreleyerek, saldırı zaman çizelgesinde veya varlık profili kuşkulu etkinlikler sekmesinde hangi etkinliklerin görüntüleneceğini belirtebilirsiniz.
+
+### Arama çubuğu
+<a id="search-bar" class="xliff"></a>
+
+Üst menüde arama çubuğunu bulacaksınız. ATA’da belirli kullanıcı, bilgisayar veya grupları arayabilirsiniz. Denemek için, yazmaya başlamanız yeterlidir.
+
+![ATA konsolu arama resmi](media/ATA-console-search.png)
+
+### Sistem Durumu Merkezi
+<a id="health-center" class="xliff"></a>
+
+Sistem Durumu Merkezi, ATA dağıtımınızda düzgün çalışmayan bir şey olduğunda size uyarılar sağlar.
+
+![ATA sistem durumu merkezinin resmi](media/ATA-Health-Issue.jpg)
+
+Sisteminizde bağlantı hatası veya bağlantısı kesik ATA Gateway gibi herhangi bir sorunla karşılaşıldığında, Sistem Durumu Merkezi simgesi kırmızı bir nokta göstererek bu durumu öğrenmenizi sağlar. ![ATA sistem durumu merkezi kırmızı noktasının resmi](media/ATA-Health-Center-Alert-red-dot.png)
+
+Sistem Durumu Merkezi uyarıları bırakılabilir veya çözülebilir ve bu uyarılar önem derecesine bağlı olarak Yüksek, Orta ve Düşük kategorilerine ayrılır. Bir uyarıyı çözerseniz ve ATA hizmeti bunu hala etkin olarak algılıyorsa, uyarı otomatik olarak Açık uyarılar listesine taşınır. Sistem artık bir uyarı için neden olmadığını (durumun düzeltildiğini) algılarsa, uyarı otomatik olarak çözülen uyarı listesine taşınır.
+
+### Kullanıcı ve bilgisayar profilleri
+<a id="user-and-computer-profiles" class="xliff"></a>
+
+ATA, ağdaki her kullanıcı ve bilgisayar için bir profil oluşturur. ATA, kullanıcı profilinde grup üyeliği, son oturum açmalar ve son erişilen kaynaklar gibi genel bilgileri görüntüler. Ayrıca kullanıcının VPN yoluyla bağlandığı tüm konumların bir listesini sağlar. ATA’nın gizli olarak değerlendirdiği grup üyeliklerinin listesi için aşağıya bakın.
+
+![Kullanıcı profili](media/user-profile.png)
+
+ATA, bilgisayar profilinde son oturum açmalar ve son erişilen kaynaklar gibi genel bilgileri görüntüler.
+
+![Bilgisayar profili](media/computer-profile.png)
+
+ATA, varlıklar (bilgisayarlar, cihazlar, kullanıcılar) hakkındaki genel bilgileri şu sayfalarda sağlar: Özet, Etkinlikler ve Kuşkulu Etkinlikler.
+
+ATA’nın tümüyle çözümleyemediği bir profil, yanında gösterilen yarısı dolu daire simgesiyle tanımlanır.
+
+
+![ATA çözümlenmemiş profilinin resmi](media/ATA-Unresolved-Profile.jpg)
+
+### Gizli gruplar
+<a id="sensitive-groups" class="xliff"></a>
+
+ATA tarafından **Gizli** olarak değerlendirilen gruplar aşağıda listelenmiştir. Bu gruplar yönetici ayrıcalıklarına sahip olarak işaretlenir ve gizli hesaplara karşılık gelen uyarılar gönderir:
+
+- Enterprise Read Only Domain Controllers 
+- Etki Alanı Yöneticileri 
+- Domain Controllers 
+- Schema Admins,
+- Enterprise Admins 
+- Group Policy Creator Owners 
+- Read Only Domain Controllers 
+- Yöneticiler  
+- İleri Kullanıcılar  
+- Account Operators  
+- Server Operators   
+- Print Operators,
+- Backup Operators,
+- Replicators 
+- Uzak Masaüstü Kullanıcıları 
+- Ağ Yapılandırması İşleçleri 
+- Incoming Forest Trust Builders 
+- DNS Admins 
+
+
+### Mini profil
+<a id="mini-profile" class="xliff"></a>
+
+Konsolun, kullanıcı veya bilgisayar gibi tek bir varlığın bulunduğu herhangi bir yerinde, farenizi varlığın üzerine getirirseniz otomatik olarak mini profil açılır ve varsa aşağıdaki bilgileri görüntüler:
+
+![ATA mini profilinin resmi](media/ATA-mini-profile.jpg)
+
+-   Ad
+
+-   Resim
+
+-   E-posta
+
+-   Telefon
+
+-   Önem derecesine göre kuşkulu etkinlik sayısı
+
+
+
+## Ayrıca bkz.
+<a id="see-also" class="xliff"></a>
+[ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
