@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/5/2017
+ms.date: 07/9/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1042f464f424d2805542a8145d2e09d592fe8a51
-ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
-ms.translationtype: HT
+ms.openlocfilehash: ff61d12eefaf6fb0a6b3d92568ef8c25c9d4c49b
+ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/10/2017
 ---
 # ATA’yı sürüm 1.8’e güncelleştirme
 <a id="updating-ata-to-version-18" class="xliff"></a>
@@ -58,9 +58,8 @@ Geçiş sürümündeki dosya yalnızca ATA 1.7’yi güncelleştirmek için kull
     -  Sürüm 1.7’de otomatik güncelleştirmeleri etkinleştirmediyseniz ATA’nın güncel kalması için ATA’yı Microsoft Update kullanacak şekilde ayarlamanız istenir.  Microsoft Update sayfasında, **Güncelleştirmeleri denetlediğimde Microsoft Update'i kullan (önerilir)** öğesini seçin.
     ![ATA’yı güncel tutma resmi](media/ata_ms_update.png)
      
-     Bu, burada görüldüğü gibi, Windows ayarlarını diğer Microsoft ürünleri (ATA dahil) için güncelleştirmeleri etkinleştirecek şekilde ayarlar. 
-    ![Windows otomatik güncelleştirme resmi](media/ata_installupdatesautomatically.png)
-
+     Böylelikle Windows ayarlarını, ATA güncelleştirmelerini etkinleştirecek şekilde belirlemiş olursunuz. 
+    
     -  **Veri geçişi** ekranında, verilerin tümünü veya bir kısmını geçirmek istediğinizi seçin. Verilerin yalnızca bir kısmını geçirmeyi seçerseniz profil oluşturma işleminin tamamlanması üç haftaya kadar sürebilen anormal davranış algılama hariç tüm algılamalar hemen çalışacaktır.  
     
     **Kısmi** veri geçişinin yüklenmesi çok daha kısa sürer. **Tam** veri geçişini seçerseniz, yüklemenin tamamlanması oldukça uzun sürebilir. **Veri Geçişi** ekranında listelenen tahmini süre ve gerekli disk alanı bilgilerine bakmayı unutmayın. Bu rakamlar, ATA’nın önceki sürümlerinde kaydettiğiniz yakalanan ağ trafiği miktarına bağlıdır. Örneğin aşağıdaki ekranda, çok büyük bir veritabanından veri geçişi işlemini görebilirsiniz:

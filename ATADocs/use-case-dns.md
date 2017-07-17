@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1d186a96-ef70-4787-aa64-c03d1db94ce0
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 436b96f679836060cfaf40f6be3b92cf96dc0e04
-ms.sourcegitcommit: 4118dd4bd98994ec8a7ea170b09aa301a4be2c8a
-ms.translationtype: HT
+ms.openlocfilehash: f85d52420c55e2f1119ad14eb1a6c957fbc50be6
+ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/11/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -55,7 +55,7 @@ ATA, kaynak makinenin adını ve gerçekleştirilen asıl DNS sorgusu hakkında 
 DNS kullanarak keşfi araştırmak için öncelikle sorguların nedenini belirlemeniz gerekir. Bunlar aşağıdaki kategorilerden biriyle tanımlanabilir: 
 -   Doğru pozitif sonuçlar – Ağınızda bir saldırgan veya kötü amaçlı bir yazılım var. Bu, ağ çevresini ihlal eden bir saldırgan veya içeriden bir tehdit olabilir.
 -   Zararsız doğru pozitif sonuçlar – Bunlar sızma testi, kırmızı ekip etkinliği, güvenlik tarayıcıları, yeni nesil güvenlik duvarı veya tasdikli etkinlikler gerçekleştiren BT yöneticileri tarafından tetiklenen uyarılar olabilir.
--   Hatalı pozitif sonuçlar – Yanlış yapılandırmadan kaynaklanan uyarılar alabilirsiniz, örneğin bağlantı noktası 53, ATA Gateway ile DNS sunucunuz arasında engellendiğinde (veya başka bir ağ sorununda).
+-   Hatalı pozitif sonuçlar: Yanlış yapılandırmadan kaynaklanan uyarılar alabilirsiniz. Örneğin, ATA Gateway ile DNS sunucunuz arasında UDP bağlantı noktası 53 engellendiğinde (veya başka bir ağ sorunu oluştuğunda).
 
 Aşağıdaki grafik, uygulamanız gereken araştırma adımlarının belirlenmesine yardımcı olur:
 
@@ -63,10 +63,10 @@ Aşağıdaki grafik, uygulamanız gereken araştırma adımlarının belirlenmes
  
 1.  İlk adım, aşağıda gösterildiği şekilde uyarının kaynağı olan makineyi belirlemektir:
  
-    ![ATA’da DNS keşfi şüpheli etkinliğini inceleyin](./media/dns-recon-2.png)
+    ![ATA’da DNS keşfi şüpheli etkinliğini inceleyin](./media/dns-recon.png)
 2.  Makinenin ne olduğunu belirleyin. İş istasyonu, sunucu, yönetici iş istasyonu, sızma testi istasyonu vb. mi?
 3.  Bilgisayar bir DNS sunucusuysa ve bölgenin ikincil bir kopyasını isteme hakkı varsa o halde bu bir hatalı pozitif sonuçtur. Hatalı pozitif sonuç bulduğunuzda bu makine için aynı uyarıyı tekrar almamak adına **Dışla** seçeneğini kullanın.
-4. ATA Gateway ve DNS sunucunuz arasında bağlantı noktası 53’ün açık olduğundan emin olun.
+4. ATA Gateway ve DNS sunucunuz arasında UDP bağlantı noktası 53’ün açık olduğundan emin olun.
 4.  Makine, yönetici işleri veya sızma testi için kullanılıyorsa bu zararsız bir doğru pozitif sonuçtur ve söz konusu makine özel durum olarak yapılandırılabilir.
 5.  Sızma testi için kullanılmıyorsa makinenin bir güvenlik tarayıcısı veya yeni nesil güvenlik duvarı çalıştırıp çalıştırmadığını kontrol edin çünkü bunlar, AXFR türünde DNS istekleri yapabilir.
 6.  Son olarak, bu ölçütlerin hiçbiri uymadıysa makine bir güvenlik tehdidi altında olabilir ve büyük çaplı bir araştırmaya tabi tutulması gerekir. 
