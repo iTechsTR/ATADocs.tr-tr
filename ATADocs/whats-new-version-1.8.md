@@ -13,14 +13,17 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: f2a4ed151db38497a6cec977f1090faf2eb4133e
-ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
-ms.translationtype: HT
+ms.openlocfilehash: 6850c5e8e264a9610e377a9ab4aadca338971ee1
+ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/11/2017
 ---
 # ATA sürüm 1.8’deki yenilikler
 <a id="whats-new-in-ata-version-18" class="xliff"></a>
+
+[İndirme Merkezi’nden](https://www.microsoft.com/download/details.aspx?id=55536) ATA’nın son güncelleştirme sürümünü indirebilir veya [Değerlendirme merkezinden](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics) tam sürümü indirebilirsiniz.
+
 Bu sürüm notları, Advanced Threat Analytics’in bu sürümündeki güncelleştirmeler, yeni özellikler, hata düzeltmeleri ve bilinen sorunlar hakkında bilgi sağlar.
 
 
@@ -65,7 +68,6 @@ Bu sürüm notları, Advanced Threat Analytics’in bu sürümündeki güncelle�
 
 -   ATA Center performansı geliştirildi. ATA 1.8 ile ATA Center saniyede 1 milyondan fazla paket işleyebilir.
 -   ATA Lightweight Gateway artık olay iletmeyi yapılandırmaya gerek kalmadan olayları yerel olarak okuyabilir.
--   Erişilebilirliği artırma – ATA artık herkesin erişebileceği bir ürün ortaya koyma konusunda Microsoft ile birlikte çalışıyor. 
 -   Artık izleme uyarıları ve şüpheli etkinlikler için farklı e-postalar yapılandırabilirsiniz.
 
 ## Güvenlik iyileştirmeleri
