@@ -23,8 +23,7 @@ ms.lasthandoff: 07/11/2017
 
 
 
-# Varlıkları algılamalardan dışlama
-<a id="excluding-entities-from-detections" class="xliff"></a>
+# <a name="excluding-entities-from-detections"></a>Varlıkları algılamalardan dışlama
 Bu konuda, doğru zararsız pozitif sonuçları olabildiğince azaltmak ve aynı zamanda doğru pozitif sonuçları yakalamak için varlıkların uyarı tetiklemesini nasıl engelleyeceğiniz açıklanmaktadır. Belirli kullanıcılar tarafından normal iş düzeninize uygun olarak gerçekleştirilen etkinlikler konusunda ATA’nın sizi gereksiz yere rahatsız etmesini önlemek için, seçtiğiniz varlıkların uyarılarını susturabilir veya dışlayabilirsiniz.
 
 Örneğin, kuruluşunuzdaki rutin BT işlemleri gereği DNS keşfi yapan bir güvenlik tarayıcınız veya etki alanı denetleyicisinde uzaktan betik çalıştıran bir yöneticiniz varsa (ve bunlar tasdikli eylemlerse) bu özelliğe ihtiyaç duyabilirsiniz.
@@ -58,7 +57,6 @@ Bir IP adresi veya bilgisayar dışlama seçeneğiniz varsa, bunlardan yalnızca
 > Yapılandırma sayfaları yalnızca ATA yöneticileri tarafından değiştirilebilir.
 
 
-## Ayrıca bkz:
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz:
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [ATA yapılandırmasında değişiklik yapma](modifying-ata-center-configuration.md)

@@ -22,15 +22,13 @@ ms.lasthandoff: 07/11/2017
 
 
 
-# ATA Kapasite Planlaması
-<a id="ata-capacity-planning" class="xliff"></a>
+# <a name="ata-capacity-planning"></a>ATA Kapasite Planlaması
 Bu konu, ağınızı izlemek için kaç ATA sunucusuna ihtiyacınız olduğunu belirlemenize yardımcı olur. Ayrıca kaç ATA Gateway ve/veya ATA Lightweight Gateway’e ihtiyacınız olduğu ve ATA Center ve ATA Gateway’leriniz için sunucu kapasitesi hakkında yol gösterir.
 
 > [!NOTE] 
 > Bu makalede açıklanan performans gereksinimleri karşılandığı sürece, ATA Center herhangi bir IaaS satıcısında dağıtılabilir.
 
-##Boyutlandırma aracını kullanma
-<a id="using-the-sizing-tool" class="xliff"></a>
+##<a name="using-the-sizing-tool"></a>Boyutlandırma aracını kullanma
 ATA dağıtımızın kapasitesini belirlemek için önerilen en kolay yol [ATA Boyutlandırma Aracı](http://aka.ms/atasizingtool)’nı kullanmaktır. ATA Boyutlandırma Aracı’nı çalıştırın ve Excel dosyasındaki sonuçlarda, ihtiyaç duyduğunuz ATA kapasitesini belirlemek için aşağıdaki alanları kullanın:
 
 - ATA Center CPU ve Bellek: Sonuç dosyasındaki ATA Center tablosunda bulunan **Meşgul Paket/sn** alanını, [ATA Center tablosundaki](#ata-center-sizing) **SANİYE BAŞINA PAKET** alanıyla eşleştirin.
@@ -48,8 +46,7 @@ Aşağıdaki bölüm, bir Etki Alanı Denetleyicisi’nden paket/sn sayacı bilg
 
 
 
-### ATA Center Boyutlandırması
-<a id="ata-center-sizing" class="xliff"></a>
+### <a name="ata-center-sizing"></a>ATA Center Boyutlandırması
 Kullanıcı davranış analizi için ATA Center’a en az 30 günlük veri gerekir.
  
 
@@ -77,8 +74,7 @@ Kullanıcı davranış analizi için ATA Center’a en az 30 günlük veri gerek
 > -   Fiziksel bir sunucuda çalışırken, ATA veritabanı için BIOS’ta Tekdüzen olmayan bellek erişimini (NUMA) **devre dışı bırakmanız** gerekir. Sisteminizde NUMA, Düğüm Araya Ekleme (Node Interleaving) olarak geçiyor olabilir ve bu durumda NUMA’yı devre dışı bırakmak için Düğüm Araya Ekleme’yi **etkinleştirmeniz** gerekecektir. Daha fazla bilgi için BIOS belgelerinize bakın. ATA Center bir sanal sunucuda çalışırken bu durum geçerli değildir.
 
 
-## Dağıtımınız için doğru ağ geçidi türünü seçme
-<a id="choosing-the-right-gateway-type-for-your-deployment" class="xliff"></a>
+## <a name="choosing-the-right-gateway-type-for-your-deployment"></a>Dağıtımınız için doğru ağ geçidi türünü seçme
 ATA dağıtımında, ATA Gateway türlerinin tüm bileşimleri desteklenir:
 
 - Yalnızca ATA Gateway’ler
@@ -106,8 +102,7 @@ Aşağıda, etki alanı denetleyicilerinin ATA Gateway kapsamında olmasının g
 - Yönetim veri merkezleri (saniyedeki paket sayısı 10.000’i aşan etki alanı denetleyicilerine sahip)
 
 
-### ATA Lightweight Gateway Boyutu
-<a id="ata-lightweight-gateway-sizing" class="xliff"></a>
+### <a name="ata-lightweight-gateway-sizing"></a>ATA Lightweight Gateway Boyutu
 
 Bir ATA Lightweight Gateway, etki alanı denetleyicisinin oluşturduğu ağ trafiği miktarına bağlı olarak bir etki alanı denetleyicisinin izlenmesini destekleyebilir. 
 
@@ -131,8 +126,7 @@ Bir ATA Lightweight Gateway, etki alanı denetleyicisinin oluşturduğu ağ traf
 > -   ATA ikilileri, [ATA günlükleri](troubleshooting-ata-using-logs.md) ve [performans günlükleri](troubleshooting-ata-using-perf-counters.md) için gereken alan dahil olmak üzere en az 5 GB’lık boş alan gereklidir ve önerilen boş alan ise 10 GB’tır.
 
 
-### ATA Gateway Boyutlandırması
-<a id="ata-gateway-sizing" class="xliff"></a>
+### <a name="ata-gateway-sizing"></a>ATA Gateway Boyutlandırması
 
 Kaç adet ATA Gateway dağıtımı yapacağınıza karar verirken aşağıdakileri dikkate alın.
 
@@ -167,8 +161,7 @@ Bağlantı noktası yansıtmayla ilgili önemli noktalar, her bir veri merkezi v
 > -   ATA ikilileri, [ATA günlükleri](troubleshooting-ata-using-logs.md) ve [performans günlükleri](troubleshooting-ata-using-perf-counters.md) için gereken alan dahil olmak üzere en az 5 GB’lık boş alan gereklidir ve önerilen boş alan ise 10 GB’tır.
 
 
-## Etki alanı denetleyicisi tahmini trafiği
-<a id="domain-controller-traffic-estimation" class="xliff"></a>
+## <a name="domain-controller-traffic-estimation"></a>Etki alanı denetleyicisi tahmini trafiği
 Etki alanı denetleyicilerinizin saniyedeki ortalama paket sayısını bulmak için kullanabileceğiniz çeşitli araçlar vardır. Bu sayacı izleyen hiçbir aracınız yoksa, gerekli bilgileri toplamak için Performans İzleyicisi’ni kullanabilirsiniz.
 
 Paket/saniye oranını belirlemek için her etki alanı denetleyicisinde aşağıdakileri adımları yerine getirin:
@@ -218,8 +211,7 @@ Paket/saniye oranını belirlemek için her etki alanı denetleyicisinde aşağ�
 
     ![Saniyedeki paket sayısı sayacının resmi](media/ATA-traffic-estimation-14.png)
 
-## Ayrıca bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz.
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA mimarisi](ata-architecture.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
