@@ -23,12 +23,10 @@ ms.lasthandoff: 07/10/2017
 
 
 
-# Kuşkulu Etkinliklerle Çalışma
-<a id="working-with-suspicious-activities" class="xliff"></a>
+# <a name="working-with-suspicious-activities"></a>Kuşkulu Etkinliklerle Çalışma
 Bu konu başlığı altında, Advanced Threat Analytics ile çalışmanın temelleri açıklanır.
 
-## Saldırı zaman çizelgesinde kuşkulu etkinlikleri gözden geçirme
-<a id="review-suspicious-activities-on-the-attack-time-line" class="xliff"></a>
+## <a name="review-suspicious-activities-on-the-attack-time-line"></a>Saldırı zaman çizelgesinde kuşkulu etkinlikleri gözden geçirme
 ATA Konsolu’nda oturum açtıktan sonra, otomatik olarak açık **Kuşkulu Etkinlikler Zaman Çizelgesi**’ne gelirsiniz. Kuşkulu etkinlikler, en yenileri zaman çizelgesinin en üstünde olacak şekilde kronolojik sırayla listelenir.
 Her kuşkulu etkinliğin aşağıdaki bilgileri bulunur:
 
@@ -58,8 +56,7 @@ Her kuşkulu etkinliğin aşağıdaki bilgileri bulunur:
 
 ![ATA kuşkulu etkinlikler zaman çizelgesinin resmi](media/ATA-Suspicious-Activity-Timeline.JPG)
 
-## Kuşkulu etkinlikler listesini filtreleme
-<a id="filter-suspicious-activities-list" class="xliff"></a>
+## <a name="filter-suspicious-activities-list"></a>Kuşkulu etkinlikler listesini filtreleme
 Kuşkulu etkinlikler listesini filtrelemek için:
 
 1.  Ekranın sol tarafındaki **Filtre ölçütü** bölmesinde şunlardan birini seçin: **Tümü**, **Açık**, **Çözüldü** veya **Çıkarıldı**.
@@ -83,8 +80,7 @@ Kuşkulu etkinlikler listesini filtrelemek için:
 
 
 
-## Şüpheli etkinlikleri düzeltme
-<a id="remediating-suspicious-activities" class="xliff"></a>
+## <a name="remediating-suspicious-activities"></a>Şüpheli etkinlikleri düzeltme
 Şüpheli etkinliğin geçerli durumuna tıklayıp **Açık**, **Gösterilmeyen**, **Kapalı** veya **Silinmiş** seçeneklerinden birini belirleyerek durumu değiştirebilirsiniz.
 Bir şüpheli etkinliğin sağ üst köşesindeki üç nokta simgesine tıklayarak ulaşacağınız kullanılabilir eylemler listesinden bunu yapabilirsiniz.
 
@@ -108,7 +104,6 @@ Bir şüpheli etkinliğin sağ üst köşesindeki üç nokta simgesine tıklayar
 > Yapılandırma sayfaları yalnızca ATA yöneticileri tarafından değiştirilebilir.
 
 
-## Ayrıca bkz:
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz:
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [ATA yapılandırmasında değişiklik yapma](modifying-ata-center-configuration.md)

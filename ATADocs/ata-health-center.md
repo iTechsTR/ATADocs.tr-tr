@@ -22,21 +22,17 @@ ms.lasthandoff: 07/10/2017
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
 
-# ATA sistem durumu ve olayları ile çalışma
-<a id="working-with-ata-system-health-and-events" class="xliff"></a>
+# <a name="working-with-ata-system-health-and-events"></a>ATA sistem durumu ve olayları ile çalışma
 
-## ATA Sistem Durumu Merkezi
-<a id="ata-health-center" class="xliff"></a>
+## <a name="ata-health-center"></a>ATA Sistem Durumu Merkezi
 ATA Sistem Durumu Merkezi, ATA hizmetinizin nasıl performans gösterdiğini öğrenmenizi sağlar ve sorunlar olduğunda sizi uyarır.
 
-## ATA Sistem Durumu Merkezi’yle çalışma
-<a id="working-with-the-ata-health-center" class="xliff"></a>
+## <a name="working-with-the-ata-health-center"></a>ATA Sistem Durumu Merkezi’yle çalışma
 ATA Sistem Durumu Merkezi, menü çubuğundaki Sistem Durum Merkezi’nin üst kısmında bir uyarı (kırmızı nokta) göstererek sorun olduğunu bilmenizi sağlar.
 
 ![ATA Sistem Durumu Merkezi kırmızı nokta araç çubuğu](media/ATA-Health-Center-Alert-red-dot.png)
 
-### ATA sistem durumunu yönetme
-<a id="managing-ata-health" class="xliff"></a>
+### <a name="managing-ata-health"></a>ATA sistem durumunu yönetme
 Sisteminizin bir bütün olarak durumunu denetlemek için, menü çubuğunda Sistem Durumu Merkezi simgesine tıklayın. ![ATA Sistem Durumu Merkezi simgesi](media/ATA-red-dot.png)
 
 -   Tüm açık uyarılar, **Çözüldü** veya **Çıkarıldı** olarak ayarlanarak yönetilebilir. Uyarıda **Açık** seçeneğine tıklayın ve ekranı aşağı kaydırarak **Çözüldü** veya **Çıkarıldı** seçeneğine gelin.
@@ -52,8 +48,7 @@ Sisteminizin bir bütün olarak durumunu denetlemek için, menü çubuğunda Sis
 
 
 
-## Ayrıca Bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

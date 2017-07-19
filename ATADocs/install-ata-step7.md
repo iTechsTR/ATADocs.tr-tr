@@ -23,14 +23,12 @@ ms.lasthandoff: 07/10/2017
 
 
 
-# ATA’yı Yükleme - 7. Adım
-<a id="install-ata---step-7" class="xliff"></a>
+# <a name="install-ata---step-7"></a>ATA’yı Yükleme - 7. Adım
 
 >[!div class="step-by-step"]
 [« 6. Adım](install-ata-step6.md)
 
-## 7. Adım IP adresi dışlamalarını ve Honeytoken kullanıcısını yapılandırma
-<a id="step-7-configure-ip-address-exclusions-and-honeytoken-user" class="xliff"></a>
+## <a name="step-7-configure-ip-address-exclusions-and-honeytoken-user"></a>7. Adım IP adresi dışlamalarını ve Honeytoken kullanıcısını yapılandırma
 ATA, belirli IP adreslerinin veya kullanıcıların birkaç algılama yönteminden dışlanmasına olanak verir. 
 
 Örneğin, bir **DNS Keşfi dışlaması** DNS’i tarama mekanizması olarak kullanan bir güvenlik tarayıcısı olabilir. Bu dışlama işlemi ATA’nın böyle tarayıcıları yoksaymasına yardımcı olur. *Anahtar Geçişi* dışlama işlemine örnek olarak bir NAT aygıtı gösterilebilir.    
@@ -73,8 +71,7 @@ ATA’nın çalışır durumda olduğunu ve ağınızdaki ihlalleri yakalayıp y
 [« 6. Adım](install-ata-step6.md)
 
 
-## Ayrıca Bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca Bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

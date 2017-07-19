@@ -19,8 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/10/2017
 ---
-# ATA’yı sürüm 1.8’e güncelleştirme
-<a id="updating-ata-to-version-18" class="xliff"></a>
+# <a name="updating-ata-to-version-18"></a>ATA’yı sürüm 1.8’e güncelleştirme
 
 > [!NOTE] 
 > Ortamınızda ATA yüklü değilse ATA’nın sürüm 1.8’i de içeren tam sürümünü indirin ve [ATA’yı Yükleme](install-ata-step1.md) başlığı altında açıklanan standart yükleme yordamını izleyin.
@@ -42,8 +41,7 @@ Geçiş sürümündeki dosya yalnızca ATA 1.7’yi güncelleştirmek için kull
     > [!IMPORTANT]
     > ATA’nın düzgün çalıştığından emin olmak için tüm ATA Gateway bileşenlerini güncelleştirin.
 
-### 1. Adım: ATA Center’ı güncelleştirme
-<a id="step-1-update-the-ata-center" class="xliff"></a>
+### <a name="step-1-update-the-ata-center"></a>1. Adım: ATA Center’ı güncelleştirme
 
 1.  Veritabanınızı yedekleyin: (isteğe bağlı)
 
@@ -84,7 +82,6 @@ Geçiş sürümündeki dosya yalnızca ATA 1.7’yi güncelleştirmek için kull
 > Yeni ATA Gateway’ler yüklemek için **Ağ Geçitleri** ekranına gidin, ATA 1.8 Gateway kurulum paketini almak için **Ağ Geçidi Kurulumunu İndir**’e tıklayın ve yeni Ağ Geçidi yüklemesi için [4. Adım’da açıklanan yönergeleri izleyin. ATA Gateway’i yükleyin](install-ata-step4.md).
 
 
-## Ayrıca bkz:
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz:
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

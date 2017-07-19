@@ -21,13 +21,11 @@ ms.lasthandoff: 07/11/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
-# DNS kullanarak keşfi araştırma
-<a id="investigating-reconnaissance-using-dns" class="xliff"></a>
+# <a name="investigating-reconnaissance-using-dns"></a>DNS kullanarak keşfi araştırma
 
 ATA, ağınızda bir **DNS kullanarak keşif** algılar ve sizi uyarırsa uyarıyı araştırmanıza ve sorunu nasıl düzelteceğinizi anlamanıza yardımcı olması için bu makaleyi okuyun.
 
-## DNS kullanarak keşif nedir?
-<a id="what-is-reconnaissance-using-dns" class="xliff"></a>
+## <a name="what-is-reconnaissance-using-dns"></a>DNS kullanarak keşif nedir?
 
 **DNS kullanarak keşif** uyarısı, iç ağınızda keşif yapmak amacıyla olağan dışı bir konaktan şüpheli Etki Alanı Adı Sistemi (DNS) sorguları yapıldığına işaret eder.
 
@@ -35,13 +33,11 @@ Etki Alanı Adı Sistemi (DNS), hiyerarşik ve dağıtılmış bir veritabanı �
 Bir saldırgan için DNS’niz, iç ağ haritasını oluşturmak adına değerli bilgiler içerir, bu bilgiler arasında tüm sunucuların bir listesi ve genellikle bunların IP adresleriyle eşlenen tüm istemciler de bulunur. Bu bilgiler ayrıca, çoğu zaman bir ağ ortamını açıklayıcı özelliği olan konak adlarını da içerdiği için oldukça değerlidir. Bu bilgileri elde eden bir saldırgan, saldırı esnasında ilgili varlıklara odaklanarak işini kolaylaştırabilir. [Nmap](https://nmap.org/) ve [Fierce](https://github.com/mschwager/fierce) gibi araçlar ile [Nslookup](https://technet.microsoft.com/library/cc725991(v=ws.11).aspx) gibi yerleşik araçlar, DNS keşfi kullanarak konak keşfine olanak sağlar.
 Bir iç konağın DNS sorgularını kullanarak keşfin algılanması ciddi bir sorundur ve mevcut konak güvenliğinin tehlikeye atılması, daha geniş çaplı bir ağ güvenlik sorunu veya içeriden bir tehdit olasılığına işaret eder.
 
-## DNS sorgu türleri
-<a id="dns-query-types" class="xliff"></a>
+## <a name="dns-query-types"></a>DNS sorgu türleri
 
 DNS protokolünde birkaç sorgu türü vardır. ATA, AXFR (Aktarım) isteklerini algılar ve bunlar ortaya çıktığında bir uyarı gönderir. Bu tür bir sorgu yalnızca DNS sunucularından gelmelidir.
 
-## Saldırıyı bulma
-<a id="discovering-the-attack" class="xliff"></a>
+## <a name="discovering-the-attack"></a>Saldırıyı bulma
 
 Bir saldırgan, DNS kullanarak keşif gerçekleştirmeyi planladığında ATA bunu algılar ve orta derece önemli olarak işaretler.
 
@@ -49,8 +45,7 @@ Bir saldırgan, DNS kullanarak keşif gerçekleştirmeyi planladığında ATA bu
  
 ATA, kaynak makinenin adını ve gerçekleştirilen asıl DNS sorgusu hakkında ayrıntıları görüntüler. Örneğin, aynı konaktan yapılan birden çok deneme olabilir.
 
-## Araştırma
-<a id="investigating" class="xliff"></a>
+## <a name="investigating"></a>Araştırma
 
 DNS kullanarak keşfi araştırmak için öncelikle sorguların nedenini belirlemeniz gerekir. Bunlar aşağıdaki kategorilerden biriyle tanımlanabilir: 
 -   Doğru pozitif sonuçlar – Ağınızda bir saldırgan veya kötü amaçlı bir yazılım var. Bu, ağ çevresini ihlal eden bir saldırgan veya içeriden bir tehdit olabilir.
@@ -75,8 +70,7 @@ Aşağıdaki grafik, uygulamanız gereken araştırma adımlarının belirlenmes
     2.  Konak tabanlı çözümleme yürütün. 
     3.  Etkinlik şüpheli bir kullanıcıdan değilse adli çözümleme yapılarak makineye kötü amaçlı bir yazılım bulaşıp bulaşmadığı belirlenmelidir.
 
-## Araştırma sonrası
-<a id="post-investigation" class="xliff"></a>
+## <a name="post-investigation"></a>Araştırma sonrası
 
 Konağın güvenliğini aşmak için kullanılan kötü amaçlı yazılımlar, arka kapı becerileri olan truva atları barındırabilir. Güvenliği aşılan konakta başarılı yanal hareketin tespit edildiği durumlarda, düzeltme etkinlikleri bu konakları da kapsayacak şekilde genişletilmeli, yanal harekete dahil olan tüm konaklarda kullanılan bütün parolalar ve kimlik bilgileri değiştirilmelidir. 
 
@@ -84,14 +78,12 @@ Düzeltme adımlarının tamamlanmasının ardından kurban konağın temizlendi
 
 Microsoft, bir saldırganın ağınızda dağıtılmış kalıcı yöntemleri olup olmadığını belirlemek için Microsoft Hesabı Ekibiniz aracılığıyla erişilebilen, profesyonel bir Olay Yanıt ve Kurtarma ekibi kullanmanızı önerir.
 
-## Risk azaltma
-<a id="mitigation" class="xliff"></a>
+## <a name="mitigation"></a>Risk azaltma
 
 DNS kullanarak keşfi önlemek amacıyla DNS sunucusunu güvenlik altına almak için bölge aktarımlarını yalnızca belirtilen IP adresleriyle kısıtlamak veya devre dışı bırakmak mümkündür. Bölge aktarımlarını kısıtlamak hakkında daha fazla bilgi için şu Windows Server Technet makalesine bakın: [Bölge Aktarımlarını Kısıtlama](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx). Kısıtlı bölge aktarımları, [bölge aktarımlarını IPsec ile güvenlik altına alma](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx) yoluyla tamamen kilitlenebilir. Bölge Aktarımlarını Değiştirmek, [DNS sunucularınızı iç ve dış tehditlere karşı korumak](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx) için yapılması gerekenler listesinde bulunan görevlerden biridir.
 
 
 
-## Ayrıca Bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca Bkz.
 - [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
