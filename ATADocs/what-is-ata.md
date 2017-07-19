@@ -15,19 +15,17 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: c338441b37c41b810023ecf5c5ae348651f5ad64
 ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/03/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
 
-# Advanced Threat Analytics nedir?
-<a id="what-is-advanced-threat-analytics" class="xliff"></a>
+# <a name="what-is-advanced-threat-analytics"></a>Advanced Threat Analytics nedir?
 Advanced Threat Analytics (ATA), kuruluşunuzu çeşitli türlerdeki, gelişmiş ve hedefe yönelik siber saldırıların yanı sıra dahili tehditlerden de korumaya yardımcı olan şirket içi bir platformdur.
 
-## ATA nasıl çalışır?
-<a id="how-ata-works" class="xliff"></a>
+## <a name="how-ata-works"></a>ATA nasıl çalışır?
 
 ATA; birden çok kimlik doğrulaması, yetkilendirme ve bilgi toplama protokolündeki (Kerberos, DNS, RPC, NTLM vb.) ağ trafiğini yakalamak ve ayrıştırmak üzere özel bir ağ ayrıştırma altyapısından faydalanır. Bu bilgiler ATA tarafından şu yollardan biriyle toplanır:
 
@@ -44,8 +42,7 @@ ATA, olayları ve günlükleri şuralardan alabilir:
 
 ATA mimarisi hakkında daha fazla bilgi için bkz. [ATA Mimarisi](ata-architecture.md).
 
-## ATA ne yapar?
-<a id="what-does-ata-do" class="xliff"></a>
+## <a name="what-does-ata-do"></a>ATA ne yapar?
 
 ATA teknolojisi siber saldırı ölüm zincirinin aşağıda belirtilen çeşitli aşamalarına odaklanarak birden çok şüpheli etkinliği algılar:
 
@@ -97,21 +94,18 @@ Bu tür şüpheli etkinlikleri ATA Panosunda görüntüleyebilirsiniz. Aşağıd
   ![Örnek ATA ekranı bozulmuş güven](media/broken-trust-sa.png)
 
 
-## Bilinen sorunlar
-<a id="known-issues" class="xliff"></a>
+## <a name="known-issues"></a>Bilinen sorunlar
 
 - ATA 1.7’ye ve hemen ardından ATA Gateway’lerini güncelleştirmeden önce ATA 1.8’e güncelleştirirseniz ATA 1.8’e geçemezsiniz. ATA Center’ı 1.8 sürümüne güncelleştirmeden önce tüm Gateway’leri sürüm 1.7.1 veya 1.7.2’ye güncelleştirmek zorunludur.
 
 - Tam geçiş gerçekleştirme seçeneğini seçerseniz veritabanı boyutuna bağlı olarak, geçiş çok uzun zaman alabilir. Geçiş seçeneklerinizi belirlerken tahmini süre görüntülenir, lütfen hangi seçeneği belirleyeceğinize karar verirken buna dikkat edin. 
 
 
-## Sırada ne var?
-<a id="whats-next" class="xliff"></a>
+## <a name="whats-next"></a>Sırada ne var?
 
 -   ATA’nın ağınıza nasıl uyum sağladığı hakkında daha fazla bilgi için: [ATA mimarisi](ata-architecture.md)
 
 -   ATA’nın dağıtımına başlamak için: [ATA’yı yükleme](install-ata-step1.md)
 
-## Ayrıca bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

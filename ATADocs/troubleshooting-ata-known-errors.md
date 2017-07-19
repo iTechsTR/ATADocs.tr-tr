@@ -15,7 +15,7 @@ ms.reviewer: arzinger
 ms.suite: ems
 ms.openlocfilehash: 0ded0dd064f0327f6e52f15081e2b9dce14f982b
 ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/03/2017
 ---
@@ -23,13 +23,11 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# Bilinen ATA sorunlarını giderme
-<a id="troubleshooting-ata-known-issues" class="xliff"></a>
+# <a name="troubleshooting-ata-known-issues"></a>Bilinen ATA sorunlarını giderme
 
 Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için gereken adımları açıklar.
 
-## ATA Gateway ve Lightweight Gateway hataları
-<a id="ata-gateway-and-lightweight-gateway-errors" class="xliff"></a>
+## <a name="ata-gateway-and-lightweight-gateway-errors"></a>ATA Gateway ve Lightweight Gateway hataları
 
 |Hata|Açıklama|Çözüm|
 |-------------|----------|---------|
@@ -52,8 +50,7 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 |VMware üzerinde Lightweight Gateway kullanılırken bağlantı noktası yansıtılmış trafik uyarıları bırakıldı|VMware sanal makinelerinde DC’leri kullanıyorsanız **Bağlantı noktası yansıtma trafiği bırakıldı** uyarıları alabilirsiniz. Bunun sebebi, bir VMware yapılandırma uyuşmazlığı olabilir. |Bu uyarıları önlemek için aşağıdaki ayarların 0 veya Devre Dışı olarak ayarlandığını denetleyebilirsiniz: TsoEnable, LargeSendOffload, IPv4, TSO Veri Boşaltma. Ayrıca, IPv4 Büyük TSO Boşaltma’yı devre dışı bırakabilirsiniz. Daha fazla bilgi için VMware belgelerinize başvurun.|
 
 
-## Dağıtım hataları
-<a id="deployment-errors" class="xliff"></a>
+## <a name="deployment-errors"></a>Dağıtım hataları
 |Hata|Açıklama|Çözüm|
 |-------------|----------|---------|
 |.Net Framework 4.6.1 yüklemesi 0x800713ec hatasıyla başarısız oldu|.Net Framework 4.6.1 ön koşulları sunucuda yüklü değil. |ATA’yı yüklemeden önce, [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) ve [KB2919355](https://support.microsoft.com/kb/2919355) Windows güncelleştirmelerinin sunucuda yüklü olduğunu doğrulayın.|
@@ -65,8 +62,7 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 
 
 
-## Ayrıca Bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

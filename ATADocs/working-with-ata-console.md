@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 3d687087dd9e1ae7f7642f9fdd7d89420f3bec27
 ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/03/2017
 ---
@@ -23,19 +23,16 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# ATA Konsolu’yla çalışma
-<a id="working-with-the-ata-console" class="xliff"></a>
+# <a name="working-with-the-ata-console"></a>ATA Konsolu’yla çalışma
 
 ATA tarafından algılanan kuşkulu etkinliği izlemek ve yanıtlamak için ATA Konsolu’nu kullanın.
 
 ? anahtarını girmek, ATA Portal erişilebilirliği için klavye kısayollarını sağlayacaktır. 
 
-## ATA Konsolu’na erişimi etkinleştirme
-<a id="enabling-access-to-the-ata-console" class="xliff"></a>
+## <a name="enabling-access-to-the-ata-console"></a>ATA Konsolu’na erişimi etkinleştirme
 ATA Konsolunda başarıyla oturum açmak amacıyla, ATA Konsoluna erişmek için doğru ATA rolünün atandığı bir kullanıcıyla oturum açmanız gerekir. ATA’da role dayalı erişim denetimi (RBAC) hakkında daha fazla bilgi için bkz. [ATA rol gruplarıyla çalışma](ata-role-groups.md).
 
-## ATA Konsolu’nda oturum açma
-<a id="logging-into-the-ata-console" class="xliff"></a>
+## <a name="logging-into-the-ata-console"></a>ATA Konsolu’nda oturum açma
 
 1. ATA Center sunucusunda, masaüstündeki **Microsoft ATA Konsolu** simgesine tıklayın veya tarayıcıyı açıp ATA Konsolu’na göz atın.
 
@@ -56,16 +53,14 @@ SSO kullanarak oturum açmak için ATA konsolunun tarayıcınızda yerel özel a
 
 
 
-## ATA Konsolu
-<a id="the-ata-console" class="xliff"></a>
+## <a name="the-ata-console"></a>ATA Konsolu
 
 ATA Konsolu tarih sırasına göre tüm kuşkulu etkinliklerin hızlı bir görünümünü sağlar. Herhangi bir etkinliği detayına gitmenize ve bu etkinliklere dayalı olarak eylemler yapmanıza olanak tanır. Konsol ayrıca, ATA ağındaki sorunları veya kuşkulu sayılan yeni etkinlikleri vurgulamak için uyarılar ve bildirimler de görüntüler.
 
 Bunlar ATA Konsolu’nun başlıca öğeleridir.
 
 
-### Saldırı zaman çizelgesi
-<a id="attack-time-line" class="xliff"></a>
+### <a name="attack-time-line"></a>Saldırı zaman çizelgesi
 
 Bu, ATA Konsolu’nda oturum açtığınızda gittiğiniz varsayılan giriş sayfasıdır. Varsayılan olarak, tüm kuşkulu etkinliler saldırı zaman çizelgesinde gösterilir. Saldırı zaman çizelgesine filtre uygulayarak, Tüm, Açık, Çıkarılan veya Çözülen kuşkulu etkinlikleri görüntüleyebilirsiniz. Ayrıca, her etkinliğe atanmış olan önem düzeyini de görebilirsiniz.
 
@@ -73,27 +68,23 @@ Bu, ATA Konsolu’nda oturum açtığınızda gittiğiniz varsayılan giriş say
 
 Daha fazla bilgi için bkz. [Kuşkulu etkinliklerle çalışma](working-with-suspicious-activities.md)
 
-### Bildirim çubuğu
-<a id="notification-bar" class="xliff"></a>
+### <a name="notification-bar"></a>Bildirim çubuğu
 
 Kuşkulu bir etkinlik algılandığında, bildirim çubuğu sağ tarafta otomatik olarak açılır. Son oturum açmanızdan bu yana yeni kuşkulu etkinlikler varsa, başarılı oturum açma işleminden sonra bildirim çubuğu açılır. İstediğiniz zaman sağ taraftaki oka tıklayarak bildirim çubuğunu açabilirsiniz.
 
 ![ATA bildirim çubuğu resmi](media/notification-bar-1.7.png)
 
-### Filtreleme paneli
-<a id="filtering-panel" class="xliff"></a>
+### <a name="filtering-panel"></a>Filtreleme paneli
 
 Kuşkulu etkinlikleri Durum ve Önem Derecesi’ne göre filtreleyerek, saldırı zaman çizelgesinde veya varlık profili kuşkulu etkinlikler sekmesinde hangi etkinliklerin görüntüleneceğini belirtebilirsiniz.
 
-### Arama çubuğu
-<a id="search-bar" class="xliff"></a>
+### <a name="search-bar"></a>Arama çubuğu
 
 Üst menüde arama çubuğunu bulacaksınız. ATA’da belirli kullanıcı, bilgisayar veya grupları arayabilirsiniz. Denemek için, yazmaya başlamanız yeterlidir.
 
 ![ATA konsolu arama resmi](media/ATA-console-search.png)
 
-### Sistem Durumu Merkezi
-<a id="health-center" class="xliff"></a>
+### <a name="health-center"></a>Sistem Durumu Merkezi
 
 Sistem Durumu Merkezi, ATA dağıtımınızda düzgün çalışmayan bir şey olduğunda size uyarılar sağlar.
 
@@ -103,8 +94,7 @@ Sisteminizde bağlantı hatası veya bağlantısı kesik ATA Gateway gibi herhan
 
 Sistem Durumu Merkezi uyarıları bırakılabilir veya çözülebilir ve bu uyarılar önem derecesine bağlı olarak Yüksek, Orta ve Düşük kategorilerine ayrılır. Bir uyarıyı çözerseniz ve ATA hizmeti bunu hala etkin olarak algılıyorsa, uyarı otomatik olarak Açık uyarılar listesine taşınır. Sistem artık bir uyarı için neden olmadığını (durumun düzeltildiğini) algılarsa, uyarı otomatik olarak çözülen uyarı listesine taşınır.
 
-### Kullanıcı ve bilgisayar profilleri
-<a id="user-and-computer-profiles" class="xliff"></a>
+### <a name="user-and-computer-profiles"></a>Kullanıcı ve bilgisayar profilleri
 
 ATA, ağdaki her kullanıcı ve bilgisayar için bir profil oluşturur. ATA, kullanıcı profilinde grup üyeliği, son oturum açmalar ve son erişilen kaynaklar gibi genel bilgileri görüntüler. Ayrıca kullanıcının VPN yoluyla bağlandığı tüm konumların bir listesini sağlar. ATA’nın gizli olarak değerlendirdiği grup üyeliklerinin listesi için aşağıya bakın.
 
@@ -121,8 +111,7 @@ ATA’nın tümüyle çözümleyemediği bir profil, yanında gösterilen yarıs
 
 ![ATA çözümlenmemiş profilinin resmi](media/ATA-Unresolved-Profile.jpg)
 
-### Gizli gruplar
-<a id="sensitive-groups" class="xliff"></a>
+### <a name="sensitive-groups"></a>Gizli gruplar
 
 ATA tarafından **Gizli** olarak değerlendirilen gruplar aşağıda listelenmiştir. Bu gruplar yönetici ayrıcalıklarına sahip olarak işaretlenir ve gizli hesaplara karşılık gelen uyarılar gönderir:
 
@@ -146,8 +135,7 @@ ATA tarafından **Gizli** olarak değerlendirilen gruplar aşağıda listelenmi�
 - DNS Admins 
 
 
-### Mini profil
-<a id="mini-profile" class="xliff"></a>
+### <a name="mini-profile"></a>Mini profil
 
 Konsolun, kullanıcı veya bilgisayar gibi tek bir varlığın bulunduğu herhangi bir yerinde, farenizi varlığın üzerine getirirseniz otomatik olarak mini profil açılır ve varsa aşağıdaki bilgileri görüntüler:
 
@@ -165,6 +153,5 @@ Konsolun, kullanıcı veya bilgisayar gibi tek bir varlığın bulunduğu herhan
 
 
 
-## Ayrıca bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

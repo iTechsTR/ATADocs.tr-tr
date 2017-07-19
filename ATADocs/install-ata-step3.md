@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 68c169ffd0f42bd8b030dc12f4711cbde2718a99
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,15 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA’yı Yükleme - 3. Adım
-<a id="install-ata---step-3" class="xliff"></a>
+# <a name="install-ata---step-3"></a>ATA’yı Yükleme - 3. Adım
 
 >[!div class="step-by-step"]
 [« 2. Adım](install-ata-step2.md)
 [4. Adım »](install-ata-step4.md)
 
-## Adım 3. ATA Gateway kurulum paketini indirme
-<a id="step-3-download-the-ata-gateway-setup-package" class="xliff"></a>
+## <a name="step-3-download-the-ata-gateway-setup-package"></a>Adım 3. ATA Gateway kurulum paketini indirme
 Etki alanı bağlantı ayarlarını yapılandırdıktan sonra, ATA Gateway kurulum paketini indirebilirsiniz. ATA Gateway ayrılmış bir sunucuya veya bir etki alanı denetleyicisine yüklenebilir. Bir etki alanı denetleyicisine yüklerseniz, bir ATA Lightweight Gateway olarak yüklenir. ATA Lightweight Gateway hakkında daha fazla bilgi için bkz. [ATA Mimarisi](ata-architecture.md). 
 
 Ağ Geçitleri sayfasına gitmek için sayfanın yukarısındaki adımlar listesinde bulunan Ağ Geçidi Kurulumunu İndir’e tıklayın.
@@ -57,8 +55,7 @@ Zip dosyası şunları içerir:
 [« 2. Adım](install-ata-step2.md)
 [4. Adım »](install-ata-step4.md)
 
-## Ayrıca bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

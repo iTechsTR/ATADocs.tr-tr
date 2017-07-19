@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 16afa7e8b7755b0f9294425aac96fe134ff03691
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,15 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Bağlantı Noktası Yansıtmayı Doğrulama
-<a id="validate-port-mirroring" class="xliff"></a>
+# <a name="validate-port-mirroring"></a>Bağlantı Noktası Yansıtmayı Doğrulama
 > [!NOTE] 
 > Bu makale yalnızca ATA Lightweight Gateway bileşenleri yerine ATA Gateway bileşenleri dağıttığınızda geçerlidir. ATA Gateway’ler kullanmanız gerekip gerekmediğini belirlemek için bkz. [Dağıtımınız için doğru ağ geçitlerini seçme](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
  
 Aşağıdaki adımlar, bağlantı noktası yansıtmanın düzgün yapılandırıldığını doğrulama işleminde size yol gösterir. ATA’nın düzgün çalışması için, ATA Gateway’in etki alanı denetleyicisinden gelen ve giden trafiği görebilmesi gerekir. ATA tarafından kullanılan ana veri kaynağı, etki alanı denetleyicilerinizden gelen ve giden ağ trafiğinin derin paket incelemesidir. ATA’nın ağ trafiğini görebilmesi için, bağlantı noktası yansıtma yapılandırılmalıdır. Bağlantı noktası yansıtma, bir bağlantı noktasındaki trafiği (kaynak bağlantı noktası) başka bir bağlantı noktasına (hedef bağlantı noktası) kopyalar.
 
-## Windows PowerShell betiği kullanarak bağlantı noktası yansıtmayı doğrulama
-<a id="validate-port-mirroring-using-a-windows-powershell-script" class="xliff"></a>
+## <a name="validate-port-mirroring-using-a-windows-powershell-script"></a>Windows PowerShell betiği kullanarak bağlantı noktası yansıtmayı doğrulama
 
 1. Bu betiğin metnini *ATAdiag.ps1* adlı bir dosyaya kaydedin.
 2. Doğrulamak istediğiniz ATA Gateway’de bu komut dosyasını çalıştırın.
@@ -193,8 +191,7 @@ Betiğin çalıştırılmasına örnek:
     [void][System.Console]::ReadKey($true)
     
     
-## Net Mon kullanarak bağlantı noktası yansıtmayı doğrulama
-<a id="validate-port-mirroring-using-net-mon" class="xliff"></a>
+## <a name="validate-port-mirroring-using-net-mon"></a>Net Mon kullanarak bağlantı noktası yansıtmayı doğrulama
 1.  Doğrulamak istediğiniz ATA Gateway’de [Microsoft Ağ İzleyicisi 3.4](http://www.microsoft.com/download/details.aspx?id=4865)’ü yükleyin.
 
     > [!IMPORTANT]
@@ -224,8 +221,7 @@ Betiğin çalıştırılmasına örnek:
 
 5.  Yalnızca bir yöndeki trafiği görüyorsanız, bağlantı noktası yansıtma yapılandırmanızdaki sorunları gidermeye yardımcı olmaları için ağ veya sanallaştırma ekiplerinizle birlikte çalışın.
 
-## Ayrıca bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

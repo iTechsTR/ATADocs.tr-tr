@@ -14,14 +14,13 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: f1092e1cf6c991785dbf8bad3b197b68a21c0833
 ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/03/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
-# Microsoft Advanced Threat Analytics (ATA) sürümleri için destek
-<a id="support-for-microsoft-advanced-threat-analytics-ata-versions" class="xliff"></a>
+# <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Microsoft Advanced Threat Analytics (ATA) sürümleri için destek
 
 Microsoft, yılda birkaç kez ATA güncelleştirmeleri yayınlamayı planlamaktadır ve her güncelleştirme sürümü, genel kullanılabilirlik (GA) çıkış tarihinden itibaren 12 ay süreyle desteklenecektir. Bu 12 ay boyunca teknik destek sağlanacaktır. Bununla birlikte, şimdi dinamik bir yapıya sahip olan desteğimiz en son sürümün kullanıma sunulmasına bağlı olarak iki ayrı hizmet aşamasından geçer.
 
@@ -34,8 +33,7 @@ Microsoft, yılda birkaç kez ATA güncelleştirmeleri yayınlamayı planlamakta
 > [!Note]
 > En son ATA sürümü her zaman Güvenlik Güncelleştirmeleri ve Kritik Güncelleştirmeler hizmet aşamasındadır. Bu da, kritik güncelleştirme gerektiren bir kod hatasıyla karşılaştığınızda düzeltme alabilmek için en son güncel dal sürümünü yüklemiş olmanız gerektiği anlamına gelir. Desteklenen diğer tüm sürümler yalnızca güvenlik güncelleştirmelerini almaya uygun olacaktır. Bir sürüm için 12 aylık döngü sona erdiğinde destek de sona erer. Bu tarihte müşterilerin desteklenen bir sürüme güncelleştirmesi gerekir.
 
-## Sürüm Geçmişi
-<a id="version-history" class="xliff"></a>
+## <a name="version-history"></a>Sürüm Geçmişi
 
 |SÜRÜM|DERLEME NUMARASI|KULLANIMA SUNULDUĞU TARİH| DESTEK BİTİŞ TARİHİ|
 |----|----|----|----|
@@ -51,6 +49,5 @@ Microsoft, yılda birkaç kez ATA güncelleştirmeleri yayınlamayı planlamakta
 
 
 
-## Ayrıca Bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca Bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

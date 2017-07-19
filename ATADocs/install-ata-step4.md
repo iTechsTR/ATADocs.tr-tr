@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 2713f6939c8756d0ecb438e866e6649f13d3c490
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,15 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA’yı Yükleme - 4. Adım
-<a id="install-ata---step-4" class="xliff"></a>
+# <a name="install-ata---step-4"></a>ATA’yı Yükleme - 4. Adım
 
 >[!div class="step-by-step"]
 [« 3. Adım](install-ata-step3.md)
 [5. Adım »](install-ata-step5.md)
 
-## Adım 4. ATA Gateway’i yükleme
-<a id="step-4-install-the-ata-gateway" class="xliff"></a>
+## <a name="step-4-install-the-ata-gateway"></a>Adım 4. ATA Gateway’i yükleme
 
 Ayrılmış bir sunucuya ATA Gateway’i yüklemeden önce, bağlantı noktası yansıtmanın düzgün yapılandırıldığını ve ATA Gateway’i etki alanı denetleyicilerinden gelen ve giden trafiği görebildiğini doğrulayın. Daha fazla bilgi için bkz. [Bağlantı noktası yansıtmayı doğrulama](validate-port-mirroring.md).
 
@@ -90,8 +88,7 @@ ATA Gateway sunucusunda aşağıdaki adımları gerçekleştirin.
 [« 3. Adım](install-ata-step3.md)
 [5. Adım »](install-ata-step5.md)
 
-## Ayrıca bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

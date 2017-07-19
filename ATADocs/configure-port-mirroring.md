@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 234c759db2b766b2a4ad9b26ae31a8f6825d957f
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Bağlantı Noktası Yansıtmayı Yapılandırma
-<a id="configure-port-mirroring" class="xliff"></a>
+# <a name="configure-port-mirroring"></a>Bağlantı Noktası Yansıtmayı Yapılandırma
 > [!NOTE] 
 > Bu makale yalnızca ATA Lightweight Gateway bileşenleri yerine ATA Gateway bileşenleri dağıttığınızda geçerlidir. ATA Gateway’ler kullanmanız gerekip gerekmediğini belirlemek için bkz. [Dağıtımınız için doğru ağ geçitlerini seçme](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
  
@@ -45,8 +44,7 @@ Etki alanı denetleyicileriniz ve ATA Gateway sunucularınız fiziksel veya sana
 > Bağlantı noktası yansıtılan etki alanı denetleyicisi bir WAN bağlantısı üzerinden bağlanıyorsa, WAN bağlantısının ERSPAN trafiğinden gelen ek yükü işleyebileceğinden emin olun.
 > ATA yalnızca, trafik NIC’ye ve etki alanı denetleyicisine aynı şekilde ulaştığında trafik izlemeyi destekler. Trafik farklı bağlantı noktalarına bölündüğünde ATA trafik izlemeyi desteklemez.
 
-## Desteklenen bağlantı noktası yansıtma seçenekleri
-<a id="supported-port-mirroring-options" class="xliff"></a>
+## <a name="supported-port-mirroring-options"></a>Desteklenen bağlantı noktası yansıtma seçenekleri
 
 |ATA Gateway|Etki Alanı Denetleyicisi|Dikkat Edilecekler|
 |---------------|---------------------|------------------|
@@ -71,7 +69,6 @@ Etki alanı denetleyicileriniz ve ATA Gateway sunucularınız fiziksel veya sana
 
 Bağlantı noktası yansıtma yapılandırıldıktan sonra, ATA Gateway’i yüklemeden önce bağlantı noktası yansıtmanın çalışır durumda olduğunu doğrulayın.
 
-## Ayrıca bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz.
 - [Bağlantı noktası yansıtmayı doğrulama](validate-port-mirroring.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

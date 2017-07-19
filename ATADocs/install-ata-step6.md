@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: ffab11a99ae62c1c0b37c43ee212d87508f886b8
 ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/05/2017
 ---
@@ -23,16 +23,13 @@ ms.lasthandoff: 07/05/2017
 
 
 
-# ATA’yı Yükleme - 6. Adım
-<a id="install-ata---step-6" class="xliff"></a>
+# <a name="install-ata---step-6"></a>ATA’yı Yükleme - 6. Adım
 
 >[!div class="step-by-step"]
 [« 5. Adım](install-ata-step5.md)
 
-## 6. Adım. Olay toplama ve VPN’i yapılandırma
-<a id="step-6-configure-event-collection-and-vpn" class="xliff"></a>
-### Olay Koleksiyonunu Yapılandırma
-<a id="configure-event-collection" class="xliff"></a>
+## <a name="step-6-configure-event-collection-and-vpn"></a>6. Adım. Olay toplama ve VPN’i yapılandırma
+### <a name="configure-event-collection"></a>Olay Koleksiyonunu Yapılandırma
 Algılama yeteneklerini artırmak için ATA aşağıdaki Windows olaylarına ihtiyaç duymaktadır: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Bunlar, ATA Lightweight Gateway tarafından otomatik olarak okunabilir veya ATA Lightweight Gateway’in dağıtılmamış olduğu durumlarda şu iki yöntemden biriyle ATA Gateway’e iletilebilir: ATA Gateway’i SIEM olaylarını dinleyecek şekilde yapılandırarak ya da [Windows Olay İletme’yi yapılandırarak](#configuring-windows-event-forwarding).
 
 > [!NOTE]
@@ -40,8 +37,7 @@ Algılama yeteneklerini artırmak için ATA aşağıdaki Windows olaylarına iht
 
 Etki alanı denetleyicilerine gelen ve denetleyicilerden giden ağ trafiğini toplamaya ve çözümlemeye ek olarak ATA, Windows olaylarını kullanarak algılamaları geliştirebilir. NTLM için çeşitli algılama yöntemlerini geliştiren olay 4776’yı ve gizli grup değişikliklerini algılamayı geliştirmek için olay 4732, 4733, 4728, 4729, 4756 ve 4757’yi kullanır. Bu, SIEM sistemlerinizden alınabileceği gibi etki alanı denetleyicinizden Windows Olay İletme’yi ayarlayarak da alınabilir. Toplanan olaylar ATA’ya etki alanı denetleyicisi ağ trafiği yoluyla sağlanmayan ek bilgiler sağlar.
 
-#### SIEM/Syslog
-<a id="siemsyslog" class="xliff"></a>
+#### <a name="siemsyslog"></a>SIEM/Syslog
 ATA’nın Syslog sunucusundan verileri kullanabilmesi için, aşağıdakileri yapmalısınız:
 
 -   ATA Gateway sunucularınızı SIEM/Syslog sunucusundan iletilen olayları dinleyecek ve kabul edecek şekilde yapılandırın.
@@ -58,8 +54,7 @@ Belirli olayları başka bir sunucuya iletme işlemini yapılandırma hakkında 
 > [!NOTE]
 >SIEM/Syslog sunucusunu kullanmazsanız, Windows etki alanı denetleyicilerinizi Windows Olay Kimliği 4776’yı ATA tarafından toplanması ve çözümlenmesi için iletecek şekilde yapılandırabilirsiniz. Windows Olay Kimliği 4776, NTLM kimlik doğrulamalarıyla ilgili verileri sağlar.
 
-#### ATA Gateway’i SIEM olaylarını dinleyecek şekilde yapılandırma
-<a id="configuring-the-ata-gateway-to-listen-for-siem-events" class="xliff"></a>
+#### <a name="configuring-the-ata-gateway-to-listen-for-siem-events"></a>ATA Gateway’i SIEM olaylarını dinleyecek şekilde yapılandırma
 
 1.  ATA Yapılandırması’nda **Veri kaynakları** altında **SIEM**’e tıklayın, **Syslog**’u açın ve **Kaydet**’i seçin.
 
@@ -69,8 +64,7 @@ Belirli olayları başka bir sunucuya iletme işlemini yapılandırma hakkında 
 
 ATA, aşağıdaki biçimlerde olan SIEM olaylarını destekler:  
 
-#### RSA Güvenlik Analizi
-<a id="rsa-security-analytics" class="xliff"></a>
+#### <a name="rsa-security-analytics"></a>RSA Güvenlik Analizi
 &lt;Syslog Üst Bilgisi&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
 
 -   Syslog üst bilgisi isteğe bağlıdır.
@@ -99,8 +93,7 @@ ATA, aşağıdaki biçimlerde olan SIEM olaylarını destekler:
 
 -   Bu değerlerin sırası önemlidir ve iletiye başka hiçbir şey eklenmemelidir.
 
-#### HP Arcsight
-<a id="hp-arcsight" class="xliff"></a>
+#### <a name="hp-arcsight"></a>HP Arcsight
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Etki alanı denetleyicisi bir hesabın kimlik bilgilerini doğrulamaya çalıştı.|Düşük| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
 
 -   Protokol tanımıyla uyumlu olmalıdır.
@@ -131,8 +124,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Etki
 
     -   “Reason or Error Code” = NTLM sonuç kodu
 
-#### Splunk
-<a id="splunk" class="xliff"></a>
+#### <a name="splunk"></a>Splunk
 &lt;Syslog Üst Bilgisi&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
 
 Bilgisayar bir hesabın kimlik bilgilerini doğrulamaya çalıştı.
@@ -169,8 +161,7 @@ Hata Kodu:         0x0
 
 -   Anahtar=değer çiftleri için sıra önemli değildir.
 
-#### QRadar
-<a id="qradar" class="xliff"></a>
+#### <a name="qradar"></a>QRadar
 QRadar bir aracı üzerinden olay toplamayı sağlar. Veriler bir aracı kullanarak toplanıyorsa, saat biçimi mili saniye verisi olmadan toplanır. ATA mili saniye verisine ihtiyaç duyduğundan, QRadar’ın aracısız Windows olay toplamayı kullanacak şekilde ayarlanması gerekir. Daha fazla bilgi için bkz. [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: MSRPC Protokolünü kullanarak Aracısız Windows Olayları Koleksiyonu").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
@@ -193,8 +184,7 @@ key=value çiftleri arasında \t bulunduğundan emin olun.
 > Windows olay koleksiyonu için WinCollect kullanımı desteklenmez.
 
 
-### VPN’i yapılandırma
-<a id="configuring-vpn" class="xliff"></a>
+### <a name="configuring-vpn"></a>VPN’i yapılandırma
 
 ATA, bilgisayarların ağa bağlandıkları konumların profilini çıkarmaya yardımcı olacak VPN verilerini toplar.
 
@@ -216,8 +206,7 @@ Paylaşılan gizli diziyi almak için VPN Belgelerinize göz atın. Desteklenen 
 [7. Adım»](install-ata-step7.md)
 
 
-## Ayrıca Bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca Bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

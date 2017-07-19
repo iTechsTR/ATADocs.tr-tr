@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: aa5e752fa10644165cb70d2cd8c08a1145261edb
 ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/03/2017
 ---
@@ -23,15 +23,13 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# ATA’yı Yükleme - 2. Adım
-<a id="install-ata---step-2" class="xliff"></a>
+# <a name="install-ata---step-2"></a>ATA’yı Yükleme - 2. Adım
 
 >[!div class="step-by-step"]
 [« 1. Adım](install-ata-step1.md)
 [3. Adım »](install-ata-step3.md)
 
-## 2. Adım Active Directory Ormanınıza bağlanmak için bir Kullanıcı Adı ve Parola sağlayın
-<a id="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest" class="xliff"></a>
+## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>2. Adım Active Directory Ormanınıza bağlanmak için bir Kullanıcı Adı ve Parola sağlayın
 
 ATA Konsolunu ilk açtığınızda aşağıdaki ekran görünür:
 
@@ -57,8 +55,7 @@ ATA Konsolunu ilk açtığınızda aşağıdaki ekran görünür:
 [3. Adım »](install-ata-step3.md)
 
 
-## Ayrıca bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
