@@ -15,26 +15,23 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 842e9866c5fdb447f49600501c4486da6db902f2
 ms.sourcegitcommit: 4118dd4bd98994ec8a7ea170b09aa301a4be2c8a
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/05/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
-# Sahte yetkilendirme verileri kullanan Ayrıcalık yükseltme saldırılarını araştırma
-<a id="investigating-privilege-escalation-using-forged-authorization-data-attacks" class="xliff"></a>
+# <a name="investigating-privilege-escalation-using-forged-authorization-data-attacks"></a>Sahte yetkilendirme verileri kullanan Ayrıcalık yükseltme saldırılarını araştırma
 
 Microsoft, güvenlik algılama becerilerini ve güvenlik analistlerine neredeyse gerçek zamanlı, eyleme dönüştürülebilir bilgiler sağlama özelliğini sürekli geliştirir. Microsoft Advanced Threat Analytics (ATA), bu değişikliği sağlamaya yardımcı olur. ATA, ağınızda sahte yetkilendirme verileri kullanan Ayrıcalık yükseltme saldırısı şüphesi taşıyan bir etkinlik algılar ve bu konuda sizi uyarırsa bu makale, söz konusu etkinliği anlamanıza ve araştırmanıza yardımcı olur.
 
-## Ayrıcalıklı Öznitelik Sertifikası (PAC) nedir?
-<a id="what-is-a-privileged-attribute-certificate-pac" class="xliff"></a>
+## <a name="what-is-a-privileged-attribute-certificate-pac"></a>Ayrıcalıklı Öznitelik Sertifikası (PAC) nedir?
 
 Ayrıcalık Öznitelik Sertifikası (PAC); grup üyelikleri, güvenlik tanımlayıcıları ve kullanıcı profili bilgileri gibi yetkilendirme bilgilerini içeren Kerberos Anahtarındaki Veri Yapısıdır. Bu, bir Active Directory etki alanında Etki Alanı Denetleyicisi (DC) tarafından sağlanan yetkilendirme verilerinin diğer üye sunuculara ve iş istasyonlarına kimlik doğrulama ve yetkilendirme amacıyla geçirilmesini sağlar. Üyelik bilgilerine ek olarak PAC, ek kimlik bilgilerini, profil ve ilke bilgilerini ve destekleyici güvenlik meta verilerini içerir. 
 
 PAC Veri Yapısı, kaynaklara erişimi denetleyen yetkilendirme bilgilerini taşımak için kimlik doğrulama protokolleri (kimlikleri doğrulayan protokoller) tarafından kullanılır.
 
-### PAC doğrulama
-<a id="pac-validation" class="xliff"></a>
+### <a name="pac-validation"></a>PAC doğrulama
 
 PAC doğrulama, özellikle kullanıcının kimliğine bürünülen uygulamalarda, bir saldırganın bir sistem veya kaynaklarına ortadaki adam saldırısıyla yetkisiz erişim elde etmesini önlemeye yönelik bir güvenlik özelliğidir. Kimliğe bürünme, kaynaklara erişmek ve görevleri yürütmek için yükseltilmiş ayrıcalıklar verilen bir hizmet hesabı gibi güvenilen bir kimlik içerir. PAC doğrulama, kimliğe bürünme etkinliğinin gerçekleştiği Kerberos kimlik doğrulaması ayarlarında daha güvenli bir yetkilendirme ortamı sağlar. [PAC doğrulama](https://blogs.msdn.microsoft.com/openspecification/2009/04/24/understanding-microsoft-kerberos-pac-validation/), bir kullanıcının yetkilendirme verilerini Kerberos anahtarında verildiği gibi eksiksiz olarak sunmasını ve anahtar ayrıcalıklarının değiştirilmemesini sağlar.
 
@@ -44,12 +41,10 @@ Kerberos PAC içeriği iki kez imzalanır:
 - Kötü amaçlı sunucu tarafı hizmetlerin yetkilendirme verilerini değiştirmesini engellemek için ilk imzalama işlemi KDC’nin ana anahtarı ile yapılır
 - İkinci imzalama işlemi ise bir kullanıcının PAC içeriğinde değişiklik yapmasını ve kendi yetkilendirme verilerini eklemesini engellemek için hedef kaynak sunucunun ana anahtarı ile yapılır
 
-### PAC güvenlik açığı
-<a id="pac-vulnerability" class="xliff"></a>
+### <a name="pac-vulnerability"></a>PAC güvenlik açığı
 Bir saldırganın geçerli bir Kerberos Anahtarındaki PAC alanında değişiklik yaparak kendisine ek ayrıcalıklar sağlamasını mümkün kılabilecek Kerberos KDC güvenlik açıkları, [MS14 068](https://technet.microsoft.com/library/security/MS14-068.aspx) ve [MS11-013](https://technet.microsoft.com/library/security/ms11-013.aspx) güvenlik bültenlerinde ele alınmıştır.
 
-## Sahte yetkilendirme verileri kullanan Ayrıcalık yükseltme saldırısı
-<a id="privilege-escalation-using-forged-authorization-data-attack" class="xliff"></a>
+## <a name="privilege-escalation-using-forged-authorization-data-attack"></a>Sahte yetkilendirme verileri kullanan Ayrıcalık yükseltme saldırısı
 
 Sahte yetkilendirme verileri kullanan Ayrıcalık yükseltme saldırısı, bir saldırganın PAC güvenlik açıklarından faydalanarak Active Directory Ormanınızda veya Etki Alanınızda kendi ayrıcalıklarını yükseltme denemesidir. Bu saldırıyı gerçekleştirmek için bir saldırganın şunlara sahip olması gerekir:
 -   Bir etki alanı kullanıcısının kimlik bilgileri.
@@ -58,16 +53,14 @@ Sahte yetkilendirme verileri kullanan Ayrıcalık yükseltme saldırısı, bir s
 
 Saldırgan gerekli kimlik bilgilerine ve bağlantıya sahipse mevcut bir Kerberos kullanıcı oturum açma belirtecinin (TGT) Ayrıcalıklı Öznitelik Sertifikası (PAC) üzerinde değişiklik yapabilir veya sahte bir sertifika oluşturabilir. Saldırgan, grup üyeliği talebini daha yüksek ayrıcalıklı bir grup (örneğin "Etki Alanı Yöneticileri" veya "Kuruluş Yöneticileri" gibi) içerecek şekilde değiştirir. Daha sonra saldırgan, Kerberos Anahtarı içindeki değiştirilmiş PAC’yi ekler. Ardından bu Kerberos Anahtarı, yama uygulanmamış bir Etki Alanı Denetleyicisinden (DC) Hizmet anahtarı talep etmek için kullanılır ve saldırgana etki alanında yükseltilmiş ayrıcalıklar ve gerçekleştirmemeleri gereken eylemlere yetki sağlar. Bir saldırgan kaynak erişim belirteçleri (TGS) talep ederek etki alanındaki herhangi bir kaynağa erişim elde etmek için değiştirilmiş kullanıcı oturum açma belirteci (TGT) sunabilir. Bu, bir saldırganın Active Directory'deki herhangi bir kullanıcı için yetki verisini (PAC) taklit ederek ağ üzerindeki erişimi sınırlayan tüm yapılandırılmış kaynak ACL'lerini atlayabileceği anlamına gelir.
 
-## Saldırıyı bulma
-<a id="discovering-the-attack" class="xliff"></a>
+## <a name="discovering-the-attack"></a>Saldırıyı bulma
 Saldırgan, kendi ayrıcalıklarını yükseltmeyi denediğinde, ATA bunu algılar ve yüksek öneme sahip bir uyarı olarak işaretler.
 
 ![Sahte PAC şüpheli etkinliği](./media/forged-pac.png)
 
 ATA, sahte yetkilendirme verileri kullanan Ayrıcalık yükseltme saldırısı başarılı olsa da olmasa da şüpheli etkinlik uyarısını gösterir. Başarısız saldırılar saldırganın ortamınızda bulunduğunu gösterdiğinden, hem başarılı hem de başarısız uyarıların araştırılması gerekir.
 
-## Araştırma
-<a id="investigating" class="xliff"></a>
+## <a name="investigating"></a>Araştırma
 ATA’da sahte yetkilendirme verileri kullanan Ayrıcalık yükseltme saldırısı uyarısını aldıktan sonra, saldırının etkilerini hafifletmek için yapılması gerekenleri belirlemeniz gerekir. Bunu yapmak için önce uyarıyı aşağıdakilerden biri olarak sınıflandırmanız gerekir: 
 -   Gerçek pozitif sonuç: ATA tarafından algılanan kötü amaçlı bir eylem
 -   Hatalı pozitif sonuç: Yanlış bir uyarıdır – sahte yetkilendirme verileri kullanan Ayrıcalık yükseltme saldırısı aslında gerçekleşmemiştir (bu, ATA’nın sahte yetkilendirme verileri kullanan Ayrıcalık yükseltme saldırısı zannettiği bir olaydır)
@@ -96,18 +89,15 @@ Aşağıdaki grafik, uygulamanız gereken adımların belirlenmesine yardımcı 
         -   Listelenen hizmet kendi yetkilendirme hizmetine sahip değilse, bu gerçek pozitiftir ve kuruluşunuzun Olay Yanıt (IR) işlemini çalıştırmanız gerekir. Saldırgan etki alanındaki ayrıcalıklarını yükseltmekte başarılı olamadıysa bile, ağınızda bir saldırgan olduğunu varsayabilirsiniz ve ayrıcalıklarını yükseltmek için başka bilinen gelişmiş kalıcı saldırılar denemeden önce onları mümkün olan en kısa sürede bulmanız gerekir. 
         -   Uyarıda listelenen hizmetin yetkilendirme verileri isteyen kendi yetkilendirme mekanizması varsa hatalı bir şekilde sahte yetkilendirme verileri kullanan Ayrıcalık yükseltme saldırısı olarak tanımlanmış olabilir.
 
-## Araştırma sonrası
-<a id="post-investigation" class="xliff"></a>
+## <a name="post-investigation"></a>Araştırma sonrası
 Microsoft, bir saldırganın ağınızda dağıtılmış kalıcı yöntemleri olup olmadığını belirlemek için Microsoft Hesabı Ekibiniz aracılığıyla erişilebilen, profesyonel bir Olay Yanıt ve Kurtarma ekibi kullanmanızı önerir.
 
 
-## Risk azaltma
-<a id="mitigation" class="xliff"></a>
+## <a name="mitigation"></a>Risk azaltma
 
 Kerberos KDC’deki güvenlik açıklarıyla ilgilenen [MS14-068](https://technet.microsoft.com/library/security/MS14-068.aspx) ve [MS11-013](https://technet.microsoft.com/library/security/ms11-013.aspx) güvenlik bültenlerini uygulayın. 
 
 
-## Ayrıca bkz:
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz:
 - [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

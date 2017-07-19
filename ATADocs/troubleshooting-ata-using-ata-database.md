@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 112ee57f79b20b4e42b15c6fdc4566bbdcebe29f
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,13 +23,11 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA veritabanını kullanarak ATA sorunlarını giderme
-<a id="troubleshooting-ata-using-the-ata-database" class="xliff"></a>
+# <a name="troubleshooting-ata-using-the-ata-database"></a>ATA veritabanını kullanarak ATA sorunlarını giderme
 ATA veritabanı olarak MongoDB’yi kullanır.
 Varsayılan komut satırını kullanarak veya gelişmiş görevler ve sorun giderme işlemleri yapmak için bir kullanıcı arabirimini kullanarak veritabanıyla etkileşim kurabilirsiniz.
 
-## Veritabanıyla etkileşim kurma
-<a id="interacting-with-the-database" class="xliff"></a>
+## <a name="interacting-with-the-database"></a>Veritabanıyla etkileşim kurma
 Veritabanını sorgulamanın varsayılan ve en temel yolu Mongo kabuğunu kullanmaktır:
 
 1.  Komut satırı penceresi açın ve yolu MongoDB bin klasörüyle değiştirin. Varsayılan yol: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**
@@ -51,8 +49,7 @@ Aşağıdaki örnek, yukarıda sağlanan söz diziminin kullanıldığı örnek 
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 
-## Ayrıca bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz.
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

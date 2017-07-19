@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 1e9fa2d104c52087746e7c03fea27e3cb596adf0
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,14 +23,12 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA Center yapılandırmasını değiştirme
-<a id="modifying-the-ata-center-configuration" class="xliff"></a>
+# <a name="modifying-the-ata-center-configuration"></a>ATA Center yapılandırmasını değiştirme
 
 
 İlk dağıtımdan sonra, ATA Center’da değişiklik yaparken dikkatli olmak gerekir. IP adresi, bağlantı noktası, konsol URL’si ve sertifikasını güncelleştirirken aşağıdaki yordamları kullanın.
 
-## ATA Center IP adresi
-<a id="the-ata-center-ip-address" class="xliff"></a>
+## <a name="the-ata-center-ip-address"></a>ATA Center IP adresi
 
 ATA Gateway bileşenleri bağlanmaları gereken ATA Center’ın IP adresini yerel olarak depolar. Düzenli aralıklarla ATA Center’a bağlanır ve yapılandırma değişikliklerini alırlar. ATA Gateway bileşenlerinin ATA Center’a bağlanma şeklinde yapılacak değişiklikler iki aşamada yapılır.
 
@@ -43,8 +41,7 @@ ATA Gateway bileşenleri bağlanmaları gereken ATA Center’ın IP adresini yer
 > -   Yeni IP adresi ATA Center sunucusuna yüklendiyse, değişikliği yaparken bu adresi IP adresleri listesinden seçebilirsiniz. Öte yandan, herhangi bir nedenle IP adresini ATA Center sunucusuna yükleyemediyseniz, özel IP adresini seçebilir ve bu adresi el ile ekleyebilirsiniz. Yeni IP adresini etkinleştirebilmeniz için bu IP adresinin sunucuya yüklenmesi gerekir.
 > -   Yeni IP adresini etkinleştirdikten sonra yeni bir ATA Gateway dağıtımı yapmanız gerekirse, ATA Gateway Kurulum paketini yeniden indirmelisiniz.
 
-## Konsol URL’si
-<a id="the-console-url" class="xliff"></a>
+## <a name="the-console-url"></a>Konsol URL’si
 
 URL aşağıdaki senaryolarda kullanılır:
 
@@ -59,8 +56,7 @@ URL aşağıdaki senaryolarda kullanılır:
 > [!NOTE]
 > ATA Konsolu URL’sini değiştirdikten sonra, yeni ATA Gateway bileşenlerini yüklemeden ATA Gateway Kurulum paketini indirmelisiniz.
 
-## ATA Center Sertifikası
-<a id="the-ata-center-certificate" class="xliff"></a>
+## <a name="the-ata-center-certificate"></a>ATA Center Sertifikası
 Sertifikalarınızın süresi sona ermek üzereyse ve ATA Center sunucusundaki yerel bilgisayar deposuna yeni sertifika yüklendikten sonra yenilenmesi veya değiştirilmesi gerekiyorsa, şu iki aşamalı işlemi yaparak sertifikayı değiştirin:
 
 -   Birinci aşama – ATA Center hizmetinin kullanmasını istediğiniz sertifikayı güncelleştirin. Bu noktada, ATA Center hizmeti hala özgün sertifikaya bağlıdır. ATA Gateway bileşenleri yapılandırmalarını eşitlediğinde, karşılıklı kimlik doğrulaması için geçerli olan iki olası sertifikaları olur. ATA Gateway özgün sertifikayı kullanarak bağlanabildiği sürece, yeni sertifikayı denemez.
@@ -73,8 +69,7 @@ Sertifikalarınızın süresi sona ermek üzereyse ve ATA Center sunucusundaki y
 > -   Sertifika ATA Konsolu için de kullanıldığından, tarayıcı uyarılarını önlemek için ATA Konsolu adresiyle de eşleşmesi gerekir
 > -   Yeni sertifikayı etkinleştirdikten sonra yeni bir ATA Gateway dağıtımı yapmanız gerekirse, ATA Gateway Kurulum paketini yeniden indirmelisiniz.
 
-## ATA Center yapılandırmasını değiştirme
-<a id="changing-the-ata-center-configuration" class="xliff"></a>
+## <a name="changing-the-ata-center-configuration"></a>ATA Center yapılandırmasını değiştirme
 
 1.  ATA Konsolu’nu açın.
 
@@ -106,7 +101,6 @@ Sertifikalarınızın süresi sona ermek üzereyse ve ATA Center sunucusundaki y
 
 
 
-## Ayrıca bkz:
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz:
 - [ATA Konsolu ile çalışma](working-with-ata-console.md)
 - [ATA forumuna bakın!](https://aka.ms/ata-forum)

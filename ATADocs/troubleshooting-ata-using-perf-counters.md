@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: ae72f7a25f0c57dadd02049fe3a570a0da7b84fd
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Performans sayaçlarını kullanarak ATA sorunlarını giderme
-<a id="troubleshooting-ata-using-the-performance-counters" class="xliff"></a>
+# <a name="troubleshooting-ata-using-the-performance-counters"></a>Performans sayaçlarını kullanarak ATA sorunlarını giderme
 ATA performans sayaçları, ATA’nın her bileşeninin ne kadar iyi çalıştığı konusunda fikir sağlar. ATA’daki bileşenler verileri sıralı olarak işlediğinden, bir sorun çıktığında, bileşen zincirinin herhangi bir yerinde trafiğin kısmi olarak bırakılmasına neden olabilir. Sorunu çözmek için, hangi bileşende istenmeyen sonuç alındığını saptamanız ve sorunu zincirin başında çözmeniz gerekir. Her bileşenin nasıl çalıştığını anlamak için, performans sayaçlarında bulunan verileri kullanın.
 İç ATA bileşenlerinin akışını anlamak için [ATA mimarisi](ata-architecture.md) konusuna bakın.
 
@@ -37,8 +36,7 @@ ATA performans sayaçları, ATA’nın her bileşeninin ne kadar iyi çalıştı
 3.  Bu durum geriye doğru NetworkListener bileşenine kadar devam eder ve o bileşen de artık varlıkları iletemediğinde trafiği bırakır.
 
 
-## Sorun giderme için performans izleyicisi dosyalarını alma
-<a id="retrieving-performance-monitor-files-for-troubleshooting" class="xliff"></a>
+## <a name="retrieving-performance-monitor-files-for-troubleshooting"></a>Sorun giderme için performans izleyicisi dosyalarını alma
 
 Çeşitli ATA bileşenlerinden performans izleyicisi dosyalarını (BLG) almak için:
 1.  Perfmon aracını açın.
@@ -48,8 +46,7 @@ ATA performans sayaçları, ATA’nın her bileşeninin ne kadar iyi çalıştı
 5.  Şu ada sahip veri toplayıcı grubunu yeniden başlatın: "Microsoft ATA Gateway " veya “Microsoft ATA Center”.
 
 
-## ATA Gateway performans sayaçları
-<a id="ata-gateway-performance-counters" class="xliff"></a>
+## <a name="ata-gateway-performance-counters"></a>ATA Gateway performans sayaçları
 
 Bu bölümde, ATA Gateway’e yapılan her gönderme aynı zamanda ATA Lightweight Gateway’e de yapılmıştır.
 
@@ -72,8 +69,7 @@ Dikkat edilmesi gereken ana ATA Gateway sayaçlarının listesi:
 > -   Süre gösteren sayaçlar milisaniye cinsindendir.
 > -   Bazen "Rapor" grafik türü kullanılarak sayaçların tam listesi daha rahat izlenebilir (örnek: tüm sayaçları gerçek zamanlı izleme)
 
-## ATA Lightweight Gateway performans sayaçları
-<a id="ata-lightweight-gateway-performance-counters" class="xliff"></a>
+## <a name="ata-lightweight-gateway-performance-counters"></a>ATA Lightweight Gateway performans sayaçları
 Performans sayaçları, ATA’nın yüklü olduğu etki alanı denetleyicilerinde çok fazla kaynak çekmediğinden emin olmak için Lightweight Gateway’de kota yönetimi için kullanılabilir.
 ATA’nın Lightweight Gateway’de uyguladığı kaynak sınırlamalarını ölçmek için şu sayaçları ekleyin.
 
@@ -98,8 +94,7 @@ Gerçek kullanımınızı görmek için aşağıdaki sayaçlara bakın:
 |İşlem(Microsoft.Tri.Gateway)\Özel Baytlar|Lightweight Gateway işleminin gerçekte kullandığı işlenen bellek miktarı (bayt cinsinden).|Eşik yok. | Bu sayacın sonuçlarını GatewayUpdaterResourceManager İşlenen En Yüksek Bellek Boyutu kısmında bulunan sınırla karşılaştırın. İşlemin belirli bir süre boyunca sık sık üst sınıra ulaştığını görüyorsanız (işlem sınıra ulaşır ve trafiği bırakmaya başlar) bu, Lightweight Gateway’e daha fazla kaynak ayırmanız gerektiği anlamına gelir.| 
 |İşlem(Microsoft.Tri.Gateway)\Çalışma Kümesi|Lightweight Gateway işleminin gerçekte kullandığı fiziksel bellek miktarı (bayt cinsinden).|Eşik yok. |Bu sayacın sonuçlarını GatewayUpdaterResourceManager Kaydedilen Maksimum Bellek Boyutu kısmında bulunan sınırla karşılaştırın. İşlemin belirli bir süre boyunca sık sık üst sınıra ulaştığını görüyorsanız (işlem sınıra ulaşır ve trafiği bırakmaya başlar) bu, Lightweight Gateway’e daha fazla kaynak ayırmanız gerektiği anlamına gelir.|
 
-## ATA Center performans sayaçları
-<a id="ata-center-performance-counters" class="xliff"></a>
+## <a name="ata-center-performance-counters"></a>ATA Center performans sayaçları
 ATA Center’ın performans sayaçlarını ekleyerek, ATA Center ile ilgili gerçek zamanlı performans durumunu gözlemleyebilirsiniz.
 
 Bu işlem, "Performans İzleyicisi" açılarak ve ATA Center için tüm sayaçlar eklenerek yapılır. Performans sayacı nesnesinin adı: "Microsoft ATA Center".
@@ -118,8 +113,7 @@ Dikkat edilmesi gereken ana ATA Center sayaçlarının listesi:
 > -   Süre gösteren sayaçlar milisaniye cinsindendir.
 > -   Bazen Rapor grafik türü kullanılarak sayaçların tam listesi daha rahat izlenebilir (örnek: tüm sayaçları gerçek zamanlı izleme)
 
-## İşletim sistemi sayaçları
-<a id="operating-system-counters" class="xliff"></a>
+## <a name="operating-system-counters"></a>İşletim sistemi sayaçları
 Aşağıda, dikkat edilmesi gereken ana işletim sistemi sayaçları listelenmiştir:
 
 |Sayaç|Açıklama|Eşik|Sorun giderme|
@@ -135,8 +129,7 @@ Aşağıda, dikkat edilmesi gereken ana işletim sistemi sayaçları listelenmi�
 |\LogicalDisk&#42;\Disk Yazma\sn|Diskte yazma işlemlerini gerçekleştirme hızı.|Eşik yok|Disk kullanım sayaçları (depolama gecikmesi sorunlarını giderirken fikir verebilir).|
 |\LogicalDisk(&#42;)\Disk Yazma Bayt\sn|Diske bir saniyede yazılan bayt sayısı.|Eşik yok|Disk kullanım sayaçları, depolama gecikmesi sorunlarını giderirken fikir verebilir.|
 
-## Ayrıca bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz.
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

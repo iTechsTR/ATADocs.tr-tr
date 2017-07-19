@@ -15,14 +15,13 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 630bb2b74dafcf9ab9b3469c2afbf8abc59c2dbf
 ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/03/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
-# ATA hangi tehditleri arar?
-<a id="what-threats-does-ata-look-for" class="xliff"></a>
+# <a name="what-threats-does-ata-look-for"></a>ATA hangi tehditleri arar?
 
 ATA gelişmiş bir tehdidin çeşitli aşamaları için algılama sağlar: keşif, kimlik bilgilerinin tehlikeye atılması, yanal hareket, ayrıcalık yükseltme, etki alanı hakimiyeti ve daha fazlası. Bu algılamaların amacı, gelişmiş saldırıları ve içeriden gelen tehditleri kuruluşunuza zarar vermeden önce algılamaktır.
 Her aşamadaki algılama, söz konusu aşamayla ilgili birkaç şüpheli etkinlikle sonuçlanır ve burada her şüpheli etkinlik farklı türde olası saldırılarla ilişkilidir.
@@ -31,8 +30,7 @@ ATA’nın, ölüm zincirinde şu anda algılayabildiği bu aşamalar aşağıda
 ![ATA, saldırı ölüm zincirindeki yanal etkinliklere odaklanır](media/attack-kill-chain-small.jpg)
 
 
-### Keşif
-<a id="reconnaissance" class="xliff"></a>
+### <a name="reconnaissance"></a>Keşif
 
 ATA birçok keşif algılaması sağlar. Bu algılamalar şunları içerir:
 
@@ -45,8 +43,7 @@ ATA birçok keşif algılaması sağlar. Bu algılamalar şunları içerir:
 -   **Dizin hizmetleri listelemesi kullanarak keşif**<br></br>Etki alanı denetleyicilerinde sorgu çalıştırmak için SAM uzak protokolü kullanılarak gerçekleştirilen varlık (kullanıcılar, gruplar vb.) keşfi işlemlerini algılama. Bu keşif yöntemi gerçek dünyadaki saldırı senaryolarında görülen birçok kötü amaçlı yazılım türünde yaygındır. 
 
 
-### Güvenliği tehlikede olan kimlik bilgileri
-<a id="compromised-credentials" class="xliff"></a>
+### <a name="compromised-credentials"></a>Güvenliği tehlikede olan kimlik bilgileri
 
 ATA, güvenliği tehlikede olan kimlik bilgilerinin algılanması için hem makine öğrenimi tabanlı davranış çözümlemesi özelliğinden hem de bilinen kötü amaçlı saldırıları ve teknikleri algılama özelliğinden yararlanır.
 ATA, davranış analizi ve makine öğrenimini kullanarak, kimlik bilgileri güvenliğinin tehlike altında olduğuna işaret eden anormal oturumlar, olağan dışı kaynak erişimi ve olağan dışı çalışma saatleri gibi şüpheli etkinlikleri algılayabilir. Tehlikeye atılmış kimlik bilgilerine karşı koruma sağlamak için, ATA aşağıdaki bilinen kötü amaçlı saldırıları ve teknikleri algılar:
@@ -67,8 +64,7 @@ ATA, davranış analizi ve makine öğrenimini kullanarak, kimlik bilgileri güv
 
 -   **Anormal Davranış**<br></br>Gelişmiş saldırıların yanı sıra iç tehdit durumlarında çoğu zaman, sosyal mühendislik yöntemleri veya yeni ve henüz bilinmeyen yöntem ve teknikler kullanılarak hesap kimlik bilgileri ele geçirilebilir. ATA varlığın davranışını analiz ederek ve varlık tarafından gerçekleştirilen işlemlerdeki anormallikleri algılayıp uyarı vererek bu tür tehditleri algılayabilir.
 
-### Yanal hareket
-<a id="lateral-movement" class="xliff"></a>
+### <a name="lateral-movement"></a>Yanal hareket
 
 Yanal hareket algılaması sağlamak için, kullanıcılar erişimleri olmaması gereken kaynaklara erişmek üzere, kaynaklara erişim sağlayan kimlik bilgilerinin avantajlarından yararlandığında, ATA bilinen kötü amaçlı saldırı ve teknikleri algılamanın yanı sıra makine eğitimi esaslı davranış analizini de kullanır.
 ATA, davranış analizini ve makine eğitimini kullanarak, anormal cihazlar kullanıldığında ve yanal hareketin kanıtı olan başka göstergelerle anormal kaynak erişimini algılar.
@@ -82,8 +78,7 @@ Buna ek olarak, ATA saldırganlar tarafından yanal hareket yapmak için kullan�
 
 -   **Anormal davranış**<br></br>Yanal hareket, genellikle saldırganlar tarafından, öncelikli kimlik bilgilerine veya ilgisini çeken hassas bilgilere erişim elde etmek amacıyla kurbanın ağındaki cihazlar ve alanlar arasında hareket etmek için kullanılan bir tekniktir. ATA, şirket ağı içinde kullanıcı ve cihazların davranışlarını ve ilişkilerini analiz ederek yanal hareketi algılayabilir ve bir saldırgan tarafından sergilenen bir yanal harekete işaret edebilen olağan dışı erişim kalıplarını algılayabilir.
 
-### Ayrıcalık yükseltme
-<a id="privilege-escalation" class="xliff"></a>
+### <a name="privilege-escalation"></a>Ayrıcalık yükseltme
 
 ATA başarıyla gerçekleştirilen veya girişimde bulunulan ayrıcalık yükseltme saldırılarını algılar; burada saldırganlar var olan ayrıcalıkları artırmaya ve bunları birkaç kez kullanıp sonunda kurbanın ortamı üzerinde tam denetim kazanmaya çalışır.
 ATA bilinen ve kötü amaçlı saldırıları ve aşağıdaki gibi, ayrıcalıkları yükseltmek için sık kullanılan teknikleri algılamanın yanı sıra, ayrıcalıklı hesapların olağan dışı davranışlarını algılamak üzere davranış analizini birleştirerek ayrıcalık yükseltme algılamasına olanak sağlar:
@@ -94,8 +89,7 @@ ATA bilinen ve kötü amaçlı saldırıları ve aşağıdaki gibi, ayrıcalıkl
 
 -   **Gizli gruplarda yapılan anormal değişiklikler**  <br></br>Ayrıcalık yükseltme işleminin bir parçası olarak saldırganlar, gizli kaynaklara erişebilmek adına yüksek ayrıcalıklara sahip gruplarda değişiklikler yapar. ATA artık yükseltilmiş bir grupta anormal bir değişiklik olduğunda bunu algılar.
 
-### Etki alanı hakimiyeti
-<a id="domain-dominance" class="xliff"></a>
+### <a name="domain-dominance"></a>Etki alanı hakimiyeti
 
 ATA aşağıdakiler gibi, saldırganlar tarafından bilinen teknikler sayesinde algılama gerçekleştirerek kurbanın ortamı üzerinde tam denetim veya egemenlik elde etmeye çalışan veya bunu başaran saldırganları algılar:
 
@@ -110,13 +104,11 @@ ATA aşağıdakiler gibi, saldırganlar tarafından bilinen teknikler sayesinde 
 -   **Kötü amaçlı çoğaltma istekleri** <br></br>Active Directory (AD) ortamlarında, Etki Alanı Denetleyicileri arasında düzenli olarak çoğaltma yapılır. Bir saldırgan (bazen bir Etki Alanı Denetleyicisinin kimliğe bürünerek), AD çoğaltma isteğini taklit edebilir ve bu da saldırganın Birim Gölge Kopyası gibi daha kullanışsız tekniklerden yararlanmadan, parola karmaları dahil olmak üzere AD’de depolanan verileri almasına izin verir.
 
 
-## Sırada ne var?
-<a id="whats-next" class="xliff"></a>
+## <a name="whats-next"></a>Sırada ne var?
 
 -   ATA’nın ağınıza nasıl uyum sağladığı hakkında daha fazla bilgi için: [ATA mimarisi](ata-architecture.md)
 
 -   ATA’nın dağıtımına başlamak için: [ATA’yı yükleme](install-ata-step1.md)
 
-## Ayrıca bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

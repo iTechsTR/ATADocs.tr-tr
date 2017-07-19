@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 1291281273188a21b61b29f06a5220eee589767c
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA Center hizmet başlatma sorunlarını giderme
-<a id="troubleshooting-ata-center-service-startup" class="xliff"></a>
+# <a name="troubleshooting-ata-center-service-startup"></a>ATA Center hizmet başlatma sorunlarını giderme
 
 ATA Center hizmetiniz başlamıyorsa aşağıdaki sorun giderme yordamını uygulayın:
 
@@ -37,8 +36,7 @@ Başlayabiliyorsa platformda büyük olasılıkla bir sorun yoktur, başlamıyor
 
 
 
-## Ayrıca Bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

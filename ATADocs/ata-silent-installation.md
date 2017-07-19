@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 5b46d53d4e72ebe32b6e1f57960694194b71b31c
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,11 +23,9 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA’yı Sessiz Yükleme
-<a id="ata-silent-installation" class="xliff"></a>
+# <a name="ata-silent-installation"></a>ATA’yı Sessiz Yükleme
 Bu makalede ATA’yı sessizce yüklemeye dair yönergeler mevcuttur.
-## Önkoşullar
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>Önkoşullar
 
 ATA sürüm 1.8 için Microsoft .NET Framework 4.6.1’in yüklü olması gerekir. 
 
@@ -40,8 +38,7 @@ ATA’yı sessiz yükleme yöntemini kullanırken, yükleyici yükleme sonunda s
 Dağıtımın ilerleme durumunu izlemek için, **%AppData%\Local\Temp** konumunda bulunan ATA yükleyici günlüklerine bakın.
 
 
-## ATA Center’ı yükleme
-<a id="install-the-ata-center" class="xliff"></a>
+## <a name="install-the-ata-center"></a>ATA Center’ı yükleme
 
 ATA Center’ı yüklemek için aşağıdaki komutu kullanın:
 
@@ -81,8 +78,7 @@ ATA Center’ı varsayılan yükleme yolları, iki IP adresi ve kullanıcı tan�
     "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F"
     ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint="G9530253C976BFA9342FD1A716C0EC94207BFD5A"
 
-## ATA Center’ı güncelleştirme
-<a id="update-the-ata-center" class="xliff"></a>
+## <a name="update-the-ata-center"></a>ATA Center’ı güncelleştirme
 
 ATA Center’ı güncelleştirmek için aşağıdaki komutu kullanın:
 
@@ -106,8 +102,7 @@ ATA’yı güncelleştirirken, yükleyici ATA’nın sunucuda zaten yüklü oldu
 
         "Microsoft ATA Center Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 
-## ATA Center’ı sessizce kaldırma
-<a id="uninstall-the-ata-center-silently" class="xliff"></a>
+## <a name="uninstall-the-ata-center-silently"></a>ATA Center’ı sessizce kaldırma
 
 ATA Center’ı sessizce kaldırma işlemini gerçekleştirmek için şu komutu kullanın: **Söz dizimi**:
 
@@ -133,8 +128,7 @@ ATA Center’ı sessizce kaldırma işlemini gerçekleştirmek için şu komutu 
 
     "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
-## ATA Gateway Sessiz Yüklemesi
-<a id="ata-gateway-silent-installation" class="xliff"></a>
+## <a name="ata-gateway-silent-installation"></a>ATA Gateway Sessiz Yüklemesi
 ATA Gateway’i sessizce yüklemek için aşağıdaki komutu kullanın:
 
 **Söz dizimi**:
@@ -169,8 +163,7 @@ ATA Gateway’i sessizce yüklemek için aşağıdaki komutu kullanın:
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
     
 
-## ATA Gateway’i güncelleştirme
-<a id="update-the-ata-gateway" class="xliff"></a>
+## <a name="update-the-ata-gateway"></a>ATA Gateway’i güncelleştirme
 
 ATA Gateway’i sessizce güncelleştirmek için aşağıdaki komutu kullanın:
 
@@ -192,8 +185,7 @@ ATA Gateway’i sessizce güncelleştirmek için aşağıdaki komutu kullanın:
 
         Microsoft ATA Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
-## ATA Gateway’i sessizce kaldırma
-<a id="uninstall-the-ata-gateway-silently" class="xliff"></a>
+## <a name="uninstall-the-ata-gateway-silently"></a>ATA Gateway’i sessizce kaldırma
 
 ATA Gateway’i sessizce kaldırma işlemini gerçekleştirmek için şu komutu kullanın: **Söz dizimi**:
 
@@ -221,8 +213,7 @@ ATA Gateway’i sessizce kaldırma işlemini gerçekleştirmek için şu komutu 
 
 
 
-## Ayrıca bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

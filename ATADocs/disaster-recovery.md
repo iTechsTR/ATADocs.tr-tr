@@ -15,7 +15,7 @@ ms.reviewer: arzinger
 ms.suite: ems
 ms.openlocfilehash: ce06038a3c3f2e5a6f2a5d57ad814ab8393c0b0c
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,15 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA olağanüstü durum kurtarma
-<a id="ata-disaster-recovery" class="xliff"></a>
+# <a name="ata-disaster-recovery"></a>ATA olağanüstü durum kurtarma
 Bu makalede, ATA Center işlevselliğinin kaybolduğu ancak ATA Ağ Geçitlerinin çalışmayı sürdürdüğü durumlarda ATA Center’ı hızlıca kurtarıp ATA işlevselliğini hızlıca geri yükleyeme işlemini nasıl yapacağınız açıklanır. 
 
 >[!NOTE]
 > Açıklanan işlemle, daha önce algılanan şüpheli etkinlikler kurtarılmaz ancak ATA Center tam olarak işlevsel hale getirilir. Ayrıca, bazı davranış algılamaları için gereken öğrenme dönemi yeniden başlatılır ancak ATA’nın sunduğu algılamaların çoğu, ATA Center geri yüklendikten sonra çalışır duruma gelir. 
 
-## ATA Center yapılandırmanızı yedekleme
-<a id="back-up-your-ata-center-configuration" class="xliff"></a>
+## <a name="back-up-your-ata-center-configuration"></a>ATA Center yapılandırmanızı yedekleme
 
 1. ATA Center yapılandırması, bir dosyaya saat başı yedeklenir. ATA Center yapılandırmasının en son yedek kopyasını bulun ve ayrı bir bilgisayara kaydedin. Bu dosyaları nasıl bulacağınıza ilişkin tam açıklama için bkz. [ATA yapılandırmasını dışarı ve içeri aktarma](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
 2. ATA Center sertifikasını dışarı aktarın.
@@ -44,8 +42,7 @@ Bu makalede, ATA Center işlevselliğinin kaybolduğu ancak ATA Ağ Geçitlerini
   > [!NOTE] 
   > Özel anahtarı dışarı aktaramazsanız, yeni bir sertifika oluşturmanız ve bunu [ATA Center sertifikasını değiştirme](/advanced-threat-analytics/deploy-use/modifying-ata-config-centercert) bölümünde açıklandığı gibi ATA’ya dağıtmanız gerekir. 
 
-## ATA Center’ı kurtarma
-<a id="recover-your-ata-center" class="xliff"></a>
+## <a name="recover-your-ata-center"></a>ATA Center’ı kurtarma
 
 1. Önceki ATA Center makinesi ile aynı IP adresini ve bilgisayar adını kullanarak yeni bir Windows Server makinesi oluşturun.
 4. Yukarıdaki bölümde yedeklediğiniz sertifikayı yeni sunucuya aktarın.
@@ -66,8 +63,7 @@ Bu makalede, ATA Center işlevselliğinin kaybolduğu ancak ATA Ağ Geçitlerini
 
 
 
-## Ayrıca Bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA önkoşulları](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA kapasite planlaması](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Olay koleksiyonunu yapılandırma](/advanced-threat-analytics/deploy-use/configure-event-collection)

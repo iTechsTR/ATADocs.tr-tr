@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 47d1125856631ecedcbc7779bf0529741c3da61f
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA’ya e-posta sunucusu ayarlarınızı belirtin
-<a id="provide-ata-with-your-email-server-settings" class="xliff"></a>
+# <a name="provide-ata-with-your-email-server-settings"></a>ATA’ya e-posta sunucusu ayarlarınızı belirtin
 ATA, kuşkulu bir etkinlik algıladığında size bildirebilir. ATA’nın e-posta bildirimleri gönderebilmesi için öncelikle **E-posta sunucusu ayarları**’nı yapılandırmanız gerekir.
 
 1.  ATA Center sunucusunda, masaüstündeki **Microsoft Advanced Threat Analytics Yönetimi** simgesine tıklayın.
@@ -45,8 +44,7 @@ ATA, kuşkulu bir etkinlik algıladığında size bildirebilir. ATA’nın e-pos
     |Gönderen (gerekli)|E-postayı gönderecek olan e-posta adresini girin.|Örneğin:<br />ATA@contoso.com|
     ![ATA e-posta sunucu ayarları resmi](media/ata-email-server.png)
 
-## ATA’ya Syslog sunucusu ayarlarınızı belirtin
-<a id="provide-ata-with-your-syslog-server-settings" class="xliff"></a>
+## <a name="provide-ata-with-your-syslog-server-settings"></a>ATA’ya Syslog sunucusu ayarlarınızı belirtin
 ATA kuşkulu bir etkinlik algıladığında Syslog sunucunuza bildirim göndererek size bildirebilir. Syslog bildirimlerini etkinleştirirseniz, bu uyarılar için aşağıdakileri ayarlayabilirsiniz.
 
 1.  Syslog bildirimlerini yapılandırmadan önce, SIEM yöneticinizle birlikte çalışarak aşağıdaki bilgileri bulun:
@@ -79,6 +77,5 @@ ATA kuşkulu bir etkinlik algıladığında Syslog sunucunuza bildirim gönderer
 
 
 
-## Ayrıca bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

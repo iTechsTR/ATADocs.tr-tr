@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 4fe667574ea011c032bacd8f5bce4b07c2c46602
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,20 +23,16 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA Veritabanı Yönetimi
-<a id="ata-database-management" class="xliff"></a>
+# <a name="ata-database-management"></a>ATA Veritabanı Yönetimi
 ATA veritabanını taşımanız, yedeklemeniz veya geri yüklemeniz gerekiyorsa, MongoDB ile çalışmak için bu yordamları kullanın.
 
-## ATA veritabanını yedekleme
-<a id="backing-up-the-ata-database" class="xliff"></a>
+## <a name="backing-up-the-ata-database"></a>ATA veritabanını yedekleme
 [İlgili MongoDB belgelerine](http://docs.mongodb.org/manual/administration/backup/) bakın.
 
-## ATA veritabanını geri yükleme
-<a id="restoring-the-ata-database" class="xliff"></a>
+## <a name="restoring-the-ata-database"></a>ATA veritabanını geri yükleme
 [İlgili MongoDB belgelerine](http://docs.mongodb.org/manual/administration/backup/) bakın.
 
-## ATA veritabanını başka bir sürücüye taşıma
-<a id="moving-the-ata-database-to-another-drive" class="xliff"></a>
+## <a name="moving-the-ata-database-to-another-drive"></a>ATA veritabanını başka bir sürücüye taşıma
 
 1.  **Microsoft Advanced Threat Analytics Center** hizmetini durdurun.
 > [!Important] 
@@ -58,8 +54,7 @@ ATA veritabanını taşımanız, yedeklemeniz veya geri yüklemeniz gerekiyorsa,
 
 7. **Microsoft Advanced Threat Analytics Center** hizmetini başlatın.
 
-## Ayrıca Bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA mimarisi](ata-architecture.md)
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

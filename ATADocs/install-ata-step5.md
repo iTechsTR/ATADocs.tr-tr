@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 6952a239eb5f11cdfefc9ce201f9a765e61de8e8
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,16 +23,14 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA’yı Yükleme - 5. Adım
-<a id="install-ata---step-5" class="xliff"></a>
+# <a name="install-ata---step-5"></a>ATA’yı Yükleme - 5. Adım
 
 >[!div class="step-by-step"]
 [« 4. Adım](install-ata-step4.md)
 [6. Adım »](install-ata-step6.md)
 
 
-## Adım 5. ATA Gateway ayarlarını yapılandırma
-<a id="step-5-configure-the-ata-gateway-settings" class="xliff"></a>
+## <a name="step-5-configure-the-ata-gateway-settings"></a>Adım 5. ATA Gateway ayarlarını yapılandırma
 ATA Gateway yüklendikten sonra, ATA Gateway’in ayarlarını yapılandırmak için aşağıdaki adımları gerçekleştirin.
 
 1.  ATA konsolunda, **Yapılandırma**’ya gidin ve **Sistem** altında **Ağ Geçitleri**’ni seçin.
@@ -70,8 +68,7 @@ ATA Gateway yüklendikten sonra, ATA Gateway’in ayarlarını yapılandırmak i
 5. **Kaydet**'e tıklayın.
 
 
-## Yüklemeleri doğrulama
-<a id="validate-installations" class="xliff"></a>
+## <a name="validate-installations"></a>Yüklemeleri doğrulama
 ATA Gateway’in başarıyla dağıtıldığını doğrulamak için aşağıdakileri denetleyin:
 
 1.  **Microsoft Advanced Threat Analytics Gateway** adlı hizmetin çalışıp çalışmadığını denetleyin. ATA Gateway ayarlarını kaydettikten sonra, hizmetin başlatılması birkaç dakika sürebilir.
@@ -91,8 +88,7 @@ ATA Gateway’in başarıyla dağıtıldığını doğrulamak için aşağıdaki
 [« 4. Adım](install-ata-step4.md)
 [6. Adım »](install-ata-step6.md)
 
-## Ayrıca bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

@@ -15,15 +15,14 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 4f29dfcc8b18ff755f6c0dcdaa08eaa807b08072
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/30/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
 
-# ATA Raporları
-<a id="ata-reports" class="xliff"></a>
+# <a name="ata-reports"></a>ATA Raporları
 
 Konsoldaki ATA raporları bölümü, size sistem durumu bilgileri (sistem durumu ve ortamınızda algılanan şüpheli etkinlikler) sağlayan raporlar oluşturmanıza imkan tanır.
 
@@ -55,8 +54,7 @@ Zamanlanmış bir rapor ayarlamak için:
 > Zamanlanmış raporlar, e-posta yoluyla ve yalnızca **Yapılandırma** bölümündeki Bildirimler ve Raporlar’dan **Posta sunucusu**’nu seçerek bir e-posta sunucusu yapılandırdıysanız gönderilebilir.
 
 
-## Ayrıca Bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

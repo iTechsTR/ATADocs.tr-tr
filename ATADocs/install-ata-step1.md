@@ -15,15 +15,14 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 97fa1522ca43cf92416ac845b8886f2905e9981b
 ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/03/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
 
-# ATA’yı Yükleme - 1. Adım
-<a id="install-ata---step-1" class="xliff"></a>
+# <a name="install-ata---step-1"></a>ATA’yı Yükleme - 1. Adım
 
 >[!div class="step-by-step"]
 [2. Adım »](install-ata-step2.md)
@@ -33,8 +32,7 @@ Bu yükleme yordamında sıfırdan bir ATA 1.8 yüklemesi gerçekleştirmeye yö
 > [!IMPORTANT] 
 > Windows 2012 R2 kullanıyorsanız, yüklemeye başlamadan önce ATA Center sunucusuna ve ATA Gateway sunucularına KB2934520’yi yükleyin. Aksi takdirde ATA yüklemesi bu güncelleştirmeyi yükler ve bu işlem sırasında bir yeniden başlatma gerektirir.
 
-## 1. Adım ATA Center’ı indirme ve yükleme
-<a id="step-1-download-and-install-the-ata-center" class="xliff"></a>
+## <a name="step-1-download-and-install-the-ata-center"></a>1. Adım ATA Center’ı indirme ve yükleme
 Sunucunun gereksinimleri karşıladığını doğruladıktan sonra, ATA Center’ın yüklemesiyle devam edebilirsiniz.
     
 > [!NOTE]
@@ -88,8 +86,7 @@ ATA Center sunucusunda aşağıdaki adımları gerçekleştirin.
 Bu aşamada, ATA Gateway bileşenlerinin yapılandırma ve dağıtımına devam etmek için otomatik olarak **Genel** sayfasına gidersiniz.
 Siteye bir IP adresi kullanarak oturum açtığınız için, sertifikayla ilgili bir uyarı alırsınız; bu normaldir ve **Bu Web sitesine devam et**’e tıklamanız gerekir.
 
-### Yüklemeyi doğrulama
-<a id="validate-installation" class="xliff"></a>
+### <a name="validate-installation"></a>Yüklemeyi doğrulama
 
 1.  **Microsoft Advanced Threat Analytics Center** adlı hizmetin çalışıp çalışmadığını denetleyin.
 2.  ATA Konsolu’na bağlanmak için masaüstünde **Microsoft Advanced Threat Analytics** kısayoluna tıklayın. ATA Center’ı yüklerken kullandığınız kullanıcı kimlik bilgileriyle oturum açın.
@@ -100,8 +97,7 @@ Siteye bir IP adresi kullanarak oturum açtığınız için, sertifikayla ilgili
 [« Yükleme öncesi](configure-port-mirroring.md)
 [2. Adım »](install-ata-step2.md)
 
-## Ayrıca bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
