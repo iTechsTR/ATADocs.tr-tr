@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/2/2017
+ms.date: 7/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,14 +13,13 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 6850c5e8e264a9610e377a9ab4aadca338971ee1
-ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
+ms.openlocfilehash: 63dd37548dbf4e150f32880543c3bf421bf3fe71
+ms.sourcegitcommit: 3cd268cf353ff8bc3d0b8f9a8c10a34353d1fcf1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/16/2017
 ---
-# ATA sürüm 1.8’deki yenilikler
-<a id="whats-new-in-ata-version-18" class="xliff"></a>
+# <a name="whats-new-in-ata-version-18"></a>ATA sürüm 1.8’deki yenilikler
 
 [İndirme Merkezi’nden](https://www.microsoft.com/download/details.aspx?id=55536) ATA’nın son güncelleştirme sürümünü indirebilir veya [Değerlendirme merkezinden](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics) tam sürümü indirebilirsiniz.
 
@@ -28,8 +27,7 @@ Bu sürüm notları, Advanced Threat Analytics’in bu sürümündeki güncelle�
 
 
 
-## Yeni ve güncelleştirilmiş algılamalar
-<a id="new--updated-detections" class="xliff"></a>
+## <a name="new--updated-detections"></a>Yeni ve güncelleştirilmiş algılamalar
 
 - Olağan dışı protokol uygulaması, WannaCry kötü amaçlı yazılımını algılayacak şekilde iyileştirildi.
 
@@ -48,8 +46,7 @@ Bu sürüm notları, Advanced Threat Analytics’in bu sürümündeki güncelle�
     - Olağan dışı protokol uygulanması
     - Bozulmuş güven
 
-## İyileştirilmiş şüpheli etkinlik önceliklendirmesi
-<a id="improved-triage-of-suspicious-activities" class="xliff"></a>
+## <a name="improved-triage-of-suspicious-activities"></a>İyileştirilmiş şüpheli etkinlik önceliklendirmesi
 
 -   YENİ! ATA 1.8 ile önceliklendirme işlemi sırasında şüpheli etkinliklerde şu eylemleri gerçekleştirmeniz mümkündür: 
     - **Varlıkları dışlayarak** ATA’nın gelecekteki şüpheli etkinliklerde zararsız doğru pozitif sonuçlar (uzak kod çalıştıran bir yönetici veya güvenlik tarayıcıları algılamak gibi) aldığı durumlarda sizi uyarmasını önleyebilirsiniz.
@@ -57,32 +54,32 @@ Bu sürüm notları, Advanced Threat Analytics’in bu sürümündeki güncelle�
     - **Şüpheli etkinlikleri silerek** saldırı zaman çizelgesindeki etkinlikleri temizleyebilirsiniz.
 -   Şüpheli etkinlik uyarılarını takip etme işlemi artık daha etkilidir. Şüpheli etkinlik zaman çizelgesi yeniden tasarlandı. ATA 1.8 ile önceliklendirme ve araştırmaya yönelik pek çok bilgi içeren tek bir ekranda çok daha fazla şüpheli etkinlikle ilgilenebileceksiniz. 
 
-## Araştırmanıza yardımcı olacak yeni raporlar
-<a id="new-reports-to-help-you-investigate" class="xliff"></a> 
+## <a name="new-reports-to-help-you-investigate"></a>Araştırmanıza yardımcı olacak yeni raporlar 
 -   YENİ! **Özet raporu** eklendi, böylece şüpheli etkinlikler ve sistem durumu sorunları gibi tüm ATA verilerinin bir özetine ulaşmanız mümkündür. Artık yinelenerek otomatik olarak oluşturulan özel bir rapor bile tanımlayabilirsiniz.
 -   YENİ! **Gizli grup raporu** eklendi, böylece gizli gruplarda belirli bir zaman dilimi içerisinde yapılan değişikliklere göz atabilirsiniz.
 
 
-## Altyapı iyileştirmeleri
-<a id="infrastructure-improvements" class="xliff"></a>
+## <a name="infrastructure-improvements"></a>Altyapı iyileştirmeleri
 
 -   ATA Center performansı geliştirildi. ATA 1.8 ile ATA Center saniyede 1 milyondan fazla paket işleyebilir.
 -   ATA Lightweight Gateway artık olay iletmeyi yapılandırmaya gerek kalmadan olayları yerel olarak okuyabilir.
 -   Artık izleme uyarıları ve şüpheli etkinlikler için farklı e-postalar yapılandırabilirsiniz.
 
-## Güvenlik iyileştirmeleri
-<a id="security-improvements" class="xliff"></a>
+## <a name="security-improvements"></a>Güvenlik iyileştirmeleri
 
 -   YENİ! **ATA yönetimi için çoklu oturum açma**. ATA, Windows kimlik doğrulaması ile tümleştirilmiş çoklu oturum açmayı destekler - bilgisayarınızda zaten oturum açtıysanız ATA bu belirteci kullanarak ATA Konsolu’nda sizin için oturum açar. Ayrıca bir akıllı kart kullanarak da oturum açabilirsiniz. ATA Gateway ve ATA Lightweight Gateway sessiz yükleme betikleri artık kimlik bilgileri sağlamaya gerek kalmadan, oturum açmış kullanıcının bağlamını kullanır.
 -   Yerel Sistem ayrıcalıkları, ATA Gateway sürecinden kaldırıldı. Böylece ATA Gateway süreci için artık sanal hesaplar (yalnızca tek başına ATA Gateway’lerde kullanılabilir), yönetilen hizmet hesapları ve grup tarafından yönetilen hizmet hesapları kullanabilirsiniz.   
 -   ATA Center ve Gateway’lerine denetim günlükleri eklendi ve artık tüm eylemler Windows Olay Günlüğüne kaydediliyor.
 -   ATA Center KSP Sertifikaları için destek eklendi.
 
+## <a name="additional-changes"></a>Ek değişiklikler
+
+- Not ekleme seçeneği Kuşkulu Etkinlikler’den kaldırıldı
+- Kuşkulu Etkinlikler’i azaltıcı öneriler, Kuşkulu Etkinlikler zaman satırından kaldırıldı.
 
 
 
-## Ayrıca bkz:
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca Bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [ATA’yı sürüm 1.8’e güncelleştirme - geçiş kılavuzu](ata-update-1.8-migration-guide.md)

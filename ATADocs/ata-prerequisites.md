@@ -13,18 +13,17 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b810d066c59ea4663157027894eb7e2a39f7ff14
-ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
-ms.translationtype: HT
+ms.openlocfilehash: 14b0d68ce797eeaa99c9e067f7f8caacee1a7b74
+ms.sourcegitcommit: 3cd268cf353ff8bc3d0b8f9a8c10a34353d1fcf1
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/16/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
 
 
-# ATA Önkoşulları
-<a id="ata-prerequisites" class="xliff"></a>
+# <a name="ata-prerequisites"></a>ATA Önkoşulları
 Bu makalede, ortamınızda başarılı bir ATA dağıtımı için gereksinimler açıklanır.
 
 >[!NOTE]
@@ -48,8 +47,7 @@ ATA Sistemi Active Directory orman sınırının üzerinde çalışır ve Orman 
 
 ![ATA mimarisi diyagramı](media/ATA-architecture-topology.jpg)
 
-## Başlamadan önce
-<a id="before-you-start" class="xliff"></a>
+## <a name="before-you-start"></a>Başlamadan önce
 Bu bölümde, ATA yüklemesine başlamadan önce toplamanız gereken bilgiler ve sahip olmanız gereken hesaplarla ağ varlıkları listelenir.
 
 
@@ -67,11 +65,9 @@ Bu bölümde, ATA yüklemesine başlamadan önce toplamanız gereken bilgiler ve
 -   İsteğe bağlı: Etki alanı denetleyicilerinden gelen ve denetleyicilere giden ağ trafiğini toplama ve çözümlemeye ek olarak ATA; ATA Pass-the-Hash, Deneme Yanılma, Gizli grup değişikliği ve Honey Token tehditlerini algılamayı daha da güçlendirmek için 4776, 4732, 4733, 4728, 4729, 4756 ve 4757 numaralı Windows olaylarını kullanabilir. Bunlar, SIEM’inizden alınabileceği gibi etki alanı denetleyicinizden Windows Olay İletme’yi ayarlanarak da alınabilir. Toplanan olaylar ATA’ya etki alanı denetleyicisi ağ trafiği yoluyla sağlanmayan ek bilgiler sağlar.
 
 
-## ATA Center gereksinimleri
-<a id="ata-center-requirements" class="xliff"></a>
+## <a name="ata-center-requirements"></a>ATA Center gereksinimleri
 Bu bölümde, ATA Center’ın gereksinimleri listelenir.
-### Genel
-<a id="general" class="xliff"></a>
+### <a name="general"></a>Genel
 ATA Center, Windows Server 2012 R2 veya Windows Server 2016 çalıştıran sunuculara yüklemeyi destekler. ATA Center bir etki alanının veya çalışma grubunun üyesi olan sunuculara yüklenebilir.
 
 Windows 2012 R2 çalıştıran ATA Center’ı yüklemeden önce şu güncelleştirmenin yüklendiğini onaylayın: [KB2919355](https://support.microsoft.com/kb/2919355/).
@@ -84,32 +80,23 @@ ATA Center’ın bir sanal makine olarak yüklenmesi desteklenir.
 > Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
 
 ATA Center’ı sanal makine olarak çalıştırıyorsanız, olası veritabanı bozulmalarını önlemek için yeni bir denetim noktası oluşturmadan önce sunucuyu kapatın.
-### Sunucu belirtimleri
-<a id="server-specifications" class="xliff"></a>
+### <a name="server-specifications"></a>Sunucu belirtimleri
 Fiziksel bir sunucuda çalışırken, ATA veritabanı için BIOS’ta tekdüzen olmayan bellek erişimini (NUMA) **devre dışı bırakmanız** gerekir. Sisteminizde NUMA Düğüm Araya Ekleme (Node Interleaving) olarak geçiyor olabilir ve bu durumda NUMA’yı devre dışı bırakmak için Düğüm Araya Ekleme’yi **etkinleştirmeniz** gerekecektir. Daha fazla bilgi için BIOS belgelerinize bakın. ATA Center bir sanal sunucuda çalışırken bunun geçerli olmadığını unutmayın.<br>
 En iyi performans için, ATA Center’ın **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.<br>
 İzlediğiniz etki alanı denetleyicilerinin sayısı ve etki alanı denetleyicilerinden her birinin yükü sunucu belirtimlerini belirler; daha ayrıntılı bilgi için bkz. [ATA kapasite planlaması](ata-capacity-planning.md).
 
 
-### Zaman eşitleme
-<a id="time-synchronization" class="xliff"></a>
+### <a name="time-synchronization"></a>Zaman eşitleme
 ATA Center sunucusu, ATA Gateway sunucuları ve etki alanı denetleyicilerinin zamanlarının 5 dakika içinde birbiriyle eşitlenmesi gerekir.
 
 
-### Ağ bağdaştırıcıları
-<a id="network-adapters" class="xliff"></a>
+### <a name="network-adapters"></a>Ağ bağdaştırıcıları
 Aşağıdakilere sahip olmanız gerekir:
 -   En az bir ağ bağdaştırıcısı (VLAN ortamında fiziksel sunucu kullanılıyorsa, iki ağ bağdaştırıcısı kullanılması önerilir)
 
--   İki IP adresi (önerilir ancak gerekli değildir)
+-   ATA Center ile ATA Gateway arasındaki iletişim için bağlantı noktası 443 üzerinde SSL kullanılarak şifrelenen bir IP adresi. 
 
-ATA Center ile ATA Gateway arasındaki iletişim, bağlantı noktası 443 üzerinde SSL kullanılarak şifrelenir. Ayrıca, ATA Konsolu da bağlantı noktası 443 üzerinde SSL kullanır. **İki IP adresi** kullanılması önerilir. ATA Center hizmeti bağlantı noktası 443’ü ilk IP adresine bağlar ve ATA Konsolu da bağlantı noktası 443’ü ikinci IP adresine bağlar.
-
-> [!NOTE]
-> İki farklı bağlantı noktasıyla tek IP adresi kullanılabilir, ama iki IP adresi kullanılması önerilir.
-
-### Bağlantı noktaları
-<a id="ports" class="xliff"></a>
+### <a name="ports"></a>Bağlantı noktaları
 Aşağıdaki tabloda, ATA Center’ın düzgün çalışması için açılması gereken minimum bağlantı noktaları listelenir.
 
 |Protokol|Aktarım|Bağlantı Noktası|Hedef/Kaynak|Yön|
@@ -127,8 +114,7 @@ Aşağıdaki tabloda, ATA Center’ın düzgün çalışması için açılması 
 |**Netlogon** (etki alanına katılmış ise isteğe bağlı)|TCP ve UDP|445|Etki alanı denetleyicileri|Giden|
 |**Windows Saati** (etki alanına katılmış ise isteğe bağlı)|UDP|123|Etki alanı denetleyicileri|Giden|
 
-### Sertifikalar
-<a id="certificates" class="xliff"></a>
+### <a name="certificates"></a>Sertifikalar
 ATA Center’ın CRL dağıtım noktanıza erişimi olduğundan emin olun. ATA Gateway bileşenlerinin İnternet erişimi yoksa, [CRL’yi el ile içeri aktarma yordamını](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) izleyin ve tüm zincir için CRL dağıtım noktalarının tümünü yükleme işlemini gerçekleştirin.
 
 ATA’nın yüklenmesini kolaylaştırmak için, işlem sırasında otomatik olarak imzalanan sertifikalar yükleyebilirsiniz. Dağıtım sonrasında otomatik olarak imzalanan sertifikayı ATA Gateway tarafından kullanılacak bir iç Sertifika Yetkilisi’nin sertifikasıyla değiştirebilirsiniz.<br>
@@ -142,11 +128,9 @@ ATA’nın yüklenmesini kolaylaştırmak için, işlem sırasında otomatik ola
 > [!NOTE]
 > ATA Konsolu’na başka bilgisayarlardan erişecekseniz, söz konusu bilgisayarların ATA Center tarafından kullanılan sertifikaya güvendiğinden emin olun; aksi takdirde sayfada oturum açmadan önce Web sitesinin güvenlik sertifikasında sorun olduğunu bildiren bir uyarı sayfası alırsınız.
 
-## ATA Gateway gereksinimleri
-<a id="ata-gateway-requirements" class="xliff"></a>
+## <a name="ata-gateway-requirements"></a>ATA Gateway gereksinimleri
 Bu bölümde, ATA Gateway’in gereksinimleri listelenir.
-### Genel
-<a id="general" class="xliff"></a>
+### <a name="general"></a>Genel
 ATA Gateway, Windows Server 2012 R2 veya Windows Server 2016 çalıştıran sunuculara yüklemeyi destekler (Sunucu çekirdeği dahil).
 ATA Gateway bir etki alanının veya çalışma grubunun üyesi olan sunuculara yüklenebilir.
 ATA Gateway, Etki Alanı İşlev Düzeyi Windows 2003 ve üstü olan Etki Alanı Denetleyicilerini izlemek için kullanılabilir.
@@ -161,8 +145,7 @@ ATA Gateway ile sanal makineleri kullanma hakkında bilgi için bkz. [Bağlantı
 > [!NOTE]
 > En az 5 GB alan gereklidir ve 10 GB önerilir. Buna, ATA ikili dosyaları, [ATA günlükleri](troubleshooting-ata-using-logs.md) ve [performans günlükleri](troubleshooting-ata-using-perf-counters.md) için gereken alan da dahildir.
 
-### Sunucu belirtimleri
-<a id="server-specifications" class="xliff"></a>
+### <a name="server-specifications"></a>Sunucu belirtimleri
 En iyi performans için, ATA Gateway’in **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.<br>
 ATA Gateway, etki alanı denetleyicilerinden gelen ve giden ağ trafiği miktarına bağlı olarak, birden çok etki alanı denetleyicisinin izlenmesini destekleyebilir.
 
@@ -171,12 +154,10 @@ ATA Gateway, etki alanı denetleyicilerinden gelen ve giden ağ trafiği miktar�
 
 ATA Gateway donanım gereksinimleri hakkında daha fazla bilgi için bkz. [ATA kapasite planlaması](ata-capacity-planning.md).
 
-### Zaman eşitleme
-<a id="time-synchronization" class="xliff"></a>
+### <a name="time-synchronization"></a>Zaman eşitleme
 ATA Center sunucusu, ATA Gateway sunucuları ve etki alanı denetleyicilerinin zamanlarının 5 dakika içinde birbiriyle eşitlenmesi gerekir.
 
-### Ağ bağdaştırıcıları
-<a id="network-adapters" class="xliff"></a>
+### <a name="network-adapters"></a>Ağ bağdaştırıcıları
 ATA Gateway için en az bir Yönetim bağdaştırıcısı ve en az bir Yakalama bağdaştırıcısı gerekir:
 
 -   **Yönetim bağdaştırıcısı** - şirket ağınızdaki iletişim için kullanılır. Bu bağdaştırıcı, aşağıdakilerle yapılandırılmalıdır:
@@ -198,8 +179,7 @@ ATA Gateway için en az bir Yönetim bağdaştırıcısı ve en az bir Yakalama 
     > -   Etki alanı denetleyicisi ağ trafiğinin hedefi olarak yakalama bağdaştırıcısı için bağlantı noktası yansıtmasını yapılandırın. Daha fazla bilgi için bkz. [Bağlantı noktası yansıtmasını yapılandırma](configure-port-mirroring.md). Normalde, bağlantı noktası yansıtmasını yapılandırmak için ağ veya sanallaştırma ekibiyle çalışmanız gerekir.
     > -   Varsayılan ağ geçidi ve DNS sunucu adresleri olmadan ortamınız için statik yönlendirilemeyen bir IP adresi yapılandırın. Örneğin, 1.1.1.1/32. Bu, yakalama ağ bağdaştırıcısının en yüksek miktarda trafiği yakalayabilmesini ve gerekli ağ trafiğini göndermek ve almak için yönetim ağ bağdaştırıcısının kullanılmasını güvence altına alır.
 
-### Bağlantı noktaları
-<a id="ports" class="xliff"></a>
+### <a name="ports"></a>Bağlantı noktaları
 Aşağıdaki tabloda, ATA Gateway için yönetim bağdaştırıcısında yapılandırılması gereken minimum bağlantı noktaları listelenir.
 
 |Protokol|Aktarım|Bağlantı Noktası|Hedef/Kaynak|Yön|
@@ -223,11 +203,9 @@ Aşağıdaki tabloda, ATA Gateway için yönetim bağdaştırıcısında yapıla
 > -   RPC üzerinden NTLM (TCP Bağlantı Noktası 135)
 > -   NetBIOS (UDP bağlantı noktası 137)
 
-## ATA Lightweight Gateway gereksinimleri
-<a id="ata-lightweight-gateway-requirements" class="xliff"></a>
+## <a name="ata-lightweight-gateway-requirements"></a>ATA Lightweight Gateway gereksinimleri
 Bu bölümde, ATA Lightweight Gateway’in gereksinimleri listelenir.
-### Genel
-<a id="general" class="xliff"></a>
+### <a name="general"></a>Genel
 ATA Lightweight Gateway; Windows Server 2008 R2 SP1 (Server Core içermez), Windows Server 2012, Windows Server 2012 R2 veya Windows Server 2016 (Core dahil ancak Nano hariç) çalıştıran bir etki alanı denetleyicisine yüklemeyi destekler.
 
 Etki alanı denetleyicisi salt okunur bir etki alanı denetleyicisi (RODC) olabilir.
@@ -247,8 +225,7 @@ Yükleme sırasında .Net Framework 4.6.1 yüklenir ve etki alanı denetleyicisi
 > [!NOTE]
 > En az 5 GB alan gereklidir ve 10 GB önerilir. Buna, ATA ikili dosyaları, [ATA günlükleri](troubleshooting-ata-using-logs.md) ve [performans günlükleri](troubleshooting-ata-using-perf-counters.md) için gereken alan da dahildir.
 
-### Sunucu belirtimleri
-<a id="server-specifications" class="xliff"></a>
+### <a name="server-specifications"></a>Sunucu belirtimleri
 
 ATA Lightweight Gateway, etki alanı denetleyicisinde en az 2 çekirdek ve 6 GB RAM kurulu olmasını gerektirir.
 En iyi performans için, ATA Lightweight Gateway’in **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.
@@ -259,16 +236,13 @@ ATA Lightweight Gateway, etki alanı denetleyicilerinden gelen ve giden ağ traf
 
 ATA Lightweight Gateway donanım gereksinimleri hakkında daha fazla bilgi için bkz. [ATA kapasite planlaması](ata-capacity-planning.md).
 
-### Zaman eşitleme
-<a id="time-synchronization" class="xliff"></a>
+### <a name="time-synchronization"></a>Zaman eşitleme
 ATA Center sunucusu, ATA Lightweight Gateway sunucuları ve etki alanı denetleyicilerinin zamanlarının 5 dakika içinde birbiriyle eşitlenmesi gerekir.
-### Ağ bağdaştırıcıları
-<a id="network-adapters" class="xliff"></a>
+### <a name="network-adapters"></a>Ağ bağdaştırıcıları
 ATA Lightweight Gateway etki alanı denetleyicisinin ağ bağdaştırıcılarının hepsindeki yerel trafiği izler. <br>
 Dağıtımdan sonra, hangi ağ bağdaştırıcılarının izlendiğini değiştirmek isterseniz ATA Konsolu’nu kullanabilirsiniz.
 
-### Bağlantı noktaları
-<a id="ports" class="xliff"></a>
+### <a name="ports"></a>Bağlantı noktaları
 Aşağıdaki tabloda, ATA Lightweight Gateway için gereken minimum bağlantı noktaları listelenir.
 
 |Protokol|Aktarım|Bağlantı Noktası|Hedef/Kaynak|Yön|
@@ -285,8 +259,7 @@ Aşağıdaki tabloda, ATA Lightweight Gateway için gereken minimum bağlantı n
 > -   RPC üzerinden NTLM
 > -   NetBIOS
 
-## ATA Konsolu
-<a id="ata-console" class="xliff"></a>
+## <a name="ata-console"></a>ATA Konsolu
 ATA Konsolu’na tarayıcı yoluyla erişilir ve aşağıdakiler desteklenir:
 
 -   Internet Explorer sürüm 10 ve üstü
@@ -297,8 +270,7 @@ ATA Konsolu’na tarayıcı yoluyla erişilir ve aşağıdakiler desteklenir:
 
 -   Minimum ekran genişliği çözünürlüğü 1700 piksel
 
-## Ayrıca bkz.
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ATA mimarisi](ata-architecture.md)
 - [ATA’yı yükleme](install-ata-step1.md)
