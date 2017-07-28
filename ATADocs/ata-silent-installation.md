@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/28/2017
+ms.date: 07/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5b46d53d4e72ebe32b6e1f57960694194b71b31c
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 7e130da2b5a177658e176a428101c11d02bc2a3f
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -49,6 +49,7 @@ ATA Center’ı yüklemek için aşağıdaki komutu kullanın:
     
 **Yükleme seçenekleri**:
 
+> [!div class="mx-tableFixed"]
 |Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Açıklama|
 |-------------|----------|---------|---------|
 |Quiet|istemci bilgisayarlara|Evet|Kullanıcı arabirimi ve istem göstermeden yükleyiciyi çalıştırır.|
@@ -58,6 +59,7 @@ ATA Center’ı yüklemek için aşağıdaki komutu kullanın:
 
 **Yükleme parametreleri**:
 
+> [!div class="mx-tableFixed"]
 |Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Açıklama|
 |-------------|----------|---------|---------|
 |InstallationPath|InstallationPath="<InstallPath>"|Hayır|ATA ikili dosyalarını yükleme yolunu ayarlar. Varsayılan yol: C:\Program Files\Microsoft Advanced Threat Analytics\Center|
@@ -89,6 +91,7 @@ ATA Center’ı güncelleştirmek için aşağıdaki komutu kullanın:
 
 **Yükleme seçenekleri**:
 
+> [!div class="mx-tableFixed"]
 |Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Açıklama|
 |-------------|----------|---------|---------|
 |Quiet|istemci bilgisayarlara|Evet|Kullanıcı arabirimi ve istem göstermeden yükleyiciyi çalıştırır.|
@@ -111,6 +114,7 @@ ATA Center’ı sessizce kaldırma işlemini gerçekleştirmek için şu komutu 
 
 **Yükleme seçenekleri**:
 
+> [!div class="mx-tableFixed"]
 |Ad|Söz dizimi|Sessiz kaldırma için zorunlu mu?|Açıklama|
 |-------------|----------|---------|---------|
 |Quiet|istemci bilgisayarlara|Evet|Kullanıcı arabirimi ve istem göstermeden kaldırıcıyı çalıştırır.|
@@ -119,6 +123,7 @@ ATA Center’ı sessizce kaldırma işlemini gerçekleştirmek için şu komutu 
 
 **Yükleme parametreleri**:
 
+> [!div class="mx-tableFixed"]
 |Ad|Söz dizimi|Sessiz kaldırma için zorunlu mu?|Açıklama|
 |-------------|----------|---------|---------|
 |DeleteExistingDatabaseData|DeleteExistingDatabaseData|Hayır|Var olan veritabanındaki tüm dosyaları siler.|
@@ -134,7 +139,7 @@ ATA Gateway’i sessizce yüklemek için aşağıdaki komutu kullanın:
 **Söz dizimi**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
-    [GatewayCertificateThumbprint="<CertThumbprint >"] [ConsoleAccountName="<AccountName>"] 
+    [ConsoleAccountName="<AccountName>"] 
     [ConsoleAccountPassword="<AccountPassword>"]
 
 > [!NOTE]
@@ -143,6 +148,7 @@ ATA Gateway’i sessizce yüklemek için aşağıdaki komutu kullanın:
 
 **Yükleme seçenekleri**:
 
+> [!div class="mx-tableFixed"]
 |Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Açıklama|
 |-------------|----------|---------|---------|
 |Quiet|istemci bilgisayarlara|Evet|Kullanıcı arabirimi ve istem göstermeden yükleyiciyi çalıştırır.|
@@ -151,9 +157,9 @@ ATA Gateway’i sessizce yüklemek için aşağıdaki komutu kullanın:
 
 **Yükleme parametreleri**:
 
+> [!div class="mx-tableFixed"]
 |Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Açıklama|
 |-------------|----------|---------|---------|
-|GatewayCertificateThumbprint|GatewayCertificateThumbprint="<CertThumbprint >"|Hayır|ATA Center hizmeti için sertifika parmak izini ayarlar. Bu sertifika ATA Center ile ATA Gateway arasındaki iletişimin güvenliğini sağlamak için kullanılır. Ayarlanmazsa, yükleme otomatik olarak imzalanan bir sertifika oluşturur.|
 |ConsoleAccountName|ConsoleAccountName="<AccountName>"|Evet|ATA Gateway’i ATA Center’a kaydetmek için kullanılan kullanıcı hesabının (user@domain.com) adını ayarlar.|
 |ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Evet|ATA Gateway’i ATA Center’a kaydetmek için kullanılan kullanıcı hesabının (user@domain.com) parolasını ayarlar.|
 
@@ -174,6 +180,7 @@ ATA Gateway’i sessizce güncelleştirmek için aşağıdaki komutu kullanın:
 
 **Yükleme seçenekleri**:
 
+> [!div class="mx-tableFixed"]
 |Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Açıklama|
 |-------------|----------|---------|---------|
 |Quiet|istemci bilgisayarlara|Evet|Kullanıcı arabirimi ve istem göstermeden yükleyiciyi çalıştırır.|
@@ -193,6 +200,7 @@ ATA Gateway’i sessizce kaldırma işlemini gerçekleştirmek için şu komutu 
     
 **Yükleme seçenekleri**:
 
+> [!div class="mx-tableFixed"]
 |Ad|Söz dizimi|Sessiz kaldırma için zorunlu mu?|Açıklama|
 |-------------|----------|---------|---------|
 |Quiet|istemci bilgisayarlara|Evet|Kullanıcı arabirimi ve istem göstermeden kaldırıcıyı çalıştırır.|
