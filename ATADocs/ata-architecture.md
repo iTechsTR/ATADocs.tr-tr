@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4d95e5b13d06ea0963b7cac129be4eb1458e5d4c
-ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
+ms.openlocfilehash: 5410f706e84517eb964e991deeb21001a09d0cef
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -146,6 +146,7 @@ Bu durum ATA Lightweight Gateway’in kaynaksız kalmasına neden olursa, trafi�
 
 Aşağıdaki tabloda, tüm trafiğin izlenmesi için halen gerekli olandan daha büyük kotaya izin verecek kadar bilgi işlem kaynağına sahip bir etki alanı denetleyicisi örneği görülmektedir:
 
+> [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|ATA Lightweight Gateway (Microsoft.Tri.Gateway.exe)|Çeşitli (diğer işlemler) |ATA Lightweight Gateway Kotası|Ağ geçidi bırakılıyor|
@@ -153,6 +154,7 @@ Aşağıdaki tabloda, tüm trafiğin izlenmesi için halen gerekli olandan daha 
 
 Active Directory daha fazla bilgi işleme gereksinim duyuyorsa, ATA Lightweight Gateway için gereken kota azaltılır. Aşağıdaki örnekte, ATA Lightweight Gateway ayrılandan daha fazla kotaya gereksinim duymakta ve trafiğin bir kısmını bırakmaktadır (trafiğin yalnızca bir kısmını izlemektedir):
 
+> [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|ATA Lightweight Gateway (Microsoft.Tri.Gateway.exe)|Çeşitli (diğer işlemler) |ATA Lightweight Gateway Kotası|Ağ geçidi bırakılıyor|

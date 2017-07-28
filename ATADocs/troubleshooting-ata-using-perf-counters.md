@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ae72f7a25f0c57dadd02049fe3a570a0da7b84fd
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: bc3ad332e1a8af6259eadaecc4638f27fded67c6
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -55,6 +55,7 @@ Bu işlem, "Performans İzleyicisi" açılarak ve ATA Gateway için tüm sayaçl
 
 Dikkat edilmesi gereken ana ATA Gateway sayaçlarının listesi:
 
+> [!div class="mx-tableFixed"]
 |Sayaç|Açıklama|Eşik|Sorun giderme|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Gateway\NetworkListener PEF Ayrıştırılan İletiler\Sn|ATA Gateway tarafından her saniyede işlenen trafik miktarı.|Eşik yok|ATA Gateway tarafından ayrıştırılmakta olan trafiğin miktarını anlamanıza yardımcı olur.|
@@ -75,7 +76,7 @@ ATA’nın Lightweight Gateway’de uyguladığı kaynak sınırlamalarını öl
 
 Bu işlem, "Performans İzleyicisi" açılarak ve ATA Lightweight Gateway için tüm sayaçlar eklenerek yapılır. Performans sayacı nesne adları: “Microsoft ATA Gateway” ve “Microsoft ATA Gateway Updater”dır.
 
-
+> [!div class="mx-tableFixed"]
 |Sayaç|Açıklama|Eşik|Sorun giderme|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager En Yüksek CPU Süresi %|Lightweight Gateway işleminin kullanabileceği en yüksek CPU süresi (yüzde cinsinden) miktarı. |Eşik yok. | Bu, etki alanı denetleyicisi kaynaklarının ATA Lightweight Gateway tarafından kullanılarak bitirilmesini engelleyen sınırlamadır. İşlemin belirli bir süre boyunca sık sık üst sınıra ulaştığını görüyorsanız (işlem sınıra ulaşır ve trafiği bırakmaya başlar) bu, etki alanı denetleyicisini çalıştıran sunucuya daha fazla kaynak eklemeniz gerektiği anlamına gelir.|
@@ -87,7 +88,7 @@ Bu işlem, "Performans İzleyicisi" açılarak ve ATA Lightweight Gateway için 
 Gerçek kullanımınızı görmek için aşağıdaki sayaçlara bakın:
 
 
-
+> [!div class="mx-tableFixed"]
 |Sayaç|Açıklama|Eşik|Sorun giderme|
 |-----------|---------------|-------------|-------------------|
 |İşlem(Microsoft.Tri.Gateway)\%İşlemci Zamanı|Lightweight Gateway işleminin gerçekte kullandığı CPU süresi (yüzde cinsinden) miktarı. |Eşik yok. | Bu sayacın sonuçlarını GatewayUpdaterResourceManager En Yüksek CPU Süresi % kısmında bulunan sınırla karşılaştırın. İşlemin belirli bir süre boyunca sık sık üst sınıra ulaştığını görüyorsanız (işlem sınıra ulaşır ve trafiği bırakmaya başlar) bu, Lightweight Gateway’e daha fazla kaynak ayırmanız gerektiği anlamına gelir.|
@@ -101,6 +102,7 @@ Bu işlem, "Performans İzleyicisi" açılarak ve ATA Center için tüm sayaçla
 
 Dikkat edilmesi gereken ana ATA Center sayaçlarının listesi:
 
+> [!div class="mx-tableFixed"]
 |Sayaç|Açıklama|Eşik|Sorun giderme|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Center\EntityReceiver Varlık Yığın Blok Boyutu|ATA Center tarafından kuyruğa alınan varlık yığınlarının sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 10.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin.  Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
@@ -116,6 +118,7 @@ Dikkat edilmesi gereken ana ATA Center sayaçlarının listesi:
 ## <a name="operating-system-counters"></a>İşletim sistemi sayaçları
 Aşağıda, dikkat edilmesi gereken ana işletim sistemi sayaçları listelenmiştir:
 
+> [!div class="mx-tableFixed"]
 |Sayaç|Açıklama|Eşik|Sorun giderme|
 |-----------|---------------|-------------|-------------------|
 |İşlemci(_Toplam)\% İşlemci Zamanı|İşlemcinin boş olmayan bir iş parçacığı çalıştırırken harcadığı geçen sürenin yüzdesi.|Ortalamada %80’den az|Gerekenden çok daha fazla işlemci zamanı alan bir işlem olup olmadığını denetleyin.<br /><br />Daha fazla işlemci ekleyin.<br /><br />Sunucu başına trafik miktarını azaltın.<br /><br />"İşlemci(_Toplam)\% İşlemci Zamanı" sayacı sanal sunucularda tam doğru olmayabilir; bu durumda işlemci gücündeki eksilmeyi "Sistem\İşlemci Kuyruğu Uzunluğu" sayacı aracılığıyla ölçmek daha doğru olur.|
