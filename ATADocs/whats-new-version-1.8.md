@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/16/2017
+ms.date: 7/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 63dd37548dbf4e150f32880543c3bf421bf3fe71
-ms.sourcegitcommit: 3cd268cf353ff8bc3d0b8f9a8c10a34353d1fcf1
+ms.openlocfilehash: b4754c749cad25a6aa4da94563df29f9f99e2a20
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2017
+ms.lasthandoff: 07/25/2017
 ---
 # <a name="whats-new-in-ata-version-18"></a>ATA sürüm 1.8’deki yenilikler
 
@@ -52,7 +52,7 @@ Bu sürüm notları, Advanced Threat Analytics’in bu sürümündeki güncelle�
     - **Varlıkları dışlayarak** ATA’nın gelecekteki şüpheli etkinliklerde zararsız doğru pozitif sonuçlar (uzak kod çalıştıran bir yönetici veya güvenlik tarayıcıları algılamak gibi) aldığı durumlarda sizi uyarmasını önleyebilirsiniz.
     - **Yinelenenleri göstermeyerek** aynı şüpheli etkinlik için tekrar tekrar uyarılmamayı seçebilirsiniz.
     - **Şüpheli etkinlikleri silerek** saldırı zaman çizelgesindeki etkinlikleri temizleyebilirsiniz.
--   Şüpheli etkinlik uyarılarını takip etme işlemi artık daha etkilidir. Şüpheli etkinlik zaman çizelgesi yeniden tasarlandı. ATA 1.8 ile önceliklendirme ve araştırmaya yönelik pek çok bilgi içeren tek bir ekranda çok daha fazla şüpheli etkinlikle ilgilenebileceksiniz. 
+-   Şüpheli etkinlik uyarılarını takip etme işlemi artık daha etkilidir. Şüpheli etkinlik zaman çizelgesi yeniden tasarlandı. ATA 1.8 sürümünde, önceliklendirme ve araştırmaya yönelik daha fazla bilgi ile çok daha fazla şüpheli etkinliği tek bir ekranda görebileceksiniz. 
 
 ## <a name="new-reports-to-help-you-investigate"></a>Araştırmanıza yardımcı olacak yeni raporlar 
 -   YENİ! **Özet raporu** eklendi, böylece şüpheli etkinlikler ve sistem durumu sorunları gibi tüm ATA verilerinin bir özetine ulaşmanız mümkündür. Artık yinelenerek otomatik olarak oluşturulan özel bir rapor bile tanımlayabilirsiniz.
@@ -77,6 +77,51 @@ Bu sürüm notları, Advanced Threat Analytics’in bu sürümündeki güncelle�
 - Not ekleme seçeneği Kuşkulu Etkinlikler’den kaldırıldı
 - Kuşkulu Etkinlikler’i azaltıcı öneriler, Kuşkulu Etkinlikler zaman satırından kaldırıldı.
 
+## <a name="known-issues"></a>Bilinen sorunlar
+
+### <a name="ata-gateway-on-windows-server-core"></a>Windows Server Core’da ATA Gateway
+
+**Belirtiler**: .NET Framework 4.7 ile Windows Server 2012 R2 Core’da ATA Gateway 1.8’e yükseltme işlemi, şu hatayı vererek başarısız olabilir: *Microsoft Advanced Threat Analytics Gateway çalışmayı durdurdu*. 
+
+![Ağ geçidi çekirdek hatası](./media/gateway-core-error.png)
+
+Windows Server 2016 Core’da hatayı görmeyebilirsiniz. Ancak yüklemeye çalıştığınızda işlem başarısız olacak, ayrıca 1000 ve 1001 numaralı olaylar (işlem kilitlenmesi) sunucudaki uygulama Olay Günlüğü’ne kaydedilecektir.
+
+**Açıklama**: WPF teknolojileri kullanan uygulamaların (ATA gibi) yüklenmesini engelleyen bir .NET Framework 4.7 sorunu var. Daha fazla bilgi için [bkz. KB 4034015](https://support.microsoft.com/help/4034015/wpf-window-can-t-be-loaded-after-you-install-the-net-framework-4-7-on). 
+
+**Geçici çözüm**: .NET 4.7’yi kaldırarak [bkz. KB 3186497](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows) .NET sürümünü .NET 4.6.2’ye döndürün ve daha sonra ATA Gateway’i 1.8 sürümüne güncelleştirin. ATA yükseltmesinden sonra .NET 4.7’yi yeniden yükleyebilirsiniz.  Gelecek sürümlerde bu sorunu düzeltmeye yönelik bir güncelleştirme sunulacaktır.
+
+### <a name="lightweight-gateway-event-log-permissions"></a>Lightweight Gateway olay günlüğü izinleri
+
+**Belirtiler**: ATA sürümünüzü 1.8’e yükselttiğinizde, önceden Güvenlik Olay Günlüğü’ne erişim izni olan uygulama veya hizmetler bu izinleri kaybedebilir. 
+
+**Açıklama**: ATA dağıtımının kolaylaştırılması için ATA 1.8, Güvenlik Olay Günlüğünüze Windows Olay İletme yapılandırmasına gerek duymadan doğrudan erişir. ATA aynı zamanda, güvenliği artırmak için düşük düzeyde izinlere sahip bir yerel hizmet olarak da çalışır. ATA’ya olayları okumak üzere erişim sağlamak için ATA hizmeti, kendisine Güvenlik Olay Günlüğü izinleri verir. Bu durumda, önceden diğer hizmetler için ayarlanan izinler devre dışı kalabilir.
+
+**Geçici Çözüm**: Aşağıdaki Windows PowerShell betiğini çalıştırın. Bu betik, kayıt defterinde ATA için eklenen hatalı izinleri kaldırır ve bunları farklı bir API aracılığıyla ekler. Bu yolla diğer uygulamaların izinleri geri yüklenebilir. Yüklenmezse, bu izinler el ile geri yüklenmelidir. Gelecek sürümlerde bu sorunu düzeltmeye yönelik bir güncelleştirme sunulacaktır. 
+
+       $ATADaclEntry = "(A;;0x1;;;S-1-5-80-1717699148-1527177629-2874996750-2971184233-2178472682)"
+        try {
+        $SecurityDescriptor = Get-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
+        $ATASddl = "O:BAG:SYD:" + $ATADaclEntry 
+        if($SecurityDescriptor.CustomSD -eq $ATASddl) {
+        Remove-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
+        }
+    }
+    catch
+    {
+    # registry key does not exist
+    }
+
+    $EventLogConfiguration = New-Object -TypeName System.Diagnostics.Eventing.Reader.EventLogConfiguration("Security")
+    $EventLogConfiguration.SecurityDescriptor = $EventLogConfiguration.SecurityDescriptor + $ATADaclEntry
+
+### <a name="proxy-interference"></a>Ara sunucu müdahalesi
+
+**Belirtiler**: ATA sürümünü 1.8’e yükselttikten sonra, ATA Gateway hizmeti başlatılamayabilir. ATA hata günlüğünde şu özel durumu görebilirsiniz: *System.Net.Http.HttpRequestException: İstek gönderilirken bir hata oluştu. ---> System.Net.WebException: Uzak sunucu bir hata döndürdü: (407) Ara Sunucu Kimlik Doğrulaması Gerekli.*
+
+**Açıklama**: ATA 1.8 ve üzeri sürümlerde ATA Gateway ile ATA Center, http protokolünü kullanarak iletişim kurar. ATA Gateway’i yüklediğiniz makine ATA Center’a bağlanmak için bir ara sunucusu kullanıyorsa, bu iletişim bozulabilir. 
+
+**Geçici çözüm**: ATA Gateway hizmet hesabında, ara sunucu kullanımını devre dışı bırakın. Gelecek sürümlerde bu sorunu düzeltmeye yönelik bir güncelleştirme sunulacaktır.
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
