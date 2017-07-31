@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3d687087dd9e1ae7f7642f9fdd7d89420f3bec27
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 7067477066a2341fa15b2b0d283b2d7721239d5e
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -34,19 +34,22 @@ ATA Konsolunda başarıyla oturum açmak amacıyla, ATA Konsoluna erişmek için
 
 ## <a name="logging-into-the-ata-console"></a>ATA Konsolu’nda oturum açma
 
+>[!NOTE]
+ > ATA 1.8 ve üzeri sürümlerde, ATA Konsolu’nda oturum açma işlemi çoklu oturum açma yoluyla gerçekleştirilir.
+
 1. ATA Center sunucusunda, masaüstündeki **Microsoft ATA Konsolu** simgesine tıklayın veya tarayıcıyı açıp ATA Konsolu’na göz atın.
 
     ![ATA sunucusu simgesi](media/ata-server-icon.png)
 
->[!NOTE]
-> Ayrıca ATA Center veya ATA Gateway’den tarayıcıyı açabilir ve ATA Center yüklemesinde ATA Konsolu için yapılandırdığınız IP adresine göz atabilirsiniz.    
+ >[!NOTE]
+ > Ayrıca ATA Center veya ATA Gateway’den tarayıcıyı açabilir ve ATA Center yüklemesinde ATA Konsolu için yapılandırdığınız IP adresine göz atabilirsiniz.    
 
 2.  ATA Center’ın yüklü olduğu bilgisayar ile ATA Konsolu’na erişmeye çalıştığınız bilgisayar etki alanına katılmışsa ATA, Windows kimlik doğrulaması ile tümleştirilmiş çoklu oturum açmayı destekler - bilgisayarınızda zaten oturum açtıysanız ATA bu belirteci kullanarak ATA Konsolu’nda sizin için oturum açar. Ayrıca bir akıllı kart kullanarak da oturum açabilirsiniz. ATA’daki izinleriniz, [yönetici rolünüze](ata-role-groups.md) karşılık gelecektir.
 
-> [!NOTE]
-> ATA Konsolu’na erişmeye çalıştığınız bilgisayarda, ATA yönetici kullanıcı adı ve parolanızla oturum açmayı unutmayın. Bunun yerine tarayıcınızı farklı bir kullanıcı olarak çalıştırabilir veya Windows oturumunuzu kapatıp ATA yönetici kullanıcınızla oturum açabilirsiniz. ATA Konsolu’ndan kimlik bilgileri talep etmesini istemek için bir IP adresi kullanarak konsola erişin, böylece kimlik bilgilerinizi girmeniz istenecektir.
+ > [!NOTE]
+ > ATA Konsolu’na erişmeye çalıştığınız bilgisayarda, ATA yönetici kullanıcı adı ve parolanızla oturum açmayı unutmayın. Bunun yerine tarayıcınızı farklı bir kullanıcı olarak çalıştırabilir veya Windows oturumunuzu kapatıp ATA yönetici kullanıcınızla oturum açabilirsiniz. ATA Konsolu’ndan kimlik bilgileri talep etmesini istemek için bir IP adresi kullanarak konsola erişin, böylece kimlik bilgilerinizi girmeniz istenecektir.
 
-SSO kullanarak oturum açmak için ATA konsolunun tarayıcınızda yerel özel ağ sitesi olarak tanımlandığından ve konsola bir kısa ad veya yerel konak kullanarak erişebildiğinizden emin olun.
+3. SSO kullanarak oturum açmak için ATA konsolunun tarayıcınızda yerel özel ağ sitesi olarak tanımlandığından ve konsola bir kısa ad veya yerel konak kullanarak erişebildiğinizden emin olun.
 
 > [!NOTE]
 > Her bir şüpheli etkinlik ve sistem durumu uyarısının günlüğe kaydedilmesinin yanı sıra, ATA Konsolu’nda yaptığınız tüm yapılandırma değişiklikleri ATA Center makinesindeki **Uygulamalar ve hizmetler günlüğü**’nün altında bulunan **Microsoft ATA** bölümündeki Windows Olay Günlüğü’nde denetlenir. ATA konsolunda gerçekleştirilen her oturum açma işlemi de denetlenir.<br></br>  ATA Gateway’i etkileyen yapılandırma da ATA Gateway makinesinin Windows Olay Günlüğü’ne kaydedilir. 
@@ -113,7 +116,7 @@ ATA’nın tümüyle çözümleyemediği bir profil, yanında gösterilen yarıs
 
 ### <a name="sensitive-groups"></a>Gizli gruplar
 
-ATA tarafından **Gizli** olarak değerlendirilen gruplar aşağıda listelenmiştir. Bu gruplar yönetici ayrıcalıklarına sahip olarak işaretlenir ve gizli hesaplara karşılık gelen uyarılar gönderir:
+ATA tarafından **Gizli** olarak değerlendirilen gruplar aşağıda listelenmiştir. Şu grupların üyesi olan herhangi bir varlık, gizli olarak kabul edilir:
 
 - Enterprise Read Only Domain Controllers 
 - Etki Alanı Yöneticileri 
