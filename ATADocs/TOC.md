@@ -1,7 +1,7 @@
 # Anlama ve Keşfetme
 ## [Microsoft Advanced Threat Analytics nedir?](what-is-ata.md)
 ## [ATA hangi tehditleri algılar?](ata-threats.md)
-## ATA Sürüm notları
+## ATA yenilikler nelerdir?
 ### [ ATA sürüm 1.8’deki yenilikler](whats-new-version-1.8.md)
 #### [ATA 1.8’e güncelleştirme - geçiş kılavuzu](ata-update-1.8-migration-guide.md)
 ### [ATA sürüm 1.7’deki yenilikler](whats-new-version-1.7.md)
@@ -28,19 +28,19 @@
 ### [4. Adım ATA Gateway’i yükleme](install-ata-step4.md)
 ### [5. Adım ATA Gateway’i yapılandırma](install-ata-step5.md)
 ### [6. Adım Olay koleksiyonu ve VPN](install-ata-step6.md)
-### [6. Adım Dışlamalar ve Honeytoken](install-ata-step6.md)
+### [Adım 7 dışarıda kalanları ve Honeytoken](install-ata-step7.md)
 ### [Sessiz yükleme](ata-silent-installation.md)
-# Kullan
-## [ATA Center yapılandırmasını değiştirme](modifying-ata-center-configuration.md)
-## [Etki alanı bağlantı parolasını değiştirme](modifying-ata-config-dcpassword.md)
+# Bu çözümdeki tüm sanal makineleri güncelleştirmek için Windows Server Update Services ile birlikte
 ## [ATA Konsolu ile çalışma](working-with-ata-console.md)
-## [ATA rol grupları](ata-role-groups.md)
-## [Syslog ve E-posta sunucusu ayarlarını belirleme](setting-syslog-email-server-settings.md)
+## [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
+###[Algılamaların dışında varlıkları dışlama](excluding-entities-from-detections.md)
 ## [ATA bildirimlerini ayarlama](setting-ata-alerts.md)
-## [Algılama ayarlarıyla çalışma](working-with-detection-settings.md)
 ## [ATA raporları](reports.md)
 ## [ATA Sistem Durumu Merkezi](ata-health-center.md)
-## [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
+## [ATA rol grupları](ata-role-groups.md)
+## [ATA Center yapılandırmasını değiştirme](modifying-ata-center-configuration.md)
+## [Etki alanı bağlantı parolasını değiştirme](modifying-ata-config-dcpassword.md)
+## [Syslog ve E-posta sunucusu ayarlarını belirleme](setting-syslog-email-server-settings.md)
 ## [ATA veritabanı yönetimi](ata-database-management.md)
 ## [ATA yapılandırmasını Dışarı/İçeri aktarma](ata-configuration-file.md)
 ## [ATA telemetrisini yönetme](manage-telemetry-settings.md)
