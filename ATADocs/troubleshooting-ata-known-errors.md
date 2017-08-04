@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/23/2017
+ms.date: 7/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 28b3bca7e84213b0f41bd8e2de61c006592819d5
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: 734455b06514cadb232916b8db76e47b8bf3e67a
+ms.sourcegitcommit: e7f83eb636db00333fe3965324a10a2ef5e2beba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 07/30/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -51,6 +51,7 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 |VMware üzerinde Lightweight Gateway kullanılırken bağlantı noktası yansıtılmış trafik uyarıları bırakıldı|VMware sanal makinelerinde DC’leri kullanıyorsanız **Bağlantı noktası yansıtma trafiği bırakıldı** uyarıları alabilirsiniz. Bunun sebebi, bir VMware yapılandırma uyuşmazlığı olabilir. |Bu uyarıları önlemek için aşağıdaki ayarların 0 veya Devre Dışı olarak ayarlandığını denetleyebilirsiniz: TsoEnable, LargeSendOffload, IPv4, TSO Veri Boşaltma. Ayrıca, IPv4 Büyük TSO Boşaltma’yı devre dışı bırakabilirsiniz. Daha fazla bilgi için VMware belgelerinize başvurun.|
 |System.Net.WebException: Uzak sunucu bir hata döndürdü: (407) Ara Sunucu Kimlik Doğrulaması Gerekli|ATA Center ile ATA Gateway iletişimi ara sunucu tarafından kesiliyor.|ATA Gateway makinesinde ara sunucuyu devre dışı bırakın. <br></br>Ara sunucu ayarlarının hesaba göre değişebileceğini unutmayın.|
 |System.IO.DirectoryNotFoundException: Sistem, belirtilen yolu bulamıyor. (HRESULT: 0x80070003 özel durumu)|ATA’yı çalıştırması gereken bir veya daha fazla hizmet başlatılamadı.|Aşağıdaki hizmetleri başlatın: <br></br>Performans Günlükleri ve Uyarıları (PLA), Görev Zamanlayıcı (Zamanlama).|
+|System.Net.WebException: Uzak sunucu bir hata döndürdü: (403) Yasak|ATA Gateway veya Lightweight Gateway ATA Center güvenilir olmadığı için bir HTTP bağlantısı kurmadan alınamaz.|NetBIOS adı ve ATA Center FQDN'sini güvenilen Web siteleri listesine ekleyin ve Interne Explorer (veya yapılandırılmış NetBIOS/FQDN farklı olması durumunda yapılandırma belirtildiği gibi ATA Center adı) önbellekte temizleyin.|
 
 ## <a name="deployment-errors"></a>Dağıtım hataları
 > [!div class="mx-tableFixed"]

@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/9/2017
+ms.date: 7/25/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: af88c02c6e2e5f679aca75b17a288c72ab300069
-ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
+ms.openlocfilehash: 54dd8bab3381fc221c75c53191ef052fc83b61ec
+ms.sourcegitcommit: e7f83eb636db00333fe3965324a10a2ef5e2beba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/30/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -65,7 +65,7 @@ Kullanıcı davranış analizi için ATA Center’a en az 30 günlük veri gerek
 > [!NOTE]
 > -   ATA Center’ın izlenen tüm etki alanı denetleyicilerinden saniye başına işleyebileceği toplam miktar, en fazla 1 milyon pakettir. Bazı ortamlarda aynı ATA Center, 400.000’i aşan genel trafikle başa çıkabilir. Bu tür ortamlar konusunda yardım almak için askcesec@microsoft.com ile iletişime geçin.
 > -   Burada belirtilen depolama alanı miktarları net değerlerdir. Her zaman gelecekteki büyümeyi de hesaba katmalı ve veritabanının bulunduğu diskte en az %20 boş alan bulunduğundan emin olmalısınız.
-> -   Boş alanınız en az %20’ye veya 100 GB’a ulaşırsa en eski veri koleksiyonu silinir. Bu silme işlemi, boş alan %5 veya 50 GB’a inene kadar devam eder; bu noktaya ulaşıldığında ise veri koleksiyonu çalışmayı durdurur.
+> -   Boş alanınız en az 20 ulaşırsa % ya da 200 GB, eski veri koleksiyonu silinir. Bu silme işlemi, boş alan %5 veya 50 GB’a inene kadar devam eder; bu noktaya ulaşıldığında ise veri koleksiyonu çalışmayı durdurur.
 > - Bu makalede açıklanan performans gereksinimleri karşılandığı sürece, ATA Center’ın herhangi bir IaaS satıcısında dağıtılması mümkündür.
 > -   Okuma ve yazma etkinlikleri için depolama gecikmesi 10 ms’nin altında olmalıdır.
 > -   Okuma ve yazma etkinlikleri arasındaki oran, saniyede 100.000 paketin altında yaklaşık 1:3 ve saniyede 100.000 paketin üstünde 1:6’dır.
