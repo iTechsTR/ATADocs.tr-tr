@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/3/2017
+ms.date: 08/2/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5beabd2617f55ecbcc717338dc40d9f597cc25d4
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 05853aecf8f8aa075d66c5a755cf89ffd7727739
+ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/02/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -73,7 +73,7 @@ mongo.exe ATA dosya adı
         });
 
 ## <a name="does-ata-work-with-encrypted-traffic"></a>ATA şifrelenmiş trafikle çalışır mı?
-ATA birden çok ağ protokolünü analiz ederek ve SIEM’den ya da Windows Olay İletme aracılığıyla toplanan olaylara bağlı olarak çalışır ve bu sayede şifrelenmiş trafiğin çözümlenmemesine rağmen (LDAPS ve IPSEC ESP gibi) ATA çalışmaya devam eder ve çoğu algılama işlemi bundan etkilenmez.
+Birden çok ağ protokolleri yanı sıra SIEM'den toplanan olayları analiz etme üzerinde ATA güvenir veya rağmen şifrelenmiş trafik değişmeyecek böylece Windows Olay iletme yoluyla (örneğin, LDAPS ve IPSec) çözümlenen ATA çalışmaya devam eder ve çoğu algılama etkilenmez.
 
 ## <a name="does-ata-work-with-kerberos-armoring"></a>ATA Kerberos Koruması ile çalışır mı?
 Esnek Kimlik Doğrulaması Güvenli Tüneli (FAST) olarak da bilinen Kerberos Koruması’nın etkinleştirilmesi ATA tarafından desteklenir; yalnızca karma değeri atlayarak geçiş algılaması çalışmaz.

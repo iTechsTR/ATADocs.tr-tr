@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/2/2017
+ms.date: 8/2/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 14b0d68ce797eeaa99c9e067f7f8caacee1a7b74
-ms.sourcegitcommit: 3cd268cf353ff8bc3d0b8f9a8c10a34353d1fcf1
+ms.openlocfilehash: 0a9d92e5851f1cf64c5e4b4e1ee57d7ee4562d96
+ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2017
+ms.lasthandoff: 08/02/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -30,7 +30,7 @@ Bu makalede, ortamınızda başarılı bir ATA dağıtımı için gereksinimler 
 > Kaynakları ve kapasiteyi planlama hakkında daha fazla bilgi için bkz. [ATA kapasite planlaması](ata-capacity-planning.md).
 
 
-ATA yazılımı ATA Center, ATA Gateway ve/veya ATA Lightweight Gateway’den oluşur. ATA bileşenleri hakkında daha fazla bilgi için bkz. [ATA mimarisi](ata-architecture.md)
+ATA Center, ATA Gateway ve/veya ATA Lightweight Gateway ATA oluşur. ATA bileşenleri hakkında daha fazla bilgi için bkz. [ATA mimarisi](ata-architecture.md)
 
 ATA Sistemi Active Directory orman sınırının üzerinde çalışır ve Orman İşlevsel Düzeyi (FFL) için Windows 2003 ve üstünü destekler.
 
@@ -51,12 +51,12 @@ ATA Sistemi Active Directory orman sınırının üzerinde çalışır ve Orman 
 Bu bölümde, ATA yüklemesine başlamadan önce toplamanız gereken bilgiler ve sahip olmanız gereken hesaplarla ağ varlıkları listelenir.
 
 
--   İzlenecek etki alanlarındaki tüm nesnelere okuma erişimi olan kullanıcı hesabı ve parolası.
+-   Kullanıcı hesabı ve parolası ile izlenen etki alanlarındaki tüm nesnelere okuma erişimi.
 
     > [!NOTE]
     > Etki alanınızdaki çeşitli Kurumsal Birimlerde (OU) özel ACL’ler ayarladıysanız, seçili kullanıcının bu OU’lar üzerinde okuma izinleri olmasına dikkat edin.
 
--   Bir ATA Gateway veya Lightweight Gateway’e Microsoft İleti Çözümleyicisi yüklemeyin. İleti Çözümleyicisi sürücüsü, ATA Gateway ve Lightweight Gateway sürücüleriyle çakışır. ATA Gateway’de Wireshark çalıştırırsanız Wireshark yakalamasını durdurduktan sonra Microsoft Advanced Threat Analytics Gateway Service’i yeniden başlatmanız gerekir. Aksi halde Gateway artık hiç trafik yakalamayacaktır. ATA Lightweight Gateway’de Wireshark çalıştırmanın, ATA Lightweight Gateway’i etkilemediğini unutmayın.
+-   Microsoft Message Analyzer, bir ATA Gateway veya Lightweight Gateway yüklemeyin. İleti Çözümleyicisi sürücüsü, ATA Gateway ve Lightweight Gateway sürücüleriyle çakışır. ATA Gateway’de Wireshark çalıştırırsanız Wireshark yakalamasını durdurduktan sonra Microsoft Advanced Threat Analytics Gateway Service’i yeniden başlatmanız gerekir. Aksi durumda, trafik yakalama ağ geçidi durdurur. ATA Lightweight Gateway’de Wireshark çalıştırmanın, ATA Lightweight Gateway’i etkilemediğini unutmayın.
 
 -    Önerilir: Kullanıcı, Silinmiş Nesneler kapsayıcısı üzerinde salt okuma izinlerine sahip olmalıdır. Bu, ATA’nın etki alanında toplu nesne silme işlemlerini algılamasını sağlar. Silinmiş Nesneler kapsayıcısı üzerinde salt okuma izinlerini yapılandırma hakkında bilgi için, [Dizin Nesnesi Üzerindeki İzinleri Görüntüleme veya Ayarlama](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) konusunun **Silinmiş nesne kapsayıcısı üzerindeki izinleri değiştirme** bölümüne bakın.
 
@@ -94,7 +94,7 @@ ATA Center sunucusu, ATA Gateway sunucuları ve etki alanı denetleyicilerinin z
 Aşağıdakilere sahip olmanız gerekir:
 -   En az bir ağ bağdaştırıcısı (VLAN ortamında fiziksel sunucu kullanılıyorsa, iki ağ bağdaştırıcısı kullanılması önerilir)
 
--   ATA Center ile ATA Gateway arasındaki iletişim için bağlantı noktası 443 üzerinde SSL kullanılarak şifrelenen bir IP adresi. 
+-   ATA Center ile ATA Gateway arasındaki iletişim için bağlantı noktası 443 üzerinde SSL kullanılarak şifrelenen bir IP adresi. (443 numaralı bağlantı noktasını ATA Center sahip tüm IP adreslerine ATA hizmeti bağlar.)
 
 ### <a name="ports"></a>Bağlantı noktaları
 Aşağıdaki tabloda, ATA Center’ın düzgün çalışması için açılması gereken minimum bağlantı noktaları listelenir.
@@ -114,19 +114,23 @@ Aşağıdaki tabloda, ATA Center’ın düzgün çalışması için açılması 
 |**Netlogon** (etki alanına katılmış ise isteğe bağlı)|TCP ve UDP|445|Etki alanı denetleyicileri|Giden|
 |**Windows Saati** (etki alanına katılmış ise isteğe bağlı)|UDP|123|Etki alanı denetleyicileri|Giden|
 
+> [!NOTE]
+> LDAP kimlik bilgileri etki alanı denetleyicileri ATA Gateway bileşenleri arasındaki test etmek için gereklidir. Testis sonra ve ATA Gateway LDAP normal iletişim bir parçası olarak kullanır, bu kimlik bilgileri geçerliliğini sınamak için etki alanı denetleyicisi ATA Center'dan gerçekleştirilir.
+
+
 ### <a name="certificates"></a>Sertifikalar
 ATA Center’ın CRL dağıtım noktanıza erişimi olduğundan emin olun. ATA Gateway bileşenlerinin İnternet erişimi yoksa, [CRL’yi el ile içeri aktarma yordamını](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) izleyin ve tüm zincir için CRL dağıtım noktalarının tümünü yükleme işlemini gerçekleştirin.
 
 ATA’nın yüklenmesini kolaylaştırmak için, işlem sırasında otomatik olarak imzalanan sertifikalar yükleyebilirsiniz. Dağıtım sonrasında otomatik olarak imzalanan sertifikayı ATA Gateway tarafından kullanılacak bir iç Sertifika Yetkilisi’nin sertifikasıyla değiştirebilirsiniz.<br>
-> [!NOTE]
-> Sertifikanın Sağlayıcı Türü, Şifreleme Hizmeti Sağlayıcısı (CSP) veya Anahtar Depolama Alanı Sağlayıcısı (KSP) olmalıdır.
 
-
-> Otomatik sertifika yenilemenin kullanılması desteklenmez.
+> [!WARNING]
+> - Varolan bir sertifikayı yenileme işlemi desteklenmiyor. Bir sertifikayı yenilemek için yalnızca yeni bir sertifika oluşturma ve yeni sertifikayı kullanmak üzere ATA yapılandırma yoludur.
 
 
 > [!NOTE]
-> ATA Konsolu’na başka bilgisayarlardan erişecekseniz, söz konusu bilgisayarların ATA Center tarafından kullanılan sertifikaya güvendiğinden emin olun; aksi takdirde sayfada oturum açmadan önce Web sitesinin güvenlik sertifikasında sorun olduğunu bildiren bir uyarı sayfası alırsınız.
+> - Sertifikanın Sağlayıcı Türü, Şifreleme Hizmeti Sağlayıcısı (CSP) veya Anahtar Depolama Alanı Sağlayıcısı (KSP) olmalıdır.
+> - ATA Center sertifikasını renewe olmamalıdır. Süresi dolmadan önce yenilemek için doğru yeni bir sertifika oluşturmak ve yeni sertifikayı seçin yoldur. 
+> - ATA Konsolu’na başka bilgisayarlardan erişecekseniz, söz konusu bilgisayarların ATA Center tarafından kullanılan sertifikaya güvendiğinden emin olun; aksi takdirde sayfada oturum açmadan önce Web sitesinin güvenlik sertifikasında sorun olduğunu bildiren bir uyarı sayfası alırsınız.
 
 ## <a name="ata-gateway-requirements"></a>ATA Gateway gereksinimleri
 Bu bölümde, ATA Gateway’in gereksinimleri listelenir.
