@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/7/2017
+ms.date: 8/6/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: ce06038a3c3f2e5a6f2a5d57ad814ab8393c0b0c
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: d3621338070c257d9fa196fba8657a805216383b
+ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -51,7 +51,7 @@ Bu makalede, ATA Center işlevselliğinin kaybolduğu ancak ATA Ağ Geçitlerini
 6. Yedeklenen ATA Center yapılandırmasını içeri aktarın:
     1. Varsayılan ATA Center Sistem Profili belgesini MongoDB’den kaldırın: 
         1. **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** yoluna gidin. 
-        2. `mongo.exe` öğesini çalıştırın. 
+        2. `mongo.exe ATA` öğesini çalıştırın. 
         3. Varsayılan sistem profilini kaldırmak için şu komutu çalıştırın: `db.SystemProfile.remove({})`
     2. Adımdaki yedekleme dosyasını kullanarak şu komutu çalıştırın: `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`</br>
     Yedekleme dosyalarını nasıl bulacağınıza ve içeri aktaracağınıza ilişkin tam açıklama için bkz. [ATA yapılandırmasını dışarı ve içeri aktarma](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
