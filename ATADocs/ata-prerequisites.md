@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/2/2017
+ms.date: 8/6/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0a9d92e5851f1cf64c5e4b4e1ee57d7ee4562d96
-ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
+ms.openlocfilehash: bd3ddca6f233499441bf82a0cdb5a79078df0bf5
+ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -115,8 +115,7 @@ Aşağıdaki tabloda, ATA Center’ın düzgün çalışması için açılması 
 |**Windows Saati** (etki alanına katılmış ise isteğe bağlı)|UDP|123|Etki alanı denetleyicileri|Giden|
 
 > [!NOTE]
-> LDAP kimlik bilgileri etki alanı denetleyicileri ATA Gateway bileşenleri arasındaki test etmek için gereklidir. Testis sonra ve ATA Gateway LDAP normal iletişim bir parçası olarak kullanır, bu kimlik bilgileri geçerliliğini sınamak için etki alanı denetleyicisi ATA Center'dan gerçekleştirilir.
-
+> LDAP ATA Gateway bileşenleri ve etki alanı denetleyicileri arasında kullanılacak kimlik bilgilerini test etmek için gereklidir. Test sonra ve ATA Gateway LDAP kendi normal Çözümleme işleminin bir parçası kullanır, bu kimlik bilgileri geçerliliğini sınamak için etki alanı denetleyicisi ATA Center'dan gerçekleştirilir.
 
 ### <a name="certificates"></a>Sertifikalar
 ATA Center’ın CRL dağıtım noktanıza erişimi olduğundan emin olun. ATA Gateway bileşenlerinin İnternet erişimi yoksa, [CRL’yi el ile içeri aktarma yordamını](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) izleyin ve tüm zincir için CRL dağıtım noktalarının tümünü yükleme işlemini gerçekleştirin.
