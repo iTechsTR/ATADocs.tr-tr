@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bd3ddca6f233499441bf82a0cdb5a79078df0bf5
-ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
+ms.openlocfilehash: dfcdffb3458124cade644cc06a4c359458eb26fe
+ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/14/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -118,9 +118,12 @@ Aşağıdaki tabloda, ATA Center’ın düzgün çalışması için açılması 
 > LDAP ATA Gateway bileşenleri ve etki alanı denetleyicileri arasında kullanılacak kimlik bilgilerini test etmek için gereklidir. Test sonra ve ATA Gateway LDAP kendi normal Çözümleme işleminin bir parçası kullanır, bu kimlik bilgileri geçerliliğini sınamak için etki alanı denetleyicisi ATA Center'dan gerçekleştirilir.
 
 ### <a name="certificates"></a>Sertifikalar
-ATA Center’ın CRL dağıtım noktanıza erişimi olduğundan emin olun. ATA Gateway bileşenlerinin İnternet erişimi yoksa, [CRL’yi el ile içeri aktarma yordamını](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) izleyin ve tüm zincir için CRL dağıtım noktalarının tümünü yükleme işlemini gerçekleştirin.
 
-ATA’nın yüklenmesini kolaylaştırmak için, işlem sırasında otomatik olarak imzalanan sertifikalar yükleyebilirsiniz. Dağıtım sonrasında otomatik olarak imzalanan sertifikayı ATA Gateway tarafından kullanılacak bir iç Sertifika Yetkilisi’nin sertifikasıyla değiştirebilirsiniz.<br>
+ATA’nın yüklenmesini kolaylaştırmak için, işlem sırasında otomatik olarak imzalanan sertifikalar yükleyebilirsiniz. POST dağıtımı, otomatik olarak imzalanan bir iç sertifika yetkilisinden ATA Center tarafından kullanılacak bir sertifika ile değiştirmeniz gerekir.
+
+
+ATA Center ve ATA Gateway bileşenlerinin CRL dağıtım noktanıza erişimi olduğundan emin olun. Bunlar Internet erişimi yoksa, izleyin [CRL'yi el ile içeri aktarma yordamı](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), tüm CRL dağıtım yükleme işlemini gerçekleştirin ve tüm zincir için işaret eder.
+
 
 > [!WARNING]
 > - Varolan bir sertifikayı yenileme işlemi desteklenmiyor. Bir sertifikayı yenilemek için yalnızca yeni bir sertifika oluşturma ve yeni sertifikayı kullanmak üzere ATA yapılandırma yoludur.
@@ -128,8 +131,8 @@ ATA’nın yüklenmesini kolaylaştırmak için, işlem sırasında otomatik ola
 
 > [!NOTE]
 > - Sertifikanın Sağlayıcı Türü, Şifreleme Hizmeti Sağlayıcısı (CSP) veya Anahtar Depolama Alanı Sağlayıcısı (KSP) olmalıdır.
-> - ATA Center sertifikasını renewe olmamalıdır. Süresi dolmadan önce yenilemek için doğru yeni bir sertifika oluşturmak ve yeni sertifikayı seçin yoldur. 
 > - ATA Konsolu’na başka bilgisayarlardan erişecekseniz, söz konusu bilgisayarların ATA Center tarafından kullanılan sertifikaya güvendiğinden emin olun; aksi takdirde sayfada oturum açmadan önce Web sitesinin güvenlik sertifikasında sorun olduğunu bildiren bir uyarı sayfası alırsınız.
+> - ATA sürüm 1.8 ile başlayan Lightweight Gateway ve ATA Gateway bileşenleri kendi sertifikaların yönetilmesine ve bunları yönetmek için bir yönetici etkileşimi gerekiyor.
 
 ## <a name="ata-gateway-requirements"></a>ATA Gateway gereksinimleri
 Bu bölümde, ATA Gateway’in gereksinimleri listelenir.

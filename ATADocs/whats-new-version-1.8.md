@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/8/2017
+ms.date: 8/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: a067dbaaac9ed115baa7ee13bf5dd1099f038eaf
-ms.sourcegitcommit: 5fd505fac6b69b6c732bb2da121eff23c5eb303e
+ms.openlocfilehash: 1ec9308e046a228ac1276eb1aace58eec47e95d0
+ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="whats-new-in-ata-version-18"></a>ATA sürüm 1.8’deki yenilikler
 
@@ -76,6 +76,7 @@ Bu sürüm notları, Advanced Threat Analytics’in bu sürümündeki güncelle�
 
 - Not ekleme seçeneği Kuşkulu Etkinlikler’den kaldırıldı
 - Kuşkulu Etkinlikler’i azaltıcı öneriler, Kuşkulu Etkinlikler zaman satırından kaldırıldı.
+- ATA sürüm 1.8 ile başlayan Lightweight Gateway ve ATA Gateway bileşenleri kendi sertifikaların yönetilmesine ve bunları yönetmek için bir yönetici etkileşimi gerekiyor.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
