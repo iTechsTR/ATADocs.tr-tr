@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/18/2017
+ms.date: 08/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2713f6939c8756d0ecb438e866e6649f13d3c490
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 7a900229942235a175a463a6f581873ce0dab70b
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -88,8 +88,13 @@ ATA Gateway sunucusunda aşağıdaki adımları gerçekleştirin.
 [« 3. Adım](install-ata-step3.md)
 [5. Adım »](install-ata-step5.md)
 
-## <a name="see-also"></a>Ayrıca bkz.
 
+## <a name="related-videos"></a>İlgili videolar
+- [ATA Gateway türü sağ seçme](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+
+## <a name="see-also"></a>Ayrıca Bkz.
+- [ATA POC Dağıtım Kılavuzu](http://aka.ms/atapoc)
+- [ATA boyutlandırma aracı](http://aka.ms/atasizingtool)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [ATA önkoşulları](ata-prerequisites.md)

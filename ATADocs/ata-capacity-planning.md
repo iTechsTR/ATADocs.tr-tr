@@ -12,11 +12,11 @@ ms.prod:
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 54dd8bab3381fc221c75c53191ef052fc83b61ec
-ms.sourcegitcommit: e7f83eb636db00333fe3965324a10a2ef5e2beba
+ms.openlocfilehash: cdc3767fd9fdc00dbb92457c980f6f7e8b99907b
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -211,7 +211,13 @@ Paket/saniye oranını belirlemek için her etki alanı denetleyicisinde aşağ�
 
     ![Saniyedeki paket sayısı sayacının resmi](media/ATA-traffic-estimation-14.png)
 
-## <a name="see-also"></a>Ayrıca bkz.
+
+## <a name="related-videos"></a>İlgili videolar
+- [ATA Gateway türü sağ seçme](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+
+
+## <a name="see-also"></a>Ayrıca Bkz.
+- [ATA boyutlandırma aracı](http://aka.ms/atasizingtool)
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA mimarisi](ata-architecture.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

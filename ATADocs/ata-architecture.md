@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/5/2017
+ms.date: 08/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5410f706e84517eb964e991deeb21001a09d0cef
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: 250c68f0efc7064f7ec4a4578342c935d04e815b
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -180,8 +180,13 @@ ATA’nın Pass-the-Hash, Deneme Yanılma, Gizli grup değişiklikleri ve Honey 
 
 -   Windows Olay İletme’yi yapılandırma<br>ATA’nın olaylarınızı almasının bir diğer yolu da etki alanı denetleyicilerinizi Windows olayları 4776, 4732, 4733, 4728, 4729, 4756 ve 4757’yi ATA Gateway’inize iletecek şekilde yapılandırmaktır. Bir SIEM’iniz olmadığında veya SIEM’iniz şu anda ATA tarafından desteklenmediğinde, bu özellikle yararlı olur. ATA’da Windows Olay İletme hakkında daha fazla bilgi için bkz. [Windows olay iletme özelliğini yapılandırma](configure-event-collection.md#configuring-windows-event-forwarding). Bunun ATA Lightweight Gateway’de değil, yalnızca fiziksel ATA Gateway’lerde geçerli olduğunu unutmayın.
 
+## <a name="related-videos"></a>İlgili videolar
+- [ATA Gateway türü sağ seçme](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+
+
 ## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA önkoşulları](ata-prerequisites.md)
+- [ATA boyutlandırma aracı](http://aka.ms/atasizingtool)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [Windows olay iletme özelliğini yapılandırma](configure-event-collection.md#configuring-windows-event-forwarding)
