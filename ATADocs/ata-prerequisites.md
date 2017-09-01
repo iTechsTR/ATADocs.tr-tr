@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 313ee78070ab991d3d1b30441be8a4cee990eace
-ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
+ms.openlocfilehash: f9c2df3c454e2098277f4c475dc1d69378a90987
+ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2017
+ms.lasthandoff: 08/28/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -58,9 +58,9 @@ Bu bölümde, ATA yüklemesine başlamadan önce toplamanız gereken bilgiler ve
 
 -   Microsoft Message Analyzer, bir ATA Gateway veya Lightweight Gateway yüklemeyin. İleti Çözümleyicisi sürücüsü, ATA Gateway ve Lightweight Gateway sürücüleriyle çakışır. ATA Gateway’de Wireshark çalıştırırsanız Wireshark yakalamasını durdurduktan sonra Microsoft Advanced Threat Analytics Gateway Service’i yeniden başlatmanız gerekir. Aksi durumda, trafik yakalama ağ geçidi durdurur. ATA Lightweight Gateway’de Wireshark çalıştırmanın, ATA Lightweight Gateway’i etkilemediğini unutmayın.
 
--    Önerilir: Kullanıcı, Silinmiş Nesneler kapsayıcısı üzerinde salt okuma izinlerine sahip olmalıdır. Bu, ATA’nın etki alanında toplu nesne silme işlemlerini algılamasını sağlar. Silinmiş Nesneler kapsayıcısı üzerinde salt okuma izinlerini yapılandırma hakkında bilgi için, [Dizin Nesnesi Üzerindeki İzinleri Görüntüleme veya Ayarlama](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) konusunun **Silinmiş nesne kapsayıcısı üzerindeki izinleri değiştirme** bölümüne bakın.
+-    Önerilen: Kullanıcının silinmiş nesneler kapsayıcısı üzerinde salt okuma izinleri olmalıdır. Bu, ATA'ın etki alanında toplu nesne silme işlemlerini algılamasını sağlar. Silinmiş nesneler kapsayıcısı üzerinde salt okuma izinlerini yapılandırma hakkında daha fazla bilgi için bkz: **Silinmiş nesne kapsayıcısı üzerindeki izinleri değiştirme** bölümüne [görünümü veya bir dizin nesnesiizinleriayarlayın](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) konu.
 
--   İsteğe bağlı: Ağ etkinlikleri olmayan bir kullanıcının kullanıcı hesabı. Bu hesap ATA Honeytoken kullanıcısı olarak yapılandırılır. Honeytoken kullanıcısını yapılandırmak için, kullanıcı adına değil kullanıcı hesabının SID değerine ihtiyacınız vardır. Daha fazla bilgi için [ATA Algılama Ayarlarıyla Çalışma](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) konusuna bakın.
+-   İsteğe bağlı: Ağ etkinlikleri olmayan bir kullanıcının kullanıcı hesabı. Bu hesap ATA Honeytoken kullanıcısı olarak yapılandırılır. Honeytoken kullanıcısını yapılandırmak için kullanıcı adına değil kullanıcı hesabının SID'si gerekir. Daha fazla bilgi için bkz: [ATA algılama ayarlarıyla çalışma](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) konu.
 
 -   İsteğe bağlı: Etki alanı denetleyicilerinden gelen ve denetleyicilere giden ağ trafiğini toplama ve çözümlemeye ek olarak ATA; ATA Pass-the-Hash, Deneme Yanılma, Gizli grup değişikliği ve Honey Token tehditlerini algılamayı daha da güçlendirmek için 4776, 4732, 4733, 4728, 4729, 4756 ve 4757 numaralı Windows olaylarını kullanabilir. Bunlar, SIEM’inizden alınabileceği gibi etki alanı denetleyicinizden Windows Olay İletme’yi ayarlanarak da alınabilir. Toplanan olaylar ATA’ya etki alanı denetleyicisi ağ trafiği yoluyla sağlanmayan ek bilgiler sağlar.
 
