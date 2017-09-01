@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/20/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fcee6f1887e6842d1ccdfd2863620af8a5a8279f
-ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
+ms.openlocfilehash: 62ce117423a189a1c2ce00b862f323db6ed328cb
+ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2017
+ms.lasthandoff: 08/28/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -59,7 +59,7 @@ Her kuşkulu etkinliğin aşağıdaki bilgileri bulunur:
 ## <a name="filter-suspicious-activities-list"></a>Kuşkulu etkinlikler listesini filtreleme
 Kuşkulu etkinlikler listesini filtrelemek için:
 
-1.  Ekranın sol tarafındaki **Filtre ölçütü** bölmesinde şunlardan birini seçin: **Tümü**, **Açık**, **Çözüldü** veya **Çıkarıldı**.
+1.  İçinde **göre filtre** ekranın sol tarafındaki bölmesinde aşağıdakilerden birini seçin: **tüm**, **açık**, **kapalı**, veya  **Gizlenen**.
 
 2.  Listeyi daha fazla filtrelemek için, **Yüksek**, **Orta** veya **Düşük** ayarını seçin.
 
@@ -93,7 +93,7 @@ Bir şüpheli etkinliğin sağ üst köşesindeki üç nokta simgesine tıklayar
 -   **Kapalı**: Belirlediğiniz, araştırdığınız ve düzeltip riskini azalttığınız şüpheli etkinlikleri izlemek için kullanılır.
 
     > [!NOTE]
-    > Kısa bir süre içinde aynı etkinlik yeniden algılanırsa, ATA çözülmüş bir etkinliği yeniden açabilir.
+    > Aynı etkinlik ise, ATA kapalı bir etkinliği yeniden açabilir yeniden bir kısa süre içinde algılandı.
 
 -   **Gösterme**: Bir etkinliği göstermemek, etkinliği o an için yoksaymak ve yalnızca yeni bir örnek ortaya çıkarsa uyarı almak istediğiniz anlamına gelir. Yani benzer bir uyarı olduğunda ATA bunu tekrardan açmayacaktır. Ancak uyarı 7 gün sonra tekrar görülürse yeniden uyarılırsınız.
 

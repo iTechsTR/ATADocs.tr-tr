@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/2/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 59e5cafcff7b84ffb9dc161cd0b50cd3014e455a
-ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
+ms.openlocfilehash: cdd046eeaca1d8aeb7ea3afa001b34b82cb468b0
+ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 08/28/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -35,11 +35,20 @@ ATA Sistem Durumu Merkezi, menü çubuğundaki Sistem Durum Merkezi’nin üst k
 ### <a name="managing-ata-health"></a>ATA sistem durumunu yönetme
 Sisteminizin bir bütün olarak durumunu denetlemek için, menü çubuğunda Sistem Durumu Merkezi simgesine tıklayın. ![ATA Sistem Durumu Merkezi simgesi](media/ATA-red-dot.png)
 
--   Tüm açık uyarılar, **Çözüldü** veya **Çıkarıldı** olarak ayarlanarak yönetilebilir. Uyarıda **Açık** seçeneğine tıklayın ve ekranı aşağı kaydırarak **Çözüldü** veya **Çıkarıldı** seçeneğine gelin.
+-   Tüm açık uyarılar ayarlanarak yönetilebilir **Kapat**, **bastır**, veya **silmek** uyarı köşesindeki üç noktaya tıklatıp seçiminizden.
 
--   Bir sorunu çözerseniz ve ATA sorunun kalıcı olduğunu algılarsa, sorun otomatik olarak **Açık** sorunlar listesine geri taşınır. ATA açık bir sorunun çözüldüğünü algılarsa, sorun otomatik olarak **Çözülen** sorunlar listesine taşınır.
+-   **Açık**: Tüm yeni şüpheli etkinlikler bu listede gösterilir.
 
--   **Çıkarılan** sorunlar, ATA’nın denetlemeye devam etmesini istemediğiniz sorunlardır. Örneğin, var olduğunu bildiğiniz ve çözmeyi planlamadığınız bir sorunla ilgili olarak uyarılırsanız ancak bu sorun hakkında bildirim almaya devam etmek ve artık bunu **Açık** sorunlar listesinde görmek istemiyorsanız, sorunu **Çıkarıldı** olarak ayarlayabilirsiniz.
+-   **Kapalı**: Belirlediğiniz, araştırdığınız ve düzeltip riskini azalttığınız şüpheli etkinlikleri izlemek için kullanılır.
+
+    > [!NOTE]
+    > Aynı etkinlik ise, ATA kapalı bir etkinliği yeniden açabilir yeniden bir kısa süre içinde algılandı.
+
+-   **Gösterme**: Bir etkinliği göstermemek, etkinliği o an için yoksaymak ve yalnızca yeni bir örnek ortaya çıkarsa uyarı almak istediğiniz anlamına gelir. Yani benzer bir uyarı olduğunda ATA bunu tekrardan açmayacaktır. Ancak uyarı 7 gün sonra tekrar görülürse yeniden uyarılırsınız.
+
+- **Sil**: Bir uyarıyı silerseniz uyarı sistemden ve veritabanından silinir ve geri YÜKLEYEMEZSİNİZ. Sil’e tıkladıktan sonra aynı türdeki tüm şüpheli etkinlikleri silebilirsiniz.
+
+
 
 ![ATA Sistem Durumu Merkezi sorunlarının resmi](media/ATA-Health-Issue.JPG)
 

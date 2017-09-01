@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/2/2017
+ms.date: 8/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7067477066a2341fa15b2b0d283b2d7721239d5e
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: 793273aeea3c78b54d4dc189acaff9bdf8ae58f9
+ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 08/28/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -65,7 +65,7 @@ Bunlar ATA Konsolu’nun başlıca öğeleridir.
 
 ### <a name="attack-time-line"></a>Saldırı zaman çizelgesi
 
-Bu, ATA Konsolu’nda oturum açtığınızda gittiğiniz varsayılan giriş sayfasıdır. Varsayılan olarak, tüm kuşkulu etkinliler saldırı zaman çizelgesinde gösterilir. Saldırı zaman çizelgesine filtre uygulayarak, Tüm, Açık, Çıkarılan veya Çözülen kuşkulu etkinlikleri görüntüleyebilirsiniz. Ayrıca, her etkinliğe atanmış olan önem düzeyini de görebilirsiniz.
+Bu, ATA Konsolu’nda oturum açtığınızda gittiğiniz varsayılan giriş sayfasıdır. Varsayılan olarak, tüm kuşkulu etkinliler saldırı zaman çizelgesinde gösterilir. Tüm, saldırı zaman çizelgesine filtre açık, çıkarılan veya Suppressed kuşkulu etkinlikler. Ayrıca, her etkinliğe atanmış olan önem düzeyini de görebilirsiniz.
 
 ![ATA saldırı zaman çizelgesi resmi](media/ATA-Suspicious-Activity-Timeline.jpg)
 
@@ -94,8 +94,6 @@ Sistem Durumu Merkezi, ATA dağıtımınızda düzgün çalışmayan bir şey ol
 ![ATA sistem durumu merkezinin resmi](media/ATA-Health-Issue.jpg)
 
 Sisteminizde bağlantı hatası veya bağlantısı kesik ATA Gateway gibi herhangi bir sorunla karşılaşıldığında, Sistem Durumu Merkezi simgesi kırmızı bir nokta göstererek bu durumu öğrenmenizi sağlar. ![ATA sistem durumu merkezi kırmızı noktasının resmi](media/ATA-Health-Center-Alert-red-dot.png)
-
-Sistem Durumu Merkezi uyarıları bırakılabilir veya çözülebilir ve bu uyarılar önem derecesine bağlı olarak Yüksek, Orta ve Düşük kategorilerine ayrılır. Bir uyarıyı çözerseniz ve ATA hizmeti bunu hala etkin olarak algılıyorsa, uyarı otomatik olarak Açık uyarılar listesine taşınır. Sistem artık bir uyarı için neden olmadığını (durumun düzeltildiğini) algılarsa, uyarı otomatik olarak çözülen uyarı listesine taşınır.
 
 ### <a name="user-and-computer-profiles"></a>Kullanıcı ve bilgisayar profilleri
 

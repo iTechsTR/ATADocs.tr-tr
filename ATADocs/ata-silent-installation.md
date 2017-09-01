@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/20/2017
+ms.date: 08/29/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,18 +13,18 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7e130da2b5a177658e176a428101c11d02bc2a3f
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: c38db312ea877b63580d745153aa58ea34a160a6
+ms.sourcegitcommit: 9ce330726e5de8c05eae6a20d3e6c1d8bef3cd0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 08/29/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
 
-
 # <a name="ata-silent-installation"></a>ATA’yı Sessiz Yükleme
 Bu makalede ATA’yı sessizce yüklemeye dair yönergeler mevcuttur.
+
 ## <a name="prerequisites"></a>Önkoşullar
 
 ATA sürüm 1.8 için Microsoft .NET Framework 4.6.1’in yüklü olması gerekir. 
@@ -134,6 +134,11 @@ ATA Center’ı sessizce kaldırma işlemini gerçekleştirmek için şu komutu 
     "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
 ## <a name="ata-gateway-silent-installation"></a>ATA Gateway Sessiz Yüklemesi
+
+> [!NOTE]
+> System Center Configuration Manager veya diğer yazılım dağıtım sistemi aracılığıyla ATA Lightweight Gateway sessiz dağıtırken, iki dağıtım paketleri oluşturmak için önerilir:</br>-Net Framework 4.6.1 etki alanı denetleyicisini yeniden başlatma da dahil olmak üzere</br>-ATA Gateway. </br>ATA Gateway paketini .net dağıtımını bağımlı hale Framework paket dağıtımı. </br>Alma [.Net Framework 4.6.1 çevrimdışı dağıtım paketi](https://www.microsoft.com/download/details.aspx?id=49982). 
+
+
 ATA Gateway’i sessizce yüklemek için aşağıdaki komutu kullanın:
 
 **Söz dizimi**:
