@@ -1,7 +1,7 @@
 # Anlama ve Keşfetme
 ## [Microsoft Advanced Threat Analytics nedir?](what-is-ata.md)
 ## [ATA hangi tehditleri algılar?](ata-threats.md)
-## ATA yenilikler nelerdir?
+## ATA’daki Yenilikler
 ### [ ATA sürüm 1.8’deki yenilikler](whats-new-version-1.8.md)
 #### [ATA 1.8’e güncelleştirme - geçiş kılavuzu](ata-update-1.8-migration-guide.md)
 ### [ATA sürüm 1.7’deki yenilikler](whats-new-version-1.7.md)
@@ -16,24 +16,23 @@
 ## [ATA Mimarisi](ata-architecture.md)
 ## [ATA kapasitenizi planlama](ata-capacity-planning.md)
 ## [ATA Önkoşulları](ata-prerequisites.md)
-# Dağıtma
-## Yükleme öncesi adımlar
+# Dağıt
+## [1 İndirme ve kurma merkezi](install-ata-step1.md)
+## [2 AD’ye bağlanma](install-ata-step2.md)
+## [3 ATA Gateway paketini indirme](install-ata-step3.md)
+## [4 ATA Gateway’i yükleme](install-ata-step4.md)
+## [5 ATA Gateway’i yapılandırma](install-ata-step5.md)
+## [6 Olay koleksiyonu ve VPN](install-ata-step6.md)
+## [7. Adım Dışlamalar ve Honeytoken](install-ata-step7.md)
+## [Sessiz yükleme](ata-silent-installation.md)
+## ATA Gateway ek adımlar
 ### [1. Bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md)
 ### [2. Bağlantı noktası yansıtmayı doğrulama](validate-port-mirroring.md)
 ### [3. Windows Olay İletme’yi Yapılandırma](configure-event-collection.md)
-## ATA’yı yükleme
-### [1. Adım Merkezi indirip yükleme](install-ata-step1.md)
-### [2. Adım AD’ye bağlanma](install-ata-step2.md)
-### [3. Adım ATA Gateway paketini indirme](install-ata-step3.md)
-### [4. Adım ATA Gateway’i yükleme](install-ata-step4.md)
-### [5. Adım ATA Gateway’i yapılandırma](install-ata-step5.md)
-### [6. Adım Olay koleksiyonu ve VPN](install-ata-step6.md)
-### [Adım 7 dışarıda kalanları ve Honeytoken](install-ata-step7.md)
-### [Sessiz yükleme](ata-silent-installation.md)
 # Bu çözümdeki tüm sanal makineleri güncelleştirmek için Windows Server Update Services ile birlikte
 ## [ATA Konsolu ile çalışma](working-with-ata-console.md)
 ## [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
-###[Algılamaların dışında varlıkları dışlama](excluding-entities-from-detections.md)
+###[Varlıkları algılamalardan dışlama](excluding-entities-from-detections.md)
 ## [ATA bildirimlerini ayarlama](setting-ata-alerts.md)
 ## [ATA raporları](reports.md)
 ## [ATA Sistem Durumu Merkezi](ata-health-center.md)
