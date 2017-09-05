@@ -16,6 +16,7 @@
 ## [ATA Mimarisi](ata-architecture.md)
 ## [ATA kapasitenizi planlama](ata-capacity-planning.md)
 ## [ATA Önkoşulları](ata-prerequisites.md)
+## [Önerilen yükseltme yolu](upgrade-path.md)
 # Dağıt
 ## [1 İndirme ve kurma merkezi](install-ata-step1.md)
 ## [2 AD’ye bağlanma](install-ata-step2.md)
