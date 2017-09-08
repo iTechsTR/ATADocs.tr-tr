@@ -45,8 +45,7 @@
 ## [ATA yapılandırmasını Dışarı/İçeri aktarma](ata-configuration-file.md)
 ## [ATA telemetrisini yönetme](manage-telemetry-settings.md)
 # Araştırma
-## [Sahte yetkilendirme veri saldırılarını kullanarak ayrıcalık yükseltme](use-case-forged-pac.md)
-## [DNS kullanarak keşif](use-case-dns.md)
+## [Şüpheli etkinlik kılavuzu](suspicious-activity-guide.md)
 # Sorunları Gider
 ## [Denetim günlükleriyle çalışma](troubleshoot-audit.md)
 ## [Bilinen sorunları giderme](troubleshooting-ata-known-errors.md)

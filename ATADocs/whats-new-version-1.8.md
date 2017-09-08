@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/14/2017
+ms.date: 9/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 1ec9308e046a228ac1276eb1aace58eec47e95d0
-ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
+ms.openlocfilehash: 2793a602a0cd0fb9902197acd45dd5bdd4612ea4
+ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/03/2017
 ---
 # <a name="whats-new-in-ata-version-18"></a>ATA sürüm 1.8’deki yenilikler
 
@@ -126,6 +126,14 @@ Windows Server 2016 Core’da hatayı görmeyebilirsiniz. Ancak yüklemeye çal�
 **Açıklama**: ATA 1.8 ve üzeri sürümlerde ATA Gateway ile ATA Center, http protokolünü kullanarak iletişim kurar. ATA Gateway’i yüklediğiniz makine ATA Center’a bağlanmak için bir ara sunucusu kullanıyorsa, bu iletişim bozulabilir. 
 
 **Geçici çözüm**: ATA Gateway hizmet hesabında, ara sunucu kullanımını devre dışı bırakın. Gelecek sürümlerde bu sorunu düzeltmeye yönelik bir güncelleştirme sunulacaktır.
+
+### <a name="report-settings-reset"></a>Rapor ayarlarını sıfırla
+
+**Belirtiler**: 1.8 güncelleştirme 1'ı güncelleştirdiğinizde Zamanlanmış raporlar yapılan herhangi bir ayarı temizlenir.
+
+**Açıklama**: 1.8 sıfırlar 1.8 güncelleştirme 1 için güncelleştirme raporları zamanlaması ayarlar.
+
+**Geçici çözüm**: 1.8 güncelleştirme 1 için güncelleştirme önce rapor ayarların bir kopyasını oluşturmak ve bunları yeniden girin, bu da yapılabilir daha fazla bilgi için bir komut dosyası aracılığıyla bkz [ATA yapılandırmasını içeri ve dışarı aktarmak](ata-configuration-file.md).
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
