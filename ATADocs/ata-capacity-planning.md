@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/25/2017
+ms.date: 9/19/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cdc3767fd9fdc00dbb92457c980f6f7e8b99907b
-ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
+ms.openlocfilehash: 713d0070f6cc8949ceab80b2940469c1abc8adab
+ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2017
+ms.lasthandoff: 09/19/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -63,7 +63,7 @@ Kullanıcı davranış analizi için ATA Center’a en az 30 günlük veri gerek
 
 &#42;&#42;Ortalama sayılar (En yüksek sayılar)
 > [!NOTE]
-> -   ATA Center’ın izlenen tüm etki alanı denetleyicilerinden saniye başına işleyebileceği toplam miktar, en fazla 1 milyon pakettir. Bazı ortamlarda aynı ATA Center, 400.000’i aşan genel trafikle başa çıkabilir. Bu tür ortamlar konusunda yardım almak için askcesec@microsoft.com ile iletişime geçin.
+> -   ATA Center’ın izlenen tüm etki alanı denetleyicilerinden saniye başına işleyebileceği toplam miktar, en fazla 1 milyon pakettir. Bazı ortamlarda, aynı ATA Center 1 M yüksektir genel trafiği işleyebilir. Bu tür ortamlar konusunda yardım almak için askcesec@microsoft.com ile iletişime geçin.
 > -   Burada belirtilen depolama alanı miktarları net değerlerdir. Her zaman gelecekteki büyümeyi de hesaba katmalı ve veritabanının bulunduğu diskte en az %20 boş alan bulunduğundan emin olmalısınız.
 > -   Boş alanınız en az 20 ulaşırsa % ya da 200 GB, eski veri koleksiyonu silinir. Bu silme işlemi, boş alan %5 veya 50 GB’a inene kadar devam eder; bu noktaya ulaşıldığında ise veri koleksiyonu çalışmayı durdurur.
 > - Bu makalede açıklanan performans gereksinimleri karşılandığı sürece, ATA Center’ın herhangi bir IaaS satıcısında dağıtılması mümkündür.
