@@ -1,11 +1,11 @@
 ---
-title: "Advanced Threat Analytics’i yükleme - 7. Adım | Microsoft Docs"
+title: "Yükleme Gelişmiş tehdit analizi - 8. adım | Microsoft Docs"
 description: "ATA’yı yükleme işleminin son adımında Honeytoken kullanıcısını yapılandırırsınız."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/03/2017
+ms.date: 09/19/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,22 +13,22 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f5cb87148741c92dc7832da16cc37a749fa72fae
-ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
+ms.openlocfilehash: 3a8ccb1412bbd8e2013c84d36f4142301159c46c
+ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2017
+ms.lasthandoff: 09/19/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
 
 
-# <a name="install-ata---step-7"></a>ATA’yı Yükleme - 7. Adım
+# <a name="install-ata---step-8"></a>Ata'yı - adım 8 yükleme
 
 >[!div class="step-by-step"]
-[« 6. Adım](install-ata-step6.md)
+[«Adım 7](vpn-integration-install-step.md)
 
-## <a name="step-7-configure-ip-address-exclusions-and-honeytoken-user"></a>7. Adım IP adresi dışlamalarını ve Honeytoken kullanıcısını yapılandırma
+## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>8. Adım IP adresi dışlamalarını ve Honeytoken kullanıcısını yapılandırma
 ATA, belirli IP adreslerinin veya kullanıcıların birkaç algılama yönteminden dışlanmasına olanak verir. 
 
 Örneğin, bir **DNS Keşfi dışlaması** DNS’i tarama mekanizması olarak kullanan bir güvenlik tarayıcısı olabilir. Bu dışlama işlemi ATA’nın böyle tarayıcıları yoksaymasına yardımcı olur. *Anahtar Geçişi* dışlama işlemine örnek olarak bir NAT aygıtı gösterilebilir.    
@@ -64,7 +64,7 @@ ATA’nın çalışır durumda olduğunu ve ağınızdaki ihlalleri yakalayıp y
 
 
 >[!div class="step-by-step"]
-[« 6. Adım](install-ata-step6.md)
+[«Adım 7](vpn-integration-install-step.md)
 
 
 
