@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 05550e56479de0390d7f2d990ffae4b319dec9f9
-ms.sourcegitcommit: 74cce0c1d52086fdf10ea70f590b306c1c7e8b14
+ms.openlocfilehash: cd6e2968cad2393e2f56ece03be880622a3a0c6a
+ms.sourcegitcommit: 79abfe095f5def259ebb5018d49f9aadd5f2d4f4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/01/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -285,7 +285,7 @@ Windows Server'ın daha eski sürümleri güvenlik açıkları izin ayrıcalıkl
 
 2. Hedef bilgisayar (altında **ACCESSED** sütun) MS14-068 (etki alanı denetleyicisi) veya MS11-013 (sunucu) ile düzeltme eki uygulandı? Yanıt Evet ise, **Kapat** (Yanlış pozitif olması) şüpheli etkinlik.
 
-3. Kaynak bilgisayar uymuyorsa, (altında **FROM** sütun) PAC değiştirmek için bilinen bir işletim sistemi/uygulama? Yanıt Evet ise, **bastır** (zararsız true olumlu olduğu) şüpheli etkinlik.
+3. Kaynak bilgisayar çalışmazsa (altında **FROM** sütun) PAC değiştirmek için bilinen bir işletim sistemi/uygulama? Yanıt Evet ise, **bastır** (zararsız true olumlu olduğu) şüpheli etkinlik.
 
 4. Yanıt ise Hayır Yukarıdaki iki sorulara bu kötü amaçlı olduğunu varsayalım.
 
