@@ -38,14 +38,16 @@
 ## [ATA rol grupları](ata-role-groups.md)
 ## [ATA Center yapılandırmasını değiştirme](modifying-ata-center-configuration.md)
 ## [Etki alanı bağlantı parolasını değiştirme](modifying-ata-config-dcpassword.md)
-###[Varlıkları algılamalardan dışlama](excluding-entities-from-detections.md)
+## [Varlıkları algılamalardan dışlama](excluding-entities-from-detections.md)
 ## [ATA yapılandırmasını Dışarı/İçeri aktarma](ata-configuration-file.md)
 ## [ATA telemetrisini yönetme](manage-telemetry-settings.md)
 ## [ATA bildirimlerini ayarlama](setting-ata-alerts.md)
 ## [Syslog ve E-posta sunucusu ayarlarını belirleme](setting-syslog-email-server-settings.md)
-## [ATA SIEM günlük başvurusu](cef-format-sa.md)
 ## [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
 ## [ATA Konsolu ile çalışma](working-with-ata-console.md)
+## [ATA başvuru bilgileri]
+### [ATA SIEM günlük başvurusu](cef-format-sa.md)
+### [Olay Kimliği başvuru](event-id-reference.md)
 # Araştırma
 ## [Şüpheli etkinlik kılavuzu](suspicious-activity-guide.md)
 # Sorunları Gider
