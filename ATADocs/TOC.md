@@ -45,7 +45,7 @@
 ## [Syslog ve E-posta sunucusu ayarlarını belirleme](setting-syslog-email-server-settings.md)
 ## [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
 ## [ATA Konsolu ile çalışma](working-with-ata-console.md)
-## [ATA başvuru bilgileri]
+## ATA başvuru bilgileri
 ### [ATA SIEM günlük başvurusu](cef-format-sa.md)
 ### [Olay Kimliği başvuru](event-id-reference.md)
 # Araştırma
