@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 9/24/2017
+ms.date: 10/25/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b681a6a27189d2e1aec3f7f9913b97f9e7717911
-ms.sourcegitcommit: 47b2b9ebaadff79c087d14f86462d3d8102cc551
+ms.openlocfilehash: 2f720118b1d9ac08f26b7057e5c7b6706ff4b0b1
+ms.sourcegitcommit: 0cc999b20e919abe4d6edaedee78185788a3e3b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2017
+ms.lasthandoff: 10/25/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -60,7 +60,7 @@ Bu bölümde, ATA yüklemesine başlamadan önce toplamanız gereken bilgiler ve
 
 -    Önerilen: Kullanıcının silinmiş nesneler kapsayıcısı üzerinde salt okuma izinleri olmalıdır. Bu, ATA'ın etki alanında toplu nesne silme işlemlerini algılamasını sağlar. Silinmiş nesneler kapsayıcısı üzerinde salt okuma izinlerini yapılandırma hakkında daha fazla bilgi için bkz: **Silinmiş nesne kapsayıcısı üzerindeki izinleri değiştirme** bölümüne [görünümü veya bir dizin nesnesiizinleriayarlayın](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) konu.
 
--   İsteğe bağlı: Ağ etkinlikleri olmayan bir kullanıcının kullanıcı hesabı. Bu hesap ATA Honeytoken kullanıcısı olarak yapılandırılır. Honeytoken kullanıcısını yapılandırmak için kullanıcı adına değil kullanıcı hesabının SID'si gerekir. Daha fazla bilgi için bkz: [ATA algılama ayarlarıyla çalışma](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) konu.
+-   İsteğe bağlı: Ağ etkinlikleri olmayan bir kullanıcının kullanıcı hesabı. Bu hesap ATA Honeytoken kullanıcısı olarak yapılandırılır. Honeytoken kullanıcısını yapılandırmak için kullanıcı adına değil kullanıcı hesabının SID'si gerekir. Daha fazla bilgi için bkz: [yapılandırma IP adresi dışlamaları ve Honeytoken kullanıcısını](install-ata-step7.md).
 
 -   İsteğe bağlı: toplama ve ve giden ağ trafiğini çözümlemenin yanı sıra etki alanı denetleyicilerinden, ATA Windows olaylarını 4776, 4732, 4733, 4728, 4729, 4756 ve 4757 daha fazla geliştirmek için ATA Pass--Hash, deneme yanılma saldırısı, hassas gruplara değişikliği kullanabilirsiniz ve Belirteçleri algılamaların honey. Bunlar, SIEM’inizden alınabileceği gibi etki alanı denetleyicinizden Windows Olay İletme’yi ayarlanarak da alınabilir. Toplanan olaylar ATA’ya etki alanı denetleyicisi ağ trafiği yoluyla sağlanmayan ek bilgiler sağlar.
 

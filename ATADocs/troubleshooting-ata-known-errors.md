@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/20/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 2362f6bf64147b972e9c45e3b97bab4280c6eeac
-ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
+ms.openlocfilehash: 09936cf9f86711ea6d48d0571178d2387694d412
+ms.sourcegitcommit: 835ea2b8190eb753aaf8d400531040ce1845d75a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/23/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -48,12 +48,11 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 |System.ApplicationException: ETW oturumu MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329 başlatılamıyor|HOSTS dosyasında makinenin kısa adına işaret eden bir ana bilgisayar girişi var|Ana bilgisayar girişini C:\Windows\System32\drivers\etc\HOSTS dosyasından kaldırın ya da bir FQDN olarak değiştirin.|
 |System.IO.IOException: Uzak taraf taşıma akışını kapattığından kimlik doğrulaması başarısız oldu.|TLS 1.0 ATA Gateway'de devre dışıdır, ancak .net TLS 1.2 kullanmak üzere ayarlanmış|Aşağıdaki seçeneklerden birini kullanın: </br> TLS 1.0 ‘ı ATA Gateway’de etkinleştirme </br>TLS 1.2 .net üzerinde SSL ve TLS, işletim sistemi Varsayılanları şu şekilde kullanmak için kayıt defteri anahtarlarını ayarlayarak etkinleştirin: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 |System.TypeLoadException: 'Microsoft.Opn.Runtime.Values.BinaryValueBufferManager' türü, 'Microsoft.Opn.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' derlemesinden yüklenemiyor|ATA Gateway gerekli ayrıştırma dosyalarını yüklemede başarısız oldu.|Microsoft İleti Çözümleyicisi’nin yüklü olup olmadığını kontrol edin. İleti Çözümleyicisi’nin ATA Gateway veya Lightweight Gateway ile birlikte yüklü olması desteklenmemektedir. İleti Çözümleyicisi'ni kaldırın ve Gateway hizmetini yeniden başlatın.|
-|VMware üzerinde Lightweight Gateway kullanılırken bağlantı noktası yansıtılmış trafik uyarıları bırakıldı|VMware sanal makinelerinde DC’leri kullanıyorsanız **Bağlantı noktası yansıtma trafiği bırakıldı** uyarıları alabilirsiniz. Bunun sebebi, bir VMware yapılandırma uyuşmazlığı olabilir. |Bu uyarıları önlemek için aşağıdaki ayarların 0 veya Devre Dışı olarak ayarlandığını denetleyebilirsiniz: TsoEnable, LargeSendOffload, IPv4, TSO Veri Boşaltma. Ayrıca, IPv4 Büyük TSO Boşaltma’yı devre dışı bırakabilirsiniz. Daha fazla bilgi için VMware belgelerinize başvurun.|
 |System.Net.WebException: Uzak sunucu bir hata döndürdü: (407) Ara Sunucu Kimlik Doğrulaması Gerekli|ATA Center ile ATA Gateway iletişimi ara sunucu tarafından kesiliyor.|ATA Gateway makinesinde ara sunucuyu devre dışı bırakın. <br></br>Ara sunucu ayarlarının hesaba göre değişebileceğini unutmayın.|
 |System.IO.DirectoryNotFoundException: Sistem, belirtilen yolu bulamıyor. (HRESULT: 0x80070003 özel durumu)|ATA’yı çalıştırması gereken bir veya daha fazla hizmet başlatılamadı.|Aşağıdaki hizmetleri başlatın: <br></br>Performans Günlükleri ve Uyarıları (PLA), Görev Zamanlayıcı (Zamanlama).|
 |System.Net.WebException: Uzak sunucu bir hata döndürdü: (403) Yasak|ATA Gateway veya Lightweight Gateway ATA Center güvenilir olmadığı için bir HTTP bağlantısı kurmadan alınamaz.|NetBIOS adı ve ATA Center FQDN'sini güvenilen Web siteleri listesine ekleyin ve Interne Explorer (veya yapılandırılmış NetBIOS/FQDN farklı olması durumunda yapılandırma belirtildiği gibi ATA Center adı) önbellekte temizleyin.|
 |System.Net.Http.HttpRequestException: PostAsync başarısız [requestTypeName StopNetEventSessionRequest =]|ATA Gateway veya ATA Lightweight Gateway olamaz durdurun ve WMI sorunu nedeniyle ağ trafiğini toplar ETW oturumunu Başlat|' Ndaki yönergeleri izleyin [WMI: WMI deposunu yeniden](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/) WMI sorunu gidermek için|
-
+|System.Net.Sockets.SocketException: Yuva erişim izinlerini tarafından yasaklanmış bir şekilde erişmek için girişimde bulunuldu|Başka bir uygulama ATA Gateway'de bağlantı noktası 514 kullanıyor|Kullanım `netstat -o` Bu bağlantı noktası hangi işlemin kullandığını kurmak için.|
  
 ## <a name="deployment-errors"></a>Dağıtım hataları
 > [!div class="mx-tableFixed"]
