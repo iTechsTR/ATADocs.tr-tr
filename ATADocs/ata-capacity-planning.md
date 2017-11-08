@@ -5,25 +5,25 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 9/19/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 713d0070f6cc8949ceab80b2940469c1abc8adab
-ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
+ms.openlocfilehash: a0cc958cd7c802d02c96b6d7d3bc7e7180bd3d95
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
 
 
 # <a name="ata-capacity-planning"></a>ATA Kapasite Planlaması
-Bu konu, ağınızı izlemek için kaç ATA sunucusuna ihtiyacınız olduğunu belirlemenize yardımcı olur. Ayrıca kaç ATA Gateway ve/veya ATA Lightweight Gateway’e ihtiyacınız olduğu ve ATA Center ve ATA Gateway’leriniz için sunucu kapasitesi hakkında yol gösterir.
+Bu makalede izlemesi için kaç ATA sunucusuna ihtiyacınız belirlemenize yardımcı olur. Yardımcı kaç ATA Gateway ve/veya ATA Lightweight Gateway gereksinimini ve ATA Center ve ATA Gateway için sunucu kapasitesini şekil.
 
 > [!NOTE] 
 > Bu makalede açıklanan performans gereksinimleri karşılandığı sürece, ATA Center herhangi bir IaaS satıcısında dağıtılabilir.
@@ -123,7 +123,7 @@ Bir ATA Lightweight Gateway, etki alanı denetleyicisinin oluşturduğu ağ traf
 > -   Etki alanı denetleyicisinde, ATA Lightweight Gateway için gereken kaynaklar yoksa etki alanı denetleyicisi performansı bundan etkilenmez ancak ATA Lightweight Gateway gerektiği gibi çalışmayabilir.
 > -   Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
 > -   En iyi performans için, ATA Lightweight Gateway’in **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.
-> -   ATA ikilileri, [ATA günlükleri](troubleshooting-ata-using-logs.md) ve [performans günlükleri](troubleshooting-ata-using-perf-counters.md) için gereken alan dahil olmak üzere en az 5 GB’lık boş alan gereklidir ve önerilen boş alan ise 10 GB’tır.
+> -   En az 5 GB alanı gereklidir ve 10 GB önerilir, ATA ikili dosyaları için gerekli alanı dahil olmak üzere [ATA günlüklerini](troubleshooting-ata-using-logs.md), ve [performans günlükleri](troubleshooting-ata-using-perf-counters.md).
 
 
 ### <a name="ata-gateway-sizing"></a>ATA Gateway Boyutlandırması
@@ -158,7 +158,7 @@ Bağlantı noktası yansıtmayla ilgili önemli noktalar, her bir veri merkezi v
 > [!NOTE] 
 > -   Dinamik bellek desteklenmez.
 > -   En iyi performans için, ATA Gateway’in **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.
-> -   ATA ikilileri, [ATA günlükleri](troubleshooting-ata-using-logs.md) ve [performans günlükleri](troubleshooting-ata-using-perf-counters.md) için gereken alan dahil olmak üzere en az 5 GB’lık boş alan gereklidir ve önerilen boş alan ise 10 GB’tır.
+> -   En az 5 GB alanı gereklidir ve 10 GB önerilir, ATA ikili dosyaları için gerekli alanı dahil olmak üzere [ATA günlüklerini](troubleshooting-ata-using-logs.md), ve [performans günlükleri](troubleshooting-ata-using-perf-counters.md).
 
 
 ## <a name="domain-controller-traffic-estimation"></a>Etki alanı denetleyicisi tahmini trafiği
@@ -197,7 +197,7 @@ Paket/saniye oranını belirlemek için her etki alanı denetleyicisinde aşağ�
 
 9. Verilerin kaydedilmesini istediğiniz konumunu ayarlayın.
 
-10. **Veri toplayıcı kümesi oluştur** altında **Bu veri toplayıcı kümesini şimdi başlat**’ı seçin ve **Son**’a tıklayın.
+10. Altında **veri toplayıcı kümesi oluştur**seçin **bu veri toplayıcı kümesini Şimdi Başlat**, tıklatıp **son**.
 
     Artık oluşturduğunuz veri toplayıcı kümesini ve kümenin çalıştığını gösteren yeşil üçgeni görebilirsiniz.
 

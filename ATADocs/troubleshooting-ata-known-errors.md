@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 09936cf9f86711ea6d48d0571178d2387694d412
-ms.sourcegitcommit: 835ea2b8190eb753aaf8d400531040ce1845d75a
+ms.openlocfilehash: f13416c4179d65ee8096d246ea92969b1cf9af43
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -62,7 +62,7 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 |System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi|Dağıtım işlemi, ATA Center’a erişemediği için zaman aşımına uğradı.|1.    IP adresi ile ATA Center’a gözatarak ağ bağlantısını kontrol edin. <br></br>2.    Ara sunucu veya güvenlik duvarı yapılandırması olup olmadığını denetleyin.|
 |System.Net.Http.HttpRequestException: İsteği gönderirken bir hata oluştu. ---> System.Net.WebException: Uzak sunucu bir hata döndürdü: (407) Ara Sunucu Kimlik Doğrulaması Gerekli.|Dağıtım işlemi, bir ara sunucunun yanlış yapılandırması nedeniyle ATA Center’a erişemediği için zaman aşımına uğradı.|Dağıtımdan önce ara sunucu yapılandırmasını devre dışı bırakın ve ardından ara sunucu yapılandırmasını yeniden etkinleştirin. Veya bunun yerine ara sunucuda bir özel durum yapılandırabilirsiniz.|
 |System.Net.Sockets.SocketException: Varolan bir bağlantıyı zorla uzak ana bilgisayar tarafından kapatıldı||Aşağıdaki seçeneklerden birini kullanın: </br>TLS 1.0 ‘ı ATA Gateway’de etkinleştirme </br>TLS 1.2 .net üzerinde SSL ve TLS, işletim sistemi Varsayılanları şu şekilde kullanmak için kayıt defteri anahtarlarını ayarlayarak etkinleştirin:</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
-|Hata [\[] DeploymentModel [\]] başarısız yönetim kimlik doğrulama [\[] CurrentlyLoggedOnUser =<domain>\<kullanıcı adı > Durum = FailedAuthentication özel durum = [\]]|ATA Gateway veya ATA Lightweight Gateway dağıtım işlemini başarıyla ATA Center'a karşı kimlik doğrulaması yapamıyor|Dağıtım işlemi başarısız makineden bir tarayıcı açın ve ATA Konsolu erişebilir, bkz. </br>Aksi durumda, tarayıcının ATA Center'a karşı neden doğrulanamaz görmek için sorun gidermeyi başlatma. </br>Denetlenecek öğeler:</br>Proxy yapılandırması</br>Ağ sorunları</br>Grup İlkesi ayarları ATA Center'dan farklı bu makinede kimlik doğrulaması için.|
+|Hata [\[] DeploymentModel [\]] başarısız yönetim kimlik doğrulama [\[] CurrentlyLoggedOnUser =<domain>\<kullanıcı adı > Durum = FailedAuthentication özel durum = [\]]|ATA Gateway veya ATA Lightweight Gateway dağıtım işlemini başarıyla ATA Center'a karşı kimlik doğrulaması yapamıyor|Dağıtım işlemi başarısız makineden bir tarayıcı açın ve ATA Konsolu erişebilir, bkz. </br>Aksi durumda, tarayıcının ATA Center'a karşı neden doğrulanamaz görmek için sorun gidermeyi başlatma. </br>Denetlenecek öğeler: </br>Proxy yapılandırması</br>Ağ sorunları</br>Grup İlkesi ayarları ATA Center'dan farklı bu makinede kimlik doğrulaması için.|
 
 
 

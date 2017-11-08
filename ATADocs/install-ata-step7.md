@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 49d0df5f3d835a879990d590b447ed3b4de88685
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 0feb12a2e86adae124016c90431209ec33cdbcb5
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -33,9 +33,9 @@ ATA, belirli IP adreslerinin veya kullanıcıların birkaç algılama yöntemind
 
 Örneğin, bir **DNS Keşfi dışlaması** DNS’i tarama mekanizması olarak kullanan bir güvenlik tarayıcısı olabilir. Bu dışlama işlemi ATA’nın böyle tarayıcıları yoksaymasına yardımcı olur. *Anahtar Geçişi* dışlama işlemine örnek olarak bir NAT aygıtı gösterilebilir.    
 
-ATA ayrıca, kötü amaçlı aktörler için tuzak olarak kullanılan bir Honeytoken kullanıcısının yapılandırılmasına olanak tanır. Bu hesapla (normalde etkinliği yoktur) ilişkilendirilen herhangi bir kimlik doğrulaması bir uyarının tetiklenmesine neden olur.
+ATA ayrıca bir yakalama kötü amaçlı aktörler için kullanılan bir Honeytoken kullanıcısını yapılandırma sağlar - bir uyarı (normalde etkinliği olmayan) bu hesapla ilişkili herhangi bir kimlik doğrulamasını tetikler.
 
-Yukarıdakileri yapılandırmak için şu adımları izleyin:
+Bunu yapılandırmak için aşağıdaki adımları izleyin:
 
 1.  ATA Konsolu’ndan, ayarlar simgesine tıklayın ve **Yapılandırma**’yı seçin.
 
@@ -43,7 +43,7 @@ Yukarıdakileri yapılandırmak için şu adımları izleyin:
 
 2.  **Algılama** altında bulunan **Genel**’e tıklayın.
 
-2. **Honeytoken hesapları** altında Honeytoken hesap adını girin. Honeytoken hesapları alanında arama yapılabilir ve ağınızdaki varlıklar otomatik olarak görüntülenir.
+2. **Honeytoken hesapları** altında Honeytoken hesap adını girin. Honeytoken hesapları alanını aranabilir ve otomatik olarak, ağınızdaki varlıkların görüntüler.
 
    ![Honeytoken](media/honeytoken.png)
 
@@ -58,7 +58,7 @@ Tebrikler, Microsoft Advanced Threat Analytics dağıtımını başarıyla tamam
 
 Algılanan kuşkulu etkinlikleri görüntülemek için saldırı zaman çizelgesini gözden geçirin ve kullanıcıları veya bilgisayarları arayın ve profillerini görüntüleyin.
 
-ATA hemen şüpheli etkinlikler için tarama yapmaya başlar. ATA, davranış profilleri (en az üç haftalık) oluşturmak için zaman bulana kadar, bazı şüpheli davranış etkinlikleri gibi bazı etkinlikler kullanılamaz.
+ATA hemen şüpheli etkinlikler için tarama başlatır. Bazı şüpheli davranış etkinlikleri gibi bazı etkinlikler kullanılamaz ATA davranış profilleri (en az üç hafta) oluşturmak için zaman bulana kadar.
 
 ATA’nın çalışır durumda olduğunu ve ağınızdaki ihlalleri yakalayıp yakalamadığını denetlemek için [ATA saldırı simülasyonu senaryo kitabına](https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook) bakabilirsiniz.
 

@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3798f7faeb62e44d3877880c2d594332502e76c5
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 2f38ee3b8a50a4776709f1a5aa1f37af869a916b
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -36,10 +36,10 @@ Algılama yeteneklerini artırmak için ATA aşağıdaki Windows olaylarına iht
 > [!NOTE]
 > ATA 1.8 ve üzeri sürümlerde artık ATA Lightweight Gateway’ler için olay koleksiyonu yapılandırması gerekli değildir. ATA Lightweight Gateway artık olay iletmeyi yapılandırmaya gerek kalmadan olayları yerel olarak okuyabilir.
 
-Etki alanı denetleyicilerine gelen ve denetleyicilerden giden ağ trafiğini toplamaya ve çözümlemeye ek olarak ATA, Windows olaylarını kullanarak algılamaları geliştirebilir. NTLM için çeşitli algılama yöntemlerini geliştiren olay 4776’yı ve gizli grup değişikliklerini algılamayı geliştirmek için olay 4732, 4733, 4728, 4729, 4756 ve 4757’yi kullanır. Bu, SIEM sistemlerinizden alınabileceği gibi etki alanı denetleyicinizden Windows Olay İletme’yi ayarlayarak da alınabilir. Toplanan olaylar ATA’ya etki alanı denetleyicisi ağ trafiği yoluyla sağlanmayan ek bilgiler sağlar.
+Etki alanı denetleyicilerine gelen ve denetleyicilerden giden ağ trafiğini toplamaya ve çözümlemeye ek olarak ATA, Windows olaylarını kullanarak algılamaları geliştirebilir. Olay 4776 çeşitli algılama ve olayları 4732, 4733, 4728, 4729, 4756 ve hassas grubu değişiklikleri geliştirerek algılanması için 4757 geliştirir NTLM kullanır. Bu, SIEM sistemlerinizden alınabileceği gibi etki alanı denetleyicinizden Windows Olay İletme’yi ayarlayarak da alınabilir. Toplanan olaylar ATA’ya etki alanı denetleyicisi ağ trafiği yoluyla sağlanmayan ek bilgiler sağlar.
 
 #### <a name="siemsyslog"></a>SIEM/Syslog
-ATA’nın Syslog sunucusundan verileri kullanabilmesi için, aşağıdakileri yapmalısınız:
+ATA Syslog sunucusundan verileri kullanamayabilir aşağıdaki adımlar gerçekleştirmeniz gerekir:
 
 -   ATA Gateway sunucularınızı SIEM/Syslog sunucusundan iletilen olayları dinleyecek ve kabul edecek şekilde yapılandırın.
 > [!NOTE]
@@ -61,7 +61,7 @@ Belirli olayları başka bir sunucuya iletme işlemini yapılandırma hakkında 
 
     ![Syslog dinleyicisi UDP’yi etkinleştirme görüntüsü](media/ATA-enable-siem-forward-events.png)
 
-2.  SIEM veya Syslog sunucunuzu, Windows Olay Kimliği 4776’yı ATA Gateway’lerinden birinin IP adresine iletecek şekilde yapılandırın. SIEM sunucunuzu yapılandırma hakkında ek bilgi için, her SIEM sunucusuna özgü belirli biçimlendirme yönergeleriyle ilgili olarak SIEM sunucunuzun çevrimiçi yardımına veya teknik destek seçeneklerine bakın.
+2.  SIEM veya Syslog sunucunuzu, Windows Olay Kimliği 4776’yı ATA Gateway’lerinden birinin IP adresine iletecek şekilde yapılandırın. SIEM çevrimiçi yardımına veya teknik destek seçenekleri için her SIEM sunucusuna özgü belirli biçimlendirme yönergeleriyle SIEM sunucunuzu yapılandırma hakkında ek bilgi için bkz.
 
 ATA, aşağıdaki biçimlerde olan SIEM olaylarını destekler:  
 
@@ -76,7 +76,7 @@ ATA, aşağıdaki biçimlerde olan SIEM olaylarını destekler:
 
     1.  RsaSA sabiti (gösterilmesi gerekir).
 
-    2.  Gerçek olayın zaman damgası (SIEM’e ulaşma veya ATA’ya gönderilme zaman damgası olmadığından emin olun). Milisaniye hassaslığında olması tercih edilir ve çok önemlidir.
+    2.  Gerçek olayın zaman damgası (SIEM’e ulaşma veya ATA’ya gönderilme zaman damgası olmadığından emin olun). Tercihen milisaniye hassaslığında bu önemlidir.
 
     3.  Windows olay kimliği
 
@@ -107,7 +107,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Etki
 
     -   externalId = Windows olay kimliği
 
-    -   rt = gerçek olayın zaman damgası (SIEM’e ulaşma veya bize gönderilme zaman damgası olmadığından emin olun). Milisaniye hassaslığında olması tercih edilir ve çok önemlidir.
+    -   RT = gerçek olayın zaman damgası (sıem'e ulaşma veya ATA'ya gönderilme zaman damgası olmadığından emin olun). Tercihen milisaniye hassaslığında bu önemlidir.
 
     -   cat = Windows olay günlüğü adı
 
@@ -144,7 +144,7 @@ Hata Kodu:         0x0
 
 -   Alanlar, anahtar=değer biçimindedir.
 
--   Aşağıdaki anahtarlar var olmalı ve bunların değeri olmalıdır:
+-   Aşağıdaki anahtarlar var ve bir değere sahip olması gerekir:
 
     -   EventCode = Windows olay kimliği
 
@@ -152,7 +152,7 @@ Hata Kodu:         0x0
 
     -   SourceName = Windows olay sağlayıcısı adı
 
-    -   TimeGenerated = Gerçek olayın zaman damgası (SIEM’e ulaşma veya ATA’ya gönderilme zaman damgası olmadığından emin olun). Biçim, yyyyAAGGSSddss.FFFFFF ile eşleşmelidir; milisaniye hassaslığında olması tercih edilir ve çok önemlidir.
+    -   TimeGenerated = Gerçek olayın zaman damgası (SIEM’e ulaşma veya ATA’ya gönderilme zaman damgası olmadığından emin olun). Biçim, yyyyaaggssddss.ffffff milisaniye hassaslığında, bu önemlidir eşleşmelidir.
 
     -   ComputerName = kaynak ana bilgisayar adı
 
@@ -175,7 +175,7 @@ Gerekli alanları şunlardır:
 - Tam etki alanı adı
 - Windows olay kimliği
 
-TimeGenerated, gerçek olayın zaman damgasıdır (SIEM’e ulaşma veya ATA’ya gönderilme zaman damgası olmadığından emin olun). Biçim, yyyyAAGGSSddss.FFFFFF ile eşleşmelidir; mili saniye hassaslığında olması tercih edilir ve çok önemlidir.
+TimeGenerated, gerçek olayın zaman damgasıdır (SIEM’e ulaşma veya ATA’ya gönderilme zaman damgası olmadığından emin olun). Biçim, yyyyaaggssddss.ffffff milisaniye hassaslığında, bu önemlidir eşleşmelidir.
 
 Message, Windows olayından alınan özgün olay metnidir
 

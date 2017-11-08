@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 518153d03f41956871ec5e7bf680f72187e4919c
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 05af384d91e899c1c0bc50ec2da6147eb47adb82
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -47,29 +47,29 @@ ATA Gateway yüklendikten sonra, ATA Gateway’in ayarlarını yapılandırmak i
 
       Aşağıdaki bilgiler, **Etki Alanı Denetleyicileri** listesine girdiğiniz sunucular için geçerlidir:
       - ATA Gateway tarafından bağlantı noktası yansıtma yoluyla trafiği izlenmekte olan tüm etki alanı denetleyicilerinin, **Etki Alanı Denetleyicileri** listesinde yer alması gerekir. Bir etki alanı denetleyicisi **Etki Alanı Denetleyicileri** listesinde yer almıyorsa, kuşkulu etkinlikleri algılama özelliği beklendiği gibi çalışmayabilir.
-      - Listedeki etki alanı denetleyicilerinden en az biri genel katalog olmalıdır. Bu ATA’nın ormandaki diğer etkin alanlarında yer alan bilgisayar ve kullanıcı nesnelerini çözümleyebilmesine olanak tanır.
+      - Listedeki etki alanı denetleyicilerinden en az biri genel katalog olmalıdır. Bu, ATA'ın ormandaki diğer etki alanlarındaki bilgisayar ve kullanıcı nesnelerini sağlar.
 
   - **Yakalama Ağ bağdaştırıcıları** (gerekli):
-  - Ayrılmış bir sunucudaki bir ATA Gateway için, hedef yansıtma bağlantı noktası olarak yapılandırılan ağ bağdaştırıcılarını seçin. Böylece, yansıtılmış etki alanı denetleyicisi trafiği alınır.
+  - Ayrılmış bir sunucudaki bir ATA Gateway için, hedef yansıtma bağlantı noktası olarak yapılandırılan ağ bağdaştırıcılarını seçin. Bunlar, yansıtılmış etki alanı denetleyicisi trafiği alırsınız.
   - Bir ATA Lightweight Gateway söz konusu olduğunda bu, kuruluşunuzdaki diğer bilgisayarlarla iletişim için kullanılan tüm ağ bağdaştırıcıları olmalıdır.
 
 
-  - **Etki alanı eşitleyici adayı**: Etki alanı eşitleyici adayı olarak ayarlanan herhangi bir ATA Gateway, ATA ile Active Directory etki alanınız arasındaki eşitlemeden sorumlu olabilir. Etki alanının büyüklüğüne bağlı olarak, ilk eşitleme biraz zaman alabilir ve yoğun kaynak kullanır. Varsayılan olarak, yalnızca ATA Gateway’ler Etki Alanı eşitleyici adayı olarak ayarlanabilir.
-   Uzak yerde bulunan ATA Gateway bileşenlerinin Etki Alanı eşitleyici adayı olmasının engellenmesi önerilir.
+  - **Etki alanı eşitleyici adayı**: Etki alanı eşitleyici adayı olarak ayarlanan herhangi bir ATA Gateway, ATA ile Active Directory etki alanınız arasındaki eşitlemeden sorumlu olabilir. Etki alanının büyüklüğüne ilk eşitleme biraz zaman alabilir ve yoğun bir kaynak gerçekleşir. Varsayılan olarak, yalnızca ATA Gateway’ler Etki Alanı eşitleyici adayı olarak ayarlanabilir.
+   Herhangi bir uzak siteyi ATA Gateway, etki alanı Eşitleyici adayı engeller devre dışı bırakmanız önerilir.
    Etki alanı denetleyiciniz salt okunur ise, onu Etki Alanı eşitleyici adayı olarak ayarlamayın. Daha fazla bilgi için bkz. [ATA mimarisi](ata-architecture.md#ata-lightweight-gateway-features).
 
   > [!NOTE] 
   > ATA Gateway hizmetinin yükleme sonrası ilk kez başlatılması birkaç dakika sürebilir çünkü ağ yakalama ayrıştırıcılarının önbelleğini oluşturur.
-  > Yapılandırma değişiklikleri, ATA Gateway ile ATA Center arasındaki bir sonraki zamanlanmış eşitlemede ATA Gateway’e uygulanır.
+  > Yapılandırma değişiklikleri, ATA Gateway ve ATA Center arasındaki bir sonraki zamanlanmış eşitlemede ATA Gateway'e uygulanır.
 
 3. İsterseniz, [Syslog dinleyici ve Windows Olay İletme Koleksiyonu](configure-event-collection.md)’nu ayarlayabilirsiniz. 
-4. Gelecek sürümlerde ATA Center’ı güncelleştirirken, bu ATA Gateway’in otomatik olarak güncelleştirilmesi için **ATA Gateway’i otomatik olarak güncelleştir**’i etkinleştirin.
+4. Etkinleştirme **ATA Gateway'i otomatik olarak** ATA Center'ı güncelleştirdiğinizde, gelecek sürümlerde şekilde, bu ATA Gateway'in otomatik olarak güncelleştirilir.
 
 5. **Kaydet**'e tıklayın.
 
 
 ## <a name="validate-installations"></a>Yüklemeleri doğrulama
-ATA Gateway’in başarıyla dağıtıldığını doğrulamak için aşağıdakileri denetleyin:
+ATA Gateway'in başarıyla dağıtıldığını doğrulamak için aşağıdakileri denetleyin:
 
 1.  **Microsoft Advanced Threat Analytics Gateway** adlı hizmetin çalışıp çalışmadığını denetleyin. ATA Gateway ayarlarını kaydettikten sonra, hizmetin başlatılması birkaç dakika sürebilir.
 

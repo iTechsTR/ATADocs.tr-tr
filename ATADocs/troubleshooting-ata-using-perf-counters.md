@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3c5fbece9ed4de595c20a8935054a37ed3449ec6
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 2172b6b8e1c54345841357e1f4d0a7dec2c346db
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -105,18 +105,18 @@ Dikkat edilmesi gereken ana ATA Center sayaçlarının listesi:
 > [!div class="mx-tableFixed"]
 |Sayaç|Açıklama|Eşik|Sorun giderme|
 |-----------|---------------|-------------|-------------------|
-|Microsoft ATA Center\EntityReceiver Varlık Yığın Blok Boyutu|ATA Center tarafından kuyruğa alınan varlık yığınlarının sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 10.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin.  Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
-|Microsoft ATA Center\NetworkActivityProcessor Ağ Etkinliği Blok Boyutu|İşleme için kuyruğa alınan Ağ Etkinliklerinin (NA) sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 50.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
-|Microsoft ATA Center\EntityProfiler Ağ Etkinliği Blok Boyutu|Profil oluşturma için kuyruğa alınan Ağ Etkinliklerinin (NA) sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 10.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
-|Microsoft ATA Center\Database &#42; Blok Boyutu|Veritabanına yazılmak üzere kuyruğa alınan belirli bir türdeki Ağ Etkinliklerinin sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 50.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Yukarıdaki **ATA Bileşen İşlemi** bölümüne bakın.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
+|Microsoft ATA Center\EntityReceiver Varlık Yığın Blok Boyutu|ATA Center tarafından kuyruğa alınan varlık yığınlarının sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 10.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin.  Önceki başvuran **ATA bileşen işlemi**.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
+|Microsoft ATA Center\NetworkActivityProcessor Ağ Etkinliği Blok Boyutu|İşleme için kuyruğa alınan Ağ Etkinliklerinin (NA) sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 50.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Önceki başvuran **ATA bileşen işlemi**.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
+|Microsoft ATA Center\EntityProfiler Ağ Etkinliği Blok Boyutu|Profil oluşturma için kuyruğa alınan Ağ Etkinliklerinin (NA) sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 10.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Önceki başvuran **ATA bileşen işlemi**.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
+|Microsoft ATA Center\Database &#42; Blok Boyutu|Veritabanına yazılmak üzere kuyruğa alınan belirli bir türdeki Ağ Etkinliklerinin sayısı.|Üst sınır-1’den az olmalıdır (varsayılan üst sınır: 50.000)|Boyut üst sınırına ulaşmış olan ve AğDinleyicisi’ne gelene kadar tüm önceki bileşenleri engelleyen bir bileşen olup olmadığını denetleyin. Önceki başvuran **ATA bileşen işlemi**.<br /><br />CPU veya bellekle ilgili sorun olmadığından emin olun.|
 
 
 > [!NOTE]
 > -   Süre gösteren sayaçlar milisaniye cinsindendir.
-> -   Bazen Rapor grafik türü kullanılarak sayaçların tam listesi daha rahat izlenebilir (örnek: tüm sayaçları gerçek zamanlı izleme)
+> -   Bazen daha fazla olduğu için rapor grafik türü kullanılarak sayaçların tam listesi kullanışlı (örnek: tüm sayaçları gerçek zamanlı izleme).
 
 ## <a name="operating-system-counters"></a>İşletim sistemi sayaçları
-Aşağıda, dikkat edilmesi gereken ana işletim sistemi sayaçları listelenmiştir:
+Aşağıdaki tabloda, dikkat edilmesi gereken ana işletim sistemi sayaçları listelenmiştir:
 
 > [!div class="mx-tableFixed"]
 |Sayaç|Açıklama|Eşik|Sorun giderme|
@@ -124,9 +124,9 @@ Aşağıda, dikkat edilmesi gereken ana işletim sistemi sayaçları listelenmi�
 |İşlemci(_Toplam)\% İşlemci Zamanı|İşlemcinin boş olmayan bir iş parçacığı çalıştırırken harcadığı geçen sürenin yüzdesi.|Ortalamada %80’den az|Gerekenden çok daha fazla işlemci zamanı alan bir işlem olup olmadığını denetleyin.<br /><br />Daha fazla işlemci ekleyin.<br /><br />Sunucu başına trafik miktarını azaltın.<br /><br />"İşlemci(_Toplam)\% İşlemci Zamanı" sayacı sanal sunucularda tam doğru olmayabilir; bu durumda işlemci gücündeki eksilmeyi "Sistem\İşlemci Kuyruğu Uzunluğu" sayacı aracılığıyla ölçmek daha doğru olur.|
 |Sistem\Bağlam Değişimleri\sn|Tüm işlemcilerin bir iş parçacığından diğerine birleşik geçiş hızı.|5000’den az çekirdek (fiziksel çekirdekler)|Gerekenden çok daha fazla işlemci zamanı alan bir işlem olup olmadığını denetleyin.<br /><br />Daha fazla işlemci ekleyin.<br /><br />Sunucu başına trafik miktarını azaltın.<br /><br />"İşlemci(_Toplam)\% İşlemci Zamanı" sayacı sanal sunucularda tam doğru olmayabilir; bu durumda işlemci gücündeki eksilmeyi "Sistem\İşlemci Kuyruğu Uzunluğu" sayacı aracılığıyla ölçmek daha doğru olur.|
 |Sistem\İşlemci Kuyruğu Uzunluğu|Yürütülmeye hazır olan ve zamanlanmayı bekleyen iş parçacıklarının sayısı.|5’ten az çekirdek (fiziksel çekirdekler)|Gerekenden çok daha fazla işlemci zamanı alan bir işlem olup olmadığını denetleyin.<br /><br />Daha fazla işlemci ekleyin.<br /><br />Sunucu başına trafik miktarını azaltın.<br /><br />"İşlemci(_Toplam)\% İşlemci Zamanı" sayacı sanal sunucularda tam doğru olmayabilir; bu durumda işlemci gücündeki eksilmeyi "Sistem\İşlemci Kuyruğu Uzunluğu" sayacı aracılığıyla ölçmek daha doğru olur.|
-|Bellek\Kullanılabilir MBayt|Ayırma için kullanılabilen fiziksel bellek (RAM) miktarı.|512’den fazla olmalıdır|Gerekenden çok daha fazla fiziksel bellek alan bir işlem olup olmadığını denetleyin.<br /><br />Fiziksel bellek miktarını artırın.<br /><br />Sunucu başına trafik miktarını azaltın.|
-|MantıksalDisk(&#42;)\Ort. Disk sn\Okuma|Diskten verileri okumak için ortalama gecikme süresi (örnek olarak veritabanı sürücüsünü seçmelisiniz).|10 milisaniyeden kısa olmalıdır.|Veritabanı sürücüsünü gerektiğinden fazla kullanan belirli bir işlem bulunup bulunmadığını denetleyin.<br /><br />Bu sürücünün 10 ms’den daha kısa bir gecikme süresiyle geçerli iş yükünü sağlayıp sağlayamayacağını öğrenmek için depolama ekibinize/satıcınıza danışın. Geçerli iş yükü, disk kullanım sayaçları aracılığıyla belirlenebilir.|
-|MantıksalDisk(&#42;)\Ort. Disk sn\Yazma|Diske veri yazmak için ortalama gecikme süresi (örnek olarak veritabanı sürücüsünü seçmelisiniz).|10 milisaniyeden kısa olmalıdır.|Veritabanı sürücüsünü gerektiğinden fazla kullanan belirli bir işlem bulunup bulunmadığını denetleyin.<br /><br />Bu sürücünün 10 ms’den daha kısa bir gecikme süresiyle geçerli iş yükünü sağlayıp sağlayamayacağını öğrenmek için depolama ekibinize/satıcınıza danışın. Geçerli iş yükü, disk kullanım sayaçları aracılığıyla belirlenebilir.|
+|Bellek\Kullanılabilir MBayt|Ayırma için kullanılabilen fiziksel bellek (RAM) miktarı.|En çok 512 olmalıdır|Gerekenden çok daha fazla fiziksel bellek alan bir işlem olup olmadığını denetleyin.<br /><br />Fiziksel bellek miktarını artırın.<br /><br />Sunucu başına trafik miktarını azaltın.|
+|MantıksalDisk(&#42;)\Ort. Disk sn\Okuma|Diskten verileri okumak için ortalama gecikme süresi (örnek olarak veritabanı sürücüsünü seçmelisiniz).|10 milisaniyeden kısa olmalıdır.|Veritabanı sürücüsünü gerektiğinden fazla kullanan belirli bir işlem bulunup bulunmadığını denetleyin.<br /><br />Bu sürücünün 10 MS'den kısa gecikme yaparken geçerli iş yükü sunabilir varsa, depolama ekibinize/satıcınıza başvurun. Geçerli iş yükü, disk kullanım sayaçları aracılığıyla belirlenebilir.|
+|MantıksalDisk(&#42;)\Ort. Disk sn\Yazma|Diske veri yazmak için ortalama gecikme süresi (örnek olarak veritabanı sürücüsünü seçmelisiniz).|10 milisaniyeden kısa olmalıdır.|Veritabanı sürücüsünü gerektiğinden fazla kullanan belirli bir işlem bulunup bulunmadığını denetleyin.<br /><br />Bu sürücünün 10 MS'den kısa gecikme yaparken geçerli iş yükü sunabilir yoksa, depolama team\vendor ile bakın. Geçerli iş yükü, disk kullanım sayaçları aracılığıyla belirlenebilir.|
 |\LogicalDisk(&#42;)\Disk Okuma\sn|Diskte okuma işlemlerini gerçekleştirme hızı.|Eşik yok|Disk kullanım sayaçları, depolama gecikmesi sorunlarını giderirken fikir verebilir.|
 |\LogicalDisk(&#42;)\Disk Okuma Bayt\sn|Diskten bir saniyede okunan bayt sayısı.|Eşik yok|Disk kullanım sayaçları, depolama gecikmesi sorunlarını giderirken fikir verebilir.|
 |\LogicalDisk&#42;\Disk Yazma\sn|Diskte yazma işlemlerini gerçekleştirme hızı.|Eşik yok|Disk kullanım sayaçları (depolama gecikmesi sorunlarını giderirken fikir verebilir).|

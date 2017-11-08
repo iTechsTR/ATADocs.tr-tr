@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 68dda1254757d9633119cbb8b486c3042c612d5b
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 4fe4569cd6477775e8a888d2acd05511f16fb5f6
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 11/06/2017
 # <a name="modifying-the-ata-center-configuration"></a>ATA Center yapılandırmasını değiştirme
 
 
-İlk dağıtımdan sonra, ATA Center’da değişiklik yaparken dikkatli olmak gerekir. Güncelleştirirken aşağıdaki yordamları kullanın Konsolu URL'si ve sertifika.
+İlk dağıtımdan sonra, ATA Center’da değişiklik yaparken dikkatli olmak gerekir. Konsol URL'yi ve sertifikayı güncelleştirirken aşağıdaki yordamları kullanın.
 
 ## <a name="the-ata-console-url"></a>ATA Konsolu URL'si
 
@@ -68,7 +68,7 @@ URL aşağıdaki senaryolarda kullanılır:
 
 Bu işlemi yaparak sertifikayı değiştirin:
 
-1. Geçerli sertifikanın süresi dolmadan önce yeni bir sertifika oluşturmak ve ATA Center sunucusunda yüklü olduğundan emin olun. <br></br>Bir iç sertifika yetkilisinden bir sertifika seçmek için önerilir, ancak yeni bir otomatik olarak imzalanan sertifika oluşturmak mümkündür. Daha fazla bilgi için bkz: [yeni SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
+1. Geçerli sertifikanın süresi dolmadan önce yeni bir sertifika oluşturmak ve ATA Center sunucusunda yüklü olduğundan emin olun. <br></br>Bir iç sertifika yetkilisinden bir sertifika seçin, ancak yeni bir otomatik olarak imzalanan sertifika oluşturmak mümkündür önerilir. Daha fazla bilgi için bkz: [yeni SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
 
 2. ATA ayarlarında altında **Center**, bu yeni oluşturulan sertifikayı seçin. Bu noktada, ATA Center hizmeti hala özgün sertifikaya bağlıdır. 
 
@@ -76,7 +76,7 @@ Bu işlemi yaparak sertifikayı değiştirin:
 
 3. ATA Gateway eşitleme bekleyin. Karşılıklı kimlik doğrulaması için geçerli olan iki olası sertifikaları şimdi sahiptirler. ATA Gateway özgün sertifikayı kullanarak bağlanabildiği sürece, yeni bir denemez.
 
-4. Tüm ATA güncelleştirilmiş gateway'ler eşitlendikten sonra ATA Center'ın bağlı olduğu yeni sertifikayı etkinleştirin. Yeni sertifika etkinleştirdiğinizde, ATA Center hizmeti için yeni sertifika bağlar. ATA Gateway bileşenleri artık ATA Center'a kimlik doğrulaması için yeni sertifika'nı kullanır. ATA Center hizmetine bağlandıktan sonra ATA Gateway en yeni yapılandırmayı alır ve ATA Center için yalnızca yeni sertifika gerekir. 
+4. Tüm ATA güncelleştirilmiş gateway'ler eşitlendikten sonra ATA Center'ın bağlı olduğu yeni sertifikayı etkinleştirin. Yeni sertifika etkinleştirdiğinizde, ATA Center hizmeti için yeni sertifika bağlar. ATA Gateway yeni sertifikayı ATA Center ile kimlik doğrulaması için şimdi kullanın. ATA Center hizmetine bağlandıktan sonra ATA Gateway en yeni yapılandırmayı alır ve ATA Center için yalnızca yeni sertifika gerekir. 
 
 > [!NOTE]
 > -   Yeni sertifika etkinleştirilir ve güncelleştirilmiş yapılandırmayı hiç var ancak bir ATA Gateway çevrimdışıysa, ATA Gateway'de yapılandırma JSON dosyasını el ile güncelleştirin.

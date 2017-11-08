@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7e6570ee1e35631a3dba90466b31542e9fd0cd66
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 26c093c4163593611b175f4f0002f443e593f952
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -27,10 +27,10 @@ ms.lasthandoff: 11/06/2017
 
 ATA tarafından algılanan kuşkulu etkinliği izlemek ve yanıtlamak için ATA Konsolu’nu kullanın.
 
-? anahtarını girmek, ATA Portal erişilebilirliği için klavye kısayollarını sağlayacaktır. 
+Yazmaya `?` anahtar ATA Portal erişilebilirlik için klavye kısayolları sağlar. 
 
 ## <a name="enabling-access-to-the-ata-console"></a>ATA Konsolu’na erişimi etkinleştirme
-ATA Konsolunda başarıyla oturum açmak amacıyla, ATA Konsoluna erişmek için doğru ATA rolünün atandığı bir kullanıcıyla oturum açmanız gerekir. ATA’da role dayalı erişim denetimi (RBAC) hakkında daha fazla bilgi için bkz. [ATA rol gruplarıyla çalışma](ata-role-groups.md).
+Başarıyla ATA Konsolu'nda oturum açmak için ATA Konsolu'na erişmek için uygun ATA rolü atanmış bir kullanıcıyla oturum sahip. Rol tabanlı erişim denetimi (RBAC) ATA hakkında daha fazla bilgi için bkz: [ATA rol gruplarıyla çalışma](ata-role-groups.md).
 
 ## <a name="logging-into-the-ata-console"></a>ATA Konsolu’nda oturum açma
 
@@ -44,12 +44,12 @@ ATA Konsolunda başarıyla oturum açmak amacıyla, ATA Konsoluna erişmek için
  >[!NOTE]
  > Ayrıca ATA Center veya ATA Gateway’den tarayıcıyı açabilir ve ATA Center yüklemesinde ATA Konsolu için yapılandırdığınız IP adresine göz atabilirsiniz.    
 
-2.  ATA Center’ın yüklü olduğu bilgisayar ile ATA Konsolu’na erişmeye çalıştığınız bilgisayar etki alanına katılmışsa ATA, Windows kimlik doğrulaması ile tümleştirilmiş çoklu oturum açmayı destekler - bilgisayarınızda zaten oturum açtıysanız ATA bu belirteci kullanarak ATA Konsolu’nda sizin için oturum açar. Ayrıca bir akıllı kart kullanarak da oturum açabilirsiniz. ATA’daki izinleriniz, [yönetici rolünüze](ata-role-groups.md) karşılık gelecektir.
+2.  ATA Center yüklendikten ve ATA konsolu erişim çalıştığınız bilgisayar olan her iki etki alanına katılmış değilse, ATA destekler, zaten bilgisayarınızda oturum açtıysanız, çoklu oturum açma tümleşik Windows kimlik doğrulaması ile - ATA kullanır. ATA Konsolu'nda oturum açın, belirteci. Ayrıca bir akıllı kart kullanarak da oturum açabilirsiniz. İzinlerinizi Ata ile karşılık gelen, [Yönetici rolü](ata-role-groups.md).
 
  > [!NOTE]
- > ATA Konsolu’na erişmeye çalıştığınız bilgisayarda, ATA yönetici kullanıcı adı ve parolanızla oturum açmayı unutmayın. Bunun yerine tarayıcınızı farklı bir kullanıcı olarak çalıştırabilir veya Windows oturumunuzu kapatıp ATA yönetici kullanıcınızla oturum açabilirsiniz. ATA Konsolu’ndan kimlik bilgileri talep etmesini istemek için bir IP adresi kullanarak konsola erişin, böylece kimlik bilgilerinizi girmeniz istenecektir.
+ > ATA yönetici kullanıcı adı ve parola kullanarak ATA Konsolu'na erişmek istediğiniz bilgisayarda oturum açmak emin olun. Bunun yerine tarayıcınızı farklı bir kullanıcı olarak çalıştırabilir veya Windows oturumunuzu kapatıp ATA yönetici kullanıcınızla oturum açabilirsiniz. Kimlik bilgilerini sor, bir IP kullanan konsoluna erişmek için ATA Konsolu istemek için adresi ve kimlik bilgilerini girmeniz istenir.
 
-3. SSO kullanarak oturum açmak için ATA konsolunun tarayıcınızda yerel özel ağ sitesi olarak tanımlandığından ve konsola bir kısa ad veya yerel konak kullanarak erişebildiğinizden emin olun.
+3. SSO kullanarak oturum açması ATA Konsolu sitesini yerel intranet sitesine tarayıcınızda olarak tanımlanır ve bir kısaad veya bir localhost kullanarak erişim emin olun.
 
 > [!NOTE]
 > Her bir şüpheli etkinlik ve sistem durumu uyarısının günlüğe kaydedilmesinin yanı sıra, ATA Konsolu’nda yaptığınız tüm yapılandırma değişiklikleri ATA Center makinesindeki **Uygulamalar ve hizmetler günlüğü**’nün altında bulunan **Microsoft ATA** bölümündeki Windows Olay Günlüğü’nde denetlenir. ATA konsolunda gerçekleştirilen her oturum açma işlemi de denetlenir.<br></br>  ATA Gateway’i etkileyen yapılandırma da ATA Gateway makinesinin Windows Olay Günlüğü’ne kaydedilir. 
@@ -83,7 +83,7 @@ Kuşkulu etkinlikleri Durum ve Önem Derecesi’ne göre filtreleyerek, saldır�
 
 ### <a name="search-bar"></a>Arama çubuğu
 
-Üst menüde arama çubuğunu bulacaksınız. ATA’da belirli kullanıcı, bilgisayar veya grupları arayabilirsiniz. Denemek için, yazmaya başlamanız yeterlidir.
+Üst menüde arama çubuğunu bulabilirsiniz. Belirli bir kullanıcı, bilgisayar veya ATA gruplarında arayabilirsiniz. Denemek için, yazmaya başlamanız yeterlidir.
 
 ![ATA konsolu arama resmi](media/ATA-console-search.png)
 
@@ -93,11 +93,11 @@ Sistem Durumu Merkezi, ATA dağıtımınızda düzgün çalışmayan bir şey ol
 
 ![ATA sistem durumu merkezinin resmi](media/ATA-Health-Issue.jpg)
 
-Sisteminizde bağlantı hatası veya bağlantısı kesik ATA Gateway gibi herhangi bir sorunla karşılaşıldığında, Sistem Durumu Merkezi simgesi kırmızı bir nokta göstererek bu durumu öğrenmenizi sağlar. ![ATA sistem durumu merkezi kırmızı noktasının resmi](media/ATA-Health-Center-Alert-red-dot.png)
+Sisteminizin bağlantı hatası veya bağlantısı kesilmiş ATA Gateway gibi bir sorunla karşılaştığında her zaman sistem durumu Merkezi simgesi, kırmızı bir nokta göstererek bilmenizi sağlar. ![ATA sistem durumu merkezi kırmızı noktasının resmi](media/ATA-Health-Center-Alert-red-dot.png)
 
 ### <a name="user-and-computer-profiles"></a>Kullanıcı ve bilgisayar profilleri
 
-ATA, ağdaki her kullanıcı ve bilgisayar için bir profil oluşturur. ATA, kullanıcı profilinde grup üyeliği, son oturum açmalar ve son erişilen kaynaklar gibi genel bilgileri görüntüler. Ayrıca kullanıcının VPN yoluyla bağlandığı tüm konumların bir listesini sağlar. ATA’nın gizli olarak değerlendirdiği grup üyeliklerinin listesi için aşağıya bakın.
+ATA, ağdaki her kullanıcı ve bilgisayar için bir profil oluşturur. ATA, kullanıcı profilinde grup üyeliği, son oturum açmalar ve son erişilen kaynaklar gibi genel bilgileri görüntüler. Ayrıca, kullanıcının VPN bağlandığı konumların bir listesini sağlar. ATA hassas göz önünde bulundurur grup üyeliklerini listesi için aşağıdaki listedeki bakın.
 
 ![Kullanıcı profili](media/user-profile.png)
 
@@ -107,7 +107,7 @@ ATA, bilgisayar profilinde son oturum açmalar ve son erişilen kaynaklar gibi g
 
 ATA, varlıklar (bilgisayarlar, cihazlar, kullanıcılar) hakkındaki genel bilgileri şu sayfalarda sağlar: Özet, Etkinlikler ve Kuşkulu Etkinlikler.
 
-ATA’nın tümüyle çözümleyemediği bir profil, yanında gösterilen yarısı dolu daire simgesiyle tanımlanır.
+Ata'yı tümüyle çözümleyemediği yapılmamış bir profil, yanında yarısı dolu daire simgesiyle tanımlanır.
 
 
 ![ATA çözümlenmemiş profilinin resmi](media/ATA-Unresolved-Profile.jpg)
@@ -138,7 +138,7 @@ ATA tarafından **Gizli** olarak değerlendirilen gruplar aşağıda listelenmi�
 
 ### <a name="mini-profile"></a>Mini profil
 
-Konsolun, kullanıcı veya bilgisayar gibi tek bir varlığın bulunduğu herhangi bir yerinde, farenizi varlığın üzerine getirirseniz otomatik olarak mini profil açılır ve varsa aşağıdaki bilgileri görüntüler:
+Farenizi konsol başka bir yerindeki bir varlık üzerine, söz konusu olduğunda, bir kullanıcı veya bir bilgisayar gibi tek bir varlığın varsa aşağıdaki bilgileri görüntüleyen mini profil otomatik olarak açılır:
 
 ![ATA mini profilinin resmi](media/ATA-mini-profile.jpg)
 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/31/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 748121a709ac05756edf34e04e13b996190e9711
-ms.sourcegitcommit: b951c64228d4f165ee1fcc5acc0ad6bb8482d6a2
+ms.openlocfilehash: 2eab8649f225071ad548a8134b385d46f02b3222
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 10/31/2017
 
 ## <a name="step-7-integrate-vpn"></a>7. Adım VPN tümleştirme
 
-Microsoft Advanced Threat Analytics (ATA) sürüm 1,8 alınan VPN çözümleri hesap bilgilerini toplayabilirsiniz. Yapılandırıldığında, kullanıcının profili sayfasını VPN bağlantıları, IP adresleri ve bağlantıları geldiği konumlar gibi bilgileri içerir. Kullanıcı etkinliği hakkında ek bilgileri sağlayarak bu araştırma işlemi tamamlayabilir. Dış IP adresini bir konuma çözümlemek için anonim çağrıdır. Hiçbir kişisel tanımlayıcı bu çağrısında gönderilir.
+Microsoft Advanced Threat Analytics (ATA) sürüm 1,8 alınan VPN çözümleri hesap bilgilerini toplayabilirsiniz. Yapılandırıldığında, kullanıcının profili sayfasını VPN bağlantıları, IP adresleri ve bağlantıları geldiği konumlar gibi bilgileri içerir. Bu, kullanıcı etkinliğini ek bilgileri sağlayarak araştırma işlemi tamamlar. Dış IP adresini bir konuma çözümlemek için anonim çağrıdır. Hiçbir kişisel tanımlayıcı bu çağrısında gönderilir.
 
 ATA, ATA Gateway iletilen RADIUS hesap olaylarını dinleme VPN çözümünüzün tümleştirir. Bu mekanizma RADIUS Standart hesap temel alır ([RFC 2866](https://tools.ietf.org/html/rfc2866)), ve aşağıdaki VPN satıcıları desteklenir:
 
@@ -42,19 +42,19 @@ ATA, ATA Gateway iletilen RADIUS hesap olaylarını dinleme VPN çözümünüzü
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-VPN'yi etkinleştirmek için tümleştirme aşağıdaki ayarladığınızdan emin olun:
+VPN tümleştirmeyi etkinleştirmek için aşağıdaki parametreleri ayarladığınızdan emin olun:
 
 -   Bağlantı noktası UDP 1813 ATA Gateway ve ATA Lightweight Gateway açın.
 
 -   Gelen IP adreslerini konumunu sorgulayabilmesi ATA Center Internet'e bağlanın.
 
-Aşağıdaki örnekte, Microsoft Routing ve Uzaktan erişim sunucusu (RRAS) VPN yapılandırma işlemi açıklamak için kullanırız.
+Aşağıdaki örnek, Microsoft Routing ve Uzaktan erişim sunucusu (RRAS) VPN yapılandırma işlemi tanımlamak için kullanır.
 
-3 taraf VPN çözümü kullanıyorsanız, RADIUS hesaplama etkinleştirme hakkında yönergeler için kendi belgelerine başvurun.
+Bir üçüncü taraf VPN çözümü kullanıyorsanız, RADIUS hesaplama etkinleştirme hakkında yönergeler için kendi belgelerine başvurun.
 
 ## <a name="configure-radius-accounting-on-the-vpn-system"></a>RADIUS hesaplama VPN sistemde yapılandırın
 
-Aşağıdaki RRAS sunucunuz üzerinde gerçekleştirin.
+RRAS sunucusunda aşağıdaki adımları gerçekleştirin.
  
 1.  Yönlendirme ve Uzaktan Erişim konsolunu açın.
 2.  Sunucu adını sağ tıklatıp **özellikleri**.
@@ -62,7 +62,7 @@ Aşağıdaki RRAS sunucunuz üzerinde gerçekleştirin.
 
     ![RADIUS Kurulumu](./media/radius-setup.png)
 
-4.  İçinde **RADIUS sunucusu Ekle** penceresinde, türü **sunucu adı** yakın ATA Gateway veya ATA Lightweight Gateway. Altında **bağlantı noktası**, 1813 varsayılan yapılandırıldığından emin olun. Tıklatın **değişiklik** ve yeni bir paylaşılan gizli anımsamasını sağlayabilirsiniz alfasayısal karakter dizesi yazın. Daha sonra ATA yapılandırmanızı doldurmak gerekecektir. Denetleme **RADIUS hesabı üzerinde göndermek ve hesap kapatma iletilerinin** kutusuna ve ardından **Tamam** tüm açık iletişim kutularında.
+4.  İçinde **RADIUS sunucusu Ekle** penceresinde, türü **sunucu adı** yakın ATA Gateway veya ATA Lightweight Gateway. Altında **bağlantı noktası**, 1813 varsayılan yapılandırıldığından emin olun. Tıklatın **değişiklik** ve yeni bir paylaşılan gizli anımsamasını sağlayabilirsiniz alfasayısal karakter dizesi yazın. Daha sonra ATA yapılandırmanızı doldurmak gerekir. Denetleme **RADIUS hesabı üzerinde göndermek ve hesap kapatma iletilerinin** kutusuna ve ardından **Tamam** tüm açık iletişim kutularında.
  
      ![VPN Kurulumu](./media/vpn-set-accounting.png)
      
@@ -76,7 +76,7 @@ ATA VPN verileri yapılandırmak için:
  
   ![ATA yapılandırma menüsü](./media/config-menu.png)
 
-2.  Kapatma **RADIUS hesaplama** ve yazın **paylaşılan gizlilik** RRAS VPN sunucunuza daha önce yapılandırılmış. Daha sonra **Kaydet**'e tıklayın.
+2.  Aç **RADIUS hesaplama**ve yazın **paylaşılan gizlilik** RRAS VPN sunucunuza daha önce yapılandırılmış. Daha sonra **Kaydet**'e tıklayın.
  
 
   ![ATA VPN bağlantısını yapılandırma](./media/vpn.png)
@@ -84,7 +84,7 @@ ATA VPN verileri yapılandırmak için:
 
 Bu özellik etkinleştirildikten sonra tüm ATA Gateway ve Lightweight Gateway RADIUS hesaplama olayları 1813 numaralı bağlantı noktasında dinler. 
 
-Kurulum tamamlandıktan ve şimdi VPN etkinliğinde kullanıcıların profili sayfasını göreceksiniz:
+Kurulum tamamlandıktan ve kullanıcıların profili sayfasını VPN etkinliğinde şimdi görebilirsiniz:
  
    ![VPN Kurulumu](./media/vpn-user.png)
 

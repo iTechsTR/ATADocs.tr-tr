@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 16a8eb868448cc43244d3cf3c933e2e539b08d07
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 3210d9153cd6781ae13a784e1f2b5927e0703009
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -29,13 +29,13 @@ Bu makalede ATA’yı sessizce yüklemeye dair yönergeler mevcuttur.
 
 ATA sürüm 1.8 için Microsoft .NET Framework 4.6.1’in yüklü olması gerekir. 
 
-ATA’yı yüklediğiniz veya güncelleştirdiğiniz zaman, .Net Framework 4.6.1, Microsoft ATA dağıtımının parçası olarak otomatik yüklenir.
+Yüklediğinizde veya ATA güncelleştirme, .net Framework 4.6.1 otomatik olarak, Microsoft ATA dağıtımının bir parçası olarak yüklenir.
 
 > [!Note] 
 > .Net Framework 4.6.1 yüklemesi için sunucunun yeniden başlatılması gerekebilir. Etki Alanı Denetleyicilerinde ATA Gateway’i yüklerken, bu Etki Alanı Denetleyicileri için bir bakım penceresi zamanlamayı dikkate alın.
-ATA’yı sessiz yükleme yöntemini kullanırken, yükleyici yükleme sonunda sunucuyu (gerekirse) otomatik olarak yeniden başlatmak üzere yapılandırılır. Bir Windows Installer hatası yüzünden sunucunun yeniden başlatılmasını önlemek için norestart bayrağını kullanmak sağlıklı değildir, bu nedenle sessiz yüklemeyi sadece bir bakım penceresi esnasında çalıştırdığınızdan emin olun.
+ATA’yı sessiz yükleme yöntemini kullanırken, yükleyici yükleme sonunda sunucuyu (gerekirse) otomatik olarak yeniden başlatmak üzere yapılandırılır. Windows Installer hatası nedeniyle bayrağını, sunucunun yeniden başlatmaz, emin olmak için güvenilir bir şekilde kullanılamaz norestart şekilde bir bakım penceresi sırasında yalnızca sessiz yüklemeyi çalıştırmayı emin olun.
 
-Dağıtımın ilerleme durumunu izlemek için, **%AppData%\Local\Temp** konumunda bulunan ATA yükleyici günlüklerine bakın.
+Dağıtımın ilerleme durumunu izlemek için izlemeniz bulunan ATA yükleyici günlüklerini **%AppData%\Local\Temp**.
 
 
 ## <a name="install-the-ata-center"></a>ATA Center’ı yükleme
@@ -66,9 +66,9 @@ ATA Center’ı yüklemek için aşağıdaki komutu kullanın:
 |DatabaseDataPath|DatabaseDataPath= "<DBPath>"|Hayır|ATA Veritabanı veri klasörünün yolunu ayarlar. Varsayılan yol: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
 |CenterIpAddress|CenterIpAddress=<CenterIPAddress>|Evet|ATA Center Hizmetinin IP adresini ayarlar|
 |CenterPort|CenterPort=<CenterPort>|Evet|ATA Center Hizmetinin ağ bağlantı noktasını ayarlar|
-|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|Hayır|ATA Center Hizmeti için sertifika parmak izini ayarlar. Bu Sertifika ATA Center ile ATA Gateway arasındaki iletişimin güvenliğini sağlamak için kullanılır. Ayarlanmazsa, yükleme otomatik olarak imzalanan bir sertifika oluşturur.|
+|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|Hayır|ATA Center Hizmeti için sertifika parmak izini ayarlar. Bu Sertifika ATA Center ile ATA Gateway arasındaki iletişimin güvenliğini sağlamak için kullanılır. Aksi durumda kümesi, yükleme otomatik olarak imzalanan bir sertifika oluşturur.|
 |ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Evet|ATA Konsolunun IP adresini ayarlar|
-|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|Hayır|ATA Konsolu için sertifika parmak izini ayarlar. Bu Sertifika ATA Konsolu web sitesinin kimliğini doğrulamak için kullanılır. Belirtilmezse yükleme otomatik olarak imzalanan bir sertifika oluşturur|
+|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|Hayır|ATA Konsolu için sertifika parmak izini ayarlar. Bu sertifika ATA Konsolu Web sitesinin kimliğini doğrulamak için kullanılır. Belirtilmezse, yükleme otomatik olarak imzalanan bir sertifika oluşturur.|
 
 **Örnekler**: ATA Center’ı varsayılan yükleme yolları ve tek bir IP adresi yüklemek için:
 
@@ -168,7 +168,7 @@ ATA Gateway’i sessizce yüklemek için aşağıdaki komutu kullanın:
 |ConsoleAccountName|ConsoleAccountName="<AccountName>"|Evet|ATA Gateway’i ATA Center’a kaydetmek için kullanılan kullanıcı hesabının (user@domain.com) adını ayarlar.|
 |ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Evet|ATA Gateway’i ATA Center’a kaydetmek için kullanılan kullanıcı hesabının (user@domain.com) parolasını ayarlar.|
 
-**Örnekler**: ATA Gateway’i sessizce yüklemek için etki alanına katılmış bilgisayarda yönetici kimlik bilgilerinizle oturum açarsanız kimlik bilgisi belirtmeniz gerekmez. Aksi takdirde, belirtilen kimlik bilgilerini kullanarak ATA Center’a kaydedebilirsiniz:
+**Örnekler**: böylece yüklemesinin bir parçası kimlik bilgilerini belirtmeniz gerekmez ATA Gateway'i sessizce yüklemek için günlük etki alanına bilgisayar ATA yönetici kimlik bilgilerinizle alanına katıldı. Aksi takdirde, belirtilen kimlik bilgilerini kullanarak ATA Center’a kaydedebilirsiniz:
 
     "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"

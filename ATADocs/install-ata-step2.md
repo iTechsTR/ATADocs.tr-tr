@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6a2e559f5aef382230476dde44e8118f2f26b3cf
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: c4cd30446193ff2d9ab4069b1312593a2102282a
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -43,9 +43,9 @@ ATA Konsolunu ilk açtığınızda aşağıdaki ekran görünür:
     |**Parola** (gerekli)|Salt okunur kullanıcının parolasını girin, örneğin: **Kalem1**.|
     |**Etki alanı** (gerekli)|Salt okunur kullanıcının etki alanını girin, örneğin, **contoso.com**. **Not:** Kullanıcının bulunduğu etki alanının tam FQDN’sini girmek önemlidir. Örneğin, kullanıcının hesabı corp.contoso.com etki alanındaysa, contoso.com değil `corp.contoso.com` girmeniz gerekir.|
 
-2. **Bağlantıyı sına**’ya tıklayarak etki alanı bağlantısını sınayabilir ve verilen kimlik bilgilerinin erişim sağlayıp sağlamadığını kontrol edebilirsiniz. Bu, yalnızca ATA Center’ın etki alanına bağlı olması durumunda çalışır.   
+2. **Bağlantıyı sına**’ya tıklayarak etki alanı bağlantısını sınayabilir ve verilen kimlik bilgilerinin erişim sağlayıp sağlamadığını kontrol edebilirsiniz. Bu, ATA Center etki alanına bağlantısı varsa çalışır.    
 
-    Kaydedildikten sonra, Konsoldaki hoş geldiniz iletisi şu şekilde değişir: ![ATA hoş geldiniz aşama 1 tamamlandı](media/ATA_1.7-welcome-provide-username-finished.png)
+    Kaydedildikten sonra konsolunda Hoş Geldiniz iletisi için aşağıdaki iletiyi değişir: ![ATA, aşama 1 Tamamlandı'na Hoş Geldiniz](media/ATA_1.7-welcome-provide-username-finished.png)
 
 3. Devam etmek için Konsolda **Ağ Geçidi kurulumunu indir ve ilk Ağ Geçidini yükle**’ye tıklayın.
 

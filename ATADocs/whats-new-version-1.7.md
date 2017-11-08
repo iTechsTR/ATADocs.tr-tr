@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 036871da05f59e380b045139e735762c1cc8a363
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 7bbca4eeb6ad8c5b9cf161f60144bbd27ca3c8d2
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="whats-new-in-ata-version-17"></a>ATA sürüm 1.7’deki yenilikler
 Bu sürüm notları, Advanced Threat Analytics’in bu sürümündeki bilinen sorunlar hakkında bilgi sağlar.
@@ -104,14 +104,14 @@ Bu sorunu çözmek için, sertifikayı değiştirdikten sonra yükseltilmiş kom
 ### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>Şüpheli etkinlik ayrıntılarını Excel'e dışarı aktarma başarısız olabilir
 Şüpheli etkinlik ayrıntılarını bir Excel dosyasına dışarı aktarmaya çalıştığınızda, işlem şu hatayı vererek başarısız olabilir: *Error [BsonClassMapSerializer`1] System.FormatException: An error occurred while deserializing the Activity property of class Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
 
-Bu sorunu çözmek için yükseltilmiş komut isteminden **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** konumuna gidin ve şu komutu çalıştırın:
-1.  **Mongo.exe ATA** (ATA büyük harfle yazılmalıdır)
-2.  **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
+Yükseltilmiş bir komut isteminden bu sorunu çözmek için aşağıdaki konuma göz atın: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** ve aşağıdaki komutları çalıştırın:
+1.  `Mongo.exe ATA`(ATA büyük harfle yazılmalıdır)
+2.  `db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});`
 
 ## <a name="minor-changes"></a>Küçük değişiklikler
 
 - ATA, ATA Konsolu için artık IIS yerine OWIN kullanıyor.
-- ATA Center hizmeti kapalıysa ATA Konsolu’na erişemezsiniz.
+- ATA Center hizmeti çalışmıyorsa, ATA Konsolu'na erişemez.
 - ATA NNR’deki değişikliklerden dolayı artık kısa vadeli Kiralama alt ağları gerekmiyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.

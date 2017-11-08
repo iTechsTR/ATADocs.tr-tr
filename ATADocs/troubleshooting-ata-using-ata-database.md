@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 9/19/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f88dcf9b2c3bb9db5d81a039e7e7ae8818c48137
-ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
+ms.openlocfilehash: 4c8de5a12c06b9c20f4bd665f472ed622079bf83
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -30,7 +30,7 @@ Varsayılan komut satırını kullanarak veya gelişmiş görevler ve sorun gide
 ## <a name="interacting-with-the-database"></a>Veritabanıyla etkileşim kurma
 Veritabanını sorgulamanın varsayılan ve en temel yolu Mongo kabuğunu kullanmaktır:
 
-1.  Komut satırı penceresi açın ve yolu MongoDB bin klasörüyle değiştirin. Varsayılan yol: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**
+1.  Bir komut satırı penceresi açın ve yolu MongoDB bin klasörüyle değiştirin. Varsayılan yol: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**
 
 2.  Şunu çalıştırın: `mongo.exe ATA`. ATA’yı tümüyle büyük harflerle yazmaya dikkat edin.
 
@@ -41,11 +41,11 @@ Veritabanını sorgulamanın varsayılan ve en temel yolu Mongo kabuğunu kullan
 |Bir kullanıcı/bilgisayar/grup (UniqueEntity) ile ilgili kullanıcı kimliği gibi ayrıntıları alma.|`db.UniqueEntity.find({SearchNames: "<name of entity in lower case>"})`||
 |Belirli bir günde belirli bir bilgisayardan kaynaklanan Kerberos kimlik doğrulama trafiğini bulma.|`db.KerberosAs_<datetime>.find({SourceComputerId: "<Id of the source computer>"})`|&lt;Kaynak bilgisayarın kimliğini&gt; almak için, örnekte gösterildiği gibi UniqueEntity koleksiyonlarını sorgulayabilirsiniz.<br /><br />Her ağ etkinliği türünün, örneğin Kerberos kimlik doğrulamalarının her UTC tarihi için kendi koleksiyonu vardır.|
 |Belirli bir günde belirli bir hesapla ilgili olarak belirli bir bilgisayardan kaynaklanan NTLM trafiğini bulma.|`db.Ntlm_<datetime>.find({SourceComputerId: "<Id of the source computer>", SourceAccountId: "<Id of the account>"})`|&lt;Kaynak bilgisayarın kimliğini&gt; ve &lt;hesabın kimliğini&gt; almak için, örnekte gösterildiği gibi UniqueEntity koleksiyonlarını sorgulayabilirsiniz.<br /><br />Her ağ etkinliği türünün, örneğin NTLM kimlik doğrulamalarının her UTC tarihi için kendi koleksiyonu vardır.|
-|Gelişmiş yapılandırma değişikliklerini yapın. Bu örnekte tüm ATA Gateway bileşenlerinde gönderme kuyruğu boyutunu 10.000 olarak değiştiriyoruz.|`db.SystemProfile.update( {_t: "GatewaySystemProfile"} ,`<br>`{$set:{"Configuration.EntitySenderConfiguration.EntityBatchBlockMaxSize" : "10000"}})`|`|
+|Gelişmiş yapılandırma değişikliklerini yapın. Bu örnekte, 10.000 tüm ATA Gateway bileşenlerinde gönderme kuyruğu boyutunu değiştirin.|`db.SystemProfile.update( {_t: "GatewaySystemProfile"} ,`<br>`{$set:{"Configuration.EntitySenderConfiguration.EntityBatchBlockMaxSize" : "10000"}})`|`|
 
-Aşağıdaki örnek, yukarıda sağlanan söz diziminin kullanıldığı örnek kodu sağlıyor. 20/10/2015 tarihinde gerçekleşen bir kuşkulu etkinliği araştırıyor ve "John Doe"nun o gün gerçekleştirdiği NTLM etkinlikleri hakkında daha fazla bilgi edinmek istiyorsanız:<br /><br />İlk olarak "John Doe"nun kimliğini bulun.
+Aşağıdaki örnek daha önce sağlanan söz diziminin kullanıldığı örnek kodu sağlıyor. 20/10/2015 tarihinde gerçekleşen bir kuşkulu etkinliği araştırıyor ve "John Doe"nun o gün gerçekleştirdiği NTLM etkinlikleri hakkında daha fazla bilgi edinmek istiyorsanız:<br /><br />İlk olarak "John Doe"nun kimliğini bulun.
 
-`db.UniqueEntity.find({Name: "John Doe"})`<br>`_id` değeri olarak gösterilen kimliğini bir yere not alın. Bizim örneğimizde, kimliğin şöyle olduğunu varsayalım: `123bdd24-b269-h6e1-9c72-7737as875351`<br>Ardından, aradığınız tarihten (bizim örneğimizde 20/10/2015) önceki en yakın tarihli koleksiyonu arayın.<br>Sonra, John Doe'nun hesabının NTLM etkinliklerini arayın: 
+`db.UniqueEntity.find({Name: "John Doe"})`<br>Değeri olarak gösterilen Kimliğini not alın `_id` örneğin olduğunu varsayalım.`123bdd24-b269-h6e1-9c72-7737as875351`<br>Ardından, arama aradığınız, örnekte tarihinden önce en yakın tarihli koleksiyonu için 20/10/2015.<br>Sonra, John Doe'nun hesabının NTLM etkinliklerini arayın: 
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,18 +13,18 @@ ms.technology:
 ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c185060a4fb889121c6a02b353fb0d176f0c9274
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: f9fce36074b5c31e35f95f028b856b18fa3bae0b
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
 
 
 # <a name="excluding-entities-from-detections"></a>Varlıkları algılamalardan dışlama
-Bu konuda, doğru zararsız pozitif sonuçları olabildiğince azaltmak ve aynı zamanda doğru pozitif sonuçları yakalamak için varlıkların uyarı tetiklemesini nasıl engelleyeceğiniz açıklanmaktadır. Belirli kullanıcılar tarafından normal iş düzeninize uygun olarak gerçekleştirilen etkinlikler konusunda ATA’nın sizi gereksiz yere rahatsız etmesini önlemek için, seçtiğiniz varlıkların uyarılarını susturabilir veya dışlayabilirsiniz.
+Bu makalede, doğru zararsız pozitif sonuç en aza ancak aynı anda true pozitif sonuç catch emin olmak için uyarıları tetikleme varlıkları dışlama açıklanmaktadır. ATA, belirli kullanıcılardan, normal Ritim iş parçası olabilir etkinlikleri hakkında gürültülü engellemek için quiet - edebilir veya dışarıda bırakabilirsiniz - uyarıları oluşturma gelen belirli varlıklar.
 
 Örneğin, kuruluşunuzdaki rutin BT işlemleri gereği DNS keşfi yapan bir güvenlik tarayıcınız veya etki alanı denetleyicisinde uzaktan betik çalıştıran bir yöneticiniz varsa (ve bunlar tasdikli eylemlerse) bu özelliğe ihtiyaç duyabilirsiniz.
 
@@ -32,11 +32,11 @@ Varlıkların ATA’da uyarı tetiklemesini engellemek için:
 
 Varlıkları dışlamak için iki yol vardır: Doğrudan şüpheli etkinlik üzerinden veya **Yapılandırma** sayfasındaki **Dışlamalar** sekmesinden.
 
-- **Şüpheli etkinlik üzerinden**: Şüpheli etkinlik zaman çizelgesinde bir kullanıcı, bilgisayar veya IP adresinin izinli olduğu ve sık sık gerçekleştirebileceği bir etkinlik hakkında uyarı aldığınızda, bu varlığa ait şüpheli etkinliğin bulunduğu satırın sonundaki üç nokta simgesine tıklayıp **Kapat ve dışla**’yı seçin. <br></br>Böylelikle bu kullanıcı, bilgisayar veya IP adresini bu şüpheli etkinliğin dışlamalar listesine eklemiş olursunuz. Ayrıca şüpheli etkinliği kapattığınız için etkinlik, **Şüpheli etkinlik zaman çizelgesi**’ndeki **Açık** olaylar listesinden de kaldırılır.
+- **Kuşkulu etkinliğin**: bir etkinlikte bir kullanıcı veya bilgisayar veya belirli etkinlik gerçekleştirmesine izin verilen ve sık, bunu yapabilirsiniz IP adresi için bir uyarı aldığınızda, şüpheli etkinlik zaman çizelgesi, sağ tıklatın, üç nokta Bu varlık ve select kuşkulu etkinlik için satır sonu **kapatın ve dışlama**. <br></br>Bu kullanıcı, bilgisayar veya IP adresi, şüpheli etkinlik için dışlama listesine ekler. Kuşkulu etkinliği kapatır ve artık listelenen **açık** olaylar listesinde **şüpheli etkinlik zaman çizelgesi**.
 
     ![Varlık dışlama](./media/exclude-in-sa.png)
 
-- **Yapılandırma sayfasından**: Ayarladığınız dışlamaları gözden geçirmek veya değiştirmek için: **Yapılandırma** altında bulunan **Dışlamalar**’a tıklayın ve şüpheli etkinliği (örneğin, **Gizli hesap kimlik bilgileri açığa çıkarıldı**) seçin.
+- **Yapılandırma sayfasından**: gözden geçirmek veya herhangi Dışlamalar değiştirmek için: altında **yapılandırma**, tıklatın **Dışlamalar** ve şüpheli etkinlik gibi seçin  **Hassas hesap kimlik bilgilerini kullanıma sunulan**.
 
     ![Dışlama yapılandırma](./media/exclusions-config-page.png)
 
@@ -49,9 +49,9 @@ Algılama dışlamalarını yalnızca, aldığınız bir uyarı türünün doğr
 
 Bazı algılamalar, neleri dışlayabileceğinize karar vermeniz için ipuçları sağlar. 
 
-Her dışlama, bağlama göre değişen özellikler taşır. Bazılarında kullanıcı ayarlayabilir, bazılarında ise bilgisayar veya IP adresleri ayarlayabilirsiniz. 
+Her dışlama bağlama bağlıdır, diğerleri için bilgisayarları veya IP adresi ayarlayabilirsiniz karşın bazı durumlarda, kullanıcılar ayarlayabilirsiniz. 
 
-Bir IP adresi veya bilgisayar dışlama seçeneğiniz varsa, bunlardan yalnızca birini dışlamanız yeterlidir.
+Birini veya diğerini - dışlayabilirsiniz bir IP adresi veya bir bilgisayar hariç olanağına sahip olduğunuzda, her ikisi de sağlamanız gerekmez.
 
 > [!NOTE]
 > Yapılandırma sayfaları yalnızca ATA yöneticileri tarafından değiştirilebilir.

@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 3ef6322a4c63c15bbdae0669a7d116dfd80756db
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 07be2dad511158a9234c99287f7eefd7cc12ba83
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -64,7 +64,7 @@ Olayları şurada bulunabilir:
 
 1017 – merkezi trafiği sistem durumu uyarısı almıyor 
 
-1018 – ATA Gateway başlatma hatası Sistem Durumu Uyarısı 
+1018 – ATA Gateway başlangıç hatası Sistem Durumu Uyarısı 
 
 1019 – ATA Gateway düşük bellek sistem durumu Uyarısı 
 

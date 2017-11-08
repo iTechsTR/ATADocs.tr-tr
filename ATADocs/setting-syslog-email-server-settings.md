@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5ba7d030a82c1c7515f0e71a865d727b0e675044
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 70e076dea5b1ff200b1b9f2a6529a76c175c7a88
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -39,8 +39,8 @@ ATA, kuşkulu bir etkinlik algıladığında size bildirebilir. ATA’nın e-pos
     |Alan|Açıklama|Değer|
     |---------|---------------|---------|
     |SMTP sunucusu uç noktası (gerekli)|SMTP sunucunuzun FQDN’sini girin ve isteğe bağlı olarak bağlantı noktası numarasını (varsayılan 25) değiştirin.|Örneğin:<br />smtp.contoso.com|
-    |SSL|SMTP sunucusu SSL gerektiriyorsa, SSL’ye geçin. **Not:** SSL’yi etkinleştirirseniz Bağlantı noktası numarasını da değiştirmeniz gerekir.|Varsayılan devre dışı olmasıdır|
-    |Kimlik doğrulaması|SMTP sunucunuz kimlik doğrulaması gerektiriyorsa etkinleştirin. **Not:** Kimlik doğrulamasını etkinleştirirseniz, SMTP sunucusuna bağlanma izni olan bir e-posta hesabının kullanıcı adını ve parolasını sağlamanız gerekir.|Varsayılan devre dışı olmasıdır|
+    |SSL|SMTP sunucusu SSL gerektiriyorsa, SSL’ye geçin. **Not:** SSL'yi etkinleştirirseniz, ayrıca bağlantı noktası numarasını değiştirmek gerekir.|Varsayılan devre dışı olmasıdır|
+    |Kimlik doğrulaması|SMTP sunucunuz kimlik doğrulaması gerektiriyorsa etkinleştirin. **Not:** kimlik doğrulamasını etkinleştirirseniz, bir kullanıcı adı ve SMTP sunucusuna bağlanma izni olan bir e-posta hesabının parolasını sağlamanız gerekir.|Varsayılan devre dışı olmasıdır|
     |Gönderen (gerekli)|E-postayı gönderecek olan e-posta adresini girin.|Örneğin:<br />ATA@contoso.com|
     ![ATA e-posta sunucu ayarları resmi](media/ata-email-server.png)
 
@@ -53,7 +53,7 @@ ATA kuşkulu bir etkinlik algıladığında Syslog sunucunuza bildirim gönderer
 
     -   SIEM sunucusunun dinlediği bağlantı noktası
 
-    -   Hangi aktarım kullanılacak: UDP, TCP veya TLS (Güvenli Syslog)
+    -   Hangi aktarım kullanılacak: UDP, TCP veya TLS (güvenli Syslog)
 
     -   Veriler gönderilirken kullanılacak biçim, RFC 3164 veya 5424
 
@@ -70,7 +70,7 @@ ATA kuşkulu bir etkinlik algıladığında Syslog sunucunuza bildirim gönderer
     |Alan|Açıklama|
     |---------|---------------|
     |Syslog sunucusu uç noktası|Syslog sunucunuzun FQDN’sini girin ve isteğe bağlı olarak bağlantı noktası numarasını (varsayılan 514) değiştirin|
-    |Aktarım|UDP, TCP veya TLS (Güvenli Syslog) olabilir|
+    |Aktarım|UDP, TCP veya TLS (güvenli Syslog) olabilir|
     |Biçim|Bu, ATA’nın olayları SIEM sunucusuna gönderirken kullandığı biçimdir; RFC 5424 veya RFC 3164.|
 
  ![ATA Syslog sunucusu ayarları resmi](media/ata-syslog-server-settings.png)

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 66e910c1d6d11781fa66f8386b4b3939fd49ebf7
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 4abeda5a54de771c6e6d3c73d9217113dfe88b8e
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 10/09/2017
 
 ## <a name="step-4-install-the-ata-gateway"></a>Adım 4. ATA Gateway’i yükleme
 
-Ayrılmış bir sunucuya ATA Gateway’i yüklemeden önce, bağlantı noktası yansıtmanın düzgün yapılandırıldığını ve ATA Gateway’i etki alanı denetleyicilerinden gelen ve giden trafiği görebildiğini doğrulayın. Daha fazla bilgi için bkz. [Bağlantı noktası yansıtmayı doğrulama](validate-port-mirroring.md).
+Ayrılmış bir sunucuya ATA Gateway’i yüklemeden önce, bağlantı noktası yansıtmanın düzgün yapılandırıldığını ve ATA Gateway’i etki alanı denetleyicilerinden gelen ve giden trafiği görebildiğini doğrulayın. Daha fazla bilgi için bkz: [bağlantı noktası yansıtmayı doğrulama](validate-port-mirroring.md).
 
 
 > [!IMPORTANT]
@@ -49,25 +49,25 @@ ATA Gateway sunucusunda aşağıdaki adımları gerçekleştirin.
 
 3.  **Hoş Geldiniz** sayfasında dilinizi seçin ve **İleri**’ye tıklayın.
 
-4.  Yükleme sihirbazı sunucunun bir etki alanı denetleyicisi veya adanmış bir sunucu olup olmadığını otomatik olarak denetler. Etki alanı denetleyicisi ise ATA Lightweight Gateway, adanmış bir sunucu ise ATA Gateway yüklenir. 
+4.  Yükleme Sihirbazı'nı otomatik olarak sunucunun bir etki alanı denetleyicisi veya ayrılmış bir sunucuya olup olmadığını denetler. ATA Lightweight Gateway bir etki alanı denetleyicisi ise, yüklü, ayrılmış bir sunucu ise, ATA Gateway yüklenir. 
     
-    Örneğin, adanmış sunucunuza ATA Gateway yükleneceği zaman bunu size bildirmek için aşağıdaki ekran görüntülenecektir:
+    Örneğin, bir ATA Gateway için bir ATA Gateway, özel bir sunucu üzerinde yüklü olduğunu size bildirmek için aşağıdaki ekran görüntülenir:
     
     ![ATA Gateway yüklemesi](media/ata-gw-install.png) **İleri**’ye tıklayın.
 
     > [!NOTE] 
-    > Etki alanı denetleyicisi veya adanmış sunucu, yükleme işlemi için en düşük donanım gereksinimlerini karşılamıyorsa bir uyarı görürsünüz. Bu, **İleri**’ye tıklamanızı ve yükleme işlemine devam etmenizi engellemez. Bu, veri depolama için fazla yere gereksinim duymayacağınız küçük bir laboratuvar testi ortamında ATA yüklemesi için doğru seçenek olabilir. Üretim ortamlarında etki alanı denetleyicilerinizin veya adanmış sunucularınızın gereksinimleri karşıladığından emin olmak için ATA’nın [kapasite planlaması](ata-capacity-planning.md) kılavuzuyla çalışmanız önerilir.
+    > Etki alanı denetleyicisi veya adanmış sunucu yüklemesi için en düşük donanım gereksinimlerini karşılamıyorsa, bir uyarı alırsınız. Bu, **İleri**’ye tıklamanızı ve yükleme işlemine devam etmenizi engellemez. Bu veri depolama için gerektiği kadar yeri gerekmeyen küçük Laboratuvar test ortamında ATA yüklemesi için doğru seçeneği olabilir. Üretim ortamlarında etki alanı denetleyicilerinizin veya adanmış sunucularınızın gereksinimleri karşıladığından emin olmak için ATA’nın [kapasite planlaması](ata-capacity-planning.md) kılavuzuyla çalışmanız önerilir.
 
 4.  **Ağ Geçidini Yapılandırma** altında, ortamınıza bağlı olarak aşağıdaki bilgileri girin:
 
     ![ATA Gateway yapılandırmasının resmi](media/ata-gw-configure.png)
 
     > [!NOTE]
-    > ATA Gateway’i dağıttığınızda kimlik bilgileri sağlamanız gerekmeyecektir. ATA Gateway çoklu oturum açma yoluyla kimlik bilgilerinizi almakta başarısız olursa (bu durum örneğin ATA Center, etki alanında olmadığında ortaya çıkabilir. ATA Gateway, etki alanında değilse ATA yönetici kimlik bilgilerine sahip değilsinizdir) aşağıdaki ekranda belirtildiği gibi kimlik bilgilerinizi sağlamanız istenir. 
+    > ATA Gateway dağıttığınızda, kimlik bilgilerini sağlamanız gerekmez. Çoklu oturum açma kullanarak, kimlik bilgilerini almak ATA Gateway yüklemesi başarısız olursa (ATA Center etki alanında değilse, örneğin, bu durum oluşabilir ATA Gateway etki alanında değilse, ATA yönetici kimlik bilgilerine sahip değil), sağlamanız istenir Aşağıdaki ekran olduğu gibi kimlik: 
 
-  ![ATA gateway kimlik bilgileri sağlama](media/ata-install-credentials.png)
+  ![ATA gateway kimlik bilgilerini sağlayın](media/ata-install-credentials.png)
 
-   - Yükleme Yolu: Bu, ATA Gateway’in yükleneceği konumdur. Bu yol varsayılan olarak %programfiles%\Microsoft Advanced Threat Analytics\Gateway’dir. Varsayılan değeri olduğu gibi bırakın.
+   - Yükleme yolu: ATA Gateway yüklendiği konumun budur. Bu yol varsayılan olarak %programfiles%\Microsoft Advanced Threat Analytics\Gateway’dir. Varsayılan değeri olduğu gibi bırakın.
     
 5. **Yükle**’ye tıklayın. ATA Gateway’in yüklemesi sırasında aşağıdaki bileşenler yüklenir ve yapılandırılır:
 

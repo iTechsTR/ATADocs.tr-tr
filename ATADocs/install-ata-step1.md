@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 248866ae38040493fd9da9197f2a22496383f884
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: f35c495193806f1c1ccc00800402d9b0aca36982
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/06/2017
 Bu yükleme yordamında sıfırdan bir ATA 1.8 yüklemesi gerçekleştirmeye yönelik yönergeler sağlanmaktadır. Mevcut bir ATA dağıtımını önceki bir sürümünden güncelleştirme hakkında daha fazla bilgi için bkz. [Sürüm 1.8 için ATA geçiş kılavuzu](ata-update-1.8-migration-guide.md).
 
 > [!IMPORTANT] 
-> Windows 2012 R2 kullanıyorsanız, yüklemeye başlamadan önce ATA Center sunucusuna ve ATA Gateway sunucularına KB2934520’yi yükleyin. Aksi takdirde ATA yüklemesi bu güncelleştirmeyi yükler ve bu işlem sırasında bir yeniden başlatma gerektirir.
+> Windows 2012 R2 kullanıyorsanız, yükleme başlamadan önce ATA Center sunucusunda ve ATA Gateway sunucularında KB2934520 yükleyebilirsiniz, aksi takdirde ATA yüklemesi bu güncelleştirmeyi yükler ve ATA yüklemesinin ortasında bir yeniden başlatma gerektirir.
 
 ## <a name="step-1-download-and-install-the-ata-center"></a>1. Adım ATA Center’ı indirme ve yükleme
 Sunucunun gereksinimleri karşıladığını doğruladıktan sonra, ATA Center’ın yüklemesiyle devam edebilirsiniz.
@@ -42,22 +42,22 @@ ATA Center sunucusunda aşağıdaki adımları gerçekleştirin.
 
 1.  [Microsoft Toplu Lisanslama Hizmeti Merkezi](https://www.microsoft.com/Licensing/servicecenter/default.aspx)’nden, [TechNet Değerlendirme Merkezi](http://www.microsoft.com/evalcenter/)’nden ya da [MSDN](https://msdn.microsoft.com/subscriptions/downloads)’den ATA’yı indirin.
 
-2.  ATA Center yükleyeceğiniz bilgisayarda, yerel yöneticiler grubunun üyesi olan bir kullanıcı olarak oturum açın.
+2.  Açın ATA Center yerel Yöneticiler grubunun bir üyesi olan bir kullanıcı yüklediğiniz bilgisayarda oturum açın.
 
 3.  **Microsoft ATA Center Setup.EXE**’yi çalıştırın ve kurulum sihirbazını izleyin.
 
 > [!NOTE]   
 > Yüklemenin yeniden başlatma gerektirmesi durumunda oluşabilecek sorunları önlemek için, yükleme dosyasını bağlı bir ISO dosyasından değil yerel bir sürücüden çalıştırdığınızdan emin olun.   
 
-4.  Microsoft .Net Framework yüklü değilse, yüklemeyi başlattığınızda yüklemeniz istenir. .NET Framework yüklemesinden sonra bilgisayarı yeniden başlatmanız istenebilir.
+4.  Microsoft .net Framework yüklü değilse, yüklemeyi başlattığınızda yüklemeniz istenir. .NET Framework yüklemesinden sonra bilgisayarı yeniden başlatmanız istenebilir.
 5.  **Hoş Geldiniz** sayfasında, ATA yükleme ekranları için kullanılacak dili seçin ve **İleri**’ye tıklayın.
 
-6.  Microsoft Yazılım Lisans Koşulları’nı okuyun ve onay kutusuna tıklayıp ardından **İleri**’ye tıklayın.
+6.  Microsoft Yazılımı Lisans koşullarını okuyun ve koşulları kabul ediyorsanız, onay kutusuna tıklayın ve ardından **sonraki**.
 
-7.  ATA’yı otomatik olarak güncelleştirmeye ayarlamanız önerilir. Windows bilgisayarınızda bunu yapacak şekilde ayarlanmamışsa, **Bilgisayarınızı güvenli ve güncel tutmaya yardımcı olmak için Microsoft Update'i kullanın** ekranıyla karşılaşırsınız. 
+7.  ATA’yı otomatik olarak güncelleştirmeye ayarlamanız önerilir. Windows bilgisayarınızda bunu yapacak şekilde ayarlanmamışsa, size **bilgisayarınızı güvenli ve güncel tutmaya yardımcı olmak için Microsoft Update'i kullanın** ekran. 
     ![ATA’yı güncel tutma resmi](media/ata_ms_update.png)
 
-8. **Güncelleştirmeleri denetlediğimde Microsoft Update'i kullan (önerilir)** öğesini seçin. Bu, burada görüldüğü gibi, Windows ayarlarını diğer Microsoft ürünleri (ATA dahil) için güncelleştirmeleri etkinleştirecek şekilde ayarlar. 
+8. **Güncelleştirmeleri denetlediğimde Microsoft Update'i kullan (önerilir)** öğesini seçin. Bu Windows ayarları, burada görüldüğü gibi diğer Microsoft ürünleri (ATA dahil) için güncelleştirmeleri etkinleştirecek şekilde ayarlar. 
 
     ![Windows otomatik güncelleştirme resmi](media/ata_installupdatesautomatically.png)
 
@@ -65,9 +65,9 @@ ATA Center sunucusunda aşağıdaki adımları gerçekleştirin.
 
     |Alan|Açıklama|Açıklamalar|
     |---------|---------------|------------|
-    |Yükleme Yolu|Bu, ATA Center’ın yükleneceği konumdur. Varsayılan olarak %programfiles%\Microsoft Advanced Threat Analytics\Center yoludur.|Varsayılan değeri olduğu gibi bırakın.|
-    |Veritabanı Veri Yolu|Bu MongoDB veritabanı dosyalarının yer alacağı konumdur. Varsayılan olarak %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data yoludur.|Boyutunuza bağlı olarak büyümek için yeriniz olan başka bir konumla değiştirin. **Not:** <ul><li>Üretim ortamlarında, kapasite planlamasına göre yeterli yeri olan bir sürücü kullanmalısınız.</li><li>Büyük dağıtımlar için veritabanı ayrı bir fiziksel diskte yer almalıdır.</li></ul>Boyutlandırma bilgileri için bkz. [ATA kapasite planlaması](ata-capacity-planning.md).|
-    |Center Hizmeti SSL Sertifikası|Bu, ATA Konsolu ve ATA Center hizmeti tarafından kullanılacak olan sertifikadır.|Yüklü bir sertifika seçmek için anahtar simgesine tıklayın veya laboratuvar ortamında dağıtım yaparken otomatik olarak imzalanan sertifikayı işaretleyin. Otomatik olarak imzalanan bir sertifika oluşturma seçeneğiniz olduğunu unutmayın.|
+    |Yükleme Yolu|Bu, ATA Center'ın yüklendiği konumdur. Varsayılan olarak %programfiles%\Microsoft Advanced Threat Analytics\Center yoludur.|Varsayılan değeri olduğu gibi bırakın.|
+    |Veritabanı Veri Yolu|Bu MongoDB veritabanı dosyalarının bulunduğu konumdur. Varsayılan olarak %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data yoludur.|Boyutunuza bağlı olarak büyümek için yeriniz olan başka bir konumla değiştirin. **Not:** <ul><li>Üretim ortamlarında, kapasite planlamasına göre yeterli alana sahip bir sürücü kullanmalısınız.</li><li>Büyük dağıtımlar için veritabanı ayrı bir fiziksel diskte yer almalıdır.</li></ul>Boyutlandırma bilgileri için bkz. [ATA kapasite planlaması](ata-capacity-planning.md).|
+    |Center Hizmeti SSL Sertifikası|Bu ATA konsolu ve ATA Center hizmeti tarafından kullanılan sertifika yok.|Yüklü bir sertifika seçmek için anahtar simgesine tıklayın veya laboratuvar ortamında dağıtım yaparken otomatik olarak imzalanan sertifikayı işaretleyin. Otomatik olarak imzalanan sertifika oluşturma seçeneğiniz vardır.|
         
     ![ATA Center yapılandırmasının resmi](media/ATA-Center-Configuration.png)
 
@@ -83,8 +83,8 @@ ATA Center sunucusunda aşağıdaki adımları gerçekleştirin.
     -   Otomatik olarak imzalanan sertifikalar (yükleme sırasında seçildiyse)
 
 11.  Yükleme tamamlandığında **Başlat**’a tıklayarak ATA Konsolu’nu açın ve **Yapılandırma** sayfasında kurulumu tamamlayın.
-Bu aşamada, ATA Gateway bileşenlerinin yapılandırma ve dağıtımına devam etmek için otomatik olarak **Genel** sayfasına gidersiniz.
-Siteye bir IP adresi kullanarak oturum açtığınız için, sertifikayla ilgili bir uyarı alırsınız; bu normaldir ve **Bu Web sitesine devam et**’e tıklamanız gerekir.
+Bu noktada, otomatik olarak güncelleştirilecektir **genel** yapılandırma ve ATA Gateway bileşenlerinin dağıtımına devam etmek için ayarları sayfası.
+Siteye bir IP adresi kullanarak oturum açtığınız için sertifika, bu normaldir ilgili bir uyarı alırsınız ve tıklamanız **bu Web sitesine devam et**.
 
 ### <a name="validate-installation"></a>Yüklemeyi doğrulama
 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b05b7a6d01c99595b0877d633872716b115b4f51
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 652d3a9e20737d26e8776035690a180f6bd84593
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -28,9 +28,9 @@ ms.lasthandoff: 11/06/2017
 
 
 ## <a name="change-the-domain-connectivity-password"></a>Etki alanı bağlantı parolasını değiştirme
-Etki Alanı Bağlantısı Parolası’nı değiştirirseniz, girdiğiniz parolanın doğru olduğundan emin olun. Doğru olmazsa, ATA Gateway hizmeti ATA Gateway bileşenleri üzerinde çalışmayı durdurur.
+Etki Alanı Bağlantısı Parolası’nı değiştirirseniz, girdiğiniz parolanın doğru olduğundan emin olun. Değilse, ATA Gateway hizmeti ATA Gateway bileşenleri üzerinde çalışmayı durdurur.
 
-Böyle bir durum oluştuğundan kuşkulanırsanız, Microsoft.Tri.Gateway-Errors.log dosyasında şunu arayın: `The supplied credential is invalid.`
+Bu, ATA Gateway'de kuşkulanırsanız Microsoft.Tri.Gateway-Errors.log dosyasını aşağıdaki hatalara bakın:`The supplied credential is invalid.`
 
 Bunu düzeltmek için, bu yordamı izleyerek ATA Center’da Etki Alanı Bağlantısı parolasını güncelleştirin:
 
@@ -46,7 +46,7 @@ Bunu düzeltmek için, bu yordamı izleyerek ATA Center’da Etki Alanı Bağlan
 
 4.  **Parola** altında, parolayı değiştirin.
 
-    ATA Center’ın etki alanına bağlantısı varsa, kimlik bilgilerini doğrulamak için **Bağlantıyı Sına** düğmesine tıklayın
+    ATA Center etki alanına bağlantısı varsa, kullanmak **Bağlantıyı Sına** kimlik doğrulamaya düğmesi
 
 5.  **Kaydet**'e tıklayın.
 

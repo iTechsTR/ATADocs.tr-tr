@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,18 +13,18 @@ ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f488536341f96f66aac17e23f6938a83060a1116
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: b78f0407d74c3c8e0187c9934d3d7555104cd6ec
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
 
 
 # <a name="working-with-suspicious-activities"></a>Kuşkulu Etkinliklerle Çalışma
-Bu konu başlığı altında, Advanced Threat Analytics ile çalışmanın temelleri açıklanır.
+Bu makalede, Advanced Threat Analytics ile çalışmaya nasıl temelleri açıklanır.
 
 ## <a name="review-suspicious-activities-on-the-attack-time-line"></a>Saldırı zaman çizelgesinde kuşkulu etkinlikleri gözden geçirme
 ATA Konsolu’nda oturum açtıktan sonra, otomatik olarak açık **Kuşkulu Etkinlikler Zaman Çizelgesi**’ne gelirsiniz. Kuşkulu etkinlikler, en yenileri zaman çizelgesinin en üstünde olacak şekilde kronolojik sırayla listelenir.
@@ -52,16 +52,16 @@ Her kuşkulu etkinliğin aşağıdaki bilgileri bulunur:
 
 > [!NOTE]
 > -   Farenizi bir kullanıcı veya bilgisayarın üzerine getirdiğinizde, varlık hakkında ek bilgi sağlayan bir varlık mini profili görüntülenir ve varlığın bağlantılı olduğu kuşkulu etkinliklerin sayısını içerir.
-> -   Varlığın üzerine tıkladığınızda, kullanıcının veya bilgisayarın varlık profiline gidersiniz.
+> -   Bir varlık üzerinde tıklatırsanız, kullanıcı veya bilgisayar varlık profili alır.
 
 ![ATA kuşkulu etkinlikler zaman çizelgesinin resmi](media/ATA-Suspicious-Activity-Timeline.JPG)
 
 ## <a name="filter-suspicious-activities-list"></a>Kuşkulu etkinlikler listesini filtreleme
 Kuşkulu etkinlikler listesini filtrelemek için:
 
-1.  İçinde **göre filtre** ekranın sol tarafındaki bölmesinde aşağıdakilerden birini seçin: **tüm**, **açık**, **kapalı**, veya  **Gizlenen**.
+1.  İçinde **göre filtre** ekranın sol tarafındaki bölmesinde aşağıdaki seçeneklerden birini seçin: **tüm**, **açık**, **kapalı**, veya **Gizlenen**.
 
-2.  Listeyi daha fazla filtrelemek için, **Yüksek**, **Orta** veya **Düşük** ayarını seçin.
+2.  Daha fazla listeyi filtrelemek için seçin **yüksek**, **orta**, veya **düşük**.
 
 **Kuşkulu etkinliğin önem derecesi**
 
@@ -75,13 +75,13 @@ Kuşkulu etkinlikler listesini filtrelemek için:
 
 -   **Yüksek**
 
-    Kimlik hırsızlığı, ayrıcalık yükseltme ve diğer etkili saldırılara yol açabilecek kuşkulu etkinlikleri gösterir
+    Kimlik hırsızlığı, ayrıcalık yükseltme veya diğer etkili saldırılara yol açabilecek kuşkulu etkinlikleri gösterir
 
 
 
 
 ## <a name="remediating-suspicious-activities"></a>Şüpheli etkinlikleri düzeltme
-Şüpheli etkinliğin geçerli durumuna tıklayıp **Açık**, **Gösterilmeyen**, **Kapalı** veya **Silinmiş** seçeneklerinden birini belirleyerek durumu değiştirebilirsiniz.
+Kuşkulu etkinliğin geçerli durumu tıklatarak ve aşağıdakilerden birini seçerek, kuşkulu etkinliğin durumunu değiştirebilirsiniz **açık**, **Suppressed**, **kapalı**, veya **silinmiş**.
 Bir şüpheli etkinliğin sağ üst köşesindeki üç nokta simgesine tıklayarak ulaşacağınız kullanılabilir eylemler listesinden bunu yapabilirsiniz.
 
 ![Şüpheli etkinlikler için ATA Eylemleri](./media/sa-actions.png)
@@ -90,14 +90,14 @@ Bir şüpheli etkinliğin sağ üst köşesindeki üç nokta simgesine tıklayar
 
 -   **Açık**: Tüm yeni şüpheli etkinlikler bu listede gösterilir.
 
--   **Kapalı**: Belirlediğiniz, araştırdığınız ve düzeltip riskini azalttığınız şüpheli etkinlikleri izlemek için kullanılır.
+-   **Kapat**: belirlediğiniz, Araştırdığınız ve düzeltip kuşkulu etkinlikleri izlemek için kullanılır.
 
     > [!NOTE]
-    > Aynı etkinlik ise, ATA kapalı bir etkinliği yeniden açabilir yeniden bir kısa süre içinde algılandı.
+    > Aynı etkinlik yeniden bir kısa süre içinde algılanırsa, ATA kapalı bir aktivite yeniden.
 
--   **Gösterme**: Bir etkinliği göstermemek, etkinliği o an için yoksaymak ve yalnızca yeni bir örnek ortaya çıkarsa uyarı almak istediğiniz anlamına gelir. Yani benzer bir uyarı olduğunda ATA bunu tekrardan açmayacaktır. Ancak uyarı 7 gün sonra tekrar görülürse yeniden uyarılırsınız.
+-   **Gösterme**: Bir etkinliği göstermemek, etkinliği o an için yoksaymak ve yalnızca yeni bir örnek ortaya çıkarsa uyarı almak istediğiniz anlamına gelir. Başka bir deyişle, benzer bir uyarı ATA ise, yeniden değil. Ancak uyarı yedi gün için durdurur ve daha sonra yeniden görülür, yeniden uyarı.
 
-- **Sil**: Bir uyarıyı silerseniz uyarı sistemden ve veritabanından silinir ve geri YÜKLEYEMEZSİNİZ. Sil’e tıkladıktan sonra aynı türdeki tüm şüpheli etkinlikleri silebilirsiniz.
+- **Silme**: uyarı silme sistemden veritabanından silinir ve geri yüklemek mümkün olmaz. Sil’e tıkladıktan sonra aynı türdeki tüm şüpheli etkinlikleri silebilirsiniz.
 
 - **Dışla**: Bir varlığın belirli bir türdeki uyarıları göndermesini engelleme becerisi. Örneğin ATA’yı, belirli bir varlığı (kullanıcı veya bilgisayar) dışlamak üzere ayarlayabilirsiniz, böylece uzak kod çalıştıran belirli bir yönetici veya DNS keşfi yapan bir güvenlik tarayıcısı gibi belirli türdeki şüpheli etkinlikler hakkında bu varlıktan tekrar uyarı almazsınız. Zaman çizelgesinde algılandığı zaman doğrudan Şüpheli etkinlik üzerinde dışlama yapabileceğiniz gibi, Yapılandırma sayfasında bulunan **Dışlamalar**’a gidip her bir şüpheli etkinlik için dışlanan varlık veya alt ağları (Pass-the-Ticket gibi) el ile ekleyebilir ve kaldırabilirsiniz. 
 > [!NOTE]

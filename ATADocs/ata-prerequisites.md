@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2f720118b1d9ac08f26b7057e5c7b6706ff4b0b1
-ms.sourcegitcommit: 0cc999b20e919abe4d6edaedee78185788a3e3b9
+ms.openlocfilehash: d0d7ce6aae1bb59d266ddc0f7162ecfbc477b78a
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -56,13 +56,13 @@ Bu bölümde, ATA yüklemesine başlamadan önce toplamanız gereken bilgiler ve
     > [!NOTE]
     > Etki alanınızdaki çeşitli Kurumsal Birimlerde (OU) özel ACL’ler ayarladıysanız, seçili kullanıcının bu OU’lar üzerinde okuma izinleri olmasına dikkat edin.
 
--   Microsoft Message Analyzer, bir ATA Gateway veya Lightweight Gateway yüklemeyin. İleti Çözümleyicisi sürücüsü, ATA Gateway ve Lightweight Gateway sürücüleriyle çakışır. ATA Gateway’de Wireshark çalıştırırsanız Wireshark yakalamasını durdurduktan sonra Microsoft Advanced Threat Analytics Gateway Service’i yeniden başlatmanız gerekir. Aksi durumda, trafik yakalama ağ geçidi durdurur. ATA Lightweight Gateway’de Wireshark çalıştırmanın, ATA Lightweight Gateway’i etkilemediğini unutmayın.
+-   Microsoft Message Analyzer, bir ATA Gateway veya Lightweight Gateway yüklemeyin. İleti Çözümleyicisi sürücüsü, ATA Gateway ve Lightweight Gateway sürücüleriyle çakışır. ATA Gateway’de Wireshark çalıştırırsanız Wireshark yakalamasını durdurduktan sonra Microsoft Advanced Threat Analytics Gateway Service’i yeniden başlatmanız gerekir. Aksi durumda, trafik yakalama ağ geçidi durdurur. Bir ATA Lightweight Gateway Wireshark çalıştıran ATA Lightweight Gateway engellemez.
 
--    Önerilen: Kullanıcının silinmiş nesneler kapsayıcısı üzerinde salt okuma izinleri olmalıdır. Bu, ATA'ın etki alanında toplu nesne silme işlemlerini algılamasını sağlar. Silinmiş nesneler kapsayıcısı üzerinde salt okuma izinlerini yapılandırma hakkında daha fazla bilgi için bkz: **Silinmiş nesne kapsayıcısı üzerindeki izinleri değiştirme** bölümüne [görünümü veya bir dizin nesnesiizinleriayarlayın](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) konu.
+-    Önerilen: Kullanıcının silinmiş nesneler kapsayıcısı üzerinde salt okuma izinleri olmalıdır. Bu, ATA'ın etki alanında toplu nesne silme işlemlerini algılamasını sağlar. Silinmiş nesneler kapsayıcısı üzerinde salt okuma izinlerini yapılandırma hakkında daha fazla bilgi için bkz: **Silinmiş nesne kapsayıcısı üzerindeki izinleri değiştirme** bölümüne [görünümü veya bir dizin nesnesiizinleriayarlayın](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) makalesi.
 
 -   İsteğe bağlı: Ağ etkinlikleri olmayan bir kullanıcının kullanıcı hesabı. Bu hesap ATA Honeytoken kullanıcısı olarak yapılandırılır. Honeytoken kullanıcısını yapılandırmak için kullanıcı adına değil kullanıcı hesabının SID'si gerekir. Daha fazla bilgi için bkz: [yapılandırma IP adresi dışlamaları ve Honeytoken kullanıcısını](install-ata-step7.md).
 
--   İsteğe bağlı: toplama ve ve giden ağ trafiğini çözümlemenin yanı sıra etki alanı denetleyicilerinden, ATA Windows olaylarını 4776, 4732, 4733, 4728, 4729, 4756 ve 4757 daha fazla geliştirmek için ATA Pass--Hash, deneme yanılma saldırısı, hassas gruplara değişikliği kullanabilirsiniz ve Belirteçleri algılamaların honey. Bunlar, SIEM’inizden alınabileceği gibi etki alanı denetleyicinizden Windows Olay İletme’yi ayarlanarak da alınabilir. Toplanan olaylar ATA’ya etki alanı denetleyicisi ağ trafiği yoluyla sağlanmayan ek bilgiler sağlar.
+-   İsteğe bağlı: toplama ve ve giden ağ trafiğini çözümlemenin yanı sıra etki alanı denetleyicilerinden, ATA Windows olaylarını 4776, 4732, 4733, 4728, 4729, 4756 ve 4757 daha fazla geliştirmek için ATA Pass--Hash, deneme yanılma saldırısı, hassas gruplara değişikliği kullanabilirsiniz ve Belirteçleri algılamaların honey. Bu olaylar, etki alanı denetleyicinizden Windows Olay iletme'yi ayarlayarak SIEM sistemlerinizden alınabilir. Toplanan olaylar ATA’ya etki alanı denetleyicisi ağ trafiği yoluyla sağlanmayan ek bilgiler sağlar.
 
 
 ## <a name="ata-center-requirements"></a>ATA Center gereksinimleri
@@ -185,10 +185,10 @@ ATA Gateway için en az bir Yönetim bağdaştırıcısı ve en az bir Yakalama 
         > [!NOTE]
         > ATA Gateway etki alanının üyesiyse, bu özellik otomatik olarak yapılandırılabilir.
 
--   **Yakalama bağdaştırıcısı** - etki alanı denetleyicilerinden gelen ve giden trafiği yakalamak için kullanılır.
+-   **Yakalama bağdaştırıcısı** - etki alanı denetleyicilerinden gelen ve giden trafiği yakalamak için kullanılan.
 
     > [!IMPORTANT]
-    > -   Etki alanı denetleyicisi ağ trafiğinin hedefi olarak yakalama bağdaştırıcısı için bağlantı noktası yansıtmasını yapılandırın. Daha fazla bilgi için bkz. [Bağlantı noktası yansıtmasını yapılandırma](configure-port-mirroring.md). Genellikle, bağlantı noktası yansıtma yapılandırmak için ağ veya sanallaştırma ekibiyle çalışmanız gerekir.
+    > -   Etki alanı denetleyicisi ağ trafiğinin hedefi olarak yakalama bağdaştırıcısı için bağlantı noktası yansıtmasını yapılandırın. Daha fazla bilgi için bkz: [bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md). Genellikle, bağlantı noktası yansıtma yapılandırmak için ağ veya sanallaştırma ekibiyle çalışmanız gerekir.
     > -   Varsayılan ağ geçidi ve DNS sunucu adresleri olmadan ortamınız için statik yönlendirilemeyen bir IP adresi yapılandırın. Örneğin, 1.1.1.1/32. Bu yakalama ağ bağdaştırıcısı yüksek miktarda trafiği yakalayabilir ve yönetim ağ bağdaştırıcısı'nın göndermek ve gerekli ağ trafiğini almak için kullanılan sağlar.
 
 ### <a name="ports"></a>Bağlantı noktaları
@@ -239,7 +239,7 @@ Yükleme sırasında .Net Framework 4.6.1 yüklenir ve etki alanı denetleyicisi
 
 ### <a name="server-specifications"></a>Sunucu belirtimleri
 
-ATA Lightweight Gateway en az iki çekirdek ve 6 GB etki alanı denetleyicisinde yüklü RAM gerektirir.
+ATA Lightweight Gateway, etki alanı denetleyicisinde en az 2 çekirdek ve 6 GB RAM kurulu olmasını gerektirir.
 En iyi performans için, ATA Lightweight Gateway’in **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.
 ATA Lightweight Gateway, etki alanı denetleyicilerinden gelen ve giden ağ trafiğinin miktarına ve bu etki alanında kurulu kaynakların miktarına bağlı olarak çeşitli yük ve büyüklükte etki alanı denetleyicilerinde dağıtılabilir.
 

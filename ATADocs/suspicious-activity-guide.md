@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 32fe3fa2f5464b0b771491186d0775e9474e5483
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: bff477a66b837d82bb10a43a0dad7d36c6542d9f
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -34,7 +34,7 @@ Uygun araştırma tüm şüpheli etkinlikleri olarak sınıflandırılabilir:
 
 ATA uyarılarla çalışma hakkında daha fazla bilgi için bkz: [kuşkulu etkinliklerle çalışma](working-with-suspicious-activities.md).
 
-Sorularınız veya Geri bildiriminiz için adresinden bize başvurun [ ATAEval@microsoft.com ](mailto:ATAEval@microsoft.com).
+Sorularınız veya Geri bildiriminiz için ATA ekibi ile iletişime geçin [ ATAEval@microsoft.com ](mailto:ATAEval@microsoft.com).
 
 ## <a name="abnormal-sensitive-group-modification"></a>Anormal Gizli Grup Değişikliği
 
@@ -47,7 +47,7 @@ ATA hassas gruplara tanımı için bkz: [ATA Konsolu'yla çalışma](working-wit
 
 
 Algılama dayanan [etki alanı denetleyicilerinde Denetlenen olayları](https://docs.microsoft.com/advanced-threat-analytics/configure-event-collection).
-Başvurulan aracını [ATA denetleme (AuditPol, denetim ayarlarını zorlama Gelişmiş, Basit Ağ Geçidi Hizmeti Bulma)](https://aka.ms/ataauditingblog) denetleyicileri etki alanınızın emin olmak için gerekli olaylarını denetleyin.
+Etki alanı denetleyicileriniz gerekli olaylarını denetleme emin olmak için başvurulan aracını [ATA denetleme (AuditPol, denetim ayarlarını zorlama Gelişmiş, Basit Ağ Geçidi Hizmeti Bulma)](https://aka.ms/ataauditingblog).
 
 **Araştırma**
 
@@ -109,7 +109,7 @@ Bu algılama, ATA kullanılan birçok farklı parolalar algıladığında bir uy
 
 1.  İskelet anahtar – etki alanı denetleyicilerinde çalışan ve kendi parolasını bilmeden herhangi bir hesabı etki alanına kimlik doğrulaması sağlayan kötü amaçlı yazılım olur. Bu kötü amaçlı yazılım genellikle kullanıcının parolaları etki alanı denetleyicisinde şifrele için daha zayıf şifreleme algoritmalarını kullanır. Bu algılama, daha önceden öğrenilen davranışı karşılaştırıldığında şifreleme yöntemini kaynak bilgisayardan KRB_ERR iletisinin alt sürüme.
 
-2.  Altın anahtar – içinde bir [altın anahtar](#golden-ticket) uyarı, kaynak bilgisayardan TGS_REQ (hizmet isteği) iletisinin TGT alanının şifreleme yöntemini daha önceden öğrenilen davranışı karşılaştırıldığında alt sürüme. Bu zaman anomali (olduğu gibi diğer altın anahtar algılama) dayanmıyor olduğunu unutmayın. Ayrıca, ATA tarafından algılanan yukarıdaki hizmet isteği ile ilişkili hiçbir Kerberos kimlik doğrulama isteği vardı.
+2.  Altın anahtar – içinde bir [altın anahtar](#golden-ticket) uyarı, kaynak bilgisayardan TGS_REQ (hizmet isteği) iletisinin TGT alanının şifreleme yöntemini daha önceden öğrenilen davranışı karşılaştırıldığında alt sürüme. Bu zaman anomali (olduğu gibi diğer altın anahtar algılama) dayanmıyor. Ayrıca, ATA tarafından algılanan önceki hizmet isteği ile ilişkili hiçbir Kerberos kimlik doğrulama isteği vardı.
 
 3.  Karma Karma – kaynak bilgisayardan AS_REQ ileti şifreleme türü bir alt sürüme daha önceden öğrenilen davranışı karşılaştırıldığında (diğer bir deyişle, bilgisayar AES kullanılarak).
 
@@ -131,7 +131,7 @@ Bu algılama, ATA kullanılan birçok farklı parolalar algıladığında bir uy
 2.  Altın bilet – yönergeleri izleyin [altın anahtar](#golden-ticket) kuşkulu etkinlikler.   
     Ayrıca, bir altın anahtar oluşturmak için etki alanı yönetici hakları gerekir çünkü uygulamak [karma önerileri geçirmek](http://aka.ms/PtH).
 
-3.  Söz konusu hesabı hassas, değilse karma karma – sonra bu hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilmesine karşın bu parola karma değerden yeni Kerberos biletleri oluşturma saldırgan engeller. Hassas hesap ise, iki kez altın anahtar şüpheli etkinlik olduğu gibi KRBTGT hesabı sıfırlama düşünmelisiniz. KRBTGT iki kez sıfırlama tüm Kerberos biletleri bu etki alanında, böylece bunu yapmadan önce planlama geçersiz kılar. Kılavuzunda bkz [KRBTGT hesabı parola sıfırlama betikleri müşteriler için artık kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Ayrıca bkz [KRBTGT hesabı parola/anahtarları aracı Sıfırla](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Yanal hareket teknik olduğundan, en iyi uygulamaları izleyerek [karma önerileri geçirmek](http://aka.ms/PtH).
+3.  Söz konusu hesabı hassas, değilse karma karma – sonra bu hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilmesine karşın bu saldırgan parola karma değerden yeni Kerberos biletleri oluşturmasını engeller. Hassas hesap ise, iki kez altın anahtar şüpheli etkinlik olduğu gibi KRBTGT hesabı sıfırlama düşünmelisiniz. KRBTGT iki kez sıfırlama tüm Kerberos biletleri bu etki alanında, böylece bunu yapmadan önce planlama geçersiz kılar. Kılavuzunda bkz [KRBTGT hesabı parola sıfırlama betikleri müşteriler için artık kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Ayrıca bkz [KRBTGT hesabı parola/anahtarları aracı Sıfırla](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Yanal hareket teknik olduğundan, en iyi uygulamaları izleyerek [karma önerileri geçirmek](http://aka.ms/PtH).
 
 ## Altın anahtar<a name="golden-ticket"></a>
 
@@ -139,7 +139,7 @@ Bu algılama, ATA kullanılan birçok farklı parolalar algıladığında bir uy
 
 Saldırganlar etki alanı yönetici haklarına sahip tehlikeye [KRBTGT hesabı](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). KRBTGT hesabı kullanarak, bunlar herhangi bir rastgele anda bilet sona erme tarihini ayarlayabilir ve herhangi bir kaynak için yetkilendirme sağlayan bilet (TGT) veren bir Kerberos anahtarı oluşturabilir. Bu sahte TGT "Altın anahtar" denir ve ağdaki kalıcılığı elde etmek, saldırganların sağlar.
 
-Bu algılama, bir uyarı tetiklenecek izni veriliyor bileti için kullanılan bir Kerberos anahtarı belirtildiği gibi izin verilen süre birden fazla izin verdiğinde [kullanıcı anahtarının en fazla ömrü](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) güvenlik ilkesi.
+İzni veriliyor bileti için kullanılan bir Kerberos anahtarı belirtildiği gibi izin verilen süre birden fazla izin verdiğinde bu algılama, bir uyarı tetiklendiğinde [kullanıcı anahtarının en fazla ömrü](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) güvenlik ilkesi.
 
 **Araştırma**
 
@@ -189,7 +189,7 @@ Karma bir bilgisayardan hedeflenen kullanıcı sahibi veya düzenli olarak kulla
 
 **Düzeltme**
 
-1. Söz konusu hesabı hassas değilse, bu hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilmesine karşın bu parola karma değerden yeni Kerberos biletleri oluşturma saldırgan engeller. 
+1. Söz konusu hesabı hassas değilse, bu hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilmesine karşın bu saldırgan parola karma değerden yeni Kerberos biletleri oluşturmasını engeller. 
 
 2. Hassas hesap ise, iki kez altın anahtar şüpheli etkinlik olduğu gibi KRBTGT hesabı sıfırlama düşünmelisiniz. KRBTGT iki kez sıfırlama tüm Kerberos biletleri bu etki alanında, böylece bunu yapmadan önce planlama geçersiz kılar. Kılavuzunda bkz [KRBTGT hesabı parola sıfırlama betikleri müşteriler için artık kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), ayrıca bkz [KRBTGT hesabı parola/anahtarları aracı Sıfırla](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Yanal hareket teknik olduğundan, en iyi uygulamaları izleyerek [karma önerileri geçirmek](http://aka.ms/PtH).
 
@@ -207,7 +207,7 @@ Geçişi anahtar bir yanal hareket tekniktir saldırganlar bir bilgisayardan Ker
 
 **Düzeltme**
 
-1. Söz konusu hesabı hassas değilse, bu hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilmesine karşın bu parola karma değerden yeni Kerberos biletleri oluşturma saldırgan engeller.  
+1. Söz konusu hesabı hassas değilse, bu hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilmesine karşın bu saldırgan parola karma değerden yeni Kerberos biletleri oluşturmasını engeller.  
 
 2. Hassas hesap ise, iki kez altın anahtar şüpheli etkinlik olduğu gibi KRBTGT hesabı sıfırlama düşünmelisiniz. KRBTGT iki kez sıfırlama tüm Kerberos biletleri bu etki alanında, böylece bunu yapmadan önce planlama geçersiz kılar. Kılavuzunda bkz [KRBTGT hesabı parola sıfırlama betikleri müşteriler için artık kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), ayrıca bkz [KRBTGT hesabı parola/anahtarları aracı Sıfırla](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Bu bir yanal hareket teknik olduğuna göre en iyi uygulamaları izleyin [karma önerileri geçirmek](http://aka.ms/PtH).
 
@@ -399,7 +399,7 @@ Yönetimsel kimlik bilgilerini tehlikeye veya sıfırıncı gün yararlanma kull
 
 **Açıklama**
 
-Bazı hizmetler hesabı kimlik bilgileri düz metin olarak gönderir. Bu durum, hassas hesapları için bile oluşabilir. Ağ trafiğini izleme saldırganlar catch ve bu kimlik bilgileri kötü amaçlı olarak yeniden kullanabilirsiniz. Beş veya daha fazla farklı hesapları aynı kaynak bilgisayardan düz metin parolalarını gönderirseniz hassas olmayan hesaplar için uyarıyı tetikleyen sırasında önemli bir hesap için herhangi bir düz metin parolası uyarıyı tetikleyecek. 
+Bazı hizmetler hesabı kimlik bilgileri düz metin olarak gönderir. Bu durum, hassas hesapları için bile oluşabilir. Ağ trafiğini izleme saldırganlar catch ve bu kimlik bilgileri kötü amaçlı olarak yeniden kullanabilirsiniz. Beş veya daha fazla farklı hesapları aynı kaynak bilgisayardan düz metin parolalarını gönderirseniz hassas olmayan hesaplar için uyarıyı tetikleyen sürece herhangi bir düz metin parolası hassas hesap için uyarı tetikler. 
 
 **Araştırma**
 
@@ -417,7 +417,7 @@ Kaynak bilgisayarlarda yapılandırmayı doğrulayın ve LDAP basit bağlaması 
 
 Yanılma saldırısında, saldırganın en az bir hesap için doğru parolayı bulunana kadar farklı hesaplar için birçok farklı parolaları ile kimlik doğrulaması dener. Bir kez bulundu, bir saldırganın bu hesabı kullanarak oturum açabilir.
 
-Bu algılama birçok kimlik doğrulama hataları oluştuğunda bir uyarı tetiklenecek, bu parolalar, küçük bir kümesini yatay ile ya da çok sayıda kullanıcı arasında olması; veya dikey büyük ile Parolaları yalnızca birkaç kullanıcılar ayarlayın; veya bu iki seçenek herhangi bir bileşimini.
+Bu algılama, birçok kimlik doğrulama hataları oluştuğunda bir uyarının, bu parolalar, küçük bir kümesini yatay ile ya da çok sayıda kullanıcı arasında olması; veya dikey büyük ile Parolaları yalnızca birkaç kullanıcılar ayarlayın; veya bu iki seçenek herhangi bir bileşimini.
 
 **Araştırma**
 
@@ -453,7 +453,7 @@ Neyin bu anormal davranışları oluşmasına neden bağlı olarak, farklı eyle
 
 **Açıklama**
 
-Saldırganlar, standart olmayan yollarla çeşitli protokoller (SMB, Kerberos, NTLM) uygulama araçlarını kullanın. Bu tür ağ trafiği uyarılar olmadan genellikle Windows tarafından kabul edilir, ancak ATA olası kötü amaçlı tanıyabilir. Gelişmiş yazılımı, örneğin, WannaCry tarafından kullanılan açıkları yanı sıra, Over-Pass--Hash ve kaba kuvvet gibi teknikler göstergesi davranıştır.
+Saldırganlar, standart olmayan yollarla çeşitli protokoller (SMB, Kerberos, NTLM) uygulama araçlarını kullanın. Bu tür ağ trafiği uyarılar olmadan Windows tarafından kabul edilir, ancak ATA olası kötü amaçlı tanıyabilir. Gelişmiş yazılımı, örneğin, WannaCry tarafından kullanılan açıkları yanı sıra, Over-Pass--Hash ve kaba kuvvet gibi teknikler göstergesi davranıştır.
 
 **Araştırma**
 

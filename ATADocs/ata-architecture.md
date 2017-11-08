@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 12c620b9dc12c4ea0e2c42981225e3964e947c80
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 66f5678285c203476aee3daafae22ac7b34d0ae2
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -95,7 +95,7 @@ Ağınızda kaç ATA Center dağıtımı yapacağınıza karar verirken aşağı
 
 -   ATA Center tek bir Active Directory ormanını izleyebilir. Birden çok Active Directory ormanınız varsa her Active Directory ormanı için en az bir ATA Center’a ihtiyacınız vardır.
 
--    Çok büyük Active Directory dağıtımlarında tek bir ATA Center’ın tüm etki alanı denetleyicilerinizdeki trafiği işlemesi mümkün olmayabilir. Bu durumda birden çok ATA Center gereklidir. ATA Center bileşenlerinin sayısı, [ATA kapasite planlaması](ata-capacity-planning.md) tarafından belirlenmelidir.
+-    Büyük Active Directory dağıtımlarında, tek bir ATA Center tüm etki alanı denetleyicilerinin tüm trafiğini işler mümkün olmayabilir. Bu durumda birden çok ATA Center gereklidir. ATA Center bileşenlerinin sayısı, [ATA kapasite planlaması](ata-capacity-planning.md) tarafından belirlenmelidir.
 
 ## <a name="ata-gateway-and-ata-lightweight-gateway"></a>ATA Gateway ve ATA Lightweight Gateway
 
@@ -133,16 +133,16 @@ Aşağıdaki özellikler, bir ATA Gateway ya da ATA Lightweight Gateway bileşen
 
 -   **Etki alanı eşitleyici adayı**<br>
 Etki alanı eşitleyici ağ geçidi, belirli bir Active Directory etki alanından tüm varlıkların önceden tedbirli olarak eşitlenmesinden sorumludur (çoğaltma için etki alanı denetleyicilerinin kendi kullandıkları mekanizmaya benzer). Adaylar listesinden bir ağ geçidi, etki alanı eşitleyici görevi görmesi için rastgele seçilir. <br><br>
-Eşitleyici 30 dakikadan fazla çevrimdışı olursa, bunun yerine başka bir aday seçilir. Belirli bir etki alanı için kullanılabilir etki alanı eşitleyici yoksa, ATA önceden tedbirli olarak varlıkları ve değişikliklerini eşitleyemez, ancak izlenen trafikte algılanan yeni varlıkları reaktif olarak alır. 
-<br>Kullanılabilir etki alanı eşitleyici yoksa ve onunla ilgili trafik olmayan bir varlık için arama yaparsanız, hiçbir arama sonucu görüntülenmez.<br><br>
+Eşitleyici 30 dakikadan fazla çevrimdışı olursa, bunun yerine başka bir aday seçilir. Belirli bir etki alanı için etki alanı Eşitleyici yoksa, izlenen trafikte algılanan gibi ATA yeni varlıklar olarak reaktif alır ancak ATA proaktif olarak varlıkları ve değişikliklerini eşitleyemez. 
+<br>Bununla ilgili trafik olmayan bir varlık için arama yapın ve etki alanı Eşitleyici kullanılabilir değilse, hiçbir arama sonuçları görüntülenir.<br><br>
 Varsayılan olarak, tüm ATA Gateway bileşenleri eşitleyici adayıdır.<br><br>
 Tüm ATA Lightweight Gateway bileşenlerinin şubelerde ve küçük etki alanı denetleyicilerinde dağıtılması daha olası olduğundan, bunlar varsayılan olarak eşitleyici adayı değildir.
 
 
 -   **Kaynak sınırlamaları**<br>
-ATA Lightweight Gateway, çalıştığı etki alanı denetleyicisindeki kullanılabilir bilgi işlem ve bellek kapasitesini değerlendiren bir izleme bileşeni içerir. İzleme işlemi 10 saniyede bir çalışır ve herhangi bir anda etki alanı denetleyicisinde en az %15 boş bilgi işlem ve bellek kaynağı bulunduğundan emin olmak için, ATA Lightweight Gateway işlemindeki CPU ve bellek kullanım kotasını dinamik olarak güncelleştirir.<br><br>
+ATA Lightweight Gateway üzerinde çalıştığı etki alanı denetleyicisindeki kullanılabilir bilgi işlem ve bellek kapasitesini değerlendiren bir izleme bileşeni içerir. İzleme işlemi 10 saniyede bir çalışır ve herhangi bir anda etki alanı denetleyicisinde en az %15 boş bilgi işlem ve bellek kaynağı bulunduğundan emin olmak için, ATA Lightweight Gateway işlemindeki CPU ve bellek kullanım kotasını dinamik olarak güncelleştirir.<br><br>
 Etki alanı denetleyicisinde ne olursa olsun, bu işlem etki alanı denetleyicisinin çekirdek işlevlerinin etkilenmemesini sağlamak için her zaman kaynakları serbest bırakır.<br><br>
-Bu durum ATA Lightweight Gateway’in kaynaksız kalmasına neden olursa, trafiğin yalnızca bir kısmı izlenir ve Sağlık Durumu sayfasında "Bağlantı noktası yansıtılan ağ trafiği bırakıldı" uyarısı görüntülenir.
+Bu kaynağı bitmeye ATA Lightweight Gateway neden olursa, trafiğin yalnızca bir kısmı izlenir ve sağlık durumu sayfasında izleme uyarı "bağlantı noktası yansıtılan ağ trafiği bırakıldı" görünür.
 
 Aşağıdaki tabloda, tüm trafiğin izlenmesi için halen gerekli olandan daha büyük kotaya izin verecek kadar bilgi işlem kaynağına sahip bir etki alanı denetleyicisi örneği görülmektedir:
 
@@ -161,14 +161,13 @@ Active Directory daha fazla bilgi işleme gereksinim duyuyorsa, ATA Lightweight 
 |60%|15%|%10|15%|Evet|
 
 
-
 ## <a name="your-network-components"></a>Ağ bileşenleriniz
-ATA ile çalışabilmesi için aşağıdakilerden emin olun:
+ATA ile çalışabilmesi için aşağıdaki bileşenler ayarlanır denetlediğinizden emin olun.
 
 ### <a name="port-mirroring"></a>Bağlantı noktası yansıtma
-ATA Gateway kullanıyorsanız izlenecek etki alanları için bağlantı noktası yansıtmasını ayarlamanız ve ATA Gateway’i fiziksel veya sanal anahtarlar kullanan hedef olarak ayarlamanız gerekir. Başka bir seçenek de ağ TAP’ları kullanmaktır. Etki alanı denetleyicilerinizin hepsi olmasa da bir kısmı izleniyorsa ATA çalışır, ancak algılamalar daha az etkili olur.
+ATA Gateway bileşenleri kullanıyorsanız, izlenen ve ATA Gateway fiziksel veya sanal anahtarlar kullanan hedef olarak ayarlayın etki alanı denetleyicileri bağlantı noktası yansıtma ayarlayın sahip. Başka bir seçenek de ağ TAP’ları kullanmaktır. ATA bazı çalışır ancak tüm etki alanı denetleyicileriniz izlenir, ancak algılamalar daha az etkili olur.
 
-Bağlantı noktası yansıtma etki alanı denetleyicisi ağ trafiğinin tümünü ATA Gateway’e yansıtsa da, bu trafiğin yalnızca küçük bir yüzdesi sıkıştırılıp çözümlenmek üzere ATA Center’a gönderilir.
+Bağlantı noktası yansıtma tüm ATA Gateway, bu trafiğin yalnızca küçük bir yüzdesi için etki alanı denetleyicisi ağ trafiğinin sonra gönderilen yansıtsa da, ATA Center için analiz için sıkıştırılır.
 
 Etki alanı denetleyicileriniz ve ATA Gateway bileşenleri fiziksel veya sanal olabilir. Daha fazla bilgi için bkz. [Bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md).
 
@@ -178,7 +177,7 @@ ATA’nın Pass-the-Hash, Deneme Yanılma, Gizli grup değişiklikleri ve Honey 
 
 -   ATA Gateway’i SIEM olaylarını dinleyecek şekilde yapılandırma <br>SIEM sisteminizi belirli Windows olaylarını ATA’ya iletecek şekilde yapılandırın. ATA, bir dizi SIEM satıcısını destekler. Daha fazla bilgi için bkz. [Olay koleksiyonunu yapılandırma](configure-event-collection.md).
 
--   Windows Olay İletme’yi yapılandırma<br>ATA’nın olaylarınızı almasının bir diğer yolu da etki alanı denetleyicilerinizi Windows olayları 4776, 4732, 4733, 4728, 4729, 4756 ve 4757’yi ATA Gateway’inize iletecek şekilde yapılandırmaktır. Bir SIEM’iniz olmadığında veya SIEM’iniz şu anda ATA tarafından desteklenmediğinde, bu özellikle yararlı olur. ATA’da Windows Olay İletme hakkında daha fazla bilgi için bkz. [Windows olay iletme özelliğini yapılandırma](configure-event-collection.md#configuring-windows-event-forwarding). Bunun ATA Lightweight Gateway’de değil, yalnızca fiziksel ATA Gateway’lerde geçerli olduğunu unutmayın.
+-   Windows Olay İletme’yi yapılandırma<br>ATA'ın olaylarınızı almasının başka bir etki alanı denetleyicilerinizi Windows olay 4776, 4732, 4733, 4728, 4729, 4756 ve 4757, ATA Gateway'e iletecek şekilde yapılandırarak yoludur. Bir SIEM’iniz olmadığında veya SIEM’iniz şu anda ATA tarafından desteklenmediğinde, bu özellikle yararlı olur. ATA’da Windows Olay İletme hakkında daha fazla bilgi için bkz. [Windows olay iletme özelliğini yapılandırma](configure-event-collection.md#configuring-windows-event-forwarding). Bu yalnızca fiziksel ATA Gateway - ATA Lightweight Gateway için geçerlidir.
 
 ## <a name="related-videos"></a>İlgili videolar
 - [ATA Gateway türü sağ seçme](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
