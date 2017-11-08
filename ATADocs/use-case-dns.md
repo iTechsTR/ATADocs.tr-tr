@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1d186a96-ef70-4787-aa64-c03d1db94ce0
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4455be4f300b698b2ba8b53529e894700a282147
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 5ec554b303a19a6e7b12cd788755604f1aaf43db
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -30,7 +30,7 @@ ATA, ağınızda bir **DNS kullanarak keşif** algılar ve sizi uyarırsa uyarı
 **DNS kullanarak keşif** uyarısı, iç ağınızda keşif yapmak amacıyla olağan dışı bir konaktan şüpheli Etki Alanı Adı Sistemi (DNS) sorguları yapıldığına işaret eder.
 
 Etki Alanı Adı Sistemi (DNS), hiyerarşik ve dağıtılmış bir veritabanı şeklinde bir hizmettir ve konak adları ile etki alanı adlarının çözümlenmesini sağlar. Bir DNS veritabanında bulunan adlar, etki alanı ad alanı olarak isimlendirilen bir hiyerarşik ağaç yapısı oluşturur.
-Bir saldırgan için DNS’niz, iç ağ haritasını oluşturmak adına değerli bilgiler içerir, bu bilgiler arasında tüm sunucuların bir listesi ve genellikle bunların IP adresleriyle eşlenen tüm istemciler de bulunur. Bu bilgiler ayrıca, çoğu zaman bir ağ ortamını açıklayıcı özelliği olan konak adlarını da içerdiği için oldukça değerlidir. Bu bilgileri elde eden bir saldırgan, saldırı esnasında ilgili varlıklara odaklanarak işini kolaylaştırabilir. [Nmap](https://nmap.org/) ve [Fierce](https://github.com/mschwager/fierce) gibi araçlar ile [Nslookup](https://technet.microsoft.com/library/cc725991(v=ws.11).aspx) gibi yerleşik araçlar, DNS keşfi kullanarak konak keşfine olanak sağlar.
+Bir saldırgan için DNS’niz, iç ağ haritasını oluşturmak adına değerli bilgiler içerir, bu bilgiler arasında tüm sunucuların bir listesi ve genellikle bunların IP adresleriyle eşlenen tüm istemciler de bulunur. Ayrıca, çünkü genellikle belirli ağ ortamında açıklayıcı ana bilgisayar adlarını listeler bu bilgiler değeri olur. Bu bilgileri elde eden bir saldırgan, saldırı esnasında ilgili varlıklara odaklanarak işini kolaylaştırabilir. [Nmap](https://nmap.org/) ve [Fierce](https://github.com/mschwager/fierce) gibi araçlar ile [Nslookup](https://technet.microsoft.com/library/cc725991(v=ws.11).aspx) gibi yerleşik araçlar, DNS keşfi kullanarak konak keşfine olanak sağlar.
 Bir iç konağın DNS sorgularını kullanarak keşfin algılanması ciddi bir sorundur ve mevcut konak güvenliğinin tehlikeye atılması, daha geniş çaplı bir ağ güvenlik sorunu veya içeriden bir tehdit olasılığına işaret eder.
 
 ## <a name="dns-query-types"></a>DNS sorgu türleri
@@ -56,7 +56,7 @@ Aşağıdaki grafik, uygulamanız gereken araştırma adımlarının belirlenmes
 
 ![ATA ile DNS keşfini çözme](./media/dns-recon-diagram.png)
  
-1.  İlk adım, aşağıda gösterildiği şekilde uyarının kaynağı olan makineyi belirlemektir:
+1.  İlk adım aşağıdaki ekran görüntüsünde gösterildiği gibi uyarı kaynaklandığı makine belirlemektir:
  
     ![ATA’da DNS keşfi şüpheli etkinliğini inceleyin](./media/dns-recon.png)
 2.  Makinenin ne olduğunu belirleyin. İş istasyonu, sunucu, yönetici iş istasyonu, sızma testi istasyonu vb. mi?
@@ -80,7 +80,7 @@ Microsoft, bir saldırganın ağınızda dağıtılmış kalıcı yöntemleri ol
 
 ## <a name="mitigation"></a>Risk azaltma
 
-DNS kullanarak keşfi önlemek amacıyla DNS sunucusunu güvenlik altına almak için bölge aktarımlarını yalnızca belirtilen IP adresleriyle kısıtlamak veya devre dışı bırakmak mümkündür. Bölge aktarımlarını kısıtlamak hakkında daha fazla bilgi için şu Windows Server Technet makalesine bakın: [Bölge Aktarımlarını Kısıtlama](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx). Kısıtlı bölge aktarımları, [bölge aktarımlarını IPsec ile güvenlik altına alma](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx) yoluyla tamamen kilitlenebilir. Bölge Aktarımlarını Değiştirmek, [DNS sunucularınızı iç ve dış tehditlere karşı korumak](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx) için yapılması gerekenler listesinde bulunan görevlerden biridir.
+DNS kullanarak keşfi önlemek amacıyla DNS sunucusunu güvenlik altına almak için bölge aktarımlarını yalnızca belirtilen IP adresleriyle kısıtlamak veya devre dışı bırakmak mümkündür. Bölge aktarımlarının kısıtlama daha fazla bilgi için bkz: [kısıtlamak bölge aktarımlarının](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx). Kısıtlı bölge aktarımları, [bölge aktarımlarını IPsec ile güvenlik altına alma](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx) yoluyla tamamen kilitlenebilir. Bölge Aktarımlarını Değiştirmek, [DNS sunucularınızı iç ve dış tehditlere karşı korumak](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx) için yapılması gerekenler listesinde bulunan görevlerden biridir.
 
 
 

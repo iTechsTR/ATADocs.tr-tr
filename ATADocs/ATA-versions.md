@@ -4,7 +4,7 @@ description: "Microsoft Advanced Threat Analytics (ATA) sürümleri için sağla
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -12,26 +12,26 @@ ms.technology:
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a7b7d95289cc997a647c2d6703315c283e8a9328
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: f77f8ef71765dc71d690876d4043e1b3702b9971
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Microsoft Advanced Threat Analytics (ATA) sürümleri için destek
 
-Microsoft, yılda birkaç kez ATA güncelleştirmeleri yayınlamayı planlamaktadır ve her güncelleştirme sürümü, genel kullanılabilirlik (GA) çıkış tarihinden itibaren 12 ay süreyle desteklenecektir. Bu 12 ay boyunca teknik destek sağlanacaktır. Bununla birlikte, şimdi dinamik bir yapıya sahip olan desteğimiz en son sürümün kullanıma sunulmasına bağlı olarak iki ayrı hizmet aşamasından geçer.
+Microsoft, yılda birkaç kez ATA güncelleştirmeleri yayınlamayı planlamaktadır ve her güncelleştirme sürümü, genel kullanılabilirlik (GA) çıkış tarihinden itibaren 12 ay süreyle desteklenecektir. Teknik destek için tüm 12 ay boyunca sağlanır. Bununla birlikte, şimdi dinamik bir yapıya sahip olan desteğimiz en son sürümün kullanıma sunulmasına bağlı olarak iki ayrı hizmet aşamasından geçer.
 
--   Güvenlik Güncelleştirmeleri ve Kritik Güncelleştirmeler hizmet aşaması - ATA’nın en son sürümünü çalıştırırken hem Güvenlik güncelleştirmelerini hem de Kritik güncelleştirmeleri alırsınız.
+-   Güvenlik ve önemli güncelleştirmeler bakım aşaması - ATA ' nın en son sürümü, güvenlik ve önemli güncelleştirmeler alırsınız.
 
 -   Güvenlik Güncelleştirmeleri (Yalnızca) hizmet verme aşaması - Yeni bir ATA sürümü kullanıma sunulduktan sonra, eski sürümlere verilen destek 12 aylık destek döngüsünün kalan bölümü boyunca yalnızca Güvenlik güncelleştirmelerine indirgenir (aşağıdaki sürüm hizmet verme desteği örneğinde gösterilmiştir).
  
 ![Sürüm hizmet verme desteği örneği](media/versions.png)
 
 > [!Note]
-> En son ATA sürümü her zaman Güvenlik Güncelleştirmeleri ve Kritik Güncelleştirmeler hizmet aşamasındadır. Bu da, kritik güncelleştirme gerektiren bir kod hatasıyla karşılaştığınızda düzeltme alabilmek için en son güncel dal sürümünü yüklemiş olmanız gerektiği anlamına gelir. Desteklenen diğer tüm sürümler yalnızca güvenlik güncelleştirmelerini almaya uygun olacaktır. Bir sürüm için 12 aylık döngü sona erdiğinde destek de sona erer. Bu tarihte müşterilerin desteklenen bir sürüme güncelleştirmesi gerekir.
+> En son ATA sürümü her zaman Güvenlik Güncelleştirmeleri ve Kritik Güncelleştirmeler hizmet aşamasındadır. Bu da, kritik güncelleştirme gerektiren bir kod hatasıyla karşılaştığınızda düzeltme alabilmek için en son güncel dal sürümünü yüklemiş olmanız gerektiği anlamına gelir. Diğer tüm desteklenen sürümleri yalnızca güvenlik güncelleştirmeleri almak uygundur. Bir sürüm için 12 aylık döngü sona erdiğinde destek de sona erer. Bu tarihte müşterilerin desteklenen bir sürüme güncelleştirmesi gerekir.
 
 ## <a name="version-history"></a>Sürüm Geçmişi
 

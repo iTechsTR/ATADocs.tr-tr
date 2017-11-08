@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a1494f0428593ee58c7e1da64192b45c6d006c15
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 891ba71bcb8c1ee362b92be2404c65c7b5158055
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="ata-update-to-17-migration-guide"></a>ATA’yı 1.7 sürümüne güncelleştirme geçiş kılavuzu
 ATA 1.7 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
@@ -30,9 +30,9 @@ ATA 1.7 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 ## <a name="updating-ata-to-version-17"></a>ATA’yı 1.7 sürümüne güncelleştirme
 
 > [!NOTE] 
-> ATA ortamınızda yüklü değilse, ATA’nın sürüm 1.7’yi da içeren tam sürümünü indirin ve [ATA’yı Yükleme](install-ata-step1.md) başlığı altında açıklanan standart yükleme yordamını izleyin.
+> ATA ortamınızda yüklü değilse, açıklanan standart yükleme yordamını izleyin ve sürüm 1.7 içerir, ATA'ın tam sürümünü indirin [Ata'yı yükleme](install-ata-step1.md).
 
-ATA’nın 1.6 sürümünü önceden dağıttıysanız, bu yordam dağıtımınızı güncelleştirmek için gereken adımlarda size yol gösterir.
+ATA sürüm 1.6 dağıtılan zaten varsa, bu yordam dağıtımınızı güncelleştirmek için gereken adımlarda size yol gösterir.
 
 > [!NOTE] 
 > ATA sürüm 1.7’yı doğrudan ATA sürüm 1.4 veya 1.5’in üzerine yükleyemezsiniz. Önce ATA sürüm 1.6’yı yüklemeniz gerekir. 
@@ -53,7 +53,7 @@ Uygulamanın bu sürümünde, yeni bir ATA dağıtımı yüklemek ve var olan da
 
 1.  Veritabanınızı yedekleyin: (isteğe bağlı)
 
-    -   ATA Center sanal makinede çalışıyorsa ve bir denetim noktası almak istiyorsanız, önce sanal makineyi kapatın.
+    -   ATA Center bir sanal makinede çalışıyorsa ve bir denetim noktası almak istiyorsanız, önce sanal makineyi kapatın.
 
     -   ATA Center fiziksel sunucuda çalışıyorsa, [MongoDB’yi yapılandırmak](https://docs.mongodb.org/manual/core/backups/) için önerilen yordamı izleyin.
 
@@ -61,11 +61,11 @@ Uygulamanın bu sürümünde, yeni bir ATA dağıtımı yüklemek ve var olan da
 
     -  **Hoş Geldiniz** sayfasında dilinizi seçin ve **İleri**’ye tıklayın.
 
-    -  Sürüm 1.6’da otomatik güncelleştirmeleri etkinleştirmediyseniz, ATA’nın güncel kalması için ATA’yı Microsoft Update kullanacak şekilde ayarlamanız istenir.  Microsoft Update sayfasında, **Güncelleştirmeleri denetlediğimde Microsoft Update'i kullan (önerilir)** öğesini seçin.
-    ![ATA’yı güncel tutma resmi](media/ata_ms_update.png) Görüldüğü gibi, bu işlem Windows ayarlarını diğer Microsoft ürünleri (ATA dahil) için güncelleştirmeleri etkinleştirecek şekilde ayarlar. 
+    -  Sürüm 1. 6'te Otomatik Güncelleştirmeler etkinleştirirseniz alamadık, ATA'ın güncel kalması için ATA için Microsoft Update'i kullanmak için ayarlamanız istenir.  Microsoft Update sayfasında, **Güncelleştirmeleri denetlediğimde Microsoft Update'i kullan (önerilir)** öğesini seçin.
+    ![ATA güncel resmi tutmak](media/ata_ms_update.png) bu Windows ayarları, burada görüldüğü gibi diğer Microsoft ürünleri (ATA dahil) için güncelleştirmeleri etkinleştirecek şekilde ayarlar. 
      ![Windows otomatik güncelleştirme resmi](media/ata_installupdatesautomatically.png)
 
-    -  **Veri geçişi** ekranında, verilerin tümünü veya bir kısmını geçirmek istediğinizi seçin. Verilerin yalnızca bir kısmını taşımak isterseniz, daha önceden yakalanan ağ trafiğiniz ve davranış profilleriniz geçirilmez. Bu, anormal davranış algılama özelliğinin olağan dışı etkinlik algılamayı etkinleştirmek için tam bir profil oluşturmasının üç hafta süreceği anlamına gelir. Bu üç hafta boyunca diğer tüm ATA algılamaları düzgün çalışır. **Kısmi** veri geçişinin yüklenmesi çok daha kısa sürer. **Tam** veri geçişini seçerseniz, yüklemenin tamamlanması oldukça uzun sürebilir. **Veri Geçişi** ekranında belirtilen tahmini süre ve gerekli disk alanı, ATA’nın eski sürümlerinde kaydettiğiniz önceden yakalanan ağ trafiği miktarına bağlıdır. **Kısmi** veya **Tam** seçimini yapmadan önce bu gereksinimleri kontrol ettiğinizden emin olun.  
+    -  **Veri geçişi** ekranında, verilerin tümünü veya bir kısmını geçirmek istediğinizi seçin. Verilerin yalnızca bir kısmını taşımak isterseniz, daha önceden yakalanan ağ trafiğiniz ve davranış profilleriniz geçirilmez. Bu, olağan dışı davranış anormal bir etkinliğin algılamayı etkinleştirmek için tam bir profil var. önce üç hafta sürdüğünü anlamına gelir. Bu üç hafta boyunca tüm diğer ATA algılamaları düzgün. **Kısmi** veri geçişinin yüklenmesi çok daha kısa sürer. **Tam** veri geçişini seçerseniz, yüklemenin tamamlanması oldukça uzun sürebilir. **Veri Geçişi** ekranında belirtilen tahmini süre ve gerekli disk alanı, ATA’nın eski sürümlerinde kaydettiğiniz önceden yakalanan ağ trafiği miktarına bağlıdır. **Kısmi** veya **Tam** seçimini yapmadan önce bu gereksinimleri kontrol ettiğinizden emin olun.  
     
     ![ATA veri geçişi](media/migration-data-migration17.png)
 
@@ -74,7 +74,7 @@ Uygulamanın bu sürümünde, yeni bir ATA dağıtımı yüklemek ve var olan da
 4.  ATA Center güncelleştirmesi başarıyla tamamlandıktan sonra, ATA Gateway’ler için ATA konsolundaki **Güncelleştirme** ekranını açmak üzere **Başlat**’a tıklayın.
     ![Güncelleştirme başarılı ekranı](media/migration-center-success17.png)
 
-5.  **Güncelleştirmeler** ekranında, otomatik olarak güncelleştirilecek şekilde yapılandırdıysanız, ATA Gateway’leriniz bu noktada güncelleştirilir. Bu şekilde yapılandırmadıysanız her ATA Gateway’in yanındaki **Güncelleştir**’e tıklayın.
+5.  İçinde **güncelleştirmeleri** ekran, otomatik olarak güncelleştirmek için ATA Gateway zaten ayarladıysanız, bu noktada güncelleştirmek değilse, tıklatın **güncelleştirme** her ATA Gateway yanındaki.
   ![Ağ geçitlerini güncelleştirme resmi](media/migration-update-gw-17.png)
 
   
@@ -83,10 +83,10 @@ Uygulamanın bu sürümünde, yeni bir ATA dağıtımı yüklemek ve var olan da
 > Tüm Gateway’ler üzerinde yapılandırılan Syslog dinleyicisi bağlantı noktası 514 olarak değiştirilecektir.
  
 > [!NOTE] 
-> Yeni ATA Gateways yüklemek amacıyla ATA 1.7 yükleme paketini edinmek ve [4. Adımda açıklanan yeni Ağ Geçidi yükleme yönergelerini takip etmek için **Ağ Geçitleri** ekranına gidip **Ağ Geçidi Kurulumunu İndir** seçeneğine tıklayın. ATA Gateway](install-ata-step4.md)’i yükleyin.
+> Yeni ATA Gateways yüklemek amacıyla ATA 1.7 yükleme paketini edinmek ve [4. Adımda açıklanan yeni Ağ Geçidi yükleme yönergelerini takip etmek için **Ağ Geçitleri** ekranına gidip **Ağ Geçidi Kurulumunu İndir** seçeneğine tıklayın. ATA Gateway’i yükleyin](install-ata-step4.md).
 
 
 
-## <a name="see-also"></a>Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca bkz:
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

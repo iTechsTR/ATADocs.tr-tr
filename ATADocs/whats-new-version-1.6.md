@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c5beb4868fb8ced42457a8cadd1123956dd69ad7
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 47a8b5c52bf978d5e07007a3402a567be39e2157
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="whats-new-in-ata-version-16"></a>ATA sürüm 1.6’daki yenilikler
 Bu sürüm notları, Advanced Threat Analytics’in bu sürümündeki bilinen sorunlar hakkında bilgi sağlar.
@@ -103,14 +103,14 @@ ATA 1.6’ya güncelleştirirken, güncelleştirme işlemi şu hata koduyla baş
 
 Şu hatayı da görebilirsiniz: System.ArgumentNullException: Değer null olamaz.
     
-Bu hatalardan herhangi biriyle karşılaşırsanız, aşağıdaki geçici çözümü çalıştırın.
+Bu hatalardan herhangi biriyle görürseniz, aşağıdaki geçici çözümü çalıştırın:
 
 **Geçici çözüm**: 
 
 1.  "data_old" klasörünü, geçici bir klasöre (genellikle %ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin konumunda bulunur) taşıyın.
 2.  ATA Center v1.5’i kaldırın ve tüm veritabanı verilerini silin.
 ![ATA 1.5’i Kaldırma](http://i.imgur.com/x4nJycx.png)
-3.  ATA Center v1.5’i yeniden yükleyin. Önceki ATA 1.5 yüklemesiyle (Sertifikalar, IP adresleri, veritabanı yolu, vs.) aynı yapılandırmayı kullandığınızdan emin olun.
+3.  ATA Center v1.5 yeniden yükleyin. Önceki ATA 1.5 yüklemesiyle (Sertifikalar, IP adresleri, veritabanı yolu, vs.) aynı yapılandırmayı kullandığınızdan emin olun.
 4.  Aşağıdaki sırayla şu işlemleri durdurun:
     1.  Microsoft Advanced Threat Analytics Center
     2.  MongoDB
@@ -120,19 +120,19 @@ Bu hatalardan herhangi biriyle karşılaşırsanız, aşağıdaki geçici çöz�
     2.  Microsoft Advanced Threat Analytics Center
 7.  Ürün hatasız çalıştığını doğrulamak için günlükleri gözden geçirin.
 8.  [İndir]"RemoveDuplicateProfiles.exe" aracını (http://aka.ms/ataremoveduplicateprofiles "indirin") ve ana yükleme yoluna (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center) kopyalayın
-9.  Yükseltilmiş bir komut isteminden "RemoveDuplicateProfiles.exe" aracını çalıştırın ve başarıyla tamamlanana dek bekleyin.
+9.  Yükseltilmiş bir komut isteminden çalıştırın `RemoveDuplicateProfiles.exe` ve başarıyla tamamlanana kadar bekleyin.
 10. Buradan:  …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin directory: **Mongo ATA**, aşağıdaki komutu yazın:
 
-    db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
+          db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
 
 ![Güncelleştirme geçici çözümü](http://i.imgur.com/Nj99X2f.png)
 
-Bu bir WriteResult({ "nRemoved" : XX }) döndürebilir; burada “XX” silinen Şüpheli Etkinlik sayısıdır. Sayı 0'dan büyükse, komut isteminden çıkın ve güncelleştirme işlemine devam.
+Bu döndürmelidir bir `WriteResult({ "nRemoved" : XX })` burada "XX" silinen şüpheli etkinlik sayısıdır. Sayı 0'dan büyükse, komut isteminden çıkın ve güncelleştirme işlemine devam.
 
 
 ### <a name="net-framework-461-requires-restarting-the-server"></a>NET Framework 4.6.1, sunucunun yeniden başlatılmasını gerektirir
 
-Bazı durumlarda, .Net Framework 4.6.1 yüklemesi sunucuyu yeniden başlatmanızı gerekebilir. **Microsoft Advanced Threat Analytics Center Kurulumu** iletişim kutusunda Tamam düğmesine tıkladığınızda sunucunun otomatik olarak yeniden başlatıldığına dikkat edin. Kurulumdan önce bir bakım penceresi planlamak isteyebileceğinizden, bu özellikle ATA Lightweight Gateway’i bir etki alanı denetleyicisine yüklerken önemlidir.
+Bazı durumlarda, .Net Framework 4.6.1 yüklemesi sunucuyu yeniden başlatmanızı gerekebilir. Bu Tamam düğmesine tıkladığınızda fark **Microsoft Advanced Threat Analytics Center Kurulumu** iletişim sunucuyu otomatik olarak yeniden başlatır. Kurulumdan önce bir bakım penceresi planlamak isteyebileceğinizden, bu özellikle ATA Lightweight Gateway’i bir etki alanı denetleyicisine yüklerken önemlidir.
     ![.NET Framework’ü yeniden başlatma](media/ata-net-framework-restart.png)
 
 ### <a name="historical-network-activities-no-longer-migrated"></a>Geçmiş ağ etkinlikleri artık geçirilmez

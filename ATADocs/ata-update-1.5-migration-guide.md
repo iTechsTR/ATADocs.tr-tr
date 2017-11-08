@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: daaa2b3d495900d84fe7b61afb8e3bb22b3d7f72
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 654312c841c38c86c9efa826227d7cc93eb772cf
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="ata-update-to-15-migration-guide"></a>ATA’yı 1.5’e güncelleştirme geçiş kılavuzu
 ATA 1.5 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
@@ -38,9 +38,9 @@ ATA 1.5 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 
 ## <a name="updating-ata-to-version-15"></a>ATA’yı sürüm 1.5’e güncelleştirme
 > [!NOTE]
-> ATA ortamınızda yüklü değilse, ATA’nın sürüm 1.5’i de içeren tam sürümünü indirin ve [ATA’yı Yükleme](install-ata-step1.md) başlığı altında açıklanan standart yükleme yordamını izleyin.
+> ATA ortamınızda yüklü değilse, açıklanan standart yükleme yordamını izleyin ve sürüm 1.5 içerir, ATA'ın tam sürümünü indirin [Ata'yı yükleme](install-ata-step1.md).
 
-ATA sürüm 1.4’ü önceden dağıttıysanız, bu yordam yüklemenizi güncelleştirmek için gereken adımlarda size yol gösterir.
+ATA sürüm 1.4 dağıtılan zaten varsa, bu yordam yüklemenizi güncelleştirmek için gereken adımlarda size yol gösterir.
 
 ATA sürüm 1.5’e güncelleştirmek için bu adımları izleyin:
 
@@ -62,7 +62,7 @@ ATA sürüm 1.5’e güncelleştirmek için bu adımları izleyin:
 
 1.  Veritabanınızı yedekleyin: (isteğe bağlı)
 
-    -   ATA Center sanal makinede çalışıyorsa ve bir denetim noktası almak istiyorsanız, önce sanal makineyi kapatın.
+    -   ATA Center bir sanal makinede çalışıyorsa ve bir denetim noktası almak istiyorsanız, önce sanal makineyi kapatın.
 
     -   ATA Center fiziksel sunucuda çalışıyorsa, [MongoDB’yi yapılandırmak](https://docs.mongodb.org/manual/core/backups/) için önerilen yordamı izleyin.
 
@@ -70,15 +70,15 @@ ATA sürüm 1.5’e güncelleştirmek için bu adımları izleyin:
 
     1.  **Hoş Geldiniz** sayfasında dilinizi seçin ve **İleri**’ye tıklayın.
 
-    2.  Son Kullanıcı Lisans Sözleşmesi’ni okuyun ve koşulları kabul ediyorsanız, onay kutusuna tıklayın ve ardından **İleri**’ye tıklayın.
+    2.  Son Kullanıcı Lisans Sözleşmesi'ni okuyun ve koşulları kabul ediyorsanız onay kutusuna tıklayın ve tıklatın **sonraki**.
 
     3.  Tam (varsayılan) geçişi mi yoksa kısmı geçişi mi çalıştırmak istediğinizi seçin.
 
         ![Tam veya kısmi geçişi seçme](media/ATA-center-fullpartial.png)
 
-        -   **Kısmi** geçişi seçerseniz, ATA’nın çözümlediği tüm toplanan ağ trafiği ve iletilen Windows olayları silinir ve kullanıcı davranış profillerinin yeniden öğrenilmesi gerekir; bu işlem en az üç hafta sürer. Disk alanınız yetersizse, **Kısmi** geçiş çalıştırmak yararlı olabilir.
+        -   Seçerseniz **kısmi** geçiş, tüm toplanan ağ trafiği ve ATA tarafından analiz iletilen Windows olayları silinir ve kullanıcı davranış profilleri relearned gerekir; bu en az üç hafta sürer. Disk alanı azalıyor sonra çalıştırmak yararlı bir **kısmi** geçiş.
 
-        -   **Tam** geçişi çalıştırırsanız, yükseltme sayfasında sizin için hesaplanan ek disk alanına ihtiyacınız olur ve ağ trafiğine bağlı olarak geçiş daha uzun sürebilir. Tam geçişte, daha önce toplanmış olan tüm verileri ve kullanıcı davranış profilleri korunur. Bu da, ATA’nın davranış profillerini öğrenmesi için ek süre gerekmemesi ve anormal davranışların güncelleştirmeden hemen sonra algılanabilmesi anlamına gelir.
+        -   Çalıştırırsanız bir **tam** geçiş, yükseltme sayfasında sizin için hesaplanan ek disk alanı gerekir ve geçiş ağ trafiğini bağlı olarak uzun sürebilir. Tam geçişte, daha önce toplanmış olan tüm verileri ve kullanıcı davranış profilleri korunur. Bu da, ATA’nın davranış profillerini öğrenmesi için ek süre gerekmemesi ve anormal davranışların güncelleştirmeden hemen sonra algılanabilmesi anlamına gelir.
 
 3.  **Güncelleştir**’e tıklayın. Güncelleştir'i tıkladığınızda, güncelleştirme yordamı tamamlanana kadar ATA çevrimdışı kalır.
 
@@ -104,7 +104,7 @@ ATA Gateway paketini indirmek için:
 
 4.  Paketi yerel olarak kaydedin.
 
-Zip dosyası şunları içerir:
+Zip dosyası aşağıdaki dosyaları içerir:
 
 -   ATA Gateway yükleyicisi
 
@@ -117,7 +117,7 @@ Zip dosyası şunları içerir:
     > [!NOTE]
     > Bu ATA Gateway paketini, yeni ATA Gateway bileşenleri yüklemek için de kullanabilirsiniz.
 
-2.  Önceki ayarlarınız korunur, ancak hizmetin yeniden başlatılması birkaç dakika sürebilir.
+2.  Önceki ayarlarınız korunur, ancak hizmetin yeniden başlatılması kadar birkaç dakika sürebilir.
 
 3.  Dağıtılan tüm diğer ATA Gateway bileşenleri için bu adımı yineleyin.
 

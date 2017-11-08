@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a164179261dd5a50df973fab89be7ddce99f8c47
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 2f5db3fad62b0fe2243b5bbd82677426ee6fe90c
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 11/06/2017
 Advanced Threat Analytics (ATA), ATA hakkında anonim telemetri verileri toplar ve bu verileri HTTPS bağlantısı üzerinden Microsoft sunucularına iletir.  Bu veriler Microsoft tarafından ATA’nın gelecek sürümlerini geliştirmeye yardımcı olmak için kullanılır.
 
 ## <a name="data-collected"></a>Toplanan veriler
-Şu anonim veriler toplanır:
+Anonim veriler toplanır aşağıdaki parametreleri içerir:
 
 -   Hem ATA Center’dan hem de ATA Gateway’den performans sayaçları
 
@@ -79,7 +79,7 @@ Advanced Threat Analytics (ATA), ATA hakkında anonim telemetri verileri toplar 
 
     -   Başlangıç ve Bitiş Zamanı
 
-- ATA Konsolu URL adresleri - ATA Konsolu ile kullanılan (ATA Konsolu içinde ziyaret edilen) sayfaların URL adresleri.
+- Ziyaret edilen sayfalar ATA Konsolu'nda ATA Konsolu URL'si adresleri - diğer bir deyişle, ATA konsolu kullanılırken URL adresi.
 
 
 ### <a name="disable-data-collection"></a>Veri toplamayı devre dışı bırakma

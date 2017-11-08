@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1afaf258198c1b18aca5cc2e4be6774600f72a73
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 44f50b2daefb5a54c56b90289faf08b897494093
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -27,7 +27,7 @@ Advanced Threat Analytics (ATA), kuruluşunuzu çeşitli türlerdeki, gelişmiş
 
 ## <a name="how-ata-works"></a>ATA nasıl çalışır?
 
-ATA; birden çok kimlik doğrulaması, yetkilendirme ve bilgi toplama protokolündeki (Kerberos, DNS, RPC, NTLM vb.) ağ trafiğini yakalamak ve ayrıştırmak üzere özel bir ağ ayrıştırma altyapısından faydalanır. Bu bilgiler ATA tarafından şu yollardan biriyle toplanır:
+ATA, kimlik doğrulama, yetkilendirme ve bilgi toplama için (örneğin, Kerberos, DNS, RPC, NTLM ve diğerleri) birden çok protokollerin ağ trafiğini yakalamak ve altyapısı ayrıştırılırken özel bir ağ yararlanır. Bu bilgiler ATA tarafından şu yollardan biriyle toplanır:
 
 -   Etki Alanı Denetleyicileri ve DNS sunucularından ATA Gateway’e bağlantı noktası yansıtma ve/veya
 -   Doğrudan Etki Alanı Denetleyicilerinde bir ATA Lightweight Gateway (LGW) dağıtma
@@ -40,18 +40,18 @@ ATA, olayları ve günlükleri şuralardan alabilir:
 -   Doğrudan Windows Olay Toplayıcısı’ndan (Lightweight Gateway için)
 
 
-ATA mimarisi hakkında daha fazla bilgi için bkz. [ATA Mimarisi](ata-architecture.md).
+ATA mimarisi hakkında daha fazla bilgi için bkz: [ATA mimarisi](ata-architecture.md).
 
 ## <a name="what-does-ata-do"></a>ATA ne yapar?
 
 ATA teknolojisi siber saldırı ölüm zincirinin aşağıda belirtilen çeşitli aşamalarına odaklanarak birden çok şüpheli etkinliği algılar:
 
--   Keşif aşamasında saldırganlar ortamın yapılandırılma şekli ile ortamda bulunan çeşitli varlıklar hakkında bilgi toplar ve genellikle saldırının sonraki aşamaları için planlarını oluşturur.
+-   Keşif sırasında saldırganlar ortamı nasıl yapılandırıldığını bilgi toplamak, hangi farklı varlıkları içerir ve hangi varlık yoktur. Bunlar genellikle planlarına saldırı sonraki aşamaları için yapı oluşturma.
 -   Yanal hareket döngüsü aşamasında saldırgan, ağınızdaki saldırı yüzeyini genişletmek için zaman ve çaba harcar.
--   Etki alanı üzerinde egemenlik (kalıcılık) aşamasında saldırgan, çeşitli giriş noktaları, kimlik bilgileri ve teknikler kullanarak eylemlerini sürdürmesine olanak sağlayan bilgileri yakalar. 
+-   Etki alanı hakimiyeti (kalıcı) sırasında bir saldırganın çeşitli ayarlar giriş noktaları, kimlik bilgileri ve teknikleri kullanarak kendi kampanya sürdürmeye vermeden bilgilerini yakalar. 
 
 Bu siber saldırı aşamaları, hangi türde bir şirket saldırıya uğramış veya ne tür bilgiler hedeflenmiş olursa olsun birbirine benzer ve tahmin edilebilirdir.
-ATA, başlıca üç türdeki saldırıları arar: kötü amaçlı saldırılar, olağan dışı davranışlar ve güvenlik sorunlarıyla riskleri.
+Üç ana tür saldırılar ATA arar: kötü amaçlı saldırıları, anormal davranış ve güvenlik sorunlarını ve riskleri.
 
 **Kötü amaçlı saldırılar** aşağıdakiler gibi bilinen saldırı türlerinin tam listesine bakarak belirlenimci olarak belirlenir:
 
@@ -65,7 +65,8 @@ ATA, başlıca üç türdeki saldırıları arar: kötü amaçlı saldırılar, 
 -   Deneme Yanılma
 -   Uzaktan yürütme
 
-Algılamaların ve açıklamalarının tam listesi için lütfen bkz. [ATA Hangi Şüpheli Etkinlikleri Algılayabilir?](ata-threats.md)
+Algılama ve açıklamalarının tam listesi için bkz: [ne kuşkulu etkinlikleri olabilir ATA algılar?](ata-threats.md). 
+
 ATA bu şüpheli etkinlikleri algılar ve Kim, Ne, Ne Zaman ve Nasıl sorularına yönelik net bir bakış sağlayarak bilgileri ATA konsolunda sunar. Burada basit, kullanımı kolay bir panoyu izleyerek ATA’nın ağınızdaki İstemci 1 ve İstemci 2 bilgisayarları üzerinde bir Pass-the-Ticket saldırısı denemesinden şüphelendiğine dair bir uyarı aldığınızı görüyorsunuz.
 
  ![örnek ATA ekranı pass-the-ticket](media/pass_the_ticket_sa.png)
@@ -79,7 +80,7 @@ ATA, aşağıda örnekleri verilen ve ağınızdaki kullanıcılarla cihazlarda 
 -   Gizli grup değişiklikleri
 
 
-Bu tür şüpheli etkinlikleri ATA Panosunda görüntüleyebilirsiniz. Aşağıdaki örnekte, bir kullanıcı her zaman erişmediği 4 bilgisayara erişir ve bu bir uyarı nedeni olabileceğinden, ATA sizi uyarır.
+Bu tür şüpheli etkinlikleri ATA Panosunda görüntüleyebilirsiniz. Bir kullanıcı uyarısı için bir neden olabilecek bu kullanıcı tarafından normalde erişilemeyen dört bilgisayar eriştiğinde, aşağıdaki örnekte, ATA sizi uyarır.
 
  ![Örnek ATA ekranı anormal davranış](media/abnormal-behavior-sa.png) 
 
@@ -96,9 +97,9 @@ Bu tür şüpheli etkinlikleri ATA Panosunda görüntüleyebilirsiniz. Aşağıd
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-- ATA 1.7’ye ve hemen ardından ATA Gateway’lerini güncelleştirmeden önce ATA 1.8’e güncelleştirirseniz ATA 1.8’e geçemezsiniz. ATA Center’ı 1.8 sürümüne güncelleştirmeden önce tüm Gateway’leri sürüm 1.7.1 veya 1.7.2’ye güncelleştirmek zorunludur.
+- ATA Gateway bileşenleri güncelleştirmeden ATA 1.7 ve hemen ATA 1.8 güncelleştirmek için ATA 1.8 geçiremezsiniz. ATA Center’ı 1.8 sürümüne güncelleştirmeden önce tüm Gateway’leri sürüm 1.7.1 veya 1.7.2’ye güncelleştirmek zorunludur.
 
-- Tam geçiş gerçekleştirme seçeneğini seçerseniz veritabanı boyutuna bağlı olarak, geçiş çok uzun zaman alabilir. Geçiş seçeneklerinizi belirlerken tahmini süre görüntülenir, lütfen hangi seçeneği belirleyeceğinize karar verirken buna dikkat edin. 
+- Tam geçiş gerçekleştirme seçeneğini seçerseniz veritabanı boyutuna bağlı olarak, geçiş çok uzun zaman alabilir. Tahmini süre, geçiş seçenekleri seçerken, görüntülenen - seçmek için hangi seçeneği karar vermeden önce bunu not edin. 
 
 
 ## <a name="whats-next"></a>Sırada ne var?

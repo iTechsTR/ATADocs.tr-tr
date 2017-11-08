@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 45c4016ca67e08909e2709d3c60fdc484be1e5ee
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 02cf0ce0f80dbb61c2326088b20c83ef403b2246
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -41,7 +41,7 @@ ATA Gateway’in günlükleri şunlardır:
 
 -   **Microsoft.Tri.Gateway-ExceptionStatistics.log** – Bu günlük tüm benzer hataları ve özel durumları gruplandırır ve bunların sayısını sayar.
     ATA Gateway hizmeti her başlatıldığında bu dosya boş olur ve dakikada bir güncelleştirilir. Genellikle, ATA Gateway’de yeni hatalar veya sorunlar olup olmadığını belirlemek için kullanılır. (Hatalar gruplandırıldığından, kolayca okunabilir ve yeni bir sorun olduğunda hızlıca anlaşılır.)
--   **Microsoft.Tri.Gateway.Updater.log** - Bu günlük, otomatik olarak güncelleştirilecek şekilde yapılandırıldıysa, ağ geçidini güncelleştirmekten sorumlu ağ geçidi güncelleştiricisi işlemi için kullanılır. ATA Lightweight Gateway’de ağ geçidi güncelleştiricisi işlemi ayrıca ATA Lightweight Gateway’in kaynak sınırlamalarından da sorumludur.
+-   **Microsoft.Tri.Gateway.Updater.log** -bu günlük, ATA Gateway güncelleştirmek için bunu otomatik olarak yapmak için yapılandırılmışsa sorumlu olduğu ağ geçidi güncelleştirici işlemi için kullanılır. ATA Lightweight Gateway’de ağ geçidi güncelleştiricisi işlemi ayrıca ATA Lightweight Gateway’in kaynak sınırlamalarından da sorumludur.
 -   **Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log** - Bu günlük tüm benzer hataları ve özel durumları gruplandırır ve bunların sayısını sayar. ATA Updater hizmeti her başlatıldığında bu dosya boş olur ve dakikada bir güncelleştirilir. ATA Updater ile ilgili herhangi yeni bir hata veya sorun olup olmadığını anlamanıza olanak tanır. Yeni hata veya sorun olup olmadığını hızlıca anlamayı kolaylaştırmak için hatalar gruplandırılır.
 
 > [!NOTE]
@@ -61,7 +61,7 @@ ATA Center’ın günlükleri şunlardır:
 -   **Microsoft.Tri.Center-Errors.log** – Bu günlük yalnızca ATA Center tarafından yakalanan hataları içerir. Ana kullanım alanı, sistem durumu denetimleri yapmak ve belirli zamanlarla ilintili olması gereken sorunları incelemektir.
 
 -   **Microsoft.Tri.Center-ExceptionStatistics.log** – Bu günlük tüm benzer hataları ve özel durumları gruplandırır ve bunların sayısını sayar.
-    ATA Center hizmeti her başlatıldığında bu dosya boş olur ve dakikada bir güncelleştirilir. Ana kullanım alanı, ATA Center’da yeni hatalar veya sorunlar olup olmadığını anlamaktır. Hatalar gruplandırıldığından, yeni hata veya sorunlar olup olmadığı kolayca anlaşılabilir.
+    ATA Center hizmeti her başlatıldığında bu dosya boş olur ve dakikada bir güncelleştirilir. Ana kullanım alanı, yeni hatalar veya sorunlar ATA Center'da vardır - hatalar gruplandırıldığından hızla yeni hata veya sorun olup olmadığını anlamak daha kolaydır anlamaktır.
 
 > [!NOTE]
 > İlk üç günlük dosyasının boyut üst sınırı 50 MB’dir. Bu boyuta ulaşıldığında, yeni günlük dosyası açılır ve önceki dosya "&lt;özgün dosya adı&gt;-Arşivlendi-00000" olarak yeniden adlandırılır; buradaki sayı her yeniden adlandırmada artar. Aynı türden 10’dan fazla dosya zaten varsa, varsayılan olarak en eskisi silinir.
