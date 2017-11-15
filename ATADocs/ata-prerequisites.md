@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 11/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d0d7ce6aae1bb59d266ddc0f7162ecfbc477b78a
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 29aef3eeddf6045d200f9b27809567f18a2fa2d0
+ms.sourcegitcommit: 4d9d1e089bbb50baceb87f273ddf2d3aaa9a78e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 11/14/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -101,7 +101,7 @@ Aşağıdaki tabloda, ATA Center’ın düzgün çalışması için açılması 
 
 |Protokol|Aktarım|Bağlantı Noktası|Hedef/Kaynak|Yön|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (ATA İletişimi)|TCP|443 veya yapılandırılabilir|ATA Gateway|Gelen|
+|**SSL** (ATA İletişimi)|TCP|443|ATA Gateway|Gelen|
 |**HTTP** (isteğe bağlı)|TCP|80|Şirket Ağı|Gelen|
 |**HTTPS**|TCP|443|Şirket Ağı ve ATA Gateway|Gelen|
 |**SMTP** (isteğe bağlı)|TCP|25|SMTP Sunucusu|Giden|
@@ -206,7 +206,7 @@ Aşağıdaki tabloda, ATA Gateway için yönetim bağdaştırıcısında yapıla
 |DNS|TCP ve UDP|53|DNS Sunucuları|Giden|
 |RPC üzerinden NTLM|TCP|135|Ağdaki tüm cihazlar|Giden|
 |NetBIOS|UDP|137|Ağdaki tüm cihazlar|Giden|
-|SSL|TCP|443 veya Center Hizmeti için yapılandırılmış olan|ATA Center:<br /><br />-   Center Hizmeti IP Adresi<br />-   Konsol IP Adresi|Giden|
+|SSL|TCP|443|ATA Center|Giden|
 |Syslog (isteğe bağlı)|UDP|514|SIEM Sunucusu|Gelen|
 
 > [!NOTE]
@@ -262,7 +262,7 @@ Aşağıdaki tabloda, ATA Lightweight Gateway için gereken minimum bağlantı n
 |DNS|TCP ve UDP|53|DNS Sunucuları|Giden|
 |RPC üzerinden NTLM|TCP|135|Ağdaki tüm cihazlar|Giden|
 |NetBIOS|UDP|137|Ağdaki tüm cihazlar|Giden|
-|SSL|TCP|443 veya Center Hizmeti için yapılandırılmış olan|ATA Center:<br /><br />-   Center Hizmeti IP Adresi<br />-   Konsol IP Adresi|Giden|
+|SSL|TCP|443|ATA Center|Giden|
 |Syslog (isteğe bağlı)|UDP|514|SIEM Sunucusu|Gelen|
 
 > [!NOTE]
