@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/112017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b78f0407d74c3c8e0187c9934d3d7555104cd6ec
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 62bc4ad19e632550261e8cf90df53d82d878f8fc
+ms.sourcegitcommit: 261a8ed1a28089c3e40ba4aff43f287db5d9dd4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 11/21/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -47,8 +47,6 @@ Her kuşkulu etkinliğin aşağıdaki bilgileri bulunur:
     -   Kuşkulu etkinliğe bir not ekleme.
 
     -   Kuşkulu etkinlik için giriş sağlama.
-
--   Kuşkulu etkinliğin nasıl yanıtlanacağına ilişkin öneriler sağlar.
 
 > [!NOTE]
 > -   Farenizi bir kullanıcı veya bilgisayarın üzerine getirdiğinizde, varlık hakkında ek bilgi sağlayan bir varlık mini profili görüntülenir ve varlığın bağlantılı olduğu kuşkulu etkinliklerin sayısını içerir.
