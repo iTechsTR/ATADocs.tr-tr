@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 005f698c19c99c31dfa0e660e489f8c402eb1bc6
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: fca262cde38ea35c431b12173b6395eed32abc54
+ms.sourcegitcommit: 261a8ed1a28089c3e40ba4aff43f287db5d9dd4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 11/21/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -40,23 +40,25 @@ Bu makalede, ATA Center işlevselliğinin kaybolduğu ancak ATA Ağ Geçitlerini
     4. Dışarı aktarılan sertifika dosyasını ayrı bir bilgisayarda yedekleyin.
 
   > [!NOTE] 
-  > Özel anahtarı dışarı aktaramazsanız, yeni bir sertifika oluşturmanız ve bunu [ATA Center sertifikasını değiştirme](modifying-ata-center-configuration#the-ata-center-certificate) bölümünde açıklandığı gibi ATA’ya dağıtmanız gerekir. 
+  > Özel anahtarı dışarı aktaramazsanız, yeni bir sertifika oluşturmanız ve bunu [ATA Center sertifikasını değiştirme](modifying-ata-center-configuration.md) bölümünde açıklandığı gibi ATA’ya dağıtmanız gerekir. 
 
 ## <a name="recover-your-ata-center"></a>ATA Center’ı kurtarma
 
 1. Önceki ATA Center makinesi ile aynı IP adresini ve bilgisayar adını kullanarak yeni bir Windows Server makinesi oluşturun.
-4. Daha önce yedeklenen sertifika yeni sunucuya aktarın.
-5. Yeni oluşturulan Windows Server'da [ATA Center dağıtma](install-ata-step1.md) yönergelerini izleyin. ATA Ağ Geçitlerini yeniden dağıtmaya gerek yoktur. Sertifika istendiğinde, ATA Center yapılandırmasını yedeklerken dışarı aktardığınız sertifikayı sağlayın. 
+2. Daha önce yedeklenen sertifika yeni sunucuya aktarın.
+3. Yeni oluşturulan Windows Server'da [ATA Center dağıtma](install-ata-step1.md) yönergelerini izleyin. ATA Ağ Geçitlerini yeniden dağıtmaya gerek yoktur. Sertifika istendiğinde, ATA Center yapılandırmasını yedeklerken dışarı aktardığınız sertifikayı sağlayın. 
 ![ATA Center’ı geri yükleme](media/disaster-recovery-deploymentss.png)
-6. Yedeklenen ATA Center yapılandırması içeri aktarın:
+4. ATA Center hizmeti durdurun.
+5. Yedeklenen ATA Center yapılandırması içeri aktarın:
     1. Varsayılan ATA Center Sistem Profili belgesini MongoDB’den kaldırın: 
         1. **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** yoluna gidin. 
         2. `mongo.exe ATA` öğesini çalıştırın. 
-        3. Varsayılan sistem profilini kaldırmak için şu komutu çalıştırın: `db.SystemProfile.remove({})`
+        3. ATA Center hizmeti başlatın.
+        4. Varsayılan sistem profilini kaldırmak için şu komutu çalıştırın: `db.SystemProfile.remove({})`
     2. Adımdaki yedekleme dosyasını kullanarak şu komutu çalıştırın: `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`</br>
     Yedekleme dosyalarını nasıl bulacağınıza ve içeri aktaracağınıza ilişkin tam açıklama için bkz. [ATA yapılandırmasını dışarı ve içeri aktarma](ata-configuration-file.md). 
     3. ATA Konsolu’nu açın. Tüm ATA Ağ Geçitlerinin, Yapılandırma/Ağ Geçitleri sekmesi altında bağlı olduğunu görmeniz gerekir. 
-    5. Bir [**Dizin hizmetleri kullanıcısı**](install-ata-step2.md) tanımladığınızdan ve bir [**Etki alanı denetleyicisi eşitleyicisi**](install-ata-step5.md) seçtiğinizden emin olun. 
+    4. Bir [**Dizin hizmetleri kullanıcısı**](install-ata-step2.md) tanımladığınızdan ve bir [**Etki alanı denetleyicisi eşitleyicisi**](install-ata-step5.md) seçtiğinizden emin olun. 
 
 
 
