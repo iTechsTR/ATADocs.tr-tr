@@ -56,4 +56,5 @@
 ## [Günlükleri kullanarak sorun giderme](troubleshooting-ata-using-logs.md)
 ## [Performans sayaçlarını kullanarak sorun giderme](troubleshooting-ata-using-perf-counters.md)
 ## [Veritabanını kullanarak sorun giderme](troubleshooting-ata-using-ata-database.md)
+## [Hizmet başlatma sorun giderme](troubleshooting-service-startup.md)
 ## [Olağanüstü durum kurtarma](disaster-recovery.md)
