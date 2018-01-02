@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/17/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bff477a66b837d82bb10a43a0dad7d36c6542d9f
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
-ms.translationtype: MT
+ms.openlocfilehash: 261b0bf277de97520e4d5473d8a16280f8e4534b
+ms.sourcegitcommit: 1c4ccb320e712a180433a7625312862235be66f0
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/17/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -293,6 +293,34 @@ Windows Server'ın daha eski sürümleri güvenlik açıkları izin ayrıcalıkl
 
 Windows Server 2012 R2 ve altı işletim sistemi sürümleri kullanan etki alanı denetleyicilerinde [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege)’in yüklü olduğundan ve tüm üye sunucularla 2012 R2 ve altı sürümlerdeki etki alanı denetleyicilerinin KB2496930 güncel sürümünde olduğundan emin olun. Daha fazla bilgi için bkz. [Gümüş PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) ve [Sahte PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
+## <a name="reconnaissance-using-account-enumeration"></a>Hesap numaralandırma kullanarak keşif
+
+**Açıklama**
+
+Hesap numaralandırma keşif bir saldırgan, kullanıcı adlarını veya KrbGuess gibi araçları binlerce ile kullanıcı adlarını, etki alanınızdaki tahmin etme girişiminde bir sözlük kullanır. Saldırgan, geçerli bir kullanıcı adı, etki alanınızdaki bulmak için bu adları kullanarak Kerberos istekleri yapıyorsa. Bir tahmin başarılı bir şekilde bir kullanıcı adı belirlerse, saldırganın Kerberos hata iletisiyle karşılaşırsınız **gerekli ön kimlik doğrulama** yerine **güvenlik sorumlusu bilinmeyen**. 
+
+Bu algılama, ATA saldırı nereden geldiğini, tahmin denemeleri toplam sayısı ve kaç tane eşleştirildiklerinden algılayabilir. Bilinmeyen çok sayıda kullanıcı varsa, ATA kuşkulu bir etkinlik algılar. 
+
+**Araştırma**
+
+1. Kendi ayrıntıları sayfasına ulaşmak için uyarıyı tıklayın. 
+
+2. Bu ana bilgisayar makinesi olup hesapları (örneğin, Exchange sunucuları) mevcut için etki alanı denetleyicisi sorgu? <br></br>
+Bir komut dosyası veya bu davranış üretebilir ana bilgisayar üzerinde çalışan uygulama var mı? <br></br>
+Ya da bu sorulara yanıt Evet ise, **Kapat** şüpheli etkinliğinden konak dışlama ve şüpheli etkinlik (zararsız true pozitif değil).
+
+3. Uygun hesap girişimleri, var olan ve var olmayan hesaplara bölünmüş listesini görmek için bir Excel elektronik tablosuna uyarıda ayrıntılarını indirin. Bakarsanız elektronik tablosuna olmayan var olan hesapları ve hesapları tanıdık, devre dışı bırakılan hesapları veya şirket sol çalışanlar olabilir. Bu durumda, deneme sözlükten geliyor düşüktür. Büyük olasılıkla bir uygulama veya hangi hesapların Active Directory içinde zararsız true pozitif yani hala mevcut görmek için denetimi komut dosyası değil.
+
+3. Adları büyük ölçüde tanımıyorsanız tahmin denemeleri hiçbirini Active Directory'de mevcut hesabı adları eşleşmiyor? Herhangi bir eşleşme varsa, denemesi yararsız ancak, zaman içinde güncelleştirilmiş, uyarının dikkat etmeniz gerekir.
+
+4. Tahmin hiçbirini çalışırsa bulunan kullanıcı adlarını kullanarak, etki alanına erişmek için deneme yanılma saldırısı kullanmayı deneyebilir ve ortamınızdaki hesaplarının varlığı, saldırganın bilir mevcut hesabı adları eşleşmiyor. Ek şüpheli etkinlikler için tahmin edilen hesap adlarını denetleyin. Herhangi bir eşleşen hesaplar hassas hesapları olup olmadığını denetleyin.
+
+
+**Düzeltme**
+
+[Uzun ve karmaşık parolalar](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) yanılma saldırılarına karşı güvenlik gerekli ilk düzeyi sağlar.
+
+
 ## <a name="reconnaissance-using-directory-services-queries"></a>Dizin hizmetleri sorguları kullanarak keşif
 
 **Açıklama**
@@ -487,7 +515,7 @@ Bu WannaCry saldırı olup olmadığını belirlemek için aşağıdaki adımlar
 - [Güvenlik topluluğu birleştirme](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz:
 - [ATA kuşkulu etkinlik playbook](http://aka.ms/ataplaybook)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
