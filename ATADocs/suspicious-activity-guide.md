@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 261b0bf277de97520e4d5473d8a16280f8e4534b
-ms.sourcegitcommit: 1c4ccb320e712a180433a7625312862235be66f0
-ms.translationtype: HT
+ms.openlocfilehash: 0d951edf1037422c1ee52c8b1e35308665aad256
+ms.sourcegitcommit: 91158e5e63ce2021a1f5f85d47de03d963b7cb70
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2017
+ms.lasthandoff: 12/20/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -350,6 +350,9 @@ Bu algılama, hiçbir uyarı ATA dağıtıldıktan sonra ilk ay içinde tetiklen
 **Düzeltme**
 
 Kullanım [SAMRi10 aracı](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) ortamınızı Bu teknik karşı sağlamlaştırmak için.
+Aracı, DC için geçerli değilse:
+1. Bilgisayar Tarama Aracı bir güvenlik açığı çalışıyor mu?  
+2. Belirli sorgulanan alanındaki kullanıcılar ve gruplar saldırı ayrıcalıklı veya yüksek değer hesapları olup araştırmak (yani CEO, CFO, BT yönetimi, vs.).  Öyleyse, diğer uç nokta da faaliyete bakın ve büyük olasılıkla yanal hareket hedefleri oldukları gibi sorgulanan hesapları, oturum açtığınız bilgisayarları izleyin.
 
 ## <a name="reconnaissance-using-dns"></a>DNS kullanarak keşif
 
