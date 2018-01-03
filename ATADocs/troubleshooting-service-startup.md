@@ -1,11 +1,11 @@
 ---
-title: "Günlükleri kullanarak Advanced Threat Analytics sorunlarını giderme | Microsoft Docs"
-description: "Sorunları gidermek için ATA günlüklerini nasıl kullanabileceğiniz açıklanır"
+title: "Advanced Threat Analytics hizmeti başlatma sorunlarını giderme | Microsoft Docs"
+description: "ATA başlatma sorunları nasıl giderebileceğinizi açıklar"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,17 +13,19 @@ ms.technology:
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 125376b1e3530481a3b9f62c4661dd10dce13f22
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 33ff11f592984b754521c562414ffeabd2d1f255
+ms.sourcegitcommit: 91158e5e63ce2021a1f5f85d47de03d963b7cb70
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/20/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
 
 
-# <a name="troubleshooting-ata-center-service-startup"></a>ATA Center hizmet başlatma sorunlarını giderme
+# <a name="troubleshooting-service-startup"></a>Hizmet başlatma sorunlarını giderme
+
+## <a name="troubleshooting-ata-center-service-startup"></a>ATA Center hizmet başlatma sorunlarını giderme
 
 ATA Center bileşeninizin başlamazsa, aşağıdaki sorun giderme yordamı uygulayın:
 
@@ -42,9 +44,25 @@ Başlatmak için büyük olasılıkla daha iyi bir platformdur. Aksi durumda, ha
         logman start "Microsoft ATA Center"
         sc start ATACenter
 
+## <a name="troubleshooting-ata-lightweight-gateway-startup"></a>ATA Lightweight Gateway başlatma sorunlarını giderme
+
+**Belirti**
+
+ATA Gateway başlatılmaz ve bu hatayı alırsınız:<br></br>
+*System.Net.Http.HttpRequestException: Yanıt durum kodu, başarı göstermiyor: 500 (Dahili Sunucu hatası)*
+
+**Açıklama**
+
+Basit Ağ Geçidi yükleme işleminin bir parçası olarak, ATA Lightweight Gateway CPU % 15 arabellekle kullanmasına izin verir CPU eşiği ayırdığından meydana gelir. Kayıt defteri anahtarını kullanarak bir eşik bağımsız olarak ayarladıysanız: Bu çakışma Lightweight Gateway başlamasını engeller. 
+
+**Çözümleme**
+
+1. Kayıt defteri altında DWORD değerini ise, anahtar adı verilen **performans sayaçları devre dışı** ayarlanmış olmasına dikkat edin **0**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\``HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
+ 
+2. Pla hizmetini durdurup yeniden başlatın. ATA Lightweight Gateway otomatik olarak değişikliği algılar ve hizmeti yeniden başlatın.
 
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz:
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
