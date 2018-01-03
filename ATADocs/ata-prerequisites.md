@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/14/2017
+ms.date: 12/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 29aef3eeddf6045d200f9b27809567f18a2fa2d0
-ms.sourcegitcommit: 4d9d1e089bbb50baceb87f273ddf2d3aaa9a78e8
+ms.openlocfilehash: d3f112c455fbf2bbab2137d158cbd31fe6e02f7e
+ms.sourcegitcommit: 5a02c6d497265e65633f96f5f8264a29a18a1114
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 12/20/2017
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -249,10 +249,15 @@ ATA Lightweight Gateway, etki alanı denetleyicilerinden gelen ve giden ağ traf
 ATA Lightweight Gateway donanım gereksinimleri hakkında daha fazla bilgi için bkz: [ATA kapasite planlaması](ata-capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Zaman eşitleme
+
 ATA Center sunucusu, ATA Lightweight Gateway sunucuları ve etki alanı denetleyicileri için beş dakika içinde birbiriyle eşitlenmesi gerekir.
+
 ### <a name="network-adapters"></a>Ağ bağdaştırıcıları
+
 ATA Lightweight Gateway etki alanı denetleyicisinin ağ bağdaştırıcılarının hepsindeki yerel trafiği izler. <br>
 Dağıtımdan sonra, hangi ağ bağdaştırıcılarının izlendiğini değiştirmek isterseniz ATA Konsolu’nu kullanabilirsiniz.
+
+Lightweight Gateway, etki alanı denetleyicileri Broadcom ağ bağdaştırıcısı grubu oluşturma ile Windows 2008 R2 çalıştıran etkin desteklenmiyor.
 
 ### <a name="ports"></a>Bağlantı noktaları
 Aşağıdaki tabloda, ATA Lightweight Gateway için gereken minimum bağlantı noktaları listelenir.
@@ -286,7 +291,7 @@ ATA Konsolu tarayıcılar ve ayarları destekleyen bir tarayıcı erişilebilir:
 - [ATA Gateway türü sağ seçme](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz:
 - [ATA boyutlandırma aracı](http://aka.ms/atasizingtool)
 - [ATA mimarisi](ata-architecture.md)
 - [ATA’yı yükleme](install-ata-step1.md)
