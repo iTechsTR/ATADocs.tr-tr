@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d3f112c455fbf2bbab2137d158cbd31fe6e02f7e
-ms.sourcegitcommit: 5a02c6d497265e65633f96f5f8264a29a18a1114
+ms.openlocfilehash: 54c738a63f47280c91f72812476b559b773e9b97
+ms.sourcegitcommit: 56c7d749b17745430e372e514accf537b3f215d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -80,17 +80,21 @@ ATA Center’ın bir sanal makine olarak yüklenmesi desteklenir.
 > Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
 
 ATA Center’ı sanal makine olarak çalıştırıyorsanız, olası veritabanı bozulmalarını önlemek için yeni bir denetim noktası oluşturmadan önce sunucuyu kapatın.
+
 ### <a name="server-specifications"></a>Sunucu belirtimleri
+
 Fiziksel bir sunucuda çalışırken, ATA veritabanı için BIOS’ta tekdüzen olmayan bellek erişimini (NUMA) **devre dışı bırakmanız** gerekir. Sisteminiz için NUMA düğüm araya Ekleme'yi; bu durumda, zorunda başvurabilir **etkinleştirmek** NUMA devre dışı bırakmak için düğüm araya ekleme. Daha fazla bilgi için BIOS belgelerinize bakın. ATA Center bir sanal sunucuda çalışırken bu durum geçerli değildir.<br>
 En iyi performans için, ATA Center’ın **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.<br>
 İzlemekte olduğunuz etki alanı denetleyicilerini ve etki alanı denetleyicilerinden her birinin yükü sayısı, gerekli sunucu belirtimlerini belirler. Daha fazla bilgi için bkz: [ATA kapasite planlaması](ata-capacity-planning.md).
 
 
 ### <a name="time-synchronization"></a>Zaman eşitleme
+
 ATA Center sunucusu, ATA Gateway sunucuları ve etki alanı denetleyicileri için beş dakika içinde birbiriyle eşitlenmesi gerekir.
 
 
 ### <a name="network-adapters"></a>Ağ bağdaştırıcıları
+
 Aşağıdaki kümesi olması gerekir:
 -   En az bir ağ bağdaştırıcısı (VLAN ortamında fiziksel sunucu kullanılıyorsa, iki ağ bağdaştırıcısı kullanılması önerilir)
 
