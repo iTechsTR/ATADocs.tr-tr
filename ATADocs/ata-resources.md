@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/7/2018
+ms.date: 1/15/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,47 +13,31 @@ ms.technology:
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fe82157150acd0174a916da9d720569c2addf989
-ms.sourcegitcommit: 56c7d749b17745430e372e514accf537b3f215d0
+ms.openlocfilehash: 33aec9dd89fc189144387e59c3b48b9d440936d2
+ms.sourcegitcommit: 55f7ac32bcd4ac8edb8b8b3b47993bf96b9acce2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/15/2018
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
-# <a name="ata-resources"></a>ATA kaynakları 
+# <a name="ata-readiness-roadmap"></a>ATA hazırlık yol haritası 
+Bu belge, Advanced Threat Analytics ile çalışmaya başlamak için yardımcı olacak bir hazırlık yol haritası sağlar.
 
-[ATA giriş video - kısa](https://aka.ms/ATAShort)
+## <a name="understanding-ata"></a>ATA anlama
 
-[ATA tanıtım videosunu - tam](https://aka.ms/ATAVideo) 
+Advanced Threat Analytics (ATA), kuruluşunuzu çeşitli türlerdeki, gelişmiş ve hedefe yönelik siber saldırıların yanı sıra dahili tehditlerden de korumaya yardımcı olan şirket içi bir platformdur. ATA hakkında daha fazla bilgi için aşağıdaki kaynakları kullanın:
 
-[ATA genel bakış] (https://aka.ms/ATAOverview)
+- [ATA genel bakış](https://aka.ms/ATAOverview)
 
-## <a name="get-started"></a>Başlarken
+- [ATA giriş video - kısa](https://aka.ms/ATAShort)
 
-[ATA'yı indirin](http://aka.ms/ataeval)
+- [ATA tanıtım videosunu - tam](https://aka.ms/ATAVideo) 
 
-[ATA dağıtım video](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes) -ATA dağıtımına genel bakış adımları 10 dakikadan daha kısa bir süre içinde bu video sağlar
-
-## <a name="deploy-ata"></a>Ata'yı dağıtma
-
-[ATA POC playbook](http://aka.ms/atapoc) -ATA başarılı POC dağıtımını yapmak gereken tüm adımları Kılavuzu
-
-[ATA boyutlandırma aracı](http://aka.ms/atasizing) -ATA gereken trafik miktarı koleksiyonunu boyutlandırma aracı otomatikleştirir. Otomatik olarak desteklenebilirlik ve kaynak öneriler ATA Center ve ATA Lightweight Gateway için sağlar.
-
-[ATA kapasite planlaması](https://docs.microsoft.com/en-us/advanced-threat-analytics/ata-capacity-planning)
-
-[Denetim ayarları](https://aka.ms/ataauditingblog) – önce ve sonra bir ATA dağıtımı, etki alanı denetleyicilerinizi sistem durumu denetleme
-
-[ATA genel belgeler](https://docs.microsoft.com/en-us/advanced-threat-analytics/)
-
-## <a name="work-with-ata"></a>ATA ile çalışma
-
-[ATA kuşkulu etkinlik playbook](http://aka.ms/ataplaybook) -bu makalede, Internet'te kullanıma hazır araştırma araçlarını kullanarak kimlik bilgisi hırsızlığı saldırısına tekniklerinin açıklanmaktadır. Her saldırı noktada ATA, bu tehditleri görünürlük elde etmek nasıl yardımcı olduğunu görebilirsiniz.
-
-[ATA kuşkulu etkinlik Kılavuzu](http://aka.ms/atasaguide)
 
 ## <a name="deployment-decisions"></a>Dağıtım kararları
+
+ATA bir sunucuya yükleyebilirsiniz, ATA Center ve ATA Lightweight Gateway doğrudan etki alanı denetleyicilerinizde kullanarak veya ayrı bilgisayarlara yükleyebilirsiniz, ağ geçitleri oluşur. Hazır ve çalışır ulaşmadan önce aşağıdaki dağıtım kararları önemlidir:
 
 |YAPILANDIRMA|KARAR|
 |----|----|
@@ -62,11 +46,45 @@ ms.lasthandoff: 01/08/2018
 |Ağ geçidi boyutlandırma|Tam ağ geçidi, basit ağ geçidi|
 |Sertifikalar|PKI, otomatik olarak imzalanan|
 
+Fiziksel sunucuları kullanıyorsanız, kapasite planlamanız gerekir. ATA'ın alan ayırmak için boyutlandırma aracından Yardım alabilirsiniz:
+
+[ATA boyutlandırma aracı](http://aka.ms/atasizing) -ATA gereken trafik miktarı koleksiyonunu boyutlandırma aracı otomatikleştirir. Otomatik olarak desteklenebilirlik ve kaynak öneriler ATA Center ve ATA Lightweight Gateway için sağlar.
+
+[ATA kapasite planlaması](https://docs.microsoft.com/en-us/advanced-threat-analytics/ata-capacity-planning)
+
+## <a name="deploy-ata"></a>Ata'yı dağıtma
+
+Bu kaynaklar, indirin ve ATA Center Active Directory'ye bağlamanın, ATA Gateway paketini karşıdan yükleyin, olay toplamayı ayarlama ve isteğe bağlı olarak VPN ile tümleştirmek ve honeytoken hesapları ve özel durumları ayarlamanız yardımcı olur.
+
+[ATA'yı indirin](http://aka.ms/ataeval) -ATA, satın kararı yapmadıysanız, Ata'yı dağıtmadan önce değerlendirme sürümünü indirebilirsiniz. 
+
+[ATA POC playbook](http://aka.ms/atapoc) -ATA başarılı POC dağıtımını yapmak gereken tüm adımları Kılavuzu.
+
+[ATA dağıtım video](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes) -ATA dağıtımına genel bakış adımları 10 dakikadan daha kısa bir süre içinde bu video sağlar.
+
+## <a name="ata-settings"></a>ATA ayarları
+
+ATA temel gerekli ayarlarında Yükleme Sihirbazı'nın bir parçası olarak yapılandırılır. Ancak, çeşitli algılamaların SIEM tümleştirme gibi ortamınız için daha kesin ve denetim ayarları ATA ince ayar yapmak için yapılandırabileceğiniz diğer ayarlar vardır.
+
+[Denetim ayarları](https://aka.ms/ataauditingblog) – önce ve sonra bir ATA dağıtımı, etki alanı denetleyicisi durumunu denetleme.
+
+[ATA genel belgeler](https://docs.microsoft.com/en-us/advanced-threat-analytics/)
+
+## <a name="work-with-ata"></a>ATA ile çalışma
+
+ATA kurulup çalışmaya başladıktan sonra saldırı zaman çizelgesinde algılanan kuşkulu etkinlikleri görüntüleyebilirsiniz. Bu, ATA Konsolu’nda oturum açtığınızda gittiğiniz varsayılan giriş sayfasıdır. Varsayılan olarak, tüm kuşkulu etkinliler saldırı zaman çizelgesinde gösterilir. Ayrıca, her etkinliğe atanmış olan önem düzeyini de görebilirsiniz. Daha fazla bilgi sağlayan varlıklarının içinde (bilgisayarlar, cihazlar, kullanıcılar) kendi profil sayfalarını açmak için detaya tarafından her kuşkulu etkinlik araştırın. Bu kaynaklar, ATA'ın kuşkulu etkinliklerle çalışmanıza yardımcı olur:
+
+[ATA kuşkulu etkinlik playbook](http://aka.ms/ataplaybook) -bu makalede, Internet'te kullanıma hazır araştırma araçlarını kullanarak kimlik bilgisi hırsızlığı saldırısına tekniklerinin açıklanmaktadır. Her saldırı noktada ATA, bu tehditleri görünürlük elde etmek nasıl yardımcı olduğunu görebilirsiniz.
+
+[ATA kuşkulu etkinlik Kılavuzu](http://aka.ms/atasaguide)
+
+
+
 ## <a name="security-best-practices"></a>En iyi güvenlik uygulamaları
 
-[ATA en iyi yöntemler](https://aka.ms/atasecbestpractices) -en iyi uygulamalar ATA güvenliğini sağlamak için
+[ATA en iyi yöntemler](https://aka.ms/atasecbestpractices) -en iyi uygulamalar ATA güvenliğini sağlamak için.
 
-[ATA sık sorulan sorular](http://aka.ms/atafaq) -bu makalede, ATA hakkında sık sorulan sorular listesini sağlar ve ve öngörülerle yanıtlar sağlanır
+[ATA sık sorulan sorular](http://aka.ms/atafaq) -bu makalede, ATA hakkında sık sorulan sorular listesini sağlar ve ve öngörülerle yanıtlar sağlanır.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
