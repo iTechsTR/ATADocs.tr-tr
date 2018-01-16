@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 1/15/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2eab8649f225071ad548a8134b385d46f02b3222
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 8d7468103e14e31116c4b6cb9846ecdcd2bf0ef0
+ms.sourcegitcommit: 55f7ac32bcd4ac8edb8b8b3b47993bf96b9acce2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 01/15/2018
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -37,7 +37,6 @@ ATA, ATA Gateway iletilen RADIUS hesap olaylarını dinleme VPN çözümünüzü
 
 -   Microsoft
 -   F5
--   Check Point
 -   Cisco ASA
 
 ## <a name="prerequisites"></a>Önkoşullar
@@ -46,7 +45,7 @@ VPN tümleştirmeyi etkinleştirmek için aşağıdaki parametreleri ayarladığ
 
 -   Bağlantı noktası UDP 1813 ATA Gateway ve ATA Lightweight Gateway açın.
 
--   Gelen IP adreslerini konumunu sorgulayabilmesi ATA Center Internet'e bağlanın.
+-   ATA Center erişebilir *ti.ata.azure.com* gelen IP adreslerini konumunu sorgulayabilmesi HTTPS (443 numaralı) kullanarak.
 
 Aşağıdaki örnek, Microsoft Routing ve Uzaktan erişim sunucusu (RRAS) VPN yapılandırma işlemi tanımlamak için kullanır.
 
@@ -68,7 +67,7 @@ RRAS sunucusunda aşağıdaki adımları gerçekleştirin.
      
 ### <a name="configure-vpn-in-ata"></a>ATA VPN bağlantısını yapılandırma
 
-ATA hangi bilgisayarların konumlardan ağ ve anormal VPN bağlantıları algılayabilir bağlanmasını profili yardımcı olan VPN verileri toplar.
+ATA VPN verilerini toplar ve ne zaman ve nerede VPN aracılığıyla kimlik bilgilerini kullanıldığını tanımlar ve bu verileri, araştırmasını tümleştirir. Bu, ATA tarafından bildirilen uyarıları araştırmanıza yardımcı olacak ek bilgiler sağlar.
 
 ATA VPN verileri yapılandırmak için:
 
@@ -88,8 +87,7 @@ Kurulum tamamlandıktan ve kullanıcıların profili sayfasını VPN etkinliğin
  
    ![VPN Kurulumu](./media/vpn-user.png)
 
-ATA Gateway VPN olaylarını alır ve ATA Center işleme için gönderir sonra ATA Center HTTPS bağlantı noktası 443 VPN olayları dış IP adresleriyle bunların coğrafi konuma çözümleyebilmesi için Internet bağlantısı gerekir.
-
+ATA Gateway VPN olaylarını alır ve ATA Center işleme için gönderir sonra ATA Center erişmesi *ti.ata.azure.com* VPN olaylara dış IP adreslerinin çözümleyebilmesi için HTTPS (443 numaralı) kullanma kendi coğrafi konum.
 
 
 
@@ -105,7 +103,7 @@ ATA Gateway VPN olaylarını alır ve ATA Center işleme için gönderir sonra A
 - [ATA Gateway türü sağ seçme](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz:
 - [ATA POC Dağıtım Kılavuzu](http://aka.ms/atapoc)
 - [ATA boyutlandırma aracı](http://aka.ms/atasizingtool)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
