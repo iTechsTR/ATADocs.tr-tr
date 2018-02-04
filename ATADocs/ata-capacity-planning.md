@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/1/2018
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a0cc958cd7c802d02c96b6d7d3bc7e7180bd3d95
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 76173dfa0b41195e641235f8792723fa7b038a68
+ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 02/01/2018
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -40,6 +40,9 @@ ATA dağıtımızın kapasitesini belirlemek için önerilen en kolay yol [ATA B
 ![Kapasite planlama aracı örneği](media/capacity tool.png)
 
 
+> [!NOTE]
+> Farklı ortamları değişir ve başlangıçta ATA dağıtmak ve boyutlandırma aracı çalıştırdıktan sonra birden çok özel ve beklenmeyen ağ trafiği özelliklerine sahiptir çünkü ayarlamak ve dağıtımınız için kapasite ince gerekebilir.
+
 
 Çeşitli nedenlerle ATA Boyutlandırma Aracını kullanamıyorsanız paket/sn sayaç bilgilerini tüm Etki Alanı Denetleyicilerinizden 24 saat boyunca düşük toplama aralığıyla (yaklaşık 5 saniye) el ile toplayın. Sonrasında, her Etki Alanı Denetleyicisi için günlük ortalamanızı ve en meşgul zaman aralığı (15 dakikalık) ortalamanızı hesaplamanız gerekir.
 Aşağıdaki bölüm, bir Etki Alanı Denetleyicisi’nden paket/sn sayacı bilgilerini nasıl alabileceğinizi gösteren yönergeleri içerir.
@@ -53,7 +56,7 @@ Kullanıcı davranış analizi için ATA Center’a en az 30 günlük veri gerek
 |Tüm DC’lerden paket/saniye|CPU (çekirdekler&#42;)|Bellek (GB)|Günlük veritabanı depolaması (GB)|Aylık veritabanı depolaması (GB)|IOPS&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
 |1,000|2|32|0.3|9|30 (100)
-|40.000|4|48|12|360|500 (750)
+|40,000|4|48|12|360|500 (750)
 |200.000|8|64|60|1.800|1.000 (1.500)
 |400.000|12|96|120|3.600|2.000 (2.500)
 |750,000|24|112|225|6,750|2,500 (3,000)
@@ -216,7 +219,7 @@ Paket/saniye oranını belirlemek için her etki alanı denetleyicisinde aşağ�
 - [ATA Gateway türü sağ seçme](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz:
 - [ATA boyutlandırma aracı](http://aka.ms/atasizingtool)
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA mimarisi](ata-architecture.md)

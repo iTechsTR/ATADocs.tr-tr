@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/15/2018
+ms.date: 2/1/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 05be0f1a696bab215f35521e0c719ddf45238a37
-ms.sourcegitcommit: 55f7ac32bcd4ac8edb8b8b3b47993bf96b9acce2
+ms.openlocfilehash: dd422a7feffcddc0f56b54b11d5dadb029457a8e
+ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2018
+ms.lasthandoff: 02/01/2018
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -83,7 +83,7 @@ ATA Center’ı sanal makine olarak çalıştırıyorsanız, olası veritabanı 
 
 ### <a name="server-specifications"></a>Sunucu belirtimleri
 
-Fiziksel bir sunucuda çalışırken, ATA veritabanı için BIOS’ta tekdüzen olmayan bellek erişimini (NUMA) **devre dışı bırakmanız** gerekir. Sisteminiz için NUMA düğüm araya Ekleme'yi; bu durumda, zorunda başvurabilir **etkinleştirmek** NUMA devre dışı bırakmak için düğüm araya ekleme. Daha fazla bilgi için BIOS belgelerinize bakın. ATA Center bir sanal sunucuda çalışırken bu durum geçerli değildir.<br>
+Fiziksel bir sunucuda çalışırken, ATA veritabanı için BIOS’ta tekdüzen olmayan bellek erişimini (NUMA) **devre dışı bırakmanız** gerekir. Sisteminiz için NUMA düğüm araya Ekleme'yi; bu durumda, zorunda başvurabilir **etkinleştirmek** NUMA devre dışı bırakmak için düğüm araya ekleme. Daha fazla bilgi için BIOS belgelerinize bakın. <br>
 En iyi performans için, ATA Center’ın **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.<br>
 İzlemekte olduğunuz etki alanı denetleyicilerini ve etki alanı denetleyicilerinden her birinin yükü sayısı, gerekli sunucu belirtimlerini belirler. Daha fazla bilgi için bkz: [ATA kapasite planlaması](ata-capacity-planning.md).
 
