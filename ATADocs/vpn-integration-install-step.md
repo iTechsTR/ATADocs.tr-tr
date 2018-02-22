@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8d7468103e14e31116c4b6cb9846ecdcd2bf0ef0
-ms.sourcegitcommit: 55f7ac32bcd4ac8edb8b8b3b47993bf96b9acce2
+ms.openlocfilehash: f8a4e3ce06e775706f9bf05f5511d6b5ee53e8cc
+ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2018
+ms.lasthandoff: 02/21/2018
 ---
 *Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
 
@@ -73,7 +73,7 @@ ATA VPN verileri yapılandırmak için:
 
 1.  ATA Konsolu'nda ATA yapılandırma sayfasını açın ve gidin **VPN**.
  
-  ![ATA yapılandırma menüsü](./media/config-menu.png)
+  ![ATA config menu](./media/config-menu.png)
 
 2.  Aç **RADIUS hesaplama**ve yazın **paylaşılan gizlilik** RRAS VPN sunucunuza daha önce yapılandırılmış. Daha sonra **Kaydet**'e tıklayın.
  
@@ -105,7 +105,7 @@ ATA Gateway VPN olaylarını alır ve ATA Center işleme için gönderir sonra A
 
 ## <a name="see-also"></a>Ayrıca bkz:
 - [ATA POC Dağıtım Kılavuzu](http://aka.ms/atapoc)
-- [ATA boyutlandırma aracı](http://aka.ms/atasizingtool)
+- [ATA boyutlandırma aracı](http://aka.ms/aatpsizingtool)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [ATA önkoşulları](ata-prerequisites.md)
