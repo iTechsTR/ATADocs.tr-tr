@@ -1,1 +1,41 @@
-# [Dizin](index.md)
+# Anlama ve Keşfetme - Önizleme!
+## [Azure Gelişmiş Tehdit Koruması nedir?](what-is-atp.md)
+## [Sık sorulan sorular](atp-technical-faq.md)
+# Planlama ve Tasarlama
+## [Azure ATP önkoşulları](atp-prerequisites.md)
+## [Azure ATP mimarisi](atp-architecture.md)
+## [Azure ATP kapasitenizi planlama](atp-capacity-planning.md)
+# Dağıt
+## [1 Çalışma alanı yönetim portalında bir çalışma alanı oluşturma](install-atp-step1.md)
+## [2 AD’ye bağlanma](install-atp-step2.md)
+## [3 Azure ATP algılayıcı paketini indirme](install-atp-step3.md)
+## [4 Azure ATP algılayıcısını yükleme](install-atp-step4.md)
+## [5 Azure ATP algılayıcısını yapılandırma](install-atp-step5.md)
+## [6 VPN tümleştirmesi](install-atp-step6-vpn.md)
+## [7 Dışlamalar ve honeytoken hesaplar](install-atp-step7.md)
+### [8 YEY-R gerektiren izinleri yapılandırma](install-atp-step8-samr.md)
+## [Sessiz yükleme](ATP-silent-installation.md)
+## Azure ATP algılayıcısı ek adımlar
+### [Bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md)
+### [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
+### [Windows Olay İletme’yi yapılandırma](configure-event-forwarding.md)
+### [İletişimi etkinleştirmek için proxy ayarlarını yapılandırma](configure-proxy.md)
+# Bu çözümdeki tüm sanal makineleri güncelleştirmek için Windows Server Update Services ile birlikte
+## [Azure ATP sistem durumu merkezi](atp-health-center.md)
+## [Azure ATP raporları](reports.md)
+## [Azure ATP rol grupları](atp-role-groups.md)
+## [Etki alanı bağlantı parolasını değiştirme](modifying-atp-config-dcpassword.md)
+## [Varlıkları algılamalardan dışlama](excluding-entities-from-detections.md)
+## [Windows Defender ATP ile tümleştirme](integrate-wd-atp.md)
+## [Uyarıları izleme](monitoring-alerts.md)
+## [Azure ATP bildirimlerini ayarlama](notifications.md)
+## [Syslog ile tümleştirme](setting-syslog.md)
+## [Hassas hesaplar ile çalışma](sensitive-accounts.md)
+## [Azure ATP çalışma alanı portalıyla çalışma](workspace-portal.md)
+## Azure ATP başvuru bilgileri
+### [ATA SIEM günlük başvurusu](cef-format-sa.md)
+# Araştırma
+## [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
+## [Şüpheli etkinlik kılavuzu](suspicious-activity-guide.md)
+## [Azure ATP ile yanal hareket yollarını araştırma](use-case-lateral-movement-path.md)
+## [Varlıkları araştırma](entity-profiles.md)
