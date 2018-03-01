@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/27/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod: 
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3939cba25f262991b000dbdd09bdfbf78f5102e7
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 4219199ad9f426f61ac52826ab85bf3e60e67396
+ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/27/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -82,7 +82,7 @@ Bir Azure ATP algılayıcı, etki alanı denetleyicisinin oluşturduğu ağ traf
 |100 75k - k|3.50 |9.50|
 
 > [!NOTE]
-> - Bu etki alanı denetleyicisinde takılı hiper olmayan iş parçacıklı çekirdekleri toplam sayısı.<br>Hyper threading kapasite planlaması yaparken Azure ATP algılayıcı için kabul edilebilir olmakla birlikte, gerçek çekirdekleri ve değil hiper iş parçacıklı çekirdekleri sayısı.
+> - Bu etki alanı denetleyicisinde takılı çekirdeklerinin toplam sayısı.<br>Hiper iş parçacıklı çekirdekleri ile çalışmıyor önerilir.
 > - Bu etki alanı denetleyicisinde takılı belleğin toplam miktarı.
 > -   Etki alanı denetleyicisi Azure ATP algılayıcı tarafından gereken kaynakları yoksa, etki alanı denetleyicisi performansını değil parametreden ancak Azure ATP algılayıcı beklendiği gibi çalışmayabilir.
 > -   Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
