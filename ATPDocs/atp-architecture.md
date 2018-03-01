@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 09f82fa21bbaf61573b39fbe7a051db5c5e3b92a
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: ffa58d4e6ca24773f7168dd94ad0596878eaf151
+ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/27/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -71,6 +71,9 @@ Azure ATP çalışma Yönetim Portalı sağlar:
 -   Diğer Microsoft güvenlik hizmetleriyle tümleştirme
 
 Ana çalışma alanı olarak ayarla **birincil**. Yalnızca bir çalışma alanı birincil olarak ayarlanabilir. Bir çalışma alanı birincil olarak etkileri tümleştirmeler - ayarını, yalnızca Azure ATP Windows Defender ATP için birincil çalışma alanınızda tümleştirebilirsiniz. Hangi çalışma alanının birincil daha sonra geçerli birincil çalışma alanı için zaten ayarlanmış tümleştirmeler kaldırmak zorunda şekilde yapmak amacıyla ancak olduğunu değiştirebilirsiniz.
+
+> [!NOTE]
+> Azure ATP şu anda iki çalışma alanları oluşturmayı destekler. Üretim ortamınıza ve hazırlık ortamı olarak ek bir çalışma alanı için birincil çalışma oluşturmanız önerilir.
 
 ### <a name="azure-atp-workspace-portal"></a>Azure ATP çalışma portalı
 

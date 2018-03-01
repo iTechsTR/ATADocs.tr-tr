@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/25/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 819eeb73c57e7b1de5e7e5e837aa2d6db2e0848d
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 3cb4eb8a914f1fd4be0c1ddb26f9be3964c529f7
+ms.sourcegitcommit: 26d833f7d9502db73876ced9879789db395224f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/27/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -51,7 +51,7 @@ Her Azure ATP çalışma alanı bir Active Directory orman sınırı ve orman i�
 Bu bölümde toplamanız gereken bilgiler, hesapları ve Azure ATP yüklemeye başlamadan önce olmalıdır ağ varlıkları listelenir.
 
 
--   Bir **şirket içi** Azure AD kullanıcı hesabı ve parolası ile izlenen etki alanlarındaki tüm nesnelere okuma erişimi.
+-   Bir **şirket içi** AD kullanıcı hesabı ve parolası ile izlenen etki alanlarındaki tüm nesnelere okuma erişimi.
 
     > [!NOTE]
     > Etki alanınızdaki çeşitli Kurumsal Birimlerde (OU) özel ACL’ler ayarladıysanız, seçili kullanıcının bu OU’lar üzerinde okuma izinleri olmasına dikkat edin.
