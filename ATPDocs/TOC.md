@@ -13,12 +13,13 @@
 ## [5 Azure ATP algılayıcısını yapılandırma](install-atp-step5.md)
 ## [6 VPN tümleştirmesi](install-atp-step6-vpn.md)
 ## [7 Dışlamalar ve honeytoken hesaplar](install-atp-step7.md)
-### [8 YEY-R gerektiren izinleri yapılandırma](install-atp-step8-samr.md)
+## [8 YEY-R gerektiren izinleri yapılandırma](install-atp-step8-samr.md)
 ## [Sessiz yükleme](ATP-silent-installation.md)
 ## Azure ATP algılayıcısı ek adımlar
 ### [Bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md)
+### [Bağlantı noktası yansıtmayı doğrulama](validate-port-mirroring.md)
 ### [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
-### [Windows Olay İletme’yi yapılandırma](configure-event-forwarding.md)
+### [Windows Olay İletme’yi yapılandırma](configure-event-forwarding.md))
 ### [İletişimi etkinleştirmek için proxy ayarlarını yapılandırma](configure-proxy.md)
 # Bu çözümdeki tüm sanal makineleri güncelleştirmek için Windows Server Update Services ile birlikte
 ## [Azure ATP sistem durumu merkezi](atp-health-center.md)
@@ -39,3 +40,5 @@
 ## [Şüpheli etkinlik kılavuzu](suspicious-activity-guide.md)
 ## [Azure ATP ile yanal hareket yollarını araştırma](use-case-lateral-movement-path.md)
 ## [Varlıkları araştırma](entity-profiles.md)
+# Sorun giderme
+## [Bilinen sorunları giderme](troubleshooting-atp-known-issues.md)
