@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/3/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 47fa5ad5d6fb7800c7df4b878d16ec335e2b70e5
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: f077bbd9990affbb6c552c5ad8875fdfebbd70f2
+ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/08/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -29,7 +29,7 @@ Etki alanı bulut hizmetiyle iletişim kurmak denetleyicileriniz için açmanız
  
 1.  Onaylayın **geçerli kullanıcı** DC'den aşağıdaki URL'ye göz atarak IE kullanarak işlemci uç noktasını erişimi: https://triprd1wcuse1sensorapi.eastus.cloudapp.azure.com (ABD için) hata 503 almak:
 
- ![Hizmet kullanılamıyor](/media/service-unavailable.png)
+ ![Hizmet kullanılamıyor](./media/service-unavailable.png)
  
 2.  Bir hata 503 alamazsanız proxy yapılandırmasını gözden geçirin ve yeniden deneyin.
 
@@ -39,11 +39,11 @@ Etki alanı bulut hizmetiyle iletişim kurmak denetleyicileriniz için açmanız
 
 Hata alırsanız "hata: Sistem belirtilen kayıt defteri anahtarını veya değerini bulamadı." Bu proxy üzerinde ayarlamak anlamına gelir **LOCAL_SYSTEM** düzeyi
  
- ![Proxy yerel sistem hatası](/media/proxy-local-system-error.png)
+ ![Proxy yerel sistem hatası](./media/proxy-local-system-error.png)
 
 Sonuç ise "sonucu ile karşılaştırıldığında: farklı" Bu proxy için ayarlandığı anlamına gelir **LOCAL_SYSTEM** , ancak aynı **Örnein CURRENT_USER**:
  
-  ![Karşılaştırılan proxy sonuç](/media/proxy-result-compared.png)
+  ![Karşılaştırılan proxy sonuç](./media/proxy-result-compared.png)
 
 5.  Varsa **LOCAL_SYSTEM** doğru proxy ayarlarını yok (yapılandırılmış değil veya farklı **Örnein CURRENT_USER**), proxy gelen ayarını kopyalamak gerekebilir sonra **CURRENT_ Kullanıcı** için **LOCAL_SYSTEM**. Değiştirmeden önce bu kayıt defteri anahtarını yedeklemek emin olun:
 

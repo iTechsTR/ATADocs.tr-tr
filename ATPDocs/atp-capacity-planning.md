@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/27/2018
+ms.date: 3/3/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod: 
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4219199ad9f426f61ac52826ab85bf3e60e67396
-ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
+ms.openlocfilehash: 0191ca50a5ea6328cc50ada6d9231ccb73da5c21
+ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -40,7 +40,7 @@ Azure ATP dağıtımınızı kullanmaktır kapasitesini belirlemek için öneril
 El ile herhangi bir nedenden dolayı Azure ATP boyutlandırma aracını kullanamıyorsanız, Paket/sn sayaç bilgilerinizi düşük toplama aralığıyla (yaklaşık 5 saniye) ile 24 saat için tüm etki alanı denetleyicilerinden toplayın. Sonrasında, her Etki Alanı Denetleyicisi için günlük ortalamanızı ve en meşgul zaman aralığı (15 dakikalık) ortalamanızı hesaplamanız gerekir.
 Aşağıdaki bölüm, bir Etki Alanı Denetleyicisi’nden paket/sn sayacı bilgilerini nasıl alabileceğinizi gösteren yönergeleri içerir.
 
-## <a name="choosing-the-right-sensor-type-for-your-deployment"></a>Dağıtımınız için doğru algılayıcı türü seçme
+## Dağıtımınız için doğru algılayıcı türü seçme<a name="choosing-the right-sensor-type-for-your-deployment"></a>
 Bir Azure ATP dağıtımdaki herhangi bir bileşimini Azure ATP tek başına algılayıcı türleri desteklenir:
 
 - Yalnızca Azure ATP tek başına algılayıcılar
