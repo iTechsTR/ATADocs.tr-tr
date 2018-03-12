@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/11/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: aa5f1af43a77d37ba8635fba10628d1720174393
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 5eabf4fc3965e8745b7e2c0fbae4973deb358814
+ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/12/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -29,7 +29,10 @@ ms.lasthandoff: 02/21/2018
 
 Bu yükleme yordamı oluşturmak ve bir çalışma alanı Azure ATP çalışma Yönetim Portalı'nda yönetmek için yönergeler sağlar. Azure ATP mimarisi hakkında daha fazla bilgi için bkz: [Azure ATP mimarisi](atp-architecture.md).
 
-Azure ATP yönetme ve birden çok çalışma izleme olanağına sahip. Bir tanıtım çalışma ve, PT Azure ATP onu sunulmadan önce tüm kuruluşa işlemini test çalışma alanı oluşturmak isterseniz bu özellikle yararlıdır. Bu çok ormanlı dağıtımlar desteklemek için gereklidir. Tek bir çalışma alanı yalnızca tek bir ormandaki birden çok etki alanı izleyebilirsiniz.
+Azure ATP yönetme ve birden çok çalışma izleme olanağına sahip. Bir tanıtım çalışma ve, PT Azure ATP onu sunulmadan önce tüm kuruluşa işlemini test çalışma alanı oluşturmak isterseniz bu özellikle yararlıdır. Bu çok ormanlı dağıtımlar desteklemek için gereklidir. Tek bir çalışma alanı yalnızca tek bir ormandaki birden çok etki alanı izleyebilirsiniz. 
+
+> [!NOTE]
+> En fazla iki etkin çalışma alanları olabilir. Bir çalışma alanı sildikten sonra yeniden etkinleştirmek için desteğine başvurabilirsiniz. Bir üç silinen çalışma alanlarının bir mazimum sahip. Kaydedilmiş, silinen çalışma alanları sayısını artırmak için Azure ATP desteğe başvurun.
 
 ## <a name="step-1-enter-the-workspace-management-portal"></a>1. Adım Çalışma alanı Yönetim Portalı'nı girin
 
