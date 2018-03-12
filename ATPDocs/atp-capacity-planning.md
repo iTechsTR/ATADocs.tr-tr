@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/3/2018
+ms.date: 3/11/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod: 
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0191ca50a5ea6328cc50ada6d9231ccb73da5c21
-ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
+ms.openlocfilehash: 577b7a5105e8de773f57b1e00bc1c9cb51096799
+ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/12/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -68,8 +68,9 @@ Bağlantı noktası yansıtmayla veri merkezi veya şube site başına birden ç
 
 ## Azure ATP algılayıcı ve tek başına algılayıcı boyutlandırma <a name="sizing"></a>
 
-Bir Azure ATP algılayıcı, etki alanı denetleyicisinin oluşturduğu ağ trafiği miktarına bağlı bir etki alanı denetleyicisinin izlenmesini destekleyebilir. Aşağıdaki tabloda bir tahmindir, algılayıcı ayrıştırır son tutarını elinizde trafiği miktarına bağlıdır. 
-
+Bir Azure ATP algılayıcı, etki alanı denetleyicisinin oluşturduğu ağ trafiği miktarına bağlı bir etki alanı denetleyicisinin izlenmesini destekleyebilir. Aşağıdaki tabloda bir tahmindir, algılayıcı ayrıştırır son tutarını trafiği ve trafiğinin dağıtımını miktarına bağlıdır. 
+> [!NOTE]
+> Aşağıdaki CPU ve bellek kapasitesini algılayıcının kendi tüketim – etki alanı denetleyicisi kapasitesi başvuruyor.
 
 |Saniye başına paket *|CPU (çekirdekler)|Bellek (GB)|
 |----|----|-----|
@@ -82,12 +83,12 @@ Bir Azure ATP algılayıcı, etki alanı denetleyicisinin oluşturduğu ağ traf
 |100 75k - k|3.50 |9.50|
 
 > [!NOTE]
-> - Bu etki alanı denetleyicisinde takılı çekirdeklerinin toplam sayısı.<br>Hiper iş parçacıklı çekirdekleri ile çalışmıyor önerilir.
-> - Bu etki alanı denetleyicisinde takılı belleğin toplam miktarı.
-> -   Etki alanı denetleyicisi Azure ATP algılayıcı tarafından gereken kaynakları yoksa, etki alanı denetleyicisi performansını değil parametreden ancak Azure ATP algılayıcı beklendiği gibi çalışmayabilir.
+> - Algılayıcı hizmetini kullanacak olan çekirdek toplam sayısı.<br>Hiper iş parçacıklı çekirdekleri ile çalışmıyor önerilir.
+> - Algılayıcı hizmetini kullanacak olan bellek toplam miktarı.
+> -   Etki alanı denetleyicisi Azure ATP algılayıcı tarafından gereken kaynakları yoksa, etki alanı denetleyicisi performansı etkilenmez, ancak Azure ATP algılayıcı beklendiği gibi çalışmayabilir.
 > -   Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
 > -   En iyi performans için ayarlanmış **güç seçeneği** Azure ATP algılayıcı **yüksek performanslı**.
-> -   En az 2 Çekirdek ve 6 GB alanı gereklidir ve Azure ATP ikili dosyaları için gerekli alanı dahil olmak üzere 10 GB önerilir.
+> -   En az 2 Çekirdek ve 6 GB alanı gereklidir ve Azure ATP ikili dosyaları ve günlükleri için gereken alanı dahil olmak üzere 10 GB önerilir.
 
 
 ## <a name="domain-controller-traffic-estimation"></a>Etki alanı denetleyicisi tahmini trafiği

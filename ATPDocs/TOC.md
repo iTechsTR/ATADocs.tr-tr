@@ -1,6 +1,7 @@
-# Anlama ve Keşfetme - Önizleme!
+# Anlama ve Keşfetme
 ## [Azure Gelişmiş Tehdit Koruması nedir?](what-is-atp.md)
 ## [Sık sorulan sorular](atp-technical-faq.md)
+## [ATA’daki Yenilikler](atp-whats-new.md)
 # Planlama ve Tasarlama
 ## [Azure ATP önkoşulları](atp-prerequisites.md)
 ## [Azure ATP mimarisi](atp-architecture.md)
@@ -19,7 +20,7 @@
 ### [Bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md)
 ### [Bağlantı noktası yansıtmayı doğrulama](validate-port-mirroring.md)
 ### [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
-### [Windows Olay İletme’yi yapılandırma](configure-event-forwarding.md))
+### [Windows Olay İletme’yi yapılandırma](configure-event-forwarding.md)
 ### [İletişimi etkinleştirmek için proxy ayarlarını yapılandırma](configure-proxy.md)
 # Bu çözümdeki tüm sanal makineleri güncelleştirmek için Windows Server Update Services ile birlikte
 ## [Azure ATP sistem durumu merkezi](atp-health-center.md)

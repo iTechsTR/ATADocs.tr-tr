@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 3/11/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 862420fb6914dbf9ee57c36bc21103cc7dddf7af
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: f27020f1b4a5fa7aa8fefbda28eac0c2ad6c64d0
+ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/12/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -31,7 +31,10 @@ Azure ATP Microsoft .NET Framework 4.7 yüklenmesini gerektirir.
 
 Azure ATP yüklediğinizde, .net Framework 4.7 otomatik olarak Azure ATP dağıtımının bir parçası olarak yüklenir.
 
-> [!Note] 
+> [!IMPORTANT] 
+> .Net en son sürümüne sahip olduğunuzdan emin olun Framework'ün yüklü. .Net önceki bir sürümünü yüklediyseniz, Azure ATP sessiz yükleme bir döngüde takılıyor ve yükleme başarısız. 
+
+> [!NOTE] 
 > .Net framework 4.7 yüklenmesi sunucunun yeniden başlatılması gerekebilir. Azure ATP algılayıcı etki alanı denetleyicilerinde yüklerken, bu etki alanı denetleyicileri için bir bakım penceresi zamanlamayı dikkate alın.
 Azure ATP sessiz yükleme yöntemini kullanırken, yükleyici yükleme işleminin sonunda sunucuyu (gerekirse) otomatik olarak yeniden yapılandırılır. Bir Windows Installer hatası nedeniyle *norestart* bayrağı güvenilir sunucu yok yeniden, bu nedenle yalnızca sessiz yüklemeyi bir bakım penceresi sırasında çalıştırıldığından emin olun emin olmak için kullanılamaz.
 
