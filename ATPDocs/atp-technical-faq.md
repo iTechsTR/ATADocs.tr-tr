@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/27/2018
+ms.date: 3/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6a6a34b9a2aae0e507fe18872a31368cf3f3e9d0
-ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
+ms.openlocfilehash: d7f7f4841c40fb78dc06bae1c06e3c57d2e7f7ee
+ms.sourcegitcommit: c77e378d18e654bea4b4af4f24cc941a6659ce99
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -27,7 +27,7 @@ Bu makalede Azure ATP hakkında sık sorulan soruların listesi ve ve öngörül
 
 ## <a name="where-can-i-get-a-license-for-azure-advanced-threat-protection-atp"></a>Azure Gelişmiş tehdit Koruması (ATP için) bir lisans nereden alabilirim?
 
-İçin bir lisans Enterprise Mobility + Security 5 (EMS E5) Office 365 Portalı aracılığıyla doğrudan veya Bulut çözüm iş ortağı (CSP) lisans modeli aracılığıyla edinilen ve Azure ATP aracılığıyla Microsoft Toplu Lisanslama Merkezi (VLSC) erişimi yoksa, başvurun Azure Gelişmiş tehdit Koruması (ATP) etkinleştirmek için işlem almak için Microsoft müşteri desteği.
+Size bir lisans Enterprise Mobility + Security'nin (EMS E5) 5 için doğrudan aracılığıyla elde edebilirsiniz [Office 365 portalı](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) veya Bulut çözüm iş ortağı (CSP) lisans modeli aracılığıyla.                  
 
 ## <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>Azure ATP algılayıcı veya tek başına algılayıcı başlamazsa ne yapmalıyım?
 (Burada Azure ATP "Logs" klasörü altında yüklenir) geçerli hata günlüğünde en son hataya bakın.
