@@ -43,3 +43,4 @@
 ## [Varlıkları araştırma](entity-profiles.md)
 # Sorun giderme
 ## [Bilinen sorunları giderme](troubleshooting-atp-known-issues.md)
+## [Destek ve bilgiler](atp-support.md)
