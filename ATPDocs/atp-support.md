@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/13/2018
+ms.date: 3/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 966d9e4e8e086b6f131d6fa33060d11073f82b4f
-ms.sourcegitcommit: c77e378d18e654bea4b4af4f24cc941a6659ce99
+ms.openlocfilehash: 58e3b0d04b196f0c49b6e146952c1819c8413ee3
+ms.sourcegitcommit: adfa7a3a3918518b6b14b94d3c0a9f899142196a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/19/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -58,6 +58,10 @@ Diğer müşteriler için destek kanallarını aşağıdaki şekilde kullanın:
 Ek destek seçeneklerini Microsoft temsilcinizden öğrenebilirsiniz.
 
 ### <a name="self-help"></a>Kendi kendine yardım
+
+#### <a name="system-status-page"></a>Sistem durumu sayfası 
+
+Azure ATP için sistem durumunu görüntülemek için ziyaret [ **sistem durumu** ](https://health.atp.azure.com/) sayfası. Algılama ve algılayıcı buluta trafik gönderebilmesi ise sorun varsa bu sayfa, çalışma alanı Yönetim Portalı'nı ayarlama olup olmadığını ve etkin, bilgileri sağlar. Erişebileceğiniz **sistem durumu** Azure ATP menü çubuğundan.
 
 #### <a name="on-demand-videos"></a>İsteğe bağlı video
 
