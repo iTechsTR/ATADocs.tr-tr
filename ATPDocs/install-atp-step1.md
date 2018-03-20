@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/11/2018
+ms.date: 3/15/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5eabf4fc3965e8745b7e2c0fbae4973deb358814
-ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
+ms.openlocfilehash: 833e0bdf61ce25a8c56d820ad04981cd44321ac2
+ms.sourcegitcommit: f9d07a6b1f2193f0d2906092e252eb1d7398b493
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -44,7 +44,7 @@ Ağınız algılayıcı gereksinimleri karşıladığını doğruladıktan sonra
 
 1.  Girin [Azure ATP çalışma portal](https://portal.atp.azure.com).
 
-2.  En azından okuma erişimi izlenen etki alanlarındaki tüm nesnelere, şirket içi Azure Active Directory kullanıcı hesabıyla oturum açın.
+2.  Azure Active Directory kullanıcı hesabınızla oturum açın.
 
 ## <a name="step-2-create-a-workspace"></a>2. Adım Çalışma alanı oluşturma
 
