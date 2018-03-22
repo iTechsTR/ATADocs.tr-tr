@@ -2,6 +2,8 @@
 ## [Microsoft Advanced Threat Analytics nedir?](what-is-ata.md)
 ## [ATA hangi tehditleri algılar?](ata-threats.md)
 ## ATA’daki Yenilikler
+### [ATA sürüm 1.9’deki yenilikler](whats-new-version-1.9.md)
+#### [ATA’yı 1.9 sürümüne güncelleştirme - geçiş kılavuzu](ata-update-1.9-migration-guide.md)
 ### [ ATA sürüm 1.8’deki yenilikler](whats-new-version-1.8.md)
 #### [ATA 1.8’e güncelleştirme - geçiş kılavuzu](ata-update-1.8-migration-guide.md)
 ### [ATA sürüm 1.7’deki yenilikler](whats-new-version-1.7.md)
@@ -26,6 +28,7 @@
 ## [6 Olay koleksiyonu](install-ata-step6.md)
 ## [7 VPN Tümleştirmesi](vpn-integration-install-step.md)
 ## [8 Adım Dışlamalar ve Honeytoken](install-ata-step7.md)
+## [9 SAM-R’yi Yapılandır](install-ata-step9-samr.md)
 ## [Sessiz yükleme](ata-silent-installation.md)
 ## ATA Gateway ek adımlar
 ### [1. Bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md)
@@ -42,9 +45,12 @@
 ## [ATA yapılandırmasını Dışarı/İçeri aktarma](ata-configuration-file.md)
 ## [ATA telemetrisini yönetme](manage-telemetry-settings.md)
 ## [ATA bildirimlerini ayarlama](setting-ata-alerts.md)
-## [Syslog ve E-posta sunucusu ayarlarını belirleme](setting-syslog-email-server-settings.md)
+## [Syslog ve e-posta sunucusu ayarlarını belirleme](setting-syslog-email-server-settings.md)
+## [Etiket hassas hesapları](tag-sensitive-accounts.md)
 ## [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
 ## [ATA Konsolu ile çalışma](working-with-ata-console.md)
+### [Varlık profilleri](entity-profiles.md)
+##[Yanal hareket yollarını önleme](use-case-lateral-movement-path.md)
 ## ATA başvuru bilgileri
 ### [ATA SIEM günlük başvurusu](cef-format-sa.md)
 ### [Olay Kimliği başvuru](event-id-reference.md)
