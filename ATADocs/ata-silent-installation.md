@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3210d9153cd6781ae13a784e1f2b5927e0703009
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 44002cc41abc39f3c70b7a2f5ff131604fd703ba
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
+*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
 
 # <a name="ata-silent-installation"></a>ATA’yı Sessiz Yükleme
@@ -50,7 +50,7 @@ ATA Center’ı yüklemek için aşağıdaki komutu kullanın:
 **Yükleme seçenekleri**:
 
 > [!div class="mx-tableFixed"]
-|Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Açıklama|
+|Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Description|
 |-------------|----------|---------|---------|
 |Quiet|istemci bilgisayarlara|Evet|Kullanıcı arabirimi ve istem göstermeden yükleyiciyi çalıştırır.|
 |Yardım|/help|Hayır|Yardım ve hızlı başvuru sağlar. Tüm seçenek ve davranışların bir listesi dahil olmak üzere kurulum komutunun doğru kullanımını gösterir.|
@@ -92,7 +92,7 @@ ATA Center’ı güncelleştirmek için aşağıdaki komutu kullanın:
 **Yükleme seçenekleri**:
 
 > [!div class="mx-tableFixed"]
-|Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Açıklama|
+|Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Description|
 |-------------|----------|---------|---------|
 |Quiet|istemci bilgisayarlara|Evet|Kullanıcı arabirimi ve istem göstermeden yükleyiciyi çalıştırır.|
 |Yardım|/help|Hayır|Yardım ve hızlı başvuru sağlar. Tüm seçenek ve davranışların bir listesi dahil olmak üzere kurulum komutunun doğru kullanımını gösterir.|
@@ -115,7 +115,7 @@ ATA Center’ı sessizce kaldırma işlemini gerçekleştirmek için şu komutu 
 **Yükleme seçenekleri**:
 
 > [!div class="mx-tableFixed"]
-|Ad|Söz dizimi|Sessiz kaldırma için zorunlu mu?|Açıklama|
+|Ad|Sözdizimi|Sessiz kaldırma için zorunlu mu?|Description|
 |-------------|----------|---------|---------|
 |Quiet|istemci bilgisayarlara|Evet|Kullanıcı arabirimi ve istem göstermeden kaldırıcıyı çalıştırır.|
 |Kaldır|/uninstall|Evet|Sunucudan ATA Center’ı sessizce kaldırma işlemini çalıştırır.|
@@ -124,7 +124,7 @@ ATA Center’ı sessizce kaldırma işlemini gerçekleştirmek için şu komutu 
 **Yükleme parametreleri**:
 
 > [!div class="mx-tableFixed"]
-|Ad|Söz dizimi|Sessiz kaldırma için zorunlu mu?|Açıklama|
+|Ad|Sözdizimi|Sessiz kaldırma için zorunlu mu?|Description|
 |-------------|----------|---------|---------|
 |DeleteExistingDatabaseData|DeleteExistingDatabaseData|Hayır|Var olan veritabanındaki tüm dosyaları siler.|
 
@@ -154,7 +154,7 @@ ATA Gateway’i sessizce yüklemek için aşağıdaki komutu kullanın:
 **Yükleme seçenekleri**:
 
 > [!div class="mx-tableFixed"]
-|Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Açıklama|
+|Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Description|
 |-------------|----------|---------|---------|
 |Quiet|istemci bilgisayarlara|Evet|Kullanıcı arabirimi ve istem göstermeden yükleyiciyi çalıştırır.|
 |Yardım|/help|Hayır|Yardım ve hızlı başvuru sağlar. Tüm seçenek ve davranışların bir listesi dahil olmak üzere kurulum komutunun doğru kullanımını gösterir.|
@@ -163,7 +163,7 @@ ATA Gateway’i sessizce yüklemek için aşağıdaki komutu kullanın:
 **Yükleme parametreleri**:
 
 > [!div class="mx-tableFixed"]
-|Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Açıklama|
+|Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Description|
 |-------------|----------|---------|---------|
 |ConsoleAccountName|ConsoleAccountName="<AccountName>"|Evet|ATA Gateway’i ATA Center’a kaydetmek için kullanılan kullanıcı hesabının (user@domain.com) adını ayarlar.|
 |ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Evet|ATA Gateway’i ATA Center’a kaydetmek için kullanılan kullanıcı hesabının (user@domain.com) parolasını ayarlar.|
@@ -186,7 +186,7 @@ ATA Gateway’i sessizce güncelleştirmek için aşağıdaki komutu kullanın:
 **Yükleme seçenekleri**:
 
 > [!div class="mx-tableFixed"]
-|Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Açıklama|
+|Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Description|
 |-------------|----------|---------|---------|
 |Quiet|istemci bilgisayarlara|Evet|Kullanıcı arabirimi ve istem göstermeden yükleyiciyi çalıştırır.|
 |Yardım|/help|Hayır|Yardım ve hızlı başvuru sağlar. Tüm seçenek ve davranışların bir listesi dahil olmak üzere kurulum komutunun doğru kullanımını gösterir.|
@@ -206,7 +206,7 @@ ATA Gateway’i sessizce kaldırma işlemini gerçekleştirmek için şu komutu 
 **Yükleme seçenekleri**:
 
 > [!div class="mx-tableFixed"]
-|Ad|Söz dizimi|Sessiz kaldırma için zorunlu mu?|Açıklama|
+|Ad|Sözdizimi|Sessiz kaldırma için zorunlu mu?|Description|
 |-------------|----------|---------|---------|
 |Quiet|istemci bilgisayarlara|Evet|Kullanıcı arabirimi ve istem göstermeden kaldırıcıyı çalıştırır.|
 |Kaldır|/uninstall|Evet|Sunucudan ATA Gateway’i sessizce kaldırma işlemini çalıştırır.|
@@ -226,7 +226,7 @@ ATA Gateway’i sessizce kaldırma işlemini gerçekleştirmek için şu komutu 
 
 
 
-## <a name="see-also"></a>Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca bkz:
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

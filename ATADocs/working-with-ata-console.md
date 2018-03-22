@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 26c093c4163593611b175f4f0002f443e593f952
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 2ecffce7d692a9f1ecea8d8c5220ce3b2dbf848e
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
+*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
 
 
@@ -77,6 +77,10 @@ Kuşkulu bir etkinlik algılandığında, bildirim çubuğu sağ tarafta otomati
 
 ![ATA bildirim çubuğu resmi](media/notification-bar-1.7.png)
 
+### <a name="whats-new"></a>Yenilikler
+
+ATA'ın yeni bir sürüm yayımlandıktan sonra **yenilikler** penceresi görünür üst ne en son sürümde eklenen size bildirmek için sağ. Ayrıca, sürüm indirme bağlantı sağlar.
+
 ### <a name="filtering-panel"></a>Filtreleme paneli
 
 Kuşkulu etkinlikleri Durum ve Önem Derecesi’ne göre filtreleyerek, saldırı zaman çizelgesinde veya varlık profili kuşkulu etkinlikler sekmesinde hangi etkinliklerin görüntüleneceğini belirtebilirsiniz.
@@ -94,23 +98,6 @@ Sistem Durumu Merkezi, ATA dağıtımınızda düzgün çalışmayan bir şey ol
 ![ATA sistem durumu merkezinin resmi](media/ATA-Health-Issue.jpg)
 
 Sisteminizin bağlantı hatası veya bağlantısı kesilmiş ATA Gateway gibi bir sorunla karşılaştığında her zaman sistem durumu Merkezi simgesi, kırmızı bir nokta göstererek bilmenizi sağlar. ![ATA sistem durumu merkezi kırmızı noktasının resmi](media/ATA-Health-Center-Alert-red-dot.png)
-
-### <a name="user-and-computer-profiles"></a>Kullanıcı ve bilgisayar profilleri
-
-ATA, ağdaki her kullanıcı ve bilgisayar için bir profil oluşturur. ATA, kullanıcı profilinde grup üyeliği, son oturum açmalar ve son erişilen kaynaklar gibi genel bilgileri görüntüler. Ayrıca, kullanıcının VPN bağlandığı konumların bir listesini sağlar. ATA hassas göz önünde bulundurur grup üyeliklerini listesi için aşağıdaki listedeki bakın.
-
-![Kullanıcı profili](media/user-profile.png)
-
-ATA, bilgisayar profilinde son oturum açmalar ve son erişilen kaynaklar gibi genel bilgileri görüntüler.
-
-![Bilgisayar profili](media/computer-profile.png)
-
-ATA, varlıklar (bilgisayarlar, cihazlar, kullanıcılar) hakkındaki genel bilgileri şu sayfalarda sağlar: Özet, Etkinlikler ve Kuşkulu Etkinlikler.
-
-Ata'yı tümüyle çözümleyemediği yapılmamış bir profil, yanında yarısı dolu daire simgesiyle tanımlanır.
-
-
-![ATA çözümlenmemiş profilinin resmi](media/ATA-Unresolved-Profile.jpg)
 
 ### <a name="sensitive-groups"></a>Gizli gruplar
 
@@ -154,5 +141,5 @@ Farenizi konsol başka bir yerindeki bir varlık üzerine, söz konusu olduğund
 
 
 
-## <a name="see-also"></a>Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca bkz:
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

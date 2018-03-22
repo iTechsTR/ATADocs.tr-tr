@@ -4,7 +4,7 @@ description: "Microsoft Advanced Threat Analytics (ATA) sürümleri için sağla
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -12,13 +12,13 @@ ms.technology:
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f77f8ef71765dc71d690876d4043e1b3702b9971
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 88ccd0e1667805d96ddd69145c4c85475ed6a2fc
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
+*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Microsoft Advanced Threat Analytics (ATA) sürümleri için destek
 
@@ -38,7 +38,7 @@ Microsoft, yılda birkaç kez ATA güncelleştirmeleri yayınlamayı planlamakta
 |SÜRÜM|DERLEME NUMARASI|KULLANIMA SUNULDUĞU TARİH| DESTEK BİTİŞ TARİHİ|
 |----|----|----|----|
 |1.4|1.4.2457|31-AĞU-2015|30-AĞU-2016|
-|1,5|1.5.2946|17-ARA-2015|16-ARA-2016|
+|1.5|1.5.2946|17-ARA-2015|16-ARA-2016|
 |1.6|1.6.4103|05-MAY-2016|04-MAY-2017|
 |1.6.1|1.6.4317|15-HAZ-2016|14-HAZ-2017|
 |1.7|1.7.5402|31-AĞU-2016|30-AĞU-2017|
@@ -49,5 +49,5 @@ Microsoft, yılda birkaç kez ATA güncelleştirmeleri yayınlamayı planlamakta
 
 
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz:
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

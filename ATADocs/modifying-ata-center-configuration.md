@@ -5,21 +5,20 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
-ms.topic: article
+ms.date: 3/21/2018
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4fe4569cd6477775e8a888d2acd05511f16fb5f6
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 294b9204f9ca6a40a835e5360a7011947e3255b4
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
+*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
 
 
@@ -53,7 +52,9 @@ URL aşağıdaki senaryolarda kullanılır:
     
 3. ATA Gateway eşitleme bekleyin. Şimdi içinden ATA Konsolu'na erişmek iki olası URL'leri sahiptirler. ATA Gateway özgün URL'yi kullanarak bağlanabildiği sürece, yeni bir denemez.
 
-4. Tüm ATA güncelleştirilmiş gateway'ler eşitlendikten sonra yeni URL etkinleştirin. Yeni URL etkinleştirdiğinizde, ATA Gateway bileşenlerinin ATA Center erişmek için artık yeni URL kullanır. ATA Center hizmetine bağlandıktan sonra ATA Gateway en yeni yapılandırmayı alır ve ATA Konsolu için yalnızca yeni URL gerekir. 
+4. Tüm ATA Center yapılandırma sayfasında, güncelleştirilmiş yapılandırmayla eşitlendiğini tıklattıktan sonra **etkinleştirme** yeni URL etkinleştirmeyi düğmesi. Yeni URL etkinleştirdiğinizde, ATA Gateway bileşenlerinin ATA Center erişmek için artık yeni URL kullanır. ATA Center hizmetine bağlandıktan sonra ATA Gateway en yeni yapılandırmayı alır ve ATA Konsolu için yalnızca yeni URL gerekir. 
+5. 
+ ![Sertifika etkinleştir](media/center-activation.png)
 
 > [!NOTE]
 > -   Yeni URL etkinleştirilir ve güncelleştirilmiş yapılandırmayı hiç var ancak bir ATA Gateway çevrimdışıysa, ATA Gateway'de yapılandırma JSON dosyasını el ile güncelleştirin.
@@ -87,6 +88,6 @@ Bu işlemi yaparak sertifikayı değiştirin:
 
 
  
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz:
 - [ATA Konsolu ile çalışma](working-with-ata-console.md)
 - [ATA forumuna bakın!](https://aka.ms/ata-forum)

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f97033ee685c10e9ee647e52c19cbd4ee1640b6f
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: b7f921bb2eb655a929eb19c849788c1bf9f64527
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
+*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
 
 # <a name="ata-reports"></a>ATA Raporları
@@ -28,16 +28,23 @@ Konsoldaki ATA raporları bölümü, size sistem durumu bilgileri (sistem durumu
 
 Raporlar sayfasına erişmek için menü çubuğundaki rapor simgesine tıklayın: ![rapor simgesi](./media/ata-report-icon.png).
 Kullanılabilir raporlar şunlardır: 
-- Özet raporu: Özeti raporu, bir sistem durumu panosu sunar. Üç sekme görüntüleyebilirsiniz: Ağınızda algılananlar için bir **Özet** sekmesi, ilgilenmeniz gereken şüpheli etkinlikleri listeleyen **Şüpheli etkinlikleri aç** sekmesi ve ilgilenmeniz gereken ATA sistem durumu sorunlarını listeleyen **Sistem durumu sorunlarını aç** sekmesi. Şüpheli etkinlikler ve sistem durumu sorunları türlerine göre listelenmiştir. 
-- Gizli grup değişiklikleri: Gizli gruplara (yöneticiler gibi) yapılan tüm değişiklikler bu raporda listelenir.
+
+- **Özet raporu**: Özeti raporu sistem durumu Panosu sunar. Üç sekme görüntüleyebilirsiniz: Ağınızda algılananlar için bir **Özet** sekmesi, ilgilenmeniz gereken şüpheli etkinlikleri listeleyen **Şüpheli etkinlikleri aç** sekmesi ve ilgilenmeniz gereken ATA sistem durumu sorunlarını listeleyen **Sistem durumu sorunlarını aç** sekmesi. Şüpheli etkinlikler ve sistem durumu sorunları türlerine göre listelenmiştir. 
+
+- **Hassas gruplara değiştirilmesini**: Bu rapor, bir değişiklik (örneğin, Yöneticiler) hassas gruplara yapılan her zaman listeler.
+
+- **Parolalar düz metinde gösterilen**: bazı hizmetler LDAP güvenli olmayan hesap kimlik bilgilerini düz metin olarak göndermek için protokolünü kullanır. Bu durum, hassas hesapları için bile oluşabilir. Ağ trafiğini izleme saldırganlar catch ve bu kimlik bilgileri kötü amaçlı olarak yeniden kullanabilirsiniz. Bu rapor, düz metin olarak olarak algılanan ATA gönderilen tüm kaynak bilgisayarı ve hesap parolalarını listeler. 
+
+- **Yanal hareket yolları hassas hesaplarına**: Bu rapor, yanal hareket yolları sunulan hassas hesapları listeler. Daha fazla bilgi için bkz: [yanal hareket yolları](use-case-lateral-movement-path.md)
 
 Bir rapor oluşturmak için iki yolu vardır: isteğe bağlı olarak veya e-postanıza düzenli aralıklarla gönderilmek üzere rapor zamanlayarak.
 
 İsteğe bağlı bir rapor oluşturmak için:
 
 1. ATA konsolu menü çubuğundaki rapor simgesine tıklayın: ![rapor simgesi](./media/ata-report-icon.png).
-2. **Özet** veya **Gizli grup değişiklikleri** altında **Şu tarihten** ve **Şu tarihe** kısımlarını ayarlayın ve **İndir**’e tıklayın. 
-![raporlar](./media/reports.png)
+
+2. Altında seçilen rapor türünü ayarlayın **gelen** ve **için** tıklatın ve tarihleri **karşıdan**. 
+ ![raporlar](./media/reports.png)
 
 Zamanlanmış bir rapor ayarlamak için:
  
@@ -45,16 +52,16 @@ Zamanlanmış bir rapor ayarlamak için:
 
    ![Rapor zamanlama](./media/ata-sched-reports.png)
 
-2. **Özet** veya **Gizli grup değişiklikleri**’nin yanında bulunan **Zamanla**’ya tıklayarak raporların iletileceği sıklığı ve e-posta adresini ayarlayın, e-posta adreslerinin yanındaki artı işaretine tıklayarak adres ekleyin ve daha sonra **Kaydet**’e basın.
+2. Tıklatın **zamanlama** rapor teslimini sıklığı ve e-posta adresi ayarlayın ve bunları Ekle öğesini tıklatıp e-posta adresleri yanındaki artı işaretini tıklatın, seçilen rapor türü yanındaki **kaydetmek**.
 
    ![Rapor sıklığı ve e-postayı zamanlama](./media/sched-report1.png)
 
 
 > [!NOTE]
-> Zamanlanmış raporlar, e-posta yoluyla ve yalnızca **Yapılandırma** bölümündeki Bildirimler ve Raporlar’dan **Posta sunucusu**’nu seçerek bir e-posta sunucusu yapılandırdıysanız gönderilebilir.
+> Zamanlanan raporlar e-postayla teslim edilir ve yalnızca bir e-posta sunucusu altında zaten yapılandırdıysanız gönderilebilir **yapılandırma** ve ardından, **bildirimler ve raporlar**seçin **posta Sunucu**.
 
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz:
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

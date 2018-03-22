@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/17/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0d951edf1037422c1ee52c8b1e35308665aad256
-ms.sourcegitcommit: 91158e5e63ce2021a1f5f85d47de03d963b7cb70
+ms.openlocfilehash: d76c34b115bd38bdb1eb82fbff1c0857b0ad8dfa
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
+*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
 
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Gelişmiş tehdit analizi şüpheli etkinlik Kılavuzu
@@ -63,6 +63,8 @@ Ayarlanan [Active Directory için Privileged Access Management](https://docs.mic
 
 ## <a name="broken-trust-between-computers-and-domain"></a>Bilgisayarlar ve etki alanı arasında kaldırılmış güven
 
+> ! [NOT] Bu şüpheli etkinlik kullanımdan kaldırılmıştır ve 1.9 önce ATA sürümlerinde yalnızca görünür.
+
 **Açıklama**
 
 Kaldırılmış güven, Active Directory güvenlik gereksinimlerini yürürlükte bilgisayarlar için söz konusu olmayabileceğini anlamına gelir. Bu, genelde temel bir güvenlik ve uyumluluk hatası olarak değerlendirilir ve saldırganlar için kolay bir hedeftir. 5'ten fazla Kerberos kimlik doğrulama hataları 24 saat içindeki bir bilgisayar hesabını görülüyorsa bu algılama, bir uyarı tetiklenir.
@@ -76,6 +78,7 @@ Söz konusu bilgisayarın etki alanı kullanıcıların oturum açmasına izin v
 
 Gerekirse, makineyi etki alanına katın veya makinenin parola sıfırlama.
 
+
 ## <a name="brute-force-attack-using-ldap-simple-bind"></a>LDAP basit bağlama kullanarak yanılma saldırısı
 
 **Açıklama**
@@ -85,7 +88,7 @@ Gerekirse, makineyi etki alanına katın veya makinenin parola sıfırlama.
 
 Yanılma saldırısında, saldırganın en az bir hesap için doğru parolayı bulunana kadar farklı hesaplar için birçok farklı parolaları ile kimlik doğrulaması dener. Bir kez bulundu, bir saldırganın bu hesabı kullanarak oturum açabilir.
 
-Bu algılama, ATA kullanılan birçok farklı parolalar algıladığında bir uyarı tetiklenir. Bu da olabilir *yatay* parolaları çok sayıda kullanıcı; boyunca küçük bir dizi veya *dikey "* parolaları yalnızca birkaç kullanıcı; veya bu iki seçenek herhangi bir bileşimini büyük bir dizi.
+Bu algılama, ATA basit bağı kimlik doğrulamalarını yoğun bir dizi algıladığında bir uyarı tetiklenir. Bu da olabilir *yatay* parolaları çok sayıda kullanıcı; boyunca küçük bir dizi veya *dikey "* parolaları yalnızca birkaç kullanıcı; veya bu iki seçenek herhangi bir bileşimini büyük bir dizi.
 
 **Araştırma**
 
@@ -103,15 +106,15 @@ Bu algılama, ATA kullanılan birçok farklı parolalar algıladığında bir uy
 
 **Açıklama**
 
-Çeşitli saldırı yöntemleri zayıf Kerberos şifreleme cyphers kullanın. Bu algılama, ATA bilgisayarlar ve kullanıcılar tarafından kullanılan Kerberos şifreleme türlerini öğrenir ve, zayıf bir şifreleme olduğunda kullanılan uyarılar: (1) kaynak bilgisayar ve/veya kullanıcı; olağandışıdır ve saldırı teknikleri bilinen (2) eşleşir.
+Şifreleme indirgeme şifreleme düzeyini genellikle en yüksek düzeyde şifreleme kullanılarak şifrelenir farklı alanları protokolü, eski sürüme düşürmeyi Kerberos zayıflatmanın bir yöntemdir. Zayıf bir şifrelenmiş alan çevrimdışı yanılma denemeleri daha kolay bir hedefe olabilir. Çeşitli saldırı yöntemleri zayıf Kerberos şifreleme cyphers kullanın. Bu algılama, ATA bilgisayarlar ve kullanıcılar tarafından kullanılan Kerberos şifreleme türlerini öğrenir ve, zayıf bir şifreleme olduğunda kullanılan uyarılar: (1) kaynak bilgisayar ve/veya kullanıcı; olağandışıdır ve saldırı teknikleri bilinen (2) eşleşir.
 
 Üç algılama türleri şunlardır:
 
-1.  İskelet anahtar – etki alanı denetleyicilerinde çalışan ve kendi parolasını bilmeden herhangi bir hesabı etki alanına kimlik doğrulaması sağlayan kötü amaçlı yazılım olur. Bu kötü amaçlı yazılım genellikle kullanıcının parolaları etki alanı denetleyicisinde şifrele için daha zayıf şifreleme algoritmalarını kullanır. Bu algılama, daha önceden öğrenilen davranışı karşılaştırıldığında şifreleme yöntemini kaynak bilgisayardan KRB_ERR iletisinin alt sürüme.
+1.  İskelet anahtar – etki alanı denetleyicilerinde çalışan ve kendi parolasını bilmeden herhangi bir hesabı etki alanına kimlik doğrulaması sağlayan kötü amaçlı yazılım olur. Bu kötü amaçlı yazılım, etki alanı denetleyicisinde kullanıcının parolaları karma hale genellikle daha zayıf şifreleme algoritmalarını kullanır. Bu algılama, daha önceden öğrenilen davranışı karşılaştırıldığında şifreleme yöntemi için bir bilet isteyen hesabı için etki alanı denetleyicisinden KRB_ERR iletisinin alt sürüme.
 
 2.  Altın anahtar – içinde bir [altın anahtar](#golden-ticket) uyarı, kaynak bilgisayardan TGS_REQ (hizmet isteği) iletisinin TGT alanının şifreleme yöntemini daha önceden öğrenilen davranışı karşılaştırıldığında alt sürüme. Bu zaman anomali (olduğu gibi diğer altın anahtar algılama) dayanmıyor. Ayrıca, ATA tarafından algılanan önceki hizmet isteği ile ilişkili hiçbir Kerberos kimlik doğrulama isteği vardı.
 
-3.  Karma Karma – kaynak bilgisayardan AS_REQ ileti şifreleme türü bir alt sürüme daha önceden öğrenilen davranışı karşılaştırıldığında (diğer bir deyişle, bilgisayar AES kullanılarak).
+3.  Karma Karma – bir saldırganın zayıf çalınan karma Kerberos AS isteği ile güçlü bir anahtar oluşturmak için kullanabilirsiniz. Bu algılama, kaynak bilgisayardan AS_REQ ileti şifreleme türü daha önceden öğrenilen davranışı karşılaştırıldığında alt sürüme (bilgisayar, AES kullanıyordu).
 
 **Araştırma**
 
@@ -347,6 +350,8 @@ Bu algılama, hiçbir uyarı ATA dağıtıldıktan sonra ilk ay içinde tetiklen
 
  - Yanıt Hayır tüm olursa yukarıdaki bu kötü amaçlı olduğunu varsayalım.
 
+6. Söz konusu hesap hakkında hiçbir bilgi ise bitiş noktasına gidin ve hangi hesabın uyarı aynı anda oturum açmış denetleyin.
+
 **Düzeltme**
 
 Kullanım [SAMRi10 aracı](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) ortamınızı Bu teknik karşı sağlamlaştırmak için.
@@ -428,6 +433,9 @@ Yönetimsel kimlik bilgilerini tehlikeye veya sıfırıncı gün yararlanma kull
 
 ## <a name="sensitive-account-credentials-exposed--services-exposing-account-credentials"></a>Hassas hesap kimlik bilgilerini kullanıma sunulan & Hizmetleri hesabı kimlik bilgileri gösterme
 
+> [!NOTE]
+> Bu şüpheli etkinlik kullanımdan kaldırılmıştır ve 1.9 önce ATA sürümlerinde yalnızca görünür. ATA 1.9 ve daha sonra bkz [raporları](reports.md).
+
 **Açıklama**
 
 Bazı hizmetler hesabı kimlik bilgileri düz metin olarak gönderir. Bu durum, hassas hesapları için bile oluşabilir. Ağ trafiğini izleme saldırganlar catch ve bu kimlik bilgileri kötü amaçlı olarak yeniden kullanabilirsiniz. Beş veya daha fazla farklı hesapları aynı kaynak bilgisayardan düz metin parolalarını gönderirseniz hassas olmayan hesaplar için uyarıyı tetikleyen sürece herhangi bir düz metin parolası hassas hesap için uyarı tetikler. 
@@ -448,7 +456,7 @@ Kaynak bilgisayarlarda yapılandırmayı doğrulayın ve LDAP basit bağlaması 
 
 Yanılma saldırısında, saldırganın en az bir hesap için doğru parolayı bulunana kadar farklı hesaplar için birçok farklı parolaları ile kimlik doğrulaması dener. Bir kez bulundu, bir saldırganın bu hesabı kullanarak oturum açabilir.
 
-Bu algılama, birçok kimlik doğrulama hataları oluştuğunda bir uyarının, bu parolalar, küçük bir kümesini yatay ile ya da çok sayıda kullanıcı arasında olması; veya dikey büyük ile Parolaları yalnızca birkaç kullanıcılar ayarlayın; veya bu iki seçenek herhangi bir bileşimini.
+Bu algılama, Kerberos veya NTLM kullanarak birçok kimlik doğrulama hataları oluştuğunda bir uyarının, bu parolalar, küçük bir kümesini yatay ile ya da çok sayıda kullanıcı arasında olması; veya dikey büyük ile Parolaları yalnızca birkaç kullanıcılar ayarlayın; veya bu iki seçenek herhangi bir bileşimini. Bir uyarıyı tetikleyen önce en az bir hafta noktadır.
 
 **Araştırma**
 
@@ -461,6 +469,30 @@ Bu algılama, birçok kimlik doğrulama hataları oluştuğunda bir uyarının, 
 **Düzeltme**
 
 [Uzun ve karmaşık parolalar](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) yanılma saldırılarına karşı güvenlik gerekli ilk düzeyi sağlar.
+
+## Şüpheli hizmet oluşturma <a name="suspicious-service-creation"></a>
+
+**Açıklama**
+
+Saldırganlar, ağınızdaki kuşkulu hizmetleri çalıştırma denemesi. Bir etki alanı denetleyicisinde şüpheli yeni bir hizmet oluşturduğunuzda ATA bir uyarı başlatır. Bu uyarı olayı 7045 güvenir ve her etki alanı denetleyicisinden bir ATA Gateway veya Lightweight Gateway kapsamında algılandı.
+
+**Araştırma**
+
+1. Söz konusu bilgisayarın yönetici iş istasyonu veya hangi BT ekibi üyeleri ve hizmet hesapları yönetim görevlerini gerçekleştirmek bilgisayar ise, bu yanlış pozitif olabilir ve gerekebilir **bastır** uyarı ve ekleyin Dışlama listesine gerekiyorsa.
+
+2. Hizmeti bu bilgisayarda tanıması bir şey mi?
+
+ - Olan **hesap** söz konusu bu hizmet yüklemesine izin?
+
+ - Her iki soruların yanıtlanması gerekirse *Evet*, ardından **Kapat** uyarı ya da özel durumlar listesine ekleyin.
+
+3. Her iki sorulara yanıt ise *hiçbir*, bu geçerli bir pozitif gerekenlerin sonra.
+
+**Düzeltme**
+
+- Daha az ayrıcalıklı erişimi yalnızca belirli kullanıcılara yeni hizmetler oluşturmak üzere sağa izin vermek için etki alanı makinelerde uygulamak.
+
+
 
 ## <a name="suspicion-of-identity-theft-based-on-abnormal-behavior"></a>Anormal davranışa bağlı kimlik hırsızlığı şüphesi
 
@@ -484,7 +516,7 @@ Neyin bu anormal davranışları oluşmasına neden bağlı olarak, farklı eyle
 
 **Açıklama**
 
-Saldırganlar, standart olmayan yollarla çeşitli protokoller (SMB, Kerberos, NTLM) uygulama araçlarını kullanın. Bu tür ağ trafiği uyarılar olmadan Windows tarafından kabul edilir, ancak ATA olası kötü amaçlı tanıyabilir. Gelişmiş yazılımı, örneğin, WannaCry tarafından kullanılan açıkları yanı sıra, Over-Pass--Hash ve kaba kuvvet gibi teknikler göstergesi davranıştır.
+Saldırganlar, standart olmayan yollarla çeşitli protokoller (SMB, Kerberos, NTLM) uygulama araçlarını kullanın. Bu tür ağ trafiği uyarılar olmadan Windows tarafından kabul edilir, ancak ATA olası kötü amaçlı tanıyabilir. Gelişmiş yazılımı, örneğin, WannaCry tarafından kullanılan açıkları yanı sıra, Over-Pass--Hash gibi teknikler göstergesi davranıştır.
 
 **Araştırma**
 
@@ -508,11 +540,15 @@ Bu WannaCry saldırı olup olmadığını belirlemek için aşağıdaki adımlar
 
 Özellikle güvenlik güncelleştirmelerini uygulamak tüm makinelerinizi, düzeltme eki.
 
-1. [SMBv1 devre dışı bırak](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 2. [WannaCry Kaldır](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
 3. Kullanıcı yeniden değil veya olduğu bilgisayarın açık varsa WanaKiwi ancak bazı ransom yazılım eline verilerin şifresini çözebilir. Daha fazla bilgi için bkz: [Cry yazılımı istiyor](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+
+
+>[!NOTE]
+> Kuşkulu bir etkinlik devre dışı bırakmak için desteğe başvurun.
 
 ## <a name="related-videos"></a>İlgili videolar
 - [Güvenlik topluluğu birleştirme](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)

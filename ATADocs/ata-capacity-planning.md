@@ -5,20 +5,20 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/1/2018
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 76173dfa0b41195e641235f8792723fa7b038a68
-ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
+ms.openlocfilehash: e58fe62fc655fed8f17ae800dda20e022e198a26
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/22/2018
 ---
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
+*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
 
 
@@ -28,7 +28,7 @@ Bu makalede izlemesi için kaç ATA sunucusuna ihtiyacınız belirlemenize yard�
 > [!NOTE] 
 > Bu makalede açıklanan performans gereksinimleri karşılandığı sürece, ATA Center herhangi bir IaaS satıcısında dağıtılabilir.
 
-##<a name="using-the-sizing-tool"></a>Boyutlandırma aracını kullanma
+## <a name="using-the-sizing-tool"></a>Boyutlandırma aracını kullanma
 ATA dağıtımızın kapasitesini belirlemek için önerilen en kolay yol [ATA Boyutlandırma Aracı](http://aka.ms/atasizingtool)’nı kullanmaktır. ATA Boyutlandırma Aracı’nı çalıştırın ve Excel dosyasındaki sonuçlarda, ihtiyaç duyduğunuz ATA kapasitesini belirlemek için aşağıdaki alanları kullanın:
 
 - ATA Center CPU ve Bellek: Sonuç dosyasındaki ATA Center tablosunda bulunan **Meşgul Paket/sn** alanını, [ATA Center tablosundaki](#ata-center-sizing) **SANİYE BAŞINA PAKET** alanıyla eşleştirin.
@@ -47,6 +47,9 @@ ATA dağıtımızın kapasitesini belirlemek için önerilen en kolay yol [ATA B
 Çeşitli nedenlerle ATA Boyutlandırma Aracını kullanamıyorsanız paket/sn sayaç bilgilerini tüm Etki Alanı Denetleyicilerinizden 24 saat boyunca düşük toplama aralığıyla (yaklaşık 5 saniye) el ile toplayın. Sonrasında, her Etki Alanı Denetleyicisi için günlük ortalamanızı ve en meşgul zaman aralığı (15 dakikalık) ortalamanızı hesaplamanız gerekir.
 Aşağıdaki bölüm, bir Etki Alanı Denetleyicisi’nden paket/sn sayacı bilgilerini nasıl alabileceğinizi gösteren yönergeleri içerir.
 
+
+> [!NOTE]
+> Farklı ortamları değişir ve başlangıçta ATA dağıtmak ve boyutlandırma aracı çalıştırdıktan sonra birden çok özel ve beklenmeyen ağ trafiği özelliklerine sahiptir çünkü ayarlamak ve dağıtımınız için kapasite ince gerekebilir.
 
 
 ### <a name="ata-center-sizing"></a>ATA Center Boyutlandırması
@@ -67,8 +70,7 @@ Kullanıcı davranış analizi için ATA Center’a en az 30 günlük veri gerek
 &#42;&#42;Ortalama sayılar (En yüksek sayılar)
 > [!NOTE]
 > -   ATA Center’ın izlenen tüm etki alanı denetleyicilerinden saniye başına işleyebileceği toplam miktar, en fazla 1 milyon pakettir. Bazı ortamlarda, aynı ATA Center 1 M yüksektir genel trafiği işleyebilir. Bu tür ortamlar konusunda yardım almak için askcesec@microsoft.com ile iletişime geçin.
-> -   Burada belirtilen depolama alanı miktarları net değerlerdir. Her zaman gelecekteki büyümeyi de hesaba katmalı ve veritabanının bulunduğu diskte en az %20 boş alan bulunduğundan emin olmalısınız.
-> -   Boş alanınız en az 20 ulaşırsa % ya da 200 GB, eski veri koleksiyonu silinir. Bu silme işlemi, boş alan %5 veya 50 GB’a inene kadar devam eder; bu noktaya ulaşıldığında ise veri koleksiyonu çalışmayı durdurur.
+> -   Boş alanınız en az 20 ulaşırsa % ya da 200 GB, eski veri koleksiyonu silinir. Bu düzey için veri toplama başarıyla azaltmak mümkün değilse, bir uyarı kaydedilir.  ATA %5 eşik kadar çalışmasını devam edecek veya 50 GB boş alan ulaşıldığında.  Bu noktada, ATA veritabanını doldurma durdurur ve ek bir uyarı verilir.
 > - Bu makalede açıklanan performans gereksinimleri karşılandığı sürece, ATA Center’ın herhangi bir IaaS satıcısında dağıtılması mümkündür.
 > -   Okuma ve yazma etkinlikleri için depolama gecikmesi 10 ms’nin altında olmalıdır.
 > -   Okuma ve yazma etkinlikleri arasındaki oran, saniyede 100.000 paketin altında yaklaşık 1:3 ve saniyede 100.000 paketin üstünde 1:6’dır.
@@ -163,56 +165,6 @@ Bağlantı noktası yansıtmayla ilgili önemli noktalar, her bir veri merkezi v
 > -   En iyi performans için, ATA Gateway’in **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.
 > -   En az 5 GB alanı gereklidir ve 10 GB önerilir, ATA ikili dosyaları için gerekli alanı dahil olmak üzere [ATA günlüklerini](troubleshooting-ata-using-logs.md), ve [performans günlükleri](troubleshooting-ata-using-perf-counters.md).
 
-
-## <a name="domain-controller-traffic-estimation"></a>Etki alanı denetleyicisi tahmini trafiği
-Etki alanı denetleyicilerinizin saniyedeki ortalama paket sayısını bulmak için kullanabileceğiniz çeşitli araçlar vardır. Bu sayacı izleyen hiçbir aracınız yoksa, gerekli bilgileri toplamak için Performans İzleyicisi’ni kullanabilirsiniz.
-
-Paket/saniye oranını belirlemek için her etki alanı denetleyicisinde aşağıdakileri adımları yerine getirin:
-
-1.  Performans İzleyicisi'ni açın.
-
-    ![Performans izleyicisi resmi](media/ATA-traffic-estimation-1.png)
-
-2.  **Veri Toplayıcı Kümeleri**’ni genişletin.
-
-    ![Veri toplayıcı kümelerinin resmi](media/ATA-traffic-estimation-2.png)
-
-3.  **Kullanıcı Tanımlı**’ya sağ tıklayın ve **Yeni** &gt; **Veri Toplayıcı Kümesi**’ni seçin.
-
-    ![Yeni veri toplayıcı kümesinin resmi](media/ATA-traffic-estimation-3.png)
-
-4.  Toplayıcı kümesi için bir ad girin ve **El İle Oluştur (Gelişmiş)** öğesini seçin.
-
-5.  **Hangi veri türlerini eklemek istersiniz?** alanında **Veri günlükleri ve Performans sayacını oluştur**’u seçin.
-
-    ![Yeni veri toplayıcı kümesi için veri türünün resmi](media/ATA-traffic-estimation-5.png)
-
-6.  **Hangi performans sayaçlarını günlüğe kaydetmek istersiniz?** alanında **Ekle**’ye tıklayın.
-
-7.  **Ağ Bağdaştırıcısı**’nı genişletin, **Paket/sn**’yi seçin ve doğru örneği seçin. Emin değilseniz, **&lt;Tüm örnekler&gt;**’i seçebilir, ardından **Ekle**’ye ve **Tamam**’a tıklayabilirsiniz.
-
-    > [!NOTE]
-    > Bunu bir komut satırında yapmak için `ipconfig /all` komutunu çalıştırarak bağdaştırıcının ve yapılandırmanın adını görüntüleyin.
-
-    ![Performans sayaçlarını ekleme resmi](media/ATA-traffic-estimation-7.png)
-
-8.  **Örnek aralığı** değerini **1 saniye** olarak değiştirin.
-
-9. Verilerin kaydedilmesini istediğiniz konumunu ayarlayın.
-
-10. Altında **veri toplayıcı kümesi oluştur**seçin **bu veri toplayıcı kümesini Şimdi Başlat**, tıklatıp **son**.
-
-    Artık oluşturduğunuz veri toplayıcı kümesini ve kümenin çalıştığını gösteren yeşil üçgeni görebilirsiniz.
-
-11. 24 saat sonra, veri toplayıcı kümesine sağ tıklayıp **Durdur**’u seçerek veri toplayıcı kümesini durdurun.
-
-    ![Veri toplayıcı kümesini durdurma resmi](media/ATA-traffic-estimation-12.png)
-
-12. Dosya Gezgini’nde, .blg dosyasının kaydedildiği klasöre gözatın ve çift tıklayarak dosyayı Performans İzleyicisi’nde açın.
-
-13. Paket/sn sayacını seçin, ortalama ve en yüksek değerleri kaydedin.
-
-    ![Saniyedeki paket sayısı sayacının resmi](media/ATA-traffic-estimation-14.png)
 
 
 ## <a name="related-videos"></a>İlgili videolar
