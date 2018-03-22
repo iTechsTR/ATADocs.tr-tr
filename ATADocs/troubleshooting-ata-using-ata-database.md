@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/31/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a08c3175c5b7d7d6006189f858b38026344decac
-ms.sourcegitcommit: 56c7d749b17745430e372e514accf537b3f215d0
+ms.openlocfilehash: 7bd17d6ac340f1acf0166aadbfcbb7f3ef164fc3
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/22/2018
 ---
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
+*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
 
 
@@ -45,7 +45,7 @@ Veritabanını sorgulamanın varsayılan ve en temel yolu Mongo kabuğunu kullan
 
 Aşağıdaki örnek daha önce sağlanan söz diziminin kullanıldığı örnek kodu sağlıyor. 20/10/2015 tarihinde gerçekleşen bir kuşkulu etkinliği araştırıyor ve "John Doe"nun o gün gerçekleştirdiği NTLM etkinlikleri hakkında daha fazla bilgi edinmek istiyorsanız:<br /><br />İlk olarak "John Doe"nun kimliğini bulun.
 
-`db.UniqueEntity.find({Name: "John Doe"})`<br>Değeri olarak gösterilen Kimliğini not alın `_id` örneğin olduğunu varsayalım.`123bdd24-b269-h6e1-9c72-7737as875351`<br>Ardından, arama aradığınız, örnekte tarihinden önce en yakın tarihli koleksiyonu için 20/10/2015.<br>Sonra, John Doe'nun hesabının NTLM etkinliklerini arayın: 
+`db.UniqueEntity.find({Name: "John Doe"})`<br>Değeri olarak gösterilen Kimliğini not alın `_id` örneğin olduğunu varsayalım. `123bdd24-b269-h6e1-9c72-7737as875351`<br>Ardından, arama aradığınız, örnekte tarihinden önce en yakın tarihli koleksiyonu için 20/10/2015.<br>Sonra, John Doe'nun hesabının NTLM etkinliklerini arayın: 
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 

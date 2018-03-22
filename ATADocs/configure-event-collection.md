@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 482b16462d115c7bcc2854d30c2ef19fce37f2c0
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 2c8f67d0c8d9020eb0e7ae16e8410db473ace044
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
+*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
 
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/07/2017
 > ATA 1.8 ve üzeri sürümlerde artık ATA Lightweight Gateway’ler için olay koleksiyonu yapılandırması gerekli değildir. ATA Lightweight Gateway artık olay iletmeyi yapılandırmaya gerek kalmadan olayları yerel olarak okuyabilir.
 
 
-Algılama yeteneklerini artırmak için ATA aşağıdaki Windows olaylarına ihtiyaç duymaktadır: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Bu da otomatik olarak ATA Lightweight Gateway tarafından okunabilir veya ATA Lightweight Gateway dağıtılmaz durumunda, bu ATA gateway'e iki yoldan biriyle ATA Gateway'i SIEM olaylarını dinleyecek şekilde yapılandırarak veya Windows olay yapılandırarak iletilebilir İletme.
+Algılama yeteneklerini geliştirmek için aşağıdaki Windows olaylarını ATA'ya gerekir: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. Bu da otomatik olarak ATA Lightweight Gateway tarafından okunabilir veya ATA Lightweight Gateway dağıtılmaz durumunda, bu ATA gateway'e iki yoldan biriyle ATA Gateway'i SIEM olaylarını dinleyecek şekilde yapılandırarak veya Windows olay yapılandırarak iletilebilir İletme.
 
 
 
@@ -61,11 +61,11 @@ Ekledikten sonra **ağ hizmeti** için **Event Log Readers** grup, etki alanı d
    
     1.  **Etkin**’i seçin.
     2.  Altında **seçenekleri**, tıklatın **Göster**.
-    3.  Altında **SubscriptionManagers**, şu değeri girin ve tıklayın **Tamam**: *Server = http: / /<fqdnATAGateway>: 5985/wsman/SubscriptionManager/WEC, yenileme = 10* () For example: sunucu http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, yenileme = = 10)
+    3.  Altında **SubscriptionManagers**, şu değeri girin ve tıklayın **Tamam**: *Server = http: / /<fqdnATAGateway>: 5985/wsman/SubscriptionManager/WEC, yenileme = 10* () For example: sunucu =http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, yenileme = 10)
  
    ![Hedef aboneliği yapılandırma resmi](media/wef 2 config target sub manager.png)
    
-    5.  **Tamam**’a tıklayın.
+    5.  **Tamam**'ı tıklatın.
     6.  Yükseltilmiş bir komut isteminden şunu yazın: *gpupdate /force*. 
 
 **3. Adım: ATA Gateway’de aşağıdaki adımları gerçekleştirin** 
@@ -83,7 +83,7 @@ Ekledikten sonra **ağ hizmeti** için **Event Log Readers** grup, etki alanı d
         ![Olay Görüntüleyicisi resmi](media/wef3 event viewer.png)
    
         
-        3.  **Tamam**’a tıklayın.
+        3.  **Tamam**'ı tıklatın.
    4.   **Olayları Seç**’e tıklayın.
 
         1. **Günlüğe göre**’ye tıklayıp **Güvenlik**’i seçin.
@@ -97,6 +97,6 @@ Ekledikten sonra **ağ hizmeti** için **Event Log Readers** grup, etki alanı d
 
 Daha fazla bilgi için bkz: [olayları iletmek ve toplamak için bilgisayarları yapılandırma](https://technet.microsoft.com/library/cc748890)
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz:
 - [ATA’yı yükleme](install-ata-step1.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

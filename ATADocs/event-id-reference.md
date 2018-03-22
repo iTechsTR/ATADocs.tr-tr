@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 07be2dad511158a9234c99287f7eefd7cc12ba83
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: e9147f4333f481eaec4967dd32846bd123866941
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
+*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
 
 # <a name="ata-event-id-reference"></a>ATA olay kimliği başvurusu
@@ -84,8 +84,6 @@ Olayları şurada bulunabilir:
 
 2004 – LDAP deneme yanılma zorla şüpheli etkinlik 
 
-2005 – şüpheli etkinlik bilgisayar ön kimlik doğrulaması başarısız oldu 
-
 2006 – çoğaltma şüpheli etkinlik Dizin Hizmetleri 
 
 2007 – DNS keşif şüpheli etkinlik 
@@ -97,8 +95,6 @@ Olayları şurada bulunabilir:
 2013 – sahte PAC şüpheli etkinlik 
 
 2014 – Honeytoken aktivite şüpheli etkinlik 
-
-2015 – LDAP metin parola şüpheli etkinlik temizleyin 
 
 2016 – büyük nesne silme şüpheli etkinlik 
 
@@ -135,7 +131,7 @@ Olayları şurada bulunabilir:
 3007 – el ile değişiklik şüpheli etkinlik durumu 
 
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz:
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/1/2018
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: dd422a7feffcddc0f56b54b11d5dadb029457a8e
-ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
+ms.openlocfilehash: 419df4c4404bf26a85c1a955139d0dee6f50828e
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/22/2018
 ---
-*Uygulama hedefi: Advanced Threat Analytics sürüm 1.8*
+*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
 
 
@@ -68,7 +68,12 @@ Bu bölümde, ATA yüklemesine başlamadan önce toplamanız gereken bilgiler ve
 ## <a name="ata-center-requirements"></a>ATA Center gereksinimleri
 Bu bölümde, ATA Center’ın gereksinimleri listelenir.
 ### <a name="general"></a>Genel
-ATA Center, Windows Server 2012 R2 veya Windows Server 2016 çalıştıran sunuculara yüklemeyi destekler. ATA Center bir etki alanının veya çalışma grubunun üyesi olan sunuculara yüklenebilir.
+ATA Center, Windows Server 2012 R2 veya Windows Server 2016 çalıştıran sunuculara yüklemeyi destekler. 
+
+ > [!NOTE]
+ > ATA Center, Windows Server çekirdek desteklemez.
+
+ATA Center bir etki alanının veya çalışma grubunun üyesi olan sunuculara yüklenebilir.
 
 Windows 2012 R2 çalıştıran ATA Center’ı yüklemeden önce şu güncelleştirmenin yüklendiğini onaylayın: [KB2919355](https://support.microsoft.com/kb/2919355/).
 
@@ -83,7 +88,8 @@ ATA Center’ı sanal makine olarak çalıştırıyorsanız, olası veritabanı 
 
 ### <a name="server-specifications"></a>Sunucu belirtimleri
 
-Fiziksel bir sunucuda çalışırken, ATA veritabanı için BIOS’ta tekdüzen olmayan bellek erişimini (NUMA) **devre dışı bırakmanız** gerekir. Sisteminiz için NUMA düğüm araya Ekleme'yi; bu durumda, zorunda başvurabilir **etkinleştirmek** NUMA devre dışı bırakmak için düğüm araya ekleme. Daha fazla bilgi için BIOS belgelerinize bakın. <br>
+Fiziksel bir sunucuda çalışırken, ATA veritabanı için BIOS’ta tekdüzen olmayan bellek erişimini (NUMA) **devre dışı bırakmanız** gerekir. Sisteminiz için NUMA düğüm araya Ekleme'yi; bu durumda, zorunda başvurabilir **etkinleştirmek** NUMA devre dışı bırakmak için düğüm araya ekleme. Daha fazla bilgi için BIOS belgelerinize bakın.<br>
+
 En iyi performans için, ATA Center’ın **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.<br>
 İzlemekte olduğunuz etki alanı denetleyicilerini ve etki alanı denetleyicilerinden her birinin yükü sayısı, gerekli sunucu belirtimlerini belirler. Daha fazla bilgi için bkz: [ATA kapasite planlaması](ata-capacity-planning.md).
 
@@ -117,6 +123,7 @@ Aşağıdaki tabloda, ATA Center’ın düzgün çalışması için açılması 
 |**Kerberos** (etki alanına katılmış ise isteğe bağlı)|TCP ve UDP|88|Etki alanı denetleyicileri|Giden|
 |**Netlogon** (etki alanına katılmış ise isteğe bağlı)|TCP ve UDP|445|Etki alanı denetleyicileri|Giden|
 |**Windows Saati** (isteğe bağlı etki alanına katılmış ise)|UDP|123|Etki alanı denetleyicileri|Giden|
+|**Netlogon (SMB, CIFS, SAM-R)**|TCP ve UDP|445|Ağ geçitleri ve cihazlar|Gelen ve giden|
 
 > [!NOTE]
 > LDAP ATA Gateway bileşenleri ve etki alanı denetleyicileri arasında kullanılacak kimlik bilgilerini test etmek için gereklidir. Test sonra ve ATA Gateway LDAP kendi normal Çözümleme işleminin bir parçası kullanır, bu kimlik bilgileri geçerliliğini sınamak için etki alanı denetleyicisi ATA Center'dan gerçekleştirilir.
@@ -147,7 +154,7 @@ Sertifika olması gerekir:
 ## <a name="ata-gateway-requirements"></a>ATA Gateway gereksinimleri
 Bu bölümde, ATA Gateway’in gereksinimleri listelenir.
 ### <a name="general"></a>Genel
-ATA Gateway, Windows Server 2012 R2 veya Windows Server 2016 çalıştıran sunuculara yüklemeyi destekler (Sunucu çekirdeği dahil).
+ATA Gateway, Windows Server 2012 R2 veya Windows Server 2016 (Sunucu Çekirdeği dahil) çalıştıran sunuculara yüklemeyi destekler.
 ATA Gateway bir etki alanının veya çalışma grubunun üyesi olan sunuculara yüklenebilir.
 ATA Gateway, Etki Alanı İşlev Düzeyi Windows 2003 ve üstü olan Etki Alanı Denetleyicilerini izlemek için kullanılabilir.
 
