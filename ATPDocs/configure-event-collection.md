@@ -1,23 +1,23 @@
 ---
-title: "Azure Gelişmiş tehdit koruması yükleme | Microsoft Docs"
-description: "Bu adım ATP yükleme, veri kaynaklarını yapılandırın."
-keywords: 
+title: Azure Gelişmiş tehdit koruması yükleme | Microsoft Docs
+description: Bu adım ATP yükleme, veri kaynaklarını yapılandırın.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 3/28/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 060ebd048fddacfb276ae32e4e589d7c8b70cbb6
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 2c2a8e6d70d937c559c110a18feec4afc75271e9
+ms.sourcegitcommit: 45d0108d0cbf8fe7550d13486d3d9c06c1e58506
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -38,8 +38,10 @@ Toplama ve ve giden ağ trafiğini çözümlemenin yanı sıra etki alanı denet
 Azure ATP'ın Syslog sunucusundan verileri kullanmak aşağıdaki adımları gerçekleştirmeniz gerekir:
 
 -   Dinlemek ve SIEM/Syslog sunucusundan iletilen olayları kabul etmek üzere Azure ATP algılayıcı sunucularınızı yapılandırın.
-> [!NOTE]
-> Azure ATP yalnızca IPv4 ve IPv6 değil üzerinde dinler. 
+
+ > [!NOTE]
+ > Azure ATP yalnızca IPv4 ve IPv6 değil üzerinde dinler. 
+
 -   SIEM/Syslog sunucunuzu belirli olayları Azure ATP algılayıcı iletecek şekilde yapılandırın.
 
 > [!IMPORTANT]
@@ -159,7 +161,7 @@ Hata Kodu:         0x0
 -   Anahtar=değer çiftleri için sıra önemli değildir.
 
 ### <a name="qradar"></a>QRadar
-QRadar bir aracı üzerinden olay toplamayı sağlar. Veriler bir aracı kullanarak toplanıyorsa, saat biçimi mili saniye verisi olmadan toplanır. Azure ATP mili saniye verisi duyduğundan, QRadar aracısız Windows olay toplamayı kullanacak şekilde ayarlamak gereklidir. Daha fazla bilgi için bkz. [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: MSRPC Protokolünü kullanarak Aracısız Windows Olayları Koleksiyonu").
+QRadar bir aracı üzerinden olay toplamayı sağlar. Veriler bir aracı kullanarak toplanıyorsa, saat biçimi mili saniye verisi olmadan toplanır. Azure ATP mili saniye verisi duyduğundan, QRadar aracısız Windows olay toplamayı kullanacak şekilde ayarlamak gereklidir. Daha fazla bilgi için bkz: [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: MSRPC protokolünü kullanarak aracısız Windows olayları koleksiyonu").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 

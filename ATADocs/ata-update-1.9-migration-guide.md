@@ -1,23 +1,23 @@
 ---
-title: "1.9 Geçiş Kılavuzu'na tehdit analizi güncelleştirme Gelişmiş | Microsoft Docs"
-description: "ATA sürüm 1.9 güncelleştirme yordamları"
-keywords: 
+title: 1.9 Geçiş Kılavuzu'na tehdit analizi güncelleştirme Gelişmiş | Microsoft Docs
+description: ATA sürüm 1.9 güncelleştirme yordamları
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 03/21/2018
+ms.date: 03/25/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 99865293dd5aa6648516fbebbf61977176b1de36
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 0bd4bca536facb9ad4b7fea627f2ef512949728e
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="updating-ata-to-version-19"></a>ATA sürüm 1.9 güncelleştiriliyor
 
@@ -31,7 +31,7 @@ ATA sürüm dağıtılan 1.8 zaten varsa, bu yordam dağıtımınızı güncelle
 
 ATA sürüm 1.9 güncelleştirmek için aşağıdaki adımları izleyin:
 
-1.  [ATA 1.9 güncelleştirme sürümü Yükleme Merkezi'nden](https://www.microsoft.com/download/details.aspx?id=55536) veya tam sürümünden [Eval Merkezi](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).<br>
+1.  [ATA 1.9 güncelleştirme sürümü Yükleme Merkezi'nden](https://www.microsoft.com/download/details.aspx?id=56725) veya tam sürümünden [Eval Merkezi](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).<br>
 Geçiş sürümünde dosyası yalnızca ATA 1.8 güncelleştirmek için kullanılabilir. Değerlendirme merkezindeki sürümde ise yeni bir ATA dağıtımı yüklemek ve mevcut dağıtımları yükseltmek için aynı yükleme dosyası (Microsoft ATA Center Setup.exe) kullanılır.
 
 2.  ATA Center’ı güncelleştirme

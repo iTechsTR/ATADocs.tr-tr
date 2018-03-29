@@ -1,23 +1,23 @@
 ---
-title: "ATA Raporları ile çalışma | Microsoft Docs"
-description: "Ağınızı izlemek için ATA’da nasıl rapor oluşturabileceğinizi açıklar."
-keywords: 
+title: ATA Raporları ile çalışma | Microsoft Docs
+description: Ağınızı izlemek için ATA’da nasıl rapor oluşturabileceğinizi açıklar.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 3/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b7f921bb2eb655a929eb19c849788c1bf9f64527
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 9a113d8d090c5a90a07043a0ef75e1be0fc840c3
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
@@ -51,6 +51,9 @@ Zamanlanmış bir rapor ayarlamak için:
 1. **Raporlar** sayfasında **Zamanlanmış rapor ayarla**’ya tıklayın veya ATA Konsolu yapılandırma sayfasında bulunan Bildirimler ve Raporlar altında **Zamanlanmış raporlar**’a tıklayın.
 
    ![Rapor zamanlama](./media/ata-sched-reports.png)
+
+  > [!NOTE]
+  > Günlük raporlar, kısa süre içinde gece yarısından sonra UTC gönderilmek üzere tasarlanmıştır.
 
 2. Tıklatın **zamanlama** rapor teslimini sıklığı ve e-posta adresi ayarlayın ve bunları Ekle öğesini tıklatıp e-posta adresleri yanındaki artı işaretini tıklatın, seçilen rapor türü yanındaki **kaydetmek**.
 

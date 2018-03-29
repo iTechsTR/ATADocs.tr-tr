@@ -1,28 +1,37 @@
 ---
 title: Azure ATP yenilikler | Microsoft Docs
-description: "Azure ATP en son sürümlerini açıklar ve her sürümdeki yenilikler hakkında bilgi sağlar."
-keywords: 
+description: Azure ATP en son sürümlerini açıklar ve her sürümdeki yenilikler hakkında bilgi sağlar.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/18/2018
+ms.date: 3/25/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6b3c9ddd1873b3139009a44e9c1f7a85ea3b6901
-ms.sourcegitcommit: adfa7a3a3918518b6b14b94d3c0a9f899142196a
+ms.openlocfilehash: 0693bd3a25d6438874d422bedf8da05931a15d54
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
 
 # <a name="whats-new-in-azure-atp"></a>Azure ATP yenilikler nelerdir? 
+
+## <a name="azure-atp-release-226"></a>Azure ATP sürüm 2.26
+
+25 Mart 2018 yayımlanan
+
+- (Kuşkulu bir etkinlik değil yasal bir eylem), zararsız pozitif tanımlamak ve kuşkulu bir etkinlik Azure ATP uyarıları, bilgisayarların ve IP adresleri de dahil olmak üzere daha fazla algılamaları dışlamak için seçeneğiniz vardır: şifreleme indirgeme, LDAP deneme yanılma saldırısı, sahte PAC, kaba kuvvet ve Pass--hash.
+-   Azure ATP algılayıcı performansı geliştirildi.
+-   Yeni bir bölge eklenen çalışma dağıtımı için bir çalışma alanı Asya'da artık dağıtabilirsiniz. 
+
 
 ## <a name="azure-atp-release-225"></a>Azure ATP yayın 2,25
 
