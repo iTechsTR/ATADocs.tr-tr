@@ -1,23 +1,23 @@
 ---
-title: "Yükleme Azure Gelişmiş tehdit koruması - 4. adım | Microsoft Docs"
-description: "Azure ATP yükleme dört adım Azure ATP tek başına algılayıcı yüklemenize yardımcı olur."
-keywords: 
+title: Yükleme Azure Gelişmiş tehdit koruması - 4. adım | Microsoft Docs
+description: Azure ATP yükleme dört adım Azure ATP tek başına algılayıcı yüklemenize yardımcı olur.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 3/25/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7b003882f21f22b3427fb95534ca2bde255b14e6
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 56b3cea2089c64e2c78361c44d049d6de67764b6
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -35,11 +35,16 @@ ms.lasthandoff: 02/21/2018
 
 
 > [!IMPORTANT]
->Olun emin .net Framework 4.7 makineye yüklenir. .NET Framework 4.7 ise yüklenmemiş Azure ATP algılayıcı kurulum paketi, sunucunun yeniden başlatılmasını gerektiren yükler. Makinenin Azure ATP bulut Hizmeti uç noktası bağlantısı olduğunu doğrulayın: https://triprd1wceuw1sensorapi.atp.azure.com (için Avrupa) veya https://triprd1wcuse1sensorapi.atp.azure.com (ABD için).
+>Olun emin .net Framework 4.7 makineye yüklenir. .NET Framework 4.7 ise yüklenmemiş Azure ATP algılayıcı kurulum paketi, sunucunun yeniden başlatılmasını gerektiren yükler.
 
 Azure ATP algılayıcı sunucu veya etki alanı denetleyicisinde aşağıdaki adımları gerçekleştirin.
 
-1.  Zip dosyasından dosyaları ayıklayın. 
+1. Makinenin ilgili Azure ATP bulut Hizmeti uç noktası bağlantısı olduğunu doğrulayın:
+  - https://triprd1wceuw1sensorapi.atp.azure.com (Avrupa için)  
+  - https://triprd1wcuse1sensorapi.atp.azure.com (ABD)
+  - https://triprd1wcasse1sensorapi.atp.azure.com (Asya için)
+
+2. Yükleme dosyaları zip dosyasından ayıklayın. 
 > [!NOTE] 
 > Doğrudan zip dosyasından yükleme başarısız olur.
 

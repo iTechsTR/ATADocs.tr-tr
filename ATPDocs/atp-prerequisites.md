@@ -1,23 +1,23 @@
 ---
-title: "Azure Advanced Threat Protection önkoşulları | Microsoft Docs"
-description: "Ortamınızda başarılı bir Azure ATP dağıtımının gereksinimlerini açıklar"
-keywords: 
+title: Azure Advanced Threat Protection önkoşulları | Microsoft Docs
+description: Ortamınızda başarılı bir Azure ATP dağıtımının gereksinimlerini açıklar
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/25/2018
+ms.date: 3/28/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3cb4eb8a914f1fd4be0c1ddb26f9be3964c529f7
-ms.sourcegitcommit: 26d833f7d9502db73876ced9879789db395224f7
+ms.openlocfilehash: 3c8e0b239c335981b2030021d1d4e319b2810fda
+ms.sourcegitcommit: 7c9fe4eb781bec71129310a6e0c5e76b022a0213
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -131,11 +131,13 @@ Aşağıdaki tabloda yönetim bağdaştırıcısında yapılandırılması Azure
 
 |Protokol|Aktarım|Bağlantı Noktası|Hedef/Kaynak|Yön|
 |------------|-------------|--------|-----------|-------------|
+|**Internet bağlantı noktaları**|||||
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP bulut hizmeti|Giden|
+|**İç bağlantı noktaları**|||||
 |LDAP|TCP ve UDP|389|Etki alanı denetleyicileri|Giden|
 |Güvenli LDAP (LDAPS)|TCP|636|Etki alanı denetleyicileri|Giden|
 |LDAP - Genel Katalog|TCP|3268|Etki alanı denetleyicileri|Giden|
 |LDAPS - Genel Katalog|TCP|3269|Etki alanı denetleyicileri|Giden|
-|SSL (*.atp.azure.com)|TCP|443|Azure ATP bulut hizmeti|Giden|
 |Kerberos|TCP ve UDP|88|Etki alanı denetleyicileri|Giden|
 |Netlogon (SMB, CIFS, SAM-R)|TCP ve UDP|445|Etki alanı denetleyicileri|Giden|
 |Windows Saati|UDP|123|Etki alanı denetleyicileri|Giden|
@@ -195,7 +197,9 @@ Aşağıdaki tabloda Azure ATP algılayıcı gereken minimum bağlantı noktalar
 
 |Protokol|Aktarım|Bağlantı Noktası|Hedef/Kaynak|Yön|
 |------------|-------------|--------|-----------|-------------|
+|**Internet bağlantı noktaları**|||||
 |SSL (*.atp.azure.com)|TCP|443|Azure ATP bulut hizmeti|Giden|
+|**İç bağlantı noktaları**|||||
 |DNS|TCP ve UDP|53|DNS Sunucuları|Giden|
 |RPC üzerinden NTLM|TCP|135|Ağdaki tüm cihazlar|Giden|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Etki alanı denetleyicileri|Giden|

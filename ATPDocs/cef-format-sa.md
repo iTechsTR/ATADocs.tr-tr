@@ -1,23 +1,23 @@
 ---
-title: "Azure ATP SIEM günlük başvurusu | Microsoft Docs"
-description: "Şüpheli etkinlik günlükleri, SIEM sisteminize Azure ATP gönderilen örnekleri sağlar."
-keywords: 
+title: Azure ATP SIEM günlük başvurusu | Microsoft Docs
+description: Şüpheli etkinlik günlükleri, SIEM sisteminize Azure ATP gönderilen örnekleri sağlar.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/28/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 5d466014d96edb2deecf0c5d7b937d9e576a57b0
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 0a632473490d157e2b85a30bdb82947982da9551
+ms.sourcegitcommit: 7c9fe4eb781bec71129310a6e0c5e76b022a0213
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -37,7 +37,7 @@ Aşağıdaki alanlar ve bunların değerleri SIEM’nize iletilir:
 -   CNT – bir sayısı (tahmin edilen parolaları miktardaki sahip oldu örneğin deneme yanılma saldırısı) uyarı sahip uyarılar
 -   app – uyarıda kullanılan protokol
 -   Bu uyarı için karşılık gelen olay günlüğüne olay kimliği Azure ATP externalID – Yazar
--   cs#label ve cs# – bunlar CEF’in kullanmaya izin verdiği müşteri dizeleridir. cs#label yeni alanın adıdır ve cs# ise değerdir, örneğin: cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
+-   cs #label & cs #'ta – bunlar olduğunda CEF cs kullanacak şekilde #label yeni alanın adını ve cs # değeri, örneğin izin verdiğini müşteri dizeleri: cs1Label url cs1 = =https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
 
 Bu örnekte cs1, uyarının URL'sini içeren bir alandır.
 
@@ -67,7 +67,7 @@ Aşağıdaki günlüklerini örnek RFC 5242 ile uyumlu, ancak Azure ATP RFC 3164
 ### <a name="honey-token-activity"></a>Honey Token Etkinliği
 02-21-2018  16:20:36    Auth.Warning    192.168.0.220   1 2018-02-21T14:20:34.106162+00:00 CENTER CEF 6076 HoneytokenActivitySecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|HoneytokenActivitySecurityAlert|Honeytoken activity|5|start=2018-02-21T14:20:26.6705617Z app=Kerberos suser=honey msg=The following activities were performed by honey:\r\nLogged in to CLIENT2 via DC1. externalId=2014 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/9249fe9a-c883-46dd-a4da-2a1fca5f211c
 ### <a name="suspicious-replication-of-directory-services"></a>Dizin hizmetlerinin şüpheli çoğaltması
-02-21-2018  16:21:22    Auth.Error  192.168.0.220   1 2018-02-21T14:21:13.978554+00:00 CENTER CEF 6076 DirectoryServicesReplicationSecu ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|DirectoryServicesReplicationSecurityAlert|Malicious replication of directory services|10|start=2018-02-21T14:19:03.9975656Z app=Drsr shost=CLIENT1 msg=Malicious replication requests were successfully performed by user1, from CLIENT1 against DC1. Sonuç başarılı externalID = 2006 cs1Label = url cs1 = https://contoso-corp.atp.azure.com/securityAlert/cb95648e-1b6f-4d3b-81b9-7605532787d7 =
+02-21-2018  16:21:22    Auth.Error  192.168.0.220   1 2018-02-21T14:21:13.978554+00:00 CENTER CEF 6076 DirectoryServicesReplicationSecu ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|DirectoryServicesReplicationSecurityAlert|Malicious replication of directory services|10|start=2018-02-21T14:19:03.9975656Z app=Drsr shost=CLIENT1 msg=Malicious replication requests were successfully performed by user1, from CLIENT1 against DC1. Sonuç başarılı externalID = 2006 cs1Label = url cs1 = =https://contoso-corp.atp.azure.com/securityAlert/cb95648e-1b6f-4d3b-81b9-7605532787d7
 ### <a name="malicious-data-protection-private-information-request"></a>Kötü Amaçlı Veri Koruma Özel Bilgi İsteği
 02-21-2018  16:22:08    Auth.Error  192.168.0.220   1 2018-02-21T14:21:54.080266+00:00 CENTER CEF 6076 RetrieveDataProtectionBackupKeyS ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|RetrieveDataProtectionBackupKeySecurityAlert|Malicious Data Protection Private Information Request|10|start=2018-02-21T14:19:41.8382786Z app=LsaRpc shost=CLIENT1 msg=user1 performed 1 successful attempts from CLIENT1 to retrieve DPAPI domain backup key from DC1. externalId=2020 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/b22221d1-764a-4fae-a5ce-e6a0c69dc55a
 

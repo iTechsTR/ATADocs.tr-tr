@@ -1,23 +1,23 @@
 ---
-title: "Advanced Threat Analytics konsolundaki varlık profilleri ile çalışma | Microsoft Docs"
-description: "ATA konsolu kullanıcı profillerini ekranında varlıklardan araştırmaya açıklar"
-keywords: 
+title: Advanced Threat Analytics konsolundaki varlık profilleri ile çalışma | Microsoft Docs
+description: ATA konsolu kullanıcı profillerini ekranında varlıklardan araştırmaya açıklar
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 3/25/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f9e19a1d033238f506fc0523bf50af6e204ba0cf
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f2fd6f28eb6bf11aa3705f5320fcdae01d02f6d0
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
@@ -46,6 +46,8 @@ En üstte, varlık hakkında bir bakışta anlamak ihtiyacınız olan hızlı bi
 - Kullanıcı erişilen kaç tane kaynaklar
 - Hangi konumlardan kullanıcı VPN oturum
 
+  ![Varlık menüsü](media/entity-menu.png)
+
 Bilgisayarlar için görebilirsiniz:
 - Kaç tane kuşkulu etkinlikler için makine vardır açın
 - Makinede kaç kullanıcının oturum
@@ -53,7 +55,7 @@ Bilgisayarlar için görebilirsiniz:
 - VPN erişilebilir bilgisayarda kaç konumları
 - Hangi IP adresi bilgisayar listesini kullanılmış
 
-![Varlık menüsü](media/entity-menu.png)
+  ![Varlık menü bilgisayar](media/entity-computer.png)
 
 Kullanarak **göre filtre** düğmesi etkinlik zaman çizelgesi etkinlikleri etkinlik türüne göre filtreleyebilirsiniz. Ayrıca, belirli bir (gürültülü) türü etkinlik filtre uygulayabilirsiniz. Bir varlık ağ yaptıklarını temellerini anlamak istediğiniz zaman bu araştırma için gerçekten yardımcı olur. Belirli bir tarih de gidebilir ve etkinlikleri Excel'e filtre olarak dışa aktarabilirsiniz. Dışarı aktarılan dosyayı, Dizin Hizmetleri değişikliklerini (hesap için Active Directory içinde değiştirilen şeyler) için bir sayfa ve etkinlikler için ayrı bir sayfa sağlar. 
 

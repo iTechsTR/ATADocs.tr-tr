@@ -1,23 +1,23 @@
 ---
-title: "Azure ATP şüpheli etkinlik Kılavuzu | Microsoft Docs"
+title: Azure ATP şüpheli etkinlik Kılavuzu | Microsoft Docs
 d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/25/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ee8e45b6ef2da2d8866a1795bdab3987180acefe
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: ec9a2bc18262f88ada0a7a4ac56b5a4b2c104165
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -240,6 +240,21 @@ Aşağıdaki izinleri doğrulama:
 Daha fazla bilgi için bkz: [profil eşitleme SharePoint Server 2013'te Grant Active Directory etki alanı Hizmetleri izinlerini](https://technet.microsoft.com/library/hh296982.aspx).
 Yararlanabileceğiniz [AD ACL tarayıcı](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) veya kimin etki alanında bu izinleri olduğunu belirlemek için bir Windows PowerShell Betiği oluşturun.
 
+
+## <a name="password-exposed-in-cleartext-report"></a>Doğrulamaya raporda gösterilen parola
+
+**Açıklama**
+
+Bazı hizmetler hesabı kimlik bilgileri düz metin olarak gönderir. Bu durum, kullanıcı hesapları için bile oluşabilir. Ağ trafiğini izleme saldırganlar catch ve bu kimlik bilgileri kötü amaçlı olarak yeniden kullanabilirsiniz. 
+
+**Araştırma**
+
+Raporları sayfasında tıklatın ve doğrulamaya raporda gösterilen parola indirin. Hangi hesapların ortaya Excel elektronik tabloya bakın.
+Genellikle LDAP basit bağlama kullanan komut dosyası veya eski uygulama kaynak bilgisayarlarda yoktur.
+
+**Düzeltme**
+
+Kaynak bilgisayarlarda yapılandırmayı doğrulayın ve LDAP basit bağlaması kullanmadığınızdan emin olun. LDAP basit bağlamalar kullanmak yerine, LDAP SALS veya LDAPS kullanabilirsiniz.
 
 ## <a name="privilege-escalation-using-forged-authorization-data"></a>Ayrıcalık yükseltme kullanarak sahte yetkilendirme verileri
 

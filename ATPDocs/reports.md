@@ -1,23 +1,23 @@
 ---
-title: "Azure ATP raporları ile çalışma | Microsoft Docs"
-description: "Raporları ATP ağınızda izlemek için Azure nasıl oluşturabileceğiniz açıklanmaktadır."
-keywords: 
+title: Azure ATP raporları ile çalışma | Microsoft Docs
+description: Raporları ATP ağınızda izlemek için Azure nasıl oluşturabileceğiniz açıklanmaktadır.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2ebc0d9bb860bd93f14c4c511b034c740b59dffb
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 8d9c7f9208ce76e6c2ca915729b9c64f769ae7bd
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -25,6 +25,7 @@ ms.lasthandoff: 02/21/2018
 # <a name="azure-atp-reports"></a>Azure ATP raporları
 
 Çalışma portal Azure ATP Raporlar bölümünde sistem durumu ve kuşkulu etkinliklerin bir raporu, ortamınızda algılanan sistem durumu bilgisi ile sağladığınız raporlar oluşturmanıza olanak sağlar.
+
 
 Raporlar sayfasına erişmek için menü çubuğundaki rapor simgesine tıklayın: ![rapor simgesi](./media/atp-report-icon.png).
 Kullanılabilir raporlar şunlardır: 
@@ -51,6 +52,9 @@ Zamanlanmış bir rapor ayarlamak için:
 1. İçinde **raporları** sayfasında, **ayarlamak Zamanlanmış raporlar**, ya da Azure ATP çalışma portal yapılandırma sayfasında, bildirimler ve raporlar, altında tıklatın **zamanlanmış raporları**.
 
    ![Rapor zamanlama](./media/atp-sched-reports.png)
+ 
+ > [!NOTE]
+ > Günlük raporlar, kısa süre içinde gece yarısından sonra UTC gönderilmek üzere tasarlanmıştır.
 
 2. Tıklatın **zamanlama** rapor teslimini sıklığı ve e-posta adresi ayarlayın ve bunları Ekle öğesini tıklatıp e-posta adresleri yanındaki artı işaretini tıklatın, seçilen rapor türü yanındaki **kaydetmek**.
 
