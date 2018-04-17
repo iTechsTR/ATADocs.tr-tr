@@ -1,29 +1,29 @@
 ---
-title: "İzleme uyarıları anlama Azure ATP | Microsoft Docs"
-description: "Sorunları gidermek için Azure ATP günlüklerini nasıl kullanabileceğiniz açıklanır"
-keywords: 
+title: İzleme uyarıları anlama Azure ATP | Microsoft Docs
+description: Sorunları gidermek için Azure ATP günlüklerini nasıl kullanabileceğiniz açıklanır
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 4/15/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cdb440e92aef0f9d09d3aa9411d0ce65435469d1
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 34702edcde2b96ca16570af5803a03d4f0f66c6e
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Azure ATP algılayıcı ve tek başına algılayıcı izleme uyarıları anlama
 
-Azure ATP sistem durumu Merkezi, bir sorun olduğunda, Azure ATP worksapces biriyle izleme uyarı yükselterek bilmenizi sağlar. Bu makalede, sorunların sebebi ve çözüm yolunun bulunduğu bir listeyle her bir bileşen için izleme uyarıları açıklanmaktadır.
+Azure ATP sistem durumu Merkezi, bir sorun olduğunda Azure ATP alanlarınızın herhangi bir uyarı yükselterek bilmenizi sağlar. Bu makalede, sorunların sebebi ve çözüm yolunun bulunduğu bir listeyle her bir bileşen için izleme uyarıları açıklanmaktadır.
 
 ## <a name="read-only-user-password-to-expire-shortly"></a>Kısa bir süre sonra süresi dolacak şekilde salt okunur kullanıcı parolası
 
@@ -83,7 +83,7 @@ Azure ATP sistem durumu Merkezi, bir sorun olduğunda, Azure ATP worksapces biri
 
 |Uyarı|Description|Çözüm|Önem Derecesi|
 |----|----|----|----|
-|Azure ATP algılayıcı işleyebileceğinden daha fazla ağ trafiğini alıyor.|Bazı ağ trafiği, hangi bu Azure ATP algılayıcı tarafından izlenen etki alanı denetleyicilerinden kaynaklanan kuşkulu etkinlikleri algılama yeteneğini etkileyebilir analiz ediliyor değil.|Gerektiği kadar [ek işlemci ve bellek eklemeyi](atp-capacity-planning.md) deneyin. Bu tek başına Azure ATP algılayıcı ise, izlenmekte olan etki alanı denetleyicilerinin sayısını azaltın.<br></br>VMware sanal makinelerde etki alanı denetleyicileri kullanıyorsanız, bu da meydana gelebilir. Bu uyarıları önlemek için aşağıdaki ayarların sanal makinede 0 veya Devre Dışı olarak ayarlandığını denetleyebilirsiniz:<br></br>-TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>-IPv4 TSO boşaltma<br></br>Ayrıca, IPv4 Büyük TSO Boşaltma’yı devre dışı bırakabilirsiniz. Daha fazla bilgi için VMware belgelerinize bakın.|Orta|
+|Azure ATP algılayıcı işleyebileceğinden daha fazla ağ trafiğini alıyor.|Bazı ağ trafiği, hangi bu Azure ATP algılayıcı tarafından izlenen etki alanı denetleyicilerinden kaynaklanan kuşkulu etkinlikleri algılama yeteneğini etkileyebilir analiz ediliyor değil.|Gerektiği kadar [ek işlemci ve bellek eklemeyi](atp-capacity-planning.md) deneyin. Bu tek başına Azure ATP algılayıcı ise, izlenmekte olan etki alanı denetleyicilerinin sayısını azaltın.<br></br>VMware sanal makinelerde etki alanı denetleyicileri kullanıyorsanız, bu da meydana gelebilir. Bu uyarıları önlemek için aşağıdaki ayarların sanal makinede 0 veya Devre Dışı olarak ayarlandığını denetleyebilirsiniz:<br></br>-TsoEnable<br></br>-LargeSendOffload(IPv4)<br></br>-IPv4 TSO boşaltma<br></br>Ayrıca, IPv4 Büyük TSO Boşaltma’yı devre dışı bırakabilirsiniz. Daha fazla bilgi için VMware belgelerinize bakın.|Orta|
 
 ## <a name="sensor-service-failed-to-start"></a>Algılayıcı hizmeti başlatılamadı
 

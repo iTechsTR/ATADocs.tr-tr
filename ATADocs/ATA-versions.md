@@ -1,22 +1,22 @@
 ---
-title: "Advanced Threat Analytics sürümleri | Microsoft Docs"
-description: "Microsoft Advanced Threat Analytics (ATA) sürümleri için sağlanan farklı destek seçenekleri açıklanır."
+title: Advanced Threat Analytics sürümleri | Microsoft Docs
+description: Microsoft Advanced Threat Analytics (ATA) sürümleri için sağlanan farklı destek seçenekleri açıklanır.
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 4/10/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 88ccd0e1667805d96ddd69145c4c85475ed6a2fc
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 93c26e0049936b3db1253a785c6b28bffe0ab197
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
@@ -44,7 +44,9 @@ Microsoft, yılda birkaç kez ATA güncelleştirmeleri yayınlamayı planlamakta
 |1.7|1.7.5402|31-AĞU-2016|30-AĞU-2017|
 |1.7.1|1.7.5647|06-EKİ-2016|05-EKİ-2017|
 |1.7.2|1.7.5757|15-KAS-2016|14-KAS-2017|
-
+|1.8|1.8.6645|30 HAZ 2017|30 HAZ 2018|
+|1.8.1|1.8.6765|02 AĞU 2017|02 AĞU 2018|
+|1.9|1.9.7312|21 MAR 2018|21 MAR 2019|
 
 
 
