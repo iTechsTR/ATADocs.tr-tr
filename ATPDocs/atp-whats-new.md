@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/25/2018
+ms.date: 4/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,35 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0693bd3a25d6438874d422bedf8da05931a15d54
-ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
+ms.openlocfilehash: bc81fd16c72c1b8c66c0c2f65100b3b1e04dba78
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
 
 # <a name="whats-new-in-azure-atp"></a>Azure ATP yenilikler nelerdir? 
+
+
+
+## <a name="azure-atp-release-228"></a>Azure ATP sürüm 2.28
+
+15 Nisan 2018 yayımlanan
+ 
+-   Artık Azure ATP kullanıcıları ve Azure ATP görüntüleyiciler rol gruplarının üyeleri olan kullanıcılar izleme uyarıları görmek için izinlere sahip.
+- Bu sürüm, düzeltmeler ve birden çok sorunları için geliştirmeler içerir. 
+
+
+## <a name="azure-atp-release-227"></a>Azure ATP sürüm 2.27
+
+8 Nisan 2018 yayımlanan
+
+- Üst gezinti çubuğunda kullanıcı geri bildirim sağlama yeteneği artık sahipsiniz. Menü çubuğunda gülen yüz tıklatarak Geri bildiriminizi Azure Advanced Threat Protection ekibiyle bir e-posta göndermek etkinleştirir.
+
+- Bu sürüm, düzeltmeler ve birden çok sorunları için geliştirmeler içerir. 
+ 
 
 ## <a name="azure-atp-release-226"></a>Azure ATP sürüm 2.26
 
