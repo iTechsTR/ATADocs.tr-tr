@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/25/2018
+ms.date: 4/15/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ec9a2bc18262f88ada0a7a4ac56b5a4b2c104165
-ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
+ms.openlocfilehash: 6246849cf7e8566b27c969b73e9c96cb0e7b7978
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -100,14 +100,20 @@ Bu algılama, Azure ATP yoğun birkaç basit bağı kimlik doğrulamalarını al
 
 **Araştırma**
 
-İlk olarak hangi ile ilgilenen yukarıdaki üç algılama türlerini görmek için uyarı açıklaması denetleyin.
+İlk olarak hangi ile ilgilenen yukarıdaki üç algılama türlerini görmek için uyarı açıklaması denetleyin. Araştırma önce hangi ile ilgilenen yukarıdaki üç algılama türlerini görmek için uyarı açıklaması kontrol edin. Daha fazla bilgi için Excel elektronik tablosu indirin.
 
-1.  İskelet anahtar – iskelet anahtar kullanarak etki alanı denetleyicileriniz etkilediğini varsa denetleyebilirsiniz [Azure ATP ekibi tarafından yazılan tarayıcı](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
-    Tarayıcı 1 veya daha fazla etki alanı denetleyicileriniz kötü amaçlı yazılım bulur, doğru pozitif olur.
+1.  İskelet anahtar – iskelet anahtar kullanarak etki alanı denetleyicileriniz etkilediğini varsa denetleyebilirsiniz [Azure ATP ekibi tarafından yazılan tarayıcı](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Tarayıcı 1 veya daha fazla etki alanı denetleyicileriniz kötü amaçlı yazılım bulur, doğru pozitif olur.
 
-2.  Altın anahtar –, nadiren kullanılır, özel bir uygulama kimlik doğrulaması daha düşük bir şifreleme şifrelemeyle durumlar vardır. Kaynak bilgisayarda bu tür özel uygulamalar olup olmadığını denetleyin. Öyleyse, bu büyük olasılıkla zararsız true pozitif ve gizlenebilir.
+2.  Altın anahtar – excel elektronik tablodaki ağ etkinliği sekmesine gidin. İlgili branchcache'in alan olduğunu göreceksiniz **istek anahtarı şifreleme türü**, ve **kaynak bilgisayarı desteklenen şifreleme türlerini** daha güçlü şifreleme yöntemi içerir.
 
-3.  Karma Karma – içinde bu uyarının akıllı kartlarla yapılandırılmış kullanıcılar etkileşimli oturum açma için gerekli olduğunda durumlar vardır ve bu ayarı devre dışı ve ardından etkin. İlgili hesapları için bu gibi değişiklikler olup olmadığını denetleyin. Öyleyse, bu büyük olasılıkla zararsız true pozitif ve gizlenebilir.
+  1. Kaynak bilgisayarı ve hesap denetleyin veya varsa birden çok kaynak bilgisayarlar ve hesaplarını bunlar bir şey (örneğin, tüm pazarlama personeli tetiklenmesi için uyarıyı neden belirli bir uygulama kullanma) ortak içinde olup olmadığını denetleyin. İçinde nadiren kullanılır, özel bir uygulama kimlik doğrulaması daha düşük bir şifreleme şifrelemeyle durumlar vardır. Kaynak bilgisayarda bu tür özel uygulamalar olup olmadığını denetleyin. Öyleyse, bu büyük olasılıkla zararsız true pozitif ve gizlenebilir.
+  
+  2. Kaynak denetimi bu biletleri tarafından erişilen, tüm erişmekte olan bir kaynak ise, doğrulamak, erişim olması geçerli bir kaynak olduğundan emin olun. Ayrıca, hedef kaynak güçlü şifreleme yöntemleri destekleyip desteklemediğini doğrulayın. Bu öznitelik msDS-SupportedEncryptionTypes, kaynak hizmet hesabının denetleyerek Active Directory'de denetleyebilirsiniz.
+
+3.  Karma Karma – excel elektronik tablodaki ağ etkinliği sekmesine gidin. İlgili branchcache'in alan olduğunu göreceksiniz **şifrelenmiş zaman damgası şifreleme türü** ve **kaynak bilgisayarı desteklenen şifreleme türlerini** daha güçlü şifreleme yöntemi içerir.
+
+  1. Bazı kullanıcılar akıllı kart yapılandırması yakın zamanda değiştiyse akıllı kart kullanarak oturum açtığınızda, bu uyarıyı tetikleyen. İlgili hesapları için bu gibi değişiklikler olup olmadığını denetleyin. Öyleyse, bu büyük olasılıkla zararsız true pozitif ve gizlenebilir.
+  2. Kaynak denetimi bu biletleri tarafından erişilen, tüm erişmekte olan bir kaynak ise, doğrulamak, erişim olması geçerli bir kaynak olduğundan emin olun. Ayrıca, hedef kaynak güçlü şifreleme yöntemleri destekleyip desteklemediğini doğrulayın. Bu öznitelik msDS-SupportedEncryptionTypes, kaynak hizmet hesabının denetleyerek Active Directory'de denetleyebilirsiniz.
 
 **Düzeltme**
 
@@ -225,9 +231,10 @@ Bir çoğaltma isteğini bir etki alanı denetleyicisi olmayan bir bilgisayardan
 
 **Araştırma**
 
-1. Söz konusu bilgisayar bir etki alanı denetleyicisi mi? Örneğin, çoğaltma olan yeni yükseltilen etki alanı denetleyicisi verir. Yanıt Evet ise, **kapatın ve dışlama** şüpheli etkinlik.  
+1.  Söz konusu bilgisayar bir etki alanı denetleyicisi mi? Örneğin, çoğaltma olan yeni yükseltilen etki alanı denetleyicisi verir. Yanıt Evet ise, **Kapat** şüpheli etkinlik. 
+2.  Söz konusu bilgisayarın verileri Active Directory'den çoğaltma olması gerekiyor? Örneğin, Azure AD Connect. Yanıt Evet ise, **kapatın ve dışlama** şüpheli etkinlik.
+3.  Kaynak bilgisayar ya da kendi profili sayfasına gitmek için hesap tıklayın. Ne gibi olağan dışı etkinlikler için arama çoğaltma gerçekleştiği sırada meydana denetleyin: kimin hangi kaynaklarında oturum erişilen burada. Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP rozet tıklatın ![Windows Defender ATP rozet](./media/wd-badge.png) Daha fazla makine araştırmak için. Windows Defender ATP uyarının gerçekleştiği sırada hangi işlemleri ve uyarılar oluştu görebilirsiniz. 
 
-2. Söz konusu bilgisayarın verileri Active Directory'den çoğaltma olması gerekiyor? Örneğin, Azure AD Connect. Yanıt Evet ise, **kapatın ve dışlama** şüpheli etkinlik.
 
 **Düzeltme**
 
@@ -352,7 +359,7 @@ DNS protokolünde birkaç sorgu türü vardır. Azure ATP olmayan DNS sunucular�
 
 2. Kaynak Makine güvenlik tarayıcısı çalışıyor mu? Yanıt Evet ise, **varlıkları dışlama** doğrudan ATP içinde **kapatın ve dışlama** veya aracılığıyla **dışlama** sayfa (altında **yapılandırma** – kullanılabilir Azure ATP yöneticileri için).
 
-3. Önceki tüm soruları olan yanıt Hayır, bu olduğunu varsayarsak, kötü amaçlı olduğundan.
+3. Önceki tüm soruları olan yanıt Hayır, kaynak bilgisayarda odaklanan araştırma tutmak ise. Kendi profili sayfasına gitmek için kaynak bilgisayara tıklayın. Ne gibi olağan dışı etkinlikler için arama isteğin gerçekleştiği sırada meydana denetleyin: kimin hangi kaynaklarında oturum erişilen burada. Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP rozet tıklatın ![Windows Defender ATP rozet](./media/wd-badge.png) Daha fazla makine araştırmak için. Windows Defender ATP uyarının gerçekleştiği sırada hangi işlemleri ve uyarılar oluştu görebilirsiniz. 
 
 **Düzeltme**
 
@@ -386,7 +393,7 @@ Bir etki alanı denetleyicisine karşı bir SMB oturumu numaralandırma gerçekl
 
 Kullanım [Net sona aracı](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) ortamınızı bu saldırılara karşı sağlamlaştırmak için.
 
-## <a name="remote-execution-attempt-detected"></a>Uzaktan yürütme girişimi algılandı
+## <a name="remote-execution-attempt"></a>Uzaktan yürütme girişimi
 
 **Açıklama**
 
@@ -402,7 +409,7 @@ Yönetimsel kimlik bilgilerini tehlikeye veya sıfırıncı gün yararlanma kull
 
  - Her iki soruların yanıtlanması gerekirse *Evet*, ardından **Kapat** uyarı.
 
-3. Her iki sorulara yanıt ise *hiçbir*, bu geçerli bir pozitif gerekenlerin sonra.
+3. Her iki sorulara yanıt ise Hayır, daha sonra bu true pozitif düşünülmelidir. Bilgisayarı ve hesap profilleri denetleyerek denemesi kaynağı bulmaya çalışın. Kaynak bilgisayar ya da kendi profili sayfasına gitmek için hesap tıklayın. Ne gibi olağan dışı etkinlikler için arama bu girişimleri gerçekleştiği sırada meydana denetleyin: kimin hangi kaynaklarında oturum erişilen burada. Windows Defender ATPintegration etkinleştirilirse, Windows Defender ATP rozet tıklatın ![Windows Defender ATP rozet](./media/wd-badge.png) Daha fazla makine araştırmak için. Windows Defender ATPyou uyarının gerçekleştiği sırada hangi işlemleri ve uyarılar oluştu görebilirsiniz. 
 
 **Düzeltme**
 
@@ -420,21 +427,25 @@ Bu algılama, Kerberos veya NTLM kullanarak birçok kimlik doğrulama hataları 
 
 **Araştırma**
 
-1. İlgili birçok hesapları varsa tıklatın **karşıdan ayrıntıları** bir Excel elektronik tabloda listesini görmek için.
+1.  Tıklatın **karşıdan ayrıntıları** bir Excel elektronik tabloda tam bilgileri görüntülemek için. Aşağıdaki bilgiler elde edebilirsiniz: 
+   -    Saldırıya uğrayan hesaplarının listesi
+   -    Başarılı kimlik doğrulaması ile sona erdi hangi oturum açma denemesi tahmin edilen hesaplarında listesi
+   -    Kimlik doğrulama girişimlerini NTLM kullanılarak gerçekleştirilen, ilgili olay etkinlikler görürsünüz 
+   -    Kimlik doğrulama girişimlerini Kerberos kullanılarak gerçekleştirilen, ilgili ağ etkinliklerini görürsünüz
 
-2. Kendi ayrıntıları sayfasına gitmek için uyarıyı tıklayın. Onay hiçbir oturum açma denemesi olursa başarılı bir kimlik doğrulaması ile sona erdi, bunlar şöyle görünür **hesapları tahmin** bilgi grafiği sağ tarafındaki. Yanıt Evet ise, olan **hesapları tahmin** kaynak bilgisayardan normalde kullanılan? Yanıt Evet ise, **bastır** şüpheli etkinlik.
+2.  Kendi profili sayfasına gitmek için kaynak bilgisayara tıklayın. Ne gibi olağan dışı etkinlikler için arama bu girişimleri gerçekleştiği sırada meydana denetleyin: kimin hangi kaynaklarında oturum erişilen burada. Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP rozet tıklatın ![Windows Defender ATP rozet](./media/wd-badge.png) Daha fazla makine araştırmak için. Windows Defender ATP uyarının gerçekleştiği sırada hangi işlemleri ve uyarılar oluştu görebilirsiniz. 
 
-3. Varsa hiçbir **hesapları tahmin**, olan **saldırıya hesapları** kaynak bilgisayardan normalde kullanılan? Yanıt Evet ise, **bastır** şüpheli etkinlik.
+3.  Kimlik doğrulaması, NTLM kullanılarak yapıldı ve çoğu zaman, uyarıyı oluşur ve yeterli bilgi yok, kaynak makine erişmeye çalıştığınız sunucu hakkında kullanılabilir, etkinleştirmeniz gereken gördüğünüz **NTLM denetim** üzerinde söz konusu etki alanı denetleyicileri. Bunu yapmak için olayı 8004 açın. Bu kaynak bilgisayar, kullanıcı hesabı hakkında bilgi içeren NTLM kimlik doğrulaması olayıdır ve **server** , kaynak makine erişmeyi denedi. Hangi sunucu kimlik doğrulama gönderilen öğrendikten sonra gibi kimlik doğrulama işlemi 4624 daha iyi anlamak olaylarına denetleyerek sunucunun araştırmanız gerekir. 
 
 **Düzeltme**
 
 [Uzun ve karmaşık parolalar](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) yanılma saldırılarına karşı güvenlik gerekli ilk düzeyi sağlar.
 
-## <a name="suspicious-service-creation---preview-feature"></a>Şüpheli hizmet oluşturma - önizleme özelliği!
+## <a name="suspicious-service-creation"></a>Şüpheli hizmet oluşturma
 
 **Açıklama**
 
-Şüpheli bir hizmet, kuruluşunuzdaki bir etki alanı denetleyicisinde oluşturuldu. Bu uyarı olayı 7045 noktalarınızı bu şüpheli etkinlik tanımlamak için kullanır. Olay 7045 iletilen uç noktalarından ATP için yapılandırarak [Windows Olay iletme'yi](configure-event-forwarding.md) veya 7045 olayları SIEM iletme ve [SIEM sunucunuzu yapılandırma hakkında](configure-event-collection.md) olayları ileten bir veri kaynağı ATP için.
+Şüpheli bir hizmet, kuruluşunuzdaki bir etki alanı denetleyicisinde oluşturuldu. Bu uyarı olayı 7045 noktalarınızı bu şüpheli etkinlik tanımlamak için kullanır. 
 
 **Araştırma**
 
@@ -481,14 +492,15 @@ Bu WannaCry saldırı olup olmadığını belirlemek için aşağıdaki adımlar
 
 Özellikle güvenlik güncelleştirmelerini uygulamak tüm makinelerinizi, düzeltme eki.
 
-1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+1. [SMBv1 devre dışı bırak](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 2. [WannaCry Kaldır](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
 3. Kullanıcı yeniden değil veya olduğu bilgisayarın açık varsa WanaKiwi ancak bazı ransom yazılım eline verilerin şifresini çözebilir. Daha fazla bilgi için bkz: [Cry yazılımı istiyor](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
 
 
->! [NOT] Kuşkulu bir etkinlik devre dışı bırakmak için desteğe başvurun.
+> [!NOTE]
+> Kuşkulu bir etkinlik devre dışı bırakmak için desteğe başvurun.
 
 
 ## <a name="see-also"></a>Ayrıca bkz:

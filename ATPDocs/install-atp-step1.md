@@ -1,23 +1,23 @@
 ---
-title: "Yükleme Azure Gelişmiş tehdit koruması - 1. adım | Microsoft Docs"
-description: "Azure ATP yüklemek için ilk adım, Azure ATP dağıtımınız için bir çalışma alanı oluşturma içerir."
-keywords: 
+title: Yükleme Azure Gelişmiş tehdit koruması - 1. adım | Microsoft Docs
+description: Azure ATP yüklemek için ilk adım, Azure ATP dağıtımınız için bir çalışma alanı oluşturma içerir.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/15/2018
+ms.date: 4/10/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 833e0bdf61ce25a8c56d820ad04981cd44321ac2
-ms.sourcegitcommit: f9d07a6b1f2193f0d2906092e252eb1d7398b493
+ms.openlocfilehash: a4c2f03955eddb4615b347fa8a211501546e6f4a
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -32,7 +32,8 @@ Bu yükleme yordamı oluşturmak ve bir çalışma alanı Azure ATP çalışma Y
 Azure ATP yönetme ve birden çok çalışma izleme olanağına sahip. Bir tanıtım çalışma ve, PT Azure ATP onu sunulmadan önce tüm kuruluşa işlemini test çalışma alanı oluşturmak isterseniz bu özellikle yararlıdır. Bu çok ormanlı dağıtımlar desteklemek için gereklidir. Tek bir çalışma alanı yalnızca tek bir ormandaki birden çok etki alanı izleyebilirsiniz. 
 
 > [!NOTE]
-> En fazla iki etkin çalışma alanları olabilir. Bir çalışma alanı sildikten sonra yeniden etkinleştirmek için desteğine başvurabilirsiniz. Bir üç silinen çalışma alanlarının bir mazimum sahip. Kaydedilmiş, silinen çalışma alanları sayısını artırmak için Azure ATP desteğe başvurun.
+> - En fazla iki etkin çalışma alanları olabilir. Bir çalışma alanı sildikten sonra yeniden etkinleştirmek için desteğine başvurabilirsiniz. Bir en fazla üç silinen çalışma alanları. Kaydedilmiş, silinen çalışma alanları sayısını artırmak için Azure ATP desteğe başvurun.
+> - Şu anda Azure ATP veri merkezleri Avrupa, Kuzey Amerika/Orta Amerika/Karayipler ve Asya'da dağıtılır.
 
 ## <a name="step-1-enter-the-workspace-management-portal"></a>1. Adım Çalışma alanı Yönetim Portalı'nı girin
 

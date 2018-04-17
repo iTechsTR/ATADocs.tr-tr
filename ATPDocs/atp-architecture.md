@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 57f4eb56eaa0547d18421b17fb5804840e4997e3
-ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
+ms.openlocfilehash: 435e5141c8abda338c1115004d1876ff5b7736a4
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -106,7 +106,7 @@ Aşağıdaki ölçütleri ağınızda dağıtmak için kaç tane Azure ATP çal�
 
 ## <a name="azure-atp-sensor-and-azure-atp-standalone-sensor"></a>Azure ATP algılayıcı ve Azure ATP tek başına algılayıcısı
 
-**Azure ATP algılayıcı** ve **Azure ATP algılayıcı** her ikisi de aynı çekirdek işlevlere sahiptir:
+**Azure ATP algılayıcı** ve **Azure ATP tek başına algılayıcı** her ikisi de aynı çekirdek işlevlere sahiptir:
 
 -   Etki alanı denetleyicisi ağ trafiğini yakalayıp denetleyin. Azure ATP tek başına algılayıcılar için bağlantı noktası yansıtılmış trafik ve Azure ATP algılayıcılar yer alan etki alanı denetleyicisinin yerel trafiği budur. 
 
