@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/28/2018
+ms.date: 4/22/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3c8e0b239c335981b2030021d1d4e319b2810fda
-ms.sourcegitcommit: 7c9fe4eb781bec71129310a6e0c5e76b022a0213
+ms.openlocfilehash: 9a9998360a24fd7f4d4151d4572c7715be03d34d
+ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -88,7 +88,7 @@ Etki alanı denetleyicileriniz bulut hizmetiyle iletişim kurmak güvenlik duvar
 Sanal makineler Azure ATP tek başına algılayıcı ile kullanma hakkında daha fazla bilgi için bkz: [bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md).
 
 > [!NOTE]
-> En az 5 GB alan gereklidir ve 10 GB önerilir. Bu Azure ATP ikili dosyaları, Azure ATP günlüklerini ve performans için gereken alanı içerir günlükleri.
+> En az 5 GB disk alanı gereklidir ve 10 GB önerilir. Bu Azure ATP ikili dosyaları, Azure ATP günlüklerini ve performans için gereken alanı içerir günlükleri.
 
 ### <a name="server-specifications"></a>Sunucu belirtimleri
 En iyi performans için ayarlanmış **güç seçeneği** için Azure ATP tek başına algılayıcı **yüksek performanslı**.<br>
@@ -107,9 +107,9 @@ Sunucuları ve etki alanı denetleyicileri algılayıcı yüklendiği için beş
 ### <a name="network-adapters"></a>Ağ bağdaştırıcıları
 Azure ATP tek başına algılayıcı en az bir Yönetim bağdaştırıcısı ve en az bir yakalama bağdaştırıcısı gerekir:
 
--   **Yönetim bağdaştırıcısı** - şirket ağınızdaki iletişim için kullanılır. Bu bağdaştırıcı aşağıdaki ayarlara sahip yapılandırılmış olması gerekir:
+-   **Yönetim bağdaştırıcısı** - şirket ağınızdaki iletişim için kullanılır. Algılayıcı, koruma ve makine hesapları çözümlemesinde DC sorgulamak için bu bağdaştırıcı kullanır. <br>Bu bağdaştırıcı aşağıdaki ayarlara sahip yapılandırılmış olması gerekir:
 
-    -   Varsayılan algılayıcı dahil statik IP adresi
+    -   Varsayılan ağ geçidi dahil statik IP adresi
 
     -   Tercih edilen ve alternatif DNS sunucuları
 
@@ -164,11 +164,11 @@ Etki alanı denetleyicisi salt okunur etki alanı denetleyicisi (RODC) olabilir.
 
 Etki alanı denetleyicileriniz bulut hizmetiyle iletişim kurmak güvenlik duvarları ve proxy için 443 numaralı bağlantı noktasını açmalısınız *. atp.azure.com.
 
-Yükleme sırasında .net Framework 4.7 yüklenir ve etki alanı denetleyicisini yeniden neden olabilir.
+Yükleme sırasında .net Framework 4.7 yüklenir ve yeniden başlatma beklemede ise etki alanı denetleyicisinin yeniden başlatma gerektirebilir.
 
 
 > [!NOTE]
-> En az 5 GB alan gereklidir ve 10 GB önerilir. Bu Azure ATP ikili dosyaları, Azure ATP günlüklerini ve performans için gereken alanı içerir günlükleri.
+> En az 5 GB disk alanı gereklidir ve 10 GB önerilir. Bu Azure ATP ikili dosyaları, Azure ATP günlüklerini ve performans için gereken alanı içerir günlükleri.
 
 ### <a name="server-specifications"></a>Sunucu belirtimleri
 
