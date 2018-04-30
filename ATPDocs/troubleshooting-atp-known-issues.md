@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/10/2018
+ms.date: 4/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2112e9fea1f316ff12d87b3a477b78bff4457a5f
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: c430ec58c197c8fcc6e539d0923278cd8469987d
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -28,6 +28,24 @@ ms.lasthandoff: 04/16/2018
 ## <a name="deployment-log-location"></a>Dağıtım günlüğü konumu
  
 Azure ATP dağıtım günlükleri ürünü yükleyen kullanıcının temp dizininde bulunur. Varsayılan yükleme konumunda, şu anda bulunabilir: C:\Users\Administrator\AppData\Local\Temp (veya bir dizin % temp % yukarıda).
+
+## <a name="proxy-authentication-problem-presents-as-licensing-error"></a>Proxy kimlik doğrulama sorunu lisans hata olarak gösterir
+
+Algılayıcı yükleme sırasında aşağıdaki hata iletisini: **algılayıcı lisans sorunları nedeniyle kaydedilemedi.**
+
+Dağıtım günlük girdileri: [1C 60: 1AA8] [2018-03-24T23:59:13] i000: 2018-03-25 02:59:13.1237 bilgisi InteractiveDeploymentManager ValidateCreateSensorAsync döndürülen [\[] validateCreateSensorResult LicenseInvalid = [\]] [1 c 60 : 1AA8] [2018-03-24T23:59:56] i000: 2018-03-25 02:59:56.4856 bilgisi InteractiveDeploymentManager ValidateCreateSensorAsync döndürülen [\[] validateCreateSensorResult LicenseInvalid = [\]] [60 1 C: 1AA8] [2018-03-25T00:27:56] i000: 2018-03-25 03:27:56.7399 SensorBootstrapperApplication Engine.Quit hata ayıklama [\[] deploymentResultStatus 1602 isRestartRequired = False = [\]] [60 1 C: 15B8] [2018-03-25T00:27:56] i500: kapatılıyor, çıkış kodu: 0x642
+
+
+**Neden:**
+
+Bazı durumlarda, bir proxy iletişim kurarken kimlik doğrulama işlemi sırasında hatayla 401 veya 403 hatası 407 yerine Azure ATP algılayıcı yanıt. Azure ATP algılayıcı hata 401 veya 403 proxy kimlik doğrulama sorunu değil de, bir lisans sorunu olarak görürler. 
+
+**Çözüm:**
+
+Algılayıcı göz atabilirsiniz olun *. kimlik doğrulaması olmadan yapılandırılmış bir proxy üzerinden atp.azure.com. Daha fazla bilgi için [iletişim sağlamak için proxy ayarlarını yapılandır](configure-proxy.md).
+
+
+
 
 ## <a name="azure-atp-sensor-nic-teaming-issue"></a>Azure ATP algılayıcı NIC ekip oluşturma sorunu
 

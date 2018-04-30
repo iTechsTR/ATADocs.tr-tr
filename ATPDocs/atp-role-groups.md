@@ -1,23 +1,23 @@
 ---
-title: "Erişim yönetimi için Azure Advanced Threat Protection rol grupları | Microsoft Docs"
-description: "Azure ATP rol gruplarıyla çalışmada size yol gösterir."
-keywords: 
+title: Erişim yönetimi için Azure Advanced Threat Protection rol grupları | Microsoft Docs
+description: Azure ATP rol gruplarıyla çalışmada size yol gösterir.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 4/30/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 86cb55fd2b5ce81460dead4b8b753c88f79edd7b
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 8fda27ed8ed4a589ff205e815e8b3cf97026b819
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -46,10 +46,9 @@ Azure ATP güvenlik grubu üç tür sunar: Azure ATP *çalışma alanı adı* Y�
 |Etkinlik |Azure ATP *çalışma alanı adı* yöneticileri|Azure ATP *çalışma alanı adı* kullanıcılar|Azure ATP *çalışma alanı adı* görüntüleyiciler|
 |----|----|----|----|
 |Oturum aç|Kullanılabilir|Kullanılabilir|Kullanılabilir|
-|Kuşkulu Etkinlikler için Giriş sağlama|Kullanılabilir|Kullanılabilir|Yok|
 |Kuşkulu Etkinliklerin durumunu değiştirme|Kullanılabilir|Kullanılabilir|Yok|
-|E-posta/bağlantı alma üzerinden şüpheli etkinlikleri paylaşma/dışarı aktarma|Kullanılabilir|Kullanılabilir|Yok|
-|İzleme Uyarılarının durumunu değiştirme|Kullanılabilir|Kullanılabilir|Yok|
+|E-posta/bağlantı alma üzerinden şüpheli etkinlikleri paylaşma/dışarı aktarma|Kullanılabilir|Kullanılabilir|Kullanılabilir|
+|İzleme Uyarılarının durumunu değiştirme|Kullanılabilir|Yok|Yok|
 |Azure ATP yapılandırmasını güncelleştir|Kullanılabilir|Yok|Yok|
 |Algılayıcı – Ekle|Kullanılabilir|Yok|Yok|
 |Algılayıcı – Sil |Kullanılabilir|Yok|Yok|
@@ -62,7 +61,7 @@ Kullanıcılar kendi rol grubu için kullanılabilir olmayan bir sayfaya erişme
 
 ## <a name="add-and-remove-users"></a>Ekleme ve kaldırma 
 
-Azure ATP Azure AD güvenlik grupları için rol gruplarını temel olarak kullanır. Rol grupları sunucudan yönetilebilir [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All grupları](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups).  Yalnızca AAD kullanıcılarını eklenemez veya güvenlik grubundan kaldırıldı. 
+Azure ATP Azure AD güvenlik grupları için rol gruplarını temel olarak kullanır. Rol grupları sunucudan yönetilebilir [ https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All grupları](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups).  Yalnızca AAD kullanıcılarını eklenemez veya güvenlik grubundan kaldırıldı. 
 
 
 ## <a name="see-also"></a>Ayrıca bkz:

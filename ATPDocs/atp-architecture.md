@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/27/2018
+ms.date: 4/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 435e5141c8abda338c1115004d1876ff5b7736a4
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: 838c5ce470bdf78ec81aed5d6fa1cf2407abc6f9
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -30,6 +30,8 @@ Azure Advanced Threat Protection mimarisi Bu diyagramda ayrıntılı olarak aç�
 Azure ATP fiziksel veya sanal anahtarlar kullanan bir Azure ATP tek başına algılayıcı için bağlantı noktası yansıtma yararlanarak, etki alanı denetleyicisi ağ trafiğinizi izler. Etki alanı denetleyicilerinizde doğrudan Azure ATP algılayıcı dağıtırsanız, bağlantı noktası yansıtma için gerekliliğini ortadan kaldırır. Ayrıca, Azure ATP (doğrudan etki alanı denetleyicileriniz veya bir SIEM sunucusundan iletilen) Windows olaylarını da kullanabilir ve saldırı ve tehdit verilerini analiz edin. Azure ATP Azure ATP tek başına algılayıcı ve Azure ATP algılayıcı ayrıştırılmış trafiği alır. Daha sonra ağınız hakkında bilgi edinmek, anomali algılamayı etkinleştirmek ve şüpheli etkinliklerde sizi uyarmak için profil oluşturma işlemini yapar, belirlenimci algılama çalıştırır, makine öğrenimi ve davranışsal algoritmaları çalıştırır.
 
 Bu bölümde, ağ akışı ve olay yakalama açıklanmıştır ve aşağı ATP ana bileşenlerinin işlevleri ayrıntılı açıklanmıştır: (hangi Azure ATP tek başına algılayıcı aynı çekirdek işlevlere sahiptir) Azure ATP algılayıcı, Azure ATP tek başına algılayıcısı ve Azure ATP bulut hizmeti. 
+
+Doğrudan etki alanı denetleyicilerine yüklendiğinde algılayıcı gerekli olay günlüklerini doğrudan etki alanı denetleyicisinden erişir. Bu günlükler ve ağ trafiğini algılayıcı tarafından çözümlenmemiş sonra Azure ATP Azure ATP hizmeti (tüm günlükleri) yalnızca bu ayrıştırılmış bilgiler gönderir.
 
 ## <a name="azure-atp-components"></a>Azure ATP bileşenleri
 Azure ATP aşağıdaki bileşenlerden oluşur:

@@ -1,23 +1,23 @@
 ---
-title: "Advanced Threat Analytics yanal hareket yolu algılamayı etkinleştirmek için SAM-R yapılandırma | Microsoft Docs"
-description: "Yanal hareket yolu algılamayı Advanced Threat Analytics (ATA) içinde etkinleştirmek için SAM-R yapılandırmayı açıklar"
-keywords: 
+title: Advanced Threat Analytics yanal hareket yolu algılamayı etkinleştirmek için SAM-R yapılandırma | Microsoft Docs
+description: Yanal hareket yolu algılamayı Advanced Threat Analytics (ATA) içinde etkinleştirmek için SAM-R yapılandırmayı açıklar
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 4/25/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a49478698adea15637698f4c715cdd34a9a601c4
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 6e32f3ce59b049d0ced68a1330eefca7315bf49d
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 03/22/2018
 
 [Yanal hareket yolu](use-case-lateral-movement-path.md) algılama belirli makinelerde yerel Yöneticiler tanımlamak sorgularını kullanır. Bu sorguları aracılığıyla oluşturulan ATA hizmet hesabı SAM-R protokolü kullanılarak gerçekleştirilen [2. adım. AD'ye bağlanma](install-ata-step2.md).
  
-Windows istemcileri ve sunucuları bu SAM-R işlemi gerçekleştirmek ATA hizmeti hesabına izin ver emin olmak için Grup İlkesi değişiklik yapılması gerekir.
+Windows istemcileri ve sunucuları bu SAM-R işlemi, bir değişiklik yapmak ATA hizmet hesabı olanak sağlamak için **Grup İlkesi** yapılmalıdır listelenen yapılandırılmış hesapları yanı sıra ATA hizmet hesabı ekler içinde **ağ erişimi** ilkesi.
 
 1. İlkesi'ni bulun:
 

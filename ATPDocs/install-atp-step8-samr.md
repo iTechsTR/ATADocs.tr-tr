@@ -1,23 +1,23 @@
 ---
-title: "Azure ATP yanal hareket yolu algılamayı etkinleştirmek için SAM-R yapılandırma | Microsoft Docs"
-description: "Azure ATP yanal hareket yolu algılamayı etkinleştirmek için SAM-R yapılandırmayı açıklar"
-keywords: 
+title: Azure ATP yanal hareket yolu algılamayı etkinleştirmek için SAM-R yapılandırma | Microsoft Docs
+description: Azure ATP yanal hareket yolu algılamayı etkinleştirmek için SAM-R yapılandırmayı açıklar
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 4/29/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0e2ac4fb68fb1429610a0416582c871c9ae704df
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 24b42c5425933d8931a85e0ba454a69e0ca94a21
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/21/2018
 
 [Yanal hareket yolu](use-case-lateral-movement-path.md) algılama belirli makinelerde yerel Yöneticiler tanımlamak sorgularını kullanır. Bu sorguları aracılığıyla oluşturulan Azure ATP hizmet hesabı SAM-R protokolü kullanılarak gerçekleştirilen [2. adım. AD'ye bağlanma](install-atp-step2.md).
  
-Windows istemcileri ve sunucuları bu SAM-R işlemi gerçekleştirmek Azure ATP hizmet hesabı olanak sağlamak için Grup İlkesi değişiklik yapılması gerekir.
+Windows emin olmak için istemciler ve sunucular bu SAM-R işlemi, bir değişiklik yapmak Azure ATP hesabına izin ver **Grup İlkesi** listelenenyapılandırılmışhesaplarıyanısıraAzureATPhizmethesabıeklemekiçinyapılmasıgerekir **Ağ erişimi** ilkesi.
 
 1. İlkesi'ni bulun:
 
