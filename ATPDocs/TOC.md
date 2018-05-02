@@ -6,6 +6,7 @@
 ## [Azure ATP önkoşulları](atp-prerequisites.md)
 ## [Azure ATP mimarisi](atp-architecture.md)
 ## [Azure ATP kapasitenizi planlama](atp-capacity-planning.md)
+### [İletişimi etkinleştirmek için proxy ayarlarını yapılandırma](configure-proxy.md)
 # Dağıt
 ## [1 Çalışma alanı yönetim portalında bir çalışma alanı oluşturma](install-atp-step1.md)
 ## [2 AD’ye bağlanma](install-atp-step2.md)
@@ -21,7 +22,6 @@
 ### [Bağlantı noktası yansıtmayı doğrulama](validate-port-mirroring.md)
 ### [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 ### [Windows Olay İletme’yi yapılandırma](configure-event-forwarding.md)
-### [İletişimi etkinleştirmek için proxy ayarlarını yapılandırma](configure-proxy.md)
 # Bu çözümdeki tüm sanal makineleri güncelleştirmek için Windows Server Update Services ile birlikte
 ## [Azure ATP sistem durumu merkezi](atp-health-center.md)
 ## [Azure ATP raporları](reports.md)
@@ -44,3 +44,4 @@
 # Sorun giderme
 ## [Bilinen sorunları giderme](troubleshooting-atp-known-issues.md)
 ## [Destek ve bilgiler](atp-support.md)
+## [Azure ATP hazırlık yol haritası](atp-resources.md)
