@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/22/2018
+ms.date: 5/8/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9a9998360a24fd7f4d4151d4572c7715be03d34d
-ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
+ms.openlocfilehash: ae859121fbe856c93b8568ef38bf0b4bdb77837a
+ms.sourcegitcommit: 8472f3f46fc90da7471cd1065cdb2f6a1d5a9f69
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/08/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -139,21 +139,21 @@ Aşağıdaki tabloda yönetim bağdaştırıcısında yapılandırılması Azure
 |LDAP - Genel Katalog|TCP|3268|Etki alanı denetleyicileri|Giden|
 |LDAPS - Genel Katalog|TCP|3269|Etki alanı denetleyicileri|Giden|
 |Kerberos|TCP ve UDP|88|Etki alanı denetleyicileri|Giden|
-|Netlogon (SMB, CIFS, SAM-R)|TCP ve UDP|445|Etki alanı denetleyicileri|Giden|
+|Netlogon (SMB, CIFS, SAM-R)|TCP ve UDP|445|Ağdaki tüm cihazlar|Giden|
 |Windows Saati|UDP|123|Etki alanı denetleyicileri|Giden|
 |DNS|TCP ve UDP|53|DNS Sunucuları|Giden|
 |RPC üzerinden NTLM|TCP|135|Ağdaki tüm cihazlar|Giden|
 |NetBIOS|UDP|137|Ağdaki tüm cihazlar|Giden|
 |Syslog (isteğe bağlı)|TCP/UDP|yapılandırmasına bağlı olarak 514|SIEM Sunucusu|Gelen|
 |RADIUS|UDDP|1813|RADIUS|Gelen|
+|RDP|TCP|3389|Ağdaki tüm cihazlar|Giden|
 
 > [!NOTE]
 > - Dizin hizmeti kullanıcı hesabı kullanarak, algılayıcı uç noktaları oluşturmak için SAM-R (ağda oturum açma) kullanarak yerel Yöneticiler için kuruluşunuzdaki sorgular [yanal hareket yolu grafik](use-case-lateral-movement-path.md). Daha fazla bilgi için bkz: [SAM-R yapılandırmak gerekli izinleri](install-atp-step8-samr.md).
 > - Aşağıdaki bağlantı noktalarını açık cihazlarda gelen trafik Azure ATP tek başına algılayıcılar ağdan gerekir:
 >   -   Çözümleme amacıyla (TCP bağlantı noktası 135) RPC üzerinden NTLM
 >   -   Çözümleme amacıyla NetBIOS (UDP bağlantı noktası 137)
->   -   Algılama amacıyla SAM-R sorgular (TCP/UDP bağlantı noktası 445)
-
+>   -   RDP (TCP bağlantı noktası 3389), yalnızca ilk paketinin *istemci hello*, çözümleme amacıyla<br> Kimlik doğrulaması bağlantı noktaları hiçbirinde gerçekleştirilmez unutmayın.
 
 ## <a name="azure-atp-sensor-requirements"></a>Azure ATP algılayıcı gereksinimleri
 Bu bölümde Azure ATP algılayıcı için gereksinimleri listelenir.
@@ -202,18 +202,18 @@ Aşağıdaki tabloda Azure ATP algılayıcı gereken minimum bağlantı noktalar
 |**İç bağlantı noktaları**|||||
 |DNS|TCP ve UDP|53|DNS Sunucuları|Giden|
 |RPC üzerinden NTLM|TCP|135|Ağdaki tüm cihazlar|Giden|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Etki alanı denetleyicileri|Giden|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Ağdaki tüm cihazlar|Giden|
 |NetBIOS|UDP|137|Ağdaki tüm cihazlar|Giden|
 |Syslog (isteğe bağlı)|TCP/UDP|yapılandırmasına bağlı olarak 514|SIEM Sunucusu|Gelen|
 |RADIUS|UDDP|1813|RADIUS|Gelen|
+|TLS RDP bağlantı noktası|TCP|3389|Ağdaki tüm cihazlar|Giden|
 
 > [!NOTE]
-> - Dizin hizmeti kullanıcı hesabı kullanarak, algılayıcı uç noktaları oluşturmak için SAM-R (ağda oturum açma) kullanarak yerel Yöneticiler için kuruluşunuzdaki sorgular [yanal hareket yolu grafik](use-case-lateral-movement-path.md).
-> - Aşağıdaki bağlantı noktalarını açık cihazlarda gelen trafik Azure ATP algılayıcılar ağdan gerekir:
+> - Dizin hizmeti kullanıcı hesabı kullanarak, algılayıcı uç noktaları oluşturmak için SAM-R (ağda oturum açma) kullanarak yerel Yöneticiler için kuruluşunuzdaki sorgular [yanal hareket yolu grafik](use-case-lateral-movement-path.md). Daha fazla bilgi için bkz: [SAM-R yapılandırmak gerekli izinleri](install-atp-step8-samr.md).
+> - Aşağıdaki bağlantı noktalarını açık cihazlarda gelen trafik Azure ATP tek başına algılayıcılar ağdan gerekir:
 >   -   Çözümleme amacıyla (TCP bağlantı noktası 135) RPC üzerinden NTLM
 >   -   Çözümleme amacıyla NetBIOS (UDP bağlantı noktası 137)
->   -   Algılama amacıyla SAM-R sorgular (TCP/UDP bağlantı noktası 445)
-
+>   -   RDP (TCP bağlantı noktası 3389), yalnızca ilk paketinin *istemci hello*, çözümleme amacıyla<br> Kimlik doğrulaması bağlantı noktaları hiçbirinde gerçekleştirilmez unutmayın.
 
 
 

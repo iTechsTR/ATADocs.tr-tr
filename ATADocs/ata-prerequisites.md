@@ -1,23 +1,23 @@
 ---
-title: "Advanced Threat Analytics önkoşulları | Microsoft Docs"
-description: "Ortamınızda başarılı bir ATA dağıtımının gereksinimlerini açıklar"
-keywords: 
+title: Advanced Threat Analytics önkoşulları | Microsoft Docs
+description: Ortamınızda başarılı bir ATA dağıtımının gereksinimlerini açıklar
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 5/6/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 419df4c4404bf26a85c1a955139d0dee6f50828e
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 91ce961b832fd02ba343b3f55ae3570fe4b10207
+ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
@@ -121,9 +121,7 @@ Aşağıdaki tabloda, ATA Center’ın düzgün çalışması için açılması 
 |**LDAPS** (isteğe bağlı)|TCP|636|Etki alanı denetleyicileri|Giden|
 |**DNS**|TCP ve UDP|53|DNS sunucuları|Giden|
 |**Kerberos** (etki alanına katılmış ise isteğe bağlı)|TCP ve UDP|88|Etki alanı denetleyicileri|Giden|
-|**Netlogon** (etki alanına katılmış ise isteğe bağlı)|TCP ve UDP|445|Etki alanı denetleyicileri|Giden|
 |**Windows Saati** (isteğe bağlı etki alanına katılmış ise)|UDP|123|Etki alanı denetleyicileri|Giden|
-|**Netlogon (SMB, CIFS, SAM-R)**|TCP ve UDP|445|Ağ geçitleri ve cihazlar|Gelen ve giden|
 
 > [!NOTE]
 > LDAP ATA Gateway bileşenleri ve etki alanı denetleyicileri arasında kullanılacak kimlik bilgilerini test etmek için gereklidir. Test sonra ve ATA Gateway LDAP kendi normal Çözümleme işleminin bir parçası kullanır, bu kimlik bilgileri geçerliliğini sınamak için etki alanı denetleyicisi ATA Center'dan gerçekleştirilir.
@@ -212,7 +210,7 @@ Aşağıdaki tabloda, ATA Gateway için yönetim bağdaştırıcısında yapıla
 |LDAP - Genel Katalog|TCP|3268|Etki alanı denetleyicileri|Giden|
 |LDAPS - Genel Katalog|TCP|3269|Etki alanı denetleyicileri|Giden|
 |Kerberos|TCP ve UDP|88|Etki alanı denetleyicileri|Giden|
-|Netlogon|TCP ve UDP|445|Etki alanı denetleyicileri|Giden|
+|Netlogon (SMB, CIFS, SAM-R)|TCP ve UDP|445|Ağdaki tüm cihazlar|Giden|
 |Windows Saati|UDP|123|Etki alanı denetleyicileri|Giden|
 |DNS|TCP ve UDP|53|DNS Sunucuları|Giden|
 |RPC üzerinden NTLM|TCP|135|Ağdaki tüm cihazlar|Giden|
@@ -225,6 +223,10 @@ Aşağıdaki tabloda, ATA Gateway için yönetim bağdaştırıcısında yapıla
 >
 > -   RPC üzerinden NTLM (TCP Bağlantı Noktası 135)
 > -   NetBIOS (UDP bağlantı noktası 137)
+> - Dizin hizmeti kullanıcı hesabı kullanarak, ATA Gateway uç noktaları oluşturmak için SAM-R (ağda oturum açma) kullanarak yerel Yöneticiler için kuruluşunuzdaki sorgular [yanal hareket yolu grafik](use-case-lateral-movement-path.md). Daha fazla bilgi için bkz: [SAM-R yapılandırmak gerekli izinleri](install-ata-step9-samr.md).
+> - Aşağıdaki bağlantı noktalarını açık cihazlarda gelen trafik ATA Gateway ağdan gerekir:
+>   -   Çözümleme amacıyla (TCP bağlantı noktası 135) RPC üzerinden NTLM
+>   -   Çözümleme amacıyla NetBIOS (UDP bağlantı noktası 137)
 
 ## <a name="ata-lightweight-gateway-requirements"></a>ATA Lightweight Gateway gereksinimleri
 Bu bölümde, ATA Lightweight Gateway’in gereksinimleri listelenir.
@@ -280,12 +282,17 @@ Aşağıdaki tabloda, ATA Lightweight Gateway için gereken minimum bağlantı n
 |NetBIOS|UDP|137|Ağdaki tüm cihazlar|Giden|
 |SSL|TCP|443|ATA Center|Giden|
 |Syslog (isteğe bağlı)|UDP|514|SIEM Sunucusu|Gelen|
+|Netlogon (SMB, CIFS, SAM-R)|TCP ve UDP|445|Ağdaki tüm cihazlar|Giden|
 
 > [!NOTE]
 > ATA Lightweight Gateway tarafından yapılan çözümleme işlemi kapsamında, ATA Lightweight Gateway bileşenlerinden aşağıdaki bağlantı noktaları ağdaki cihazlarda gelen trafik için açılmalıdır.
 >
 > -   RPC üzerinden NTLM
 > -   NetBIOS
+> - Dizin hizmeti kullanıcı hesabı kullanarak, ATA Lightweight Gateway uç noktaları oluşturmak için SAM-R (ağda oturum açma) kullanarak yerel Yöneticiler için kuruluşunuzdaki sorgular [yanal hareket yolu grafik](use-case-lateral-movement-path.md). Daha fazla bilgi için bkz: [SAM-R yapılandırmak gerekli izinleri](install-ata-step9-samr.md).
+> - Aşağıdaki bağlantı noktalarını açık cihazlarda gelen trafik ATA Gateway ağdan gerekir:
+>   -   Çözümleme amacıyla (TCP bağlantı noktası 135) RPC üzerinden NTLM
+>   -   Çözümleme amacıyla NetBIOS (UDP bağlantı noktası 137)
 
 ## <a name="ata-console"></a>ATA Konsolu
 ATA Konsolu tarayıcılar ve ayarları destekleyen bir tarayıcı erişilebilir:

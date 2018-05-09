@@ -1,23 +1,23 @@
 ---
-title: "Advanced Threat Analytics sık sorulan sorular | Microsoft Docs"
-description: "ATA hakkında sık sorulan soruların ve bunlarla ilişkili yanıtların listesini sağlar"
-keywords: 
+title: Advanced Threat Analytics sık sorulan sorular | Microsoft Docs
+description: ATA hakkında sık sorulan soruların ve bunlarla ilişkili yanıtların listesini sağlar
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 5/6/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5fe0e6f0d8c75c099aa6623cd0f5245c955d9ffa
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f372b4b85c240079da157052e2c20c46801398be
+ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
@@ -51,6 +51,10 @@ Sürüm yükseltme bilgileri için bkz: [ATA yükseltme yolu](upgrade-path.md).
 
 ATA sürüm yükseltme matrisi için bkz: [ATA yükseltme yolu](upgrade-path.md).
 
+
+## <a name="how-does-the-ata-center-update-its-latest-signatures"></a>Nasıl ATA Center son imzalarını güncelleştirmesi mu?
+
+Yeni bir sürümü ATA Center yüklendikten sonra ATA algılama mekanizması geliştirilmiştir. Microsoft Update (MU) kullanarak veya el ile yeni sürümü Yükleme Merkezi'nden veya toplu lisans sitesine İndirme Merkezi yükseltebilirsiniz.
 
 ## <a name="how-do-i-verify-windows-event-forwarding"></a>Windows Olay İletme’yi nasıl doğrularım?
 Aşağıdaki kodu bir dosyaya yerleştirerek komut isteminde şu dizinden çalıştırabilirsiniz: **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**:

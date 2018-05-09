@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/15/2018
+ms.date: 5/6/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6246849cf7e8566b27c969b73e9c96cb0e7b7978
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: 9b28cf2497e1f742416f996e4b2dcaf934dc9142
+ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -124,26 +124,6 @@ Bu algılama, Azure ATP yoğun birkaç basit bağı kimlik doğrulamalarını al
 
 3.  Söz konusu hesabı hassas, değilse karma karma – sonra bu hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilmesine karşın bu saldırgan parola karma değerden yeni Kerberos biletleri oluşturmasını engeller. Hassas hesap ise, iki kez altın anahtar şüpheli etkinlik olduğu gibi KRBTGT hesabı sıfırlama düşünmelisiniz. KRBTGT iki kez sıfırlama tüm Kerberos biletleri bu etki alanında, böylece bunu yapmadan önce planlama geçersiz kılar. Kılavuzunda bkz [KRBTGT hesabı parola sıfırlama betikleri müşteriler için artık kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Ayrıca bkz [KRBTGT hesabı parola/anahtarları aracı Sıfırla](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Yanal hareket teknik olduğundan, en iyi uygulamaları izleyerek [karma önerileri geçirmek](http://aka.ms/PtH).
 
-## Altın anahtar<a name="golden-ticket"></a>
-
-**Açıklama**
-
-Saldırganlar etki alanı yönetici haklarına sahip tehlikeye [KRBTGT hesabı](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). KRBTGT hesabı kullanarak, bunlar herhangi bir rastgele anda bilet sona erme tarihini ayarlayabilir ve herhangi bir kaynak için yetkilendirme sağlayan bilet (TGT) veren bir Kerberos anahtarı oluşturabilir. Bu sahte TGT "Altın anahtar" denir ve ağdaki kalıcılığı elde etmek, saldırganların sağlar.
-
-İzni veriliyor bileti için kullanılan bir Kerberos anahtarı belirtildiği gibi izin verilen süre birden fazla izin verdiğinde bu algılama, bir uyarı tetiklendiğinde [kullanıcı anahtarının en fazla ömrü](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) güvenlik ilkesi.
-
-**Araştırma**
-
-1. Yapılan en son (son birkaç saat içinde) değişiklik oluştu **kullanıcı anahtarının en fazla ömrü** içinde Grup İlkesi ayarı? Yanıt Evet ise, ardından **Kapat** (Yanlış pozitif olduğu) uyarı.
-
-2. Bu uyarı bir sanal makine Azure ATP tek başına algılayıcı karmaşıktır? Yanıtınız evet ise, en son kaydedilen durumdan sürdürün? Yanıt Evet ise, ardından **Kapat** bu uyarı.
-
-3. Yukarıdaki sorulara yanıt ise Hayır, bu kötü amaçlı olduğunu varsayalım.
-
-**Düzeltme**
-
-Kerberos anahtar verme anahtarı (KRBTGT) parolayı iki kez kılavuzunda göre değiştirmek [KRBTGT hesabı parola sıfırlama betikleri müşteriler için artık kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)kullanarak [KRBTGT hesabı parola/anahtarlarını sıfırlama Aracı](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). KRBTGT iki kez sıfırlama tüm Kerberos biletleri bu etki alanında, böylece bunu yapmadan önce planlama geçersiz kılar. Ayrıca, bir altın anahtar oluşturmak için etki alanı yönetici hakları gerekir çünkü uygulamak [karma önerileri geçirmek](http://aka.ms/PtH).
-
 ## <a name="honeytoken-activity"></a>Honeytoken etkinliği
 
 
@@ -201,6 +181,26 @@ Geçişi anahtar bir yanal hareket tekniktir saldırganlar bir bilgisayardan Ker
 
 2. Hassas hesap ise, iki kez altın anahtar şüpheli etkinlik olduğu gibi KRBTGT hesabı sıfırlama düşünmelisiniz. KRBTGT iki kez sıfırlama tüm Kerberos biletleri bu etki alanında, böylece bunu yapmadan önce planlama geçersiz kılar. Kılavuzunda bkz [KRBTGT hesabı parola sıfırlama betikleri müşteriler için artık kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), ayrıca bkz [KRBTGT hesabı parola/anahtarları aracı Sıfırla](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Bu bir yanal hareket teknik olduğuna göre en iyi uygulamaları izleyin [karma önerileri geçirmek](http://aka.ms/PtH).
 
+## Kerberos altın anahtarı<a name="golden-ticket"></a>
+
+**Açıklama**
+
+Saldırganlar etki alanı yönetici haklarına sahip tehlikeye [KRBTGT hesabı](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). KRBTGT hesabı kullanarak, bunlar herhangi bir rastgele anda bilet sona erme tarihini ayarlayabilir ve herhangi bir kaynak için yetkilendirme sağlayan bilet (TGT) veren bir Kerberos anahtarı oluşturabilir. Bu sahte TGT "Altın anahtar" denir ve ağdaki kalıcılığı elde etmek, saldırganların sağlar.
+
+İzni veriliyor bileti için kullanılan bir Kerberos anahtarı belirtildiği gibi izin verilen süre birden fazla izin verdiğinde bu algılama, bir uyarı tetiklendiğinde [kullanıcı anahtarının en fazla ömrü](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) güvenlik ilkesi.
+
+**Araştırma**
+
+1. Yapılan en son (son birkaç saat içinde) değişiklik oluştu **kullanıcı anahtarının en fazla ömrü** içinde Grup İlkesi ayarı? Yanıt Evet ise, ardından **Kapat** (Yanlış pozitif olduğu) uyarı.
+
+2. Bu uyarı bir sanal makine Azure ATP tek başına algılayıcı karmaşıktır? Yanıtınız evet ise, en son kaydedilen durumdan sürdürün? Yanıt Evet ise, ardından **Kapat** bu uyarı.
+
+3. Yukarıdaki sorulara yanıt ise Hayır, bu kötü amaçlı olduğunu varsayalım.
+
+**Düzeltme**
+
+Kerberos anahtar verme anahtarı (KRBTGT) parolayı iki kez kılavuzunda göre değiştirmek [KRBTGT hesabı parola sıfırlama betikleri müşteriler için artık kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)kullanarak [KRBTGT hesabı parola/anahtarlarını sıfırlama Aracı](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). KRBTGT iki kez sıfırlama tüm Kerberos biletleri bu etki alanında, böylece bunu yapmadan önce planlama geçersiz kılar. Ayrıca, bir altın anahtar oluşturmak için etki alanı yönetici hakları gerekir çünkü uygulamak [karma önerileri geçirmek](http://aka.ms/PtH).
+
 ## <a name="malicious-data-protection-private-information-request"></a>Kötü Amaçlı Veri Koruma Özel Bilgi İsteği
 
 **Açıklama**
@@ -220,7 +220,7 @@ DPAPI yedekleme ana anahtarı almak için kullanıldığında, bu algılama, bir
 
 DPAPI kullanmak için bir saldırgan etki alanı yönetici hakları gerekir. Uygulama [karma önerileri geçirmek](http://aka.ms/PtH).
 
-## <a name="malicious-replication-requests"></a>Kötü amaçlı çoğaltma istekleri
+## <a name="malicious-replication-of-directory-services"></a>Dizin hizmetlerinin kötü amaçlı çoğaltması
 
 
 **Açıklama**
@@ -445,7 +445,7 @@ Bu algılama, Kerberos veya NTLM kullanarak birçok kimlik doğrulama hataları 
 
 **Açıklama**
 
-Şüpheli bir hizmet, kuruluşunuzdaki bir etki alanı denetleyicisinde oluşturuldu. Bu uyarı olayı 7045 noktalarınızı bu şüpheli etkinlik tanımlamak için kullanır. 
+Şüpheli bir hizmet, kuruluşunuzdaki bir etki alanı denetleyicisinde oluşturuldu. Bu uyarı olayı 7045 bu şüpheli etkinlik tanımlamak için kullanır. 
 
 **Araştırma**
 
