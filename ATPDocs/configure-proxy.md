@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/22/2018
+ms.date: 5/16/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c52fa6d7cb42605f1809a40926e391bf39fe3eb2
-ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
+ms.openlocfilehash: 5a1fd5631a568419c600f35d44f09c9c61f17129
+ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/16/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 04/23/2018
 
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Uç nokta proxy ve Azure ATP algılayıcı için Internet bağlantı ayarlarını yapılandır
 
-Her Azure Gelişmiş tehdit Koruması (ATP) algılayıcı başarılı biçimde çalışması için Azure ATP bulut hizmeti için Internet bağlantısı gerektirir. Bazı kuruluşlar etki alanı denetleyicileri doğrudan Internet'e bağlı olmayan, ancak bir web proxy bağlantısı üzerinden bağlanır. Her Azure ATP algılayıcı rapor algılayıcı verileri için Microsoft Windows Internet (WinINet) proxy conifguration kullanın ve Azure ATP hizmetiyle iletişim gerektirir. WinHTTP proxy yapılandırması için kullanırsanız, hala algılayıcı Azure ATP bulut hizmeti arasındaki iletişimi için Windows Internet (WinINet) tarayıcının proxy ayarlarını yapılandırmanız gerekir.
+Her Azure Gelişmiş tehdit Koruması (ATP) algılayıcı başarılı biçimde çalışması için Azure ATP bulut hizmeti için Internet bağlantısı gerektirir. Bazı kuruluşlar etki alanı denetleyicileri doğrudan Internet'e bağlı olmayan, ancak bir web proxy bağlantısı üzerinden bağlanır. Her Azure ATP algılayıcı rapor algılayıcı verileri için Microsoft Windows Internet (WinINet) proxy yapılandırmasını kullanır ve Azure ATP hizmetiyle iletişim gerektirir. WinHTTP proxy yapılandırması için kullanırsanız, hala algılayıcı Azure ATP bulut hizmeti arasındaki iletişimi için Windows Internet (WinINet) Tarayıcı proxy ayarlarını yapılandırmanız gerekir.
 
 
 Proxy yapılandırırken, katıştırılmış Azure ATP algılayıcı hizmeti sistem bağlamı kullanarak çalıştığını bilmeniz gerekir **Yerelhizmet** hesabı ve Azure ATP algılayıcı güncelleştirici hizmetini çalıştıran kullanaraksistembağlamında**LocalSystem** hesabı. 
@@ -68,6 +68,11 @@ Bir proxy veya Güvenlik Duvarı varsayılan ve yalnızca belirli etki alanları
 |Avrupa|triprd1wceun1sensorapi.ATP.Azure.com<br>triprd1wceuw1sensorapi.ATP.Azure.com|
 |Asya|triprd1wcasse1sensorapi.ATP.Azure.com|
 
+
+Ayrıca aşağıdaki DNS kayıtlarını için kural oluşturma tarafından oluşturulan güvenlik duvarı veya proxy kuralları belirli bir çalışma alanı için sağlamlaştırmak:
+- < çalışma alanı-adı >. atp.azure.com – konsol bağlantısı için
+- < çalışma alanı-adı > sensorapi.atp.azure.com – algılayıcı bağlantısı için
+ 
 > [!NOTE]
 > SSL denetlemesi Azure ATP arasındaki ağ trafiğini (algılayıcı Azure ATP hizmeti) gerçekleştirirken, SSL denetlemesi karşılıklı denetleme desteklemesi gerekir.
 

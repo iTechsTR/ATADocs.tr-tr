@@ -1,23 +1,23 @@
 ---
-title: "Windows Defender ATP ile Azure Advanced Threat Protection tümleştirme | Microsoft Docs"
-description: "Azure Advanced Threat Protection tam tehdit algılama kapsamı için Windows Defender ATP ile tümleştirme"
-keywords: 
+title: Windows Defender ATP ile Azure Advanced Threat Protection tümleştirme | Microsoft Docs
+description: Azure Advanced Threat Protection tam tehdit algılama kapsamı için Windows Defender ATP ile tümleştirme
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/16/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3521e500548b04febbff37d3dfe9150cf6f2d35b
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 17ade33a55039eaf8abc98901cdab9ebeef850c5
+ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/16/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -96,8 +96,10 @@ Varlık Windows Defender ATP uyarılar içeriyorsa, kaç tane uyarılar ortaya �
  ![Windows Defender ATP gri](./media/wd-grey.png)
 
 Windows Defender ATP Portalı'nda bir noktadaki tıklattığınızda Azure ATP uyarılarını görüntüleyebilirsiniz. Windows Defender ATP bu varlık için Uyarılardaki tıklarsanız, Azure ATP varlığın profili sayfasını açar. 
+ 
+ > ! [NOT] Şu anda, Windows Defender ATP ile Azure ATP tümleştirme yalnızca kullanıcılar ve şirket içi makineler destekler AD. Azure AD kullanıcıları ve Azure'da yönetilen sanal makineler tümleştirme bir parçası olarak görüntülenmeyecek 
 
- ![Windows Defender ATP uyarıları](./media/wd-atp-alerts.png)
+![Windows Defender ATP uyarıları](./media/wd-atp-alerts.png)
 
 
 ## <a name="see-also"></a>Ayrıca bkz:

@@ -5,23 +5,25 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 5/16/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
-ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
-ms.reviewer: bennyl
+ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
+ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 4774eb14ddc8c9f7a01df0df4ff4b9cd7cd5859b
-ms.sourcegitcommit: 0b442b200ef01d624841f4ee00fc59c23015d622
-ms.translationtype: HT
+ms.openlocfilehash: dee55446c18ee9bc560045c94f9421840fc28fc2
+ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/16/2018
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
 # <a name="ata-compliance-trust-data-security-and-privacy"></a>ATA uyumluluk, güven, veri güvenliği ve gizlilik 
+
+ATA güven ve uyumluluğu hakkında daha fazla bilgi için bkz: [hizmet güven portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) ve [Microsoft 365 Kurumsal GDPR uyumluluk site](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
 
 ## <a name="searching-for-and-identifying-personal-data"></a>Arama ve kişisel veri tanımlama 
 
