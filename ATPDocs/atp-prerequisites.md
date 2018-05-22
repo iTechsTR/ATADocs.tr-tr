@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/8/2018
+ms.date: 5/21/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ae859121fbe856c93b8568ef38bf0b4bdb77837a
-ms.sourcegitcommit: 8472f3f46fc90da7471cd1065cdb2f6a1d5a9f69
+ms.openlocfilehash: 1fc2b3656701ee5db54a4f918ab617a2ad487780
+ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/21/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -58,7 +58,7 @@ Bu bölümde toplamanız gereken bilgiler, hesapları ve Azure ATP yüklemeye ba
 
 -   Azure ATP tek başına algılayıcı üzerinde Wireshark çalıştırırsanız, Wireshark yakalama durdurduktan sonra Azure Advanced Threat Protection algılayıcı hizmetini yeniden başlatmanız gerekir. Aksi durumda, trafik yakalama algılayıcı durdurur.
 
-- Bir NIC ekibi oluşturma bağdaştırıcısı ile yapılandırılmış bir makinede ATP algılayıcı yüklemeye çalışırsanız, bir yükleme hatasını alıyorsunuz. NIC ekibi oluşturma ile yapılandırılmış bir makinede ATP algılayıcı yüklemek istiyorsanız, Azure ATP destek temsilcinize başvurun.
+- Bir NIC ekibi oluşturma bağdaştırıcısı ile yapılandırılmış bir makinede ATP algılayıcı yüklemeye çalışırsanız, bir yükleme hatasını alıyorsunuz. NIC ekibi oluşturma ile yapılandırılmış bir makinede ATP algılayıcı yüklemek isterseniz bkz [Azure ATP algılayıcı NIC ekip oluşturma sorunu](troubleshooting-atp-known-issues.md#nic-teaming).
 
 -    Önerilen: Kullanıcının silinmiş nesneler kapsayıcısı üzerinde salt okuma izinleri olmalıdır. Bu etki alanında toplu nesne silme işlemlerini algılamasını Azure ATP sağlar. Silinmiş nesneler kapsayıcısı üzerinde salt okuma izinlerini yapılandırma hakkında daha fazla bilgi için bkz: **Silinmiş nesne kapsayıcısı üzerindeki izinleri değiştirme** bölümüne [görünümü veya bir dizin nesnesiizinleriayarlayın](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) makalesi.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 5/21/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: db63df945bf218f384c9f9dac6f111f5290aa138
-ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
+ms.openlocfilehash: b6c11292fd8e7436257e4616c65d76aad1aed8de
+ms.sourcegitcommit: c01f93bd9e41355d2f47f648e3fea7736e1218f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/21/2018
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
@@ -119,7 +119,7 @@ Bu algılama, ATA basit bağı kimlik doğrulamalarını yoğun bir dizi algıla
 **Araştırma**
 
 İlk olarak hangi ile ilgilenen yukarıdaki üç algılama türlerini görmek için uyarı açıklaması denetleyin. Daha fazla bilgi için Excel elektronik tablosu indirin.
-1.  İskelet anahtar – ATA ekibi tarafından yazılmış tarayıcıyı kullanarak iskelet anahtar etki alanı denetleyicileriniz etkiledi varsa kontrol edebilirsiniz. Tarayıcı 1 veya daha fazla etki alanı denetleyicileriniz kötü amaçlı yazılım bulur, doğru pozitif olur.
+1.  İskelet anahtar – iskelet anahtar kullanarak etki alanı denetleyicileriniz etkilediğini varsa denetleyebilirsiniz [ATA ekibi tarafından yazılan tarayıcı](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Tarayıcı 1 veya daha fazla etki alanı denetleyicileriniz kötü amaçlı yazılım bulur, doğru pozitif olur.
 2.  Altın anahtar – Excel elektronik tablodaki gidin **ağ etkinliği** sekmesi. İlgili branchcache'in alan olduğunu göreceksiniz **istek anahtarı şifreleme türü**, ve **kaynak bilgisayarı desteklenen şifreleme türlerini** daha güçlü şifreleme yöntemi içerir.
   a.    Kaynak bilgisayarı ve hesap denetleyin veya varsa birden çok kaynak bilgisayarlar ve hesaplarını bunlar bir şey (örneğin, tüm pazarlama personeli tetiklenmesi için uyarıyı neden belirli bir uygulama kullanma) ortak içinde olup olmadığını denetleyin. Daha düşük bir şifreleme şifrelemeyle nadiren kullanılan özel bir uygulama doğrulama durumlar vardır. Kaynak bilgisayarda bu tür özel uygulamalar olup olmadığını denetleyin. Bu nedenle, büyük olasılıkla zararsız true olumlu olduğu ve gerçekleştirebilirsiniz **bastır** onu.
   b.    Kaynak denetimi bu biletleri tarafından erişilen, tüm erişmekte olan bir kaynak ise, doğrulamak, erişim olması geçerli bir kaynak olduğundan emin olun. Ayrıca, hedef kaynak güçlü şifreleme yöntemleri destekleyip desteklemediğini doğrulayın. Bu Active Directory özniteliğini kontrol ederek göz atabilirsiniz `msDS-SupportedEncryptionTypes`, kaynak hizmeti hesabı.

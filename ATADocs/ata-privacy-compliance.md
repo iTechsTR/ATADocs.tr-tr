@@ -1,11 +1,11 @@
 ---
-title: Gelişmiş tehdit analizi uyumluluk, güven, veri güvenliği ve gizliliği | Microsoft Docs
-description: ATA kaynakları, videoları, Başlarken, dağıtım ve hazırlık yol haritası bağlantılar listesini sağlar.
+title: Gelişmiş tehdit analizi kişisel veriler ilke | Microsoft Docs
+description: Özel bilgi ve kişisel veriler den ATA silme hakkında bilgilere bağlantılar sağlar.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/16/2018
+ms.date: 5/21/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,15 +13,15 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: dee55446c18ee9bc560045c94f9421840fc28fc2
-ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
+ms.openlocfilehash: cf08f2d46eaa939f414d1e3793446384cd22100b
+ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2018
+ms.lasthandoff: 05/21/2018
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
-# <a name="ata-compliance-trust-data-security-and-privacy"></a>ATA uyumluluk, güven, veri güvenliği ve gizlilik 
+# <a name="ata-data-security"></a>ATA veri güvenliği 
 
 ATA güven ve uyumluluğu hakkında daha fazla bilgi için bkz: [hizmet güven portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) ve [Microsoft 365 Kurumsal GDPR uyumluluk site](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
 
@@ -36,6 +36,10 @@ ATA Center'dan arama çubuğunu veritabanında depolanan bir kişisel verileri g
 Kullanıcılar ve ATA varlıkları hakkındaki kişisel verileri kullanıcının türetilen nesne kuruluşunuzdaki kullanıcının AD. Bu nedenle, kullanıcı profili için AD içinde yapılan değişiklikler ATA yansıtılır. 
 
 ## <a name="deleting-personal-data"></a>Kişisel verileri silme 
+
+> [!NOTE]
+> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve bölümünde [GDPR Microsoft 365 Kurumsal uyumluluk site] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+
 
 Ata verinin kopyalandığı ve her zaman AD içinde bir varlık silindiğinde, AD'den güncelleştirildi ancak ATA varlığın verilerde güvenlik araştırma amacıyla korunur. 
 
@@ -69,16 +73,23 @@ Bu komut dosyasını 30 günden eski olan veritabanı tüm varlık etkinlikleri 
 
 ## <a name="exporting-personal-data"></a>Kişisel verileri dışarı aktarma 
 
+> [!NOTE]
+> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve bölümünde [GDPR Microsoft 365 Kurumsal uyumluluk site] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+
+
 ATA varlıklarla ilgili verileri AD'den türetildiği için yalnızca bir veri alt kümesini, ATA veritabanına depolanır. Bu nedenle, ilgili varlık veri AD vermeniz gerekir. 
 
 ATA, kişisel verileri içerebilen tüm güvenlikle ilgili bilgileri, Excel'e sağlar. 
 
  
-## <a name="opt-out-of-telemetry"></a>Üyelikten çıkmak telemetri 
+## <a name="opt-out-of-system-generated-logs"></a>Sistem tarafından oluşturulan günlükleri çevirin 
 
-ATA, her dağıtım hakkında anonim telemetri toplar ve bu verileri HTTPS üzerinden Microsoft sunucularına iletir. Bu veriler Microsoft tarafından ATA’nın gelecek sürümlerini geliştirmeye yardımcı olmak için kullanılır. 
+> [!NOTE]
+> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve bölümünde [GDPR Microsoft 365 Kurumsal uyumluluk site] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
-Daha fazla bilgi için bkz: [telemetri ayarlarını yönetme](manage-telemetry-settings.md).
+ATA, her bir dağıtım hakkında anonim sistem tarafından oluşturulan günlükleri toplar ve bu verileri HTTPS üzerinden Microsoft sunucularına iletir. Bu veriler Microsoft tarafından ATA’nın gelecek sürümlerini geliştirmeye yardımcı olmak için kullanılır. 
+
+Daha fazla bilgi için bkz: [sistem tarafından oluşturulan günlükleri yönetme](manage-telemetry-settings.md).
 
 Veri toplamayı devre dışı bırakmak için:
 

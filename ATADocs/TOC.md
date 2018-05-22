@@ -44,7 +44,7 @@
 ## [Etki alanı bağlantı parolasını değiştirme](modifying-ata-config-dcpassword.md)
 ## [Varlıkları algılamalardan dışlama](excluding-entities-from-detections.md)
 ## [ATA yapılandırmasını Dışarı/İçeri aktarma](ata-configuration-file.md)
-## [ATA telemetrisini yönetme](manage-telemetry-settings.md)
+## [Sistem tarafından oluşturulan günlükleri yönetme](manage-telemetry-settings.md)
 ## [ATA bildirimlerini ayarlama](setting-ata-alerts.md)
 ## [Syslog ve e-posta sunucusu ayarlarını belirleme](setting-syslog-email-server-settings.md)
 ## [Etiket hassas hesapları](tag-sensitive-accounts.md)

@@ -1,30 +1,33 @@
 ---
-title: "Advanced Threat Analytics telemetri ayarlarını yönetme | Microsoft Docs"
-description: "ATA tarafından toplanan veriler açıklanır ve veri toplamayı kapatma adımları sağlanır."
-keywords: 
+title: Advanced Threat Analytics sistem tarafından oluşturulan günlükleri yönetme | Microsoft Docs
+description: ATA tarafından toplanan veriler açıklanır ve veri toplamayı kapatma adımları sağlanır.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 98d377dd7e09636d1866d461a981cdcf1cf8aea7
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 17e5778543b9f08d3157ed91cb0a7a73ea268c0a
+ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/21/2018
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
 
 
-# <a name="manage-telemetry-settings"></a>Telemetri Ayarlarını Yönetme
-Advanced Threat Analytics (ATA), ATA hakkında anonim telemetri verileri toplar ve bu verileri HTTPS bağlantısı üzerinden Microsoft sunucularına iletir.  Bu veriler Microsoft tarafından ATA’nın gelecek sürümlerini geliştirmeye yardımcı olmak için kullanılır.
+# <a name="manage-system-generated-logs-note"></a>Sistem tarafından oluşturulan günlükleri Yönet > [!NOTE]
+> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve bölümünde [GDPR Microsoft 365 Kurumsal uyumluluk site] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+
+
+Advanced Threat Analytics (ATA), ATA hakkında anonim sistem tarafından oluşturulan günlük verilerini toplar ve Microsoft sunucularına bir HTTPS bağlantısı üzerinden verileri iletir.  Bu veriler Microsoft tarafından ATA’nın gelecek sürümlerini geliştirmeye yardımcı olmak için kullanılır.
 
 ## <a name="data-collected"></a>Toplanan veriler
 Anonim veriler toplanır aşağıdaki parametreleri içerir:
