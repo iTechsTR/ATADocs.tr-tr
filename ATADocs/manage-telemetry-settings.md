@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 17e5778543b9f08d3157ed91cb0a7a73ea268c0a
-ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
+ms.openlocfilehash: 7f1a0cb9a7e237259a9b77b96e16c6680336c2b0
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
 
 
 # <a name="manage-system-generated-logs-note"></a>Sistem tarafından oluşturulan günlükleri Yönet > [!NOTE]
-> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve bölümünde [GDPR Microsoft 365 Kurumsal uyumluluk site] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve [Microsoft 365 Kurumsal uyumluluk sitesininGDPRbölümünü](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 
 Advanced Threat Analytics (ATA), ATA hakkında anonim sistem tarafından oluşturulan günlük verilerini toplar ve Microsoft sunucularına bir HTTPS bağlantısı üzerinden verileri iletir.  Bu veriler Microsoft tarafından ATA’nın gelecek sürümlerini geliştirmeye yardımcı olmak için kullanılır.

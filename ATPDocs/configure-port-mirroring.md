@@ -1,23 +1,23 @@
 ---
-title: "Azure Advanced Threat Protection dağıtırken bağlantı noktası yansıtmayı yapılandırma | Microsoft Docs"
-description: "Bağlantı noktası yansıtma seçenekleri ve bunların Azure ATP için nasıl yapılandırılacağı açıklanır"
-keywords: 
+title: Azure Advanced Threat Protection dağıtırken bağlantı noktası yansıtmayı yapılandırma | Microsoft Docs
+description: Bağlantı noktası yansıtma seçenekleri ve bunların Azure ATP için nasıl yapılandırılacağı açıklanır
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1cc622f1a8306530423920873e5efa05e8c87064
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 1f59f02f73507fe29b41fd13c96a359dee2e88fc
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -51,10 +51,10 @@ Etki alanı denetleyicileri ve Azure ATP tek başına algılayıcı fiziksel vey
 |Sanal|Aynı ana bilgisayarda sanal|Sanal anahtarın bağlantı noktası yansıtmayı desteklemesi gerekir.<br /><br />Sanal makinelerden birinin kendi başına başka bir ana bilgisayara taşınması, bağlantı noktası yansıtmanın kesilmesine neden olabilir.|
 |Sanal|Farklı ana bilgisayarlarda sanal|Sanal anahtarınızın bu senaryoyu desteklediğinden emin olun.|
 |Sanal|Fiziksel|Aksi takdirde Azure ATP Azure ATP bulut hizmetine gönderdiği trafiği bile ana bilgisayar ve gelen tüm trafiği görür özel bir ağ bağdaştırıcısı gerektirir.|
-|Fiziksel|Sanal|Sanal anahtarınızın bu senaryoyu desteklediğinden ve fiziksel anahtarlarınızdaki bağlantı noktası yansıtmanın senaryoyu temel aldığından emin olun:<br /><br />Sanal ana bilgisayar aynı fiziksel anahtardaysa, bir anahtar düzeyi yayılması yapılandırmanız gerekir.<br /><br />Sanal ana bilgisayar farklı bir anahtardaysa, ERSPAN &#42;veya rspan'ı yapılandırmanız gereken;.|
+|Fiziksel|Sanal|Sanal anahtarınızın bu senaryoyu desteklediğinden ve fiziksel anahtarlarınızdaki bağlantı noktası yansıtmanın senaryoyu temel aldığından emin olun:<br /><br />Sanal ana bilgisayar aynı fiziksel anahtardaysa, bir anahtar düzeyi yayılması yapılandırmanız gerekir.<br /><br />Sanal ana bilgisayar farklı bir anahtardaysa, RSPAN veya ERSPAN yapılandırmanız gereken&#42;.|
 |Fiziksel|Aynı anahtarda fiziksel|Fiziksel anahtar SPAN/Bağlantı Noktası Yansıtma’yı desteklemelidir.|
 |Fiziksel|Farklı anahtarda fiziksel|Fiziksel anahtarların ERSPAN&#42; veya RSPAN’ı desteklemesi gerekir.|
-&#42; ERSPAN trafiğini ATP tarafından çözümlenmeden önce kapsüllemeyi açma işlemi gerçekleştirildiğinde yalnızca desteklenir.
+&#42;ERSPAN trafiğini ATP tarafından çözümlenmeden önce kapsüllemeyi açma işlemi gerçekleştirildiğinde yalnızca desteklenir.
 
 > [!NOTE]
 > Etki alanı denetleyicileri ve onların bağlandığı Azure ATP tek başına algılayıcı için beş dakika içinde birbiriyle eşitlenmesi olduğundan emin olun.

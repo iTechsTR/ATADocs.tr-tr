@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/21/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,17 +13,18 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: cf08f2d46eaa939f414d1e3793446384cd22100b
-ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
+ms.openlocfilehash: 94aa6ffff6dee7163293cd70be72de0f8ebc8f7d
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
-# <a name="ata-data-security"></a>ATA veri güvenliği 
+# <a name="ata-data-security-and-privacy"></a>ATA veri güvenlik ve gizlilik
 
-ATA güven ve uyumluluğu hakkında daha fazla bilgi için bkz: [hizmet güven portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) ve [Microsoft 365 Kurumsal GDPR uyumluluk site](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
+> [!NOTE]
+> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve [Microsoft 365 Kurumsal uyumluluk sitesininGDPRbölümünü](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 ## <a name="searching-for-and-identifying-personal-data"></a>Arama ve kişisel veri tanımlama 
 
@@ -38,7 +39,7 @@ Kullanıcılar ve ATA varlıkları hakkındaki kişisel verileri kullanıcının
 ## <a name="deleting-personal-data"></a>Kişisel verileri silme 
 
 > [!NOTE]
-> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve bölümünde [GDPR Microsoft 365 Kurumsal uyumluluk site] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve [Microsoft 365 Kurumsal uyumluluk sitesininGDPRbölümünü](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 
 Ata verinin kopyalandığı ve her zaman AD içinde bir varlık silindiğinde, AD'den güncelleştirildi ancak ATA varlığın verilerde güvenlik araştırma amacıyla korunur. 
@@ -74,7 +75,7 @@ Bu komut dosyasını 30 günden eski olan veritabanı tüm varlık etkinlikleri 
 ## <a name="exporting-personal-data"></a>Kişisel verileri dışarı aktarma 
 
 > [!NOTE]
-> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve bölümünde [GDPR Microsoft 365 Kurumsal uyumluluk site] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve [Microsoft 365 Kurumsal uyumluluk sitesininGDPRbölümünü](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 
 ATA varlıklarla ilgili verileri AD'den türetildiği için yalnızca bir veri alt kümesini, ATA veritabanına depolanır. Bu nedenle, ilgili varlık veri AD vermeniz gerekir. 
@@ -85,7 +86,7 @@ ATA, kişisel verileri içerebilen tüm güvenlikle ilgili bilgileri, Excel'e sa
 ## <a name="opt-out-of-system-generated-logs"></a>Sistem tarafından oluşturulan günlükleri çevirin 
 
 > [!NOTE]
-> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve bölümünde [GDPR Microsoft 365 Kurumsal uyumluluk site] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve [Microsoft 365 Kurumsal uyumluluk sitesininGDPRbölümünü](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 ATA, her bir dağıtım hakkında anonim sistem tarafından oluşturulan günlükleri toplar ve bu verileri HTTPS üzerinden Microsoft sunucularına iletir. Bu veriler Microsoft tarafından ATA’nın gelecek sürümlerini geliştirmeye yardımcı olmak için kullanılır. 
 
@@ -104,10 +105,4 @@ Veri toplamayı devre dışı bırakmak için:
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-[Microsoft Güvenlik Channel 9 sayfası](https://channel9.msdn.com/Shows/Microsoft-Security/)
-
-## <a name="community-resources"></a>Topluluk kaynakları
-
-[ATA blogu](https://aka.ms/ATABlog)
-[ATA topluluk](https://aka.ms/ATACommunity)
-[ATA hakkında geri bildirim sağlayın](https://aka.ms/ATAUserVoice)
+- ATA güven ve uyumluluğu hakkında daha fazla bilgi için bkz: [hizmet güven portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) ve [Microsoft 365 Kurumsal GDPR uyumluluk site](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).

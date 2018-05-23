@@ -1,23 +1,23 @@
 ---
-title: "Azure Advanced Threat Protection içinde bağlantı noktası yansıtmayı doğrulama | Microsoft Docs"
-description: "Bağlantı noktası yansıtma Azure ATP düzgün yapılandırılıp yapılandırılmadığını doğrulamak açıklar"
-keywords: 
+title: Azure Advanced Threat Protection içinde bağlantı noktası yansıtmayı doğrulama | Microsoft Docs
+description: Bağlantı noktası yansıtma Azure ATP düzgün yapılandırılıp yapılandırılmadığını doğrulamak açıklar
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/3/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7628fa491ddbe477cab7eb414409028c0f94f44d
-ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
+ms.openlocfilehash: b3d9d35d31eee7ae46800e0547f18330d66e90cc
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 03/08/2018
 
 # <a name="validate-port-mirroring"></a>Bağlantı Noktası Yansıtmayı Doğrulama
 > [!NOTE] 
-> Bu makalede yalnızca ilgili dağıtırsanız Azure ATP tek başına algılayıcı Azure ATP algılayıcı yerine dağıtın. Azure ATP algılayıcı kullanmanız gerekip gerekmediğini belirlemek için bkz: [dağıtımınız için doğru algılayıcı seçme](atp-capacity-planning#choosing-the-right-sensor-type-for-your-deployment).
+> Bu makalede yalnızca ilgili dağıtırsanız Azure ATP tek başına algılayıcı Azure ATP algılayıcı yerine dağıtın. Azure ATP algılayıcı kullanmanız gerekip gerekmediğini belirlemek için bkz: [dağıtımınız için doğru algılayıcı seçme](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
  
 Aşağıdaki adımlar, bağlantı noktası yansıtmanın düzgün yapılandırıldığını doğrulama işleminde size yol gösterir. Azure ATP'ın düzgün çalışması Azure ATP tek başına algılayıcı etki alanı denetleyicisi gelen ve giden trafiği görüyor olmanız gerekir. Azure ATP tarafından kullanılan ana veri kaynağı, etki alanı denetleyicilerinden gelen ve giden ağ trafiğinin derin paket incelemesi ' dir. Azure ATP'ın ağ trafiğini görebilmesi bağlantı noktası yansıtma yapılandırılması gerekir. Bağlantı noktası yansıtma, bir bağlantı noktasındaki trafiği (kaynak bağlantı noktası) başka bir bağlantı noktasına (hedef bağlantı noktası) kopyalar.
 

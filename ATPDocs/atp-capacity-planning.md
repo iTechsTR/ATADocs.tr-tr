@@ -1,22 +1,22 @@
 ---
-title: "Azure Advanced Threat Protection dağıtımınızı planlama | Microsoft Docs"
-description: "Dağıtımınızı planlamanıza ve ağınızı desteklemek için kaç tane Azure ATP sunucusuna ihtiyacınız olacağını karar vermenize yardımcı olur"
-keywords: 
+title: Azure Advanced Threat Protection dağıtımınızı planlama | Microsoft Docs
+description: Dağıtımınızı planlamanıza ve ağınızı desteklemek için kaç tane Azure ATP sunucusuna ihtiyacınız olacağını karar vermenize yardımcı olur
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/11/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
-ms.prod: 
+ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 577b7a5105e8de773f57b1e00bc1c9cb51096799
-ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
+ms.openlocfilehash: 35d3495585cce321adccb05f202fd664356db37f
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -40,7 +40,7 @@ Azure ATP dağıtımınızı kullanmaktır kapasitesini belirlemek için öneril
 El ile herhangi bir nedenden dolayı Azure ATP boyutlandırma aracını kullanamıyorsanız, Paket/sn sayaç bilgilerinizi düşük toplama aralığıyla (yaklaşık 5 saniye) ile 24 saat için tüm etki alanı denetleyicilerinden toplayın. Sonrasında, her Etki Alanı Denetleyicisi için günlük ortalamanızı ve en meşgul zaman aralığı (15 dakikalık) ortalamanızı hesaplamanız gerekir.
 Aşağıdaki bölüm, bir Etki Alanı Denetleyicisi’nden paket/sn sayacı bilgilerini nasıl alabileceğinizi gösteren yönergeleri içerir.
 
-## Dağıtımınız için doğru algılayıcı türü seçme<a name="choosing-the right-sensor-type-for-your-deployment"></a>
+## Dağıtımınız için doğru algılayıcı türü seçme<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
 Bir Azure ATP dağıtımdaki herhangi bir bileşimini Azure ATP tek başına algılayıcı türleri desteklenir:
 
 - Yalnızca Azure ATP tek başına algılayıcılar
@@ -74,12 +74,12 @@ Bir Azure ATP algılayıcı, etki alanı denetleyicisinin oluşturduğu ağ traf
 
 |Saniye başına paket *|CPU (çekirdekler)|Bellek (GB)|
 |----|----|-----|
-|0-1k|0.25|2.50|
-|1k-5k|0.75|6.00|
-|5k-10k|1.00|6.50|
-|20 10k - k|2.00|9.00|
+|0-1 k|0.25|2.50|
+|5 1k - k|0.75|6.00|
+|5k - 10k|1.00|6.50|
+|20 10k - k|2.00|9,00|
 |50 20k - k|3.50|9.50|
-|50k-75k |3.50|9.50|
+|75 50k - k |3.50|9.50|
 |100 75k - k|3.50 |9.50|
 
 > [!NOTE]

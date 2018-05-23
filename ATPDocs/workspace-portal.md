@@ -1,23 +1,23 @@
 ---
-title: "Azure Advanced Threat Protection çalışma Portalı'nı anlama | Microsoft Docs"
-description: "Azure ATP çalışma portal ve çalışma portal bileşenlerini oturum açıklar"
-keywords: 
+title: Azure Advanced Threat Protection çalışma Portalı'nı anlama | Microsoft Docs
+description: Azure ATP çalışma portal ve çalışma portal bileşenlerini oturum açıklar
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 21cc8b6b27efb514d2a313fc0959152d601d4344
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 40e139cc5e7dc6396914b0314d2d698a4782af02
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 
@@ -39,7 +39,7 @@ Azure ATP çalışma Portalı'na başarıyla oturum açmak için Azure ATP çal�
 
 ## <a name="logging-into-the-azure-atp-workspace-portal"></a>Azure ATP çalışma portalda oturumunuzu açarken
 
-1. Çalışma alanı Yönetim Portalı'na oturum açarak çalışma portal girebilirsiniz [https://portal.atp.azure.com](https://portal.atp.azure.com) ve ilgili çalışma alanını seçerek veya çalışma URL'sini tarama: [https://*workspacename*. atp.azure.com](https://*workspacename*.atp.azure.com).
+1. Çalışma alanı Yönetim Portalı'na oturum açarak çalışma portal girebilirsiniz [ https://portal.atp.azure.com ](https://portal.atp.azure.com) ve ilgili çalışma alanını seçerek veya çalışma URL'sini tarama: [https:// *workspacename*. atp.azure.com](https://*workspacename*.atp.azure.com).
 
 
 2.  Azure ATP destekler çoklu oturum açma, zaten bilgisayarınıza Azure ATP oturum açtıysanız, tümleşik Windows kimlik doğrulaması ile - özelliğini Azure ATP çalışma Portalı'na oturum belirtecini kullanır. Ayrıca bir akıllı kart kullanarak da oturum açabilirsiniz. İle izinlerinizi Azure ATP içinde karşılık gelen, [Yönetici rolü](atp-role-groups.md).
@@ -64,7 +64,7 @@ Azure ATP yeni bir sürümü yayımlandıktan sonra **yenilikler** penceresi gö
 
 Kuşkulu etkinlikleri Durum ve Önem Derecesi’ne göre filtreleyerek, saldırı zaman çizelgesinde veya varlık profili kuşkulu etkinlikler sekmesinde hangi etkinliklerin görüntüleneceğini belirtebilirsiniz.
 
-### <a name="search-bar"></a>Arama çubuğu
+### Arama çubuğu <a name="search-bar"></a>
 
 Üst menüde arama çubuğunu bulabilirsiniz. Belirli bir kullanıcı, bilgisayar veya Azure ATP gruplarında arayabilirsiniz. Denemek için, yazmaya başlamanız yeterlidir. Arama çubuğunu alt kısmında bulunan arama sonuçları sayısı gösterilir. 
 
