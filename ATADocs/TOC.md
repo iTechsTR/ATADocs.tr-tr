@@ -14,7 +14,7 @@
 #### [ATA’yı 1.5 sürümüne güncelleştirme - geçiş kılavuzu](ata-update-1.5-migration-guide.md)
 ### [ATA sürüm 1.4’teki yenilikler](whats-new-version-1.4.md)
 ## [Sık sorulan sorular](ata-technical-faq.md)
-## [ATA uyumluluk, güven, veri güvenliği ve gizlilik](ata-privacy-compliance.md)
+## [ATA veri güvenliği ve gizlilik](ata-privacy-compliance.md)
 # Planlama ve Tasarlama
 ## [ATA Mimarisi](ata-architecture.md)
 ## [ATA kapasitenizi planlama](ata-capacity-planning.md)

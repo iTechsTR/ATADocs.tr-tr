@@ -2,6 +2,7 @@
 ## [Azure Gelişmiş Tehdit Koruması nedir?](what-is-atp.md)
 ## [Sık sorulan sorular](atp-technical-faq.md)
 ## [ATA’daki Yenilikler](atp-whats-new.md)
+## [Azure ATA veri güvenliği ve gizlilik](atp-privacy-compliance.md)
 # Planlama ve Tasarlama
 ## [Azure ATP önkoşulları](atp-prerequisites.md)
 ## [Azure ATP mimarisi](atp-architecture.md)
