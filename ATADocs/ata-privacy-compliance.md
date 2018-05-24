@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 94aa6ffff6dee7163293cd70be72de0f8ebc8f7d
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: b89e841412385c9eca20e40d78ff10be342c6b22
+ms.sourcegitcommit: 571297209b15e9dc4d43c5e57da359973da8d207
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 05/23/2018
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
 # <a name="ata-data-security-and-privacy"></a>ATA veri güvenlik ve gizlilik
 
-> [!NOTE]
-> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve [Microsoft 365 Kurumsal uyumluluk sitesininGDPRbölümünü](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
 ## <a name="searching-for-and-identifying-personal-data"></a>Arama ve kişisel veri tanımlama 
 
@@ -37,9 +36,6 @@ ATA Center'dan arama çubuğunu veritabanında depolanan bir kişisel verileri g
 Kullanıcılar ve ATA varlıkları hakkındaki kişisel verileri kullanıcının türetilen nesne kuruluşunuzdaki kullanıcının AD. Bu nedenle, kullanıcı profili için AD içinde yapılan değişiklikler ATA yansıtılır. 
 
 ## <a name="deleting-personal-data"></a>Kişisel verileri silme 
-
-> [!NOTE]
-> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve [Microsoft 365 Kurumsal uyumluluk sitesininGDPRbölümünü](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 
 Ata verinin kopyalandığı ve her zaman AD içinde bir varlık silindiğinde, AD'den güncelleştirildi ancak ATA varlığın verilerde güvenlik araştırma amacıyla korunur. 
@@ -74,19 +70,12 @@ Bu komut dosyasını 30 günden eski olan veritabanı tüm varlık etkinlikleri 
 
 ## <a name="exporting-personal-data"></a>Kişisel verileri dışarı aktarma 
 
-> [!NOTE]
-> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve [Microsoft 365 Kurumsal uyumluluk sitesininGDPRbölümünü](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
-
-
 ATA varlıklarla ilgili verileri AD'den türetildiği için yalnızca bir veri alt kümesini, ATA veritabanına depolanır. Bu nedenle, ilgili varlık veri AD vermeniz gerekir. 
 
 ATA, kişisel verileri içerebilen tüm güvenlikle ilgili bilgileri, Excel'e sağlar. 
 
  
 ## <a name="opt-out-of-system-generated-logs"></a>Sistem tarafından oluşturulan günlükleri çevirin 
-
-> [!NOTE]
-> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve [Microsoft 365 Kurumsal uyumluluk sitesininGDPRbölümünü](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 ATA, her bir dağıtım hakkında anonim sistem tarafından oluşturulan günlükleri toplar ve bu verileri HTTPS üzerinden Microsoft sunucularına iletir. Bu veriler Microsoft tarafından ATA’nın gelecek sürümlerini geliştirmeye yardımcı olmak için kullanılır. 
 
@@ -96,12 +85,6 @@ Veri toplamayı devre dışı bırakmak için:
 
 1. ATA Konsolu’nda oturum açın, araç çubuğundaki üç noktaya tıklayın ve **Hakkında**’yı seçin. 
 2. **Gelecekte müşteri deneyiminizi geliştirmeye yardımcı olmak için bize kullanım bilgilerini gönderin** kutusunun işaretini kaldırın. 
-
- 
-
- 
-
- 
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
