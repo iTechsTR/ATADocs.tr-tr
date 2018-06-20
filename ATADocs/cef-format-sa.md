@@ -1,15 +1,15 @@
 ---
-title: "ATA SIEM günlük başvurusu | Microsoft Docs"
-description: "ATA’dan SIEM’nize gönderilen şüpheli etkinlik günlüğü örnekleri sağlar."
-keywords: 
+title: ATA SIEM günlük başvurusu | Microsoft Docs
+description: ATA’dan SIEM’nize gönderilen şüpheli etkinlik günlüğü örnekleri sağlar.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 601b48ba-a327-4aff-a1f9-2377a2bb7a42
 ms.reviewer: arzinger
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30009879"
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 

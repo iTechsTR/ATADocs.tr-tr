@@ -1,15 +1,15 @@
 ---
-title: "Erişim yönetimi için Advanced Threat Analytics rol grupları | Microsoft Docs"
-description: "ATA rol gruplarıyla çalışma konusunda yol gösterir."
-keywords: 
+title: Erişim yönetimi için Advanced Threat Analytics rol grupları | Microsoft Docs
+description: ATA rol gruplarıyla çalışma konusunda yol gösterir.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010202"
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 

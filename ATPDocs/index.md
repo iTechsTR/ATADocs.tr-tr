@@ -1,11 +1,12 @@
 ---
 layout: LandingPage
-description: "Azure Gelişmiş Tehdit Koruması’nı nasıl kullanacağınızı öğrenin."
+description: Azure Gelişmiş Tehdit Koruması’nı nasıl kullanacağınızı öğrenin.
 ms.openlocfilehash: 0d7ec7d0aefceb27ba435af98a75538e5be37b6e
 ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29444138"
 ---
 # <a name="azure-advanced-threat-protection-documentation"></a>Azure Gelişmiş Tehdit Koruması Belgeleri
 

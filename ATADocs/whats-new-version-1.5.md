@@ -1,15 +1,15 @@
 ---
-title: "Advanced Threat Analytics sürüm 1.5’teki yenilikler | Microsoft Docs"
-description: "ATA sürüm 1.5’teki yenilikleri ve bilinen sorunları listeler"
-keywords: 
+title: Advanced Threat Analytics sürüm 1.5’teki yenilikler | Microsoft Docs
+description: ATA sürüm 1.5’teki yenilikleri ve bilinen sorunları listeler
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 11/07/2017
+ms.locfileid: "24018278"
 ---
 # <a name="whats-new-in-ata-version-15"></a>ATA sürüm 1.5’teki yenilikler
 Bu sürüm notları, Advanced Threat Analytics’in bu sürümündeki bilinen sorunlar hakkında bilgi sağlar.

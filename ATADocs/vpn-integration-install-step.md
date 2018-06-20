@@ -1,15 +1,15 @@
 ---
-title: "Advanced Threat Analytics’i yükleme - 7. Adım | Microsoft Docs"
-description: "Ata'yı yükleme Bu adımda, VPN tümleştirin."
-keywords: 
+title: Advanced Threat Analytics’i yükleme - 7. Adım | Microsoft Docs
+description: Ata'yı yükleme Bu adımda, VPN tümleştirin.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010338"
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 

@@ -1,15 +1,15 @@
 ---
-title: "Advanced Threat Analytics hangi tehditleri algılar? | Microsoft Docs"
-description: "Advanced Threat Analytics’in algıladığı tehditler listesi"
-keywords: 
+title: Advanced Threat Analytics hangi tehditleri algılar? | Microsoft Docs
+description: Advanced Threat Analytics’in algıladığı tehditler listesi
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30009430"
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 

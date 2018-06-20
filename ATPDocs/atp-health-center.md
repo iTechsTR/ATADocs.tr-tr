@@ -1,15 +1,15 @@
 ---
-title: "Azure Gelişmiş tehdit koruması sistem durumu ve olayları izleyen | Microsoft Docs"
-description: "Azure ATP hizmeti nasıl çalıştığını denetlemek için Azure ATP çalışma durumu Merkezi'ni kullanın ve olası sorunlarda uyarı almak ve Olay Görüntüleyicisi'nde sistem olayları görüntüleyin."
-keywords: 
+title: Azure Gelişmiş tehdit koruması sistem durumu ve olayları izleyen | Microsoft Docs
+description: Azure ATP hizmeti nasıl çalıştığını denetlemek için Azure ATP çalışma durumu Merkezi'ni kullanın ve olası sorunlarda uyarı almak ve Olay Görüntüleyicisi'nde sistem olayları görüntüleyin.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29446025"
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444799"
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 

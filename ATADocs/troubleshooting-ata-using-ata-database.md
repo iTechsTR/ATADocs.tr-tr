@@ -1,15 +1,15 @@
 ---
-title: "Veritabanını kullanarak Advanced Threat Analytics sorunlarını giderme | Microsoft Docs"
-description: "Sorunları gidermeye yardımcı olması için ATA veritabanını nasıl kullanabileceğiniz açıklanır"
-keywords: 
+title: Veritabanını kullanarak Advanced Threat Analytics sorunlarını giderme | Microsoft Docs
+description: Sorunları gidermeye yardımcı olması için ATA veritabanını nasıl kullanabileceğiniz açıklanır
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30009447"
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 

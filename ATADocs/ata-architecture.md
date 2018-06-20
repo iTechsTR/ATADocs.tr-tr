@@ -1,15 +1,15 @@
 ---
 title: Advanced Threat Analytics mimarisi | Microsoft Docs
-description: "Microsoft Advance Threat Analytics’in (ATA) mimarisini açıklar"
-keywords: 
+description: Microsoft Advance Threat Analytics’in (ATA) mimarisini açıklar
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010066"
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 

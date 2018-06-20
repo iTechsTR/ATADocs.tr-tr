@@ -1,15 +1,15 @@
 ---
-title: "Yükleme Azure Gelişmiş tehdit koruması - 3. adım | Microsoft Docs"
-description: "Azure ATP yükleme üç adım Azure ATP tek başına algılayıcı Kurulum paketini indirmelisiniz yardımcı olur."
-keywords: 
+title: Yükleme Azure Gelişmiş tehdit koruması - 3. adım | Microsoft Docs
+description: Azure ATP yükleme üç adım Azure ATP tek başına algılayıcı Kurulum paketini indirmelisiniz yardımcı olur.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2017
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29446046"
 ---
 *Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
 

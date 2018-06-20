@@ -1,15 +1,15 @@
 ---
-title: "Günlükleri kullanarak Advanced Threat Analytics sorunlarını giderme | Microsoft Docs"
-description: "Sorunları gidermek için ATA günlüklerini nasıl kullanabileceğiniz açıklanır"
-keywords: 
+title: Günlükleri kullanarak Advanced Threat Analytics sorunlarını giderme | Microsoft Docs
+description: Sorunları gidermek için ATA günlüklerini nasıl kullanabileceğiniz açıklanır
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010365"
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 

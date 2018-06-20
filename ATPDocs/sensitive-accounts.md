@@ -1,15 +1,15 @@
 ---
-title: "Etiket Azure ATP hassas hesaplarıyla | Microsoft Docs"
-description: "Azure Gelişmiş tehdit Koruması (ATP) kullanarak hassas hesapları etiketi açıklar"
-keywords: 
+title: Etiket Azure ATP hassas hesaplarıyla | Microsoft Docs
+description: Azure Gelişmiş tehdit Koruması (ATP) kullanarak hassas hesapları etiketi açıklar
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29446060"
 ---
 *Uygulandığı öğe: Azure Advanced Threat Protection sürüm 1.9*
 

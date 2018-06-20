@@ -1,15 +1,15 @@
 ---
-title: "Advanced Threat Analytics’i Yükleme - 6. Adım | Microsoft Docs"
-description: "ATA yüklemesinin bu adımında veri kaynaklarını yapılandıracaksınız."
-keywords: 
+title: Advanced Threat Analytics’i Yükleme - 6. Adım | Microsoft Docs
+description: ATA yüklemesinin bu adımında veri kaynaklarını yapılandıracaksınız.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010382"
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 

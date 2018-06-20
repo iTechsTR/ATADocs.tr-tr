@@ -1,15 +1,15 @@
 ---
 title: Advanced Threat Analytics konsolunu anlama| Microsoft Docs
-description: "ATA Konsolu’nda oturum açma işlemi ve konsolun bileşenleri açıklanır"
-keywords: 
+description: ATA Konsolu’nda oturum açma işlemi ve konsolun bileşenleri açıklanır
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30009862"
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 

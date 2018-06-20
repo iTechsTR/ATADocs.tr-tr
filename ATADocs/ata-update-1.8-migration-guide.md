@@ -1,15 +1,15 @@
 ---
-title: "Advanced Threat Analytics 1.8 güncelleştirmesi geçiş kılavuzu| Microsoft Docs"
-description: "ATA’yı sürüm 1.8’e güncelleştirme yordamları"
-keywords: 
+title: Advanced Threat Analytics 1.8 güncelleştirmesi geçiş kılavuzu| Microsoft Docs
+description: ATA’yı sürüm 1.8’e güncelleştirme yordamları
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 07/20/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 11/07/2017
+ms.locfileid: "24019009"
 ---
 # <a name="updating-ata-to-version-18"></a>ATA’yı sürüm 1.8’e güncelleştirme
 

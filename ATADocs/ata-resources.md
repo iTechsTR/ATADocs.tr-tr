@@ -1,15 +1,15 @@
 ---
-title: "Gelişmiş tehdit analizi kaynaklarını ve hazırlık roadamp | Microsoft Docs"
-description: "ATA kaynakları, videoları, Başlarken, dağıtım ve hazırlık yol haritası bağlantılar listesini sağlar."
-keywords: 
+title: Gelişmiş tehdit analizi kaynaklarını ve hazırlık roadamp | Microsoft Docs
+description: ATA kaynakları, videoları, Başlarken, dağıtım ve hazırlık yol haritası bağlantılar listesini sağlar.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010236"
 ---
 *Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
 
