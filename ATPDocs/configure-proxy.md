@@ -1,11 +1,11 @@
 ---
-title: Proxy veya güvenlik duvarı ile algılayıcı Azure ATP iletişimi etkinleştirmek için yapılandırma | Microsoft Docs
-description: Azure ATP algılayıcılar ve Azure ATP bulut hizmeti arasında iletişim sağlamak için güvenlik duvarı veya proxy ayarlamak açıklar
+title: Ara sunucunuzda veya güvenlik duvarı ile algılayıcı Azure ATP iletişimi etkinleştirmek için yapılandırma | Microsoft Docs
+description: Azure ATP bulut hizmeti ve Azure ATP algılayıcı arasında iletişime izin vermek için güvenlik duvarınızın veya Ara sunucu ayarlama işlemi açıklanmaktadır
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/16/2018
+ms.date: 5/29/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,70 +13,72 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5a1fd5631a568419c600f35d44f09c9c61f17129
-ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
+ms.openlocfilehash: 2f39c0d3628c3a3cc9e034fa1da8bb5a66bc704b
+ms.sourcegitcommit: 3eade64779002d2c8ae005565bc69e1b3f89fb7d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34560250"
 ---
-*Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
+*İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 
-# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Uç nokta proxy ve Azure ATP algılayıcı için Internet bağlantı ayarlarını yapılandır
+# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Uç nokta proxy ve Internet bağlantısı ayarlarını, Azure ATP algılayıcısını yapılandırma
 
-Her Azure Gelişmiş tehdit Koruması (ATP) algılayıcı başarılı biçimde çalışması için Azure ATP bulut hizmeti için Internet bağlantısı gerektirir. Bazı kuruluşlar etki alanı denetleyicileri doğrudan Internet'e bağlı olmayan, ancak bir web proxy bağlantısı üzerinden bağlanır. Her Azure ATP algılayıcı rapor algılayıcı verileri için Microsoft Windows Internet (WinINet) proxy yapılandırmasını kullanır ve Azure ATP hizmetiyle iletişim gerektirir. WinHTTP proxy yapılandırması için kullanırsanız, hala algılayıcı Azure ATP bulut hizmeti arasındaki iletişimi için Windows Internet (WinINet) Tarayıcı proxy ayarlarını yapılandırmanız gerekir.
+Her Azure Gelişmiş tehdit Koruması (ATP) algılayıcı başarılı biçimde çalışması için Azure ATP bulut hizmeti için Internet bağlantısı olmasını gerektirir. Bazı kuruluşlarda, etki alanı denetleyicileri doğrudan Internet'e bağlı olmayan, ancak bir web proxy bağlantısı üzerinden. Her Azure ATP algılayıcısını sensör verilerini raporlamaya Microsoft Windows Internet (WinINet) Ara sunucu yapılandırmasını kullanır ve Azure ATP hizmeti ile iletişim gerektirir. WinHTTP proxy yapılandırması için kullanıyorsanız, hala algılayıcı Azure ATP bulut hizmeti arasında iletişim için Windows Internet (WinINet) Tarayıcı proxy ayarlarını yapılandırmanız gerekir.
 
 
-Proxy yapılandırırken, katıştırılmış Azure ATP algılayıcı hizmeti sistem bağlamı kullanarak çalıştığını bilmeniz gerekir **Yerelhizmet** hesabı ve Azure ATP algılayıcı güncelleştirici hizmetini çalıştıran kullanaraksistembağlamında**LocalSystem** hesabı. 
-
-> [!NOTE]
-> Ağ topolojinizi saydam proxy ya da WPAD kullanıyorsanız, WinINet, proxy için yapılandırma gerekmez.
-
-## <a name="configure-the-proxy"></a>Proxy ayarlarını yapılandır 
-
-El ile bir kayıt defteri tabanlı statik proxy'si, rapor Tanılama verileri için Azure ATP algılayıcı izin vermek ve bir bilgisayar Internet'e bağlanma izni yok, Azure ATP bulut hizmetiyle iletişim kurmak için kullanılan proxy sunucunuzu yapılandırın.
+Proxy yapılandırırken, katıştırılmış Azure ATP algılayıcı hizmetinin sistemi bağlamını kullanarak içinde çalıştığını bilmeniz gerekir **LocalService** kullanaraksistembağlamındahesabıveAzureATPalgılayıcısıUpdaterhizmetiniçalıştıran**LocalSystem** hesabı. 
 
 > [!NOTE]
-> Kayıt defteri değişikliklerini yalnızca Yerelhizmet ve LocalSystem uygulanmalıdır.
+> Ağ topolojinizi saydam proxy ya da WPAD kullanıyorsanız, WinINET proxy için yapılandırma gerekmez.
 
-Statik proxy kayıt defteri aracılığıyla yapılandırılabilir. Yerelhizmet ve localsystem kullanıcı bağlamında kullandığınız proxy yapılandırması kopyalamanız gerekir. Kullanıcı bağlamı proxy ayarlarınızı kopyalamak için:
+## <a name="configure-the-proxy"></a>Proxy yapılandırma 
+
+Azure ATP algılayıcısını tanılama verilerini raporlamaya izin vermek ve bir bilgisayar Internet'e bağlanmasına izin verilmez, Azure ATP bulut hizmetiyle iletişim kurmak için bir kayıt defteri tabanlı statik proxy kullanarak el ile proxy sunucunuzu yapılandırın.
+
+> [!NOTE]
+> Kayıt defteri değişiklikleri yalnızca LocalService ve LocalSystem uygulanmalıdır.
+
+Statik proxy kayıt defteri aracılığıyla yapılandırılabilir. Yerelhizmet ve localsystem kullanıcı bağlamında, kullandığınız proxy yapılandırmasını kopyalamanız gerekir. Kullanıcı bağlamı proxy ayarlarınızı kopyalamak için:
 
 1.   Bunları değiştirmeden önce kayıt defteri anahtarlarını yedeklemek emin olun.
 
-2. Değeri kayıt defterinde arama `DefaultConnectionSetting` kayıt defteri anahtarı altındaki REG_BINARY olarak `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting` ve kopyalayın.
+2. Değerini kayıt defterine arama `DefaultConnectionSetting` REG_BINARY kayıt defteri anahtarı altında olarak `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting` ve kopyalayın.
  
-2.  LocalSystem doğru proxy ayarlarını yoksa (bunlar yapılandırılmamış veya Örnein Current_User ' farklıdır), proxy LocalSystem Örnein Current_User ayarını kopyalayın. Kayıt defteri anahtarı altında `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
+2.  LocalSystem doğru ara sunucu ayarları yoksa (bunlar yapılandırılmamış veya Örnein Current_User ' farklıdır), ardından proxy Örnein Current_User LocalSystem ayarı kopyalayın. Kayıt defteri anahtarı altında `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
 
-3.  Örnein Current_user değerinden Yapıştır `DefaultConnectionSetting` REG_BINARY olarak.
+3.  Örnein Current_user değerini yapıştırın `DefaultConnectionSetting` REG_BINARY olarak.
 
-4.  Yerelhizmet doğru proxy ayarlarını yoksa proxy Yerelhizmet Örnein Current_User ayarını kopyalayın. Kayıt defteri anahtarı altında `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
+4.  Doğru ara sunucu ayarları LocalService sahip değilse, proxy için LocalService Örnein Current_User ayarı'ni kopyalayın. Kayıt defteri anahtarı altında `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
 
-5.  Örnein Current_User değerinden Yapıştır `DefaultConnectionSetting` REG_BINARY olarak.
+5.  Örnein Current_User değerini yapıştırın `DefaultConnectionSetting` REG_BINARY olarak.
 
 > [!NOTE]
-> Bu, WinINet Yerelhizmet, LocalSytem bağlam kullanan Windows Hizmetleri dahil olmak üzere tüm uygulamaları etkileyecektir.
+> Bu WinINet LocalService, LocalSytem bağlamı kullanan Windows Hizmetleri dahil olmak üzere tüm uygulamaları etkiler.
 
 
-## <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>Azure ATP hizmeti URL'leri proxy sunucusu erişimi etkinleştir
+## <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>Azure ATP hizmeti URL'leri proxy sunucusu erişimi etkinleştirme
 
-Bir proxy veya Güvenlik Duvarı varsayılan ve yalnızca belirli etki alanlarında ilerlerken vererek göre tüm trafiği engelleyen veya HTTPS (SSL incelemesi) tarama etkin, aşağıdaki URL'ler beyaz-listelenen bağlantı noktası 443 Azure ATP hizmetiyle iletişim izin verecek biçimde olduğundan emin olun:
+Bir proxy veya Güvenlik Duvarı varsayılan ve yalnızca belirli etki alanları aracılığıyla izin vererek tüm trafiği engelleyen veya HTTPS (SSL incelemesi) tarama etkinleştirildi, beyaz-listelenen bağlantı noktası 443'deki Azure ATP hizmeti ile iletişimi izin vermek için aşağıdaki URL'ler olduğundan emin olun:
 
 |Hizmet konumu|. Atp.Azure.com DNS kaydı|
 |----|----|
-|BİZE |triprd1wcusw1sensorapi.ATP.Azure.com<br>triprd1wcuswb1sensorapi.ATP.Azure.com<br>triprd1wcuse1sensorapi.ATP.Azure.com|
+|ABD |triprd1wcusw1sensorapi.ATP.Azure.com<br>triprd1wcuswb1sensorapi.ATP.Azure.com<br>triprd1wcuse1sensorapi.ATP.Azure.com|
 |Avrupa|triprd1wceun1sensorapi.ATP.Azure.com<br>triprd1wceuw1sensorapi.ATP.Azure.com|
 |Asya|triprd1wcasse1sensorapi.ATP.Azure.com|
 
 
-Ayrıca aşağıdaki DNS kayıtlarını için kural oluşturma tarafından oluşturulan güvenlik duvarı veya proxy kuralları belirli bir çalışma alanı için sağlamlaştırmak:
-- < çalışma alanı-adı >. atp.azure.com – konsol bağlantısı için
-- < çalışma alanı-adı > sensorapi.atp.azure.com – algılayıcı bağlantısı için
+Ayrıca, bir kural için aşağıdaki DNS kayıtlarını oluşturma tarafından oluşturulan güvenlik duvarı veya proxy kuralları belirli bir çalışma alanı için sağlamlaştırmak:
+- < çalışma alanı-adı >. atp.azure.com – konsol bağlantısı için. Örneğin, contosoATP.atp.azure.com
+- < çalışma alanı-adı > sensorapi.atp.azure.com – algılayıcılar bağlantı. Örneğin, contosoATPsensorapi.atp.azure.com
+
  
 > [!NOTE]
-> SSL denetlemesi Azure ATP arasındaki ağ trafiğini (algılayıcı Azure ATP hizmeti) gerçekleştirirken, SSL denetlemesi karşılıklı denetleme desteklemesi gerekir.
+> Azure ATP arasındaki ağ trafiğini (algılayıcı Azure ATP hizmeti) SSL denetimi gerçekleştirirken, SSL denetimi karşılıklı İnceleme desteklemesi gerekir.
 
 
 ## <a name="see-also"></a>Ayrıca bkz:
-- [Olay iletme özelliğini yapılandırma](configure-event-forwarding.md)
+- [Olay iletme'yi yapılandırma](configure-event-forwarding.md)
 - [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

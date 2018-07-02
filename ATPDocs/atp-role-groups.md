@@ -1,11 +1,11 @@
 ---
-title: Erişim yönetimi için Azure Advanced Threat Protection rol grupları | Microsoft Docs
-description: Azure ATP rol gruplarıyla çalışmada size yol gösterir.
+title: Erişim yönetimi için Azure Gelişmiş tehdit koruması rol grupları | Microsoft Docs
+description: Azure ATP rol grupları ile çalışmada size yol gösterir.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 6/26/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,41 +13,40 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 77a2464634b4286d2f6d35504e9ab7512cf7b612
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: 39709e4749b7f897bffb914dd1e15c80277d6ed8
+ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444782"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948974"
 ---
-*Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
+*İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 
 
 # <a name="azure-atp-role-groups"></a>Azure ATP rol grupları
 
-Azure ATP bir kuruluşun belirli güvenlik ve uyumluluk gereksinimlerine göre verilerinizi korumak için rol tabanlı güvenlik sunar. Azure ATP destekleyen üç ayrı roller: Yöneticiler ve kullanıcılar görüntüleyiciler. 
+Azure ATP rol tabanlı güvenlik, bir kuruluşun belirli güvenlik ve uyumluluk gereksinimlerine göre verilerinizi korumak için sunar. Azure ATP destekleyen üç ayrı rol: Yöneticiler, kullanıcılar ve görüntüleyiciler. 
+
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
+
+Rol grupları Azure ATP için erişim yönetimini etkinleştirin. Rol gruplarını kullanarak güvenlik ekibinizdeki görevleri ayırabilir ve kullanıcılara sadece işlerini yapması için gereken miktarda erişim izni verebilirsiniz. Bu makalede erişim yönetimi ve Azure ATP rol yetkilendirmesi ve ATP rol grupları ile ayarlayıp çalıştırmaya başlamasına yardımcı açıklanmaktadır.
 
 > [!NOTE]
-> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve [Microsoft 365 Kurumsal uyumluluk sitesininGDPRbölümünü](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
-
-Rol grupları Azure ATP için erişim yönetimini etkinleştirin. Rol gruplarını kullanarak güvenlik ekibinizdeki görevleri ayırabilir ve kullanıcılara sadece işlerini yapması için gereken miktarda erişim izni verebilirsiniz. Bu makalede, erişim yönetimi ve Azure ATP rol yetkilendirme ve ATP rol gruplarla çalışır alma yardımcı açıklanmaktadır.
-
-> [!NOTE]
-> Herhangi bir genel yönetici veya Güvenlik Yöneticisi kiracının Azure Active Directory'ye otomatik olarak bir Azure ATP yöneticidir.
+> Herhangi bir genel yönetici veya Güvenlik Yöneticisi kiracının Azure Active Directory'ye otomatik olarak Azure ATP yönetici olur.
 
 ## <a name="accessing-the-workspace-management-portal"></a>Çalışma alanı yönetim portalına erişim
 
-Çalışma alanı Yönetim Portalı'nı (portal.atp.azure.com) erişimi yalnızca genel yönetici veya Güvenlik Yöneticisi dizin rolüne sahip bir Azure AD kullanıcı tarafından gerçekleştirilebilir. Portal girdikten sonra farklı çalışma alanları oluşturabilirsiniz. Her çalışma alanı için Azure ATP hizmeti üç güvenlik grupları, Azure Active Directory kiracınızda oluşturur: Yöneticiler, kullanıcılar, görüntüleyiciler. 
+Çalışma alanı Yönetim Portalı'nı (portal.atp.azure.com) erişimi yalnızca dizin rolü genel yönetici veya güvenlik yöneticisi olan bir Azure AD kullanıcı tarafından gerçekleştirilebilir. Portal girdikten sonra farklı çalışma alanları oluşturabilirsiniz. Her çalışma alanı için Azure ATP hizmeti üç güvenlik gruplarını Azure Active Directory kiracınızda oluşturur: Yöneticiler, kullanıcılar, görüntüleyiciler. 
 
 > [!NOTE]
-> Azure ATP çalışma portalına erişim, yalnızca bu çalışma alanında ve genel yönetici ve güvenlik Yöneticiler için Azure AD güvenlik gruplarının içinde kullanıcılara verilir.
+> Azure ATP çalışma alanı portalına erişim, yalnızca söz konusu çalışma alanında, genel Yöneticiler ve güvenlik yöneticileri için Azure AD güvenlik gruplarına kapsamındaki kullanıcılara verilir.
 
 
-## <a name="types-of-azure-atp-security-groups"></a>Azure ATP güvenlik grupları türleri 
+## <a name="types-of-azure-atp-security-groups"></a>Azure ATP güvenlik gruplarının türleri 
 
-Azure ATP güvenlik grubu üç tür sunar: Azure ATP *çalışma alanı adı* Yöneticiler, Azure ATP *çalışma alanı adı* kullanıcılar ve Azure ATP *çalışma alanı adı* görüntüleyiciler . Aşağıdaki tabloda Azure ATP çalışma portalında rol kullanılabilir bir erişim türü açıklanmaktadır. Hangi rolü atadığınız, çeşitli ekranları ve Azure ATP menüsü seçeneklerini bağlı olarak çalışma portal kullanılamaz, aşağıdaki gibi:
+Azure ATP güvenlik grubunun üç tür sunar: Azure ATP *çalışma alanı adı* yöneticileri, Azure ATP *çalışma alanı adı* kullanıcılar ve Azure ATP *çalışma alanı adı* görüntüleyiciler . Aşağıdaki tabloda Azure ATP çalışma alanı portalında her rol için kullanılabilen erişim türü açıklanır. Hangi rol, atama, çeşitli ekranlar ve menü seçenekleri Azure ATP bağlı çalışma portalı kullanılabilir değil, şu şekilde:
 
 |Etkinlik |Azure ATP *çalışma alanı adı* yöneticileri|Azure ATP *çalışma alanı adı* kullanıcılar|Azure ATP *çalışma alanı adı* görüntüleyiciler|
 |----|----|----|----|
@@ -55,19 +54,19 @@ Azure ATP güvenlik grubu üç tür sunar: Azure ATP *çalışma alanı adı* Y�
 |Kuşkulu Etkinliklerin durumunu değiştirme|Kullanılabilir|Kullanılabilir|Yok|
 |E-posta/bağlantı alma üzerinden şüpheli etkinlikleri paylaşma/dışarı aktarma|Kullanılabilir|Kullanılabilir|Kullanılabilir|
 |İzleme Uyarılarının durumunu değiştirme|Kullanılabilir|Yok|Yok|
-|Azure ATP yapılandırmasını güncelleştir|Kullanılabilir|Yok|Yok|
+|Azure ATP yapılandırmasını güncelleştirme|Kullanılabilir|Yok|Yok|
 |Algılayıcı – Ekle|Kullanılabilir|Yok|Yok|
-|Algılayıcı – Sil |Kullanılabilir|Yok|Yok|
+|Algılayıcı – silme |Kullanılabilir|Yok|Yok|
 |İzlenen DC – Ekleme |Kullanılabilir|Yok|Yok|
 |İzlenen DC – Silme|Kullanılabilir|Yok|Yok|
 |Uyarıları ve şüpheli etkinlikleri görüntüleme|Kullanılabilir|Kullanılabilir|Kullanılabilir|
 
 
-Kullanıcılar kendi rol grubu için kullanılabilir olmayan bir sayfaya erişmeye çalıştığında, bunlar Azure ATP yetkisiz sayfasına yönlendirilirsiniz. 
+Kullanıcılar kendi rol grupları için kullanılabilir olmayan bir sayfaya erişmeye çalıştıklarında, bunlar Azure ATP yetkisiz sayfasına yönlendirilir. 
 
-## <a name="add-and-remove-users"></a>Ekleme ve kaldırma 
+## <a name="add-and-remove-users"></a>Ekleme ve kullanıcıları kaldırma 
 
-Azure ATP Azure AD güvenlik grupları için rol gruplarını temel olarak kullanır. Rol grupları sunucudan yönetilebilir [ https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All grupları](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups).  Yalnızca AAD kullanıcılarını eklenemez veya güvenlik grubundan kaldırıldı. 
+Azure ATP, rol grupları için temel olarak Azure AD güvenlik grupları kullanır. Rol grupları alanından yönetilebilir [ https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All%20groups ](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All%20groups). AAD kullanıcıları eklenebilir veya güvenlik grubundan kaldırıldı. 
 
 
 ## <a name="see-also"></a>Ayrıca bkz:

@@ -1,11 +1,11 @@
 ---
-title: Azure ATP yenilikler | Microsoft Docs
+title: ATA'daki yenilikler | Microsoft Docs
 description: Azure ATP en son sürümlerini açıklar ve her sürümdeki yenilikler hakkında bilgi sağlar.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/13/2018
+ms.date: 6/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,102 +13,158 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a40c2b188e777ca78462e4a3901b311af457d9ae
-ms.sourcegitcommit: 170bc1c04d1ea0538dddbb497d8045781a6a8b74
+ms.openlocfilehash: 7282b58e25c3cc79f40ca05477bb015f8746cd0d
+ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36949032"
 ---
-*Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
+*İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
-# <a name="whats-new-in-azure-atp"></a>Azure ATP yenilikler nelerdir? 
+# <a name="whats-new-in-azure-atp"></a>ATA'daki yenilikler 
+
+## <a name="azure-atp-release-237"></a>Azure ATP yayın 2.37
+
+24 Haziran 2018'de yayınlanan
+
+- Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları içerir. 
+
+## <a name="azure-atp-release-236"></a>Azure ATP yayın 2,36
+
+Yayın Tarihi: 17 Haziran 2018
+
+- Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları içerir. 
 
 
+## <a name="azure-atp-release-235"></a>Azure ATP yayın 2.35
 
-## <a name="azure-atp-release-232"></a>Azure ATP sürüm 2.32
-
-13 May 2018 yayımlanan
+Yayın Tarihi: 10 Haziran 2018
  
-- Bu sürüm, düzeltmeler ve birden çok sorunları için geliştirmeler içerir. 
-
-## <a name="azure-atp-release-231"></a>Azure ATP sürüm 2.31
-
-6 Mayıs 2018 yayımlanan
+- **Yeni Önizleme algılamalar**<br></br>Şimdi, Azure ATP bir bulut hizmeti olduğunu faydalanması burada yeni özellikler olarak dağıtılabilecek döngüleri--hızlı ve yeni algılamalar ile mümkün olan en kısa sürede sağlayın. Bu yeni algılamalar "ilk olduklarında preview" serbest olarak etiketlenir. Genellikle yeni bir algılama preview'dan birkaç hafta içinde genel kullanılabilirlik taşınır. Varsayılan olarak Önizleme algılamalar görürsünüz. İletişimlerini hakkında daha fazla bilgi için bkz: [Önizleme algılamalar](working-with-suspicious-activities.md#preview-detections).
  
-- Ad çözümlemesi için geliştirmeler yapılmıştır. RPC ve NetBIOS etkin çözümleme yanı sıra bu çalışmaların bir parçası olarak algılayıcı RDP uç noktası için bir TLS istemci Hello paket sorun (3389 numaralı) bağlantı noktası. 
-- Bu sürüm, düzeltmeler ve birden çok sorunları için geliştirmeler içerir. 
+- **Şüpheli VPN algılama**<br></br>Bu yayın, bir önizleme sürümünü şüpheli VPN algılama tanıtır. Azure ATP makineler de dahil olmak üzere kullanıcı VPN davranışını açan kullanıcılar ve kullanıcı bağlantı konumları öğrenir ve bir sapma Beklenen davranış olduğunda sizi uyarır. Daha fazla bilgi için [şüpheli VPN algılama](suspicious-activity-guide.md#suspicious-vpn-detection).
 
-## <a name="azure-atp-release-230"></a>Azure ATP sürüm 2.30
+- **Ertelenmiş güncelleştirme**<br></br>Artık Azure ATP algılayıcı daha sonra Azure ATP her güncelleştirdiğinde güncelleştirmek için ayarlanacak seçenek var. Artık her Azure ATP algılayıcısını ayarlayabilirsiniz **Gecikmeli güncelleştirme** böylece 24 saat sonra Azure ATP bulut hizmet güncelleştirmeleri güncelleştirir. Bu özellik, belirli test sensörlerden güncelleştirmesinde test etmek ve yalnızca, üretim sensörlerden daha sonra güncelleştirmek sağlar. İlk güncelleştirme döngüsü sırasında bir sorun bulursanız, bir destek bileti açın. Daha fazla bilgi için [güncelleştirme Azure ATP algılayıcı](sensor-update.md).
 
-29 Nisan 2018 yayımlanan
+- **Güncelleştirilmiş olağan dışı protokol uygulaması algılama**<br></br>Olağan dışı protokol uygulaması algılama artık daha fazla bilgi sağlar. Hangi olası saldırı aracı Azure ATP şüphelerini bakın ağınızdaki İşte artık bunu yapabilirsiniz. Daha fazla bilgi için [şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md).
  
-- Şifreleme indirgeme kuşkulu etkinlikleri artık bir şifreleme indirgeme etkinlik ilkelerinden şüpheleniyorsanız neden Azure ATP tarafından algılanan Belirtiler tanımlayan bir kanıt bölümü içerir. 
--   Azure ATP Azure e-posta Orchestrator artık Azure ATP uyarılar ve raporlar izleme kuşkulu etkinlikler dahil olmak üzere gönderilen tüm e-postalar için kullanır. Bu e-posta bildirimleri artık kullanım kolaylığı için tutarlı bir biçim izleyin ve Excel dosyalarını konsoldan yüklenmek üzere e-posta gelen bağlanacağı görürsünüz.
+- **Güncel olmayan sensör Uyarısı**<br></br>Azure ATP algılayıcı eski üçten fazla sürümleri olup olmadığını size bildirmek için yeni bir izleme uyarı içerir. Bu uyarıyı görürseniz, algılayıcı güncelleştirme veya algılayıcı neden otomatik olarak güncelleştirilmiyor araştırmak gerekir. Uyarı almaya devam ederseniz, kaldırın ve algılayıcıyı yükleyin.
+
+- Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları içerir. 
+
+## <a name="azure-atp-release-234"></a>Azure ATP yayın 2.34
+
+3 Haziran 2018'de yayınlanan
+ 
+- Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları içerir. 
+
+ 
+## <a name="azure-atp-release-233"></a>Azure ATP yayın 2.33
+
+Yayın Tarihi: 27 Mayıs 2018
+
+- Önizleme özelliği: Azure ATP artık yeni diller ve 13 yeni yerel ayarları destekler:
+    - Çekçe
+    - Macarca
+    - İtalyanca
+    - Kore dili
+    - Hollanda dili
+    - Lehçe
+    - Portekizce (Brezilya)
+    - Portekizce (Portekiz)
+    - Rusya
+    - İsveç dili
+    - Türkçe
+    - Çince (Çin)
+    - Çince (Tayvan)
+
+
+
+## <a name="azure-atp-release-232"></a>Azure ATP yayın 2.32
+
+Yayın Tarihi: 13 Mayıs 2018
+ 
+- Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları içerir. 
+
+## <a name="azure-atp-release-231"></a>Azure ATP yayın 2.31
+
+6 Mayıs 2018'de yayınlanan
+ 
+- Ad çözümlemesi için iyileştirmeler yapıldı. RPC ve NetBIOS etkin çözüm yanı sıra bu çalışmaların bir parçası olarak algılayıcı RDP uç noktası için bir TLS istemci Hello paket sorunu (3389 numaralı) bağlantı noktası. 
+- Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları içerir. 
+
+## <a name="azure-atp-release-230"></a>Azure ATP yayın 2.30
+
+29 Nisan 2018'de yayınlanan
+ 
+- Şifreleme düşürme şüpheli etkinlikleri artık Azure ATP tarafından algılanan bir şifreleme düşürme etkinliği ilkelerinden olduğunu düşündüğünüz neden Belirtiler açıklayan bir kanıt bölümü içerir. 
+-   Azure ATP, uyarı ve raporları izleme şüpheli etkinlikleri de dahil olmak üzere Azure ATP ' gönderilen tüm e-postalar için artık Azure e-posta Orchestrator kullanır. Bu e-posta bildirimleri artık kullanım kolaylığı için tutarlı bir biçim izleyin ve Excel dosyalarını konsoldan indirilmesi e-postasındaki bağlanacağı görürsünüz.
  
  
 
-## <a name="azure-atp-release-229"></a>Azure ATP sürüm 2.29
+## <a name="azure-atp-release-229"></a>Azure ATP yayın 2.29
 
-22 Nisan 2018 yayımlanan
+22 Nisan 2018'de yayınlanan
  
-- Bu sürüm, düzeltmeler ve birden çok sorunları için geliştirmeler içerir. 
+- Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları içerir. 
  
  
-## <a name="azure-atp-release-228"></a>Azure ATP sürüm 2.28
+## <a name="azure-atp-release-228"></a>Azure ATP yayın 2.28
 
-15 Nisan 2018 yayımlanan
+15 Nisan 2018'de yayınlanan
  
--   Artık Azure ATP kullanıcıları ve Azure ATP görüntüleyiciler rol gruplarının üyeleri olan kullanıcılar izleme uyarıları görmek için izinlere sahip.
-- Bu sürüm, düzeltmeler ve birden çok sorunları için geliştirmeler içerir. 
+-   Artık Azure ATP kullanıcı ve Azure ATP görüntüleyiciler rol gruplarının üyeleri olan kullanıcılar, izleme uyarıları görmek için izinlere sahip.
+- Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları içerir. 
 
 
-## <a name="azure-atp-release-227"></a>Azure ATP sürüm 2.27
+## <a name="azure-atp-release-227"></a>Azure ATP yayın 2,27
 
-8 Nisan 2018 yayımlanan
+8 Nisan 2018'de yayınlanan
 
-- Üst gezinti çubuğunda kullanıcı geri bildirim sağlama yeteneği artık sahipsiniz. Menü çubuğunda gülen yüz tıklatarak Geri bildiriminizi Azure Advanced Threat Protection ekibiyle bir e-posta göndermek etkinleştirir.
+- Üst gezinti çubuğunda kullanıcı geri bildirim sağlama yeteneği artık var. Menü çubuğunda gülen yüz tıklayarak Azure Gelişmiş tehdit koruması ekibine geri bildirim ile bir e-posta göndermenize olanak sağlar.
 
-- Bu sürüm, düzeltmeler ve birden çok sorunları için geliştirmeler içerir. 
+- Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları içerir. 
  
 
-## <a name="azure-atp-release-226"></a>Azure ATP sürüm 2.26
+## <a name="azure-atp-release-226"></a>Azure ATP yayın 2.26
 
-25 Mart 2018 yayımlanan
+Yayın Tarihi: 25 Mart 2018
 
-- (Kuşkulu bir etkinlik değil yasal bir eylem), zararsız pozitif tanımlamak ve kuşkulu bir etkinlik Azure ATP uyarıları, bilgisayarların ve IP adresleri de dahil olmak üzere daha fazla algılamaları dışlamak için seçeneğiniz vardır: şifreleme indirgeme, LDAP deneme yanılma saldırısı, sahte PAC, kaba kuvvet ve Pass--hash.
--   Azure ATP algılayıcı performansı geliştirildi.
--   Yeni bir bölge eklenen çalışma dağıtımı için bir çalışma alanı Asya'da artık dağıtabilirsiniz. 
+- (Bir şüpheli etkinlik değil meşru bir eylem), zararsız pozitif sonuç olarak tanımlayan bir şüpheli etkinlik Azure ATP uyarıları, bilgisayarlar ve de dahil olmak üzere daha fazla algılamaları için IP adreslerini hariç tutmak için seçeneğiniz vardır: şifrelemeyi düşürme, LDAP deneme yanılma, sahte PAC, deneme yanılma yoluyla yapılan zorla ve Pass--hash.
+-   Azure ATP algılayıcısı performansı İyileştirildi.
+-   Yeni bir bölgeye eklenen çalışma alanı dağıtımı için bir çalışma alanında Asya artık dağıtabilirsiniz. 
 
 
 ## <a name="azure-atp-release-225"></a>Azure ATP yayın 2,25
 
-18 Mart 2018 yayımlanan
+Yayın Tarihi: 18 Mart 2018
 
-- Çok faktörlü kimlik doğrulaması (MFA) Azure ATP artık desteklenmektedir. MFA kullanarak kiracılar artık Azure ATP portal girebilirsiniz.
-- Azure ATP şimdi sahip bir [ **sistem durumu** ](https://health.atp.azure.com/) çalışma Yönetim Portalı'nı algılamaların sorun varsa ve algılayıcı gönderebilmesi için ise yukarı ve etkin olup bilgileri sağlamak için sayfası Bulut trafiği. Erişebileceğiniz **sistem durumu** Azure ATP menü çubuğundan.
+- Çok faktörlü kimlik doğrulaması (MFA), ATA'daki artık desteklenmektedir. Mfa'yı kullanarak kiracının artık Azure ATP portalı girebilirsiniz.
+- Azure ATP artık sahip bir [ **sistem durumu** ](https://health.atp.azure.com/) çalışma alanı Yönetim Portalı algılamalar ile bir sorun varsa ve algılayıcı gönderebilmesi için ise yukarı ve etkin olup dair bilgi sağlamak için sayfa Bulut trafiği. Erişebildiğiniz **sistem durumu** Azure ATP menü çubuğundan.
 
 
 ## <a name="azure-atp-release-224"></a>Azure ATP yayın 2,24
 
-11 Mart 2018 yayımlanan
+Yayın Tarihi: 11 Mart 2018
 
-**Yeni & güncelleştirilmiş algılama**
-  - Şüpheli hizmet oluşturma – saldırganların ağınızdaki kuşkulu Hizmetleri çalıştırmayı deneyin. Birisi belirli bir bilgisayardaki şüpheli yeni bir hizmet çalıştığını belirlediğinde azure ATP artık bir uyarı başlatır. Bu algılama (ağ trafiği değil) olaylara dayanarak ve olay 7045 Azure ATP iletme, ağınızdaki herhangi bir etki alanı denetleyicisinde algıladı. Daha fazla bilgi için bkz: [şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md).
+**Yeni ve güncelleştirilmiş algılamalar**
+  - Şüpheli hizmet oluşturma – saldırganlar, ağınızdaki kuşkulu hizmetlerini çalıştırmak çalışır. Belirli bir bilgisayardaki şüpheli yeni bir hizmetinin çalışıp çalışmadığını belirlediğinde azure ATP artık bir uyarı başlatır. Bu Algılama olayları (ağ trafiği değil) temel alır ve Azure ATP olay 7045 ilettiğini ağınızda herhangi bir etki alanı denetleyicisinde algılandı. Daha fazla bilgi için [şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md).
 
-**Geliştirilmiş araştırma**
-  - Azure ATP içeren bir zenginleştirilmiş [varlık profili](entity-profiles.md). Varlık profili bu erişmeleri kaynakları içeren kullanıcı etkinlikleri derin Dalış araştırma için tasarlanmış bir platform, oturum açmış bilgisayarları ve çok daha fazlasını sağlar. Varlık profili Ayrıca, dizin verilerini sağlar ve olası yanal hareket yollarını ya da kuruluşunuzdaki olası ihlallerini hakkında daha fazla bilgi için etkinleştirme varlıktan belirlemenize olanak sağlar.
+**Gelişmiş araştırma**
+  - Azure ATP içeren bir zenginleştirilmiş [varlık profili](entity-profiles.md). Varlık profili kullanıcı etkinlikleri bu erişmeleri kaynakları içerir yakından incelenmesi için tasarlanmış bir platform, bunlar oturum açmış bilgisayarlar ve çok daha fazlasını sağlar. Varlık profili de dizin verilerini sağlar ve böylece olası ihlallerini kuruluşunuzdaki hakkında daha fazla bilgi, varlıktan ya da olası yanal hareket yollarını tanımlamak üzere sağlar.
 
-  - ATP sağlar el ile etiketi varlıklara *hassas* algılama ve izleme geliştirmek için. Bu etiketleme hassas grubu değiştirme algılama gibi birçok Azure ATP algılamaların etkiler ve [yanal hareket yolu](use-case-lateral-movement-path.md), gizli olarak kabul edilen varlıklarını kullanır.
+  - ATP olanak el ile etiketi varlıklar olarak *hassas* algılama ve izleme geliştirmek için. Bu etiketleme gizli Grup değişikliği algılama gibi birçok Azure ATP algılamalar etkiler ve [yanal hareket yolunun](use-case-lateral-movement-path.md), hassas olarak kabul edilen varlıkların kullanır.
 
-**Araştırmanıza yardımcı olması için yeni raporlar**
-  - [Parolaları düz metin raporda gösterilen](reports.md) hizmetleri hesabı kimlik bilgileri, düz metin olarak gönderilir gönderdiğinizde algılamasını sağlar. Bu, hizmetleri inceleyin ve ağ güvenlik düzeyini artırmak sağlar. Bu rapor doğrulamaya şüpheli etkinlik uyarıları değiştirir.
-  - [Yanal hareket hassas hesapları rapor yollara](reports.md) yanal hareket yolları sunulan hassas hesaplarını listeler. Bu, bu yollar azaltmak ve saldırı yüzeyini riski en aza indirmek için ağınızı sağlamlaştırmak olanak sağlar. Bu, böylece sanal güvenlik ikramiye isabet kadar saldırganların ağınızda kullanıcıları ve bilgisayarları arasında taşınamıyor yanal hareket engellemenizi sağlar: hassas yönetici hesabı kimlik bilgilerinizi.
+**Araştırmanıza yardımcı olacak yeni raporlar**
+  - [Parolalarını düz metin raporda ifşa](reports.md) hizmetleri hesabı kimlik bilgileri düz metin olarak gönderilir gönderdiğinizde algılamanıza olanak tanır. Bu, hizmetleri araştırın ve ağ güvenlik düzeyini artırmak sağlar. Bu rapor, düz metin olarak şüpheli etkinlik uyarılarını değiştirir.
+  - [Yana hareket yollarını hassas hesapları raporuna](reports.md) yanal hareket yollarını sunulan hassas hesapları listeler. Bu, bu yollar azaltmak ve saldırı yüzeyi riski en aza indirmek için ağ sağlamlaştırma sağlar. Bu, böylece bunlar sanal güvenlik ikramiye isabet kadar saldırganlar ağınızdaki kullanıcılar ve bilgisayarlar arasında taşıyamazsınız yanal hareket önlemenize olanak sağlar: küçük harf duyarlı yönetici hesabı kimlik bilgilerinizle.
 
-- Kolay erişim bağlantı belgelerinden sağlamak artık şüpheli etkinlik uyarısı içinde görüntülemek için şunları yapabilirsiniz [yapabileceğiniz araştırma adımları](suspicious-activity-guide.md). 
+- Kolayca bir bağlantıdan belgelerine erişim sağlayan bir şüpheli etkinlik uyarısı içinde görüntülemek için artık [uygulayabileceğiniz araştırma adımlarının](suspicious-activity-guide.md). 
 
 **Performans iyileştirmeleri**
- -  Azure ATP algılayıcı altyapı için performansı geliştirildi: trafiği toplanmış görünümünü iyileştirme CPU ve paket ardışık sağlar ve SSL oturumları DC'ye en aza indirmek için etki alanı denetleyicilerine yuva yeniden kullanır.
+ -  Azure ATP algılayıcısı altyapı performans için İyileştirildi: Toplu trafik görünümünü CPU ve paket işlem hattının etkinleştirir ve SSL oturumlarını DC'ye en aza indirmek için etki alanı denetleyicilerine yuva kullanır.
 
 ## <a name="see-also"></a>Ayrıca bkz:
 - [Azure ATP önkoşulları](atp-prerequisites.md)

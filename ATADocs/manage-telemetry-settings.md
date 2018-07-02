@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 6/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,25 +13,25 @@ ms.technology: ''
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7f1a0cb9a7e237259a9b77b96e16c6680336c2b0
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: 1216d70f75376f295e9b6164babdaf24241195b4
+ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444527"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948923"
 ---
-*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
+*İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 
 
 # <a name="manage-system-generated-logs-note"></a>Sistem tarafından oluşturulan günlükleri Yönet > [!NOTE]
-> Görüntüleme veya kişisel verileri silme düşünüyorsanız, lütfen Microsoft'un Kılavuzu gözden [Microsoft Uyumluluk Yöneticisi](https://servicetrust.microsoft.com/ComplianceManager) ve [Microsoft 365 Kurumsal uyumluluk sitesininGDPRbölümünü](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). GDPR hakkında genel bilgi arıyorsanız bkz [Hizmeti'ne güvenen portal GDPR bölümünü](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-Advanced Threat Analytics (ATA), ATA hakkında anonim sistem tarafından oluşturulan günlük verilerini toplar ve Microsoft sunucularına bir HTTPS bağlantısı üzerinden verileri iletir.  Bu veriler Microsoft tarafından ATA’nın gelecek sürümlerini geliştirmeye yardımcı olmak için kullanılır.
+Gelişmiş Threat Analytics (ATA), ATA hakkında anonim sistem tarafından oluşturulan günlük verileri toplar ve Microsoft sunucuları için bir HTTPS bağlantısı üzerinden veri iletir.  Bu veriler Microsoft tarafından ATA’nın gelecek sürümlerini geliştirmeye yardımcı olmak için kullanılır.
 
 ## <a name="data-collected"></a>Toplanan veriler
-Anonim veriler toplanır aşağıdaki parametreleri içerir:
+Anonim veriler toplanır, aşağıdaki parametreleri içerir:
 
 -   Hem ATA Center’dan hem de ATA Gateway’den performans sayaçları
 
@@ -83,7 +83,7 @@ Anonim veriler toplanır aşağıdaki parametreleri içerir:
 
     -   Başlangıç ve Bitiş Zamanı
 
-- Ziyaret edilen sayfalar ATA Konsolu'nda ATA Konsolu URL'si adresleri - diğer bir deyişle, ATA konsolu kullanılırken URL adresi.
+- Ziyaret edilen sayfalar ATA Konsolu'nda ATA Konsolu URL adresleri - diğer bir deyişle, ATA Konsolu URL adresleri.
 
 
 ### <a name="disable-data-collection"></a>Veri toplamayı devre dışı bırakma
