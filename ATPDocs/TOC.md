@@ -18,6 +18,7 @@
 ## [7 Dışlamalar ve honeytoken hesaplar](install-atp-step7.md)
 ## [8 YEY-R gerektiren izinleri yapılandırma](install-atp-step8-samr.md)
 ## [Sessiz yükleme](ATP-silent-installation.md)
+## [ATP algılayıcıları güncelleştirme](sensor-update.md)
 ## Azure ATP algılayıcısı ek adımlar
 ### [Bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md)
 ### [Bağlantı noktası yansıtmayı doğrulama](validate-port-mirroring.md)
