@@ -1,6 +1,6 @@
 ---
 title: Yükleme Azure Gelişmiş tehdit koruması - 1. adım | Microsoft Docs
-description: Azure ATP yüklemek için ilk adım, Azure ATP dağıtımınız için bir çalışma alanı oluşturma içerir.
+description: Azure ATP yüklemenin ilk adımı, Azure ATP dağıtımınız için bir çalışma alanı oluşturmayı içerir.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
@@ -13,63 +13,62 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a4c2f03955eddb4615b347fa8a211501546e6f4a
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: cadd708c20733324b939db1e35d12aae3f2d80f2
+ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31007279"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37799085"
 ---
-*Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
+*İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
-# <a name="creating-a-workspace-in-the-azure-atp-workspace-management-portal---step-1"></a>Azure ATP çalışma Yönetim Portalı'nda - 1. adım bir çalışma alanı oluşturma
+# <a name="creating-a-workspace-in-the-azure-atp-workspace-management-portal---step-1"></a>Azure ATP çalışma alanı Yönetim Portalı'nda - 1. adım bir çalışma alanı oluşturma
 
 >[!div class="step-by-step"]
 [2. Adım »](install-atp-step2.md)
 
-Bu yükleme yordamı oluşturmak ve bir çalışma alanı Azure ATP çalışma Yönetim Portalı'nda yönetmek için yönergeler sağlar. Azure ATP mimarisi hakkında daha fazla bilgi için bkz: [Azure ATP mimarisi](atp-architecture.md).
+Bu yükleme yordamı, oluşturma ve Azure ATP çalışma alanı yönetim portalında bir çalışma alanı yönetme için yönergeler sağlar. Azure ATP mimarisi hakkında daha fazla bilgi için bkz. [Azure ATP mimarisi](atp-architecture.md).
 
-Azure ATP yönetme ve birden çok çalışma izleme olanağına sahip. Bir tanıtım çalışma ve, PT Azure ATP onu sunulmadan önce tüm kuruluşa işlemini test çalışma alanı oluşturmak isterseniz bu özellikle yararlıdır. Bu çok ormanlı dağıtımlar desteklemek için gereklidir. Tek bir çalışma alanı yalnızca tek bir ormandaki birden çok etki alanı izleyebilirsiniz. 
+Azure ATP yönetme ve birden çok çalışma alanı izleme olanağına sahip. Bir tanıtım ve bir test çalışma, PT Azure ATP bunu sunulmadan önce tüm kuruluşunuza işlemini oluşturmak istiyorsanız bu özellikle yararlıdır. Bu çok ormanlı dağıtımlar desteklemek için gereklidir. Tek bir çalışma alanı, yalnızca birden çok etki alanından tek bir ormana izleyebilirsiniz. 
 
 > [!NOTE]
-> - En fazla iki etkin çalışma alanları olabilir. Bir çalışma alanı sildikten sonra yeniden etkinleştirmek için desteğine başvurabilirsiniz. Bir en fazla üç silinen çalışma alanları. Kaydedilmiş, silinen çalışma alanları sayısını artırmak için Azure ATP desteğe başvurun.
-> - Şu anda Azure ATP veri merkezleri Avrupa, Kuzey Amerika/Orta Amerika/Karayipler ve Asya'da dağıtılır.
+> Şu anda Avrupa, Kuzey Amerika/Orta Amerika/Karayipler ve Asya Azure ATP veri merkezlerinde dağıtılır.
 
 ## <a name="step-1-enter-the-workspace-management-portal"></a>1. Adım Çalışma alanı Yönetim Portalı'nı girin
 
-Ağınız algılayıcı gereksinimleri karşıladığını doğruladıktan sonra Azure ATP çalışma alanı oluşturma ile devam edebilirsiniz.
+Ağınızı algılayıcı gereksinimlerini karşıladığını doğruladıktan sonra Azure ATP çalışma alanının oluşturulmasını geçebilirsiniz.
 
 > [!NOTE]
->Çalışma alanı yönetim portalına erişmek için bir genel yönetici veya Kiracı güvenlik yöneticisi olmanız gerekir.
+>Çalışma alanı yönetim portalına erişmek için genel yönetici veya Kiracı güvenlik yöneticisi olmanız gerekir.
 
 
-1.  Girin [Azure ATP çalışma portal](https://portal.atp.azure.com).
+1.  Girin [Azure ATP çalışma alanı portalı](https://portal.atp.azure.com).
 
 2.  Azure Active Directory kullanıcı hesabınızla oturum açın.
 
 ## <a name="step-2-create-a-workspace"></a>2. Adım Çalışma alanı oluşturma
 
-1. Tıklatın **çalışma alanı oluşturma**.
+1. Tıklayın **çalışma alanı oluşturma**.
 
-2. İçinde **yeni çalışma alanı oluşturma** iletişim kutusunda, çalışma alanınızı adlandırın, onu birincil çalışma alanınız olup olmadığını karar verin ve seçin bir **coğrafi konuma** , veri merkezi için. Yalnızca bir çalışma alanı birincil olarak ayarlanabilir. Bir çalışma alanı birincil tümleştirmeler etkiler - yalnızca Azure ATP Windows Defender ATP için birincil çalışma alanınızda tümleştirebilirsiniz olarak ayarlanıyor. Hangi çalışma alanının birincil daha sonra geçerli birincil çalışma alanı için zaten ayarlanmış tümleştirmeler kaldırmak zorunda şekilde yapmak amacıyla ancak olduğunu değiştirebilirsiniz.
+2. İçinde **yeni çalışma alanı oluşturma** iletişim kutusunda, çalışma alanınızı adlandırın, karar, birincil çalışma alanınız olup olmadığını ve seçin bir **coğrafi konum** veri merkeziniz için. Yalnızca bir çalışma, birincil olarak ayarlanabilir. Bir çalışma alanı, birincil tümleştirmeler etkiler - yalnızca Azure ATP Windows Defender ATP ile birincil çalışma alanınız için tümleştirebilirsiniz olarak ayarlanıyor. Hangi çalışma alanının birincil daha sonra kaldırmak için geçerli birincil çalışma alanı zaten ayarlanmış herhangi tümleştirmeler gerekmez, ancak yapmak üzere olduğunu değiştirebilirsiniz.
  > [!NOTE]
  > Bir coğrafi konum seçtikten sonra değiştiremezsiniz.
-    ![Azure ATP çalışma](media/create-workspace.png)
+    ![Azure ATP çalışma alanı](media/create-workspace.png)
 
-3. Tıklayabilirsiniz **yönetmek Azure ATP kullanıcı rolleri** doğrudan erişmek için bağlantı [Azure Active Directory Yönetim Merkezi](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) ve rol gruplarını yönetin.
+3. Tıklayabilirsiniz **yönetme Azure ATP kullanıcı rollerini** doğrudan erişmek için bağlantı [Azure Active Directory Yönetim Merkezi](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) ve rol gruplarınızı yönetin.
 
  > [!NOTE]
- > Azure ATP başarıyla oturum açmak için Azure ATP çalışma portalına erişmek için uygun Azure ATP rolü atanmış bir kullanıcıyla oturum gerekir. Rol tabanlı erişim denetimi (RBAC) Azure ATP hakkında daha fazla bilgi için bkz: [Azure ATP rol gruplarıyla çalışma](atp-role-groups.md).
+ > Azure ATP başarıyla oturum açmak için Azure ATP çalışma alanı portalına erişmek için uygun Azure ATP rolünün atandığı bir kullanıcıyla oturum açmalısınız. Azure ATP rol tabanlı access control (RBAC) hakkında daha fazla bilgi için bkz: [Azure ATP rol gruplarıyla çalışma](atp-role-groups.md).
 
-4. Bu çalışma alanı için yeni çalışma erişim Azure ATP çalışma portal adını tıklatın.
+4. Bu çalışma alanı için yeni çalışma alanı erişimi Azure ATP çalışma alanı portalı adına tıklayın.
 
     ![Azure ATP çalışma alanları](media/atp-workspaces.png)
 
-- Yalnızca birincil çalışma düzenlenebilir. Diğer çalışma alanları için değişiklik yapmak için bunları silin ve yeniden ekleyin. Birincil çalışma silmek istiyorsanız, öncelikle tümleştirmeler devre dışı bırakma ve olmaması için çalışma kümesi **birincil** silinecek açmadan önce.
-- Birincil bir çalışma alanı düzenlemek için önce varolan tümleştirmeler çalışma alanında kapatmanız gerekir.
+- Yalnızca birincil çalışma alanı düzenlenebilir. Diğer çalışma alanlarında değişiklik yapmak için bunları silin ve yeniden ekleyin. Birincil çalışma alanını silmek istiyorsanız, önce tümleştirmeler devre dışı açmak ve olmaması için çalışma alanını ayarlamanız gerekir **birincil** silinecek açmadan önce.
+- Birincil bir çalışma alanı düzenlemek için önce mevcut tümleştirme çalışma alanında kapatmanız gerekir.
 
-- Veri saklama – silinen çalışma alanları görünmez kullanıcı Arabiriminde verilerine göre tutulur ancak [Microsoft Veri Bekletme İlkesi](https://www.microsoft.com/trustcenter/privacy/you-own-your-data).
+- Veri saklama – silinmiş çalışma alanları kullanıcı Arabiriminde görünmez. Azure ATP veri saklama hakkında daha fazla bilgi için bkz. [With Azure ATP verilerinin güvenliğine ve gizliliğine](atp-privacy-compliance.md).
 
 
 >[!div class="step-by-step"]
