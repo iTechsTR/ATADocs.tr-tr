@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/10/2018
+ms.date: 7/5/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: de0b8f1673098a1b4b00255f4543ca18a903c83f
-ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
+ms.openlocfilehash: 610a84ac0e9b3c199971ced47dc5a5d08db00287
+ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35259234"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37800683"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -186,21 +186,40 @@ Pass--Ticket bir yanal hareket tekniğidir saldırganlar bir bilgisayardan Kerbe
 
 **Açıklama**
 
-Saldırganlar etki alanı yönetici haklarına sahip tehlikeye [KRBTGT hesabı](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). KRBTGT hesabı kullanarak bunların herhangi bir kaynağa yetkilendirme sağlayan ve rastgele dilediğiniz zaman anahtarı süre sonu Ayarla anahtarı (TGT) sağlayan bir Kerberos bilet oluşturabilirsiniz. Bu sahte TGT "Altın" olarak adlandırılır ve saldırganların ağda kalıcılığı elde etmek sağlar.
+Saldırganlar etki alanı yönetici haklarına sahip tehlikeye [KRBTGT hesabı](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). KRBTGT hesabı kullanarak bunların herhangi bir kaynağa yetkilendirme sağlayan ve rastgele dilediğiniz zaman anahtarı süre sonu Ayarla anahtarı (TGT) sağlayan bir Kerberos bilet oluşturabilirsiniz. Bu sahte TGT "goldentTicket" olarak adlandırılır ve saldırganların ağda kalıcılığı elde etmek sağlar.
 
-Bu algılama, ekibi tarafından verilmesinin anahtarı için kullanılan bir Kerberos anahtarı, izin verilen süre belirtildiği şekilde birden fazla izin olduğunda bir uyarı tetiklenir [kullanıcı anahtarının en fazla ömrü](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) güvenlik ilkesi.
+Bu algılama, ekibi tarafından verilmesinin anahtarı için kullanılan bir Kerberos anahtarı, izin verilen süre belirtildiği şekilde birden fazla izin olduğunda bir uyarı tetiklenir [kullanıcı anahtarının en fazla ömrü](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx), bu bir **zaman anomali**golden ticket saldırısı veya varolmayan bir hesaba göre bu, bir **var olmayan bir hesap** altın bilet saldırısı.
+Güvenlik İlkesi.
 
 **Araştırma**
 
-1. (Son birkaç saat içinde) son yapılan herhangi bir değişiklik yoktu **kullanıcı anahtarının en fazla ömrü** Grup İlkesi ayarı? Yanıt Evet ise, ardından **Kapat** (Yanlış pozitif olduğu) uyarı.
+- **Zaman anomali**
+   1.   Kullanıcı anahtarı ayarı Grup ilkesinde en fazla ömrü yapılan değişiklikleri (son birkaç saat içinde) son vardı? Belirli değerini denetleyin ve anahtarı için kullanılan süresinden düşük olup olmadığına bakın. Yanıt Evet ise, uyarı (Yanlış pozitif olduğu)'ni kapatın.
+   2.   Azure ATP algılayıcısını bu uyarı bir sanal makine dahil mi? Evet ise, en son kaydedilen durumdan devam mı? Yanıt Evet ise, ardından bu uyarıyı kapatın.
+   3.   Yukarıdaki soruların yanıtlanması gerekirse, Hayır, bu, kötü amaçlı varsayılır.
+- **Var olmayan hesap**
+   1.   Aşağıdaki sorular sorun:
+         - Kullanıcı bir bilinen ve geçerli etki alanı kullanıcısı mıdır? Yanıt Evet ise, uyarı (Yanlış pozitif olduğu)'ni kapatın.
+         - Kullanıcının son eklendi? Yanıt Evet ise, ardından uyarıyı kapatın, değişiklik henüz eşitlenmemiş.
+         - Kullanıcı AD'den yakın zamanda silinip silinmediğini? Yanıt Evet ise, ardından uyarıyı kapatın.
+   2.   Yukarıdaki soruların yanıtlanması gerekirse, Hayır, bu, kötü amaçlı varsayılır.
 
-2. Azure ATP tek başına algılayıcı bu uyarı bir sanal makine dahil mi? Evet ise, en son kaydedilen durumdan devam mı? Yanıt Evet ise, ardından **Kapat** bu uyarı.
+1. Altın anahtar saldırılarını hem türleri için Git için kaynak bilgisayara tıklayın, **profili** sayfası. Etkinliğin oluştuğu sırada ne olduğunu kontrol edin ve olağan dışı etkinlikleri kimin, günlüğe kaydedilen dahil olmak üzere arayın hangi kaynaklara erişildiğini? 
 
-3. Yukarıdaki soruların yanıtlanması gerekirse, Hayır, bu, kötü amaçlı varsayılır.
+2.  Günlüğe kaydedilen tüm kullanıcılar, oturum açmış olması beklenen bilgisayara misiniz? Kendi ayrıcalıklarını nelerdir? 
+
+3.  Kullanıcılar bu kaynaklara erişimi gerekir?<br>
+Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP rozet tıklayın ![WD rozet](./media/wd-badge.png).
+ 
+ 4. Windows Defender atp'de makine daha fazla araştırmak için hangi işlemleri ve uyarılar, uyarının oluştuğu sırada oluştu denetleyin.
 
 **Düzeltme**
 
+
 Kerberos anahtar verme anahtarı (KRBTGT) parolayı iki kez kılavuzunda göre değiştirmek [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)kullanarak [KRBTGT hesap parolası/anahtarı sıfırlama Aracı](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Ayrıca, etki alanı yöneticisi haklarına bir altın anahtar oluşturuluyor gerektirdiği için uygulama [Pass the hash önerilerini](http://aka.ms/PtH).
+
+
+
 
 ## <a name="malicious-data-protection-private-information-request"></a>Kötü Amaçlı Veri Koruma Özel Bilgi İsteği
 
@@ -232,9 +251,14 @@ Bir çoğaltma isteği bir etki alanı denetleyicisi olmayan bir bilgisayardan b
 
 **Araştırma**
 
-1.  Söz konusu bilgisayarın bir etki alanı denetleyicisi mi? Örneğin, çoğaltma olan yeni yükseltilen etki alanı denetleyicisi verir. Yanıt Evet ise, **Kapat** şüpheli etkinlik. 
-2.  Söz konusu bilgisayarın Active Directory'den veri çoğaltma olması gerekiyor? Örneğin, Azure AD Connect. Yanıt Evet ise, **Kapat ve dışla** şüpheli etkinlik.
-3.  Kaynak bilgisayar veya hesap kendi profili sayfasına gitmek için tıklayın. Ne gibi olağan dışı etkinlikler için arama çoğaltma oluştuğu sırada olduğunu kontrol edin: açan, hangi kaynakların erişilebilir olduğunda. Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP rozet tıklayın ![Windows Defender ATP rozeti](./media/wd-badge.png) Daha fazla makine araştırmak için. Windows Defender ATP'de uyarı oluştuğu sırada hangi işlemleri ve uyarılar oluştu görebilirsiniz. 
+> [!NOTE]
+> Azure ATP algılayıcı değil yüklendiği etki alanı denetleyiciniz varsa, bu etki alanı denetleyicileri tarafından Azure ATP kapsamında değildir. Bir kaydı veya korumasız bir etki alanı denetleyicisinde yeni bir etki alanı denetleyicisi dağıtırsanız, bu durumda, bunu Azure ATP tarafından ilk etki alanı denetleyicisi olarak tanımlanmamış olabilir. Azure ATP algılayıcısını tam kapsamı almak için her etki alanı denetleyicisine yüklemek için önerilir.
+
+1. Söz konusu bilgisayarın bir etki alanı denetleyicisi mi? Örneğin, çoğaltma olan yeni yükseltilen etki alanı denetleyicisi verir. Yanıt Evet ise, **Kapat** şüpheli etkinlik. 
+2.  Söz konusu bilgisayarın Active Directory'den veri çoğaltma olması gerekiyor? Aygıtlar Örneğin, Azure AD Connect veya ağ performansı izleme. Yanıt Evet ise, **Kapat ve dışla** şüpheli etkinlik.
+3. Çoğaltma isteği bir NAT veya bir ara sunucu gönderildiği IP mi? Yanıt Evet ise, yeni bir etki alanı denetleyicisi cihazının arkasında ise veya ondan diğer şüpheli etkinlikleri oluşmadıysa denetleyin. 
+
+4. Kaynak bilgisayar veya hesap kendi profili sayfasına gitmek için tıklayın. Ne gibi olağan dışı etkinlikler için arama çoğaltma oluştuğu sırada olduğunu kontrol edin: açan, hangi kaynakların erişilebilir olduğunda. Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP rozet tıklayın ![Windows Defender ATP rozeti](./media/wd-badge.png) Daha fazla makine araştırmak için. Windows Defender ATP'de uyarı oluştuğu sırada hangi işlemleri ve uyarılar oluştu görebilirsiniz. 
 
 
 **Düzeltme**
@@ -505,9 +529,9 @@ Bunun bir WannaCry saldırısı olup olmadığını belirlemek için aşağıdak
 
 2. Hiçbir saldırı araçlarının bulunursa, kaynak bilgisayarın kendi NTLM veya SMB yığınını uygulayan bir uygulama çalışıp çalışmadığını denetleyin.
 
-3. Aksi durumda sonra bu WannaCry tarafından örneğin bir WannaCry tarayıcı betiği çalıştırarak neden olup olmadığını denetleyin. [bu tarayıcı](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner) ' teki şüpheli etkinliklerle ilgili kaynak bilgisayara karşı. Tarayıcı, makine makine düzeltme eki uygulama ve kötü amaçlı yazılımı kaldırmak ve ağdan engelleme virüs bulaşmış veya güvenlik açığı, iş olarak bulursa.
+3. Kaynak bilgisayarda, profili sayfasına gitmek için tıklayın. Ne gibi olağan dışı etkinlikler için arama uyarının oluştuğu sırada olduğunu kontrol edin: açan, hangi kaynakların erişilebilir olduğunda. Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP rozet tıklayın ![WD rozeti](./media/wd-badge.png) Daha fazla makine araştırmak için. Windows Defender ATP'de uyarı oluştuğu sırada hangi işlemleri ve uyarılar oluştu görebilirsiniz.
 
-4. Betik makine virüs bulaşmış veya güvenlik açığı, ardından yine de etkilenmiş ancak SMBv1 devre dışı olabilir veya makine yama olduğunu bulamadıysanız, Tarama Aracı etkiler.
+
 
 **Düzeltme**
 
