@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 610a84ac0e9b3c199971ced47dc5a5d08db00287
-ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
+ms.openlocfilehash: 83c855a89ad418769c81a4f1da3950ae0b6c54f7
+ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37800683"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39064126"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -107,9 +107,11 @@ Bu algılama, Azure ATP büyük birkaç basit bağlama kimlik doğrulamaları al
 
 2.  Altın bilet – excel elektronik tablosunda, ağ etkinliği sekmesini gidin. İlgili indirgenmiş alanı olduğunu göreceksiniz **istek anahtarı şifreleme türü**, ve **kaynak bilgisayarı desteklenen şifreleme türlerini** daha güçlü şifreleme yöntemlerini içerir.
 
-  1. Kaynak bilgisayar ve hesap denetleyin veya varsa birden çok kaynak bilgisayarlar ve hesabı, bir şey (örneğin, tüm tetiklenmesi için uyarıya neden olan belirli bir uygulama pazarlama kullanacağı) ortak sahip olup olmadığınızı denetleyin. Hangi nadiren kullanılır, özel bir uygulama kimlik doğrulaması daha düşük bir şifreleme şifreleme kullanarak durumlar vardır. Kaynak bilgisayar gibi özel uygulamalar olup olmadığını denetleyin. Bu durumda, büyük olasılıkla bir zararsız gerçek pozitiftir ve kaldırılabilir.
+  1. Kaynak denetimi bu anahtarları tarafından erişilen, tüm eriştikleri bir kaynak varsa, doğrulayın, bunlar erişmek için gereken geçerli bir kaynak olduğundan emin olun. Ayrıca, hedef kaynağın güçlü şifreleme yöntemlerini destekleyip desteklemediğini doğrulayın. Bu öznitelik msDS-SupportedEncryptionTypes, kaynak hizmet hesabının denetleyerek Active Directory'de denetleyebilirsiniz.
   
-  2. Kaynak denetimi bu anahtarları tarafından erişilen, tüm eriştikleri bir kaynak varsa, doğrulayın, bunlar erişmek için gereken geçerli bir kaynak olduğundan emin olun. Ayrıca, hedef kaynağın güçlü şifreleme yöntemlerini destekleyip desteklemediğini doğrulayın. Bu öznitelik msDS-SupportedEncryptionTypes, kaynak hizmet hesabının denetleyerek Active Directory'de denetleyebilirsiniz.
+  2. Kaynak bilgisayar ve hesap denetleyin veya varsa birden çok kaynak bilgisayarlar ve hesabı, bir şey (örneğin, tüm tetiklenmesi için uyarıya neden olan belirli bir uygulama pazarlama kullanacağı) ortak sahip olup olmadığınızı denetleyin. Hangi nadiren kullanılır, özel bir uygulama kimlik doğrulaması daha düşük bir şifreleme şifreleme kullanarak durumlar vardır. Kaynak bilgisayar gibi özel uygulamalar olup olmadığını denetleyin. Bu durumda, büyük olasılıkla bir zararsız gerçek pozitiftir ve kaldırılabilir.
+  
+  
 
 3.  Karmayı – excel elektronik tablosunda, ağ etkinliği sekmesini gidin. İlgili indirgenmiş alanı olduğunu göreceksiniz **şifrelenmiş zaman damgası şifreleme türü** ve **kaynak bilgisayarı desteklenen şifreleme türlerini** daha güçlü şifreleme yöntemlerini içerir.
 
@@ -197,7 +199,8 @@ Güvenlik İlkesi.
    1.   Kullanıcı anahtarı ayarı Grup ilkesinde en fazla ömrü yapılan değişiklikleri (son birkaç saat içinde) son vardı? Belirli değerini denetleyin ve anahtarı için kullanılan süresinden düşük olup olmadığına bakın. Yanıt Evet ise, uyarı (Yanlış pozitif olduğu)'ni kapatın.
    2.   Azure ATP algılayıcısını bu uyarı bir sanal makine dahil mi? Evet ise, en son kaydedilen durumdan devam mı? Yanıt Evet ise, ardından bu uyarıyı kapatın.
    3.   Yukarıdaki soruların yanıtlanması gerekirse, Hayır, bu, kötü amaçlı varsayılır.
-- **Var olmayan hesap**
+
+- **Var olmayan bir hesap** (Önizleme)
    1.   Aşağıdaki sorular sorun:
          - Kullanıcı bir bilinen ve geçerli etki alanı kullanıcısı mıdır? Yanıt Evet ise, uyarı (Yanlış pozitif olduğu)'ni kapatın.
          - Kullanıcının son eklendi? Yanıt Evet ise, ardından uyarıyı kapatın, değişiklik henüz eşitlenmemiş.
