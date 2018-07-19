@@ -17,6 +17,7 @@
 ## [6 VPN tümleştirmesi](install-atp-step6-vpn.md)
 ## [7 Dışlamalar ve honeytoken hesaplar](install-atp-step7.md)
 ## [8 YEY-R gerektiren izinleri yapılandırma](install-atp-step8-samr.md)
+## [9 Multi-forest destek ayarlama](atp-multi-forest.md)
 ## [Sessiz yükleme](ATP-silent-installation.md)
 ## [ATP algılayıcıları güncelleştirme](sensor-update.md)
 ## Azure ATP algılayıcısı ek adımlar
