@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/5/2018
+ms.date: 7/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 83c855a89ad418769c81a4f1da3950ae0b6c54f7
-ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
+ms.openlocfilehash: 089481d393acd0c18ad098d22a63bc521946b4e3
+ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39064126"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39202090"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -468,6 +468,72 @@ Bu algılama, Kerberos veya NTLM kullanarak birçok kimlik doğrulama hataları 
 **Düzeltme**
 
 [Uzun ve karmaşık parolalar](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) gerekli ilk deneme yanılma saldırılarına karşı güvenlik düzeyini belirtin.
+
+## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>Şüpheli etki alanı denetleyicisi yükseltme (olası DCShadow saldırı)
+
+**Açıklama**
+
+Bir etki alanı denetleyicisi gölge (DCShadow) saldırısı, kötü amaçlı çoğaltma kullanarak dizin nesneleri değiştirmek için tasarlanmış bir saldırıdır. Bu saldırı, herhangi bir makineden bir dolandırıcı etki alanı denetleyicisi çoğaltma işlemi kullanarak oluşturarak gerçekleştirilebilir.
+ 
+DCShadow RPC ve LDAP kullanır:
+1. Makine hesabı (etki alanı yöneticisi haklarına kullanarak), bir etki alanı denetleyicisi olarak kaydedin ve
+2. (Verilen çoğaltma hakları kullanarak) çoğaltma üzere DRSUAPI gerçekleştirin ve dizin nesnelere değişiklikleri göndermek.
+ 
+Sahte etki alanı denetleyicisi olarak kaydetmek ağ bir makinede çalışırken bu algılama, bir uyarı tetiklenir. 
+
+**Araştırma**
+ 
+1. Söz konusu bilgisayarın bir etki alanı denetleyicisi mi? Örneğin, çoğaltma olan yeni yükseltilen etki alanı denetleyicisi verir. Yanıt Evet ise, **Kapat** şüpheli etkinlik.
+2. Söz konusu bilgisayarın Active Directory'den veri çoğaltma olması gerekiyor? Örneğin, Azure AD Connect. Yanıt Evet ise, **Kapat ve dışla** şüpheli etkinlik.
+3. Kaynak bilgisayar veya hesap kendi profili sayfasına gitmek için tıklayın. Ne gibi olağan dışı etkinlikler için arama çoğaltma oluştuğu sırada olduğunu kontrol edin: kimlerin, hangi kaynaklara günlüğe kaydedilen ve bilgisayar kullanıcının işletim sistemi?
+   1. İçine oturum açmış olmanız gereken bilgisayara günlüğe kaydedilen tüm kullanıcılar misiniz? Kendi ayrıcalıklarını nelerdir? Bir sunucuyu etki alanı denetleyicisine Yükselt izni var mı? (etki alanı yöneticileri olmaları)?
+   2. Bu kaynaklara erişmek için kullanıcıların gerekir?
+   3. Bilgisayar, Windows Server işletim sistemi (veya Windows/Linux) çalıştırıyor mu? Verileri çoğaltmak için bir sunucu olmayan makine beklenmiyor.
+Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP rozet tıklayın ![Windows Defender ATP rozet](./media/wd-badge.png) makine daha fazla araştırmak için. Windows Defender ATP'de uyarı oluştuğu sırada hangi işlemleri ve uyarılar oluştu görebilirsiniz.
+
+4. Konum görmek için Olay Görüntüleyicisi ' [Dizin Hizmetleri günlüğünde kayıtları Active Directory olayları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Günlük, Active Directory'deki değişiklikleri izlemek için kullanabilirsiniz. Varsayılan olarak, Active Directory yalnızca ancak bu, kritik hata olaylarını kaydeder. uyarı recurrs, daha fazla bilgi için ilgili etki alanı denetleyicisinde bu denetimi etkinleştirin.
+
+**Düzelt**
+
+Aşağıdaki izinlere sahip olan, kuruluşunuzda denetimi: 
+- Dizin Değişikliklerini Çoğaltma 
+- Tüm dizin değişikliklerini çoğaltma 
+ 
+ 
+Daha fazla bilgi için [SharePoint Server 2013'te profil eşitleme izinleri verme Active Directory Domain Services](https://technet.microsoft.com/library/hh296982.aspx). 
+
+Yararlanabileceğiniz [AD ACL tarayıcı](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) veya etki alanında kimin bu izinlere sahip olduğunu belirlemek için bir Windows PowerShell Betiği oluşturabilirsiniz.
+ 
+
+
+
+## <a name="suspicious-replication-request-potential-dcshadow-attack"></a>Şüpheli çoğaltma isteği (olası DCShadow saldırı)
+
+**Açıklama** 
+
+Active Directory çoğaltma tarafından bir etki alanı denetleyicisinde yapılan değişiklikler diğer etki alanı denetleyicileriyle eşitlenmesi işlemidir. Gerekli izinleri göz önünde bulundurulduğunda, saldırganların bir etki alanı denetleyicisi almasına olanak kendi makine hesabı hakları verebilirsiniz. Saldırganlar bir kötü amaçlı çoğaltma isteği başlatmak bunları saldırganlar etki alanındaki Kalıcılık verebilir bir orijinal etki alanı denetleyicisinde Active Directory nesneleri değiştirmek izin verme yönelik çalışmalarımızı sürdüreceğiz.
+Azure ATP tarafından korunan bir orijinal etki alanı denetleyicisine karşı şüpheli çoğaltma isteği oluşturulduğunda bu algılama, bir uyarı tetiklenir. Etki alanı denetleyicisi gölge saldırılarında kullanılır teknikler simulatorda davranıştır.
+
+**Araştırma** 
+ 
+1. Söz konusu bilgisayarın bir etki alanı denetleyicisi mi? Örneğin, çoğaltma olan yeni yükseltilen etki alanı denetleyicisi verir. Yanıt Evet ise, **Kapat** şüpheli etkinlik.
+2. Söz konusu bilgisayarın Active Directory'den veri çoğaltma olması gerekiyor? Örneğin, Azure AD Connect. Yanıt Evet ise, **Kapat ve dışla** şüpheli etkinlik.
+3. Kaynak bilgisayarda, profili sayfasına gitmek için tıklayın. Ne olduğunu denetleyin **zamana yakın** gibi olağan dışı etkinlikler için arama çoğaltma: kimin günlüğe kaydedilen, hangi kaynakların kullanılan ve bilgisayarda nedir kullanıcının işletim sistemi?
+
+   1.  İçine oturum açmış olmanız gereken bilgisayara günlüğe kaydedilen tüm kullanıcılar misiniz? Kendi ayrıcalıklarını nelerdir? Çoğaltmalar (etki alanı yöneticileri olmaları) gerçekleştirmek için izni var mı?
+   2.  Bu kaynaklara erişmek için kullanıcıların gerekir?
+   3. Bilgisayar, Windows Server işletim sistemi (veya Windows/Linux) çalıştırıyor mu? Verileri çoğaltmak için bir sunucu olmayan makine beklenmiyor.
+Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP rozet tıklayın ![Windows Defender ATP rozet](./media/wd-badge.png) makine daha fazla araştırmak için. Windows Defender ATP'de uyarı oluştuğu sırada hangi işlemleri ve uyarılar oluştu görebilirsiniz.
+1. Konum görmek için Olay Görüntüleyicisi ' [Dizin Hizmetleri günlüğünde kayıtları Active Directory olayları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Günlük, Active Directory'deki değişiklikleri izlemek için kullanabilirsiniz. Varsayılan olarak, Active Directory yalnızca ancak bu, kritik hata olaylarını kaydeder. uyarı recurrs, daha fazla bilgi için ilgili etki alanı denetleyicisinde bu denetimi etkinleştirin.
+
+**Düzeltme**
+
+Aşağıdaki izinlere sahip olan, kuruluşunuzda denetimi: 
+- Dizin Değişikliklerini Çoğaltma 
+- Tüm dizin değişikliklerini çoğaltma 
+
+Bunu yapmak için yararlanabileceğiniz [AD ACL tarayıcı](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) veya etki alanında kimin bu izinlere sahip olduğunu belirlemek için bir Windows PowerShell Betiği oluşturabilirsiniz.
+
 
 ## <a name="suspicious-service-creation"></a>Şüpheli hizmet oluşturma
 

@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/15/2018
+ms.date: 7/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,17 +13,40 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9e28c18f118f7a2dc9d516cf62a113245a7be1fa
-ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
+ms.openlocfilehash: 032dde1ccbbfe0b2585c96410d4e19a799d8133a
+ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39064092"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39202158"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 # <a name="whats-new-in-azure-atp"></a>ATA'daki yenilikler 
+
+
+## <a name="azure-atp-release-241"></a>Azure ATP yayın 2.41
+
+22 Temmuz 2018'de yayınlanan
+
+- **Azure ATP çok ormanlı destek kademeli olarak (Önizleme) sunulacaktır** <br> Azure ATP ormanlar arasında yeteneği etkinliğini izleme ve profil kullanıcılar sağlayan birden çok ormanı olan kuruluşlar artık desteklenir. Bu yeni özellik sağlar:
+
+  - Görüntüleyebilir ve tek bir cam bölmeyle gelen birden çok orman genelinde kullanıcılar tarafından gerçekleştirilen etkinlikleri araştırın.
+  - Algılama artırır ve Gelişmiş Active Directory Tümleştirmesi ve hesap çözüm sağlayarak hatalı pozitif sonuçları azaltır.
+  - Daha iyi izleme uyarıları ve çapraz kuruluş kapsamı için raporlama alın.
+
+
+-   **Yeni algılamalar: DCShadow**<br>Etki alanı denetleyicisi gölge (DCShadow) saldırılarına karşı korumaya yardımcı olmak üzere iki yeni algılamalar eklendi:
+
+    -   Şüpheli etki alanı denetleyicisi yükseltme (olası DCShadow saldırısı) – bu algılama yöntemi, bir makine bir etki alanı denetleyicisi özelliklerini saldırıları algılamaya yardımcı olur ve diğer etki alanı denetleyicileri, etki alanınızdaki değişiklikleri yaymak için çoğaltma kullanmaya çalışır.
+
+    -   Şüpheli çoğaltma isteği (olası DCShadow saldırısı) – bu algılama dizin nesneleri değiştirmek için etki alanı denetleyicileri olmayan makineler, DC yükseltmesine gerçekleştirmeye saldırılarına karşı korumaya yardımcı olur.
+
+-   **Şifreleme düşürme bilgileri geliştirildi**<br>Şifreleme düşürme artık algılama saldırısı algılandı belirli türü ile ilgili daha fazla bilgi sağlar:-karmayı, altın ve iskelet anahtar. Ayrıca, bu uyarılar araştırmayı daha kolay etkinleştirmek için toplanmış.
+- Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları içerir. 
+
+
 
 ## <a name="azure-atp-release-240"></a>Azure ATP yayın 2.40
 

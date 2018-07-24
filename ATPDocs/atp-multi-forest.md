@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/17/2018
+ms.date: 7/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c76e459709c786082bea7566a61e5384a235eda4
-ms.sourcegitcommit: 8feb9b65dc0e1de0ace00aca11784e54f9852a15
+ms.openlocfilehash: a48bf96bd6a71282455d932a35aac23ba4c8193a
+ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39098204"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39202141"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -44,7 +44,7 @@ Birden çok Active Directory ormanını desteklemek için aşağıdakileri sağl
 Ormanlar arası etkinlikleri algılamak için Azure ATP algılayıcı dahil, kullanıcıları ve bilgisayarları uzaktan ormanlarından dahil olmak üzere tüm varlıklar için profilleri oluşturmak için Uzak Ormanlardaki etki alanı denetleyicileri sorgulayın. 
 
 > [!NOTE]
-> - Bunun çalışması sırada Azure ATP algılayıcı yüklendiği orman diğer ormanlardaki tarafından güvenilmesi gerekir.
+> - (En düşük tek yönlü bir güven varsa), azure ATP algılayıcı tüm ormanlara yüklenebilir.
 > - Altında Azure ATP konsolunda yapılandırdığınız kullanıcı **Dizin Hizmetleri** tüm ormanlar güvenilir olması gerekir.
 
 
