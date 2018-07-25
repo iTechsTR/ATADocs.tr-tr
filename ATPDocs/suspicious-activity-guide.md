@@ -2,10 +2,10 @@
 title: Azure ATP şüpheli etkinlik Kılavuzu | Microsoft Docs
 d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/20/2018
+ms.date: 7/24/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 089481d393acd0c18ad098d22a63bc521946b4e3
-ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
+ms.openlocfilehash: 7ae5ac30d1d17084df4c30d502a58767b97a4582
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39202090"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39227181"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -469,7 +469,7 @@ Bu algılama, Kerberos veya NTLM kullanarak birçok kimlik doğrulama hataları 
 
 [Uzun ve karmaşık parolalar](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) gerekli ilk deneme yanılma saldırılarına karşı güvenlik düzeyini belirtin.
 
-## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>Şüpheli etki alanı denetleyicisi yükseltme (olası DCShadow saldırı)
+## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---preview"></a>Şüpheli etki alanı denetleyicisi yükseltme (olası DCShadow saldırı) - Önizleme
 
 **Açıklama**
 
@@ -507,7 +507,7 @@ Yararlanabileceğiniz [AD ACL tarayıcı](https://blogs.technet.microsoft.com/pf
 
 
 
-## <a name="suspicious-replication-request-potential-dcshadow-attack"></a>Şüpheli çoğaltma isteği (olası DCShadow saldırı)
+## <a name="suspicious-replication-request-potential-dcshadow-attack---preview"></a>Şüpheli çoğaltma isteği (olası DCShadow saldırı) - Önizleme
 
 **Açıklama** 
 

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 032dde1ccbbfe0b2585c96410d4e19a799d8133a
-ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
+ms.openlocfilehash: be3a4315384d5df03b1f04f0a71a960c66858b05
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39202158"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39227232"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -68,7 +68,7 @@ Yayın Tarihi: 5 Temmuz 2018
 
 1 Temmuz 2018'de yayınlanan
 
-- Bu sürüm, düzeltmeler ve geliştirmeler Azure ATP Portalı'nın yanı sıra birden çok sorunlar için geliştirmeler içerir. 
+- Bu sürüm, düzeltmeler ve geliştirmeler Azure ATP Portalı'nın yanı sıra birden çok sorunlar için geliştirmeler içerir.
 
 ## <a name="azure-atp-release-237"></a>Azure ATP yayın 2.37
 

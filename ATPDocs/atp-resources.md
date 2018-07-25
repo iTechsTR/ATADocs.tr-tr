@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d7ef73907b224758aabde1db5dd4f6060b6d244a
-ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
+ms.openlocfilehash: 498d1b4d14db079583da1999bfb68a5648111362
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39202056"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39227147"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -64,6 +64,7 @@ Azure ATP çalışır duruma geldikten sonra etkinlik zaman çizelgesinde algıl
 ## <a name="security-best-practices"></a>En iyi güvenlik uygulamaları
 
 - [Azure ATP ile ilgili sık sorulan sorular](atp-technical-faq.md) -bu makalede Azure ATP hakkında sık sorulan soruların bir listesi ve öngörülerle yanıtlar sağlanır. 
+
 ## <a name="community-resources"></a>Topluluk kaynakları
 
 Blog: [Azure ATP blogu](https://aka.ms/aatpblog)
