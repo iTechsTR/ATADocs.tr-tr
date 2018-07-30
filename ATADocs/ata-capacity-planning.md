@@ -13,18 +13,18 @@ ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: e58fe62fc655fed8f17ae800dda20e022e198a26
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 07/30/2018
 ms.locfileid: "30010032"
 ---
-*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
+*İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 
 
 # <a name="ata-capacity-planning"></a>ATA Kapasite Planlaması
-Bu makalede izlemesi için kaç ATA sunucusuna ihtiyacınız belirlemenize yardımcı olur. Yardımcı kaç ATA Gateway ve/veya ATA Lightweight Gateway gereksinimini ve ATA Center ve ATA Gateway için sunucu kapasitesini şekil.
+Bu makale, ağınızı izlemek için kaç ATA sunucusuna ihtiyacınız olduğunu belirlemenize yardımcı olur. Yardımcı kaç ATA Gateway ve/veya ATA Lightweight Gateway hazır ve ATA Center ve ATA Gateway bileşenleri için sunucu kapasitesi şekil.
 
 > [!NOTE] 
 > Bu makalede açıklanan performans gereksinimleri karşılandığı sürece, ATA Center herhangi bir IaaS satıcısında dağıtılabilir.
@@ -42,7 +42,7 @@ ATA dağıtımızın kapasitesini belirlemek için önerilen en kolay yol [ATA B
 
 
 > [!NOTE]
-> Farklı ortamları değişir ve başlangıçta ATA dağıtmak ve boyutlandırma aracı çalıştırdıktan sonra birden çok özel ve beklenmeyen ağ trafiği özelliklerine sahiptir çünkü ayarlamak ve dağıtımınız için kapasite ince gerekebilir.
+> Farklı ortamları değişir ve başlangıçta ATA dağıtma ve boyutlandırma Aracı'nı çalıştırdıktan sonra birden çok özel ve beklenmeyen bir ağ trafiği özelliklerine sahip olduğundan, ayarlamak ve dağıtımınız için kapasite ince gerekebilir.
 
 
 Çeşitli nedenlerle ATA Boyutlandırma Aracını kullanamıyorsanız paket/sn sayaç bilgilerini tüm Etki Alanı Denetleyicilerinizden 24 saat boyunca düşük toplama aralığıyla (yaklaşık 5 saniye) el ile toplayın. Sonrasında, her Etki Alanı Denetleyicisi için günlük ortalamanızı ve en meşgul zaman aralığı (15 dakikalık) ortalamanızı hesaplamanız gerekir.
@@ -50,7 +50,7 @@ Aşağıdaki bölüm, bir Etki Alanı Denetleyicisi’nden paket/sn sayacı bilg
 
 
 > [!NOTE]
-> Farklı ortamları değişir ve başlangıçta ATA dağıtmak ve boyutlandırma aracı çalıştırdıktan sonra birden çok özel ve beklenmeyen ağ trafiği özelliklerine sahiptir çünkü ayarlamak ve dağıtımınız için kapasite ince gerekebilir.
+> Farklı ortamları değişir ve başlangıçta ATA dağıtma ve boyutlandırma Aracı'nı çalıştırdıktan sonra birden çok özel ve beklenmeyen bir ağ trafiği özelliklerine sahip olduğundan, ayarlamak ve dağıtımınız için kapasite ince gerekebilir.
 
 
 ### <a name="ata-center-sizing"></a>ATA Center Boyutlandırması
@@ -70,8 +70,8 @@ Kullanıcı davranış analizi için ATA Center’a en az 30 günlük veri gerek
 
 &#42;&#42;Ortalama sayılar (En yüksek sayılar)
 > [!NOTE]
-> -   ATA Center’ın izlenen tüm etki alanı denetleyicilerinden saniye başına işleyebileceği toplam miktar, en fazla 1 milyon pakettir. Bazı ortamlarda, aynı ATA Center 1 M yüksektir genel trafiği işleyebilir. Bu tür ortamlar konusunda yardım almak için askcesec@microsoft.com ile iletişime geçin.
-> -   Boş alanınız en az 20 ulaşırsa % ya da 200 GB, eski veri koleksiyonu silinir. Bu düzey için veri toplama başarıyla azaltmak mümkün değilse, bir uyarı kaydedilir.  ATA %5 eşik kadar çalışmasını devam edecek veya 50 GB boş alan ulaşıldığında.  Bu noktada, ATA veritabanını doldurma durdurur ve ek bir uyarı verilir.
+> -   ATA Center’ın izlenen tüm etki alanı denetleyicilerinden saniye başına işleyebileceği toplam miktar, en fazla 1 milyon pakettir. Bazı ortamlarda aynı ATA Center, 1 milyon yüksektir genel trafikle başa çıkabilir. Bu tür ortamlar konusunda yardım almak için askcesec@microsoft.com ile iletişime geçin.
+> -   Boş alanınız en az 20 ulaşırsa % veya 200 GB, en eski veri koleksiyonu silinir. Bu düzey için veri toplama başarıyla azaltmak mümkün değilse bir uyarı günlüğe kaydedilir.  ATA %5 eşiğinin kadar çalışmaya devam eder veya 50 GB boş alan ulaşıldı.  Bu noktada, ATA veritabanını doldurma durdurur ve ek bir uyarı verilir.
 > - Bu makalede açıklanan performans gereksinimleri karşılandığı sürece, ATA Center’ın herhangi bir IaaS satıcısında dağıtılması mümkündür.
 > -   Okuma ve yazma etkinlikleri için depolama gecikmesi 10 ms’nin altında olmalıdır.
 > -   Okuma ve yazma etkinlikleri arasındaki oran, saniyede 100.000 paketin altında yaklaşık 1:3 ve saniyede 100.000 paketin üstünde 1:6’dır.
@@ -129,7 +129,7 @@ Bir ATA Lightweight Gateway, etki alanı denetleyicisinin oluşturduğu ağ traf
 > -   Etki alanı denetleyicisinde, ATA Lightweight Gateway için gereken kaynaklar yoksa etki alanı denetleyicisi performansı bundan etkilenmez ancak ATA Lightweight Gateway gerektiği gibi çalışmayabilir.
 > -   Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
 > -   En iyi performans için, ATA Lightweight Gateway’in **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.
-> -   En az 5 GB alanı gereklidir ve 10 GB önerilir, ATA ikili dosyaları için gerekli alanı dahil olmak üzere [ATA günlüklerini](troubleshooting-ata-using-logs.md), ve [performans günlükleri](troubleshooting-ata-using-perf-counters.md).
+> -   En az 5 GB alan gereklidir ve 10 GB önerilir, ATA ikili dosyaları için gereken alan dahil olmak üzere [ATA günlükleri](troubleshooting-ata-using-logs.md), ve [performans günlükleri](troubleshooting-ata-using-perf-counters.md).
 
 
 ### <a name="ata-gateway-sizing"></a>ATA Gateway Boyutlandırması
@@ -164,7 +164,7 @@ Bağlantı noktası yansıtmayla ilgili önemli noktalar, her bir veri merkezi v
 > [!NOTE] 
 > -   Dinamik bellek desteklenmez.
 > -   En iyi performans için, ATA Gateway’in **Güç Seçeneğini** **Yüksek Performans** olarak ayarlayın.
-> -   En az 5 GB alanı gereklidir ve 10 GB önerilir, ATA ikili dosyaları için gerekli alanı dahil olmak üzere [ATA günlüklerini](troubleshooting-ata-using-logs.md), ve [performans günlükleri](troubleshooting-ata-using-perf-counters.md).
+> -   En az 5 GB alan gereklidir ve 10 GB önerilir, ATA ikili dosyaları için gereken alan dahil olmak üzere [ATA günlükleri](troubleshooting-ata-using-logs.md), ve [performans günlükleri](troubleshooting-ata-using-perf-counters.md).
 
 
 
