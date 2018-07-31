@@ -2,10 +2,10 @@
 title: Bilinen ATA sorunlarını giderme | Microsoft Docs
 description: Bilinen Advanced Threat Analytics sorunlarını nasıl giderebileceğinizi açıklar
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 7/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: a7172447de5b4d4088da2d8d687a7bec47a01551
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 3433da5ca3d6d08f91cd97b24f6b97251c6b28ae
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010491"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336005"
 ---
-*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
+*İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 
 
@@ -47,13 +47,13 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 |System.InvalidOperationException: 'Microsoft.Tri.Gateway' örneği belirtilen Kategoride yok.|ATA Gateway’deki işlem adları için PID’ler etkinleştirilmiş|İşlem adlarında PID’leri devre dışı bırakmak için [KB281884](https://support.microsoft.com/kb/281884)’yi kullanın|
 |System.InvalidOperationException: Kategori yok.|Sayaçlar kayıt defterinde devre dışı bırakılmış olabilir|Performans Sayaçlarını yeniden oluşturmak için [KB2554336](https://support.microsoft.com/kb/2554336)’yı kullanın|
 |System.ApplicationException: ETW oturumu MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329 başlatılamıyor|HOSTS dosyasında makinenin kısa adına işaret eden bir ana bilgisayar girişi var|Ana bilgisayar girişini C:\Windows\System32\drivers\etc\HOSTS dosyasından kaldırın ya da bir FQDN olarak değiştirin.|
-|System.IO.IOException: Uzak taraf taşıma akışını kapattığından kimlik doğrulaması başarısız oldu.|TLS 1.0 ATA Gateway'de devre dışıdır, ancak .net TLS 1.2 kullanmak üzere ayarlanmış|Aşağıdaki seçeneklerden birini kullanın: </br> TLS 1.0 ‘ı ATA Gateway’de etkinleştirme </br>TLS 1.2 .net üzerinde SSL ve TLS, işletim sistemi Varsayılanları şu şekilde kullanmak için kayıt defteri anahtarlarını ayarlayarak etkinleştirin: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
+|System.IO.IOException: Uzak taraf taşıma akışını kapattığından kimlik doğrulaması başarısız oldu.|TLS 1.0, ATA Gateway'de devre dışı bırakıldı ancak .net TLS 1.2 kullanmak üzere ayarlanmış|Aşağıdaki seçeneklerden birini kullanın: </br> TLS 1.0 ‘ı ATA Gateway’de etkinleştirme </br>TLS 1.2 .net üzerinde SSL ve TLS için işletim sistemi varsayılanları kullanacak şekilde kayıt defteri anahtarlarını ayarlayarak etkinleştir: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 |System.TypeLoadException: 'Microsoft.Opn.Runtime.Values.BinaryValueBufferManager' türü, 'Microsoft.Opn.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' derlemesinden yüklenemiyor|ATA Gateway gerekli ayrıştırma dosyalarını yüklemede başarısız oldu.|Microsoft İleti Çözümleyicisi’nin yüklü olup olmadığını kontrol edin. İleti Çözümleyicisi’nin ATA Gateway veya Lightweight Gateway ile birlikte yüklü olması desteklenmemektedir. İleti Çözümleyicisi'ni kaldırın ve Gateway hizmetini yeniden başlatın.|
 |System.Net.WebException: Uzak sunucu bir hata döndürdü: (407) Ara Sunucu Kimlik Doğrulaması Gerekli|ATA Center ile ATA Gateway iletişimi ara sunucu tarafından kesiliyor.|ATA Gateway makinesinde ara sunucuyu devre dışı bırakın. <br></br>Ara sunucu ayarlarının hesaba göre değişebileceğini unutmayın.|
 |System.IO.DirectoryNotFoundException: Sistem, belirtilen yolu bulamıyor. (HRESULT: 0x80070003 özel durumu)|ATA’yı çalıştırması gereken bir veya daha fazla hizmet başlatılamadı.|Aşağıdaki hizmetleri başlatın: <br></br>Performans Günlükleri ve Uyarıları (PLA), Görev Zamanlayıcı (Zamanlama).|
-|System.Net.WebException: Uzak sunucu bir hata döndürdü: (403) Yasak|ATA Gateway veya Lightweight Gateway ATA Center güvenilir olmadığı için bir HTTP bağlantısı kurmadan alınamaz.|NetBIOS adı ve ATA Center FQDN'sini güvenilen Web siteleri listesine ekleyin ve Interne Explorer (veya yapılandırılmış NetBIOS/FQDN farklı olması durumunda yapılandırma belirtildiği gibi ATA Center adı) önbellekte temizleyin.|
-|System.Net.Http.HttpRequestException: PostAsync failed [requestTypeName=StopNetEventSessionRequest]|ATA Gateway veya ATA Lightweight Gateway olamaz durdurun ve WMI sorunu nedeniyle ağ trafiğini toplar ETW oturumunu Başlat|' Ndaki yönergeleri izleyin [WMI: WMI deposunu yeniden](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/) WMI sorunu gidermek için|
-|System.Net.Sockets.SocketException: Yuva erişim izinlerini tarafından yasaklanmış bir şekilde erişmek için girişimde bulunuldu|Başka bir uygulama ATA Gateway'de bağlantı noktası 514 kullanıyor|Kullanım `netstat -o` Bu bağlantı noktası hangi işlemin kullandığını kurmak için.|
+|System.Net.WebException: Uzak sunucu bir hata döndürdü: (403) Yasak|ATA Gateway veya Lightweight Gateway ATA Center güvenilir olmadığı için bir HTTP bağlantısı kurmasını Yasak.|ATA Center'ın FQDN ve NetBIOS adını güvenilir Web siteleri listesine ekleyin ve Interne Explorer (veya yapılandırılmış NetBIOS/FQDN farklı olması durumunda yapılandırmasında belirtilen ATA Center'ın adı) önbelleğini temizleyin.|
+|System.Net.Http.HttpRequestException: PostAsync başarısız oldu. [requestTypeName StopNetEventSessionRequest =]|ATA Gateway veya ATA Lightweight Gateway olamaz durdurup WMI sorun nedeniyle ağ trafiği toplayan ETW oturumu|Bölümündeki yönergeleri [WMI: WMI deposunun yeniden](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/) WMI sorunu düzeltmek için|
+|System.Net.Sockets.SocketException: Bir yuva, erişim izinleri tarafından yasaklanmış bir şekilde erişmek girişiminde bulunuldu|Başka bir uygulama, ATA Gateway'e bağlantı noktası 514 kullanıyor|Kullanım `netstat -o` Bu bağlantı noktası hangi işlemin kullandığını kurmak için.|
  
 ## <a name="deployment-errors"></a>Dağıtım hataları
 > [!div class="mx-tableFixed"]
@@ -62,11 +62,15 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 |.Net Framework 4.6.1 yüklemesi 0x800713ec hatasıyla başarısız oldu|.Net Framework 4.6.1 ön koşulları sunucuda yüklü değil. |ATA’yı yüklemeden önce, [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) ve [KB2919355](https://support.microsoft.com/kb/2919355) Windows güncelleştirmelerinin sunucuda yüklü olduğunu doğrulayın.|
 |System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi|Dağıtım işlemi, ATA Center’a erişemediği için zaman aşımına uğradı.|1.    IP adresi ile ATA Center’a gözatarak ağ bağlantısını kontrol edin. <br></br>2.    Ara sunucu veya güvenlik duvarı yapılandırması olup olmadığını denetleyin.|
 |System.Net.Http.HttpRequestException: İsteği gönderirken bir hata oluştu. ---> System.Net.WebException: Uzak sunucu bir hata döndürdü: (407) Ara Sunucu Kimlik Doğrulaması Gerekli.|Dağıtım işlemi, bir ara sunucunun yanlış yapılandırması nedeniyle ATA Center’a erişemediği için zaman aşımına uğradı.|Dağıtımdan önce ara sunucu yapılandırmasını devre dışı bırakın ve ardından ara sunucu yapılandırmasını yeniden etkinleştirin. Veya bunun yerine ara sunucuda bir özel durum yapılandırabilirsiniz.|
-|System.Net.Sockets.SocketException: Varolan bir bağlantıyı zorla uzak ana bilgisayar tarafından kapatıldı||Aşağıdaki seçeneklerden birini kullanın: </br>TLS 1.0 ‘ı ATA Gateway’de etkinleştirme </br>TLS 1.2 .net üzerinde SSL ve TLS, işletim sistemi Varsayılanları şu şekilde kullanmak için kayıt defteri anahtarlarını ayarlayarak etkinleştirin:</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
-|Hata [\[] DeploymentModel [\]] başarısız yönetim kimlik doğrulama [\[] CurrentlyLoggedOnUser =<domain>\<kullanıcı adı > Durum = FailedAuthentication özel durum = [\]]|ATA Gateway veya ATA Lightweight Gateway dağıtım işlemini başarıyla ATA Center'a karşı kimlik doğrulaması yapamıyor|Dağıtım işlemi başarısız makineden bir tarayıcı açın ve ATA Konsolu erişebilir, bkz. </br>Aksi durumda, tarayıcının ATA Center'a karşı neden doğrulanamaz görmek için sorun gidermeyi başlatma. </br>Denetlenecek öğeler: </br>Proxy yapılandırması</br>Ağ sorunları</br>Grup İlkesi ayarları ATA Center'dan farklı bu makinede kimlik doğrulaması için.|
+|System.Net.Sockets.SocketException: Var olan bir bağlantı uzak konak tarafından zorla kapatılıp||Aşağıdaki seçeneklerden birini kullanın: </br>TLS 1.0 ‘ı ATA Gateway’de etkinleştirme </br>TLS 1.2 .net üzerinde SSL ve TLS için işletim sistemi varsayılanları kullanacak şekilde kayıt defteri anahtarlarını ayarlayarak etkinleştir:</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
+|Hata [\[] DeploymentModel [\]] başarısız yönetim kimlik doğrulama [\[] CurrentlyLoggedOnUser =<domain>\<kullanıcıadı > Durum FailedAuthentication özel durum = = [\]]|ATA Gateway veya ATA Lightweight Gateway dağıtım işlemini başarıyla ATA Center'a karşı kimlik doğrulaması yapılamadı|Dağıtım işlemi başarısız makineden bir tarayıcıyı açıp ATA Konsolu'na ulaşıp ulaşamadığını. </br>Aksi durumda, tarayıcının ATA Center'a karşı neden kimlik doğrulaması yapamaz görmek için sorun gidermeyi başlatma. </br>Denetlenecek noktalar şunlardır: </br>Proxy yapılandırması</br>Ağ sorunları</br>Grup İlkesi ayarları ATA Center'dan farklı bu makinede kimlik doğrulaması için.|
 
 
-
+## <a name="ata-center-errors"></a>ATA Center hataları
+> [!div class="mx-tableFixed"]
+|Hata|Description|Çözüm|
+|-------------|----------|---------|
+|System.Security.Cryptography.CryptographicException: erişim reddedildi.|ATA Center, şifre çözme için sertifikayı kullanmak başarısız oldu. Bu büyük olasılıkla son bir sertifikanın imza ayarlamak KeySpec öğesinin (KeyNumber) ile kullanılacak gerçekleştiği (ADRESİNDEKİ\_imzası) desteklenmeyen KeyExchange kullanmak yerine şifre çözme için (en\_KEYEXCHANGE).|1.    ATA Center hizmeti durdurun. <br></br>2.     ATA Center sertifikasını merkezi sertifika deposundan silin. (Silmeden önce bir PFX dosyasında özel anahtarla yedeklediğiniz sertifikayı sahip olduğunuzdan emin olun.) <br></br>3.    Yükseltilmiş bir komut istemi açın ve certutil - importpfx "CenterCertificate.pfx" AT çalıştırma\_KEYEXCHANGE <br></br>4.     ATA Center hizmeti başlatın. <br></br>5.     Her şeyin beklendiği gibi çalıştığını doğrulayın.|
 
 
 ## <a name="ata-gateway-and-lightweight-gateway-issues"></a>ATA Gateway ve Lightweight Gateway sorunları
@@ -75,12 +79,12 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 |Sorun|Description|Çözüm|
 |-------------|----------|---------|
 |Etki alanı denetleyicisinden trafik alınmıyor ama izleme uyarıları gözlemleniyor|    ATA Gateway’den bağlantı noktası yansıtma kullanan bir etki alanı denetleyicisinden trafik alınmadı|ATA Gateway yakalama NIC’sindeki **Gelişmiş Ayarlar**’da şu özellikleri devre dışı bırakın:<br></br>Alma Kesimi Birleştirme (IPv4)<br></br>Alma Kesimi Birleştirme (IPv6)|
-|Bu izleme uyarı görüntülenir: **olmayan bazı ağ trafiğini analiz ediliyor**|VMware sanal makineleri bir ATA Gateway veya Lightweight Gateway varsa, bu izleme uyarı alabilirsiniz. Bu VMware yapılandırma uyuşmazlık nedeniyle olur.|Aşağıdaki ayarları ayarlamak **0** veya **devre dışı** sanal makinenin NIC yapılandırmasında: TsoEnable LargeSendOffload, TSO boşaltma, çok büyük TSO boşaltma|TLS 1.0 için ATA Gateway'de devre dışı ancak .net TLS 1.2 kullanmak üzere ayarlanmış|
+|Bu uyarı görüntülenir: **ağ trafiğinin bir kısmı analiz edilmiyor**|VMware sanal makinelerindeki bir ATA Gateway veya Lightweight Gateway varsa, bu uyarı alabilirsiniz. Bu, bir VMware yapılandırma uyuşmazlık nedeniyle olur.|Aşağıdaki ayarlar **0** veya **devre dışı** sanal makine NIC yapılandırması: TsoEnable, LargeSendOffload, tso veri boşaltma, büyük TSO boşaltma|TLS 1.0, ATA Gateway'de devre dışı bırakıldı ancak .net TLS 1.2 kullanmak üzere ayarlanmış|
 
 
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

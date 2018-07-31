@@ -2,10 +2,10 @@
 title: ATA'daki yenilikler | Microsoft Docs
 description: Azure ATP en son sürümlerini açıklar ve her sürümdeki yenilikler hakkında bilgi sağlar.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/21/2018
+ms.date: 7/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,17 +13,23 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: be3a4315384d5df03b1f04f0a71a960c66858b05
-ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
+ms.openlocfilehash: ebdae7617dd550631186ab87cba922758649fd45
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39227232"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335988"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 # <a name="whats-new-in-azure-atp"></a>ATA'daki yenilikler 
+
+## <a name="azure-atp-release-242"></a>Azure ATP yayın 2.42
+
+29 Temmuz 2018'de yayınlanan
+
+- Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları içerir. 
 
 
 ## <a name="azure-atp-release-241"></a>Azure ATP yayın 2.41
@@ -211,7 +217,7 @@ Yayın Tarihi: 11 Mart 2018
 **Performans iyileştirmeleri**
  -  Azure ATP algılayıcısı altyapı performans için İyileştirildi: Toplu trafik görünümünü CPU ve paket işlem hattının etkinleştirir ve SSL oturumlarını DC'ye en aza indirmek için etki alanı denetleyicilerine yuva kullanır.
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [Azure ATP önkoşulları](atp-prerequisites.md)
 - [Azure ATP kapasite planlaması](atp-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

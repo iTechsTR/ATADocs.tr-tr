@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7ae5ac30d1d17084df4c30d502a58767b97a4582
-ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
+ms.openlocfilehash: 4e6a7d90ad5670b3d1c01ba70d7b5a81e8808b5e
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39227181"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335886"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -101,7 +101,7 @@ Bu algılama, Azure ATP büyük birkaç basit bağlama kimlik doğrulamaları al
 
 **Araştırma**
 
-İlk olarak hangi ile ilgili yukarıdaki üç algılama türleri görmek için uyarı açıklamasını denetleyin. Araştırma, ilk olarak, yukarıdaki üç algılama türleri ile ilgili uyarıya açıklamasını denetleyin. Daha fazla bilgi için Excel elektronik tablosunu indirin.
+İlk olarak hangi ile ilgili yukarıdaki üç algılama türleri görmek için uyarı açıklamasını denetleyin. Daha fazla bilgi için Excel elektronik tablosunu indirin.
 
 1.  Maymuncuk – kullanarak etki alanı denetleyicilerinizin Skeleton Key etkilenen, denetleyebilirsiniz [Azure ATP ekibi tarafından yazılan tarayıcıyı](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Tarayıcı 1 veya daha fazla etki alanı denetleyicilerinizin kötü amaçlı yazılım bulması halinde, bu gerçek pozitiftir.
 
@@ -109,9 +109,9 @@ Bu algılama, Azure ATP büyük birkaç basit bağlama kimlik doğrulamaları al
 
   1. Kaynak denetimi bu anahtarları tarafından erişilen, tüm eriştikleri bir kaynak varsa, doğrulayın, bunlar erişmek için gereken geçerli bir kaynak olduğundan emin olun. Ayrıca, hedef kaynağın güçlü şifreleme yöntemlerini destekleyip desteklemediğini doğrulayın. Bu öznitelik msDS-SupportedEncryptionTypes, kaynak hizmet hesabının denetleyerek Active Directory'de denetleyebilirsiniz.
   
-  2. Kaynak bilgisayar ve hesap denetleyin veya varsa birden çok kaynak bilgisayarlar ve hesabı, bir şey (örneğin, tüm tetiklenmesi için uyarıya neden olan belirli bir uygulama pazarlama kullanacağı) ortak sahip olup olmadığınızı denetleyin. Hangi nadiren kullanılır, özel bir uygulama kimlik doğrulaması daha düşük bir şifreleme şifreleme kullanarak durumlar vardır. Kaynak bilgisayar gibi özel uygulamalar olup olmadığını denetleyin. Bu durumda, büyük olasılıkla bir zararsız gerçek pozitiftir ve kaldırılabilir.
+  2. Kaynak bilgisayar ve hesap denetleyin veya varsa birden çok kaynak bilgisayarlar ve hesabı, bir ortak olup olmadığını kontrol edin. Örneğin, tüm pazarlama sorumlunuza tetiklenmesi için uyarıya neden olan belirli bir uygulamayı kullanın. Hangi nadiren kullanılır, özel bir uygulama kimlik doğrulaması daha düşük bir şifreleme şifreleme kullanarak durumlar vardır. Kaynak bilgisayar gibi özel uygulamalar olup olmadığını denetleyin. Bu durumda, büyük olasılıkla bir zararsız gerçek pozitiftir ve kaldırılabilir.
   
-  
+
 
 3.  Karmayı – excel elektronik tablosunda, ağ etkinliği sekmesini gidin. İlgili indirgenmiş alanı olduğunu göreceksiniz **şifrelenmiş zaman damgası şifreleme türü** ve **kaynak bilgisayarı desteklenen şifreleme türlerini** daha güçlü şifreleme yöntemlerini içerir.
 
@@ -120,7 +120,7 @@ Bu algılama, Azure ATP büyük birkaç basit bağlama kimlik doğrulamaları al
 
 **Düzeltme**
 
-1.  İskelet anahtar – kötü amaçlı yazılımı kaldırın. Daha fazla bilgi için [Skeleton Key kötü amaçlı yazılım Analizine](https://www.secureworks.com/research/skeleton-key-malware-analysis) SecureWorks tarafından.
+1.  İskelet anahtar – kötü amaçlı yazılımı kaldırın. Daha fazla bilgi için [Skeleton Key kötü amaçlı yazılım Analizine](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
 2.  Altın bilet – yönergeleri izleyin [altın bilet](#golden-ticket) kuşkulu etkinlikler.   
     Ayrıca, etki alanı yöneticisi haklarına bir altın anahtar oluşturuluyor gerektirdiği için uygulama [Pass the hash önerilerini](http://aka.ms/PtH).
@@ -617,6 +617,6 @@ Bunun bir WannaCry saldırısı olup olmadığını belirlemek için aşağıdak
 > Kuşkulu bir etkinlik devre dışı bırakmak için desteğe başvurun.
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
 - [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

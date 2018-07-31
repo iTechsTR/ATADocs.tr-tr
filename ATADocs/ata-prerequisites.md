@@ -2,10 +2,10 @@
 title: Advanced Threat Analytics önkoşulları | Microsoft Docs
 description: Ortamınızda başarılı bir ATA dağıtımının gereksinimlerini açıklar
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 7/25/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 90c4bcad1b5a2d6da06153706129d9670ad57e1c
-ms.sourcegitcommit: 321ff1af2c140f41600c4c42ac4d455b3cdb9440
+ms.openlocfilehash: 199830a6cd0b84cf897311cc80472a078f582b59
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36233013"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335920"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -129,7 +129,7 @@ Aşağıdaki tabloda, ATA Center’ın düzgün çalışması için açılması 
 
 ### <a name="certificates"></a>Sertifikalar
 
-ATA’nın yüklenmesini kolaylaştırmak için, işlem sırasında otomatik olarak imzalanan sertifikalar yükleyebilirsiniz. POST dağıtım, otomatik olarak imzalanan bir sertifika ATA Center tarafından kullanılacak bir iç sertifika yetkilisi ile değiştirmeniz gerekir.
+Yüklemek ve ATA daha hızlı bir şekilde dağıtmak için yükleme sırasında otomatik olarak imzalanan sertifikalar yükleyebilirsiniz. Otomatik olarak imzalanan sertifikalar seçtiyseniz, ilk dağıtımdan sonra ATA Center tarafından kullanılacak bir iç sertifika yetkilisi sertifikalarını otomatik olarak imzalanan sertifikaları değiştirmek için önerilir.
 
 
 ATA Center ve ATA Gateway bileşenlerinin CRL dağıtım noktanıza erişimi olduğundan emin olun. Internet erişimi yoksa izleyin [el ile bir CRL içeri aktarma yordamını](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), tüm CRL dağıtım yükleme işlemini gerçekleştirin ve tüm zincir için işaret eder.
@@ -139,6 +139,7 @@ Sertifika olması gerekir:
 -   Şifreleme hizmeti sağlayıcısı (CSP) veya anahtar depolama sağlayıcısı (KSP) sağlayıcısı türü
 -   Ortak anahtar uzunluğu 2048 bit
 -   Bir değer KeyEncipherment ve ServerAuthentication özelliğinin kullanımı bayrakları
+-   KeySpec öğesinin (KeyNumber) "KeyExchange" değerini (en\_KEYEXCHANGE). Dikkat "Signature" değeri (en\_imzası) desteklenmiyor. 
 
 Örneğin, standart kullanabileceğiniz **Web sunucusu** veya **bilgisayar** şablonları.
 
@@ -312,7 +313,7 @@ ATA Konsolu tarayıcılar ve ayarları destekleyen bir tarayıcı erişilebilir:
 - [ATA Gateway türü sağ seçme](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA boyutlandırma aracı](http://aka.ms/atasizingtool)
 - [ATA mimarisi](ata-architecture.md)
 - [ATA’yı yükleme](install-ata-step1.md)
