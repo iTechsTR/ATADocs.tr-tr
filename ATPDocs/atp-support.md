@@ -1,6 +1,6 @@
 ---
-title: Azure ATP destek | Microsoft Docs
-description: Azure ATP için destek Yardım almak için işlemi açıklanmaktadır.
+title: Azure ATP desteği | Microsoft Docs
+description: Azure ATP için destek Yardım alma işlemi açıklanmaktadır.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
@@ -14,32 +14,32 @@ ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 58e3b0d04b196f0c49b6e146952c1819c8413ee3
-ms.sourcegitcommit: adfa7a3a3918518b6b14b94d3c0a9f899142196a
+ms.sourcegitcommit: eebf1156aaae199b6aaa7e431cd6372e572b1e9f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "29977582"
 ---
-*Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
+*İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
-# <a name="azure-advanced-threat-protection-information-and-support"></a>Azure Advanced Threat Protection bilgi ve Destek 
+# <a name="azure-advanced-threat-protection-information-and-support"></a>Azure Gelişmiş tehdit koruması bilgi ve Destek 
 
 
-Hakkında bilgi edinin, dağıtma ve kuruluşunuz için Azure Gelişmiş tehdit koruması desteği yardımcı olması için aşağıdaki kaynakları kullanın.
+Hakkında bilgi edinmek, dağıtmak ve kuruluşunuz için Azure Gelişmiş tehdit koruması desteği yardımcı olması için aşağıdaki kaynakları kullanın.
 
 |Bunu yapmak için...|...yoğun bu:|
 |----|----|
-|En popüler belgelerimize bakın|İlk beş sayfalarını okuyun:|- [Azure Advanced Threat Protection nedir?](what-is-atp.md)<br>- [Azure ATP önkoşulları](atp-prerequisites.md)<br>- [Azure ATP mimarisi](atp-architecture.md)<br>- [Azure ATP kapasite planlaması](atp-capacity-planning.md)<br>- [Çalışma alanı oluşturma](install-atp-step1.md)|
-|Ürün ekibi ve iş arkadaşlarınızla Göster|Ziyaret [teknik topluluk](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) Azure için Gelişmiş tehdit koruması.|
-|Abonelik bilgileri kontrol edin ve desteklenen özellikler listesini al|Bkz: [abonelik bilgilerini](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ve [özellik listesi](https://www.microsoft.com/cloud-platform/azure-information-protection-features) Azure Advanced Threat Protection Web sitesinden.|
+|En popüler belgelerimize bakın|İlk beş sayfaları oku:|- [Azure Gelişmiş tehdit Koruması nedir?](what-is-atp.md)<br>- [Azure ATP önkoşulları](atp-prerequisites.md)<br>- [Azure ATP mimarisi](atp-architecture.md)<br>- [Azure ATP kapasite planlaması](atp-capacity-planning.md)<br>- [Çalışma alanı oluşturma](install-atp-step1.md)|
+|Ürün ekibine ve meslektaşlarınızla etkileşim kurun|Ziyaret [teknoloji topluluğuna](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) için Azure Gelişmiş tehdit koruması.|
+|Abonelik bilgileri kontrol edin ve desteklenen özellikler listesini alın|Bkz: [abonelik bilgilerini](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ve [özellik listesi](https://www.microsoft.com/cloud-platform/azure-information-protection-features) Web sitesinden Azure Gelişmiş tehdit koruması.|
 
 ## <a name="information-about-new-releases-and-updates"></a>Yeni sürümler ve güncelleştirmeler hakkında bilgi
 
-Azure Advanced Threat Protection ürün ekibi yeni sürümler hakkında Duyurular gönderir ve güncelleştirmeleri için [Enterprise Mobility ve güvenlik blogu.](https://cloudblogs.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/)
+Azure Gelişmiş tehdit koruması ürün ekibine güncelleştirir ve yeni sürümler duyurularını [Enterprise Mobility and Security blogunu.](https://cloudblogs.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/)
 Bu web günlüğü postaları ürün belgelerini tamamlar ve bilgileri destekler.
 
-Yeni yayımlanmış özellikleri ve değişiklikleri Azure ATP güncel bir listesi için kullanıma [Azure Advanced Threat Protection yenilikler](atp-whats-new.md).
+Yeni kullanıma sunulan özellikler ve değişiklikleri Azure ATP güncel bir listesi için kullanıma [Azure Gelişmiş tehdit koruması yenilikler](atp-whats-new.md).
 
 ## <a name="support-options-and-community-resources"></a>Destek seçenekleri ve topluluk kaynakları
 
@@ -49,12 +49,12 @@ Microsoft Support başvurabilirsiniz:
 
 Premier Destek’ten yararlanıyorsanız, olayları göndermek, sonuçları gözden geçirmek ve yardım almak için [Premier Destek müşterileri portalını](https://premier.microsoft.com/) ziyaret edin.
 
-Diğer müşteriler için destek kanallarını aşağıdaki şekilde kullanın:
+Diğer müşteriler, destek kanalları şu şekilde kullanın:
 
-| Kanalları|Yönergeler|
+| Kanallar|Yönergeler|
 |------|-----|
-|Azure portalını kullanma|1. Azure portalındaki **Yardım + destek** bölümünden **Yeni destek isteği**'ni seçin. <br>2. Sorulduğunda, üzerinde **Temelleri** dikey olarak **sorun türü**, seçin **teknik**, olarak **hizmet** güvenlik altında & Kimlik, seçin **Azure Advanced Threat Protection**. <br>3. Aşağıdaki seçeneklerden birini seçili olduğundan emin olun:<br>-Abonelik dahil teknik destek ile. Azure için ücretli veya deneme aboneliği varsa, bu seçenek görürsünüz.<br>-Teknik destek dahildir. Bir Azure aboneliğiniz yoksa, bu seçenek görürsünüz.|
-|Advanced Threat Protection Azure Portalı'nı kullanın| 1. Tıklayın "?" üst gezinti çubuğunda Azure Advanced Threat Protection portalında simgesi<br>2. Azure Gelişmiş tehdit koruması arayın.<br>3. Bir olay bileti açın.<br>-"Desteği" seçin<br>4. Bir olay bileti açın. Azure Advanced Threat Protection portal girmenize başarılı olursa, girebilirsiniz [çevrimiçi Yardım desteği (OAS) portal](https://support.microsoft.com/assistedsupportproducts). |
+|Azure portalını kullanma|1. Azure portalındaki **Yardım + destek** bölümünden **Yeni destek isteği**'ni seçin. <br>2. Sorulduğunda, üzerinde **Temelleri** dikey penceresinde olarak **sorun türü**, seçin **teknik**, olarak **hizmet** güvenlik altında & Kimlik, seçin **Azure Gelişmiş tehdit koruması**. <br>3. Aşağıdaki seçeneklerden birini seçili olduğundan emin olun:<br>-Teknik destek içeren abonelik. Azure için ücretli veya deneme aboneliği varsa bu seçeneği görürsünüz.<br>-Teknik destek. Bir Azure aboneliğiniz yoksa bu seçeneği görürsünüz.|
+|Azure Gelişmiş tehdit koruması portalını kullanma| 1. Tıklayın "?" Azure Gelişmiş tehdit koruması portalında üst gezinti çubuğunda simgesi<br>2. Azure Gelişmiş tehdit koruması arayın.<br>3. Bir olay bileti açın.<br>-"Destek" seçeneğini belirleyin.<br>4. Bir olay bileti açın. Azure Gelişmiş tehdit koruması portalı girilmesine başarılı olursa, girdiğiniz [Çevrimiçi Yardımlı Destek (OAS) portalı](https://support.microsoft.com/assistedsupportproducts). |
 
 Ek destek seçeneklerini Microsoft temsilcinizden öğrenebilirsiniz.
 
@@ -62,22 +62,22 @@ Ek destek seçeneklerini Microsoft temsilcinizden öğrenebilirsiniz.
 
 #### <a name="system-status-page"></a>Sistem durumu sayfası 
 
-Azure ATP için sistem durumunu görüntülemek için ziyaret [ **sistem durumu** ](https://health.atp.azure.com/) sayfası. Algılama ve algılayıcı buluta trafik gönderebilmesi ise sorun varsa bu sayfa, çalışma alanı Yönetim Portalı'nı ayarlama olup olmadığını ve etkin, bilgileri sağlar. Erişebileceğiniz **sistem durumu** Azure ATP menü çubuğundan.
+Azure ATP için sistem durumunu görüntülemek için ziyaret [ **sistem durumu** ](https://health.atp.azure.com/) sayfası. Algılamalar ve algılayıcı buluta trafik gönderebilmesi ise ile bir sorun varsa bu sayfayı, çalışma alanı Yönetim Portalı ' kurmak olup olmadığını ve etkin, bilgileri sağlar. Erişebildiğiniz **sistem durumu** Azure ATP menü çubuğundan.
 
-#### <a name="on-demand-videos"></a>İsteğe bağlı video
+#### <a name="on-demand-videos"></a>İsteğe bağlı videolar
 
-- Microsoft Ignite 2017 oturumlarına [Azure Advanced Threat Protection](https://myignite.microsoft.com/sessions/53476?source=sessions).
+- Microsoft Ignite 2017 oturumlarına [Azure Gelişmiş tehdit koruması](https://myignite.microsoft.com/sessions/53476?source=sessions).
 
 Sorun giderme:
 
 - Şeyin nasıl çalıştığıyla ilgili bir sorunuz varsa, sorunuzu zaten yanıtlanıp yanıtlanmadığını denetleyin [sık sorulan sorular](atp-technical-faq.md).
 
-- Azure Gelişmiş tehdit koruması için bir önkoşul hakkında bir sorunuz varsa, bkz: [ATP Önkoşullar](atp-prerequisites.md).
+- Azure Gelişmiş tehdit koruması için bir önkoşul hakkında sorularınız varsa bkz [ATP önkoşulları](atp-prerequisites.md).
 
-- Windows Defender ATP ortamınızda dağıtılan varsa ve istediğiniz Azure Gelişmiş tehdit koruması ile tümleştirmek için bkz: [Windows Defender ATP ile tümleştirme](integrate-wd-atp.md).
+- Windows Defender ATP ortamınızda dağıtılmış varsa ve Azure Gelişmiş tehdit koruması ile tümleştirerek, görmek istediğiniz [Windows Defender ATP ile tümleştirme](integrate-wd-atp.md).
 
-- Kuşkulu bir etkinlik incelenmesi ilgili daha fazla bilgi için bkz: [şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md).
+- Kuşkulu bir etkinlik araştırmasını ile ilgili daha fazla bilgi için bkz: [şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md).
 
 ### <a name="community-resources"></a>Topluluk kaynakları
 
-Öneririz [Azure Advanced Threat Protection için](https://www.yammer.com/AskIPTeam). Bu kaynak, diğer yöneticileri ve danışmanları paylaşılan deneyimleri yararı yanı sıra Azure Advanced Threat Protection ekibinden doğrudan yanıtlar ve bilgi sağlar.
+Öneririz [Azure Gelişmiş tehdit koruması için](https://www.yammer.com/AskIPTeam). Bu kaynak, diğer yöneticiler ve danışmanların paylaşılan deneyimleri avantajı yanı sıra Azure Gelişmiş tehdit koruması ekibinden doğrudan yanıtlar ve bilgi sağlar.
