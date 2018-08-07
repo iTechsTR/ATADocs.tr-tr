@@ -1,11 +1,11 @@
 ---
-title: Azure Gelişmiş tehdit koruması sistem durumu ve olayları izleyen | Microsoft Docs
-description: Azure ATP hizmeti nasıl çalıştığını denetlemek için Azure ATP çalışma durumu Merkezi'ni kullanın ve olası sorunlarda uyarı almak ve Olay Görüntüleyicisi'nde sistem olayları görüntüleyin.
+title: Azure Gelişmiş tehdit koruması sistem durumu ve olaylarını izleme | Microsoft Docs
+description: Azure ATP hizmetinin nasıl çalıştığını denetlemek için Azure ATP çalışma sistem durumu Merkezi'ni kullanın ve olası sorunlarda uyarı almak ve olay görüntüleyicisinde sistem olaylarını görüntüleyin.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 8/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,57 +13,57 @@ ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 86eb90f452d5aee2504e525e64bfc62c22207880
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 5fb4acaca989922ad894cee4a799378bb912643d
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29446025"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567993"
 ---
-*Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
+*İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
-# <a name="working-with-azure-atp-workspace-health-and-events"></a>Azure ATP çalışma durumu ve olaylar ile çalışma
+# <a name="working-with-azure-atp-workspace-health-and-events"></a>Azure ATP çalışma durumu ve olayları ile çalışma
 
-## <a name="azure-atp-workspace-health-center"></a>Azure ATP çalışma sistem durumu Merkezi 
+## <a name="azure-atp-workspace-health-center"></a>Azure ATP çalışma alanı sistem durumu Merkezi 
 
-Azure ATP çalışma sistem durumu Merkezi, Azure ATP çalışma alanınızı nasıl gerçekleştirmekte bilmenizi sağlar ve ilgili sorun olduğunda size verir.
+Azure ATP çalışma alanı sistem durumu Merkezi, Azure ATP çalışma alanınızı nasıl performans gösterdiğini bilmenizi sağlar ve sorunlar olduğunda sizi uyarır.
 
-## <a name="working-with-the-azure-atp-workspace-health-center"></a>Azure ATP çalışma sistem durumu Merkezi'yle çalışma
+## <a name="working-with-the-azure-atp-workspace-health-center"></a>Azure ATP çalışma alanı sistem durumu Merkezi'yle çalışma
 
-Azure ATP çalışma sistem durumu Merkezi, bir sorun olduğunu menü çubuğunda sistem durumu Merkezi simgesi üzerinde bir uyarı (kırmızı nokta) yükselterek bilmenizi sağlar.
+Azure ATP çalışma alanı sistem durumu Merkezi, ilgili bir sorun olduğunu menü çubuğunda sistem durumu Merkezi simgesi üzerinde bir uyarı (kırmızı nokta) yükselterek bilmenizi sağlar.
 
-![Azure ATP çalışma sistem durumu merkezi kırmızı nokta araç çubuğu](media/atp-health-bar.png)
+![Azure ATP çalışma alanı sistem durumu merkezi kırmızı nokta araç çubuğu](media/atp-health-bar.png)
 
-### <a name="managing-azure-atp-workspace-health"></a>Azure ATP çalışma durumu yönetme
-Çalışma alanınızı ait genel durumunu denetlemek için menü çubuğunda sistem durumu merkezi simgesine tıklayın ![Azure ATP çalışma sistem durumu Merkezi simgesi](media/atp-red-dot.png)
+### <a name="managing-azure-atp-workspace-health"></a>Azure ATP çalışma alanı sistem durumunu yönetme
+Çalışma alanınızın genel durumunu denetlemek için menü çubuğunda sistem durumu merkezi simgesine tıklayın. ![Azure ATP çalışma alanı sistem durumu Merkezi simgesi](media/atp-red-dot.png)
 
--   Tüm açık sorunlar ayarlanarak yönetilebilir **Kapat**, veya **bastır**, üç noktaya uyarı köşesindeki tıklatıp seçiminizden.
+-   Tüm açık sorunları ayarlanarak yönetilebilir **Kapat**, veya **bastır**, uyarı üst köşesindeki üç noktaya tıklayarak ve seçiminizi yapma.
 
 -   **Açık**: Tüm yeni şüpheli etkinlikler bu listede gösterilir.
 
--   **Kapat**: belirlediğiniz, Araştırdığınız ve düzeltip kuşkulu etkinlikleri izlemek için kullanılır.
+-   **Kapat**: belirlediğiniz, Araştırdığınız ve azalttığınız kuşkulu etkinlikleri izlemek için kullanılır.
 
     > [!NOTE]
-    > Aynı etkinlik yeniden bir kısa süre içinde algılanırsa, azure ATP kapalı bir aktivite yeniden.
-    > Her çalışma kendi sistem durumu merkezi sahiptir.
+    > Tekrar bir kısa süre içinde aynı etkinlik algılanırsa azure ATP kapalı bir etkinliği yeniden.
+    > Her çalışma alanına kendi sistem durumu merkezi sahiptir.
 
--   **Gösterme**: Bir etkinliği göstermemek, etkinliği o an için yoksaymak ve yalnızca yeni bir örnek ortaya çıkarsa uyarı almak istediğiniz anlamına gelir. Benzer bir uyarı varsa Azure ATP onu yeniden değil. Ancak uyarı yedi gün için durdurur ve daha sonra yeniden görülür, yeniden uyarı.
+-   **Gösterme**: Bir etkinliği göstermemek, etkinliği o an için yoksaymak ve yalnızca yeni bir örnek ortaya çıkarsa uyarı almak istediğiniz anlamına gelir. Azure ATP benzer bir uyarı varsa yeniden değil. Ancak, bir uyarı yedi gün boyunca durdurur ve sonra tekrar görülürse ise, yeniden uyarılırsınız.
 
--   **Yeniden**: kapatın veya bir sorunu bastırmak, böylece açık görünür belgeyi yeniden açabilirsiniz yeniden çizelgesinde.
+-   **Yeniden**: açık görünmesi kapalı veya gizlenen bir sorunu açabilirsiniz zaman çizelgesinde yeniden.
 - 
-- **Silme**: kuşkulu etkinlikler zaman çizelgesi içinde aynı zamanda bir sistem sorunu silmeye yönelik seçeneği vardır. Bir uyarı silerseniz, çalışma alanından silinir ve geri yüklemek mümkün olmaz. Sil’e tıkladıktan sonra aynı türdeki tüm şüpheli etkinlikleri silebilirsiniz.
+- **Silme**: gelen kuşkulu etkinlikler zaman çizelgesi içinde bir sistem durumu sorunu silmek için seçeneğiniz de vardır. Bir uyarıyı silerseniz, bu çalışma alanından silinir ve geri yüklemek mümkün olmayacaktır. Sil’e tıkladıktan sonra aynı türdeki tüm şüpheli etkinlikleri silebilirsiniz.
 
 
 
-![Azure ATP çalışma sistem durumu merkezi sorunları resmi](media/atp-health-issue.png)
+![Azure ATP çalışma alanı sistem durumu merkezi sorunları resmi](media/atp-health-issue.png)
 
 
 
 
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
 - [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

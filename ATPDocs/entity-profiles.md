@@ -1,11 +1,11 @@
 ---
-title: Azure Advanced Threat Protection çalışma portalında kullanıcı profilleri ile çalışma | Microsoft Docs
-description: Kullanıcılar Azure ATP çalışma portalında kullanıcı profilleri ekranından araştırmaya açıklar
+title: Azure Gelişmiş tehdit koruması çalışma Portalı'nda kullanıcı profilleri ile çalışma | Microsoft Docs
+description: Kullanıcılara Azure ATP çalışma alanı Portalı'nda kullanıcı profilleri ekranından araştırmaya açıklar
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 8/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,60 +13,60 @@ ms.technology: ''
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6ceefeeba6a52abf5da7ff44135cff55e9beab02
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: cd34be695a190c719f991f8cc4b374942363a7c1
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29446074"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567891"
 ---
-*Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
+*İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 
-# <a name="investigating-entity-profiles"></a>Varlık profilleri araştırma
+# <a name="understanding-entity-profiles"></a>Varlık profilleri anlama
 
-Varlık profili ile kapsamlı varlık sayfası, kullanıcılar, bilgisayarlar, aygıtları ve erişime sahip oldukları kaynakları ve geçmişlerini tam derin Dalış araştırma için tasarlanmış sağlar. Profil sayfası, bir grup (en fazla bir dakika toplanmış) gerçekleştirilen etkinlikler bakın ve daha iyi anlamak gerçek etkinliklerini vermek için tek bir mantıksal etkinliğin gruplandırın yeni Azure ATP mantıksal etkinliği Çeviricisi yararlanır Kullanıcılarınızın.
+Varlık profili kapsamlı varlık sayfasıyla kullanıcılar, bilgisayarlar, cihazlar, erişime sahip oldukları kaynakları ve geçmişlerini tam derinlemesine araştırma için tasarlanmış sağlar. Profil sayfasında, bir grup etkinlik (bir dakikaya kadar toplanmış) gerçekleşen bakın ve daha iyi anlamak gerçek etkinliklerini vermek için tek bir mantıksal etkinliğini gruplamak yeni Azure ATP mantıksal etkinliği Çeviricisi yararlanır Kullanıcılarınızın.
 
-Bir varlık profili sayfasına erişmek için bir kullanıcı şüpheli etkinlik zaman çizelgesi gibi varlık adı tıklayın.
+Bir varlık profili sayfasına erişmek için şüpheli etkinlik zaman çizelgesinde bir kullanıcı adı gibi varlık adını tıklayın.
 
-Soldaki menüden tüm Active Directory bilgileri varlıkta - e-posta adresi, etki alanı, ilk görülen tarihi sağlar. Varlık duyarlı ise, bu, neden bildirir. Örneğin, kullanıcının hassas veya gizli bir grubun üyesi olarak etiketlenir?
-Kullanıcının hassas ise, kullanıcının adı altında simgesini görürsünüz.
+Soldaki menü Active Directory sunulan tüm bilgileri varlıkta - e-posta adresi, etki alanı, ilk görülen tarihi sağlar. Varlığın büyük/küçük harfe duyarlıdır, bunu size neden bildirir. Örneğin, kullanıcının hassas veya gizli bir grubun üyesi olarak etiketlendiğinden?
+Hassas kullanıcı ise, kullanıcının adını bölümündeki simgeye bakın.
 
-## <a name="view-entity-activities"></a>Varlık faaliyetleri görüntüle
+## <a name="view-entity-activities"></a>Varlık etkinlikleri görüntüleyin
 
-Kullanıcı tarafından gerçekleştirilen tüm etkinlikler görüntülemek veya bir varlık üzerinde gerçekleştirilen tıklayın **etkinlikleri** sekmesi. 
+Kullanıcı tarafından gerçekleştirilen tüm etkinlikleri görüntülemek veya bir varlık üzerinde gerçekleştirilen tıklayarak **etkinlikleri** sekmesi. 
 
  ![Kullanıcı profili etkinlikleri](media/user-profile-activities.png)
 
-Varsayılan olarak, varlık profili ana bölmede, ayrıca aşağı varlıklar, varlık erişen kullanıcılar için veya kullanıcı tarafından erişilen varlıklar ayrıntılarına geçebilir olan bir zaman çizelgesi varlığın etkinliklerin en fazla altı ay geri geçmişini görüntüler.
+Varsayılan olarak, varlık profili ana bölmede, ayrıca kullanıcı tarafından veya varlıklar, varlık erişen kullanıcılar için erişim varlıklardan detaya gidebilirsiniz bir zaman çizelgesi varlığın etkinliklerin en fazla altı ay geri geçmişini görüntüler.
 
-En üstte, varlık - kaç kaç kaynak erişilen için kullanıcının oturum açtığı makineler ve kendisinden kullanıcı VPN (yapılandırılmışsa) oturum konumları hakkında bir bakışta anlamak ihtiyacınız olan hızlı bir genel bakış size Özet döşeme görüntüleyebilirsiniz . 
+Üst kısmında, varlık - kaç makineler ne kadar kaynak erişildiğini için kullanıcının oturum açtığı ve konumları, VPN (yapılandırılmışsa) oturum açmış kullanıcı hakkında bir bakışta anlamak ihtiyacınız olan hızlı bir genel bakış sunan Özet kutucuğunu görüntüleyebilirsiniz. . 
 
-Kullanarak **göre filtre** düğmesi etkinlik zaman çizelgesi etkinlikleri etkinlik türüne göre filtreleyebilirsiniz. Ayrıca, belirli bir (gürültülü) türü etkinlik filtre uygulayabilirsiniz. Bir varlık ağ yaptıklarını temellerini anlamak istediğiniz zaman bu araştırma için yararlıdır. Belirli bir tarih de gidebilir ve etkinlikleri Excel'e filtre olarak dışa aktarabilirsiniz. Dışarı aktarılan dosyayı, Dizin Hizmetleri değişikliklerini (hesap için Active Directory içinde değiştirilen şeyler) için bir sayfa ve etkinlikler için ayrı bir sayfa sağlar. 
+Kullanarak **filtre** düğmesi etkinliği zaman çizelgesi etkinlikleri etkinlik türüne göre filtre uygulayabilirsiniz. Ayrıca, belirli bir (gürültülü) türünün etkinlik filtreleyebilirsiniz. Bir varlık ağ ne yaptığını temellerini anlamak istediğinizde bu araştırma için yararlıdır. Ayrıca belirli bir tarihe gidebilirsiniz ve etkinlikler de filtrelenmiş Excel'e dışarı aktarabilirsiniz. Dışarı aktarılan dosyayı, Dizin Hizmetleri değişikliklerini (hesap için Active Directory içinde değiştirilen öğeleri) için bir sayfa ve etkinlikleri için ayrı bir sayfa sağlar. 
 
-## <a name="view-directory-data"></a>Görünüm dizin verileri
+## <a name="view-directory-data"></a>Dizin verilerini görüntüle
 
-**Dizin verilerini** sekmesi, etkin kullanıcı erişim denetimi güvenlik bayrakları dahil olmak üzere dizininden kullanılabilir statik bilgilerini sağlar. Böylece kullanıcı bir doğrudan üyelik veya bir özyinelemeli üyelik olup olmadığını söyleyebilir azure ATP kullanıcı için grup üyelikleri de görüntüler. Grupları için Azure ATP grubunun üyeleri listeler.
+**Dizin verilerini** sekmesi, etkin kullanıcı erişim denetimi güvenlik bayrakları içeren dizinden statik bilgileri sağlar. Böylece kullanıcı bir doğrudan üyelik veya bir özyinelemeli üyelik olup olmadığını söyleyebilir azure ATP kullanıcı grup üyelikleri de görüntüler. Gruplar için Azure ATP grubunun üyeleri listeler.
 
  ![Kullanıcı profili dizin verileri](media/user-profile-dir-data.png)
 
-İçinde **kullanıcı erişim denetimi** , attentions gerekebilir Azure ATP yüzeyleri güvenlik ayarları bölümü. Kullanıcı hakkındaki önemli bayrakları görebilirsiniz, kullanıcı sahip her zaman geçerli olsun parola vb., gibi kullanıcı tuşuna gibi parola atlamak için girin. 
+İçinde **kullanıcı erişimi denetimi** , attentions gerekebilir Azure ATP yüzeyleri güvenlik ayarları bölümü. Kullanıcı ile ilgili önemli bayrakları görebilirsiniz, kullanıcı sahip her zaman geçerli olsun, parola vb., gibi kullanıcı tuşuna gibi parolayı atlamak için girin. 
 
-## <a name="view-lateral-movement-paths"></a>Görünüm yanal hareket yolları
+## <a name="view-lateral-movement-paths"></a>Yanal hareket yollarını görüntüleme
 
-Yanal hareket yolları sekmesine tıklayarak, yanal hareket yolları için ve ağınıza için kullanılan bu kullanıcı için görsel bir sunumdur sağlayan tam olarak dinamik ve tıklatılabilir bir harita görüntüleyebilirsiniz.
+Yanal hareket yollarını sekmesine tıklayarak, yanal hareket yollarını ağınıza için kullanılan bu kullanıcı gelen ve görsel bir temsilini sağlayan tamamen dinamik ve tıklatılabilir bir harita görüntüleyebilirsiniz.
 
-Harita, bilgisayarlar veya kullanıcılar arasında kaç atlama bir saldırganın hassas hesap tehlikeye kullanıcıya bu gelen ve giden yoktur, bir listesini sağlar ve kullanıcının hassas hesap varsa, kaç tane kaynaklar ve hesapları doğrudan bağlı görebilirsiniz.
+Harita, bilgisayarlar veya kullanıcılar arasında kaç atlama bir saldırganın hassas hesabının gizliliğini bozmak için bu kullanıcı gelen ve giden yoktur, bir liste sağlar ve kullanıcının hassas hesap varsa, kaç tane kaynaklar ve hesapları doğrudan bağlı görebilirsiniz.
 
-Etkinlik için son iki gün, grafik artık görünür, algılanmaz, ancak [yanal hareket yolu rapor](reports.md) son 60 gün boyunca yanal hareket yolları hakkında bilgi sağlamak kullanılabilir olacak. 
+Etkinlik Son iki güne ait graf artık görünür algılanmazsa, ancak [yana hareket yolu rapor](reports.md) son 60 güne yatay hareket yolları hakkında bilgi sağlamak kullanılabilir. 
 
-Daha fazla bilgi için bkz: [yanal hareket yolları](use-case-lateral-movement-path.md). 
+Daha fazla bilgi için [yana hareket yollarını](use-case-lateral-movement-path.md). 
 
- ![Kullanıcı profili yanal hareket yolları](media/user-profile-lateral-movement-paths.png)
+ ![Kullanıcı profili yatay hareket yolları](media/user-profile-lateral-movement-paths.png)
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 
-- [Yanal hareket yollarını Azure ATP ile araştırın](use-case-lateral-movement-path.md)
+- [Azure ATP ile yanal hareket yollarını araştırma](use-case-lateral-movement-path.md)
 - [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

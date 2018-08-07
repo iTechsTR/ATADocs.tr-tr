@@ -2,10 +2,10 @@
 title: Azure Gelişmiş tehdit koruması mimarisi | Microsoft Docs
 description: Azure Gelişmiş tehdit analizi (ATP) mimarisini açıklar
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/4/2018
+ms.date: 8/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3f99aff656f6eff67a4077817c761c7627511bb2
-ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
+ms.openlocfilehash: 8264799f3aad2fb27287f56513458f34a3a7b0c6
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37799201"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567653"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 # <a name="azure-atp-architecture"></a>Azure ATP mimarisi
-Azure Gelişmiş tehdit koruması mimarisi Bu diyagramda ayrıntılı olarak verilmiştir:
+Azure Gelişmiş tehdit koruması mimarisi:
 
 ![Azure ATP mimarisi topoloji diyagramı](media/atp-architecture-topology.png)
 
@@ -110,13 +110,13 @@ Ağınızda dağıtmayı, kaç Azure ATP çalışma alanları karar verirken aş
 
 ## <a name="azure-atp-sensor-and-azure-atp-standalone-sensor"></a>Azure ATP algılayıcısını ve Azure ATP tek başına algılayıcı
 
-**Azure ATP algılayıcısını** ve **Azure ATP tek başına algılayıcı** her ikisi de aynı çekirdek işlevlere sahiptir:
+**Azure ATP algılayıcısını** ve **Azure ATP tek başına algılayıcı** aynı çekirdek işlevlere sahiptir:
 
 -   Etki alanı denetleyicisi ağ trafiğini yakalayıp denetleyin. Azure ATP tek başına algılayıcı için bağlantı noktası yansıtılmış trafik ve Azure ATP algılayıcı etki alanı denetleyicisinin yerel trafiği budur. 
 
 -   Doğrudan (ATP algılayıcı için) etki alanı denetleyicilerinden veya SIEM ve Syslog sunucularından (ATP tek başına algılayıcı için) Windows olayları alma
 
--  VPN sağlayıcınız RADIUS hesap bilgilerini alma
+-   VPN sağlayıcınız RADIUS hesap bilgilerini alma
 
 -   Active Directory etki alanından kullanıcılar ve bilgisayarlar hakkındaki verileri alma
 
@@ -176,7 +176,7 @@ Active Directory daha fazla bilgi işlem gücüne gerekiyorsa, Azure ATP algıla
 
 
 ## <a name="your-network-components"></a>Ağ bileşenleriniz
-Azure ATP ile çalışmak için aşağıdaki bileşenler ayarlandığından emin olun.
+Aşağıdaki bileşenler, Azure ATP ile çalışmak için ayarlandığından emin olun.
 
 ### <a name="port-mirroring"></a>Bağlantı noktası yansıtma
 Azure ATP tek başına algılayıcı kullanıyorsanız, bağlantı noktası yansıtma izlenen ve fiziksel veya sanal anahtarlar kullanan hedef olarak Azure ATP tek başına algılayıcı ayarlayın etki alanı denetleyicileri ayarlamanız gerekir. Başka bir seçenek de ağ TAP’ları kullanmaktır. Azure ATP bazıları çalışır ancak izlenen tüm etki alanı denetleyicilerinizin değil, ancak algılamalar daha az etkili.
@@ -194,7 +194,7 @@ Azure ATP Pass--Hash, deneme yanılma, gizli gruplarda, şüpheli Hizmetleri olu
 -   Windows Olay İletme’yi yapılandırma<br>Azure ATP olaylarınızı almasının başka bir etki alanı denetleyicilerinizi Windows olayları 4776, 4732, 4733, 4728, 4729, 4756, 4757'yi ve 7045, Azure ATP tek başına algılayıcı için iletecek şekilde yapılandırarak yoludur. Bu, bir SIEM yoksa veya SIEM'iniz şu anda ATP tarafından desteklenmiyorsa özellikle yararlı olur. Windows Olay iletme ATP içinde hakkında daha fazla bilgi için bkz. [yapılandırma Windows Olay iletme'yi](configure-event-forwarding.md). Bu yalnızca - Azure ATP algılayıcısını için fiziksel Azure ATP tek başına algılayıcı için geçerlidir.
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [Azure ATP önkoşulları](atp-prerequisites.md)
 - [Azure ATP boyutlandırma aracı](http://aka.ms/trisizingtool)
 - [Azure ATP kapasite planlaması](atp-capacity-planning.md)

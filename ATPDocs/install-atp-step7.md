@@ -1,66 +1,68 @@
 ---
-title: "Yükleme Azure Gelişmiş tehdit koruması - 7. adım | Microsoft Docs"
-description: "Azure ATP yükleme son adım, Honeytoken kullanıcısını yapılandırın."
-keywords: 
-author: rkarlin
-ms.author: rkarlin
+title: Yükleme Azure Gelişmiş tehdit koruması - 7. adım | Microsoft Docs
+description: Azure ATP yükleme son adımında Honeytoken kullanıcısını yapılandırın.
+keywords: ''
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 8/2/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bef13d0f4799a4483eda6604a8ed96befaa13508
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 7b3c128f6e2b524d778d68af7bcea65476cae2b7
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568023"
 ---
-*Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
+*İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 
-# <a name="install-azure-atp---step-7"></a>Azure ATP - 7. adım yükleme
+# <a name="install-azure-atp---step-7"></a>Azure ATP - 7. Adım'ı yükleme
 
 >[!div class="step-by-step"]
 [«6. Adım](install-atp-step6-vpn.md)
 [8. Adım»](install-atp-step8-samr.md)
 
-## <a name="step-7-configure-detection-exclusions-and-honeytoken-user"></a>7. Adım Algılama Dışlamalar ve honeytoken kullanıcısını yapılandırma
+## <a name="step-7-configure-detection-exclusions-and-honeytoken-accounts"></a>7. Adım Algılama dışlamalarını ve honeytoken hesapları yapılandırma
 
-Azure ATP belirli IP adresleri veya kullanıcı dışlama algılama numarasından sağlar. 
+Azure ATP çıkarma algılama sayısı, belirli IP adresleri veya kullanıcılarının sağlar. 
 
-Örneğin, bir **DNS Keşfi dışlaması** DNS’i tarama mekanizması olarak kullanan bir güvenlik tarayıcısı olabilir. Dışlama Azure böyle tarayıcılar yoksay ATP yardımcı olur.  
+Örneğin, bir **DNS Keşfi dışlaması** DNS’i tarama mekanizması olarak kullanan bir güvenlik tarayıcısı olabilir. Dışlama Azure ATP böyle tarayıcıları yoksaymasına yardımcı olur.  
 
-Azure ATP ayrıca bir yakalama kötü amaçlı aktörler için kullanılan bir Honeytoken kullanıcısını yapılandırma sağlar - bir uyarı (normalde etkinliği olmayan) bu hesapla ilişkili herhangi bir kimlik doğrulamasını tetikler.
+Azure ATP ayrıca kötü amaçlı aktörler - bu honeytoken hesaplar (normalde etkinliği olmayan) ilişkili herhangi bir kimlik doğrulaması için tuzak kullanılan, bir uyarı tetikler honeytoken hesapları yapılandırmasını sağlar.
 
-Bunu yapılandırmak için aşağıdaki adımları izleyin:
+Yapılandırmak için aşağıdaki adımları izleyin:
 
-1.  Azure ATP çalışma portalı, ayarlar simgesine tıklayın ve seçin **yapılandırma**.
+1.  Azure ATP çalışma alanı portalından, ayarlar simgesine tıklayın ve seçin **yapılandırma**.
 
     ![Azure ATP yapılandırma ayarları](media/atp-config-menu.png)
 
-2.  Altında **algılama**, tıklatın **varlık etiketleri**.
+2.  Altında **algılama**, tıklayın **varlık etiketleri**.
 
-3. Altında **Honeytoken hesapları** Honeytoken hesabı adı girin ve tıklayın  **+**  oturum. Honeytoken hesapları alanını aranabilir ve otomatik olarak, ağınızdaki varlıkların görüntüler. **Kaydet**'e tıklayın.
+3. Altında **Honeytoken hesapları**Honeytoken hesap adını girin ve tıklatın **+** oturum. Honeytoken hesapları alanında arama yapılabilir ve otomatik olarak ağınızdaki varlıklar görüntüler. **Kaydet**'e tıklayın.
 
    ![Honeytoken](media/honeytoken-sensitive.png)
 
-4. **Dışlamalar**’a tıklayın. Her bir tehdit türü için algılamadan dışlanacak bir kullanıcı hesabı veya IP adresi girin ve *artı* sembolüne tıklayın. **Varlık ekle** (kullanıcı veya bilgisayar) alanında arama yapılabilir ve bu alan, ağınızdaki varlıklarla otomatik olarak doldurulur. Daha fazla bilgi için bkz: [varlıklar algılamaların dışında hariç](excluding-entities-from-detections.md) ve [şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md).
+4. **Dışlamalar**’a tıklayın. Bir kullanıcı hesabı veya her tür tehdit algılama dışlanacak IP adresi girin. 
+5. Tıklayın *artı* oturum. **Varlık ekle** (kullanıcı veya bilgisayar) alanında arama yapılabilir ve bu alan, ağınızdaki varlıklarla otomatik olarak doldurulur. Daha fazla bilgi için [varlıkları algılamalardan dışlama](excluding-entities-from-detections.md) ve [şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md).
 
    ![Dışlamalar](media/exclusions.png)
 
-5.  **Kaydet**'e tıklayın.
+6.  **Kaydet**'e tıklayın.
 
 
-Tebrikler, Azure Advanced Threat Protection başarıyla dağıtıldı.
+Tebrikler, Azure Gelişmiş tehdit koruması başarıyla dağıttığınız!
 
 Algılanan kuşkulu etkinlikleri görüntülemek için saldırı zaman çizelgesini gözden geçirin ve kullanıcıları veya bilgisayarları arayın ve profillerini görüntüleyin.
 
-Azure ATP şüpheli etkinlikler için hemen taramaya başlar. Olağan dışı grubu değişiklikleri gibi bazı algılamaların öğrenme süresi gerektirir ve Azure ATP dağıtımdan hemen sonra kullanılabilir değil.
+Azure ATP şüpheli etkinlikler için tarama hemen başlar. Olağan dışı Grup değişiklikleri gibi bazı algılamalar bir öğrenme dönemi gerekir ve Azure ATP dağıtımdan hemen sonra kullanılamaz.
 
 
 
@@ -68,7 +70,7 @@ Azure ATP şüpheli etkinlikler için hemen taramaya başlar. Olağan dışı gr
 [«6. Adım](install-atp-step6-vpn.md)
 [8. Adım»](install-atp-step8-samr.md)
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [Azure ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [Azure ATP önkoşulları](atp-prerequisites.md)

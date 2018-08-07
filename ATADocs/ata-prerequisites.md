@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/25/2018
+ms.date: 8/1/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 199830a6cd0b84cf897311cc80472a078f582b59
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: 6a51832f3dbff55ed2ad396307a487ad607b3a2b
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39335920"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567670"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -49,7 +49,7 @@ ATA Sistemi Active Directory orman sınırının üzerinde çalışır ve Orman 
 ![ATA mimarisi diyagramı](media/ATA-architecture-topology.jpg)
 
 ## <a name="before-you-start"></a>Başlamadan önce
-Bu bölümde, ATA yüklemesine başlamadan önce toplamanız gereken bilgiler ve sahip olmanız gereken hesaplarla ağ varlıkları listelenir.
+Bu bölümde, hesapları ve ATA yüklemesine başlamadan önce olmalıdır. ağ varlıklarının yanı sıra toplamanız gereken bilgiler listelenir.
 
 
 -   Kullanıcı hesabı ve parola ile izlenen etki alanlarındaki tüm nesnelere okuma erişimi.
@@ -57,7 +57,7 @@ Bu bölümde, ATA yüklemesine başlamadan önce toplamanız gereken bilgiler ve
     > [!NOTE]
     > Etki alanınızdaki çeşitli Kurumsal Birimlerde (OU) özel ACL’ler ayarladıysanız, seçili kullanıcının bu OU’lar üzerinde okuma izinleri olmasına dikkat edin.
 
--   Bir ATA Gateway veya Lightweight Gateway'e Microsoft ileti Çözümleyicisi yüklemeyin. İleti Çözümleyicisi sürücüsü, ATA Gateway ve Lightweight Gateway sürücüleriyle çakışır. ATA Gateway’de Wireshark çalıştırırsanız Wireshark yakalamasını durdurduktan sonra Microsoft Advanced Threat Analytics Gateway Service’i yeniden başlatmanız gerekir. Aksi durumda, ağ geçidi trafiği yakalama durdurur. Bir ATA Lightweight Gateway'de Wireshark çalıştıran ATA Lightweight Gateway'i etkilemediğini.
+-   Bir ATA Gateway veya Lightweight Gateway'e Microsoft ileti Çözümleyicisi yüklemeyin. ATA Gateway ve Lightweight Gateway sürücüleriyle ileti Çözümleyicisi sürücüsü çakışıyor. ATA Gateway’de Wireshark çalıştırırsanız Wireshark yakalamasını durdurduktan sonra Microsoft Advanced Threat Analytics Gateway Service’i yeniden başlatmanız gerekir. Aksi durumda, ağ geçidi trafiği yakalama durdurur. Bir ATA Lightweight Gateway'de Wireshark çalıştıran ATA Lightweight Gateway'i etkilemediğini.
 
 -    Önerilen: Kullanıcının silinmiş nesneler kapsayıcısı üzerinde salt okuma izinleri olmalıdır. Bu, Ata'nın etki alanında toplu nesne silme işlemlerini algılamasını sağlar. Silinmiş nesneler kapsayıcısı üzerinde salt okuma izinlerini yapılandırma hakkında daha fazla bilgi için bkz: **Silinmiş nesne kapsayıcısı üzerindeki izinleri değiştirme** konusundaki [görünümü veyadizinnesnesiüzerindekiizinleriayarlayın](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) makalesi.
 
@@ -117,7 +117,7 @@ Aşağıdaki tabloda, ATA Center’ın düzgün çalışması için açılması 
 |**HTTPS**|TCP|443|Şirket Ağı ve ATA Gateway|Gelen|
 |**SMTP** (isteğe bağlı)|TCP|25|SMTP Sunucusu|Giden|
 |**SMTPS** (isteğe bağlı)|TCP|465|SMTP Sunucusu|Giden|
-|**Syslog** (isteğe bağlı)|TCP|514|Syslog sunucusu|Giden|
+|**Syslog** (isteğe bağlı)|TCP/UPS/TLS (yapılandırılabilir)|514 (varsayılan)|Syslog sunucusu|Giden|
 |**LDAP**|TCP ve UDP|389|Etki alanı denetleyicileri|Giden|
 |**LDAPS** (isteğe bağlı)|TCP|636|Etki alanı denetleyicileri|Giden|
 |**DNS**|TCP ve UDP|53|DNS sunucuları|Giden|

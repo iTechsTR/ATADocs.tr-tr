@@ -1,11 +1,11 @@
 ---
-title: Varlıklar Azure Advanced Threat Protection algılamaların dışında bırakma | Microsoft Docs
-description: Belirli bir varlık etkinlikler kuşkulu olarak algılama Azure ATP durdurmayı açıklar
+title: Varlıkları Azure Gelişmiş tehdit koruması, algılamalardan dışlama | Microsoft Docs
+description: Azure ATP belirli varlık etkinliklerini şüpheli olarak algılamasını durdurmak açıklar
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 8/2/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,35 +13,35 @@ ms.technology: ''
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 60a2fae0ef044993786fb3b7e2d21a3ac27bb9f0
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 2a91ebbe3811aeefe6fcef660807976794513f32
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29446032"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567840"
 ---
-*Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
+*İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 
 # <a name="excluding-entities-from-detections"></a>Varlıkları algılamalardan dışlama
-Bu makalede, doğru zararsız pozitif sonuç en aza ancak aynı anda true pozitif sonuç catch emin olmak için uyarıları tetikleme varlıkları dışlama açıklanmaktadır. Azure ATP belirli kullanıcılardan, normal Ritim iş parçası olabilir, etkinlikleri hakkında gürültülü engellemek için quiet - edebilir veya dışarıda bırakabilirsiniz - uyarıları oluşturma gelen belirli varlıklar.
+Bu makalede, doğru zararsız pozitif sonuçları en aza indirmek, ancak aynı zamanda doğru pozitif sonuçları yakalamak emin olmak için uyarılar tetiklemesini önlemek varlıkları açıklanmaktadır. Azure ATP, belirli kullanıcılar tarafından normal ritmi iş parçası olabilecek etkinlikleri hakkında gürültülü engellemek için quiet - edebilir veya hariç tutabilirsiniz - belirli varlıkların uyarılarını susturabilir.
 
-Örneğin, kuruluşunuzdaki rutin BT işlemleri gereği DNS keşfi yapan bir güvenlik tarayıcınız veya etki alanı denetleyicisinde uzaktan betik çalıştıran bir yöneticiniz varsa (ve bunlar tasdikli eylemlerse) bu özelliğe ihtiyaç duyabilirsiniz. Hariç tutmak için hangi varlıkların karar vermenize yardımcı olacak Azure ATP algılamaların hakkında daha fazla bilgi için bkz: [kuşkulu etkinlikleri Kılavuzu](suspicious-activity-guide.md).
+Örneğin, kuruluşunuzdaki rutin BT işlemleri gereği DNS keşfi yapan bir güvenlik tarayıcınız veya etki alanı denetleyicisinde uzaktan betik çalıştıran bir yöneticiniz varsa (ve bunlar tasdikli eylemlerse) bu özelliğe ihtiyaç duyabilirsiniz. Hangi varlıkları dışlamak için karar vermenize yardımcı olacak Azure ATP algılamalar hakkında daha fazla bilgi için bkz: [şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md).
 
-Azure ATP uyarıları oluşturma varlıkları dışlamak için:
+Azure ATP uyarıları göndermesini engelleme varlıkları dışlamak için:
 
 Varlıkları dışlamak için iki yol vardır: Doğrudan şüpheli etkinlik üzerinden veya **Yapılandırma** sayfasındaki **Dışlamalar** sekmesinden.
 
-- **Kuşkulu etkinliğin**: bir etkinlikte bir kullanıcı veya bilgisayar veya belirli etkinlik gerçekleştirmesine izin verilen ve sık, bunu yapabilirsiniz IP adresi için bir uyarı aldığınızda, şüpheli etkinlik zaman çizgisi, sağ tıklatın, üç nokta Bu varlık ve select kuşkulu etkinlik için satır sonu **kapatın ve dışlama**. <br></br>Bu kullanıcı, bilgisayar veya IP adresi, şüpheli etkinlik için dışlama listesine ekler. Kuşkulu etkinliği kapatır ve artık listelenen **açık** olaylar listesinde **şüpheli etkinlik zaman çizelgesi**.
+- **Şüpheli etkinlik**: bir kullanıcı veya bilgisayar veya belirli etkinlik gerçekleştirmesine izin verilen ve sık sık, bunu yapabilirsiniz, IP adresi için bir etkinlik hakkında uyarı aldığınızda, şüpheli etkinlik zaman çizelgesi, üç noktaya sağ tıklayın Bu varlık ve select kuşkulu etkinlik için bir satır sonu **Kapat ve dışla**. <br></br>Bu kullanıcı, bilgisayar veya IP adresini bu şüpheli etkinliğin Dışlamalar listesine ekler. Şüpheli etkinlik kapatır ve artık listelenen **açık** olayları listeyi **şüpheli etkinlik zaman çizelgesi**.
 
     ![Varlık dışlama](./media/exclude-in-sa.png)
 
-- **Yapılandırma sayfasından**: gözden geçirmek veya herhangi Dışlamalar değiştirmek için: altında **yapılandırma**, tıklatın **Dışlamalar** ve şüpheli etkinlik gibi seçin **DNS Keşif**.
+- **Yapılandırma sayfasından**: gözden geçirmek veya herhangi bir özel değiştirmek için: altında **yapılandırma**, tıklayın **dışlamaları** ve şüpheli etkinlik gibi ardından **DNS Keşif**.
 
     ![Dışlama yapılandırma](./media/exclusions.png)
 
-Bir varlık eklemek için **Dışlamalar** yapılandırma: varlık adı girin ve ardından artı ve ardından **kaydetmek** sayfanın sonundaki.
+Bir varlık eklemek için **dışlamaları** yapılandırma: varlık adını girin ve ardından artı işaretine tıklayın ve ardından **Kaydet** sayfanın alt kısmındaki.
 
 Bir varlığı **Dışlamalar** yapılandırmasından kaldırmak için: Varlık adının yanındaki eksi işaretine tıklayın ve sayfanın sonundaki **Kaydet** düğmesine basın.
 
@@ -52,15 +52,15 @@ Algılama dışlamalarını yalnızca, aldığınız bir uyarı türünün doğr
 
 Bazı algılamalar, neleri dışlayabileceğinize karar vermeniz için ipuçları sağlar. 
 
-Her dışlama bağlama bağlıdır, diğerleri için bilgisayarları veya IP adresi ayarlayabilirsiniz karşın bazı durumlarda, kullanıcılar ayarlayabilirsiniz. 
+Her dışlama bağlam üzerinde bağlıdır, diğerleri için bilgisayar veya IP adresleri ayarlayabilirsiniz ancak bazı durumlarda kullanıcılar ayarlayabilirsiniz. 
 
-Birini veya diğerini - dışlayabilirsiniz bir IP adresi veya bir bilgisayar hariç olanağına sahip olduğunuzda, her ikisi de sağlamanız gerekmez.
+Birini veya diğerini - hariç tutabilirsiniz bir IP adresi veya bilgisayar dışlama seçeneğiniz varsa, her ikisi de sağlamanız gerekmez.
 
 > [!NOTE]
-> Yapılandırma sayfaları yalnızca Azure ATP yöneticiler tarafından değiştirilebilir.
+> Yapılandırma sayfaları yalnızca Azure ATP yöneticileri tarafından değiştirilebilir.
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Windows Defender ATP ile tümleştirme](integrate-wd-atp.md)
 - [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
