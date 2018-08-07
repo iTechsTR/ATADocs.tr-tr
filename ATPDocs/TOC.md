@@ -43,7 +43,8 @@
 ## [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
 ## [Şüpheli etkinlik kılavuzu](suspicious-activity-guide.md)
 ## [Azure ATP ile yanal hareket yollarını araştırma](use-case-lateral-movement-path.md)
-## [Varlıkları araştırma](entity-profiles.md)
+## [Varlıkları araştırma](investigate-entity.md)
+## [Varlık profillerini anlama](entity-profiles.md)
 # Sorun giderme
 ## [Bilinen sorunları giderme](troubleshooting-atp-known-issues.md)
 ## [Destek ve bilgiler](atp-support.md)
