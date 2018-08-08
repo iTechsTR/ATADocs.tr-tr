@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 56b3cea2089c64e2c78361c44d049d6de67764b6
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: a6876de4f5cf293d58da08ab4e3a8443e76480f1
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "30202281"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585078"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -49,14 +49,14 @@ Azure ATP algılayıcısı sunucu veya etki alanı denetleyicisi üzerinde aşa�
 > [!NOTE] 
 > Doğrudan zip dosyasından yükleme başarısız olur.
 
-2.  Çalıştırma **Azure ATP algılayıcısı setup.exe** ve Kurulum sihirbazını izleyin.
+3.  Çalıştırma **Azure ATP algılayıcısı setup.exe** ve Kurulum sihirbazını izleyin.
 
-3.  **Hoş Geldiniz** sayfasında dilinizi seçin ve **İleri**’ye tıklayın.
+4.  **Hoş Geldiniz** sayfasında dilinizi seçin ve **İleri**’ye tıklayın.
 
      ![Azure ATP tek başına algılayıcı yükleme dili](media/sensor-install-language.png)
 
 
-4.  Yükleme Sihirbazı otomatik olarak sunucunun bir etki alanı denetleyicisi veya adanmış bir sunucu olup olmadığını denetler. Azure ATP algılayıcısını yüklü etki alanı denetleyicisiyse, Azure ATP tek başına algılayıcı adanmış bir sunucu ise, yüklü. 
+5.  Yükleme Sihirbazı otomatik olarak sunucunun bir etki alanı denetleyicisi veya adanmış bir sunucu olup olmadığını denetler. Azure ATP algılayıcısını yüklü etki alanı denetleyicisiyse, Azure ATP tek başına algılayıcı adanmış bir sunucu ise, yüklü. 
     
     Örneğin, bir Azure ATP tek başına algılayıcı için bir Azure ATP tek başına algılayıcı adanmış sunucunuza yüklediğiniz bildiren aşağıdaki ekranı görüntülenir:
     
@@ -67,7 +67,7 @@ Azure ATP algılayıcısı sunucu veya etki alanı denetleyicisi üzerinde aşa�
     > [!NOTE] 
     > Etki alanı denetleyicisi veya adanmış sunucu yüklemesi için en düşük donanım gereksinimlerini karşılamıyorsa bir uyarı alırsınız. Bu, **İleri**’ye tıklamanızı ve yükleme işlemine devam etmenizi engellemez. Bu, veri depolama için fazla yere gereksinim duymadığınız küçük Laboratuvar testi ortamında Azure ATP yüklemesi için doğru seçenek olabilir. Üretim ortamları için Azure ATP'nin ile çalışmak için önerilir [kapasite planlaması](atp-capacity-planning.md) Kılavuzu, etki alanı denetleyicilerinizin veya adanmış sunucularınızın gereksinimleri karşıladığından emin olun.
 
-4.  Altında **algılayıcıyı Yapılandır**, yükleme yolu ve ortamınıza bağlı olarak ve önceki adımda kopyaladığınız erişim anahtarını girin:
+6.  Altında **algılayıcıyı Yapılandır**, yükleme yolu ve ortamınıza bağlı olarak ve önceki adımda kopyaladığınız erişim anahtarını girin:
 
     ![Azure ATP tek başına algılayıcı yapılandırmasının resmi](media/sensor-install-config.png)
 
@@ -75,7 +75,7 @@ Azure ATP algılayıcısı sunucu veya etki alanı denetleyicisi üzerinde aşa�
 
       - Erişim anahtarı: Bu önceki adımda çalışma alanı portalından alınır.
     
-5. **Yükle**’ye tıklayın. Aşağıdaki bileşenler yüklenir ve Azure ATP algılayıcısını yükleme sırasında yapılandırılır:
+7. **Yükle**’ye tıklayın. Aşağıdaki bileşenler yüklenir ve Azure ATP algılayıcısını yükleme sırasında yapılandırılır:
 
     -   KB 3047154 (Yalnızca Windows Server 2012 R2 için)
 
@@ -86,7 +86,7 @@ Azure ATP algılayıcısı sunucu veya etki alanı denetleyicisi üzerinde aşa�
     -   Azure ATP algılayıcı hizmeti ve Azure ATP algılayıcı updater hizmeti
     -   Microsoft Visual C++ 2013 Yeniden Dağıtılabilir
 
-5.  Yükleme tamamlandıktan sonra tıklayın **başlatma** tarayıcınızı açın ve Azure ATP çalışma alanı portalında oturum açın.
+8.  Yükleme tamamlandıktan sonra tıklayın **başlatma** tarayıcınızı açın ve Azure ATP çalışma alanı portalında oturum açın.
 
 
 >[!div class="step-by-step"]
@@ -94,7 +94,7 @@ Azure ATP algılayıcısı sunucu veya etki alanı denetleyicisi üzerinde aşa�
 [5. Adım »](install-atp-step5.md)
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Azure ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool)
 

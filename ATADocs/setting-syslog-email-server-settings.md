@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a77e7e86d635d80ee09338843c42e003220133a0
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f415fabe71512a5f9948a824d04e7bfece086ba4
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010168"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585044"
 ---
-*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
+*İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 
 
@@ -40,9 +40,10 @@ ATA, kuşkulu bir etkinlik algıladığında size bildirebilir. ATA’nın e-pos
     |Alan|Description|Değer|
     |---------|---------------|---------|
     |SMTP sunucusu uç noktası (gerekli)|SMTP sunucunuzun FQDN’sini girin ve isteğe bağlı olarak bağlantı noktası numarasını (varsayılan 25) değiştirin.|Örneğin:<br />smtp.contoso.com|
-    |SSL|SMTP sunucusu SSL gerektiriyorsa, SSL’ye geçin. **Not:** SSL'yi etkinleştirirseniz, ayrıca bağlantı noktası numarasını değiştirmek gerekir.|Varsayılan devre dışı olmasıdır|
+    |SSL|SMTP sunucusu SSL gerektiriyorsa, SSL’ye geçin. **Not:** SSL'yi etkinleştirirseniz, ayrıca bağlantı noktası numarasını değiştirmeniz gerekir.|Varsayılan devre dışı olmasıdır|
     |Kimlik doğrulama|SMTP sunucunuz kimlik doğrulaması gerektiriyorsa etkinleştirin. **Not:** kimlik doğrulamasını etkinleştirirseniz, bir kullanıcı adı ve SMTP sunucusuna bağlanma izni olan bir e-posta hesabının parolasını sağlamanız gerekir.|Varsayılan devre dışı olmasıdır|
     |Gönderen (gerekli)|E-postayı gönderecek olan e-posta adresini girin.|Örneğin:<br />ATA@contoso.com|
+    
     ![ATA e-posta sunucu ayarları resmi](media/ata-email-server.png)
 
 ## <a name="provide-ata-with-your-syslog-server-settings"></a>ATA’ya Syslog sunucusu ayarlarınızı belirtin
@@ -78,5 +79,5 @@ ATA kuşkulu bir etkinlik algıladığında Syslog sunucunuza bildirim gönderer
 
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

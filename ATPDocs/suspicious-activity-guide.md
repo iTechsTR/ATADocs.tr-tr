@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4e6a7d90ad5670b3d1c01ba70d7b5a81e8808b5e
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: 4667e13af4e86a18d1b50a2ea575f9c749f0c541
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39335886"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585246"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -101,7 +101,7 @@ Bu algılama, Azure ATP büyük birkaç basit bağlama kimlik doğrulamaları al
 
 **Araştırma**
 
-İlk olarak hangi ile ilgili yukarıdaki üç algılama türleri görmek için uyarı açıklamasını denetleyin. Daha fazla bilgi için Excel elektronik tablosunu indirin.
+Önce yukarıda listelenen olan algılama üç ile ilgilenen görmek için uyarı açıklamasına bakın. Daha fazla bilgi için Excel elektronik tablosunu indirin.
 
 1.  Maymuncuk – kullanarak etki alanı denetleyicilerinizin Skeleton Key etkilenen, denetleyebilirsiniz [Azure ATP ekibi tarafından yazılan tarayıcıyı](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Tarayıcı 1 veya daha fazla etki alanı denetleyicilerinizin kötü amaçlı yazılım bulması halinde, bu gerçek pozitiftir.
 
@@ -191,7 +191,7 @@ Pass--Ticket bir yanal hareket tekniğidir saldırganlar bir bilgisayardan Kerbe
 Saldırganlar etki alanı yönetici haklarına sahip tehlikeye [KRBTGT hesabı](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). KRBTGT hesabı kullanarak bunların herhangi bir kaynağa yetkilendirme sağlayan ve rastgele dilediğiniz zaman anahtarı süre sonu Ayarla anahtarı (TGT) sağlayan bir Kerberos bilet oluşturabilirsiniz. Bu sahte TGT "goldentTicket" olarak adlandırılır ve saldırganların ağda kalıcılığı elde etmek sağlar.
 
 Bu algılama, ekibi tarafından verilmesinin anahtarı için kullanılan bir Kerberos anahtarı, izin verilen süre belirtildiği şekilde birden fazla izin olduğunda bir uyarı tetiklenir [kullanıcı anahtarının en fazla ömrü](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx), bu bir **zaman anomali**golden ticket saldırısı veya varolmayan bir hesaba göre bu, bir **var olmayan bir hesap** altın bilet saldırısı.
-Güvenlik İlkesi.
+
 
 **Araştırma**
 
@@ -275,21 +275,6 @@ Bir çoğaltma isteği bir etki alanı denetleyicisi olmayan bir bilgisayardan b
 Daha fazla bilgi için [SharePoint Server 2013'te profil eşitleme izinleri verme Active Directory Domain Services](https://technet.microsoft.com/library/hh296982.aspx).
 Yararlanabileceğiniz [AD ACL tarayıcı](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) veya etki alanında kimin bu izinlere sahip olduğunu belirlemek için bir Windows PowerShell Betiği oluşturabilirsiniz.
 
-
-## <a name="password-exposed-in-cleartext-report"></a>Parola düz metin olarak raporda gösterilen
-
-**Açıklama**
-
-Bazı hizmetler hesap kimlik bilgilerini düz metin olarak gönderir. Bu durum, kullanıcı hesapları için bile oluşabilir. Saldırganların ağ trafiğini izleme, catch ve daha sonra bu kimlik bilgilerini kötü amaçlar için yeniden kullanabilirsiniz. 
-
-**Araştırma**
-
-Rapor sayfasında tıklayın ve parola düz metin olarak raporda gösterilen indirin. Excel elektronik tablosunda, hangi hesapların ortaya çıktığını bakın.
-Genellikle basit LDAP bağlama kullanan bir komut dosyası veya eski uygulama kaynak bilgisayarlarda yoktur.
-
-**Düzeltme**
-
-Kaynak bilgisayarlarda yapılandırmayı doğrulayın ve LDAP basit bağlaması kullanmadığınızdan emin olun. LDAP basit bağlamaları yerine LDAP SALS veya LDAPS kullanabilirsiniz.
 
 ## <a name="privilege-escalation-using-forged-authorization-data"></a>Sahte yetkilendirme verileri kullanan ayrıcalık yükseltme
 

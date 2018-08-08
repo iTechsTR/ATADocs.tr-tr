@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5fb4acaca989922ad894cee4a799378bb912643d
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 75a0c9515f552c0ca18dbe2fd88cf27990fd59e1
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567993"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585009"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -51,8 +51,8 @@ Azure ATP çalışma alanı sistem durumu Merkezi, ilgili bir sorun olduğunu me
 -   **Gösterme**: Bir etkinliği göstermemek, etkinliği o an için yoksaymak ve yalnızca yeni bir örnek ortaya çıkarsa uyarı almak istediğiniz anlamına gelir. Azure ATP benzer bir uyarı varsa yeniden değil. Ancak, bir uyarı yedi gün boyunca durdurur ve sonra tekrar görülürse ise, yeniden uyarılırsınız.
 
 -   **Yeniden**: açık görünmesi kapalı veya gizlenen bir sorunu açabilirsiniz zaman çizelgesinde yeniden.
-- 
-- **Silme**: gelen kuşkulu etkinlikler zaman çizelgesi içinde bir sistem durumu sorunu silmek için seçeneğiniz de vardır. Bir uyarıyı silerseniz, bu çalışma alanından silinir ve geri yüklemek mümkün olmayacaktır. Sil’e tıkladıktan sonra aynı türdeki tüm şüpheli etkinlikleri silebilirsiniz.
+
+-   **Silme**: gelen kuşkulu etkinlikler zaman çizelgesi içinde bir sistem durumu sorunu silmek için seçeneğiniz de vardır. Bir uyarıyı silerseniz, bu çalışma alanından silinir ve geri yüklemek mümkün olmayacaktır. Sil’e tıkladıktan sonra aynı türdeki tüm şüpheli etkinlikleri silebilirsiniz.
 
 
 

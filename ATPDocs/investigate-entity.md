@@ -2,10 +2,10 @@
 title: Kullanıcıları ve bilgisayarları Azure ATP ile araştırma | Microsoft Docs
 description: Kullanıcılar, varlıklar, bilgisayarları veya cihazları Azure Gelişmiş tehdit Koruması (ATP) kullanarak tarafından gerçekleştirilen şüpheli etkinlikleri araştırma açıklar
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 8/6/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 32f5ab58ba9e17d36761ce5b99f4711d0e390ff7
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 722ef73fe2c039a567b4f3d807f97e4ede16dc67
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567874"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585229"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -34,7 +34,7 @@ Varlık profili, kullanıcılar, bilgisayarlar, cihazlar ve geçmişlerini birli
 
 Bir varlık profili sayfasına erişmek için şüpheli etkinlik zaman çizelgesinde bir kullanıcı adı gibi varlık adını tıklayın. Varlık adının üzerine gelerek varlık profili kuşkulu etkinlik sayfasında kısa bir sürümünü de görebilirsiniz.
 
-Varlık profili, varlık etkinlikleri görüntülemek, dizin verilerini görüntüleyin ve varlığın yanal hareket yollarını görüntülemenize olanak tanır. Daha fazla bilgi için [varlık profilleri araştırma ](entity-profiles.md).
+Varlık profili, varlık etkinlikleri görüntülemek, dizin verilerini görüntüleyin ve varlığın yanal hareket yollarını görüntülemenize olanak tanır. Daha fazla bilgi için [varlık profilleri anlama ](entity-profiles.md).
 
 ## <a name="check-entity-tags"></a>Varlık etiketleri denetleyin
 
@@ -49,7 +49,7 @@ Azure ATP Active Directory Kullanıcıları ve varlıkları izlemek için tek bi
 
 ## <a name="look-at-the-user-account-control-flags"></a>Kullanıcı hesabı denetim bayrakları Ara
 
-Kullanıcı hesabı denetim bayrakları, aynı zamanda Active Directory'den içeri aktarılır. Azure ATP araştırma için etkin olan 10 bayraklarını içerir: 
+Kullanıcı hesabı denetim bayrakları, aynı zamanda Active Directory'den içeri aktarılır. Azure ATP varlık dizin verilerini araştırma için etkin olan 10 bayraklarını içerir: 
 - Parola her zaman geçerli olsun
 - Temsilci seçme için güvenilir
 - Akıllı kart gerekmez
@@ -61,7 +61,7 @@ Kullanıcı hesabı denetim bayrakları, aynı zamanda Active Directory'den içe
 - Kerberos ön kimlik gerekli değildir
 - Hesap devre dışı bırakıldı 
 
-Azure ATP, bu bayraklar açıp Azure Active Directory'de olup olmadığını bilmenizi sağlar. Renkli simgeler bayrağı üzerinde Active Directory'de gerektiğini belirtmiş olursunuz; yalnızca aşağıdaki örnekte **hesap devre dışı** Active Directory'de açıktır.
+Azure ATP, bu bayraklar açıp Azure Active Directory'de olup olmadığını bilmenizi sağlar. Renkli simgeler ve ilgili geçişi her bayrak durumunu gösterir. Yalnızca aşağıdaki örnekte **parola her zaman geçerli olsun** Active Directory'de açıktır.
 
  ![kullanıcı hesabı denetim bayrakları](./media/user-access-flags.png)
 

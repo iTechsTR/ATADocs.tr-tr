@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2c8f67d0c8d9020eb0e7ae16e8410db473ace044
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: 755450654d870ec0235232e08194c1094c22f030
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "30010253"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585097"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -56,15 +56,15 @@ Ekledikten sonra **ağ hizmeti** için **Event Log Readers** grubunda, değişik
 2.  Bir komut isteminde *gpedit.msc* yazın.
 3.  **Bilgisayar Yapılandırması > Yönetim Şablonları > Windows Bileşenleri > Olay İletme**’yi genişletin
 
- ![Yerel ilke grubu düzenleyicisi resmi](media/wef 1 local group policy editor.png)
+![Yerel ilke grubu düzenleyicisi resmi](media/wef 1 local group policy editor.png)
 
 4.  Çift **hedef abonelik yöneticisini Yapılandır**.
    
     1.  **Etkin**’i seçin.
     2.  Altında **seçenekleri**, tıklayın **Göster**.
-    3.  Altında **SubscriptionManagers**, şu değeri girin ve tıklayın **Tamam**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC, yenileme=10* (For example: sunucu =http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, yenileme=10)
+    3.  Altında **SubscriptionManagers**, şu değeri girin ve tıklayın **Tamam**: * Server =`http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (örneğin: Server =`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
  
-   ![Hedef aboneliği yapılandırma resmi](media/wef 2 config target sub manager.png)
+    ![Hedef aboneliği yapılandırma resmi](media/wef 2 config target sub manager.png)
    
     5.  **Tamam**'ı tıklatın.
     6.  Yükseltilmiş bir komut isteminden şunu yazın: *gpupdate /force*. 
@@ -75,29 +75,29 @@ Ekledikten sonra **ağ hizmeti** için **Event Log Readers** grubunda, değişik
 2.  **Olay Görüntüleyicisi**’ni açın. 
 3.  Sağ **abonelikleri** seçip **aboneliği oluşturma**. 
 
-   1.   Abonelik için bir ad ve açıklama girin. 
-   2.   İçin **hedef günlük**, onaylayın **iletilen olaylar** seçilir. ATA’nın olayları okuması için hedef günlüğün **İletilen Olaylar** olması gerekir. 
-   3.   **Kaynak bilgisayar tarafından başlatılan**’ı seçin ve **Bilgisayar Gruplarını Seç**’e tıklayın.
+    1.  Abonelik için bir ad ve açıklama girin. 
+    2.  İçin **hedef günlük**, onaylayın **iletilen olaylar** seçilir. ATA’nın olayları okuması için hedef günlüğün **İletilen Olaylar** olması gerekir. 
+    3.  **Kaynak bilgisayar tarafından başlatılan**’ı seçin ve **Bilgisayar Gruplarını Seç**’e tıklayın.
         1.  **Etki Alanı Bilgisayarı Ekle**’ye tıklayın.
         2.  Etki alanı denetleyicisinin adını **Seçilecek nesne adını girin** alanına girin. Sonra, **Adları Denetle**’ye ve **Tamam**’a tıklayın. 
-       
-        ![Olay Görüntüleyicisi resmi](media/wef3 event viewer.png)
-   
-        
+ 
+    ![Olay Görüntüleyicisi resmi](media/wef3 event viewer.png)
+ 
+ 
         3.  **Tamam**'ı tıklatın.
-   4.   **Olayları Seç**’e tıklayın.
+     4. **Olayları Seç**’e tıklayın.
 
         1. **Günlüğe göre**’ye tıklayıp **Güvenlik**’i seçin.
         2. **Olay Kimliklerini Ekler/Dışlar** alanına olay numarasını yazın ve **Tamam**’a tıklayın. Örneğin, 4776 gibi aşağıdaki örnekte yazın.
 
- ![Sorgu filtresi resmi](media/wef 4 query filter.png)
+    ![Sorgu filtresi resmi](media/wef 4 query filter.png)
 
-   5.   Oluşturulan aboneliğe sağ tıklayıp **çalışma zamanı durumu** durumu ile ilgili olup olmadığını görmek için. 
-   6.   Birkaç dakika sonra, iletilmek üzere ayarladığınız olayların ATA Gateway’deki İletilen Olaylar kısmında görünüp görünmediğini kontrol edin.
+    5.  Oluşturulan aboneliğe sağ tıklayıp **çalışma zamanı durumu** durumu ile ilgili olup olmadığını görmek için. 
+    6.  Birkaç dakika sonra, iletilmek üzere ayarladığınız olayların ATA Gateway’deki İletilen Olaylar kısmında görünüp görünmediğini kontrol edin.
 
 
 Daha fazla bilgi için bkz: [olayları iletmek ve toplamak için bilgisayarları yapılandırma](https://technet.microsoft.com/library/cc748890)
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA’yı yükleme](install-ata-step1.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

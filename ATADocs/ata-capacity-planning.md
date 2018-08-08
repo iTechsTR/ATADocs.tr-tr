@@ -12,12 +12,12 @@ ms.prod: ''
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e58fe62fc655fed8f17ae800dda20e022e198a26
-ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
+ms.openlocfilehash: 5fafa4e8e9644c870a92c1684fa5165ef68b31a7
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "30010032"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585115"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -155,6 +155,7 @@ Bağlantı noktası yansıtmayla ilgili önemli noktalar, her bir veri merkezi v
 |10.000|3|12|
 |20,000|6|24|
 |50.000|16|48|
+
 &#42;Günün en yoğun saatinde belirli bir ATA Gateway tarafından izlenen tüm etki alanı denetleyicilerinden bir saniyedeki ortalama paket sayısının toplamı.
 
 &#42;Etki alanı denetleyicisi bağlantı noktası yansıtmalı trafiğinin toplam miktarı, ATA Gateway’deki yakalama NIC’in kapasitesini aşamaz.
@@ -172,7 +173,7 @@ Bağlantı noktası yansıtmayla ilgili önemli noktalar, her bir veri merkezi v
 - [ATA Gateway türü sağ seçme](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA boyutlandırma aracı](http://aka.ms/atasizingtool)
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA mimarisi](ata-architecture.md)

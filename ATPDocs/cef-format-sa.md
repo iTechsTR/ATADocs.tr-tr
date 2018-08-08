@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 41192a96d9dbb34e711f8bbf2477d8efd1754928
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: adfb47e8dd006b660c4a031080eaecd6d2d5be84
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567908"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585263"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -107,7 +107,7 @@ Aşağıdaki günlükleri örnek RFC 5242 ile uyumlu, ancak Azure ATP mevcut öz
 02 21 2018 16:20:06 Auth.Warning 192.168.0.220 1 2018-02-21T14:19:54.254930 + 00:00 merkezi CEF 6076'ya MaliciousServiceCreationSecurity ï» ¿0 | Microsoft | Azure ATP | 2.22.4228.22540 | MaliciousServiceCreationSecurityAlert | Şüpheli hizmet oluşturma işlemi | 5 | başlangıç = 2018-02-21T14:19:41.7897808Z uygulama ServiceInstalledEvent shost = clıent1 msg = İSTEMCİ1'de kötü amaçlı olabilecek komutlar yürütmek için oluşturduğunuz user1 MaliciousService =. externalID = 2026 cs1Label = url cs1 =https://contoso-corp.atp.azure.com/securityAlert/179229b6-b791-4895-b5aa-fdf3747a325c
 
 ### <a name="pass-the-ticket"></a>Anahtar geçişi
-02 21 2018 17:04:47 Auth.Error 192.168.0.220 1 2018-02-21T15:04:33.537583 + 00:00 merkezi CEF 6076'ya PassTheTicketSecurityAlert ï» ¿0 | Microsoft | Azure ATP | 2.22.4228.22540 | PassTheTicketSecurityAlert | Pass--Ticket saldırısı kullanan kimlik hırsızlığı | 10 | Başlangıç = 2018-02-21T15:02:22.2577465Z uygulama Kerberos suser = Eugene Jenkins msg = Eugene Jenkins (yazılım mühendisi) ın Kerberos biletleri Admin-PC Victom PC'ye çalınması ve krbtgt/EtkiAlanı1 erişmek için kullanılan =. TEST. YEREL. externalID = 2017 cs1Label = url cs1 =https://contoso-corp.eng.atp.azure.com/securityAlert/511f1487-2915-477d-be2e-04cfba702ccd
+02 21 2018 17:04:47 Auth.Error 192.168.0.220 1 2018-02-21T15:04:33.537583 + 00:00 merkezi CEF 6076'ya PassTheTicketSecurityAlert ï» ¿0 | Microsoft | Azure ATP | 2.22.4228.22540 | PassTheTicketSecurityAlert | Pass--Ticket saldırısı kullanan kimlik hırsızlığı | 10 | Başlangıç = 2018-02-21T15:02:22.2577465Z uygulama Kerberos suser = Eugene Jenkins msg = Eugene Jenkins (yazılım mühendisi) ın Kerberos biletleri Admin-PC Victim-PC çalınması ve krbtgt/EtkiAlanı1 erişmek için kullanılan =. TEST. YEREL. externalID = 2017 cs1Label = url cs1 =https://contoso-corp.eng.atp.azure.com/securityAlert/511f1487-2915-477d-be2e-04cfba702ccd
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
