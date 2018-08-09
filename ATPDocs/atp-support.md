@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 58e3b0d04b196f0c49b6e146952c1819c8413ee3
-ms.sourcegitcommit: eebf1156aaae199b6aaa7e431cd6372e572b1e9f
+ms.openlocfilehash: 281db5cfee9366babfcdf30e14a80122aa6d04c8
+ms.sourcegitcommit: 7ab273d1a4c05b457ee02f1631f642346d687b1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "29977582"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39625617"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -30,7 +30,7 @@ Hakkında bilgi edinmek, dağıtmak ve kuruluşunuz için Azure Gelişmiş tehdi
 
 |Bunu yapmak için...|...yoğun bu:|
 |----|----|
-|En popüler belgelerimize bakın|İlk beş sayfaları oku:|- [Azure Gelişmiş tehdit Koruması nedir?](what-is-atp.md)<br>- [Azure ATP önkoşulları](atp-prerequisites.md)<br>- [Azure ATP mimarisi](atp-architecture.md)<br>- [Azure ATP kapasite planlaması](atp-capacity-planning.md)<br>- [Çalışma alanı oluşturma](install-atp-step1.md)|
+|En popüler belgelerimize bakın|İlk beş sayfaları oku:<br>- [Azure Gelişmiş tehdit Koruması nedir?](what-is-atp.md)<br>- [Azure ATP önkoşulları](atp-prerequisites.md)<br>- [Azure ATP mimarisi](atp-architecture.md)<br>- [Azure ATP kapasite planlaması](atp-capacity-planning.md)<br>- [Çalışma alanı oluşturma](install-atp-step1.md)|
 |Ürün ekibine ve meslektaşlarınızla etkileşim kurun|Ziyaret [teknoloji topluluğuna](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) için Azure Gelişmiş tehdit koruması.|
 |Abonelik bilgileri kontrol edin ve desteklenen özellikler listesini alın|Bkz: [abonelik bilgilerini](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ve [özellik listesi](https://www.microsoft.com/cloud-platform/azure-information-protection-features) Web sitesinden Azure Gelişmiş tehdit koruması.|
 
