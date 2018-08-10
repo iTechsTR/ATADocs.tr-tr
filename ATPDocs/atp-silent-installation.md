@@ -1,11 +1,11 @@
 ---
 title: Yükleme Azure Gelişmiş tehdit koruması sessizce | Microsoft Docs
-description: Bu Azure ATP gerek kalmadan sessiz yükleme açıklar.
+description: Bu, Azure ATP sessizce yüklemek nasıl açıklar.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/11/2017
+ms.date: 8/7/2017
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,51 +13,52 @@ ms.technology: ''
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f27020f1b4a5fa7aa8fefbda28eac0c2ad6c64d0
-ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
+ms.openlocfilehash: b318e4eefe05aee9ab99221d4ccd1e20764047a2
+ms.sourcegitcommit: be87b7bf30270a4b8f9886199748bb664274331b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2018
-ms.locfileid: "29856490"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39631642"
 ---
-*Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
+*İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
-# <a name="azure-atp-silent-installation"></a>Azure ATP sessiz yükleme
-Bu makalede Azure ATP sessizce yüklemek için yönergeler sağlar.
+# <a name="azure-atp-switches-and-silent-installation"></a>Azure ATP anahtarları ve sessiz yükleme
+Bu makalede, rehberlik ve Azure ATP anahtarları ve sessiz yükleme için yönergeler sağlar.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Azure ATP Microsoft .NET Framework 4.7 yüklenmesini gerektirir. 
+Azure ATP Microsoft .NET Framework 4.7 yüklemesi gerektirir. 
 
-Azure ATP yüklediğinizde, .net Framework 4.7 otomatik olarak Azure ATP dağıtımının bir parçası olarak yüklenir.
+Azure ATP yükleme sırasında .net Framework 4.7 otomatik olarak olan Azure ATP dağıtımının bir parçası olarak yüklenir.
 
 > [!IMPORTANT] 
-> .Net en son sürümüne sahip olduğunuzdan emin olun Framework'ün yüklü. .Net önceki bir sürümünü yüklediyseniz, Azure ATP sessiz yükleme bir döngüde takılıyor ve yükleme başarısız. 
+> .Net en son sürümüne sahip olduğunuzdan emin olun Framework yüklü. .Net önceki bir sürümünü yüklediyseniz, Azure ATP sessiz yükleme bir döngüde takılı kalarak ve yüklenemedi. 
 
 > [!NOTE] 
-> .Net framework 4.7 yüklenmesi sunucunun yeniden başlatılması gerekebilir. Azure ATP algılayıcı etki alanı denetleyicilerinde yüklerken, bu etki alanı denetleyicileri için bir bakım penceresi zamanlamayı dikkate alın.
-Azure ATP sessiz yükleme yöntemini kullanırken, yükleyici yükleme işleminin sonunda sunucuyu (gerekirse) otomatik olarak yeniden yapılandırılır. Bir Windows Installer hatası nedeniyle *norestart* bayrağı güvenilir sunucu yok yeniden, bu nedenle yalnızca sessiz yüklemeyi bir bakım penceresi sırasında çalıştırıldığından emin olun emin olmak için kullanılamaz.
+> .Net Framework 4.7 yüklemesi için sunucunun yeniden başlatılması gerekebilir. Azure ATP algılayıcısını etki alanı denetleyicilerinize yüklerken, etki alanı denetleyicileri için bir bakım penceresi zamanlamayı düşünün.
+Azure ATP sessiz yüklemeyi kullanarak, yükleyici otomatik olarak (gerekirse) yükleme sonunda sunucuyu yeniden yapılandırılır. Sessiz yüklemeyi sadece bir bakım penceresi sırasında çalıştırdığınızdan emin olun. Bir Windows Installer hatası nedeniyle *norestart* bayrağı güvenilir bir şekilde sunucuyu yeniden başlatma emin olmak için kullanılamaz.
 
-Dağıtımın ilerleme durumunu izlemek için izleme bulunan Azure ATP yükleyici günlüklerini **%AppData%\Local\Temp**.
+Bulunan Azure ATP yükleyici günlükleri, dağıtım ilerlemesini izlemek için izleme **%AppData%\Local\Temp**.
 
 
 
-## <a name="azure-atp-sensor-silent-installation"></a>Azure ATP algılayıcı sessiz yükleme
+## <a name="azure-atp-sensor-silent-installation"></a>Azure ATP algılayıcısı sessiz yükleme
 
 > [!NOTE]
-> System Center Configuration Manager veya diğer yazılım dağıtım sistemi aracılığıyla Azure ATP algılayıcı sessizce dağıtırken, iki dağıtım paketleri oluşturmak için önerilir:</br>-Net Framework 4.7 etki alanı denetleyicisini yeniden başlatma da dahil olmak üzere</br>-Azure ATP algılayıcı. </br>Azure ATP algılayıcı paketi .net dağıtımını bağımlı hale Framework paket dağıtımı. </br>Alma [.Net Framework 4.7 çevrimdışı dağıtım paketi](https://www.microsoft.com/download/details.aspx?id=49982). 
+> System Center Configuration Manager veya başka bir yazılım dağıtım sistem aracılığıyla Azure ATP algılayıcısını sessizce dağıtırken, iki dağıtım paketi oluşturmak için önerilir:</br>-Net Framework 4.7 etki alanı denetleyicisini yeniden başlatma da dahil olmak üzere</br>-Azure ATP algılayıcısını. </br>Azure ATP algılayıcı paketini, .net dağıtımı bağımlı hale Framework paketi dağıtımı. </br>Alma [.Net Framework 4.7 çevrimdışı dağıtım paketi](https://www.microsoft.com/download/details.aspx?id=49982). 
 
 
-Azure ATP algılayıcı sessizce yüklemek için aşağıdaki komutu kullanın:
+Yükleyin Azure ATP algılayıcısını tamamen sessiz gerçekleştirmek için aşağıdaki komutu kullanın:
+
 
 **Söz dizimi**:
 
-    Azure ATP sensor Setup.exe [/AccessKey=<Access Key>] [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
+    Azure ATP sensor Setup.exe /AccessKey=<Access Key> /quiet NetFrameworkCommandLineArguments ="/q" 
    
 
 > [!NOTE]
-> Erişim anahtarı altında çalışma Portal'dan kopyalayın **yapılandırma** ve ardından **algılayıcı**.
+> Altında çalışma alanı portalından erişim tuşunu kopyalamak **yapılandırma** ardından **algılayıcı**.
 
 
 **Yükleme seçenekleri**:
@@ -74,21 +75,21 @@ Azure ATP algılayıcı sessizce yüklemek için aşağıdaki komutu kullanın:
 > [!div class="mx-tableFixed"]
 |Ad|Sözdizimi|Sessiz yükleme için zorunlu mu?|Description|
 |-------------|----------|---------|---------|
-|AccessKey|AccessKey="**"|Evet|Azure ATP algılayıcı Azure ATP çalışma alanıyla kaydetmek için kullanılan erişim tuşu ayarlar.|
+|accessKey|AccessKey = "\*\*"|Evet|Azure ATP algılayıcısını Azure ATP çalışma alanı ile kaydetmek için kullanılan erişim anahtarı ayarlar.|
 
-**Örnekler**: böylece yüklemesinin bir parçası kimlik bilgilerini belirtmeniz gerekmez Azure ATP algılayıcı sessizce yüklemek için günlük etki alanına bilgisayar Azure ATP yönetici kimlik bilgilerinizle alanına katıldı. Aksi halde, belirtilen kimlik bilgilerini kullanarak Azure ATP bulut hizmetiyle kaydedin:
+**Örnekler**: yüklemesinin bir parçası kimlik bilgilerini belirtmek gerekmez, Azure ATP algılayıcısını sessizce yüklemek için etki alanında oturum bilgisayar yönetici kimlik bilgilerinizle Azure ATP alanına katıldı. Aksi takdirde, belirtilen kimlik bilgilerini kullanarak Azure ATP bulut hizmetiyle kaydedin:
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     AccessKey="3WlO0uKW7lY6Lk0+dfkfkJQ0qZV6aSq5WxLf71+fuBhggCl/BMs9JxfAwi7oy9vYGviazUS1EPpzte7z8s4grw==" 
     
 
-## <a name="update-the-azure-atp-sensor"></a>Güncelleştirme Azure ATP algılayıcısı
+## <a name="update-the-azure-atp-sensor"></a>Azure ATP algılayıcısını güncelleştir
 
-Azure ATP algılayıcı'ı sessizce güncelleştirmek için aşağıdaki komutu kullanın:
+Azure ATP algılayıcısını'ı sessizce güncelleştirmek için aşağıdaki komutu kullanın:
 
 **Söz dizimi**:
 
-    Azure ATP  sensor Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
+    Azure ATP sensor Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 
 
 **Yükleme seçenekleri**:
@@ -101,13 +102,13 @@ Azure ATP algılayıcı'ı sessizce güncelleştirmek için aşağıdaki komutu 
 |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Evet|.Net Framework yüklemesi için parametreleri belirtir. .Net Framework sessiz yüklemesini zorunlu kılmak üzere ayarlanmalıdır.|
 
 
-**Örnekler**: Azure ATP algılayıcı sessizce güncelleştirmek için:
+**Örnekler**: Azure ATP algılayıcısını'ı sessizce güncelleştirmek için:
 
-        Azure ATP sensor Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
+    Azure ATP sensor Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
-## <a name="uninstall-the-azure-atp-sensor-silently"></a>Azure ATP algılayıcı sessizce kaldırma
+## <a name="uninstall-the-azure-atp-sensor-silently"></a>Azure ATP algılayıcısını sessizce kaldırma
 
-Sessiz kaldırma Azure ATP algılayıcı işlemini gerçekleştirmek için aşağıdaki komutu kullanın: **sözdizimi**:
+Sessizce kaldırma işlemini Azure ATP algılayıcısını gerçekleştirmek için aşağıdaki komutu kullanın: **söz dizimi**:
 
     Azure ATP sensor Setup.exe [/quiet] [/Uninstall] [/Help]
     
@@ -117,10 +118,10 @@ Sessiz kaldırma Azure ATP algılayıcı işlemini gerçekleştirmek için aşa�
 |Ad|Sözdizimi|Sessiz kaldırma için zorunlu mu?|Description|
 |-------------|----------|---------|---------|
 |Quiet|istemci bilgisayarlara|Evet|Kullanıcı arabirimi ve istem göstermeden kaldırıcıyı çalıştırır.|
-|Kaldır|/uninstall|Evet|Sessiz kaldırma Azure ATP algılayıcı sunucudan çalıştırır.|
+|Kaldır|/uninstall|Evet|Azure ATP algılayıcısını sessiz kaldırma işlemi, sunucudan çalıştırır.|
 |Yardım|/help|Hayır|Yardım ve hızlı başvuru sağlar. Tüm seçenek ve davranışların bir listesi dahil olmak üzere kurulum komutunun doğru kullanımını gösterir.|
 
-**Örnekler**: Azure ATP algılayıcı sunucudan sessizce kaldırmak için:
+**Örnekler**: Azure ATP algılayıcısını sunucudan sessizce kaldırmak için:
 
 
     Azure ATP sensor Setup.exe /quiet /uninstall
@@ -128,8 +129,8 @@ Sessiz kaldırma Azure ATP algılayıcı işlemini gerçekleştirmek için aşa�
 
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 
-- [Olay iletme özelliğini yapılandırma](configure-event-forwarding.md)
+- [Olay iletme'yi yapılandırma](configure-event-forwarding.md)
 - [Azure ATP önkoşulları](atp-prerequisites.md)
 - [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

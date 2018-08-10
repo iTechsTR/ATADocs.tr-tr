@@ -2,10 +2,10 @@
 title: Azure Gelişmiş tehdit koruması önkoşulları | Microsoft Docs
 description: Azure ATP başarılı bir dağıtımı ortamınızdaki gereksinimleri açıklanır.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/7/2018
+ms.date: 8/9/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 070062cccb26bd99be48614bf8d40bd781d7b240
-ms.sourcegitcommit: 37b9ff946aad31eed1c6eab5d55d44fce167e20a
+ms.openlocfilehash: 0a7cd9825f5b921b9dbe6cffe54e82d3249f10b7
+ms.sourcegitcommit: 583f2f144384a6a0cb9875d5f2b0fef7e7e3735d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827494"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "39723285"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -143,11 +143,11 @@ Aşağıdaki tabloda, yönetim bağdaştırıcısında yapılandırılması gere
 |Netlogon (SMB, CIFS, SAM-R)|TCP ve UDP|445|Ağdaki tüm cihazlar|Giden|
 |Windows Saati|UDP|123|Etki alanı denetleyicileri|Giden|
 |DNS|TCP ve UDP|53|DNS Sunucuları|Giden|
-|RPC üzerinden NTLM|TCP|135|Ağdaki tüm cihazlar|Giden|
-|NetBIOS|UDP|137|Ağdaki tüm cihazlar|Giden|
+|RPC üzerinden NTLM|TCP|135|Ağdaki tüm cihazlar|Her İkisi|
+|NetBIOS|UDP|137|Ağdaki tüm cihazlar|Her İkisi|
 |Syslog (isteğe bağlı)|TCP/UDP|514, yapılandırmasına bağlı olarak|SIEM Sunucusu|Gelen|
 |RADIUS|UDP|1813|RADIUS|Gelen|
-|RDP|TCP|3389|Ağdaki tüm cihazlar|Giden|
+|RDP için TLS|TCP|3389|Ağdaki tüm cihazlar|Her İkisi|
 
 > [!NOTE]
 > - Dizin hizmeti kullanıcı hesabını kullanarak algılayıcı uç noktaları oluşturmak için SAM-R (ağ oturumu açma) kullanarak Yerel yöneticilerin kuruluşunuzdaki sorgular [yanal hareket yolu graf](use-case-lateral-movement-path.md). Daha fazla bilgi için [SAM-R yapılandırmak gerekli izinler](install-atp-step8-samr.md).
@@ -203,11 +203,11 @@ Aşağıdaki tabloda Azure ATP algılayıcısını gereken minimum bağlantı no
 |**İç bağlantı noktaları**|||||
 |DNS|TCP ve UDP|53|DNS Sunucuları|Giden|
 |RPC üzerinden NTLM|TCP|135|Ağdaki tüm cihazlar|Giden|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Ağdaki tüm cihazlar|Giden|
-|NetBIOS|UDP|137|Ağdaki tüm cihazlar|Giden|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Ağdaki tüm cihazlar|Her İkisi|
+|NetBIOS|UDP|137|Ağdaki tüm cihazlar|Her İkisi|
 |Syslog (isteğe bağlı)|TCP/UDP|514, yapılandırmasına bağlı olarak|SIEM Sunucusu|Gelen|
 |RADIUS|UDP|1813|RADIUS|Gelen|
-|TLS RDP bağlantı noktası|TCP|3389|Ağdaki tüm cihazlar|Giden|
+|TLS RDP bağlantı noktası|TCP|3389|Ağdaki tüm cihazlar|Her İkisi|
 
 > [!NOTE]
 > - Dizin hizmeti kullanıcı hesabını kullanarak algılayıcı uç noktaları oluşturmak için SAM-R (ağ oturumu açma) kullanarak Yerel yöneticilerin kuruluşunuzdaki sorgular [yanal hareket yolu graf](use-case-lateral-movement-path.md). Daha fazla bilgi için [SAM-R yapılandırmak gerekli izinler](install-atp-step8-samr.md).
@@ -219,7 +219,7 @@ Aşağıdaki tabloda Azure ATP algılayıcısını gereken minimum bağlantı no
 
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [Azure ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool)
 - [Azure ATP mimarisi](atp-architecture.md)
 - [ATP yükleyin](install-atp-step1.md)
