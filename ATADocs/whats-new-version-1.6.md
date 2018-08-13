@@ -14,10 +14,10 @@ ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 47a8b5c52bf978d5e07007a3402a567be39e2157
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 08/13/2018
 ms.locfileid: "24018567"
 ---
 # <a name="whats-new-in-ata-version-16"></a>ATA sürüm 1.6’daki yenilikler
@@ -104,7 +104,7 @@ ATA 1.6’ya güncelleştirirken, güncelleştirme işlemi şu hata koduyla baş
 
 Şu hatayı da görebilirsiniz: System.ArgumentNullException: Değer null olamaz.
     
-Bu hatalardan herhangi biriyle görürseniz, aşağıdaki geçici çözümü çalıştırın:
+Bu hatalardan birini görürseniz, aşağıdaki geçici çözümü çalıştırın:
 
 **Geçici çözüm**: 
 
@@ -121,7 +121,7 @@ Bu hatalardan herhangi biriyle görürseniz, aşağıdaki geçici çözümü ça
     2.  Microsoft Advanced Threat Analytics Center
 7.  Ürün hatasız çalıştığını doğrulamak için günlükleri gözden geçirin.
 8.  [İndir]"RemoveDuplicateProfiles.exe" aracını (http://aka.ms/ataremoveduplicateprofiles "indirin") ve ana yükleme yoluna (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center) kopyalayın
-9.  Yükseltilmiş bir komut isteminden çalıştırın `RemoveDuplicateProfiles.exe` ve başarıyla tamamlanana kadar bekleyin.
+9.  Yükseltilmiş bir komut isteminden çalıştırın `RemoveDuplicateProfiles.exe` ve işlem başarıyla tamamlanana kadar bekleyin.
 10. Buradan:  …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin directory: **Mongo ATA**, aşağıdaki komutu yazın:
 
           db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
@@ -133,7 +133,7 @@ Bu döndürmelidir bir `WriteResult({ "nRemoved" : XX })` burada "XX" silinen ş
 
 ### <a name="net-framework-461-requires-restarting-the-server"></a>NET Framework 4.6.1, sunucunun yeniden başlatılmasını gerektirir
 
-Bazı durumlarda, .Net Framework 4.6.1 yüklemesi sunucuyu yeniden başlatmanızı gerekebilir. Bu Tamam düğmesine tıkladığınızda fark **Microsoft Advanced Threat Analytics Center Kurulumu** iletişim sunucuyu otomatik olarak yeniden başlatır. Kurulumdan önce bir bakım penceresi planlamak isteyebileceğinizden, bu özellikle ATA Lightweight Gateway’i bir etki alanı denetleyicisine yüklerken önemlidir.
+Bazı durumlarda, .Net Framework 4.6.1 yüklemesi sunucuyu yeniden başlatmanızı gerekebilir. Bu Tamam düğmesine tıkladığınızda fark **Microsoft Advanced Threat Analytics Center Kurulumu** iletişim otomatik olarak sunucuyu yeniden başlatır. Kurulumdan önce bir bakım penceresi planlamak isteyebileceğinizden, bu özellikle ATA Lightweight Gateway’i bir etki alanı denetleyicisine yüklerken önemlidir.
     ![.NET Framework’ü yeniden başlatma](media/ata-net-framework-restart.png)
 
 ### <a name="historical-network-activities-no-longer-migrated"></a>Geçmiş ağ etkinlikleri artık geçirilmez
@@ -141,7 +141,7 @@ ATA’nın bu sürümü daha doğru algılama sunan ve özellikle Karma Değer G
 Yeni ve geliştirilmiş algılama altyapısı hat içi algılama teknolojisini kullanarak, ATA Center’ın performansını önemli ölçüde artırmak için, geçmiş ağ etkinliğine erişmeksizin algılamaya olanak sağlar. Bu aynı zamanda, güncelleştirme işlemi sırasında geçmiş ağ etkinliğinin aktarılmasına gerek kalmadığı anlamına gelir.
 Gelecekte araştırmak amacıyla istemeniz halinde, ATA güncelleştirme yordamı verileri JSON dosyası olarak `<Center Installation Path>\Migration` uygulamasına aktarır.
 
-## <a name="see-also"></a>Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca Bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [ATA’yı 1.6 sürümüne güncelleştirme: geçiş kılavuzu](ata-update-1.6-migration-guide.md)
