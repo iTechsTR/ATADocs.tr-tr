@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,40 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0062fc22df357e338d8eaf446688ea8bba56019c
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 83b7b88d2b1ba61a2ae2733f1401d98b341ad3bd
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567959"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734796"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 # <a name="whats-new-in-azure-atp"></a>ATA'daki yenilikler 
+
+
+## <a name="azure-atp-release-245"></a>Azure ATP yayın 2.45
+
+19 Ağustos 2018'de yayınlanan
+
+- **Azure ATP olay izleme için Windows (ETW) bir ek veri kaynağı olarak ekler.**  <br> Var olan ağ trafiğini ve Windows olaylarını yanı sıra ek veri kaynağı olarak olay izleme için Windows (ETW) eklendi. ETW ek şüpheli etkinlik algılamalarını dahil olmak üzere, sağlar: şüpheli etki alanı denetleyicisi promosyonlar ve şüpheli etki alanı denetleyicisi Çoğaltma istekleri (her ikisi de olan olası DCShadow saldırılara karşı). <br>
+Yalnızca ATP algılayıcı destek ETW dayalı algılamalar etki alanı denetleyicileri üzerinde yüklü. ETW algılamalar ATP tek başına algılayıcı tarafından desteklenmez. <br>  
+
+- **Şimdi genel kullanılabilirlik içinde dört yeni algılamalar** <br>
+  - Şüpheli VPN bağlantısı
+  - Kerberos altın bilet – var olmayan hesap 
+  - Şüpheli etki alanı denetleyicisi yükseltme (olası DcShadow saldırısı) – ETW tabanlı algılama, yalnızca ATP algılayıcı ile kullanılabilir 
+  - Şüpheli etki alanı denetleyicisi Çoğaltma isteği (olası DcShadow saldırısı) – ETW tabanlı algılama, yalnızca ATP algılayıcı ile kullanılabilir
+
+- Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları da içerir.
+
+
+## <a name="azure-atp-release-244"></a>Azure ATP yayın 2.44
+
+Yayın Tarihi: 12 Ağustos 2018
+
+- Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları içerir.
+- "Özel durum Statistic" günlük algılayıcı makinede artık oluşturulan günlük dosyalarını içerir.
 
 
 ## <a name="azure-atp-release-243"></a>Azure ATP yayın 2.43

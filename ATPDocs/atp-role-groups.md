@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8e7af3846d31031b645c65c7550b696fe4738e5d
-ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
+ms.openlocfilehash: a6b4f668533ab3169c10cfc9b194b8bd392db6d1
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39064075"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734753"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -31,14 +31,14 @@ Azure ATP rol tabanlı güvenlik, bir kuruluşun belirli güvenlik ve uyumluluk 
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-Rol grupları Azure ATP için erişim yönetimini etkinleştirin. Rol gruplarını kullanarak güvenlik ekibinizdeki görevleri ayırabilir ve kullanıcılara sadece işlerini yapması için gereken miktarda erişim izni verebilirsiniz. Bu makalede erişim yönetimi ve Azure ATP rol yetkilendirmesi ve ATP rol grupları ile ayarlayıp çalıştırmaya başlamasına yardımcı açıklanmaktadır.
+Rol grupları Azure ATP için erişim yönetimini etkinleştirin. Rol gruplarını kullanarak güvenlik ekibinizdeki görevleri ayırabilir ve kullanıcılara sadece işlerini yapması için gereken miktarda erişim izni verebilirsiniz. Bu makalede erişim yönetimi, Azure ATP rol yetkilendirmesi ve ATP rol grupları ile ayarlayıp çalıştırmaya başlamasına yardımcı açıklanmaktadır.
 
 > [!NOTE]
 > Herhangi bir genel yönetici veya Güvenlik Yöneticisi kiracının Azure Active Directory'ye otomatik olarak Azure ATP yönetici olur.
 
-## <a name="accessing-the-workspace-management-portal"></a>Çalışma alanı yönetim portalına erişim
+## <a name="accessing-the-management-portal"></a>Yönetim portalına erişim
 
-Çalışma alanı Yönetim Portalı'nı (portal.atp.azure.com) erişimi yalnızca dizin rolü genel yönetici veya güvenlik yöneticisi olan bir Azure AD kullanıcı tarafından gerçekleştirilebilir. Portal girdikten sonra farklı çalışma alanları oluşturabilirsiniz. Her çalışma alanı için Azure ATP hizmeti üç güvenlik gruplarını Azure Active Directory kiracınızda oluşturur: Yöneticiler, kullanıcılar, görüntüleyiciler. 
+Yönetim Portalı (portal.atp.azure.com) erişimi yalnızca dizin rolü genel yönetici veya güvenlik yöneticisi olan bir Azure AD kullanıcı tarafından gerçekleştirilebilir. Portal girdikten sonra çalışma alanı oluşturabilirsiniz. Azure ATP hizmeti, Azure Active Directory kiracınızda üç güvenlik grupları oluşturur: Yöneticiler, kullanıcılar, görüntüleyiciler. 
 
 > [!NOTE]
 > Azure ATP çalışma alanı portalına erişim, yalnızca söz konusu çalışma alanında, genel Yöneticiler ve güvenlik yöneticileri için Azure AD güvenlik gruplarına kapsamındaki kullanıcılara verilir.
@@ -69,7 +69,7 @@ Kullanıcılar kendi rol grupları için kullanılabilir olmayan bir sayfaya eri
 
 Azure ATP, rol grupları için temel olarak Azure AD güvenlik grupları kullanır. Rol grupları alanından yönetilebilir [ https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups ](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups). Yalnızca Azure AD kullanıcıları eklenebilir veya güvenlik grubundan kaldırıldı. 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA boyutlandırma aracı](http://aka.ms/aatpsizingtool)
 - [ATA mimarisi](atp-architecture.md)
 - [ATA’yı yükleme](install-atp-step1.md)

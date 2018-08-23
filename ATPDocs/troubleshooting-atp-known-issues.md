@@ -2,10 +2,10 @@
 title: Azure ATP bilinen sorunları giderme | Microsoft Docs
 description: Azure ATP sorunları nasıl giderebileceğinizi açıklar.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/21/2018
+ms.date: 8/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d460a57d82f3eb233192235067e116f5ede5f5df
-ms.sourcegitcommit: b218f60b42a25fe486d774d97719590e6fa74e10
+ms.openlocfilehash: 986dc057127e8de1e26a78dd7a138b02efeebf99
+ms.sourcegitcommit: dc56b9e9533db1a2dc314b199e90191bb25adaba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34760065"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "41734813"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -28,7 +28,7 @@ ms.locfileid: "34760065"
 
 ## <a name="deployment-log-location"></a>Dağıtım günlüğü konumu
  
-Azure ATP dağıtım günlükleri ürünü yükleyen kullanıcının temp dizininde yer alır. Varsayılan yükleme konumunda, şu anda bulunabilir: C:\Users\Administrator\AppData\Local\Temp (veya bir dizin yukarıda % temp %).
+Azure ATP dağıtım günlükleri ürünü yükleyen kullanıcının temp dizininde yer alır. Varsayılan yükleme konumunda, şu anda bulunabilir: C:\Users\Administrator\AppData\Local\Temp (veya bir dizin yukarıda % temp %). Daha fazla bilgi için [günlüklerini kullanarak ATP sorunlarını giderme](troubleshooting-atp-using-logs.md)
 
 ## <a name="proxy-authentication-problem-presents-as-licensing-error"></a>Proxy kimlik doğrulama sorunu lisans hatası sayısını gösterir.
 
@@ -83,7 +83,7 @@ Aşağıdaki ayarlar **0** veya **devre dışı** sanal makinenin NIC yapıland�
 
  ![VMware algılayıcı sorunu](./media/vm-sensor-issue.png)
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [Azure ATP önkoşulları](atp-prerequisites.md)
 - [Azure ATP kapasite planlaması](atp-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

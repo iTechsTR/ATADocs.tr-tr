@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/9/2018
+ms.date: 8/15/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0a7cd9825f5b921b9dbe6cffe54e82d3249f10b7
-ms.sourcegitcommit: 583f2f144384a6a0cb9875d5f2b0fef7e7e3735d
+ms.openlocfilehash: 74fea95d0cfdcca96eba1f77b6dbd81a101b3782
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "39723285"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734811"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -31,20 +31,20 @@ Bu makalede, ortamınızda başarılı bir Azure ATP dağıtımının gereksinim
 > Kaynakları ve kapasiteyi planlama hakkında daha fazla bilgi için bkz: [Azure ATP kapasite planlaması](atp-capacity-planning.md).
 
 
-Azure ATP çalışma alanı Yönetim Portalı ve bir çalışma alanı portalı, Azure ATP tek başına algılayıcı ve/veya Azure ATP algılayıcısını oluşan Azure ATP bulut hizmeti oluşur. Azure ATP bileşenleri hakkında daha fazla bilgi için bkz. [Azure ATP mimarisi](atp-architecture.md).
+Yönetim Portalı, çalışma alanı portalı, Azure ATP algılayıcısını ve/veya Azure ATP tek başına algılayıcı oluşan Azure ATP bulut hizmeti Azure ATP oluşur. Azure ATP bileşenlerinin her biri hakkında daha fazla bilgi için bkz: [Azure ATP mimarisi](atp-architecture.md).
 
-Her bir Azure ATP çalışma alanı bir Active Directory orman sınırının ve orman işlevsel düzeyi (FFL) Windows 2003 ve üstünde destekler. Birden çok ormanlı dağıtımlar için her orman için ayrı bir Azure ATP çalışma alanı gereklidir.
+Her Azure ATP örneği bir birden çok Active Directory orman sınırının ve orman işlevsel düzeyi (FFL) Windows 2003 ve üstünde destekler. 
 
 
 [Başlamadan önce](#before-you-start): Bu bölümde toplamanız gereken bilgiler ve hesaplarla ağ varlıkları Azure ATP yüklemeye başlamadan önce elinizde listelenir.
 
-[Azure ATP çalışma alanı yönetim portalında](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): Bu bölümde çalışma alanı Yönetim Portalı tarayıcı gereksinimlerini açıklar.
+[Azure ATP Yönetim Portalı](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): Bu bölümde Azure ATP Yönetim Portalı tarayıcı gereksinimlerini açıklar.
 
 [Azure ATP çalışma alanı portalı](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): Bu bölümde Azure ATP çalışma alanı portalı çalıştırmak için tarayıcı gereksinimleri açıklanmaktadır.
 
-[Azure ATP tek başına algılayıcı](#azure-atp-sensor-requirements): Bu bölümde, Azure ATP tek başına algılayıcı sunucularınızda yapılandırmanız gereken ayarlar yanı sıra Azure ATP tek başına algılayıcı donanım, yazılım gereksinimleri listelenir.
-
 [Azure ATP algılayıcısını](#azure-atp-lightweight-sensor-requirements): Bu bölümde Azure ATP algılayıcısı donanım ve yazılım gereksinimleri listelenir.
+
+[Azure ATP tek başına algılayıcı](#azure-atp-sensor-requirements): Bu bölümde, Azure ATP tek başına algılayıcı sunucularınızda yapılandırmanız gereken ayarlar yanı sıra Azure ATP tek başına algılayıcı donanım, yazılım gereksinimleri listelenir.
 
 ![Azure ATP mimarisi diyagramı](media/ATP-architecture-topology.png)
 
@@ -65,7 +65,7 @@ Bu bölümde, toplamanız gereken bilgiler ve hesaplarla ağ varlıkları Azure 
 
 -   İsteğe bağlı: Ağ etkinlikleri olmayan bir kullanıcının kullanıcı hesabı. Bu hesap Azure ATP Honeytoken kullanıcısı olarak yapılandırılır. Daha fazla bilgi için [Dışlamalar ve Honeytoken kullanıcısını yapılandırma](install-atp-step7.md).
 
--   İsteğe bağlı: tek başına algılayıcı dağıtırken, onu Windows olayları 4776, 4732, 4733, 4728, 4729, 4756, 4757'yi ve 7045 Azure ATP Pass--Hash, deneme yanılma, gizli grup, Honey Token değişiklikleri daha da geliştirmek için ATP iletmek gereklidir. ve kötü amaçlı hizmeti oluşturma. Azure ATP algılayıcısını bu olayları otomatik olarak alınır. Azure ATP tek başına algılayıcı bu olayları sıem sistemlerinizden alınabileceği gibi etki alanı denetleyicinizden Windows Olay iletme'yi ayarlayarak alınabilir. Toplanan olaylar, etki alanı denetleyicisi ağ trafiğinin kullanılabilir olmayan ek bilgilerle Azure ATP sağlar.
+-   İsteğe bağlı: tek başına algılayıcı dağıtırken, onu Windows olayları 4776, 4732, 4733, 4728, 4729, 4756, 4757'yi ve 7045 Azure ATP Pass--Hash, deneme yanılma, gizli grup, Honey Token değişiklikleri daha da geliştirmek için ATP iletmek gereklidir. ve kötü amaçlı hizmeti oluşturma. Azure ATP algılayıcısını bu olayları otomatik olarak alır. Azure ATP tek başına algılayıcı bu olayları sıem sistemlerinizden alınabileceği gibi etki alanı denetleyicinizden Windows Olay iletme'yi ayarlayarak alınabilir. Toplanan olaylar, etki alanı denetleyicisi ağ trafiğinin kullanılabilir olmayan ek bilgilerle Azure ATP sağlar.
 
 
 ## <a name="azure-atp-workspace-management-portal-and-workspace-portal-requirements"></a>Azure ATP çalışma alanı Yönetim Portalı ve çalışma alanı portal gereksinimleri
@@ -74,7 +74,7 @@ Azure ATP çalışma alanı portalı ve Azure ATP çalışma alanı yönetim por
 -   Internet Explorer sürüm 10 ve üstü
 -   Google Chrome 4.0 ve üzeri
 -   Minimum ekran genişliği çözünürlüğü 1700 piksel
--   Güvenlik Duvarı/Azure ATP bulut hizmeti ile iletişim için açık - proxy, açık olması gerekir: *. güvenlik duvarı/proxy'sinde atp.azure.com bağlantı noktası 443'tür. 
+-   Güvenlik Duvarı/proxy'si açılmaya - Azure ATP bulut hizmetiyle iletişim kurmak için *. atp.azure.com 443 numaralı bağlantı noktası güvenlik duvarı/proxy'sinde açık olmalıdır. 
 
 ## <a name="azure-atp-standalone-sensor-requirements"></a>Azure ATP tek başına algılayıcı gereksinimleri
 Bu bölümde Azure ATP tek başına algılayıcı ilişkin gereksinimler listelenmiştir.
@@ -83,7 +83,7 @@ Azure ATP tek başına algılayıcı, Windows Server 2012 R2 veya Windows Server
 Azure ATP tek başına algılayıcı bir etki alanı veya çalışma grubu üyesi olan bir sunucuya yüklenebilir.
 Azure ATP tek başına algılayıcı ile etki alanı işlevsel düzeyi, Windows 2003 ve üstü etki alanı denetleyicilerini izlemek için kullanılabilir.
 
-Tek başına algılayıcı bulut hizmetiyle iletişim kurmak, güvenlik duvarları ve proxy'ler için 443 numaralı bağlantı noktasını açmanız gerekir *. atp.azure.com
+Tek başına algılayıcı bulut hizmetiyle iletişim kurmak, güvenlik duvarları ve proxy'ler için 443 numaralı bağlantı noktası *. atp.azure.com açık olmalıdır.
 
 
 Azure ATP tek başına algılayıcı ile sanal makineleri kullanma hakkında daha fazla bilgi için bkz: [bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md).
@@ -202,8 +202,8 @@ Aşağıdaki tabloda Azure ATP algılayıcısını gereken minimum bağlantı no
 |SSL (*.atp.azure.com)|TCP|443|Azure ATP bulut hizmeti|Giden|
 |**İç bağlantı noktaları**|||||
 |DNS|TCP ve UDP|53|DNS Sunucuları|Giden|
-|RPC üzerinden NTLM|TCP|135|Ağdaki tüm cihazlar|Giden|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Ağdaki tüm cihazlar|Her İkisi|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Ağdaki tüm cihazlar|Giden|
+|RPC üzerinden NTLM|TCP|135|Ağdaki tüm cihazlar|Her İkisi|
 |NetBIOS|UDP|137|Ağdaki tüm cihazlar|Her İkisi|
 |Syslog (isteğe bağlı)|TCP/UDP|514, yapılandırmasına bağlı olarak|SIEM Sunucusu|Gelen|
 |RADIUS|UDP|1813|RADIUS|Gelen|

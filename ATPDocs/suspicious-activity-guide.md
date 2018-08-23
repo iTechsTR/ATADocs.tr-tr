@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/24/2018
+ms.date: 8/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4667e13af4e86a18d1b50a2ea575f9c749f0c541
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: 4aa58228ea23f58ea37b10f941467e9dc076992f
+ms.sourcegitcommit: f534a318be71b840aecb6a84744d8cd1f251a7aa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585246"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41734847"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -200,7 +200,7 @@ Bu algılama, ekibi tarafından verilmesinin anahtarı için kullanılan bir Ker
    2.   Azure ATP algılayıcısını bu uyarı bir sanal makine dahil mi? Evet ise, en son kaydedilen durumdan devam mı? Yanıt Evet ise, ardından bu uyarıyı kapatın.
    3.   Yukarıdaki soruların yanıtlanması gerekirse, Hayır, bu, kötü amaçlı varsayılır.
 
-- **Var olmayan bir hesap** (Önizleme)
+- **Var olmayan hesap**
    1.   Aşağıdaki sorular sorun:
          - Kullanıcı bir bilinen ve geçerli etki alanı kullanıcısı mıdır? Yanıt Evet ise, uyarı (Yanlış pozitif olduğu)'ni kapatın.
          - Kullanıcının son eklendi? Yanıt Evet ise, ardından uyarıyı kapatın, değişiklik henüz eşitlenmemiş.
@@ -454,7 +454,7 @@ Bu algılama, Kerberos veya NTLM kullanarak birçok kimlik doğrulama hataları 
 
 [Uzun ve karmaşık parolalar](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) gerekli ilk deneme yanılma saldırılarına karşı güvenlik düzeyini belirtin.
 
-## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---preview"></a>Şüpheli etki alanı denetleyicisi yükseltme (olası DCShadow saldırı) - Önizleme
+## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---new"></a>Şüpheli etki alanı denetleyicisi yükseltme (olası DCShadow saldırı) - yeni
 
 **Açıklama**
 
@@ -489,10 +489,11 @@ Daha fazla bilgi için [SharePoint Server 2013'te profil eşitleme izinleri verm
 
 Yararlanabileceğiniz [AD ACL tarayıcı](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) veya etki alanında kimin bu izinlere sahip olduğunu belirlemek için bir Windows PowerShell Betiği oluşturabilirsiniz.
  
+> [!NOTE]
+> Şüpheli etki alanı denetleyicisi yükseltme (olası DCShadow saldırı) algılamalar ATP algılayıcı tarafından desteklenir. 
 
 
-
-## <a name="suspicious-replication-request-potential-dcshadow-attack---preview"></a>Şüpheli çoğaltma isteği (olası DCShadow saldırı) - Önizleme
+## <a name="suspicious-replication-request-potential-dcshadow-attack---new"></a>Şüpheli çoğaltma isteği (olası DCShadow saldırı) - yeni
 
 **Açıklama** 
 
@@ -519,6 +520,9 @@ Aşağıdaki izinlere sahip olan, kuruluşunuzda denetimi:
 
 Bunu yapmak için yararlanabileceğiniz [AD ACL tarayıcı](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) veya etki alanında kimin bu izinlere sahip olduğunu belirlemek için bir Windows PowerShell Betiği oluşturabilirsiniz.
 
+> [!NOTE]
+> Şüpheli çoğaltma isteği (olası DCShadow saldırı) algılamalar ATP algılayıcı tarafından desteklenir. 
+
 
 ## <a name="suspicious-service-creation"></a>Şüpheli hizmet oluşturma
 
@@ -542,7 +546,7 @@ Bir etki alanı denetleyicisine, kuruluşunuzda şüpheli bir hizmet oluşturuld
 
 - Daha az ayrıcalıklı erişimi yalnızca belirli kullanıcılara yeni hizmetleri oluşturma hakkı izin vermek için etki alanı makinelerde uygulayın.
 
-## Şüpheli VPN bağlantısı - Önizleme<a name="suspicious-vpn-detection"></a>
+## Şüpheli VPN bağlantısı <a name="suspicious-vpn-detection"></a>
 
 **Açıklama**
 

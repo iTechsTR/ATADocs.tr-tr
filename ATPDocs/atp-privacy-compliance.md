@@ -2,10 +2,10 @@
 title: Azure Gelişmiş tehdit koruması kişisel veri ilkesi | Microsoft Docs
 description: Azure ATP özel bilgileri ve kişisel verileri silme hakkında daha fazla bilgi için bağlantılar sağlar.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/26/2018
+ms.date: 8/15/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: d64cc0d40acc31e2187305c38a625924a91db06b
-ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
+ms.openlocfilehash: e4aad8af65c27f351185808585aea37a8a67de42
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948940"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734719"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -30,13 +30,13 @@ ms.locfileid: "36948940"
 
 Azure Gelişmiş tehdit koruması kişisel olarak tanımlanabilen verileri görüntüleyebilirsiniz [çalışma portalı](workspace-portal.md) kullanarak [Arama çubuğuna](workspace-portal.md#search-bar). 
 
-Belirli bir kullanıcı veya bilgisayar için arama yapabilir ve varlıkta tıklayarak Getir, kullanıcıya veya bilgisayara [profil sayfası](entity-profiles.md). Profil, varlık hakkında ayrıntılar kapsamlı, varlık ve buna ait geçmişi ilgili ağ etkinliği de dahil olmak üzere Active Directory sağlar.
+Belirli bir kullanıcı veya bilgisayar için arama yapın ve kullanıcıya veya bilgisayara getirmek için varlık tıklayın [profil sayfası](entity-profiles.md). Profil, varlık hakkında ayrıntılar kapsamlı, varlık ve buna ait geçmişi ilgili ağ etkinliği de dahil olmak üzere Active Directory sağlar.
 
 Azure ATP kişisel verileri Active Directory'den Azure ATP algılayıcısını toplanan ve arka uç veritabanında depolanır.
 
 ## <a name="update-personal-data"></a>Kişisel verilerini güncelleştirin 
 
-Azure ATP kullanıcı kişisel verileri, kullanıcının nesnesi Active Directory kuruluş türetilen olduğundan, kullanıcı profiline AD'de yapılan değişiklikler, ATA'daki yansıtılır.
+Azure ATP'nin kişisel kullanıcı verileri, kullanıcının nesnesi Active Directory kuruluş türetilir. Bu nedenle, AD kuruluş kullanıcı profiline yapılan değişiklikler, ATA'daki yansıtılır.
 
 
 ## <a name="delete-personal-data"></a>Kişisel verilerini silme 
@@ -45,7 +45,7 @@ Bir kullanıcı kuruluşun Active Directory'den silindikten sonra Azure ATP otom
 
 ## <a name="export-personal-data"></a>Kişisel verileri dışarı aktarma 
 
-ATA'daki yeteneğine sahip [dışarı](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) Excel güvenlik uyarı bilgisi. Bu ayrıca kişisel verileri dışarı aktarır. 
+ATA'daki yeteneğine sahip [dışarı](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) Excel güvenlik uyarı bilgisi. Bu işlev, ayrıca kişisel verileri dışarı aktarır. 
  
 ## <a name="audit-personal-data"></a>Kişisel verileri denetleme
 

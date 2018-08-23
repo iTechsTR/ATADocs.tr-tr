@@ -2,10 +2,10 @@
 title: Azure Gelişmiş tehdit koruması Windows Olay iletme'yi yapılandırma | Microsoft Docs
 description: Azure ATP ile Windows Olay iletme'yi yapılandırmaya yönelik seçeneklerinizi açıklar
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 08/12/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1b37bcbfc304ee0ef71d80eb84f6298d64e50d3f
-ms.sourcegitcommit: eebf1156aaae199b6aaa7e431cd6372e572b1e9f
+ms.openlocfilehash: 730ff2e96da8dc6329cf4855e9e7d279ef5a067d
+ms.sourcegitcommit: 845b8c0b6e0ec2d2e882672fd9f17ed573fafa56
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39396426"
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "41734700"
 ---
-*İçin geçerlidir: Azure Gelişmiş tehdit koruması sürümü 1.9*
+*İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 
@@ -63,12 +63,12 @@ Ekledikten sonra **ağ hizmeti** için **Event Log Readers** grubunda, değişik
    
     1.  **Etkin**’i seçin.
     2.  Altında **seçenekleri**, tıklayın **Göster**.
-    3.  Altında **SubscriptionManagers**, şu değeri girin ve tıklayın **Tamam**: *Server=http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC, yenileme=10* (For example: sunucu =http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC, yenileme=10)
- 
-   ![Hedef aboneliği yapılandırma resmi](media/wef%202%20config%20target%20sub%20manager.png)
-   
-    5.  **Tamam**'ı tıklatın.
-    6.  Yükseltilmiş bir komut isteminden şunu yazın: *gpupdate /force*. 
+    3.  Altında **SubscriptionManagers**, şu değeri girin ve tıklayın **Tamam**: * Server =`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (örneğin: Server =`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    
+    ![Hedef aboneliği yapılandırma resmi](media/wef%202%20config%20target%20sub%20manager.png)
+    
+5.  **Tamam**'ı tıklatın.
+6.  Yükseltilmiş bir komut isteminden şunu yazın: *gpupdate /force*. 
 
 **3. adım: Azure ATP tek başına algılayıcı üzerinde aşağıdaki adımları gerçekleştirin.** 
 
@@ -91,7 +91,7 @@ Ekledikten sonra **ağ hizmeti** için **Event Log Readers** grubunda, değişik
         1. **Günlüğe göre**’ye tıklayıp **Güvenlik**’i seçin.
         2. **Olay Kimliklerini Ekler/Dışlar** alanına olay numarasını yazın ve **Tamam**’a tıklayın. Örneğin, 4776 gibi aşağıdaki örnekte yazın:
 
- ![Sorgu filtresi resmi](media/wef-4-query-filter.png)
+        ![Sorgu filtresi resmi](media/wef-4-query-filter.png)
 
    5.   Oluşturulan aboneliğe sağ tıklayıp **çalışma zamanı durumu** durumu ile ilgili olup olmadığını görmek için. 
    6.   Birkaç dakika sonra iletilmek koymak olayları görmek için Azure ATP tek başına algılayıcı iletilen olaylar bazılarındaki denetleyin.

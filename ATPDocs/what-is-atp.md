@@ -1,6 +1,6 @@
 ---
 title: Azure Gelişmiş tehdit Koruması (ATP) nedir? | Microsoft Docs
-description: Azure Gelişmiş tehdit Koruması (ATP) nedir ve ne tür kuşkulu etkinlikleri algılayabildiği açıklanır
+description: Azure Gelişmiş tehdit Koruması (ATP) nedir ve ne tür kuşkulu etkinlikleri algılama açıklar
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
@@ -13,98 +13,103 @@ ms.technology: ''
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5ccac90a171c895ee8b4d5336a125ccd7fa66239
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: c889fc070ffaf79a89c072d83edf6cc6f1cd0413
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29446144"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734806"
 ---
-*Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
+*İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
-# <a name="what-is-azure-advanced-threat-protection"></a>Azure Advanced Threat Protection nedir?
+# <a name="what-is-azure-advanced-threat-protection"></a>Azure Gelişmiş tehdit Koruması nedir?
 Azure Gelişmiş Tehdit Koruması (ATP), kurumsal hibrit ortamlarınızı birden fazla türdeki gelişmiş hedefli siber saldırı ve içeriden bilgi sızdırma tehditlerine karşı korumanıza yardımcı olan bir bulut hizmetidir.
 
 ## <a name="how-azure-atp-works"></a>Azure ATP nasıl çalışır?
 
-Azure ATP (örneğin, Kerberos, DNS, RPC, NTLM ve diğerleri) birden çok protokollerin ağ trafiğini yakalamak ve altyapısı ayrıştırılırken özel bir ağ kimlik doğrulama, yetkilendirme ve bilgi toplama için yararlanır. Bu bilgileri Azure ATP tarafından toplanır:
+Azure ATP özel bir ağ ayrıştırma altyapısından (Kerberos, DNS, RPC, NTLM ve diğerleri gibi) birden çok protokolün ağ trafiğini yakalamak ve ayrıştırmak için kimlik doğrulaması, yetkilendirme ve bilgi toplama yararlanır. Bu bilgiler Azure ATP tarafından yollardan biriyle toplanır:
 
--   Azure ATP algılayıcılar doğrudan etki alanı denetleyicilerinizde dağıtma
--   Etki alanı denetleyicileri ve DNS sunucularından Azure ATP tek başına algılayıcı yansıtma bağlantı noktası
+-   Azure ATP algılayıcı doğrudan etki alanı denetleyicilerinizde dağıtma
+-   Azure ATP tek başına algılayıcı için etki alanı denetleyicileri ve DNS sunucularından yansıtma bağlantı noktası
 
-Azure ATP birden çok veri kaynaklarından-, günlüklerini ve olayları kullanıcılar ve kuruluştaki diğer varlıklar davranışını öğrenmek ve bunlarla ilgili davranış profili oluşturmak için ağınızdaki gibi bilgilerini alır.
-Azure ATP olayları ve günlükleri alabilirsiniz:
+Azure ATP birden çok veri kaynağında, günlükler ve olaylar kullanıcıların ve kuruluştaki diğer varlıkların davranışlarını öğrenmek ve bunlar hakkında davranış profili oluşturmak için ağınızdaki gibi bilgileri alır.
+Azure ATP olayları ve günlükleri şuralardan alabilir:
 
 -   SIEM Tümleştirmesi
 -   Windows Olay İletme (WEF)
--   Doğrudan Windows Olay Toplayıcısı (için algılayıcı)
--   RADIUS VPN hesaplaması
+-   Doğrudan Windows Olay Toplayıcısı'ndan (için algılayıcı)
+-   RADIUS Vpn'lerden hesaplaması
 
 
-Azure ATP mimarisi hakkında daha fazla bilgi için bkz: [Azure ATP mimarisi](atp-architecture.md).
+Azure ATP mimarisi hakkında daha fazla bilgi için bkz. [Azure ATP mimarisi](atp-architecture.md).
 
 ## <a name="what-does-azure-atp-do"></a>Azure ATP ne yapar?
 
-Azure ATP teknolojisi siber saldırı sonlandırma zinciri de dahil olmak üzere çeşitli aşamaları odaklanan birden çok kuşkulu etkinlikleri algılar:
+Azure ATP teknolojisi siber saldırı ölüm zincirinin, belirtilen çeşitli aşamalarına odaklanarak birden çok şüpheli etkinliği algılar:
 
--   Keşif sırasında saldırganlar ortamı nasıl yapılandırıldığını bilgi toplamak, hangi farklı varlıkları içerir ve hangi varlık yoktur. Bunlar genellikle planlarına saldırı sonraki aşamaları için yapı oluşturma.
+-   Keşif aşamasında saldırganlar ortamın nasıl oluşturulduğunu bilgi toplamak, hangi farklı varlıklardır ve hangi varlık yoktur. Bunlar genellikle saldırının sonraki aşamaları için planlarına oluşturma.
 -   Yanal hareket döngüsü aşamasında saldırgan, ağınızdaki saldırı yüzeyini genişletmek için zaman ve çaba harcar.
--   Etki alanı hakimiyeti (kalıcı) sırasında bir saldırganın çeşitli ayarlar giriş noktaları, kimlik bilgileri ve teknikleri kullanarak kendi kampanya sürdürmeye vermeden bilgilerini yakalar. 
+-   Etki alanı hakimiyeti (Kalıcılık) aşamasında saldırgan bunları çeşitli ayarlar giriş noktaları, kimlik bilgileri ve teknikler kullanarak sürdürmesine olanak sağlayan bilgileri yakalar. 
 
 Bu siber saldırı aşamaları, hangi türde bir şirket saldırıya uğramış veya ne tür bilgiler hedeflenmiş olursa olsun birbirine benzer ve tahmin edilebilirdir.
-Azure ATP üç ana saldırıları türlerinde arar: kötü amaçlı saldırıları, anormal davranış ve güvenlik sorunlarını ve riskleri.
+Azure ATP saldırıları başlıca üç türdeki için arar: kötü amaçlı saldırılar, olağan dışı davranış ve güvenlik sorunlarını ve riskleri.
 
-**Kötü amaçlı saldırıları** algılanan belirleyici biçimde yanı sıra anormal davranışları analizi aracılığıyla. Bilinen saldırı türlerinin tam listesi içerir:
+**Kötü amaçlı saldırıları** algılanan belirleyici yanı sıra anormal davranış analizi aracılığıyla. Bilinen saldırı türlerinin tam listesi içerir:
 
 -   Anahtar Geçişi (PtT)
 -   Karma Geçişi (PtH)
 -   Karmayı Atlayarak Geçiş
 -   Sahte PAC (MS14-068)
 -   Altın Bilet
+    -   zaman anomoly
+    -   Varolmayan hesabı - yeni
 -   Kötü amaçlı çoğaltma
 -   Dizin hizmeti numaralandırması
 -   SMB Oturumu Listeleme
 -   DNS Keşfi
--   Yatay deneme yanılma saldırısı 
--   Dikey deneme yanılma saldırısı
+-   Yatay deneme yanılma 
+-   Dikey deneme yanılma
 -   Maymuncuk
 -   Olağan dışı protokol
--   Şifreleme indirgeme
+-   Şifrelemeyi düşürme
 -   Uzaktan yürütme
--   Kötü amaçlı hizmet oluşturma
+-   Kötü amaçlı hizmeti oluşturma
+-   Şüpheli etki alanı denetleyicisi yükseltme (olası DCShadow saldırı) - yeni
+-   Şüpheli çoğaltma isteği (olası DCShadow saldırı) - yeni
+-   VPN 
 
 
-Azure ATP bu kuşkulu etkinlikleri algılar ve kim, düz bir görünümünü de dahil olmak üzere Azure ATP çalışma portalında bilgileri de ortaya çıkarır, ne zaman ve nasıl. Bu basit, kullanımı kolay Pano izleyerek, gördüğünüz gibi Azure ATP geçişi anahtar saldırı, ağınızdaki istemci 1 ve 2 istemci bilgisayarlar üzerinde denendi şüphelendiği olduğunu uyarılırsınız.
+Azure ATP bu şüpheli etkinlikleri algılar ve kim, düz bir görünümünü de dahil olmak üzere Azure ATP çalışma alanı portalında bilgilerini ortaya çıkarır neyi, nasıl ve ne zaman. Bu basit, kullanımı kolay Panoda, gördüğünüz gibi Azure ATP ağınızdaki istemci 1 ve istemci 2 bilgisayarları üzerinde bir Pass--Ticket saldırısı girişiminde bulunuldu şüphelendiği uyarılırsınız.
 
- ![Örnek Azure ATP ekran geçişi anahtar](media/pass-the-ticket-sa.png)
+ ![Örnek Azure ATP ekranı pass--ticket](media/pass-the-ticket-sa.png)
 
 
-Azure ATP de algılar **güvenlik sorunlarını ve riskleri**dahil:
+Azure ATP de algılar **güvenlik sorunlarını ve riskleri**de dahil olmak üzere:
 
 -   Zayıf protokoller
 -   Bilinen protokol güvenlik açıkları
--   [Yanal hareket yoluna hassas hesapları](use-case-lateral-movement-path.md)
+-   [Hassas hesaplara yönelik yatay hareket yolu](use-case-lateral-movement-path.md)
 
 # <a name="what-threats-does-azure-atp-look-for"></a>Hangi tehditleri Azure ATP arar?
 
 Azure ATP Gelişmiş bir tehdidin çeşitli aşamaları için algılama sağlar: Keşif, kimlik bilgilerinin tehlikeye atılması, yanal hareket, ayrıcalık yükseltme, etki alanı hakimiyeti ve diğerleri. Bu algılamaların amacı, gelişmiş saldırıları ve içeriden gelen tehditleri kuruluşunuza zarar vermeden önce algılamaktır.
 
 Her aşamadaki algılama, söz konusu aşamayla ilgili birkaç şüpheli etkinlikle sonuçlanır ve burada her şüpheli etkinlik farklı türde olası saldırılarla ilişkilidir.
-Burada Azure ATP algılaması şu anda sağlar sonlandırma zinciri bu aşamada, aşağıdaki görüntüde vurgulanmıştır:
+Azure ATP şu anda algılayabildiği sonlandırma zinciri Bu aşamalar aşağıdaki resimde vurgulanmıştır:
 
-![Saldırı yanal etkinliğinde Azure ATP odaklanmak KILL zinciri](media/attack-kill-chain-small.jpg)
+![Ölüm zincirindeki yanal etkinliklere saldırı Azure ATP odaklanır](media/attack-kill-chain-small.jpg)
 
 
-Daha fazla bilgi için bkz: [kuşkulu etkinliklerle çalışma](working-with-suspicious-activities.md) ve [Azure ATP şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md).
+Daha fazla bilgi için [kuşkulu etkinliklerle çalışma](working-with-suspicious-activities.md) ve [Azure ATP şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md).
 
 ## <a name="whats-next"></a>Sırada ne var?
 
--   Azure ATP ağınıza nasıl uyum sağladığı hakkında daha fazla bilgi için: [Azure ATP mimarisi](atp-architecture.md)
+-   Azure ATP ağınıza nasıl uyguladığı hakkında daha fazla bilgi: [Azure ATP mimarisi](atp-architecture.md)
 
 -   ATP dağıtımına başlamak için: [ATP yükleyin](install-atp-step1.md)
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [Azure ATP sık sorulan sorular](atp-technical-faq.md)
 - [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

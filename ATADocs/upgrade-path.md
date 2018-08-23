@@ -2,10 +2,10 @@
 title: Advanced Threat Analytics önerilen yükseltme yolu | Microsoft Docs
 description: Advanced Threat Analytics (ATA) sürümünüzü yükseltme yönergeleri sağlar.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/15/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 52d500bfb61818b9cc1785382f92c7d3b4ca3501
-ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
+ms.openlocfilehash: 7dfec797a25884ba9115d6ef6ab3a0045f9a2797
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39064160"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734805"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -46,7 +46,7 @@ Bu makale kullanılabilir Advanced Threat Analytics sürümleri ve ATA hangi sü
 
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

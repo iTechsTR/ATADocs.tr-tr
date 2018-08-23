@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/23/2018
+ms.date: 8/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 498d1b4d14db079583da1999bfb68a5648111362
-ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
+ms.openlocfilehash: 7018fb46a9d9da326ba999aff34a5ac2de6b860c
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39227147"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734731"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -26,17 +26,17 @@ ms.locfileid: "39227147"
 
 # <a name="azure-atp-readiness-guide"></a>Azure ATP hazırlık Kılavuzu
 
-Bu makalede, Azure Advanced Threat Analytics ile çalışmaya başlamanıza yardımcı olan kaynakların listesini sağlayan bir hazırlık yol haritası sağlar. 
+Bu makale, Azure Gelişmiş tehdit koruması ile çalışmaya başlama yardımcı kaynakların bir listesini sağlayan bir hazırlık yol haritası sağlar. 
 
 ## <a name="understanding-azure-atp"></a>Azure ATP anlama
 
-Azure Gelişmiş tehdit Koruması (ATP), kuruluşunuz birden fazla Gelişmiş hedef siber saldırı ve içeriden gelen tehditleri türlerinden korunmasına yardımcı olan bir bulut hizmetidir. Azure ATP hakkında daha fazla bilgi edinmek için aşağıdaki kaynakları kullanın: 
+Azure Gelişmiş tehdit Koruması (ATP), tanımlamak ve kuruluşunuz birden fazla Gelişmiş hedef siber saldırı ve içeriden gelen tehditleri türlerinden korunmasına yardımcı olan bir bulut hizmetidir. Azure ATP hakkında daha fazla bilgi edinmek için aşağıdaki kaynakları kullanın: 
 - [Azure ATP genel bakış](what-is-atp.md)
 - [Azure ATP tanıtım videosunu - tam](https://www.youtube.com/watch?v=KX-xpFc0sBw) 
 
 ## <a name="deployment-decisions"></a>Dağıtım kararları
 
-Azure ATP Azure ve bir etki alanı denetleyicisi veya adanmış sunuculara yüklenebilir algılayıcılar bulunan bir bulut hizmeti içerir. Azure ATP çalışır duruma geçmeden önce dağıtımınızı sensörlerden daha iyi karşılayacak ne tür seçmek önemlidir.<br>Fiziksel sunucuları kullanıyorsanız, kapasite planlamanız gerekir. Boyutlandırma aracı, algılayıcılar için alan ayırmak için Yardım alabilirsiniz: 
+Azure ATP Azure ve bir etki alanı denetleyicisine yüklenebilir tümleşik algılayıcı veya tek başına algılayıcı adanmış sunuculara bulunan bir bulut hizmeti içerir. Azure ATP çalışır duruma geçmeden önce en iyi dağıtım ve ihtiyaçlarınıza uyacak sensörlerden türünü seçmek önemlidir. Azure ATP tümleşik algılayıcılar, Gelişmiş güvenlik, operasyonel maliyetleri ve daha kolay dağıtım sağlar. Azure ATP tek başına algılayıcı, fiziksel donanım, additionl yapılandırma adımları ve yoğun işlem maliyetlerini gerektirir. <br>Fiziksel sunucuları kullanıyorsanız, kapasite planlaması çok önemlidir. Boyutlandırma aracı, algılayıcılar için alan ayırmak için Yardım alabilirsiniz: 
 - [Azure ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool) -Azure ATP izler trafik miktarını koleksiyonunu boyutlandırma aracı otomatikleştirir. Otomatik olarak desteklenebilirliği ve algılayıcılar için kaynak öneriler sağlar. 
 - [ATA kapasite planlama Kılavuzu](atp-capacity-planning.md)
 
@@ -49,14 +49,14 @@ Bu kaynakları Azure ATP ' ayarlayın, Active Directory'ye bağlanın, algılay�
 
 ## <a name="azure-atp-settings"></a>Azure ATP ayarları
 
-Çalışma alanını oluşturan Azure ATP temel gerekli ayarlarında yapılandırılır. Ancak, SIEM tümleştirmesi gibi ortamınız için daha doğru algılama yapmak ve denetim ayarlarını Azure ATP ince ayar yapmak için yapılandırabileceğiniz çeşitli diğer ayarları vardır. 
+Çalışma alanını oluşturan ATA'daki gereken temel ayarları yapılandırılır. Ancak, SIEM tümleştirmesi gibi ortamınız için daha doğru algılama yapmak ve denetim ayarlarını Azure ATP ince ayar yapmak için yapılandırabileceğiniz birçok ek ayarlar vardır. 
 
 - [Azure ATP genel belgeler](what-is-atp.md)
-- [Denetim ayarları](https://blogs.technet.microsoft.com/positivesecurity/2017/08/18/ata-auditing-auditpol-advanced-audit-settings-enforcement-lightweight-gateway-service-discovery/) – önce ve sonra bir ATA dağıtımı, etki alanı denetleyicisi sistem durumu Denetim. 
+- [Denetim ayarları](https://blogs.technet.microsoft.com/positivesecurity/2017/08/18/ata-auditing-auditpol-advanced-audit-settings-enforcement-lightweight-gateway-service-discovery/) – önce ve sonra bir ATP dağıtımı, etki alanı denetleyicisi sistem durumu Denetim. 
 
 ## <a name="work-with-azure-atp"></a>Azure ATP ile çalışma
 
-Azure ATP çalışır duruma geldikten sonra etkinlik zaman çizelgesinde algılanan kuşkulu etkinlikleri görüntüleme olanağınız olacaktır. Azure ATP portalında oturum açtığınızda yönlendirilirsiniz varsayılan giriş sayfasıdır. Varsayılan olarak, tüm kuşkulu etkinliler saldırı zaman çizelgesinde gösterilir. Ayrıca, her etkinliğe atanmış olan önem düzeyini de görebilirsiniz. Daha fazla bilgi sağlayan varlıklarının içinde (bilgisayarlar, cihazlar, kullanıcılar) kendi profili sayfalarını açmak için aşağı indikçe her kuşkulu etkinlik araştırın. Bu kaynakları Azure ATP'nin şüpheli etkinliklerle çalışmanıza yardımcı olur: 
+Azure ATP sonra çalışır durumda ve çalışan, Azure ATP portalı etkinlik zaman çizelgesinde algılanan kuşkulu etkinlikleri görüntüleyin. Etkinlik zaman çizelgesi varsayılan giriş Azure ATP portalında oturum açtıktan sonra sayfasıdır. Varsayılan olarak, tüm kuşkulu etkinliler saldırı zaman çizelgesinde gösterilir. Ayrıca, her etkinliğe atanmış olan önem düzeyini de görebilirsiniz. Her kuşkulu etkinlik, varlıklar (bilgisayarlar, cihazlar, kullanıcılar) kendi profil sayfaları hakkında daha fazla bilgi açmak için araştırıp bulma tarafından araştırın. Bu kaynakları Azure ATP'nin kuşkulu etkinliklerle çalışma yardımcı olur: 
 
 - [Azure ATP şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md) önceliklendirmenize ve sonraki adımlar, Azure ATP algılamalar ile bilgi edinin.
 - [Grupları hassas olarak etiket](sensitive-accounts.md) kimlik bilgisi ifşa hassas güvenlik grupları üzerinde görünürlük elde edin.
@@ -77,7 +77,7 @@ Kanal 9: [Microsoft Güvenlik Channel 9 sayfası](https://channel9.msdn.com/Show
 
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Hassas hesaplar ile çalışma](sensitive-accounts.md)
 - [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

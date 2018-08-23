@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/05/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8264799f3aad2fb27287f56513458f34a3a7b0c6
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: a6cb3ca9b4f9498caa0810cec129c24b0f2e587b
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567653"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734766"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -28,20 +28,17 @@ Azure Gelişmiş tehdit koruması mimarisi:
 
 ![Azure ATP mimarisi topoloji diyagramı](media/atp-architecture-topology.png)
 
-Azure ATP fiziksel veya sanal anahtarlar kullanan bir Azure ATP tek başına algılayıcı için bağlantı noktası yansıtma yararlanarak etki alanı denetleyicisi ağ trafiğinizi izler. Azure ATP algılayıcı doğrudan etki alanı denetleyicilerinize dağıtırsanız bağlantı noktası yansıtma için gereksinimini ortadan kaldırır. Ayrıca, Azure ATP (doğrudan etki alanı denetleyicilerinizden veya bir SIEM sunucusundan iletilen) Windows olaylarını da kullanabilir ve saldırı ve tehdit verilerini analiz edin. Azure ATP Azure ATP tek başına algılayıcı ve Azure ATP algılayıcısını gateway'den ayrıştırılmış trafiği alır. Daha sonra ağınız hakkında bilgi edinmek, anomali algılamayı etkinleştirmek ve şüpheli etkinliklerde sizi uyarmak için profil oluşturma işlemini yapar, belirlenimci algılama çalıştırır, makine öğrenimi ve davranışsal algoritmaları çalıştırır.
+Azure ATP fiziksel veya sanal anahtarlar kullanan bir Azure ATP tek başına algılayıcı için bağlantı noktası yansıtma yararlanarak etki alanı denetleyicisi ağ trafiğinizi izler. Azure ATP algılayıcı doğrudan etki alanı denetleyicilerinize dağıtırsanız bağlantı noktası yansıtma için gereksinimini ortadan kaldırır. Ayrıca, Azure ATP (doğrudan etki alanı denetleyicilerinizden veya bir SIEM sunucusundan iletilen) Windows olaylarını da kullanabilir ve saldırı ve tehdit verilerini analiz edin. Azure ATP, Azure ATP algılayıcısını ve Azure ATP tek başına algılayıcı gateway'den ayrıştırılmış trafiği alır. Azure ATP daha sonra profil oluşturma işlemini yapar, belirlenimci algılama çalıştırır ve makine öğrenimi ve davranış algoritmalarını ağınız hakkında bilgi edinin, anormallikleri algılayabilmek ve kuşkulu etkinliklerde sizi uyarabilmek için çalışır.
 
-Bu bölümde ağ akışı ve olay yakalama açıklanmıştır ve ATP'ın şu temel bileşenlerinin işlevleri ayrıntılı açıklanmıştır: (Bu tek başına Azure ATP algılayıcısını aynı çekirdek işlevlere sahiptir) Azure ATP algılayıcısını, Azure ATP tek başına algılayıcı ve Azure ATP bulut hizmeti. 
+Bu bölümde ağ akışı ve olay yakalama açıklanmıştır ve ATP'ın şu temel bileşenlerinin işlevleri ayrıntılı açıklanmıştır: (Bu Azure ATP algılayıcısını ile aynı çekirdek işlevlere sahiptir, ancak gerektirir, Azure ATP tek başına algılayıcı, Azure ATP algılayıcısı Ek donanım, bağlantı noktası yansıtma, yapılandırma ve olay izleme için Windows (tabanlı ETW) algılamalar desteklemez) ve Azure ATP bulut hizmeti. 
 
-Doğrudan etki alanı denetleyicisine yüklendiğinde, algılayıcı doğrudan etki alanı denetleyicisinden gerekli olay günlüklerini erişir. Bu günlükler ve ağ trafiğini algılayıcı tarafından ayrıştırıldıktan sonra Azure ATP bu ayrıştırılmış bilgiler Azure ATP hizmeti (değil tüm günlükler) gönderir.
+ATP algılayıcı doğrudan etki alanı denetleyicileri üzerinde yüklüyse, doğrudan etki alanı denetleyicisinden gerekli olay günlüklerini erişir. Bu günlükler ve ağ trafiğini algılayıcı tarafından ayrıştırıldıktan sonra Azure ATP bu ayrıştırılmış bilgiler Azure ATP hizmeti (değil tüm günlükler) gönderir.
 
 ## <a name="azure-atp-components"></a>Azure ATP bileşenleri
 Azure ATP aşağıdaki bileşenlerden oluşur:
 
 -   **Azure ATP çalışma alanı Yönetim Portalı** <br>
-Azure ATP çalışma alanı yönetim portalında çalışma alanlarını oluşturmanıza olanak sağlar ve diğer Microsoft Hizmetleri ile tümleştirme sağlar.
-
-> [!NOTE]
-> Yalnızca tek bir Active Directory ormanı algılayıcılardan tek bir çalışma alanına bağlanabilir.
+Azure ATP çalışma alanı Yönetim Portalı, oluşturma ve çalışma alanınızı yönetme sağlar ve diğer Microsoft Hizmetleri ile tümleştirme sağlar.
 
 -   **Azure ATP çalışma alanı portalı** <br>
 Azure ATP çalışma alanı portalı ATP algılayıcı ve tek başına algılayıcı verilerini alır. İzler, yönetir ve ortamınızdaki tehditlere araştırır.
@@ -50,30 +47,28 @@ Azure ATP çalışma alanı portalı ATP algılayıcı ve tek başına algılay�
 Azure ATP algılayıcı doğrudan etki alanı denetleyicilerinize yüklenir ve ayrılmış bir sunucuya veya bağlantı noktası yansıtmaya gerek kalmadan trafiğini doğrudan izler. 
 
 -   **Azure ATP tek başına algılayıcı**<br>
-Azure ATP tek başına algılayıcı bağlantı noktası yansıtmayı ya da ağ TAP'ı kullanarak etki alanı denetleyicilerinizden gelen trafiği izleyen ayrılmış bir sunucuya yüklenir. Azure ATP algılayıcısını için bir alternatiftir.
+Azure ATP tek başına algılayıcı bağlantı noktası yansıtmayı ya da ağ TAP'ı kullanarak etki alanı denetleyicilerinizden gelen trafiği izleyen ayrılmış bir sunucuya yüklenir. İçin ek donanım, bağlantı noktası yansıtma ve yapılandırma gerektiren Azure ATP algılayıcısını bir alternatiftir. Azure ATP tek başına algılayıcı ATP algılayıcı tarafından desteklenen olay izleme için Windows (tabanlı ETW) algılamalar desteklemez. 
 
 ## <a name="deployment-options"></a>Dağıtım seçenekleri
 Azure ATP algılayıcı aşağıdaki birleşimini kullanarak dağıtabilirsiniz:
 
 -   **Yalnızca Azure ATP algılayıcı kullanma**<br>
-Azure ATP dağıtımınız yalnızca Azure ATP algılayıcı içerebilir: Azure ATP algılayıcı dağıtılan her etki alanı denetleyicisi ve ek sunucu veya bağlantı noktası yansıtma yapılandırması gereklidir.
+Azure ATP dağıtımınız yalnızca Azure ATP algılayıcı içerebilir: Azure ATP algılayıcı doğrudan her etki alanı denetleyicisi ve ek sunucu dağıtılır veya bağlantı noktası yansıtma yapılandırması gereklidir.
 
 -   **Azure ATP tek başına algılayıcı kullanma** <br>
 Azure ATP dağıtımınız yalnızca Azure ATP tek başına algılayıcı, herhangi bir Azure ATP algılayıcı olmadan içerebilir: tüm etki alanı denetleyicileri için bir Azure ATP tek başına algılayıcı bağlantı noktası yansıtmayı etkinleştirmek için yapılandırılması gerekir veya ağ Tap'leri bulunması gerekir.
 
 -   **Azure ATP tek başına algılayıcı hem Azure ATP algılayıcı kullanma**<br>
-Azure ATP dağıtımınız, hem Azure ATP tek başına algılayıcı hem de Azure ATP algılayıcı içerir. Azure ATP algılayıcı, bazı etki alanı denetleyicilerinizin (örneğin, tüm etki alanı denetleyicileri şubelerinizdeki) yüklenir. Aynı zamanda, diğer etki alanı denetleyicileri, Azure ATP tek başına algılayıcı (örneğin, ana veri merkezlerinizdeki daha büyük etki alanı denetleyicileri) tarafından izlenir.
+Azure ATP dağıtımınız, hem Azure ATP tek başına algılayıcı hem de Azure ATP algılayıcı içerir. Azure ATP algılayıcı, bazı etki alanı denetleyicilerinizin (örneğin, tüm etki alanı denetleyicileri şubelerinizdeki) yüklenir. Azure ATP tek başına algılayıcı (örneğin, ana veri merkezlerinizdeki daha büyük etki alanı denetleyicileri. tarafından izlenen aynı zamanda, diğer etki alanı denetleyicileri 
 
 
-### <a name="azure-atp-workspace-management-portal"></a>Azure ATP çalışma alanı Yönetim Portalı
+### <a name="azure-atp-management-portal"></a>Azure ATP Yönetim Portalı
 
-Azure ATP çalışma alanı Yönetim Portalı ile yapabilecekleriniz:
+Azure ATP Yönetim Portalı ile yapabilecekleriniz:
 
--   Oluşturma ve Azure ATP çalışma alanlarını yönetme
+-   Oluşturma ve Azure ATP çalışma alanınızı yönetme
 
 -   Diğer Microsoft Güvenlik Hizmetleri ile tümleştirme
-
-Ana çalışma alanınızı ayarlama **birincil**. Bir çalışma alanı birincil olarak etkileri tümleştirmeleri - ayarlama, yalnızca Azure ATP Windows Defender ATP ile birincil çalışma alanınız için tümleştirebilirsiniz. 
 
 > [!NOTE]
 > - Azure ATP, şu anda yalnızca bir çalışma alanı oluşturmayı destekler. Bir çalışma alanı sildikten sonra bunu yeniden etkinleştirmek için desteğe başvurabilirsiniz. En fazla üç silinmiş çalışma olabilir. Kaydedilmiş, silinen çalışma alanlarının sayısını artırmak için Azure ATP Hizmetleri ile görüşün.
@@ -99,20 +94,16 @@ Azure ATP çalışma alanı, aşağıdaki Azure ATP işlevselliği yönetmenize 
 |Varlık Alıcısı|Tüm Azure ATP algılayıcı ve Azure ATP tek başına algılayıcı varlık yığınlarını alır.|
 |Ağ Etkinliği İşlemcisi|Alınan her yığın içindeki tüm ağ etkinliklerini işler. Örneğin, farklı bilgisayarlardan gerçekleştirilmiş olabilecek çeşitli Kerberos adımları arasında eşleştirme yapar|
 |Varlık Profili Oluşturucu|Trafiğe ve olaylara göre tüm Benzersiz Varlıkların profilini oluşturur. Örneğin, Azure ATP oturum açan her kullanıcı profili için bilgisayar listesini güncelleştirir.|
-|Azure ATP çalışma alanı Yönetim Portalı|Azure ATP çalışma alanlarınızı yönetir.|
+|Azure ATP Yönetim Portalı|Azure ATP çalışma alanınızı yönetir.|
 |Azure ATP çalışma alanı portalı|Azure ATP çalışma alanı, Azure ATP yapılandırma ve Azure ATP tarafından ağınızda algılanan kuşkulu etkinlikleri izlemek için kullanılır. Azure ATP çalışma alanı, üzerinde Azure ATP algılayıcısını bağımlı değildir ve hatta Azure ATP algılayıcı hizmeti durdurulduğunda çalıştırır. |
 |Algılayıcılar|Algılayıcılar ağınızdaki kuşkulu etkinlikleri ve anormal kullanıcı davranışlarını bulmak için makine öğrenme altyapılarını ve belirlenimci kuralları kullanır.|
-
-Ağınızda dağıtmayı, kaç Azure ATP çalışma alanları karar verirken aşağıdaki ölçütleri göz önünde bulundurun:
-
--   Bir Azure ATP çalışma alanı, tek bir Active Directory ormanı izleyebilirsiniz. Birden fazla Active Directory ormanınız varsa, en az bir Azure ATP bulut hizmetinin her Active Directory ormanı gerekir.
 
 
 ## <a name="azure-atp-sensor-and-azure-atp-standalone-sensor"></a>Azure ATP algılayıcısını ve Azure ATP tek başına algılayıcı
 
 **Azure ATP algılayıcısını** ve **Azure ATP tek başına algılayıcı** aynı çekirdek işlevlere sahiptir:
 
--   Etki alanı denetleyicisi ağ trafiğini yakalayıp denetleyin. Azure ATP tek başına algılayıcı için bağlantı noktası yansıtılmış trafik ve Azure ATP algılayıcı etki alanı denetleyicisinin yerel trafiği budur. 
+-   Etki alanı denetleyicisi ağ trafiğini yakalayıp denetleyin. Azure ATP algılayıcı etki alanı denetleyicisinin yerel trafiği ve Azure ATP tek başına algılayıcı için bağlantı noktası yansıtılmış trafik budur. 
 
 -   Doğrudan (ATP algılayıcı için) etki alanı denetleyicilerinden veya SIEM ve Syslog sunucularından (ATP tek başına algılayıcı için) Windows olayları alma
 
@@ -124,7 +115,7 @@ Ağınızda dağıtmayı, kaç Azure ATP çalışma alanları karar verirken aş
 
 -   Azure ATP bulut hizmetine ilgili veri aktarımı
 
--   Tek bir Azure ATP tek başına algılayıcı birden çok etki alanı denetleyicilerini izlemek veya bir Azure ATP algılayıcısını tek etki alanı denetleyicisi izleyin.
+-   Azure ATP algılayıcısını tek etki alanı denetleyicisi izleyin veya tek bir Azure ATP tek başına algılayıcı birden çok etki alanı denetleyicilerinden izleyin.
 
 Varsayılan olarak, en fazla 100 algılayıcınız Azure ATP destekler. Daha fazla yüklemek istiyorsanız, Azure ATP desteğe başvurun.
 
@@ -141,9 +132,9 @@ Azure ATP tek başına algılayıcı ağınızdan ağ trafiğini ve Windows olay
 
 ## <a name="azure-atp-sensor-features"></a>Azure ATP algılayıcısı özellikleri
 
-Aşağıdaki özellikler, bir Azure ATP tek başına algılayıcı veya bir Azure ATP algılayıcısını çalıştıran bağlı olarak farklı şekilde çalışır.
+Aşağıdaki özellikler, bir Azure ATP algılayıcısını veya bir Azure ATP tek başına algılayıcı çalıştıran bağlı olarak farklı şekilde çalışır.
 
--   Azure ATP algılayıcısını olay iletmeyi yapılandırmaya gerek kalmadan olayları yerel olarak okuyabilir.
+-   Azure ATP algılayıcısını satın alın ve ek donanım Bakımı veya ATP ile tek başına algılayıcı gerekli olay iletmeyi yapılandırmaya gerek kalmadan olayları yerel olarak okur. Azure ATP algılayıcısını olay iş parçacığı için Windows (birden çok algılama için günlük bilgileri sağlayan ETW) da destekler. ETW dayalı algılamalar şunları içerir şüpheli çoğaltma isteği ve şüpheli etki alanı denetleyicisi yükseltmesi, her ikisi de olası DCShadow saldırılar ve ATP tek başına algılayıcı tarafından desteklenmez.  
 
 -   **Etki alanı eşitleyici adayı**<br>
 Etki alanı Eşitleyici adayı, belirli bir Active Directory etki alanından tüm varlıkların önceden tedbirli olarak eşitlenmesinden sorumludur (etki alanı denetleyicileri tarafından kendileri çoğaltma için kullanılan mekanizmaya benzer). Bir algılayıcı adaylar listesinden, etki alanı Eşitleyici görevi görmesi için rastgele seçilir. <br><br>
@@ -179,7 +170,7 @@ Active Directory daha fazla bilgi işlem gücüne gerekiyorsa, Azure ATP algıla
 Aşağıdaki bileşenler, Azure ATP ile çalışmak için ayarlandığından emin olun.
 
 ### <a name="port-mirroring"></a>Bağlantı noktası yansıtma
-Azure ATP tek başına algılayıcı kullanıyorsanız, bağlantı noktası yansıtma izlenen ve fiziksel veya sanal anahtarlar kullanan hedef olarak Azure ATP tek başına algılayıcı ayarlayın etki alanı denetleyicileri ayarlamanız gerekir. Başka bir seçenek de ağ TAP’ları kullanmaktır. Azure ATP bazıları çalışır ancak izlenen tüm etki alanı denetleyicilerinizin değil, ancak algılamalar daha az etkili.
+Azure ATP tek başına algılayıcı kullanıyorsanız, izlenen etki alanı denetleyicileri ayarlama kümesi yansıtma bağlantı noktası gereklidir. Azure ATP tek başına algılayıcı fiziksel veya sanal anahtarlar kullanan hedef olarak ayarlayın. Başka bir seçenek de ağ TAP’ları kullanmaktır. Azure ATP bazıları çalışır ancak izlenen tüm etki alanı denetleyicilerinizin değil, ancak algılamalar daha az etkili.
 
 Bağlantı noktası yansıtmanın tüm etki alanı denetleyicisi ağ trafiğinin tek başına Azure ATP algılayıcısını yansıtsa da, bu trafiğin yalnızca küçük bir yüzdesine yapılır ve ardından gönderilen, sıkıştırılmış, Azure ATP için analiz için bulut hizmeti.
 
@@ -187,9 +178,12 @@ Etki alanı denetleyicileriniz ve Azure ATP tek başına algılayıcı fiziksel 
 
 
 ### <a name="events"></a>Olaylar
-Azure ATP Pass--Hash, deneme yanılma, gizli gruplarda, şüpheli Hizmetleri oluşturulmasını Honey Token değişiklikler değişiklik Azure ATP algılanmasını iyileştirmek için aşağıdaki Windows olaylarına ihtiyacı vardır: 4776, 4732, 4733, 4728, 4729, 4756, 4757'yi ve 7045. Bunlar ya da otomatik olarak Azure ATP algılayıcı tarafından okunabilir veya Azure ATP algılayıcısını dağıtılmamış olması durumunda, bu iki yoldan biriyle Azure ATP tek başına algılayıcı Azure ATP tek başına algılayıcı SIEM olaylarını dinleyecek şekilde yapılandırarak veya iletilebilir[Windows Olay iletme özelliğini yapılandırma](configure-event-forwarding.md).
+Azure ATP Pass--Hash şüpheli olan algılama kapsamını artırmak için etkinlik türleri aşağıdaki günlükleri analiz etmek için Azure ATP gereksinimlerini saldırı, kimlik doğrulama hataları, gizli Grup değişiklikleri, şüpheli Hizmetleri oluşturulmasını ve Honey token Windows olayları: 4776,4732,4733,4728,4729,4756,4757 ve 7045. Bu olayları otomatik olarak doğru Gelişmiş Denetim İlkesi ayarları ile Azure ATP algılayıcı tarafından okunur. Azure ATP tek başına algılayıcı dağıtıldığı durumlarda, olay günlüklerini iki yoldan biriyle tek başına algılayıcı iletilebilir; SIEM olaylarını, dinleyecek şekilde yapılandırarak veya tek başına Azure ATP algılayıcısını yapılandırma [yapılandırma Windows Olay iletme'yi](configure-event-forwarding.md). 
 
--   Azure ATP tek başına algılayıcı SIEM olaylarını dinleyecek şekilde yapılandırma <br>SIEM'İNİZE belirli Windows olaylarını ATP'ye iletecek şekilde yapılandırın. Azure ATP bir dizi SIEM satıcısını destekler. Daha fazla bilgi için [olay iletmeyi yapılandırmaya](configure-event-forwarding.md).
+> [!NOTE]
+> - Windows Olay iletme tek başına algılayıcı için ETW (olay izleme için Windows) desteklemez. Şüpheli çoğaltma isteği hem şüpheli etki alanı denetleyicisi yükseltme ETW dayalı algılamalar şunları içerir, hem de olası DCShadow saldırılara karşı.  
+
+-   Azure ATP tek başına algılayıcı SIEM olaylarını dinleyecek şekilde yapılandırma <br>SIEM'İNİZE belirli Windows olaylarını ATP'ye iletecek şekilde yapılandırın. Azure ATP bir dizi SIEM satıcısını destekler. Daha fazla bilgi için [yapılandırma Windows Olay iletme'yi](configure-event-forwarding.md).
 
 -   Windows Olay İletme’yi yapılandırma<br>Azure ATP olaylarınızı almasının başka bir etki alanı denetleyicilerinizi Windows olayları 4776, 4732, 4733, 4728, 4729, 4756, 4757'yi ve 7045, Azure ATP tek başına algılayıcı için iletecek şekilde yapılandırarak yoludur. Bu, bir SIEM yoksa veya SIEM'iniz şu anda ATP tarafından desteklenmiyorsa özellikle yararlı olur. Windows Olay iletme ATP içinde hakkında daha fazla bilgi için bkz. [yapılandırma Windows Olay iletme'yi](configure-event-forwarding.md). Bu yalnızca - Azure ATP algılayıcısını için fiziksel Azure ATP tek başına algılayıcı için geçerlidir.
 

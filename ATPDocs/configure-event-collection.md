@@ -1,11 +1,11 @@
 ---
-title: Azure Gelişmiş tehdit koruması yükleme | Microsoft Docs
-description: Bu adım ATP yükleme, veri kaynaklarını yapılandırın.
+title: Azure Gelişmiş tehdit Koruması'nı yükleme | Microsoft Docs
+description: ATP yükleme Bu adımda, veri kaynaklarını yapılandıracaksınız.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/28/2018
+ms.date: 8/15/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,58 +13,56 @@ ms.technology: ''
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2c2a8e6d70d937c559c110a18feec4afc75271e9
-ms.sourcegitcommit: 45d0108d0cbf8fe7550d13486d3d9c06c1e58506
+ms.openlocfilehash: 8f52a8e5851cee9fc0ff15d97cd39e98695f9a83
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30213991"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734720"
 ---
-*Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
+*İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 
-# <a name="install-azure-atp"></a>Azure ATP yükleyin
+# <a name="configure-event-collection"></a>Olay koleksiyonunu yapılandırma
 
-## <a name="configure-event-collection"></a>Olay koleksiyonunu yapılandırma
-
-Algılama yeteneklerini geliştirmek için aşağıdaki Windows olaylarını Azure ATP gerekir: 4776, 4732, 4733, 4728, 4729, 4756, 4757 ve 7045. Bu da otomatik olarak Azure ATP algılayıcı tarafından okunabilen veya Azure ATP algılayıcı dağıtılmaz durumunda bunu iki yoldan biriyle Azure ATP tek başına algılayıcı Azure ATP tek başına algılayıcı SIEM olaylarını dinleyecek şekilde yapılandırarak veya iletilebilir[Windows Olay iletme özelliğini yapılandırma](configure-event-forwarding.md).
+Azure ATP algılama yeteneklerini artırmak için aşağıdaki Windows olaylarına ihtiyacı vardır: 4776, 4732, 4733, 4728, 4729, 4756, 4757'yi ve 7045. Bunlar ya da otomatik olarak Azure ATP algılayıcı tarafından okunabilir veya Azure ATP algılayıcısını dağıtılmamış olması durumunda, bu iki yoldan biriyle Azure ATP tek başına algılayıcı Azure ATP tek başına algılayıcı SIEM olaylarını dinleyecek şekilde yapılandırarak veya iletilebilir[Windows Olay iletme özelliğini yapılandırma](configure-event-forwarding.md).
 
 > [!NOTE]
-> Etki alanı denetleyicileri gerekli olayları kaydetmek için düzgün yapılandırıldığından emin olmak için Olay toplama yapılandırmadan önce betik denetim ATA çalıştırmak önemlidir. 
+> Etki alanı denetleyicilerinde gerekli olayları kaydetmek için düzgün yapılandırıldığından emin olmak için olay koleksiyonu yapılandırmadan önce betik denetim ATA çalıştırmak önemlidir. 
 
-Toplama ve ve giden ağ trafiğini çözümlemenin yanı sıra etki alanı denetleyicilerinden, Azure ATP algılamaların daha fazla geliştirmek için Windows olayları kullanabilirsiniz. Olay 4776 çeşitli algılama ve olayları 4732, 4733, 4728, 4729, 4756, 4757 ve hassas grubu değişiklik ve hizmet oluşturma geliştirerek algılanması için 7045 geliştirir NTLM kullanır. Bu, SIEM sistemlerinizden alınabileceği gibi etki alanı denetleyicinizden Windows Olay İletme’yi ayarlayarak da alınabilir. Toplanan olayları Azure ATP etki alanı denetleyicisi ağ trafiğinin kullanılabilir olmayan ek bilgi sağlar.
+Azure ATP toplama ve analiz etme ve ağ trafiğini yanı sıra etki alanı denetleyicilerinden Windows olaylarını algılamaları geliştirebilir kullanabilirsiniz. Çeşitli algılamalar ve olay 4732, 4733, 4728, 4729, 4756, 4757'yi ve hizmet oluşturma ve gizli Grup değişikliklerini algılamayı için 7045 geliştiren NTLM için olay 4776'yı kullanır. Bu, SIEM sistemlerinizden alınabileceği gibi etki alanı denetleyicinizden Windows Olay İletme’yi ayarlayarak da alınabilir. Toplanan olaylar, etki alanı denetleyicisi ağ trafiğinin kullanılabilir olmayan ek bilgilerle Azure ATP sağlar.
 
-### <a name="siemsyslog"></a>SIEM/Syslog
-Azure ATP'ın Syslog sunucusundan verileri kullanmak aşağıdaki adımları gerçekleştirmeniz gerekir:
+## <a name="siemsyslog"></a>SIEM/Syslog
+Azure ATP'ın bir Syslog sunucusundan verileri kullanabilmesi için almak aşağıdaki adımları tamamlamanız gerekir:
 
--   Dinlemek ve SIEM/Syslog sunucusundan iletilen olayları kabul etmek üzere Azure ATP algılayıcı sunucularınızı yapılandırın.
+-   Azure ATP algılayıcısı sunucularınızı dinlemek ve SIEM/Syslog sunucusundan iletilen olayları kabul edecek şekilde yapılandırın.
 
  > [!NOTE]
- > Azure ATP yalnızca IPv4 ve IPv6 değil üzerinde dinler. 
+ > Azure ATP yalnızca IPv4 ve IPv6 dinlemez dinler. 
 
--   SIEM/Syslog sunucunuzu belirli olayları Azure ATP algılayıcı iletecek şekilde yapılandırın.
+-   SIEM/Syslog sunucunuzu belirli olayları Azure ATP algılayıcısını iletecek şekilde yapılandırın.
 
 > [!IMPORTANT]
-> -   Azure ATP algılayıcı tüm Syslog verilere iletmeyin.
+> -   Azure ATP algılayıcısını tüm Syslog verileri iletmeyin.
 > -   Azure ATP SIEM/Syslog sunucusundan UDP trafiğini destekler.
 
 Belirli olayları başka bir sunucuya iletme işlemini yapılandırma hakkında bilgi edinmek için, SIEM/Syslog sunucunuzun ürün belgelerine bakın. 
 
 > [!NOTE]
->SIEM/Syslog sunucusunu kullanmazsanız, toplanan ve ATP tarafından analiz için tüm gerekli olayları iletmek için Windows etki alanı denetleyicilerinizi yapılandırabilirsiniz.
+>SIEM/Syslog sunucusunu kullanmazsanız, Windows etki alanı denetleyicilerinizi toplanacağı ve ATP tarafından analiz için gerekli tüm olayları iletecek şekilde yapılandırabilirsiniz.
 
-### <a name="configuring-the-azure-atp-sensor-to-listen-for-siem-events"></a>Azure ATP algılayıcı SIEM olaylarını dinleyecek şekilde yapılandırma
+## <a name="configuring-the-azure-atp-sensor-to-listen-for-siem-events"></a>Azure ATP algılayıcısını SIEM olaylarını dinleyecek şekilde yapılandırma
 
-1.  Azure ATP yapılandırmasında altında **veri kaynakları** tıklatın **SIEM** ve Aç **Syslog** tıklatıp **kaydetmek**.
+1.  Azure ATP yapılandırma altında **veri kaynakları** tıklayın **SIEM** ve açma **Syslog** tıklatıp **Kaydet**.
 
     ![Syslog dinleyicisi UDP’yi etkinleştirme görüntüsü](media/atp-siem-config.png)
 
-2.  SIEM veya Syslog sunucunuzu gerekli tüm olayları Azure ATP algılayıcılar birinin IP adresine iletecek şekilde yapılandırın. SIEM çevrimiçi yardımına veya teknik destek seçenekleri için her SIEM sunucusuna özgü belirli biçimlendirme yönergeleriyle SIEM sunucunuzu yapılandırma hakkında ek bilgi için bkz.
+2.  SIEM veya Syslog sunucunuzu gerekli tüm olayları Azure ATP algılayıcı birinin IP adresine iletecek şekilde yapılandırın. SIEM çevrimiçi yardımına veya teknik destek seçenekleri için her SIEM sunucusuna özgü belirli biçimlendirme yönergeleriyle SIEM sunucunuzu yapılandırma hakkında ek bilgi için bkz.
 
-Azure ATP aşağıdaki biçimlerde SIEM olaylarını destekler:  
+Azure ATP SIEM olaylarını aşağıdaki biçimlerde destekler:  
 
-### <a name="rsa-security-analytics"></a>RSA Güvenlik Analizi
+## <a name="rsa-security-analytics"></a>RSA Güvenlik Analizi
 &lt;Syslog Üst Bilgisi&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
 
 -   Syslog üst bilgisi isteğe bağlıdır.
@@ -75,7 +73,7 @@ Azure ATP aşağıdaki biçimlerde SIEM olaylarını destekler:
 
     1.  RsaSA sabiti (gösterilmesi gerekir).
 
-    2.  Gerçek olayın zaman damgası (sıem'e ulaşma veya ATP için gönderilme zaman damgası olmadığından emin olun). Tercihen milisaniye hassaslığında bu önemlidir.
+    2.  Gerçek olayın zaman damgası (sıem'e ulaşma veya ATP'ye gönderilme zaman damgası olmadığından emin olun). Tercihen milisaniye hassaslığında bu önemlidir.
 
     3.  Windows olay kimliği
 
@@ -93,7 +91,7 @@ Azure ATP aşağıdaki biçimlerde SIEM olaylarını destekler:
 
 -   Bu değerlerin sırası önemlidir ve iletiye başka hiçbir şey eklenmemelidir.
 
-### <a name="hp-arcsight"></a>HP Arcsight
+## <a name="hp-arcsight"></a>HP Arcsight
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Etki alanı denetleyicisi bir hesabın kimlik bilgilerini doğrulamaya çalıştı.|Düşük| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
 
 -   Protokol tanımıyla uyumlu olmalıdır.
@@ -106,7 +104,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Etki
 
     -   externalId = Windows olay kimliği
 
-    -   RT = gerçek olayın zaman damgası (sıem'e ulaşma veya ATP için gönderilme zaman damgası olmadığından emin olun). Tercihen milisaniye hassaslığında bu önemlidir.
+    -   RT = gerçek olayın zaman damgası (sıem'e ulaşma veya ATP'ye gönderilme zaman damgası olmadığından emin olun). Tercihen milisaniye hassaslığında bu önemlidir.
 
     -   cat = Windows olay günlüğü adı
 
@@ -124,7 +122,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Etki
 
     -   “Reason or Error Code” = NTLM sonuç kodu
 
-### <a name="splunk"></a>Splunk
+## <a name="splunk"></a>Splunk
 &lt;Syslog Üst Bilgisi&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
 
 Bilgisayar bir hesabın kimlik bilgilerini doğrulamaya çalıştı.
@@ -151,7 +149,7 @@ Hata Kodu:         0x0
 
     -   SourceName = Windows olay sağlayıcısı adı
 
-    -   TimeGenerated = gerçek olayın zaman damgası (sıem'e ulaşma veya ATP için gönderilme zaman damgası olmadığından emin olun). Biçim, yyyyaaggssddss.ffffff milisaniye hassaslığında, bu önemlidir eşleşmelidir.
+    -   TimeGenerated = gerçek olayın zaman damgası (sıem'e ulaşma veya ATP'ye gönderilme zaman damgası olmadığından emin olun). Biçim, yyyyaaggssddss.ffffff milisaniye hassaslığında, bu önemlidir eşleşmelidir.
 
     -   ComputerName = kaynak ana bilgisayar adı
 
@@ -161,8 +159,8 @@ Hata Kodu:         0x0
 
 -   Anahtar=değer çiftleri için sıra önemli değildir.
 
-### <a name="qradar"></a>QRadar
-QRadar bir aracı üzerinden olay toplamayı sağlar. Veriler bir aracı kullanarak toplanıyorsa, saat biçimi mili saniye verisi olmadan toplanır. Azure ATP mili saniye verisi duyduğundan, QRadar aracısız Windows olay toplamayı kullanacak şekilde ayarlamak gereklidir. Daha fazla bilgi için bkz: [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: MSRPC protokolünü kullanarak aracısız Windows olayları koleksiyonu").
+## <a name="qradar"></a>QRadar
+QRadar bir aracı üzerinden olay toplamayı sağlar. Veriler bir aracı kullanarak toplanıyorsa, saat biçimi mili saniye verisi olmadan toplanır. Azure ATP mili saniye verisi duyduğundan, QRadar aracısız Windows olay toplamayı kullanacak şekilde ayarlanması gerekir. Daha fazla bilgi için [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: MSRPC protokolünü kullanarak aracısız Windows olayları koleksiyonu").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 
@@ -174,7 +172,7 @@ Gerekli alanları şunlardır:
 - Tam etki alanı adı
 - Windows olay kimliği
 
-TimeGenerated olan gerçek olayın zaman damgası (sıem'e ulaşma veya ATP için gönderilme zaman damgası olmadığından emin olun). Biçim, yyyyaaggssddss.ffffff milisaniye hassaslığında, bu önemlidir eşleşmelidir.
+TimeGenerated olan gerçek olayın zaman damgası (sıem'e ulaşma veya ATP'ye gönderilme zaman damgası olmadığından emin olun). Biçim, yyyyaaggssddss.ffffff milisaniye hassaslığında, bu önemlidir eşleşmelidir.
 
 Message, Windows olayından alınan özgün olay metnidir
 
@@ -186,7 +184,7 @@ key=value çiftleri arasında \t bulunduğundan emin olun.
 
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [Azure ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool)
 - [Azure ATP SIEM günlük başvurusu](cef-format-sa.md)
 - [Azure ATP önkoşulları](atp-prerequisites.md)

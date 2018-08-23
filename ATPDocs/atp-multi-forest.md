@@ -2,10 +2,10 @@
 title: Azure Gelişmiş tehdit koruması aktarılacaksa orman desteği | Microsoft Docs
 description: Azure ATP birden çok Active Directory ormanlarında desteği ayarlama yapma.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/20/2018
+ms.date: 8/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a48bf96bd6a71282455d932a35aac23ba4c8193a
-ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
+ms.openlocfilehash: 2a3460c39d6428831cc34231321fff745dbe0701
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39202141"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734734"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -29,14 +29,14 @@ ms.locfileid: "39202141"
 
 ## <a name="step-9--set-up-azure-advanced-threat-protection-multi-forest-support"></a>9. Adım  Azure Gelişmiş tehdit koruması çok ormanlı desteği ayarlayın
 
-Azure ATP ormanlar arasında yeteneği etkinliğini izleme ve profil kullanıcılar sağlayan birden çok ormanlı kuruluşlara destekleyebilir. 
+Azure ATP kuruluşlar arasında tek bir cam bölmeyle ormanlardan etkinliği ve kullanıcı profili kolayca izleme yeteneği sağlayan birden çok ormanlı destekleyebilir. 
 
-Bir kurumsal kuruluş, birden çok Active Directory ormanları - eski altyapılarını Kurumsal birleşmeler ve satın almalar, coğrafi dağıtım ve güvenlik sınırları (kırmızı ormanları) dahil olmak üzere farklı amaçlar için sık kullanılan olabilir. Birden çok ormanı tek bir cam bölmeyle araştırmak ve izlemek için bir oluşturabilmesini sağlayan Azure tüm verilerin tek, birincil çalışma alanına raporlama ATP ile kullanarak koruyabilirsiniz.
+Büyük kuruluşlar genellikle birden çok Active Directory ormanları - eski altyapılarını Kurumsal birleşmeler ve satın almalar, coğrafi dağıtım ve güvenlik sınırları (kırmızı ormanları) dahil olmak üzere farklı amaçlar için sık kullanılan sahiptir. Birden çok ormanı tek bir cam bölmeyle araştırmak ve izlemek için bir oluşturabilmesini sağlayan Azure ATP kullanarak koruyabilirsiniz.
 
 Birden çok Active Directory ormanını desteklemek için aşağıdakileri sağlar:
 -   Görüntüleyebilir ve tek bir cam bölmeyle gelen birden çok orman genelinde kullanıcılar tarafından gerçekleştirilen etkinlikleri araştırın. 
--   Çok ormanlı destek algılama artırır ve Gelişmiş Active Directory Tümleştirmesi ve hesap çözüm sağlayarak hatalı pozitif sonuçları azaltır. 
--   Çoklu foresst destek birden çok çalışma alanı gereksinimini ortadan kaldırır. daha fazla denetim sahibi ve merkezi olarak tek bir Azure ATP izlenen tüm konsol, etki alanı denetleyicilerinizin çalışırken daha kolay dağıtım daha iyi izleme uyarıları sağlar ve Çapraz kuruluş kapsamı için raporlama.
+-   Geliştirilmiş bir algılama ve Gelişmiş Active Directory tümleştirme ve hesap çözüm sağlayarak daha az hatalı pozitif sonuç. 
+-   Daha fazla denetim ve daha kolay dağıtım. Gelişmiş izleme uyarıları ve etki alanı denetleyicilerinizin tümünü tek bir Azure ATP konsoldan izlenen çapraz kuruluş kapsamı için raporlama.
 
 
 ## <a name="how-azure-atp-detects-activities-across-multiple-forests"></a>Nasıl Azure ATP birden çok orman içinde etkinlikleri algılar. 
@@ -48,7 +48,7 @@ Ormanlar arası etkinlikleri algılamak için Azure ATP algılayıcı dahil, kul
 > - Altında Azure ATP konsolunda yapılandırdığınız kullanıcı **Dizin Hizmetleri** tüm ormanlar güvenilir olması gerekir.
 
 
-Üzerinde hangi hiçbir Azure ATP algılayıcı yüklü ormanınız varsa, Azure ATP için yine de bu ormanlardan kaynaklanan etkinlikleri görüntüleyin ve izleyin. Yüklü ATP algılayıcı, tüm bağlı uzak ormanın etki alanı denetleyicileri, kullanıcılar ve makineler çözmek ve bunların her biri için profilleri oluşturmak için sorgulayabilirsiniz. 
+Üzerinde hangi hiçbir Azure ATP algılayıcı yüklü ormanınız varsa, Azure ATP için yine de bu ormanlardan kaynaklanan etkinlikleri görüntüleyin ve izleyin. Yüklü ATP algılayıcı, tüm bağlı uzak ormanın etki alanı denetleyicileri, kullanıcılar, makineleri çözmek ve bunların her biri için profilleri oluşturmak için sorgulayabilirsiniz. 
 
 ## <a name="installation-requirements"></a>Yükleme gereksinimleri 
 
@@ -76,7 +76,7 @@ Azure ATP ormanlarınız eşler, aşağıdaki etkileyen bir işlem kullanır:
 -   Azure ATP algılayıcısını çalışmaya başladıktan sonra uzak Active Directory ormanları sorgular ve kullanıcıları ve profil oluşturma için makine verisi listesini alır.
 -   5 dakikada bir, ağdaki tüm ormanlardaki eşlenecek her ormanda her etki alanındaki bir etki alanı denetleyicisi her Azure ATP algılayıcısını sorgular.
 -   Her Azure ATP algılayıcısını "trustedDomain" Nesne Active Directory'de oturum açma ve güven tür denetimini kullanarak orman eşler.
--   ATP algılayıcısını çapraz orman etkinlik algıladığında, geçici trafiği görebilirsiniz. Böyle bir durumda ATP algılayıcı sipariş alma varlık bilgilerini ilgili etki alanı denetleyicileri bir LDAP sorgusu gönderir. 
+-   ATP algılayıcısını çapraz orman etkinlik algıladığında, geçici trafiği görebilirsiniz. Böyle bir durumda ATP algılayıcı varlık bilgilerini almak için ilgili etki alanı denetleyicileri için bir LDAP sorgusu gönderir. 
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 -   Başka bir ormandaki kaynaklara erişmek için tek bir ormandaki kullanıcıları tarafından gerçekleştirilen etkileşimli oturum açma işlemi Azure ATP Panoda görüntülenmez.
@@ -86,9 +86,9 @@ Azure ATP ormanlarınız eşler, aşağıdaki etkileyen bir işlem kullanır:
 [«8. adım](install-atp-step8-samr.md)
 
 
-## <a name="see-also"></a>Ayrıca bkz:
-- [ATA boyutlandırma aracı](http://aka.ms/aatpsizingtool)
-- [ATA mimarisi](atp-architecture.md)
-- [ATA’yı yükleme](install-atp-step1.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+- [ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool)
+- [ATP mimarisi](atp-architecture.md)
+- [ATP yükleyin](install-atp-step1.md)
 - [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
 
