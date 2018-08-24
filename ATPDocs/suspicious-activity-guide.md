@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4aa58228ea23f58ea37b10f941467e9dc076992f
-ms.sourcegitcommit: f534a318be71b840aecb6a84744d8cd1f251a7aa
+ms.openlocfilehash: f382c5a7625ff29303ad92d05ec703c9ef1d72e3
+ms.sourcegitcommit: 04ec22abdfa571ec0e6e036e809f4e108a5c6f3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41734847"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42709785"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -200,7 +200,7 @@ Bu algılama, ekibi tarafından verilmesinin anahtarı için kullanılan bir Ker
    2.   Azure ATP algılayıcısını bu uyarı bir sanal makine dahil mi? Evet ise, en son kaydedilen durumdan devam mı? Yanıt Evet ise, ardından bu uyarıyı kapatın.
    3.   Yukarıdaki soruların yanıtlanması gerekirse, Hayır, bu, kötü amaçlı varsayılır.
 
-- **Var olmayan hesap**
+- **Var olmayan hesap - yeni** 
    1.   Aşağıdaki sorular sorun:
          - Kullanıcı bir bilinen ve geçerli etki alanı kullanıcısı mıdır? Yanıt Evet ise, uyarı (Yanlış pozitif olduğu)'ni kapatın.
          - Kullanıcının son eklendi? Yanıt Evet ise, ardından uyarıyı kapatın, değişiklik henüz eşitlenmemiş.
@@ -476,7 +476,7 @@ Sahte etki alanı denetleyicisi olarak kaydetmek ağ bir makinede çalışırken
    3. Bilgisayar, Windows Server işletim sistemi (veya Windows/Linux) çalıştırıyor mu? Verileri çoğaltmak için bir sunucu olmayan makine beklenmiyor.
 Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP rozet tıklayın ![Windows Defender ATP rozet](./media/wd-badge.png) makine daha fazla araştırmak için. Windows Defender ATP'de uyarı oluştuğu sırada hangi işlemleri ve uyarılar oluştu görebilirsiniz.
 
-4. Konum görmek için Olay Görüntüleyicisi ' [Dizin Hizmetleri günlüğünde kayıtları Active Directory olayları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Günlük, Active Directory'deki değişiklikleri izlemek için kullanabilirsiniz. Varsayılan olarak, Active Directory yalnızca ancak bu, kritik hata olaylarını kaydeder. uyarı recurrs, daha fazla bilgi için ilgili etki alanı denetleyicisinde bu denetimi etkinleştirin.
+4. Konum görmek için Olay Görüntüleyicisi ' [Dizin Hizmetleri günlüğünde kayıtları Active Directory olayları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Günlük, Active Directory'deki değişiklikleri izlemek için kullanabilirsiniz. Varsayılan olarak, Active Directory yalnızca kritik hata olaylarını kaydeder, ancak bu uyarı almaya devam ederseniz, daha fazla bilgi için ilgili etki alanı denetleyicisinde bu denetime olanak tanıyın.
 
 **Düzelt**
 
@@ -510,7 +510,7 @@ Azure ATP tarafından korunan bir orijinal etki alanı denetleyicisine karşı �
    2.  Bu kaynaklara erişmek için kullanıcıların gerekir?
    3. Bilgisayar, Windows Server işletim sistemi (veya Windows/Linux) çalıştırıyor mu? Verileri çoğaltmak için bir sunucu olmayan makine beklenmiyor.
 Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP rozet tıklayın ![Windows Defender ATP rozet](./media/wd-badge.png) makine daha fazla araştırmak için. Windows Defender ATP'de uyarı oluştuğu sırada hangi işlemleri ve uyarılar oluştu görebilirsiniz.
-1. Konum görmek için Olay Görüntüleyicisi ' [Dizin Hizmetleri günlüğünde kayıtları Active Directory olayları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Günlük, Active Directory'deki değişiklikleri izlemek için kullanabilirsiniz. Varsayılan olarak, Active Directory yalnızca ancak bu, kritik hata olaylarını kaydeder. uyarı recurrs, daha fazla bilgi için ilgili etki alanı denetleyicisinde bu denetimi etkinleştirin.
+1. Konum görmek için Olay Görüntüleyicisi ' [Dizin Hizmetleri günlüğünde kayıtları Active Directory olayları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Günlük, Active Directory'deki değişiklikleri izlemek için kullanabilirsiniz. Varsayılan olarak, Active Directory yalnızca kritik hata olaylarını kaydeder, ancak bu uyarı almaya devam ederseniz, daha fazla bilgi için ilgili etki alanı denetleyicisinde bu denetime olanak tanıyın.
 
 **Düzeltme**
 
@@ -546,7 +546,8 @@ Bir etki alanı denetleyicisine, kuruluşunuzda şüpheli bir hizmet oluşturuld
 
 - Daha az ayrıcalıklı erişimi yalnızca belirli kullanıcılara yeni hizmetleri oluşturma hakkı izin vermek için etki alanı makinelerde uygulayın.
 
-## Şüpheli VPN bağlantısı <a name="suspicious-vpn-detection"></a>
+
+## Şüpheli VPN bağlantısı - yeni <a name="suspicious-vpn-detection"></a>
 
 **Açıklama**
 
