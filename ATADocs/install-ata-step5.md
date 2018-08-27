@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d8a8f5df37422f98f6ea3357c672297395907a8d
-ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
+ms.openlocfilehash: 1c75b9c74e1b53f81b5f957d9e78a8b425b6b28e
+ms.sourcegitcommit: ad83eaba24d5a6af465351291ba0e423319f78d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "30009753"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42903932"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -46,9 +46,9 @@ ATA Gateway yüklendikten sonra, ATA Gateway’in ayarlarını yapılandırmak i
   - **Açıklama**: ATA Gateway için bir açıklama girin (isteğe bağlı).
   - **Bağlantı Noktası Yansıtılan Etki Alanı Denetleyicileri (FQDN)** (ATA Gateway için gereklidir ve ATA Lightweight Gateway için değiştirilemez): Etki alanı denetleyicinizin tam FQDN’sini girin ve listeye eklemek için artı işaretine tıklayın. Örneğin, **dc01.contoso.com**
 
-      Aşağıdaki bilgiler, **Etki Alanı Denetleyicileri** listesine girdiğiniz sunucular için geçerlidir:
-      - ATA Gateway tarafından bağlantı noktası yansıtma yoluyla trafiği izlenmekte olan tüm etki alanı denetleyicilerinin, **Etki Alanı Denetleyicileri** listesinde yer alması gerekir. Bir etki alanı denetleyicisi **Etki Alanı Denetleyicileri** listesinde yer almıyorsa, kuşkulu etkinlikleri algılama özelliği beklendiği gibi çalışmayabilir.
-      - Listedeki etki alanı denetleyicilerinden en az biri genel katalog olmalıdır. Bu, Ata'nın ormandaki diğer etki alanı içinde bilgisayar ve kullanıcı nesneleri çözmek sağlar.
+    Aşağıdaki bilgiler, **Etki Alanı Denetleyicileri** listesine girdiğiniz sunucular için geçerlidir:
+    - ATA Gateway tarafından bağlantı noktası yansıtma yoluyla trafiği izlenmekte olan tüm etki alanı denetleyicilerinin, **Etki Alanı Denetleyicileri** listesinde yer alması gerekir. Bir etki alanı denetleyicisi **Etki Alanı Denetleyicileri** listesinde yer almıyorsa, kuşkulu etkinlikleri algılama özelliği beklendiği gibi çalışmayabilir.
+    - Listedeki etki alanı denetleyicilerinden en az biri genel katalog olmalıdır. Bu, Ata'nın ormandaki diğer etki alanı içinde bilgisayar ve kullanıcı nesneleri çözmek sağlar.
 
   - **Yakalama Ağ bağdaştırıcıları** (gerekli):
   - Ayrılmış bir sunucudaki bir ATA Gateway için, hedef yansıtma bağlantı noktası olarak yapılandırılan ağ bağdaştırıcılarını seçin. Bunlar, yansıtılmış etki alanı denetleyicisi trafiği alır.
