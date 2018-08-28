@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a6cb3ca9b4f9498caa0810cec129c24b0f2e587b
-ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
+ms.openlocfilehash: c7fda04658dc70406fc7c0d543286e46da4cfa86
+ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "41734766"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43039088"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -91,9 +91,6 @@ Azure ATP çalışma alanı, aşağıdaki Azure ATP işlevselliği yönetmenize 
 
 |||
 |-|-|
-|Varlık Alıcısı|Tüm Azure ATP algılayıcı ve Azure ATP tek başına algılayıcı varlık yığınlarını alır.|
-|Ağ Etkinliği İşlemcisi|Alınan her yığın içindeki tüm ağ etkinliklerini işler. Örneğin, farklı bilgisayarlardan gerçekleştirilmiş olabilecek çeşitli Kerberos adımları arasında eşleştirme yapar|
-|Varlık Profili Oluşturucu|Trafiğe ve olaylara göre tüm Benzersiz Varlıkların profilini oluşturur. Örneğin, Azure ATP oturum açan her kullanıcı profili için bilgisayar listesini güncelleştirir.|
 |Azure ATP Yönetim Portalı|Azure ATP çalışma alanınızı yönetir.|
 |Azure ATP çalışma alanı portalı|Azure ATP çalışma alanı, Azure ATP yapılandırma ve Azure ATP tarafından ağınızda algılanan kuşkulu etkinlikleri izlemek için kullanılır. Azure ATP çalışma alanı, üzerinde Azure ATP algılayıcısını bağımlı değildir ve hatta Azure ATP algılayıcı hizmeti durdurulduğunda çalıştırır. |
 |Algılayıcılar|Algılayıcılar ağınızdaki kuşkulu etkinlikleri ve anormal kullanıcı davranışlarını bulmak için makine öğrenme altyapılarını ve belirlenimci kuralları kullanır.|

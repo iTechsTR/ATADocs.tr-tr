@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/15/2018
+ms.date: 8/26/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 74fea95d0cfdcca96eba1f77b6dbd81a101b3782
-ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
+ms.openlocfilehash: f1c9e4bc90289e7c7bfb90710ecbc83beb368ba8
+ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "41734811"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038992"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -125,7 +125,7 @@ Azure ATP tek başına algılayıcı en az bir Yönetim bağdaştırıcısı ve 
 
     > [!IMPORTANT]
     > -   Etki alanı denetleyicisi ağ trafiğinin hedefi olarak yakalama bağdaştırıcısı için bağlantı noktası yansıtmasını yapılandırın. Daha fazla bilgi için [bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md). Genellikle, bağlantı noktası yansıtmasını yapılandırmak için ağ veya sanallaştırma ekibiyle çalışmanız gerekir.
-    > -   Hiçbir varsayılan algılayıcı ortamınız için statik yönlendirilemeyen IP adresi ve hiçbir DNS sunucusu adreslerini yapılandırın. Örneğin, 1.1.1.1/32. Bu yakalama ağ bağdaştırıcısının en yüksek miktarda trafiği yakalayabilmesini ve gerekli ağ trafiğini gönderip için yönetim ağ bağdaştırıcısı kullanıldığını sağlar.
+    > -   Statik yönlendirilemeyen bir IP adresi yapılandırın (özelliğini/32 ile maskesi) varsayılan algılayıcı ağ geçidi ve DNS sunucu adresleri olmadan ortamınız için. Örneğin, 10.10.0.10/32. Bu yakalama ağ bağdaştırıcısının en yüksek miktarda trafiği yakalayabilmesini ve gerekli ağ trafiğini gönderip için yönetim ağ bağdaştırıcısı kullanıldığını sağlar.
 
 ### <a name="ports"></a>Bağlantı noktaları
 Aşağıdaki tabloda, yönetim bağdaştırıcısında yapılandırılması gereken Azure ATP tek başına algılayıcı minimum bağlantı noktaları listelenmektedir:
