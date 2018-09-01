@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 60e02ef1aff6b16bc56b12b8883ca2f5ed4a1f74
-ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
+ms.openlocfilehash: 55e56b9b2a3bbb04024fc7431e1ee7d1e459cfea
+ms.sourcegitcommit: d8ee6c236dc91802a8315fb97a9dc0ac501861cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "42903915"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43353088"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -41,8 +41,10 @@ Bildirimleri almak için şu parametreleri ayarlayın:
     
 1. **Bildirimler ve Raporlar** bölümü altında **Bildirimler**’i seçin.
 1. **Posta bildirimleri** altında hangi bildirimlerin (yeni şüpheli etkinlikler ve yeni sistem durumu sorunları) e-posta yoluyla gönderileceğini belirtin. Şüpheli etkinlikler ve sistem durumu uyarıları için ayrı e-posta adresleri belirleyebilirsiniz, böylece örneğin, şüpheli etkinlik bildirimleri güvenlik analistinize gönderilirken sistem durumu uyarı bildirimleri BT yöneticinize gönderilebilir.
+    
     >   [!NOTE]
     >   Kuşkulu etkinlikler için e-posta uyarıları, yalnızca kuşkulu etkinlik oluşturulduğunda gönderilir.
+
 1. Altında **Syslog bildirimlerini**, Syslog sunucunuza - yeni şüpheli etkinlikler, güncelleştirilmiş şüpheli etkinlikler ve yeni sistem durumu sorunları hangi bildirimlerin gönderilmesi gerektiğini belirtin.
 1. **Kaydet**'e tıklayın.
     
