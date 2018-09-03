@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7caae52ff7402fdc8cb18ce1a01bba469c2d649b
-ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
+ms.openlocfilehash: 4cf099faae920f23eeeaacdc8f10129005fdc896
+ms.sourcegitcommit: 93a133430ac85d6db7afad5f6f2583b3a39c423a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35259217"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469677"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -53,7 +53,7 @@ Her kuşkulu etkinliğin aşağıdaki bilgileri bulunur:
 
 ## Önizleme algılamalar<a name="preview-detections"></a>
 
-Azure ATP araştırma ekibi, yeni bulunan saldırıları için yeni algılamalar uygulama üzerinde sürekli olarak çalışır. Azure ATP bir bulut hizmeti olduğundan, hızlı bir şekilde yeni algılamalardan olabildiğince çabuk Azure ATP müşterilerinizin etkinleştirmek için bu yeni algılamalar serbest bırakmak mümkündür.
+Azure ATP araştırma ekibi, yeni bulunan saldırıları için yeni algılamalar uygulama üzerinde sürekli olarak çalışır. Azure ATP bir bulut hizmeti olduğundan, yeni algılamalar Azure ATP müşterilerin yeni algılamalardan olabildiğince çabuk yararlanmak için hızlı bir şekilde serbest bırakılır.
 
 Bu algılamaların amacı, yeni algılamalar tanımlamak ve üründe yenidir bilmeniz yardımcı olması için ek olarak, preview rozeti ile etiketlenir. Devre dışı Önizleme algılamalar kapatırsanız, bunlar Azure ATP Konsolu - Zaman Çizelgesi'nde veya varlık profilleri - görüntülenmez ve yeni uyarılar açılması gerekmez.
 
@@ -119,7 +119,7 @@ Bir şüpheli etkinliğin sağ üst köşesindeki üç nokta simgesine tıklayar
 > Yapılandırma sayfaları yalnızca Azure ATP yöneticileri tarafından değiştirilebilir.
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Azure ATP çalışma alanı portalıyla çalışma](workspace-portal.md)
 - [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

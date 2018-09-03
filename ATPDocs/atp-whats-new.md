@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/26/2018
+ms.date: 8/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,29 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b4a72c4dbde37a415797c467afac2c7c2636bfec
-ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
+ms.openlocfilehash: 657a3488e967979555c5d5e5d48ac02b6cc32a04
+ms.sourcegitcommit: 93a133430ac85d6db7afad5f6f2583b3a39c423a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43039047"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469636"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 # <a name="whats-new-in-azure-atp"></a>ATA'daki yenilikler 
 
+## <a name="azure-atp-release-247"></a>Azure ATP yayın 2.47
+Yayın Tarihi: 2 Eylül 2018
 
+- **Azure ATP Gelişmiş Denetim İlkesi denetimi**
+<br> Azure Gelişmiş tehdit koruması, artık etki alanı denetleyicisinin var olan gelişmiş denetim ilkeleri denetler ve kuruluşunuz için en fazla Azure ATP hizmet kapsamını sağlamak için ilke değişiklikleri önerir. <br> 
+**Bu yeni denetimi sağlar:**
+  -  Azure ATP kapsamınızı şu anda dışlanmış, Windows olay günlüklerindeki eksik olayları belirleyin.
+  -  İdeal ayarları doğrulayın ve sağlanan sistem durumu uyarı önerilerine göre değişiklikleri yapın.
+  -  Tüm etki alanı denetleyicilerinizin (if/olarak gereklidir) düzeltme önerileri de dahil olmak üzere tek toplanan sistem durumu uyarısı verilir.
+
+Gözden geçirme nasıl [Gelişmiş denetim ilkeleri yapılandırma](atp-advanced-audit-policy.md)sisteminiz doğru şekilde yapılandırıldığından emin olmak için. 
+- Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları da içerir.
 
 ## <a name="azure-atp-release-246"></a>Azure ATP yayın 2.46
 

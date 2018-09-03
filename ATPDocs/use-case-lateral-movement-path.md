@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 730cf886f199c101ea14a09f177d7682238c2b7e
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 270b84c24ef8b52565ee97c2c15374645eb54a2c
+ms.sourcegitcommit: 93a133430ac85d6db7afad5f6f2583b3a39c423a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567721"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469660"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -28,7 +28,7 @@ ms.locfileid: "39567721"
 Yanal hareket, bir saldırganın hassas hesaplara yönelik erişim elde etmek için hassas olmayan hesaplarını kullandığı durumdur. Bu yapılabilir açıklanan yöntemlerle [şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md). Yanal hareket, saldırganlar tarafından hassas hesapları ve ağınızda depolanan oturum açma kimlik bilgilerini hesapları, grupları ve makineler paylaştığınız hassas olmayan hesapları kullanarak makineleri erişmek üzere kullanılır. Erişim elde etmiş bir saldırganın sonra saldırgan ayrıca veri etki alanı denetleyicilerinize yararlanabilirsiniz.
 
 
-## <a name="discovery-your-at-risk-sensitive-accounts"></a>Bulma, dalgalanmasını hassas hesaplar
+## <a name="discover-your-at-risk-sensitive-accounts"></a>Dalgalanmasını hassas hesaplarınızı keşfedin
 
 Hassas olmayan hesapları, grupları ve makineler, bağlantı nedeniyle ağınızdaki hassas hangi hesapların ortaya bulmak için aşağıdaki adımları izleyin. 
 
