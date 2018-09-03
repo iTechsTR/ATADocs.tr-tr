@@ -45,7 +45,9 @@
 ## [Azure ATP ile yanal hareket yollarını araştırma](use-case-lateral-movement-path.md)
 ## [Varlıkları araştırma](investigate-entity.md)
 ## [Varlık profillerini anlama](entity-profiles.md)
-# Sorun giderme
+# Sorunları Gider
+## [Gelişmiş Denetim İlkesi denetimi](atp-advanced-audit-policy.md)
 ## [Bilinen sorunları giderme](troubleshooting-atp-known-issues.md)
+## [Günlükleri kullanarak sorun giderme](troubleshooting-atp-using-logs.md)
 ## [Destek ve bilgiler](atp-support.md)
 ## [Azure ATP hazırlık yol haritası](atp-resources.md)
