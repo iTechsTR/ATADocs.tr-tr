@@ -2,10 +2,10 @@
 title: Advanced Threat Analytics kişisel veri ilkesi | Microsoft Docs
 description: ATA'dan özel bilgileri ve kişisel verileri silme hakkında daha fazla bilgi için bağlantılar sağlar.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/26/2018
+ms.date: 9/04/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 34c758cf96b583c32ad19aa2f8deab7a3bb96392
-ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
+ms.openlocfilehash: 831fceafe3672d916d18801eb1273a62a81c84cd
+ms.sourcegitcommit: f9400ae27d22607e4146dc9b8a0b9ba6f61fdd38
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948957"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743340"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -52,7 +52,7 @@ Aşağıdaki bölümlerde açıklandığı gibi varlıkları silin ve varlık et
 
 Bu eylem bir varlık ATA veritabanından kalıcı olarak siler. Bu komutu çalıştırmak için komut adı sağlayın. `deleteAccount`ve `SamName`, `UpnName` veya `GUID` , bilgisayar ya da silmek istediğiniz kullanıcı adı. Örneğin: 
 
-`C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval “var params= deleteAccount,admin1@contoso.com;” GDPR.js `
+`"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval "var params='deleteAccount,admin1@contoso.com';" GDPR.js`
 
 Bu tamamen çalıştırmak kaldırır UPN ile varlık admin1@contoso.com yanı sıra tüm etkinlikleri ve güvenlik uyarılarını varlıkla ilişkili veritabanından. 
 
@@ -64,7 +64,7 @@ Bu komutu çalıştırmak için komut adı sağlayın. `deleteOldData`ve veri ve
 
 Örneğin: 
 
-`C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval “var params= deleteOldData,30;” GDPR.js`
+`"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval "var params='deleteOldData,30';" GDPR.js`
 
 Bu betik, 30 günden eski olan veritabanından tüm varlık etkinlikleri ve güvenlik uyarıları için tüm verileri kaldırır. Yalnızca son 30 Günün verilerini korur.
 

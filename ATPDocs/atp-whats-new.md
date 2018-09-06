@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/30/2018
+ms.date: 9/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 657a3488e967979555c5d5e5d48ac02b6cc32a04
-ms.sourcegitcommit: 93a133430ac85d6db7afad5f6f2583b3a39c423a
+ms.openlocfilehash: 91e20af8e0bfedd626ee4625b0a5ec5647a41f97
+ms.sourcegitcommit: f9400ae27d22607e4146dc9b8a0b9ba6f61fdd38
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469636"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743408"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -28,13 +28,15 @@ ms.locfileid: "43469636"
 Yayın Tarihi: 2 Eylül 2018
 
 - **Azure ATP Gelişmiş Denetim İlkesi denetimi**
-<br> Azure Gelişmiş tehdit koruması, artık etki alanı denetleyicisinin var olan gelişmiş denetim ilkeleri denetler ve kuruluşunuz için en fazla Azure ATP hizmet kapsamını sağlamak için ilke değişiklikleri önerir. <br> 
+ 
+Azure Gelişmiş tehdit koruması, artık etki alanı denetleyicisinin var olan gelişmiş denetim ilkeleri denetler ve kuruluşunuz için en fazla Azure ATP hizmet kapsamını sağlamak için ilke değişiklikleri önerir. 
+
 **Bu yeni denetimi sağlar:**
   -  Azure ATP kapsamınızı şu anda dışlanmış, Windows olay günlüklerindeki eksik olayları belirleyin.
   -  İdeal ayarları doğrulayın ve sağlanan sistem durumu uyarı önerilerine göre değişiklikleri yapın.
   -  Tüm etki alanı denetleyicilerinizin (if/olarak gereklidir) düzeltme önerileri de dahil olmak üzere tek toplanan sistem durumu uyarısı verilir.
 
-Gözden geçirme nasıl [Gelişmiş denetim ilkeleri yapılandırma](atp-advanced-audit-policy.md)sisteminiz doğru şekilde yapılandırıldığından emin olmak için. 
+Gözden geçirme nasıl [Gelişmiş denetim ilkeleri yapılandırma](atp-advanced-audit-policy.md) sisteminiz doğru şekilde yapılandırıldığından emin olmak için. 
 - Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları da içerir.
 
 ## <a name="azure-atp-release-246"></a>Azure ATP yayın 2.46

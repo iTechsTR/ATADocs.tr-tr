@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/20/2018
+ms.date: 9/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 5e6fac695e1dc51a1a0afcf20330918be82c75e9
-ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
+ms.openlocfilehash: dea1d1b936344121c2f1cd3132ed6bd0f2cccaba
+ms.sourcegitcommit: f9400ae27d22607e4146dc9b8a0b9ba6f61fdd38
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "41734743"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743391"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -32,7 +32,7 @@ Bu makalede, ATA Center işlevselliğinin kaybolduğu ancak ATA Ağ Geçitlerini
 
 ## <a name="back-up-your-ata-center-configuration"></a>ATA Center yapılandırmanızı yedekleme
 
-1. ATA Center yapılandırması, bir dosyaya saat başı yedeklenir. ATA Center yapılandırmasının en son yedek kopyasını bulun ve ayrı bir bilgisayara kaydedin. Bu dosyaları nasıl bulacağınıza ilişkin tam açıklama için bkz. [ATA yapılandırmasını dışarı ve içeri aktarma](ata-configuration-file.md). 
+1. ATA Center yapılandırmasını 4 saatte bir dosyaya yedeklenir. ATA Center yapılandırmasının en son yedek kopyasını bulun ve ayrı bir bilgisayara kaydedin. Bu dosyaları nasıl bulacağınıza ilişkin tam açıklama için bkz. [ATA yapılandırmasını dışarı ve içeri aktarma](ata-configuration-file.md). 
 2. ATA Center sertifikasını dışarı aktarın.
     1. Sertifika Yöneticisi'nde, **Sertifikalar (Yerel Bilgisayar)** -> **Kişisel** ->**Sertifikalar**’a gidip **ATA Center**’ı seçin.
     2. Sağ **ATA Center** seçip **tüm görevler** ardından **dışarı**. 
