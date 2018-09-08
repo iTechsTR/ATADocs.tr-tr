@@ -1,68 +1,68 @@
 ---
 title: ATA sürüm 1.9 yenilikler | Microsoft Docs
-description: Yenilikleri ve ATA sürüm 1.9 bilinen sorunları listeler
+description: Yenilikleri Ata sürümü 1.9 bilinen sorunları listeler
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/25/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: f4a0776d52a69ba519e5cfdd0befb6bbd39d73c3
-ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
+ms.openlocfilehash: ddb93c2776dbb6e076314051068c4ca3544db756
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30202400"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166621"
 ---
 # <a name="whats-new-in-ata-version-19"></a>ATA sürüm 1.9 yenilikler nelerdir?
 
 [İndirme Merkezi’nden](https://www.microsoft.com/download/details.aspx?id=56725) ATA’nın son güncelleştirme sürümünü indirebilir veya [Değerlendirme merkezinden](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics) tam sürümü indirebilirsiniz.
 
-Bu sürüm notları güncelleştirmeleri, yeni özellikler, hata düzeltmeleri ve Advanced Threat Analytics bu sürümündeki bilinen sorunlar hakkında bilgi sağlar.
+Bu sürüm notları, güncelleştirmeleri, yeni özellikler, hata düzeltmeleri ve, Advanced Threat Analytics'in bu sürümündeki bilinen sorunlar hakkında bilgi sağlar.
 
 ## <a name="new--updated-detections"></a>Yeni ve güncelleştirilmiş algılamalar
 
--  **Şüpheli hizmet oluşturma**: saldırganlar ağınızdaki kuşkulu hizmet çalıştırmak dener. Birisi şüpheli görünüyorsa, yeni bir hizmet, bir etki alanı denetleyicisinde çalıştırıldığında belirlediğinde, ATA artık bir uyarı başlatır. Bu algılama (olmayan ağ trafiği), olaylar hakkında daha fazla bilgi için bağlı olduğu için bkz: [şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md#suspicious-service-creation).
+-  **Şüpheli hizmet oluşturma işlemi**: saldırganlar, ağınızdaki kuşkulu hizmet çalıştırma girişiminde. Birisi şüpheli görünüyorsa, yeni bir hizmet, bir etki alanı denetleyicisinde çalıştırıldığında belirlediğinde ATA artık bir uyarı başlatır. Daha fazla bilgi için bu algılama olayları (değil ağ trafiği), bağlı olduğu için bkz: [şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md#suspicious-service-creation).
 
 
 ## <a name="new-reports-to-help-you-investigate"></a>Araştırmanıza yardımcı olacak yeni raporlar 
 
--   [ **Parolaların temiz metin olarak sunulan** ](reports.md) hesapları, gizli ve hassas olmayan, hesap kimlik bilgilerini düz metin olarak göndermek algılayabilir olanak tanır. Bu, araştırın ve ağ güvenlik düzeyini artırma ortamınızda LDAP basit bağlama kullanımını azaltmak sağlar. Bu rapor, hizmet ve hassas hesap doğrulamaya şüpheli etkinlik uyarıları yerini alır.
+-   [ **Parolalarını düz metin olarak ifşa** ](reports.md) hesapları, küçük harf duyarlı ve duyarlı olmayan, hesap kimlik bilgilerini düz metin olarak gönderdiğinizde algılamanıza olanak tanır. Bu, araştırmak ve ağ güvenlik düzeyinizi geliştirme ortamınızda LDAP basit bağlama kullanımını azaltmak sağlar. Bu rapor, hizmet ve hassas hesap düz metin olarak şüpheli etkinlik uyarılarını yerini alır.
 
-- [ **Yanal hareket yolları hassas hesaplarına** ](reports.md) yanal hareket yolları sunulan hassas hesaplarını listeler. Bu, bu yollar azaltmak ve saldırı yüzeyini riski en aza indirmek için ağınızı sağlamlaştırmak olanak sağlar. Bu, böylece sanal güvenlik ikramiye isabet kadar saldırganların ağınızda kullanıcıları ve bilgisayarları arasında taşınamıyor yanal hareket engellemenizi sağlar: hassas yönetici hesabı kimlik bilgilerinizi.
+- [ **Yana hareket yollarını hassas hesaplara yönelik** ](reports.md) yanal hareket yollarını sunulan hassas hesapları listeler. Bu, bu yollar azaltmak ve saldırı yüzeyi riski en aza indirmek için ağ sağlamlaştırma sağlar. Bu, böylece bunlar sanal güvenlik ikramiye isabet kadar saldırganlar ağınızdaki kullanıcılar ve bilgisayarlar arasında taşıyamazsınız yanal hareket önlemenize olanak sağlar: küçük harf duyarlı yönetici hesabı kimlik bilgilerinizle.
 
-## <a name="improved-investigation"></a>Geliştirilmiş araştırma
+## <a name="improved-investigation"></a>Gelişmiş araştırma
 
--  ATA 1.9 içeren yeni ve geliştirilmiş [varlık profili](entity-profiles.md). Varlık profili, kullanıcılar, bunlar erişilen kaynaklar ve geçmişlerini tam derin Dalış araştırma için tasarlanmış bir Pano sağlar. Varlık profili yanal hareket yolları erişilebilir hassas kullanıcıları belirlemek sağlar. 
+-  Ata'yı 1.9 içeren yeni ve geliştirilmiş [varlık profili](entity-profiles.md). Varlık profili, kullanıcıların, bunların eriştiği kaynaklara ve geçmişlerini tam derinlemesine araştırma için tasarlanmış bir Pano sağlar. Varlık profili yanal hareket yollarını erişilebilir olan gizli kullanıcılar tanımlamanızı sağlar. 
 
--   ATA 1.9 olanak tanır [manuel olarak grupları etiketleme](tag-sensitive-accounts.md) veya algılamaların geliştirmek gibi hassas hesapları. Hangi gruplar ve hesaplar hassas kabul edilir üzerinde hassas grubu değişikliği algılama ve yanal hareket yolu gibi birçok ATA algılamaları kullanan bu etiketleme etkiler.
+-   Ata'yı 1.9 olanak tanır [el ile grupları etiket](tag-sensitive-accounts.md) veya algılamalar geliştirmek gibi hassas hesapları. Gizli Grup değişikliği algılama ve yanal hareket yolunun gibi birçok ATA algılamaları hangi gruplar ve hesaplar hassas kabul edilir üzerinde kullanan bu etiketleme etkiler.
 
 ## <a name="performance-improvements"></a>Performans iyileştirmeleri
 
-- ATA Center altyapı için performansı geliştirildi: trafiğin toplanan görünümünü iyileştirme CPU ve paket ardışık sağlar ve SSL oturumları DC'ye en aza indirmek için etki alanı denetleyicilerine yuva yeniden kullanır.
+- ATA Center altyapı performans için İyileştirildi: Toplu trafik görünümünü CPU ve paket işlem hattının etkinleştirir ve SSL oturumlarını DC'ye en aza indirmek için etki alanı denetleyicilerine yuva kullanır.
 
 
 
 ## <a name="additional-changes"></a>Ek değişiklikler
 
-- ATA'ın yeni bir sürüm yüklendikten sonra [ **yenilikler** ](working-with-ata-console.md) simgesi bildiğiniz en son sürümde değiştirildi izin vermek için araç çubuğunda görünür. Ayrıca, ayrıntılı sürüm değişim günlüğü bağlantı sağlar.
+- Ata'nın yeni bir sürümünü yükledikten sonra [ **yenilikler** ](working-with-ata-console.md) simgesi, en son sürümde nelerin değiştiğini bilmeniz izin vermek için araç çubuğunda görünür. Ayrıca, ayrıntılı sürüm changelog bağlantısını içeren sağlar.
 
 
-## <a name="removed-and-deprecated-features"></a>Kaldırılan ve kullanım dışı özellikler
+## <a name="removed-and-deprecated-features"></a>Kaldırılan ve kullanım dışı bırakılan özellikler
 
 - **Bozuk güven şüpheli etkinlik** uyarı kaldırıldı.
-- Düz metin kuşkulu etkinliğinde sunulan parolaları kaldırıldı. Tarafından değiştirildi [ **parolaları düz metin raporda gösterilen**](reports.md).
+- Parolaları düz metin şüpheli bir etkinliği kullanıma sunulan kaldırıldı. Tarafından değiştirildi [ **parolalarını düz metin raporda ifşa**](reports.md).
 
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
-[Ata'yı sürüm 1.9 - Geçiş Kılavuzu güncelleştirme](ata-update-1.9-migration-guide.md)
+[ATA sürüm 1.9 - Geçiş Kılavuzu güncelleştirme](ata-update-1.9-migration-guide.md)
 

@@ -6,21 +6,21 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6361cf277d1b27ab6792e4780827377835c9abd3
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 0adbf6fe0c3cd475c50ea5fbe62b90eecc3214bf
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010382"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126442"
 ---
-*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
+*İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 
 
@@ -32,15 +32,15 @@ ms.locfileid: "30010382"
 
 ## <a name="step-6-configure-event-collection"></a>6. Adım. Olay koleksiyonunu yapılandırma
 ### <a name="configure-event-collection"></a>Olay Koleksiyonunu Yapılandırma
-Algılama yeteneklerini geliştirmek için aşağıdaki Windows olaylarını ATA'ya gerekir: 4776, 4732, 4733, 4728, 4729, 4756, 4757 ve 7045. Bunlar, ATA Lightweight Gateway tarafından otomatik olarak okunabilir veya ATA Lightweight Gateway’in dağıtılmamış olduğu durumlarda şu iki yöntemden biriyle ATA Gateway’e iletilebilir: ATA Gateway’i SIEM olaylarını dinleyecek şekilde yapılandırarak ya da [Windows Olay İletme’yi yapılandırarak](configure-event-collection.md). 
+ATA algılama yeteneklerini artırmak için aşağıdaki Windows olaylarına ihtiyacı vardır: 4776, 4732, 4733, 4728, 4729, 4756, 4757'yi ve 7045. Bunlar, ATA Lightweight Gateway tarafından otomatik olarak okunabilir veya ATA Lightweight Gateway’in dağıtılmamış olduğu durumlarda şu iki yöntemden biriyle ATA Gateway’e iletilebilir: ATA Gateway’i SIEM olaylarını dinleyecek şekilde yapılandırarak ya da [Windows Olay İletme’yi yapılandırarak](configure-event-collection.md). 
 
 > [!NOTE]
 > ATA 1.8 ve üzeri sürümlerde artık ATA Lightweight Gateway’ler için olay koleksiyonu yapılandırması gerekli değildir. ATA Lightweight Gateway artık olay iletmeyi yapılandırmaya gerek kalmadan olayları yerel olarak okuyabilir.
 
-Etki alanı denetleyicilerine gelen ve denetleyicilerden giden ağ trafiğini toplamaya ve çözümlemeye ek olarak ATA, Windows olaylarını kullanarak algılamaları geliştirebilir. Olay 4776 çeşitli algılama ve olayları 4732, 4733, 4728, 4729, 4756 ve hassas grubu değişiklikleri geliştirerek algılanması için 4757 geliştirir NTLM kullanır. Bu, SIEM sistemlerinizden alınabileceği gibi etki alanı denetleyicinizden Windows Olay İletme’yi ayarlayarak da alınabilir. Toplanan olaylar ATA’ya etki alanı denetleyicisi ağ trafiği yoluyla sağlanmayan ek bilgiler sağlar.
+Etki alanı denetleyicilerine gelen ve denetleyicilerden giden ağ trafiğini toplamaya ve çözümlemeye ek olarak ATA, Windows olaylarını kullanarak algılamaları geliştirebilir. Çeşitli algılamalar ve olay 4732, 4733, 4728, 4729, 4756 ve 4757'yi gizli Grup değişikliklerini algılamayı için geliştiren NTLM için olay 4776'yı kullanır. Bu, SIEM sistemlerinizden alınabileceği gibi etki alanı denetleyicinizden Windows Olay İletme’yi ayarlayarak da alınabilir. Toplanan olaylar ATA’ya etki alanı denetleyicisi ağ trafiği yoluyla sağlanmayan ek bilgiler sağlar.
 
 #### <a name="siemsyslog"></a>SIEM/Syslog
-ATA Syslog sunucusundan verileri kullanamayabilir aşağıdaki adımlar gerçekleştirmeniz gerekir:
+Bir Syslog sunucusundan verileri kullanabilmesi için Ata'nın aşağıdaki adımları tamamlamanız gerekir:
 
 -   ATA Gateway sunucularınızı SIEM/Syslog sunucusundan iletilen olayları dinleyecek ve kabul edecek şekilde yapılandırın.
 > [!NOTE]
@@ -164,7 +164,7 @@ Hata Kodu:         0x0
 -   Anahtar=değer çiftleri için sıra önemli değildir.
 
 #### <a name="qradar"></a>QRadar
-QRadar bir aracı üzerinden olay toplamayı sağlar. Veriler bir aracı kullanarak toplanıyorsa, saat biçimi mili saniye verisi olmadan toplanır. ATA mili saniye verisine ihtiyaç duyduğundan, QRadar’ın aracısız Windows olay toplamayı kullanacak şekilde ayarlanması gerekir. Daha fazla bilgi için bkz: [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: MSRPC protokolünü kullanarak aracısız Windows olayları koleksiyonu").
+QRadar bir aracı üzerinden olay toplamayı sağlar. Veriler bir aracı kullanarak toplanıyorsa, saat biçimi mili saniye verisi olmadan toplanır. ATA mili saniye verisine ihtiyaç duyduğundan, QRadar’ın aracısız Windows olay toplamayı kullanacak şekilde ayarlanması gerekir. Daha fazla bilgi için [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: MSRPC protokolünü kullanarak aracısız Windows olayları koleksiyonu").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 
@@ -194,11 +194,11 @@ key=value çiftleri arasında \t bulunduğundan emin olun.
 
 
 ## <a name="related-videos"></a>İlgili videolar
-- [ATA dağıtımına genel bakış](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
+- [ATA dağıtımı genel bakış](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [ATA Gateway türü sağ seçme](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA POC Dağıtım Kılavuzu](http://aka.ms/atapoc)
 - [ATA boyutlandırma aracı](http://aka.ms/atasizingtool)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

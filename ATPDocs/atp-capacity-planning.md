@@ -1,77 +1,77 @@
 ---
-title: Azure Advanced Threat Protection dağıtımınızı planlama | Microsoft Docs
-description: Dağıtımınızı planlamanıza ve ağınızı desteklemek için kaç tane Azure ATP sunucusuna ihtiyacınız olacağını karar vermenize yardımcı olur
+title: Azure Gelişmiş tehdit Koruması Dağıtımınızı planlama | Microsoft Docs
+description: Dağıtımınızı planlamanıza ve ağınızı desteklemek için kaç adet Azure ATP sunucusu gerekeceğine karar vermenize yardımcı olur
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 5/22/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.service: azure-advanced-threat-protection
 ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 35d3495585cce321adccb05f202fd664356db37f
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: 3426829c0c3b9b52ec1c0fb2c7f19e5a0944bfdf
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444799"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126374"
 ---
-*Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
+*İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 
 # <a name="azure-atp-capacity-planning"></a>Azure ATP kapasite planlaması
-Bu makalede kaç Azure ATP algılayıcılar ve ihtiyacınız olan tek başına algılayıcılar belirlemenize yardımcı olur.
+Bu makalede Azure ATP algılayıcı ve ihtiyacınız olan tek başına algılayıcı sayısını belirlemenize yardımcı olur.
 
 > [!NOTE] 
-> İki sayfa - boyutlandırma aracı olan ATA, diğeri Azure ATP için için. Doğru sayfasında olduğundan emin olun.
+> İki e-tablolar - boyutlandırma aracı sahip biri ATA, diğeri Azure ATP için. Doğru sayfasında olduğundan emin olun.
 
 ## <a name="using-the-sizing-tool"></a>Boyutlandırma aracını kullanma
-Azure ATP dağıtımınızı kullanmaktır kapasitesini belirlemek için önerilen en kolay yol [Azure ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool). Azure ATP boyutlandırma aracını çalıştırın ve Excel dosyasındaki sonuçlarda, CPU ve bellek belirlemek için aşağıdaki alanları kullanın algılayıcı tarafından kullanılan:
+Azure ATP dağıtımınızı kullanmaktır kapasitesini belirlemek için önerilen ve en kolay yolu [Azure ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool). Azure ATP boyutlandırma aracı çalıştırın ve Excel dosyasındaki sonuçlarda, CPU ve bellek belirlemek için aşağıdaki alanları algılayıcı tarafından kullanılan:
 
-- Azure ATP algılayıcı: eşleşme **meşgul Paket/sn** sonuçları dosyasında Azure ATP algılayıcı tablosundaki **başına paket ikinci** alanındaki [Azure ATP tek başına algılayıcı tablo](#azure-atp-sensor-sizing)veya [Azure ATP algılayıcı tablo](#azure-atp-standalone-sensor-sizing)bağlı olarak [seçtiğiniz algılayıcı türü](#choosing-the-right-sensor-type-for-your-deployment).
+- Azure ATP algılayıcısını: eşleşen **meşgul Paket/sn** sonuçları dosyasında Azure ATP algılayıcısı tablosundaki **paket başına saniye** alanındaki [Azure ATP tek başına algılayıcı tablo](#azure-atp-sensor-sizing)veya [Azure ATP algılayıcısı tablo](#azure-atp-standalone-sensor-sizing)bağlı olarak [seçtiğiniz algılayıcı türü](#choosing-the-right-sensor-type-for-your-deployment).
 
 
 ![Kapasite planlama aracı örneği](media/capacity-tool.png)
 
 
-El ile herhangi bir nedenden dolayı Azure ATP boyutlandırma aracını kullanamıyorsanız, Paket/sn sayaç bilgilerinizi düşük toplama aralığıyla (yaklaşık 5 saniye) ile 24 saat için tüm etki alanı denetleyicilerinden toplayın. Sonrasında, her Etki Alanı Denetleyicisi için günlük ortalamanızı ve en meşgul zaman aralığı (15 dakikalık) ortalamanızı hesaplamanız gerekir.
+El ile herhangi bir nedenden dolayı Azure ATP boyutlandırma aracını kullanamıyorsanız Paket/sn sayaç bilgilerinizi düşük toplama aralığıyla (yaklaşık 5 saniye) 24 saat boyunca tüm etki alanı denetleyicilerinizden toplayın. Sonrasında, her Etki Alanı Denetleyicisi için günlük ortalamanızı ve en meşgul zaman aralığı (15 dakikalık) ortalamanızı hesaplamanız gerekir.
 Aşağıdaki bölüm, bir Etki Alanı Denetleyicisi’nden paket/sn sayacı bilgilerini nasıl alabileceğinizi gösteren yönergeleri içerir.
 
 ## Dağıtımınız için doğru algılayıcı türü seçme<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
-Bir Azure ATP dağıtımdaki herhangi bir bileşimini Azure ATP tek başına algılayıcı türleri desteklenir:
+Bir Azure ATP dağıtımında herhangi bir birleşimini Azure ATP tek başına algılayıcı türleri desteklenir:
 
-- Yalnızca Azure ATP tek başına algılayıcılar
+- Azure ATP tek başına algılayıcı
 - Yalnızca Azure ATP algılayıcısı
 - Her ikisinin birleşimi
 
-Algılayıcı dağıtım türüne karar verirken aşağıdaki yararları göz önünde bulundurun:
+Algılayıcı dağıtım türüne karar verirken aşağıdaki faydaları göz önünde bulundurun:
 
 |algılayıcı türü|Yararları|Maliyet|Dağıtım topolojisi|Etki alanı denetleyicisi kullanımı|
 |----|----|----|----|-----|
-|Azure ATP tek başına algılayıcısı|Bant dışı dağıtım, saldırganların Azure ATP var olduğunu keşfetmesini zorlaştırır|Daha yüksek|Etki alanı denetleyicisinin yanı sıra yüklenir (bant dışı)|Saniye başına en fazla 100.000 paketi destekler|
-|Azure ATP algılayıcısı|Ayrılmış bir sunucu ve bağlantı noktası yansıtma yapılandırması gerektirmez|Daha düşük|Etki alanı denetleyicisine yüklenir|Saniye başına en fazla 100.000 paketi destekler|
+|Azure ATP tek başına algılayıcı|Dağıtım bant dışı saldırganların Azure ATP var olduğunu keşfetmesini zorlaştırır|Daha yüksek|Etki alanı denetleyicisinin yanı sıra yüklenir (bant dışı)|Saniyede en fazla 100.000 paketi destekler|
+|Azure ATP algılayıcısı|Ayrılmış bir sunucu ve bağlantı noktası yansıtma yapılandırması gerektirmez|Daha düşük|Etki alanı denetleyicisine yüklenir|Saniyede en fazla 100.000 paketi destekler|
 
-Aşağıdaki sorunlar dağıtmak için kaç tane Azure ATP tek başına algılayıcılar karar verirken göz önünde bulundurun.
+Dağıtmak için kaç tane Azure ATP tek başına algılayıcı karar verirken aşağıdaki noktaları dikkate.
 
 -   **Active Directory ormanları ve etki alanları**<br>
-    Azure ATP oluşturduğunuz her çalışma alanı için tek bir Active Directory ormanındaki birden çok etki alanından trafiği izleyebilir. Birden çok orman izlemek için birden çok çalışma oluşturmanız gerekir. 
+    Azure ATP oluşturduğunuz her bir çalışma alanı için tek bir Active Directory orman içinde birden çok etki alanından trafiği izleyebilir. Birden çok ormanı izlemek için birden çok çalışma alanı oluşturmanız gerekir. 
 
 -   **Bağlantı Noktası Yansıtma**<br>
-Bağlantı noktası yansıtmayla veri merkezi veya şube site başına birden çok Azure ATP tek başına algılayıcılar dağıtmak gerektirebilir.
+Bağlantı noktası yansıtmayla ilgili faktörler, veri merkezi veya şube site başına birden çok Azure ATP tek başına algılayıcı dağıtmanızı gerektirebilir.
 
 -   **Kapasite**<br>
-    Bir Azure ATP tek başına algılayıcı, izlenmekte olan etki alanı denetleyicilerinin ağ trafiği miktarına bağlı olarak, birden çok etki alanı denetleyicisinin izlenmesini destekleyebilir. 
+    Bir Azure ATP tek başına algılayıcı, izlenmekte olan etki alanı denetleyicilerinin ağ trafiği miktarına bağlı olarak birden çok etki alanı denetleyicisinin izlenmesini destekleyebilir. 
 
 
-## Azure ATP algılayıcı ve tek başına algılayıcı boyutlandırma <a name="sizing"></a>
+## Azure ATP algılayıcısını ve tek başına algılayıcı boyutlandırma <a name="sizing"></a>
 
-Bir Azure ATP algılayıcı, etki alanı denetleyicisinin oluşturduğu ağ trafiği miktarına bağlı bir etki alanı denetleyicisinin izlenmesini destekleyebilir. Aşağıdaki tabloda bir tahmindir, algılayıcı ayrıştırır son tutarını trafiği ve trafiğinin dağıtımını miktarına bağlıdır. 
+Azure ATP algılayıcısını etki alanı denetleyicisinin oluşturduğu ağ trafiği miktarına bağlı olarak bir etki alanı denetleyicisinin izlenmesini destekleyebilir. Aşağıdaki tabloda tahmini bir değerdir, algılayıcı ayrıştıran son trafiği ve trafiğinin dağıtımını miktarına bağlıdır. 
 > [!NOTE]
-> Aşağıdaki CPU ve bellek kapasitesini algılayıcının kendi tüketim – etki alanı denetleyicisi kapasitesi başvuruyor.
+> Aşağıdaki CPU ve bellek kapasitesini algılayıcının kendi tüketim – etki alanı denetleyicisi kapasitesi ifade eder.
 
 |Saniye başına paket *|CPU (çekirdekler)|Bellek (GB)|
 |----|----|-----|
@@ -79,17 +79,17 @@ Bir Azure ATP algılayıcı, etki alanı denetleyicisinin oluşturduğu ağ traf
 |5 1k - k|0.75|6.00|
 |5k - 10k|1.00|6.50|
 |20 10k - k|2.00|9,00|
-|50 20k - k|3.50|9.50|
-|75 50k - k |3.50|9.50|
-|100 75k - k|3.50 |9.50|
+|20 bin - 50 bin|3.50|9.50|
+|50 bin - 75 bin |3.50|9.50|
+|100 bin 75 - k|3.50 |9.50|
 
 > [!NOTE]
-> - Algılayıcı hizmetini kullanacak olan çekirdek toplam sayısı.<br>Hiper iş parçacıklı çekirdekleri ile çalışmıyor önerilir.
-> - Algılayıcı hizmetini kullanacak olan bellek toplam miktarı.
-> -   Etki alanı denetleyicisi Azure ATP algılayıcı tarafından gereken kaynakları yoksa, etki alanı denetleyicisi performansı etkilenmez, ancak Azure ATP algılayıcı beklendiği gibi çalışmayabilir.
+> - Algılayıcı hizmetinin kullanacağı çekirdek toplam sayısı.<br>Hiper iş parçacıklı çekirdekleri ile çalışmıyor önerilir.
+> - Algılayıcı hizmetinin kullanacağı bellek toplam miktarı.
+> -   Etki alanı denetleyicisi tarafından Azure ATP algılayıcısını gereken kaynaklar yoksa etki alanı denetleyicisi performansı etkilenmez, ancak Azure ATP algılayıcısını beklendiği gibi çalışmayabilir.
 > -   Sanal makine olarak çalıştırırken dinamik bellek veya başka bir bellek balona alma özelliği desteklenmez.
-> -   En iyi performans için ayarlanmış **güç seçeneği** Azure ATP algılayıcı **yüksek performanslı**.
-> -   En az 2 Çekirdek ve 6 GB alanı gereklidir ve Azure ATP ikili dosyaları ve günlükleri için gereken alanı dahil olmak üzere 10 GB önerilir.
+> -   En iyi performans için ayarlanmış **güç seçeneğini** Azure ATP algılayıcı için **yüksek performanslı**.
+> -   En az 2 Çekirdek ve 6 GB alan gereklidir ve Azure ATP ikili dosyaları ve günlükleri için gereken alan dahil olmak üzere, 10 GB önerilir.
 
 
 ## <a name="domain-controller-traffic-estimation"></a>Etki alanı denetleyicisi tahmini trafiği
@@ -125,7 +125,7 @@ Paket/saniye oranını belirlemek için her etki alanı denetleyicisinde aşağ�
 
     ![Performans sayaçlarını ekleme resmi](media/atp-traffic-estimation-7.png)
 
-8.  Değişiklik **örnekleme aralığı** için **beş saniyede**.
+8.  Değişiklik **örnekleme aralığı** için **beş saniye**.
 
 9. Verilerin kaydedilmesini istediğiniz konumunu ayarlayın.
 
@@ -145,7 +145,7 @@ Paket/saniye oranını belirlemek için her etki alanı denetleyicisinde aşağ�
 
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [Azure ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool)
 - [Azure ATP önkoşulları](atp-prerequisites.md)
 - [Azure ATP mimarisi](atp-architecture.md)

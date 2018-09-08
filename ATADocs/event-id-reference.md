@@ -1,125 +1,125 @@
 ---
 title: ATA olay kimliği başvurusu | Microsoft Docs
-description: ATA olay kimliklerinin bir listesi ve açıklamalarının sağlar.
+description: ATA olay kimlikleri listesi ve açıklamalarının sağlar.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: e9147f4333f481eaec4967dd32846bd123866941
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 0c37024719a9037cb0522ba40115714a35a399b2
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009362"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166451"
 ---
-*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
+*İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 
-# <a name="ata-event-id-reference"></a>ATA olay kimliği başvurusu
+# <a name="ata-event-id-reference"></a>ATA olay kimliği başvuru
 
-ATA Center Olay Görüntüleyicisi'ni, ATA'ın olayları günlüğe kaydeder. Bu makalede, olay kimliklerinin bir listesini sağlar ve her bir açıklaması verilmiştir.
+ATA Center Olay Görüntüleyicisi'ni, Ata'nın olayları günlüğe kaydeder. Bu makalede, olay kimliklerinin bir listesini sağlar ve her bir açıklaması verilmiştir.
 
-Olayları şurada bulunabilir:
+Olayları burada bulunabilir:
 
 ![Olay Kimliği konumu](./media/event-id-location.png)
 
 ## <a name="ata-health-events"></a>ATA sistem durumu olayları
 
-1001 – boş alan sistem durumu uyarısı ATA Center veritabanı veri sürücüsü 
+1001 – ATA Center veritabanı veri sürücü boş alan sistem durumu Uyarısı 
 
-1003 – ATA Center aşırı yüklenmiş sistem durumu Uyarısı 
+1003 – ATA Center aşırı yüklenmiş bir sistem durumu Uyarısı 
 
-1004 – sertifikası süre sonu sistem durumu Uyarısı 
+1004 – sertifika sona erme durumu Uyarısı 
 
-1005 – merkezi veritabanı bağlantısı kesilmiş sistem durumu Uyarısı 
+1005: merkezi veritabanı bağlantısı kesilmiş bir sistem durumu Uyarısı 
 
-1006 – ATA Gateway Dizin Hizmetleri istemci hesabı parola süre sonu sistem durumu Uyarısı 
+1006: ATA Gateway Dizin Hizmetleri istemci hesabı parola sona erme durumu Uyarısı 
 
-1007 – ATA Gateway etki alanı Eşitleyici atanmamıştır sistem durumu Uyarısı 
+1007 – ATA Gateway etki alanı Eşitleyicisi atanmadı durumu Uyarısı 
 
 1008 – ATA Gateway yakalama ağ bağdaştırıcısı hatalı sistem durumu Uyarısı 
 
 1009 – ATA Gateway yakalama ağ bağdaştırıcısı eksik sistem durumu Uyarısı 
 
-1010 – ATA Gateway Dizin Hizmetleri istemci bağlantısı sistem durumu Uyarısı 
+1010 – ATA Gateway Dizin Hizmetleri istemci bağlantı durumu Uyarısı 
 
-1011 – ATA Gateway bağlantısı kesilmiş sistem durumu Uyarısı 
+1011 değerinin kodunu – sistem durumu uyarısı ATA Gateway bağlantısı kesildi 
 
-1012 – olay etkinlikleri sistem durumu uyarısı ATA Gateway aşırı yüklenmiş 
+1012 – olay etkinlikleri durumu uyarısı ATA Gateway aşırı 
 
-1013 – ATA Gateway aşırı ağ etkinlikleri sistem durumu Uyarısı 
+1013 – ATA Gateway aşırı ağ etkinlikleri durumu Uyarısı 
 
 1014 – merkezi posta sistem durumu Uyarısı 
 
-1015 – merkezi Syslog sistem durumu Uyarısı 
+1015 – merkezi Syslog durumu Uyarısı 
 
-1016 – ATA Gateway bileşenleri güncel sistem durumu Uyarısı 
+1016 – ATA Gateway bileşenleri güncel durumu Uyarısı 
 
-1017 – merkezi trafiği sistem durumu uyarısı almıyor 
+1017: Merkezi sistem durumu uyarısı trafiği almıyor 
 
-1018 – ATA Gateway başlangıç hatası Sistem Durumu Uyarısı 
+1018 – ATA Gateway start-başarısızlık durumu Uyarısı 
 
-1019 – ATA Gateway düşük bellek sistem durumu Uyarısı 
+1019 – ATA Gateway düşük bellek durumu Uyarısı 
 
-1020 – ATA Gateway RADIUS olay dinleyicisi sistem durumu Uyarısı 
+1020 – ATA Gateway RADIUS olay dinleyicisi durumu Uyarısı 
 
-1021 – ATA Gateway Syslog olay dinleyicisi sistem durumu Uyarısı 
+1021 – ATA Gateway Syslog olay dinleyicisi durumu Uyarısı 
 
 1022 – ATA Center dış IP adresi çözüm hatası Sistem Durumu Uyarısı 
  
-## <a name="ata-suspicious-activity-events"></a>ATA kuşkulu etkinlik olayları
+## <a name="ata-suspicious-activity-events"></a>ATA şüpheli etkinlik olayları
 
-2001 – anormal davranışları şüpheli etkinlik 
+2001-şüpheli etkinlik anormal davranış 
 
-2002 – olağan dışı protokol şüpheli etkinlik 
+2002: olağan dışı protokol şüpheli etkinlik 
 
-2003 – hesap numaralandırma kuşkulu etkinliği 
+2003: hesap numaralandırma şüpheli etkinliği 
 
-2004 – LDAP deneme yanılma zorla şüpheli etkinlik 
+2004: LDAP deneme yanılma şüpheli etkinlik zorla 
 
-2006 – çoğaltma şüpheli etkinlik Dizin Hizmetleri 
+2006-çoğaltma şüpheli etkinlik Dizin Hizmetleri 
 
-2007 – DNS keşif şüpheli etkinlik 
+2007 – DNS keşfi şüpheli etkinliğini 
 
-2008 – şifreleme indirgeme şüpheli etkinlik 
+2008 – şifreleme düşürme şüpheli etkinliği 
 
-2012 – oturumları şüpheli etkinlik listeleme 
+2012 – şüpheli etkinlik oturumları listeleme 
 
-2013 – sahte PAC şüpheli etkinlik 
+2013 – sahte PAC şüpheli etkinliği 
 
-2014 – Honeytoken aktivite şüpheli etkinlik 
+2014 – Honeytoken etkinliği şüpheli etkinlik 
 
-2016 – büyük nesne silme şüpheli etkinlik 
+2016 – büyük çaplı nesne silme şüpheli etkinliği 
 
 2017 – geçişi karma şüpheli etkinlik 
 
-2018 – geçişi bilet şüpheli etkinlik 
+2018 – geçişi anahtar şüpheli etkinliği 
 
-2019 – uzaktan yürütme şüpheli etkinlik 
+2019 – şüpheli etkinlik uzaktan yürütme 
 
-2020 – veri koruma yedek anahtar şüpheli etkinlik alma 
+2020 – data protection yedek anahtar şüpheli etkinlik alma 
 
-2021 – yapılan keşif şüpheli etkinlik 
+2021 – SAMR keşfi şüpheli etkinliğini 
 
-2022 – altın anahtar şüpheli etkinlik 
+2022 – altın bilet şüpheli etkinlik 
 
-2023 – deneme yanılma saldırısı şüpheli etkinlik 
+2023 – yanılma şüpheli etkinlik 
 
-2024 - anormal hassas grubu üyeliği değişikliği şüpheli etkinlik  
+2024 - anormal gizli grup üyeliği değişiklik şüpheli etkinliği  
 
 ## <a name="ata-auditing-events"></a>ATA denetim olayları
 
 3001 – ATA yapılandırmasını değiştirme 
 
-3002 – ATA Gateway eklendi
+3002 – eklenen ATA Gateway
 
 3003 – ATA Gateway silindi
 
@@ -127,12 +127,12 @@ Olayları şurada bulunabilir:
 
 3005 – ATA Konsolu'nda oturum açma
 
-3006 – etkinlik durumu el ile değişiklik 
+3006: el ile etkinlik durumu değişikliği 
 
-3007 – el ile değişiklik şüpheli etkinlik durumu 
+3007 – kuşkulu etkinliğin durumu el ile değişiklik 
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

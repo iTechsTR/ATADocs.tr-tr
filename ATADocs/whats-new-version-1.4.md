@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c60e577ed5df2beecd9737a4637c7a3162a9e706
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: a4e9b9f5213322b21a22cb22bbede9db60144e6b
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24018533"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166861"
 ---
 # <a name="what39s-new-in-ata-version-14"></a>ATA sürüm 1.4’teki yenilikler
 Bu sürüm notları, Advanced Threat Analytics sürüm 1.4’teki bilinen sorunlar hakkında bilgi sağlar.
@@ -35,7 +35,7 @@ Bu sürüm notları, Advanced Threat Analytics sürüm 1.4’teki bilinen sorunl
 
 -   ATA Center başına daha fazla ATA Gateway desteklemeye yönelik performans geliştirmeleri.
 
--   Bilgisayar adları ve IP adresleri eşleşen yeni bir Otomatik ad çözümleme işlemi eklendi; bu benzersiz özellik araştırma sürecinde çok değerli zamandan tasarruf sağlar ve güvenlik analistleri için güçlü bir kanıt belirtin
+-   Bilgisayar adları ve IP adresleri eşleşen yeni bir Otomatik ad çözümleme işlemi eklendi; bu benzersiz özellik araştırma sürecinde değerli zamanınızı kaydeder ve güvenlik analistleri için güçlü kanıtlar sağlar
 
 -   Algılama sürecini otomatik olarak ayarlamak için kullanıcılardan geliştirilmiş giriş toplama özelliği.
 
@@ -62,20 +62,20 @@ Bu sürümün bilinen sorunları şunlardır:
 ATA Gateway’de, yükleyebileceğiniz desteklenen tek ağ yakalama yazılımı [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865)’tür. Microsoft Message Analyzer’ı veya başka bir ağ yakalama yazılımını yüklemeyin. Başka bir yazılımın yüklenmesi ATA Gateway'in düzgün çalışmayı durdurmasına neden olur.
 
 ### <a name="installation-from-zip-file"></a>Zip dosyasından yükleme
-ATA Gateway’i yüklerken, dosyaları zip dosyasından bir yerel dizine ayıkladığınızdan emin olun ve bileşeni o dizinden yükleyin. ATA Gateway'i doğrudan zip dosyasının içinden yüklemeyin; yoksa yükleme başarısız olur.
+ATA Gateway’i yüklerken, dosyaları zip dosyasından bir yerel dizine ayıkladığınızdan emin olun ve bileşeni o dizinden yükleyin. ATA Gateway'i doğrudan zip dosyasının içinden yüklemeyin veya yükleme başarısız olur.
 
 ### <a name="uninstalling-previous-versions-of-ata"></a>ATA’nın önceki sürümlerini kaldırma
 ATA’nın önceki bir sürümünü, Public Preview veya Private Preview sürümlerini yüklediyseniz, ATA’nın bu sürümünü yüklemeden önce ATA Center ve ATA Gateway bileşenlerini kaldırmalısınız.
 
 Ayrıca, Veritabanı dosyalarını ve günlük dosyalarını da silmeniz gerekir. Önce ATA sürümlerinden gelen veritabanları, ATA’nın GA sürümüyle uyumlu değildir.
 
-ATA Center veya ATA Gateway'i kaldırmaya çalıştığınızda kaldırma yerine ATA yüklemesi açarsa, aşağıdaki kayıt defteri anahtarını ekleyin ve sonra ATA yeniden kaldırmanız gerekir.
+ATA Center veya ATA Gateway'i kaldırmaya çalıştığınızda kaldırma yerine ATA yüklemesi açarsa, aşağıdaki kayıt defteri anahtarını ekleyin ve sonra yeniden ATA kaldırmanız gerekir.
 
 **ATA Center**
 
 -   HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center
 
--   Adı `InstallationPath` ve değeri `C:\Program Files\Microsoft Advanced Threat Analytics\Center` olan yeni bir Dize değeri ekleyin. Bu, varsayılan yükleme klasörüdür. Yükleme klasörünü değiştirdiyseniz, ATA yüklendiği yolu girin.
+-   Adı `InstallationPath` ve değeri `C:\Program Files\Microsoft Advanced Threat Analytics\Center` olan yeni bir Dize değeri ekleyin. Bu, varsayılan yükleme klasörüdür. Yükleme klasörünü değiştirdiyseniz, ATA'ın yüklendiği yolu girin.
 
     ![ATA Center yükleme yolu için kayıt defteri düzenleyicisi](media/ATA-uninstall-center-bug.jpg)
 
@@ -83,19 +83,19 @@ ATA Center veya ATA Gateway'i kaldırmaya çalıştığınızda kaldırma yerine
 
 -   HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Gateway
 
--   Adı `InstallationPath` ve değeri `C:\Program Files\Microsoft Advanced Threat Analytics\Gateway` olan yeni bir Dize değeri ekleyin. Bu, varsayılan yükleme klasörüdür.  Yükleme klasörünü değiştirdiyseniz, ATA yüklendiği yolu girin.
+-   Adı `InstallationPath` ve değeri `C:\Program Files\Microsoft Advanced Threat Analytics\Gateway` olan yeni bir Dize değeri ekleyin. Bu, varsayılan yükleme klasörüdür.  Yükleme klasörünü değiştirdiyseniz, ATA'ın yüklendiği yolu girin.
 
     ![ATA Gateway yükleme yolu için kayıt defteri düzenleyicisi](media/ATA-GW-uninstall-bug.jpg)
 
 Kaldırma işleminden sonra, hem ATA Center hem de ATA Gateway’deki yükleme klasörünü silin.  Veritabanını ayrı bir klasöre yüklediyseniz, ATA Center’da Veritabanı klasörünü silin.
 
 ### <a name="health-alert---disconnected-ata-gateway"></a>Sistem durumu uyarısı - bağlantısı kesilmiş ATA Gateway
-Birden fazla ATA Gateway varsa ve bağlantısı kesilmiş ATA Gateway uyarılar, otomatik çözümleyin yalnızca biri, diğer bileşenler açık durumda bırakarak üzerinde çalışır. El ile ATA Gateway'in açık olduğunu ve hizmetin çalıştığını onaylayın ve elle uyarıyı çözümleyin.
+Sahip birden fazla ATA Gateway ve bağlantısı kesilmiş ATA Gateway uyarıları varsa otomatik çözümleyin rest açık durumda bırakarak bileşenlerden yalnızca birinde çalışır. ATA Gateway'in açık olduğunu ve hizmetin çalıştığını el ile onaylayın ve elle uyarıyı çözümleyin.
 
 ### <a name="kb-on-virtualization-host"></a>Sanallaştırma ana bilgisayarında KB
 Sanallaştırma ana bilgisayarına KB 3047154’ü yüklemeyin. Bu, bağlantı noktası yansıtma işleminin düzgün çalışmayı durdurmasına neden olur.
 
-## <a name="see-also"></a>Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca Bkz.
 
 [ATA’yı 1.6 sürümüne güncelleştirme: geçiş kılavuzu](ata-update-1.6-migration-guide.md)
 

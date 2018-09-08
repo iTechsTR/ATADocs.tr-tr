@@ -1,75 +1,82 @@
 ---
-title: "Yanal hareket yolu saldırılarına ATA araştırma | Microsoft Docs"
-description: "Bu makalede, yanal hareket yolu saldırılarını Advanced Threat Analytics (ATA) ile algılamak üzere açıklar."
-keywords: 
+title: ATA ile yanal hareket yolu saldırılarını araştırma | Microsoft Docs
+description: Bu makalede, yanal hareket yolu Advanced Threat Analytics (ATA) ile saldırıları açıklar.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
-ms.topic: article
-ms.prod: 
+ms.date: 6/14/2018
+ms.topic: conceptual
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: dc03cfe1719541dac0f8509c0f8f22987ecb96bb
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 11f67ba077251d552c5a5a4d0391e5668b349215
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166330"
 ---
-*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
+*İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
-# <a name="investigating-lateral-movement-paths-with-ata"></a>Yanal hareket yollarını ATA ile araştırma
+# <a name="investigating-lateral-movement-paths-with-ata"></a>ATA ile yanal hareket yollarını araştırma
 
-Hatta hassas kullanıcılarınızın korumak için en iyi yapın ve sık sık değişen, kendi makinelerine sıkı ve verilerine güvenli şekilde depolanan karmaşık parolalar, yöneticilere sahip olduğunda, saldırganlar yanal hareket yolları hassas erişmek için kullanmaya devam edebilirsiniz hesapları. Bir makineye hassas kullanıcı oturum yanal hareket saldırılarında, saldırgan örnekleri hassas olmayan kullanıcı yerel haklarına sahip olduğu yararlanır. Saldırganlar sonra yanal, kullanıcının daha az hassas verilere erişme ve hassas kullanıcı için kimlik bilgilerini elde etmek için bilgisayar arasında taşıma taşıyabilirsiniz. 
+Bile, hassas kullanıcıları korumak için en iyi yapın ve sık sık değişiklik, kendi makinelerine sıkı ve verilerine güvenli şekilde depolanan karmaşık parolalar yöneticilerinize sahip olduğunda, saldırganlar yanal hareket yollarını hassas erişmek için kullanmaya devam edebilirsiniz hesaplar. Bir makineye hassas kullanıcılar oturum açtığında yanal hareket saldırılarında, saldırgan örnekleri hassas olmayan kullanıcı yerel haklarına sahip olduğu yararlanır. Saldırganlar ardından riskli, daha az hassas kullanıcı erişme ve bilgisayar arasında taşımak için hassas kullanıcı kimlik bilgilerini elde etmek taşıyabilirsiniz. 
 
-## <a name="what-is-a-lateral-movement-path"></a>Yanal hareket yolu nedir?
+## <a name="what-is-a-lateral-movement-path"></a>Yanal hareket yolunun nedir?
 
-Yanal hareket, saldırganın hassas hesapları erişim kazanmak için hassas olmayan hesapları proaktif olarak kullanır. durumdur. Açıklanan yöntemlerden birini kullanın [şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md) ilk hassas olmayan parola kazanmak ve Yöneticiler, ağınızda olan ve hangi makinelerin anlamak için Bloodhound gibi bir araç kullanmak için Bunlar erişilebilir. Bunlar ardından kimin hangi hesapların olduğunu biliyor ve hangi kaynaklara ve dosyaları zaten eriştiği bilgisayarlarda depolanan diğer kullanıcıların (bazen hassas kullanıcılar) kimlik bilgilerini çalmak erişmek için etki alanı denetleyicilerinde verilere erişebilir ve ardından yanal ağınızdaki yönetici ayrıcalıkları elde kadar kullanıcı ve kaynak arasında taşıyın. 
+Yanal hareket, bir saldırganın hassas hesaplara yönelik erişim elde etmek için hassas olmayan hesaplarını kullandığı durumdur. Bu yapılabilir açıklanan yöntemlerle[şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md). Ağınızda yöneticisi olan ve makineler anlamak için saldırgan erişebilir, saldırgan veri etki alanı denetleyicilerinize yararlanabilirsiniz. 
 
-ATA, saldırganlar yanal hareket başarılı önlemek için ağınızdaki önleyici harekete geçmenizi sağlar.
+ATA saldırganlar yanal hareket bulunulmasını önlemek için ağınızdaki preemptive harekete geçmenizi sağlar.
 
-## <a name="discovery-your-at-risk-sensitive-accounts"></a>Bulma at-risk hassas hesaplarınızı
+## <a name="discovery-your-at-risk-sensitive-accounts"></a>Bulma, dalgalanmasını hassas hesaplar
 
-Ağınızdaki hassas hangi hesapların kendi bağlantı nedeniyle hassas olmayan hesaplar ve kaynaklara karşı savunmasız olduğunu öğrenmek için aşağıdaki adımları izleyin. Yanal hareket saldırılarına karşı ağınızın güvenliğini sağlamak için ATA, ayrıcalıklı hesaplarınızdaki başlar ve ardından hangi kullanıcıların gösterir bir eşleme sağlar ve bu kullanıcıların kimlik bilgilerini ve yanal yolunda aygıtlardır anlamına geriye dönük, sonundan ATA çalışır.
+Ağınızda hangi hassas hesapları bulmak için hassas olmayan hesaplar, bağlantı nedeniyle güvenlik açığı bulunan veya belirli bir zaman çerçevesinde kaynakları şu adımları izleyin. 
 
-1. ATA Konsolu menüde raporları simgesine tıklayın ![Raporlar simgesi](./media/ata-report-icon.png).
+1. ATA Konsolu menüde rapor simgesine tıklayın ![Raporlar simgesi](./media/ata-report-icon.png).
 
-2. Altında **yanal hareketleri yollara hassas hesapları**, yoksa hiçbir yanal hareket yol bulundu, raporu gri çıkışı. Yanal hareket yolları varsa, daha sonra otomatik olarak seçme rapor tarihleri ilk tarih ilgili verileri olduğunda. 
+2. Altında **yana hareket yolları hassas hesaplara yönelik**, yatay hareket yolu bulunamadı, raporun gri varsa. Yanal hareket yollarını varsa, daha sonra otomatik olarak Seç raporun tarih ilk tarih ilgili verileri olduğunda. 
 
  ![raporlar](./media/reports.png)
 
-3. Tıklatın **karşıdan**.
+3. Tıklayın **indirme**.
 
-3. Oluşturulan Excel dosyası risk altındadır, hassas hesapları hakkında ayrıntılar sağlar. **Özet** sekmesi, hassas hesapları, bilgisayar ve at-risk kaynaklar için ortalama sayısı ayrıntı grafikleri sağlar. **Ayrıntıları** sekmesini endişe olması gereken hassas hesapları listesini sağlar.
+3. Oluşturulan Excel dosyası, risk altında olan hassas hesaplarınızı hakkında ayrıntılar sağlar. **Özeti** sekmesi, hassas hesapları, bilgisayar ve risk altında bulunan kaynaklar için ortalama sayısı ayrıntı grafikler sağlar. **Ayrıntıları** sekmesi endişe olmanız gereken hassas hesapların listesini sağlar. Yollarının önceden var ve hemen kullanılamayabilir yollar olduğunu unutmayın.
 
 
 ## <a name="investigate"></a>Araştırma
 
-Artık hangi hassas hesapları risk altındadır bildiğinize göre derin olabilir. daha fazla bilgi edinmek ve önlemler almak için ATA daha yakından inceleyin.
+Artık hangi hassas hesapları risk altında olduğunu bildiğinize göre derin olabilir. daha fazla bilgi edinin ve önlemler almak için ATA öğrenebilirsiniz.
 
-1. ATA Konsolu'nda hesabı listelendiğini kullanıcının güvenlik açığı Ara **yanal hareketleri yollara hassas hesapları** , örneğin, Samira Abbasi rapor. Bir varlığın yanal hareket yolunda olduğunda varlık profile eklenmesini yanal hareket rozet da arayın ![yanal simgesi](./media/lateral-movement-icon.png) veya ![yolu simgesi](./media/paths-icon.png).
+1. Varlık bir yanal hareket yolu olduğunda varlık profiline eklenir yanal hareket rozet ATA Konsolu'nda arayın ![yanal simgesi](./media/lateral-movement-icon.png) veya ![Yol simgesi](./media/paths-icon.png). Bu son iki gün içinde bir yanal hareket yolunun olduğunda kullanılabilir.
 
-2. Açılan kullanıcı profili sayfasında tıklatın **yanal hareket yolları** sekmesi.
+2. Açılan kullanıcı profili sayfasında tıklatın **yana hareket yollarını** sekmesi.
 
-3. Görüntülenen diyagramı, hassas kullanıcı olası yolları bir haritasını sağlar. Grafik Etkilenme yeni nedenle son iki gün içinde yapılan bağlantıları gösterir.
+3. Görüntülenen grafiği, hassas kullanıcı için olası yol haritası sağlar. Grafik son iki gün içinde yapılan bağlantıları gösterir.
 
-4. Hassas kullanıcının kimlik bilgilerinin açıklanmasını hakkında bilgi edinebilirsiniz görmek için grafiği gözden geçirin. Örneğin, bu eşlemeyi Samira izleyin Abbasi içinde **tarafından oturum açtığınız** gri Samira kendi ayrıcalıklı kimlik bilgileriyle günlüğe nerede görmek için okları. Bu durumda, REDMOND Washington istisnası bilgisayarda Samira'nın harfe duyarlı kimlik bilgileri kaydedildi Ardından, diğer kullanıcılar oturum bkz en Etkilenme ve güvenlik açığı oluşturulan hangi bilgisayarların. Bu bakarak bkz **yönetici** siyah kaynak üzerinde yönetici ayrıcalıklarına sahip kişileri görmek için okları. Bu örnekte, herkesin Contoso tüm grubundaki kullanıcı kimlik bilgilerini bu kaynaktan erişim olanağı vardır.  
+4. Hassas kullanıcı kimlik bilgilerinin paylaşılmasını hakkında bilgi edinebilirsiniz görmek için grafikteki gözden geçirin. Örneğin, bu haritada izleyebilirsiniz **oturum açan** gri ok burada Samira kendi ayrıcalıklı kimlik bilgileriyle oturum görmek için. Bu durumda, hassas Samira'nın kimlik REDMOND Washington geliştirme bilgisayarda kaydedildi Daha sonra diğer kullanıcılar oturum bakın ve güvenlik açığı en oranını oluşturulan hangi bilgisayarların. Bu bakarak görebilirsiniz **yönetici** siyah okları kimin kaynak üzerinde yönetici ayrıcalıklarına sahip görmek için. Bu örnekte, Herkes grubunun **Contoso tüm** bu kaynak kullanıcı kimlik bilgileriyle erişmeye özelliğine sahiptir.  
 
- ![Kullanıcı profili yanal hareket yolları](media/user-profile-lateral-movement-paths.png)
-
-
-## <a name="preventative-best-practices"></a>Koruyucu en iyi uygulamalar
-
-- Yanal hareket önlemek için en iyi yolu hassas kullanıcılar yalnızca sağlamlaştırılmış bilgisayarlara oturum açarken yönetici kimlik bilgilerini kullanmak emin olmaktır aynı bilgisayar üzerinde yönetici haklarına sahip hiçbir hassas olmayan kullanıcı olduğu. Örnekte, Samira REDMOND Washington geliştirme erişmesi gerekirse, bunları bir kullanıcı adı ve parolayla dışında her yönetici kimlik bilgileri kaydettiğini emin olun veya REDMOND Washington istisnası yerel Yöneticiler grubundan Contoso tüm grubunu Kaldır
-
-- Hiç kimse gereksiz yerel yönetici izinlerine sahip olduğundan emin olun önerilir. Örnekte, Contoso tüm herkesin REDMOND Washington istisnası üzerinde yönetici hakları gerçekten gerekiyorsa bkz denetlemelisiniz
-
-- Kişiler yalnızca gerekli kaynaklara erişimi olduğundan emin olmak için her zaman iyi bir fikirdir. Örnekte de görüldüğü gibi Oscar Posada Samira'nın Etkilenme önemli ölçüde widens. Kendisine Contoso tüm dahil edilmesi gerekli mi? Etkilenme en aza indirmek için oluşturabilirsiniz alt grupları var mı?
+ ![Kullanıcı profili yatay hareket yolları](media/user-profile-lateral-movement-paths.png)
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="preventative-best-practices"></a>Önleyici en iyi uygulamalar
+
+- Yanal hareket önlemek için en iyi yolu sağlamlaştırılmış bilgisayarlarda açarken hassas kullanıcılar'ın yönetici kimlik bilgilerini kullandığınızdan emin olmak için olan aynı bilgisayarda yönetici haklarına sahip hiçbir hassas olmayan kullanıcı olduğu. Örnekte, REDMOND Washington geliştirme Samira erişmesi gerekirse Filiz adı ve parola ile oturum dışında her yönetici kimlik bilgileri kaydettiğini emin olun veya yerel Yöneticiler grubundan REDMOND Washington geliştirme Contoso tüm grubunu Kaldır
+
+- Hiç kimse gereksiz yerel yönetici izinlerine sahip olduğundan emin olun önerilir. Örnekte, Contoso tüm herkes gerçekten REDMOND Washington geliştirme yönetici hakları gerekiyorsa görmek için denetlemelisiniz
+
+- Kişilerin yalnızca gerekli kaynaklara erişebildiğinden emin olun. Bu örnekte Oscar Posada önemli ölçüde Samira'nın Etkilenme widens. O gruba dahil edilmesi gerekirse **Contoso tüm**? Etkilenme en aza indirmek için oluşturabileceğiniz alt gruplar var mı?
+
+**İpucu** – etkinliği, son iki gün içinde değil algılandığında graf görünmez, ancak yanal hareket yolu raporun son 60 güne yatay hareket yolları hakkında bilgi sağlamak kullanılabilir olmaya devam edecektir.
+
+**İpucu** - Ata'nın yanal hareket yolu algılama için gereken SAM-R işlemleri gerçekleştirmek sunucularınızı ayarlama konusunda yönergeler için [SAM-r'yi Yapılandır](install-ata-step9-samr.md).
+
+
+
+
+## <a name="see-also"></a>Ayrıca Bkz.
 - [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

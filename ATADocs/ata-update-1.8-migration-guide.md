@@ -6,26 +6,26 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 07/20/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 540d1cb0754dc9191a985625a8f988cb44c9f000
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 0ac29e48428d1fc5068d128b0a8a457846458890
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24019009"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44165907"
 ---
 # <a name="updating-ata-to-version-18"></a>ATA’yı sürüm 1.8’e güncelleştirme
 
 > [!NOTE] 
-> ATA ortamınızda yüklü değilse, açıklanan standart yükleme yordamını izleyin ve sürüm 1,8 içerir, ATA'ın tam sürümünü indirin [Ata'yı yükleme](install-ata-step1.md).
+> ATA ortamınızda yüklü değilse, sürüm 1.8 içerir ve açıklanan standart yükleme yordamını izleyin, ATA'ın tam sürümünü indirin [Ata'yı yükleme](install-ata-step1.md).
 
-ATA sürüm dağıtılan 1.7 zaten varsa, bu yordam dağıtımınızı güncelleştirmek için gereken adımlarda size yol gösterir.
+ATA sürüm 1.7 dağıtılan zaten varsa, bu yordam dağıtımınızı güncelleştirmek gereken adımlarda size yol gösterir.
 
 > [!NOTE] 
 >  Yalnızca ATA sürüm 1.7 Güncelleştirmesi 1 ve 1.7 Güncelleştirmesi 2, ATA sürüm 1.8’e güncelleştirilebilir, ATA’nın daha eski sürümleri doğrudan ATA sürüm 1.8’e güncelleştirilemez.
@@ -46,7 +46,7 @@ Geçiş sürümündeki dosya yalnızca ATA 1.7’yi güncelleştirmek için kull
 
 1.  Veritabanınızı yedekleyin: (isteğe bağlı)
 
-    -   ATA Center bir sanal makinede çalışıyorsa ve bir denetim noktası almak istiyorsanız, önce sanal makineyi kapatın.
+    -   ATA Center bir sanal makinede çalışıyorsa ve bir denetim noktası almak istiyorsanız, sanal makineyi önce kapatın.
 
     -   ATA Center fiziksel sunucuda çalışıyorsa veritabanını yedekleme hakkında bilgi için [Olağanüstü durum kurtarma](disaster-recovery.md) makalesine bakın.
 
@@ -54,14 +54,14 @@ Geçiş sürümündeki dosya yalnızca ATA 1.7’yi güncelleştirmek için kull
 
     -  **Hoş Geldiniz** sayfasında dilinizi seçin ve **İleri**’ye tıklayın.
 
-    -  Sürüm 1.7 otomatik güncelleştirmeleri etkinleştirirseniz alamadık, ATA'ın güncel kalması için ATA için Microsoft Update'i kullanmak için ayarlamanız istenir.  Microsoft Update sayfasında, **Güncelleştirmeleri denetlediğimde Microsoft Update'i kullan (önerilir)** öğesini seçin.
+    -  Sürüm 1. 7'de otomatik güncelleştirmeleri etkinleştirmediyseniz, Ata'yı güncel kalması için Ata'yı Microsoft Update kullanacak şekilde ayarlamanız istenir.  Microsoft Update sayfasında, **Güncelleştirmeleri denetlediğimde Microsoft Update'i kullan (önerilir)** öğesini seçin.
     ![ATA güncel resmi tutun](media/ata_ms_update.png)
      
-     Bu, ATA'ın güncelleştirmeleri etkinleştirmek için Windows ayarlarını ayarlar. 
+     Bu, Windows ayarlarını, ATA güncelleştirmelerini etkinleştirecek şekilde ayarlar. 
     
-    -  **Veri geçişi** ekranında, verilerin tümünü veya bir kısmını geçirmek istediğinizi seçin. Yalnızca kısmi veri geçirmeyi seçerseniz, tüm algılamaların tam bir profil oluşturmak için üç hafta sürer anormal davranışları algılama hariç olmak üzere, hemen çalışır.  
+    -  **Veri geçişi** ekranında, verilerin tümünü veya bir kısmını geçirmek istediğinizi seçin. Verilerin yalnızca bir kısmını geçirmeyi seçerseniz, tüm algılamalar hemen bir profil oluşturma işleminin tamamlanması üç haftaya kadar anormal davranış algılama hariç çalışır.  
     
-    **Kısmi** veri geçişinin yüklenmesi çok daha kısa sürer. **Tam** veri geçişini seçerseniz, yüklemenin tamamlanması oldukça uzun sürebilir. **Veri Geçişi** ekranında listelenen tahmini süre ve gerekli disk alanı bilgilerine bakmayı unutmayın. Bu rakamlar, ATA’nın önceki sürümlerinde kaydettiğiniz yakalanan ağ trafiği miktarına bağlıdır. Örneğin, aşağıdaki ekran büyük veritabanından veri geçişi görebilirsiniz:
+    **Kısmi** veri geçişinin yüklenmesi çok daha kısa sürer. **Tam** veri geçişini seçerseniz, yüklemenin tamamlanması oldukça uzun sürebilir. **Veri Geçişi** ekranında listelenen tahmini süre ve gerekli disk alanı bilgilerine bakmayı unutmayın. Bu rakamlar, ATA’nın önceki sürümlerinde kaydettiğiniz yakalanan ağ trafiği miktarına bağlıdır. Örneğin, aşağıdaki ekranda, büyük bir veritabanından veri geçişi görebilirsiniz:
          
     ![ATA veri geçişi](media/migration-data-migration.png)
 
@@ -71,7 +71,7 @@ Geçiş sürümündeki dosya yalnızca ATA 1.7’yi güncelleştirmek için kull
 
     ![Güncelleştirme başarılı ekranı](media/migration-center-success.png)
 
-5.  İçinde **güncelleştirmeleri** ekran, otomatik olarak güncelleştirmek için ATA Gateway zaten ayarladıysanız, bu noktada güncelleştirmek değilse, tıklatın **güncelleştirme** her ATA Gateway yanındaki.
+5.  İçinde **güncelleştirmeleri** ekranında, otomatik olarak güncelleştirmek için ATA Gateway zaten ayarlanmışsa kullanıcılar bu noktada güncelleştirilir, aksi halde tıklayın **güncelleştirme** her ATA Gateway'in yanındaki.
   
 ![Ağ geçitlerini güncelleştirme resmi](media/migration-update-gw.png)
 
@@ -83,6 +83,6 @@ Geçiş sürümündeki dosya yalnızca ATA 1.7’yi güncelleştirmek için kull
 > Yeni ATA Gateway’ler yüklemek için **Ağ Geçitleri** ekranına gidin, ATA 1.8 Gateway kurulum paketini almak için **Ağ Geçidi Kurulumunu İndir**’e tıklayın ve yeni Ağ Geçidi yüklemesi için [4. Adım’da açıklanan yönergeleri izleyin. ATA Gateway’i yükleyin](install-ata-step4.md).
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

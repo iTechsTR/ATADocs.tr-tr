@@ -6,21 +6,21 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0c8eb2c368a81a64e62f79b9fb606b9fc04efd8b
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 7bf91f258d1eaf9c83cc610fc43dfa52a2da3e6b
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009794"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166910"
 ---
-*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
+*İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 
 # <a name="working-with-ata-system-health-and-events"></a>ATA sistem durumu ve olayları ile çalışma
@@ -36,18 +36,18 @@ ATA Sistem Durumu Merkezi, menü çubuğundaki Sistem Durum Merkezi’nin üst k
 ### <a name="managing-ata-health"></a>ATA sistem durumunu yönetme
 Sisteminizin bir bütün olarak durumunu denetlemek için, menü çubuğunda Sistem Durumu Merkezi simgesine tıklayın. ![ATA Sistem Durumu Merkezi simgesi](media/ATA-red-dot.png)
 
--   Tüm açık uyarılar ayarlanarak yönetilebilir **Kapat**, **bastır**, veya **silmek** uyarı köşesindeki üç noktaya tıklatıp seçiminizden.
+-   Tüm açık uyarılar ayarlanarak yönetilebilir **Kapat**, **bastır**, veya **Sil** uyarı üst köşesindeki üç noktaya tıklayarak ve seçiminizi yapma.
 
 -   **Açık**: Tüm yeni şüpheli etkinlikler bu listede gösterilir.
 
--   **Kapat**: belirlediğiniz, Araştırdığınız ve düzeltip kuşkulu etkinlikleri izlemek için kullanılır.
+-   **Kapat**: belirlediğiniz, Araştırdığınız ve azalttığınız kuşkulu etkinlikleri izlemek için kullanılır.
 
     > [!NOTE]
-    > Aynı etkinlik yeniden bir kısa süre içinde algılanırsa, ATA kapalı bir aktivite yeniden.
+    > Tekrar bir kısa süre içinde aynı etkinlik algılanırsa, ATA kapalı bir etkinlik yeniden.
 
--   **Gösterme**: Bir etkinliği göstermemek, etkinliği o an için yoksaymak ve yalnızca yeni bir örnek ortaya çıkarsa uyarı almak istediğiniz anlamına gelir. Benzer bir uyarı ATA ise yeniden değil. Ancak uyarı yedi gün için durdurur ve daha sonra yeniden görülür, yeniden uyarı.
+-   **Gösterme**: Bir etkinliği göstermemek, etkinliği o an için yoksaymak ve yalnızca yeni bir örnek ortaya çıkarsa uyarı almak istediğiniz anlamına gelir. Benzer bir uyarı ATA ise yeniden değil. Ancak, bir uyarı yedi gün boyunca durdurur ve sonra tekrar görülürse ise, yeniden uyarılırsınız.
 
-- **Silme**: uyarı silme sistemden veritabanından silinir ve geri yüklemek mümkün olmaz. Sil’e tıkladıktan sonra aynı türdeki tüm şüpheli etkinlikleri silebilirsiniz.
+- **Silme**: bir uyarıyı silerseniz uyarı sistemden veritabanından silinir ve geri yüklemek mümkün olmayacaktır. Sil’e tıkladıktan sonra aynı türdeki tüm şüpheli etkinlikleri silebilirsiniz.
 
 
 
@@ -58,7 +58,7 @@ Sisteminizin bir bütün olarak durumunu denetlemek için, menü çubuğunda Sis
 
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

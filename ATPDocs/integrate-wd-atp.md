@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 6/5/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6d6c2cdb157d4e3f75794c8c40abfc7556e314d5
-ms.sourcegitcommit: b218f60b42a25fe486d774d97719590e6fa74e10
+ms.openlocfilehash: 097769c53eefd1c6e5242086cd56d47b89b36e68
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34760082"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126272"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -100,7 +100,7 @@ Bir uç noktaya tıkladığınızda, Windows Defender ATP Portalı'nda Azure ATP
 ![Windows Defender ATP uyarıları](./media/wd-atp-alerts.png)
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Azure ATP ile yanal hareket yollarını araştırma](use-case-lateral-movement-path.md)
 - [Azure ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool)

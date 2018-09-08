@@ -6,21 +6,21 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 47bd7e9cdd97d8343202be86954e82e69948afed
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: a8a07fd1db2eb0e3797d4330d37fe2059b35f13f
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009318"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44165737"
 ---
-*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
+*İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 
 
@@ -29,9 +29,9 @@ ms.locfileid: "30009318"
 
 
 ## <a name="change-the-domain-connectivity-password"></a>Etki alanı bağlantı parolasını değiştirme
-Etki Alanı Bağlantısı Parolası’nı değiştirirseniz, girdiğiniz parolanın doğru olduğundan emin olun. Değilse, ATA Gateway hizmeti ATA Gateway bileşenleri üzerinde çalışmayı durdurur.
+Etki Alanı Bağlantısı Parolası’nı değiştirirseniz, girdiğiniz parolanın doğru olduğundan emin olun. Yüklü değilse, ATA Gateway hizmeti ATA Gateway bileşenleri üzerinde çalışmayı durdurur.
 
-Bu, ATA Gateway'de kuşkulanırsanız Microsoft.Tri.Gateway-Errors.log dosyasını aşağıdaki hatalara bakın: `The supplied credential is invalid.`
+Bu, ATA Gateway'de gerçekleştiğini şüpheleniyorsanız kuşkulanırsanız Microsoft.Tri.Gateway-Errors.log dosyasında şu hatalar bakın: `The supplied credential is invalid.`
 
 Bunu düzeltmek için, bu yordamı izleyerek ATA Center’da Etki Alanı Bağlantısı parolasını güncelleştirin:
 
@@ -47,7 +47,7 @@ Bunu düzeltmek için, bu yordamı izleyerek ATA Center’da Etki Alanı Bağlan
 
 4.  **Parola** altında, parolayı değiştirin.
 
-    ATA Center etki alanına bağlantısı varsa, kullanmak **Bağlantıyı Sına** kimlik doğrulamaya düğmesi
+    ATA Center etki alanına bağlantısı varsa, kullanmak **Test Bağlantısı** kimlik doğrulamaya düğmesi
 
 5.  **Kaydet**'e tıklayın.
 
@@ -55,6 +55,6 @@ Bunu düzeltmek için, bu yordamı izleyerek ATA Center’da Etki Alanı Bağlan
 
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA Konsolu ile çalışma](working-with-ata-console.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

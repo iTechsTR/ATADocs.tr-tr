@@ -6,21 +6,21 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2b3505693650f353772511804198b617f53d0437
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 1d3832d74d776c33ed7812409c16f7134d6d22a0
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009828"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126170"
 ---
-*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
+*İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 
 
@@ -46,7 +46,7 @@ ATA Konsolunu ilk açtığınızda aşağıdaki ekran görünür:
 
 2. **Bağlantıyı sına**’ya tıklayarak etki alanı bağlantısını sınayabilir ve verilen kimlik bilgilerinin erişim sağlayıp sağlamadığını kontrol edebilirsiniz. Bu, ATA Center etki alanına bağlantısı varsa çalışır.    
 
-    Kaydedildikten sonra konsolunda Hoş Geldiniz iletisi için aşağıdaki iletiyi değişir: ![ATA, aşama 1 Tamamlandı'na Hoş Geldiniz](media/ATA_1.7-welcome-provide-username-finished.png)
+    Kaydedildikten sonra konsoldaki Hoş Geldiniz iletisi şu iletiye değişir: ![ATA Hoş Geldiniz aşaması 1 tamamlandı](media/ATA_1.7-welcome-provide-username-finished.png)
 
 3. Devam etmek için Konsolda **Ağ Geçidi kurulumunu indir ve ilk Ağ Geçidini yükle**’ye tıklayın.
 
@@ -56,13 +56,13 @@ ATA Konsolunu ilk açtığınızda aşağıdaki ekran görünür:
 [3. Adım »](install-ata-step3.md)
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 ## <a name="related-videos"></a>İlgili videolar
-- [ATA dağıtımına genel bakış](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
+- [ATA dağıtımı genel bakış](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [ATA Gateway türü sağ seçme](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA POC Dağıtım Kılavuzu](http://aka.ms/atapoc)
 - [ATA boyutlandırma aracı](http://aka.ms/atasizingtool)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

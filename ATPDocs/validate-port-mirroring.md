@@ -1,40 +1,40 @@
 ---
-title: Azure Advanced Threat Protection içinde bağlantı noktası yansıtmayı doğrulama | Microsoft Docs
-description: Bağlantı noktası yansıtma Azure ATP düzgün yapılandırılıp yapılandırılmadığını doğrulamak açıklar
+title: Azure Gelişmiş tehdit koruması bağlantı noktası yansıtmayı doğrulama | Microsoft Docs
+description: Bağlantı noktası yansıtma ATA'daki doğru yapılandırılmış olduğunu doğrulamak açıklar
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 5/22/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b3d9d35d31eee7ae46800e0547f18330d66e90cc
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: a799d87c2657836594e290812ac6cd6e08f09042
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444612"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44125932"
 ---
-*Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
+*İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 
 # <a name="validate-port-mirroring"></a>Bağlantı Noktası Yansıtmayı Doğrulama
 > [!NOTE] 
-> Bu makalede yalnızca ilgili dağıtırsanız Azure ATP tek başına algılayıcı Azure ATP algılayıcı yerine dağıtın. Azure ATP algılayıcı kullanmanız gerekip gerekmediğini belirlemek için bkz: [dağıtımınız için doğru algılayıcı seçme](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
+> Bu makalede yalnızca ilgili dağıtırsanız Azure ATP algılayıcısını yerine Azure ATP tek başına algılayıcı dağıtın. Azure ATP algılayıcısını kullanmanız gerekip gerekmediğini belirlemek için bkz: [dağıtımınız için doğru algılayıcı seçme](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
  
-Aşağıdaki adımlar, bağlantı noktası yansıtmanın düzgün yapılandırıldığını doğrulama işleminde size yol gösterir. Azure ATP'ın düzgün çalışması Azure ATP tek başına algılayıcı etki alanı denetleyicisi gelen ve giden trafiği görüyor olmanız gerekir. Azure ATP tarafından kullanılan ana veri kaynağı, etki alanı denetleyicilerinden gelen ve giden ağ trafiğinin derin paket incelemesi ' dir. Azure ATP'ın ağ trafiğini görebilmesi bağlantı noktası yansıtma yapılandırılması gerekir. Bağlantı noktası yansıtma, bir bağlantı noktasındaki trafiği (kaynak bağlantı noktası) başka bir bağlantı noktasına (hedef bağlantı noktası) kopyalar.
+Aşağıdaki adımlar, bağlantı noktası yansıtmanın düzgün yapılandırıldığını doğrulama işleminde size yol gösterir. Azure ATP'ın düzgün çalışması Azure ATP tek başına algılayıcı etki alanı denetleyicisi gelen ve giden trafiği görebilirsiniz olması gerekir. Azure ATP tarafından kullanılan ana veri kaynağı, etki alanı denetleyicilerinden gelen ve giden ağ trafiğinin derin paket incelemesi ' dir. Azure ATP'ın ağ trafiğini görebilmesi bağlantı noktası yansıtmayı yapılandırmanız gerekir. Bağlantı noktası yansıtma, bir bağlantı noktasındaki trafiği (kaynak bağlantı noktası) başka bir bağlantı noktasına (hedef bağlantı noktası) kopyalar.
 
 ## <a name="validate-port-mirroring-using-net-mon"></a>Net Mon kullanarak bağlantı noktası yansıtmayı doğrulama
 1.  Yükleme [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) doğrulamak istediğiniz ATP tek başına algılayıcı üzerinde.
 
     > [!IMPORTANT]
-    > Bağlantı noktası yansıtmayı doğrulama için Wireshark yüklemeyi seçerseniz Azure ATP tek başına algılayıcı hizmetini doğrulama sonrasında yeniden başlatın.
+    > Azure ATP tek başına algılayıcı hizmeti bağlantı noktası yansıtmayı doğrulama için Wireshark yüklemeyi seçerseniz, sonra doğrulama yeniden başlatın.
 
 2.  Ağ İzleyicisi'ni açın ve yeni bir yakalama sekmesi oluşturun.
 
@@ -58,10 +58,10 @@ Aşağıdaki adımlar, bağlantı noktası yansıtmanın düzgün yapılandırı
     > Etki alanı denetleyicilerinden gelen ve giden trafiği gördüğünüzden emin olmanız önemlidir.
     
 
-5.  Yalnızca bir yöndeki trafiği görüyorsanız, bağlantı noktası yansıtma yapılandırması gidermenize yardımcı olması için ağ veya sanallaştırma ekipleriniz ile çalışır.
+5.  Yalnızca bir yöndeki trafiği görüyorsanız, bağlantı noktası yansıtma yapılandırması gidermeye yardımcı olmak için ağ veya sanallaştırma ekiplerinizle birlikte çalışın.
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 
-- [Olay iletme özelliğini yapılandırma](configure-event-forwarding.md)
+- [Olay iletme'yi yapılandırma](configure-event-forwarding.md)
 - [Bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md)
 - [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

@@ -6,21 +6,21 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/27/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9a113d8d090c5a90a07043a0ef75e1be0fc840c3
-ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
+ms.openlocfilehash: 1802a278a8d125f0d1b86eb8bead3918ef1586e6
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30202264"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166129"
 ---
-*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
+*İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 
 # <a name="ata-reports"></a>ATA Raporları
@@ -30,13 +30,13 @@ Konsoldaki ATA raporları bölümü, size sistem durumu bilgileri (sistem durumu
 Raporlar sayfasına erişmek için menü çubuğundaki rapor simgesine tıklayın: ![rapor simgesi](./media/ata-report-icon.png).
 Kullanılabilir raporlar şunlardır: 
 
-- **Özet raporu**: Özeti raporu sistem durumu Panosu sunar. Üç sekme görüntüleyebilirsiniz: Ağınızda algılananlar için bir **Özet** sekmesi, ilgilenmeniz gereken şüpheli etkinlikleri listeleyen **Şüpheli etkinlikleri aç** sekmesi ve ilgilenmeniz gereken ATA sistem durumu sorunlarını listeleyen **Sistem durumu sorunlarını aç** sekmesi. Şüpheli etkinlikler ve sistem durumu sorunları türlerine göre listelenmiştir. 
+- **Özet raporu**: Özeti raporu, sistemde bir durumu Panosu sunar. Üç sekme görüntüleyebilirsiniz: Ağınızda algılananlar için bir **Özet** sekmesi, ilgilenmeniz gereken şüpheli etkinlikleri listeleyen **Şüpheli etkinlikleri aç** sekmesi ve ilgilenmeniz gereken ATA sistem durumu sorunlarını listeleyen **Sistem durumu sorunlarını aç** sekmesi. Şüpheli etkinlikler ve sistem durumu sorunları türlerine göre listelenmiştir. 
 
-- **Hassas gruplara değiştirilmesini**: Bu rapor, bir değişiklik (örneğin, Yöneticiler) hassas gruplara yapılan her zaman listeler.
+- **Gizli gruplarda değişiklikler**: gizli gruplara (Yöneticiler gibi) değişiklik yapılan tüm değişiklikler Bu raporda listelenir.
 
-- **Parolalar düz metinde gösterilen**: bazı hizmetler LDAP güvenli olmayan hesap kimlik bilgilerini düz metin olarak göndermek için protokolünü kullanır. Bu durum, hassas hesapları için bile oluşabilir. Ağ trafiğini izleme saldırganlar catch ve bu kimlik bilgileri kötü amaçlı olarak yeniden kullanabilirsiniz. Bu rapor, düz metin olarak olarak algılanan ATA gönderilen tüm kaynak bilgisayarı ve hesap parolalarını listeler. 
+- **Düz metin olarak ifşa edilen parolalar**: bazı hizmetleri hesabı kimlik bilgilerini düz metin olarak gönderilecek güvenli olmayan LDAP protokolünü kullanır. Bu durum, hassas hesaplar için bile oluşabilir. Saldırganların ağ trafiğini izleme, catch ve daha sonra bu kimlik bilgilerini kötü amaçlar için yeniden kullanabilirsiniz. Bu rapor düz metin olarak algılanan ATA gönderilen tüm kaynak bilgisayarınızın ve hesabınızın parolaları listeler. 
 
-- **Yanal hareket yolları hassas hesaplarına**: Bu rapor, yanal hareket yolları sunulan hassas hesapları listeler. Daha fazla bilgi için bkz: [yanal hareket yolları](use-case-lateral-movement-path.md)
+- **Yana hareket yollarını hassas hesaplara yönelik**: Bu rapor, yanal hareket yollarını sunulan hassas hesapları listeler. Daha fazla bilgi için [yana hareket yolları](use-case-lateral-movement-path.md)
 
 Bir rapor oluşturmak için iki yolu vardır: isteğe bağlı olarak veya e-postanıza düzenli aralıklarla gönderilmek üzere rapor zamanlayarak.
 
@@ -44,7 +44,7 @@ Bir rapor oluşturmak için iki yolu vardır: isteğe bağlı olarak veya e-post
 
 1. ATA konsolu menü çubuğundaki rapor simgesine tıklayın: ![rapor simgesi](./media/ata-report-icon.png).
 
-2. Altında seçilen rapor türünü ayarlayın **gelen** ve **için** tıklatın ve tarihleri **karşıdan**. 
+2. Seçilen rapor türü, altında ayarlanan **gelen** ve **için** tarihleri ve tıklatın **indirme**. 
  ![raporlar](./media/reports.png)
 
 Zamanlanmış bir rapor ayarlamak için:
@@ -56,16 +56,16 @@ Zamanlanmış bir rapor ayarlamak için:
   > [!NOTE]
   > Günlük raporlar, kısa süre içinde gece yarısından sonra UTC gönderilmek üzere tasarlanmıştır.
 
-2. Tıklatın **zamanlama** rapor teslimini sıklığı ve e-posta adresi ayarlayın ve bunları Ekle öğesini tıklatıp e-posta adresleri yanındaki artı işaretini tıklatın, seçilen rapor türü yanındaki **kaydetmek**.
+2. Tıklayın **zamanlama** rapor sıklığı ve e-posta adresini ayarlayın ve bunları ekleyin ve e-posta adreslerinin yanındaki artı işaretine tıklayın, seçilen rapor türü yanındaki **Kaydet**.
 
    ![Rapor sıklığı ve e-postayı zamanlama](./media/sched-report1.png)
 
 
 > [!NOTE]
-> Zamanlanan raporlar e-postayla teslim edilir ve yalnızca bir e-posta sunucusu altında zaten yapılandırdıysanız gönderilebilir **yapılandırma** ve ardından, **bildirimler ve raporlar**seçin **posta Sunucu**.
+> Zamanlanan raporları e-posta ile teslim edilir ve yalnızca bir e-posta sunucusu altında zaten yapılandırdıysanız gönderilebilir **yapılandırma** ve sonra **bildirimler ve raporlar**seçin **posta Sunucu**.
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

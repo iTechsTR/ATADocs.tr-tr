@@ -1,26 +1,26 @@
 ---
-title: Advanced Threat Analytics hizmeti başlatma sorunlarını giderme | Microsoft Docs
-description: ATA başlatma sorunları nasıl giderebileceğinizi açıklar
+title: Advanced Threat Analytics Hizmet başlatma sorunlarını giderme | Microsoft Docs
+description: Ata'yı başlatma sorunlarını nasıl giderebileceğinizi açıklar
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 87d3f1de8167c1198e6b334826f90df83cc96780
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 637f26736a520def329ba8599c3927079fdf354d
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009277"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44165924"
 ---
-*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
+*İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 
 
@@ -28,14 +28,15 @@ ms.locfileid: "30009277"
 
 ## <a name="troubleshooting-ata-center-service-startup"></a>ATA Center hizmet başlatma sorunlarını giderme
 
-ATA Center bileşeninizin başlamazsa, aşağıdaki sorun giderme yordamı uygulayın:
+ATA Center hizmetiniz başlamıyorsa aşağıdaki sorun giderme yordamını uygulayın:
 
-1.  Aşağıdaki Windows PowerShell komutunu çalıştırın: `Get-Service Pla | Select Status` performans sayacı hizmetinin çalıştığından emin olmak için. Çalışmıyorsa bu bir platform sorunudur ve bu hizmeti yeniden çalışır hale getirmeniz gerekir.
-2.  Çalışıyorsa, yeniden başlatmak ve sorunu çözdüğünü görmek deneyin: `Restart-Service Pla`
+1.  Aşağıdaki Windows PowerShell komutunu çalıştırın: `Get-Service Pla | Select Status`
+    emin olmak için performans sayacı hizmetinin çalışıyor. Çalışmıyorsa bu bir platform sorunudur ve bu hizmeti yeniden çalışır hale getirmeniz gerekir.
+2.  Çalışıyorsa, onu yeniden başlatabilir ve sorunun çözülüp çözülmediğine bakın deneyin: `Restart-Service Pla`
 3.  El ile yeni bir veri toplayıcı oluşturmayı deneyin (herhangi biri yeterli olacaktır, örneğin bir toplama makinesi CPU’su bile).
-Başlatmak için büyük olasılıkla daha iyi bir platformdur. Aksi durumda, hala bir platform sorunu olduğunu.
+Başlatabiliyorsanız, büyük olasılıkla iyi bir platformdur. Aksi durumda, hala bir platform sorunu vardır.
 
-4.  Bu komutlar çalıştırıldığında yükseltilmiş bir istemi kullanarak ATA Veri Toplayıcı, el ile yeniden deneyin:
+4.  Bu komutları çalıştırdıktan yükseltilmiş bir istek kullanarak ATA veri toplayıcısını el ile yeniden deneyin:
 
         sc stop ATACenter
         logman stop "Microsoft ATA Center"
@@ -49,21 +50,22 @@ Başlatmak için büyük olasılıkla daha iyi bir platformdur. Aksi durumda, ha
 
 **Belirti**
 
-ATA Gateway başlatılmaz ve bu hatayı alırsınız:<br></br>
-*System.Net.Http.HttpRequestException: Response status code does not indicate success: 500 (Internal Server Error)*
+ATA geçidinizin başlatılmaz ve bu hatayı alırsınız:<br></br>
+*System.Net.Http.HttpRequestException: Yanıt durum kodu başarı anlamına gelmez: 500 (iç sunucu hatası)*
 
 **Açıklama**
 
-Basit Ağ Geçidi yükleme işleminin bir parçası olarak, ATA Lightweight Gateway CPU % 15 arabellekle kullanmasına izin verir CPU eşiği ayırdığından meydana gelir. Kayıt defteri anahtarını kullanarak bir eşik bağımsız olarak ayarladıysanız: Bu çakışma Lightweight Gateway başlamasını engeller. 
+Lightweight Gateway yükleme işleminin bir parçası, ATA Lightweight Gateway CPU % 15'bir arabellek ile kullanmak sağlayan bir CPU eşiği ayırdığı için meydana gelir. Kayıt defteri anahtarını kullanarak bir eşik bağımsız olarak ayarladıysanız: Bu çakışma Lightweight Gateway başlatılmasını engelleyecek. 
 
 **Çözümleme**
 
-1. Kayıt defteri altında DWORD değerini ise, anahtar adı verilen **performans sayaçları devre dışı** ayarlanmış olmasına dikkat edin **0**:  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
+1. Kayıt defteri anahtarları, bir DWORD değeri ise adlı **performans sayaçları devre dışı** ayarlanmış olduğundan emin olmak **0**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\`
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
  
 2. Pla hizmetini durdurup yeniden başlatın. ATA Lightweight Gateway otomatik olarak değişikliği algılar ve hizmeti yeniden başlatın.
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

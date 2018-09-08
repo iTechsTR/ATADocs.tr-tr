@@ -6,21 +6,21 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7bd17d6ac340f1acf0166aadbfcbb7f3ef164fc3
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 7b6073de5b6a7ae5e53f0070dab7b9d62cd5d988
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009447"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166644"
 ---
-*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
+*İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 
 
@@ -44,13 +44,13 @@ Veritabanını sorgulamanın varsayılan ve en temel yolu Mongo kabuğunu kullan
 |Belirli bir günde belirli bir hesapla ilgili olarak belirli bir bilgisayardan kaynaklanan NTLM trafiğini bulma.|`db.Ntlm_<datetime>.find({SourceComputerId: "<Id of the source computer>", SourceAccountId: "<Id of the account>"})`|&lt;Kaynak bilgisayarın kimliğini&gt; ve &lt;hesabın kimliğini&gt; almak için, örnekte gösterildiği gibi UniqueEntity koleksiyonlarını sorgulayabilirsiniz.<br /><br />Her ağ etkinliği türünün, örneğin NTLM kimlik doğrulamalarının her UTC tarihi için kendi koleksiyonu vardır.|
 |Gelişmiş yapılandırma değişikliklerini yapın. Bu örnekte, 10.000 tüm ATA Gateway bileşenlerinde gönderme kuyruğu boyutunu değiştirin.|`db.SystemProfile.update( {_t: "GatewaySystemProfile"} ,`<br>`{$set:{"Configuration.EntitySenderConfiguration.EntityBatchBlockMaxSize" : "10000"}})`|`|
 
-Aşağıdaki örnek daha önce sağlanan söz diziminin kullanıldığı örnek kodu sağlıyor. 20/10/2015 tarihinde gerçekleşen bir kuşkulu etkinliği araştırıyor ve "John Doe"nun o gün gerçekleştirdiği NTLM etkinlikleri hakkında daha fazla bilgi edinmek istiyorsanız:<br /><br />İlk olarak "John Doe"nun kimliğini bulun.
+Aşağıdaki örnek, daha önce sağlanan söz diziminin kullanıldığı örnek kodu sağlar. 20/10/2015 tarihinde gerçekleşen bir kuşkulu etkinliği araştırıyor ve "John Doe"nun o gün gerçekleştirdiği NTLM etkinlikleri hakkında daha fazla bilgi edinmek istiyorsanız:<br /><br />İlk olarak "John Doe"nun kimliğini bulun.
 
-`db.UniqueEntity.find({Name: "John Doe"})`<br>Değeri olarak gösterilen Kimliğini not alın `_id` örneğin olduğunu varsayalım. `123bdd24-b269-h6e1-9c72-7737as875351`<br>Ardından, arama aradığınız, örnekte tarihinden önce en yakın tarihli koleksiyonu için 20/10/2015.<br>Sonra, John Doe'nun hesabının NTLM etkinliklerini arayın: 
+`db.UniqueEntity.find({Name: "John Doe"})`<br>Değeri olarak gösterilen Kimliğini bir yere not alın `_id` örneğin Kimliğin şöyle olduğunu varsayalım. `123bdd24-b269-h6e1-9c72-7737as875351`<br>Ardından, arama aradığınız, örnekte tarihinden önce en yakın tarihli koleksiyonu için 20/10/2015.<br>Sonra, John Doe'nun hesabının NTLM etkinliklerini arayın: 
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

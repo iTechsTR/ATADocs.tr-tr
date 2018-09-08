@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c1be20cc147e88f55d227818331f06d409dd08e7
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: f3507b344d41fd5ba4cc2fff8195178bd735b6e4
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24018193"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166485"
 ---
 # <a name="ata-update-to-16-migration-guide"></a>ATA’yı 1.6’ya güncelleştirme geçiş kılavuzu
 ATA 1.6 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
@@ -39,12 +39,12 @@ ATA 1.6 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 
 ## <a name="updating-ata-to-version-16"></a>ATA’yı sürüm 1.6’e güncelleştirme
 > [!NOTE] 
-> ATA ortamınızda yüklü değilse, açıklanan standart yükleme yordamını izleyin ve sürüm 1.6 içerir, ATA'ın tam sürümünü indirin [Ata'yı yükleme](install-ata-step1.md).
+> ATA ortamınızda yüklü değilse, sürüm 1.6 içerir ve açıklanan standart yükleme yordamını izleyin, ATA'ın tam sürümünü indirin [Ata'yı yükleme](install-ata-step1.md).
 
-ATA sürüm 1. 5 dağıtılan zaten varsa, bu yordam dağıtımınızı güncelleştirmek için gereken adımlarda size yol gösterir.
+ATA sürüm 1.5 dağıtılan zaten varsa, bu yordam dağıtımınızı güncelleştirmek gereken adımlarda size yol gösterir.
 
 > [!NOTE] 
-> ATA sürüm 1.6’yı doğrudan ATA sürüm 1.4’ün üzerine yükleyemezsiniz. Önce ATA sürüm 1.5’i yüklemeniz gerekir. Yanlışlıkla ATA 1.5 yüklemeden ATA 1.6 yüklemeye çalışırsanız, bunu söyleyen bir hata alıyorsunuz **makinenizde daha yeni bir sürümü zaten yüklü.** ATA 1.5 sürümünü yüklemeden önce yükleme başarısız olsa bile bilgisayarınızda - kalır ATA 1.6 kalanları kaldırmanız gerekir.
+> ATA sürüm 1.6’yı doğrudan ATA sürüm 1.4’ün üzerine yükleyemezsiniz. Önce ATA sürüm 1.5’i yüklemeniz gerekir. Yanlışlıkla ATA 1.5 yüklemeden ATA 1.6 yüklemeye çalıştı, bunu söyleyen bir hata alırsınız **makinenizde daha yeni bir sürümü zaten yüklü.** ATA 1.5 sürümünü yüklemeden önce yükleme başarısız olsa bile bilgisayarınızda - kalan ATA 1.6 sürümünden kalanları kaldırmanız gerekir.
 
 ATA sürüm 1.6’ya güncelleştirmek için bu adımları izleyin:
 
@@ -66,26 +66,26 @@ Uygulamanın bu sürümünde, yeni bir ATA dağıtımı yüklemek ve var olan da
 
 1.  Veritabanınızı yedekleyin: (isteğe bağlı)
 
-    -   ATA Center bir sanal makinede çalışıyorsa ve bir denetim noktası almak istiyorsanız, önce sanal makineyi kapatın.
+    -   ATA Center bir sanal makinede çalışıyorsa ve bir denetim noktası almak istiyorsanız, sanal makineyi önce kapatın.
 
     -   ATA Center fiziksel sunucuda çalışıyorsa, [MongoDB’yi yapılandırmak](https://docs.mongodb.org/manual/core/backups/) için önerilen yordamı izleyin.
 
 2.  Microsoft ATA Center Setup.exe adlı yükleme dosyasını çalıştırın ve ekrandaki yönergeleri izleyerek güncelleştirmeyi yükleyin.
 
-    1.  ATA 1.6 için .Net Framework 4.6.1 yüklü olması gerekir. Zaten yüklü değilse, ATA yükleme .net yükler Framework 4.6.1 yüklemesinin bir parçası olarak.
+    1.  ATA 1.6 için .Net Framework 4.6.1 yüklü olması gerekir. Henüz yüklü değilse, ATA yüklemesi .net yükler Framework 4.6.1 yüklemesinin bir parçası olarak.
     
         > [!NOTE] 
         > .Net Framework 4.6.1 yüklemesi için sunucunun yeniden başlatılması gerekebilir. ATA yüklemesi ancak, sunucu yeniden başlatıldıktan sonra devam eder.
     
     2.  **Hoş Geldiniz** sayfasında dilinizi seçin ve **İleri**’ye tıklayın.
 
-    3.  Son Kullanıcı Lisans Sözleşmesi'ni okuyun ve koşulları kabul ediyorsanız, **sonraki**.
+    3.  Son Kullanıcı Lisans sözleşmesini okuyun ve koşulları kabul ediyorsanız tıklayın **sonraki**.
 
     4.  Artık ATA’nın güncel kalması için, Microsoft Update'i kullanmak da mümkündür.  Microsoft Update sayfasında, **Güncelleştirmeleri denetlediğimde Microsoft Update'i kullan (önerilir)** öğesini seçin.
     ![ATA güncel resmi tutmak](media/ata_ms_update.png) bu Windows ayarları, burada görüldüğü gibi diğer Microsoft ürünleri (ATA dahil) için güncelleştirmeleri etkinleştirecek şekilde ayarlar. 
      ![Windows otomatik güncelleştirme resmi](media/ata_installupdatesautomatically.png)
 
-    5.  Yükleme başlamadan önce ATA bir hazırlık denetimi gerçekleştirir. Önkoşullar başarıyla yapılandırıldı ve en azından minimum disk alanı miktarı sahip olduğunuzdan emin olmak için denetimi sonuçlarını gözden geçirin. 
+    5.  Yükleme başlamadan önce ATA bir hazırlık denetimi gerçekleştirir. Önkoşullar başarıyla yapılandırıldı ve en düşük disk alanı miktarını en az olduğundan emin olmak için denetimin sonuçlarını gözden geçirin. 
     ![ATA hazırlık denetimi resmi](media/ata_install_readinesschecks.png)
 
     6.  **Güncelleştir**’e tıklayın. Güncelleştir'e tıkladıktan sonra, güncelleştirme yordamı tamamlanana kadar ATA çevrimdışı kalır.
@@ -132,11 +132,11 @@ Zip dosyası aşağıdaki dosyaları içerir:
 > [!NOTE] 
 > ATA Gateway’i başarıyla güncelleştirdikten sonra, bu ATA Gateway’in eski bildirimi çözülür.
 
-Tüm ATA Gateway bileşenleri başarıyla eşitlendiklerini ve güncelleştirilmiş bir ATA Gateway paketini kullanılabilir ileti artık görüntülenir bildirdiğinde tüm ATA Gateway bileşenlerinin başarıyla güncelleştirildiğini bildiğiniz.
+Tüm ATA Gateway bileşenleri başarıyla eşitlendiklerini ve güncelleştirilmiş bir ATA Gateway paketini kullanılabilir ileti artık görüntülenmediğinde bildirdiğinizde tüm ATA Gateway bileşenlerinin başarıyla güncelleştirildiğini bildiğiniz.
 
 ![Güncelleştirilmiş Gateway bileşenlerinin resmi](media/ATA-gw-updated.png)
 
 
-## <a name="see-also"></a>Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca Bkz.
 
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

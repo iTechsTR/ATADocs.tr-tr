@@ -6,21 +6,21 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 5/6/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f372b4b85c240079da157052e2c20c46801398be
-ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
+ms.openlocfilehash: c28783170764c117a07fa19946c83638f24dc1a6
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33913316"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166502"
 ---
-*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
+*İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 # <a name="ata-frequently-asked-questions"></a>ATA sık sorulan sorular
 Bu makalede, ATA hakkında sık sorulan soruların listesi ve öngörülerle yanıtlar sağlanır.
@@ -46,16 +46,16 @@ Bu, izlenmekte olan etki alanı denetleyici için uzaktan çalıştırılmalı v
 
 ## <a name="which-ata-build-corresponds-to-each-version"></a>Her sürüme karşılık gelen ATA derlemeleri nelerdir?
 
-Sürüm yükseltme bilgileri için bkz: [ATA yükseltme yolu](upgrade-path.md).
+Sürüm yükseltme için bilgi [ATA yükseltme yolu](upgrade-path.md).
 
 ## <a name="what-version-should-i-use-to-upgrade-my-current-ata-deployment-to-the-latest-version"></a>Mevcut ATA dağıtımımı en son sürüme yükseltmek için hangi sürümü kullanmalıyım?
 
 ATA sürüm yükseltme matrisi için bkz: [ATA yükseltme yolu](upgrade-path.md).
 
 
-## <a name="how-does-the-ata-center-update-its-latest-signatures"></a>Nasıl ATA Center son imzalarını güncelleştirmesi mu?
+## <a name="how-does-the-ata-center-update-its-latest-signatures"></a>ATA Center, en son imzaları nasıl güncelleştirilsin mi?
 
-Yeni bir sürümü ATA Center yüklendikten sonra ATA algılama mekanizması geliştirilmiştir. Microsoft Update (MU) kullanarak veya el ile yeni sürümü Yükleme Merkezi'nden veya toplu lisans sitesine İndirme Merkezi yükseltebilirsiniz.
+ATA algılama mekanizması, ATA Center'a yeni bir sürümü yüklü olduğunda geliştirilmiştir. Microsoft Update (MU) kullanarak ya da yeni sürüm, İndirme Merkezi ya da toplu lisans sitesine el ile İndirme Merkezi yükseltebilirsiniz.
 
 ## <a name="how-do-i-verify-windows-event-forwarding"></a>Windows Olay İletme’yi nasıl doğrularım?
 Aşağıdaki kodu bir dosyaya yerleştirerek komut isteminde şu dizinden çalıştırabilirsiniz: **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**:
@@ -71,7 +71,7 @@ mongo.exe ATA dosya adı
         });
 
 ## <a name="does-ata-work-with-encrypted-traffic"></a>ATA şifrelenmiş trafikle çalışır mı?
-ATA, birden çok ağ protokolleri yanı sıra SIEM veya Windows Olay iletme yoluyla toplanan olayları analiz etme üzerinde kullanır. Şifrelenmiş trafik (örneğin, LDAPS ve IPSec) ile ağ protokollerini temel algılamaların analiz değil.
+ATA birden çok ağ protokolleri yanı sıra SIEM veya Windows Olay iletme aracılığıyla toplanan olaylara çözümleme üzerinde kullanır. Ağ protokolleri (örneğin LDAPS ve IPSec gibi) şifrelenmiş trafik ile dayalı algılamalar analiz edilmez.
 
 
 ## <a name="does-ata-work-with-kerberos-armoring"></a>ATA Kerberos Koruması ile çalışır mı?
@@ -90,12 +90,12 @@ Bir hesap, hassas olarak belirlediğiniz bazı grupların üyesi olduğunda (ör
 
 Hesabın neden hassas olduğunu anlamak için, grup üyeliğini gözden geçirerek hangi hassas gruplara üye olduğunu anlayabilirsiniz (üyesi olduğu grup başka bir grup nedeniyle de hassas olabilir, dolayısıyla en yüksek düzeydeki hassas grubu belirleyene kadar aynı işlem yapılmalıdır). 
 
-Ayrıca, el ile bir kullanıcı, Grup veya bilgisayar hassas olarak etiketleyebilirsiniz. Daha fazla bilgi için bkz: [etiketi hassas hesapları](tag-sensitive-accounts.md).
+Ayrıca, el ile bir kullanıcı, Grup veya bilgisayar hassas olarak etiketleyebilirsiniz. Daha fazla bilgi için [etiket hassas hesapları](tag-sensitive-accounts.md).
 
 ## <a name="how-do-i-monitor-a-virtual-domain-controller-using-ata"></a>ATA kullanarak sanal etki alanı denetleyicisini nasıl izlerim?
 Çoğu sanal etki alanı denetleyicileri ATA Lightweight Gateway kapsamına alınabilir; ATA Lightweight Gateway’in ortamınız için uygun olup olmadığını belirlemek bkz. [ATA Kapasite Planlaması](ata-capacity-planning.md).
 
-Bir sanal etki alanı denetleyicisi ATA Lightweight Gateway kapsamına alınamıyorsa açıklandığı gibi ya da bir sanal veya fiziksel ATA Gateway olabilir [bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md).  <br />En kolay yol, sanal bir etki alanı denetleyicisinin var olduğu her ana bilgisayarda sanal bir ATA Gateway’inizin olmasıdır.<br />Sanal etki alanı denetleyicileriniz ana bilgisayarlar arasında taşınıyorsa, aşağıdaki adımlardan birini gerçekleştirin gerekir:
+Bir sanal etki alanı denetleyicisi ATA Lightweight Gateway tarafından alınamıyorsa açıklandığı ya da bir sanal veya fiziksel ATA Gateway olabilir [bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md).  <br />En kolay yol, sanal bir etki alanı denetleyicisinin var olduğu her ana bilgisayarda sanal bir ATA Gateway’inizin olmasıdır.<br />Sanal etki alanı denetleyicileriniz ana bilgisayarlar arasında taşınıyorsa, aşağıdaki adımlardan birini gerçekleştirin gerekir:
 
 -   Sanal etki alanı denetleyicisi başka bir ana bilgisayara taşındığında, son taşınan etki alanı denetleyicisinden gelen trafiği almak için ATA Gateway’i söz konusu ana bilgisayarda önceden yapılandırın.
 -   Sanal etki alanı denetleyicisi taşındığında ATA Gateway’in de onunla birlikte taşınması için, sanal ATA Gateway’i sanal etki alanı denetleyicisiyle ilişkilendirdiğinizden emin olun.
@@ -113,10 +113,10 @@ ATA bilinen kötü amaçlı saldırıları ve teknikleri, güvenlik sorunların�
 ATA algılamalarının tam listesi için bkz: [ATA hangi algılamaları gerçekleştirir?](ata-threats.md)
 
 ## <a name="what-kind-of-storage-do-i-need-for-ata"></a>ATA için ne tür bir depolamaya ihtiyacım vardır?
-Hızlı depolama önerilir (7200 RPM diskleri değil önerilir) ile düşük gecikme süreli disk erişimi (10 MS'den kısa). RAID yapılandırması ağır yazma yüklerini desteklemelidir (RAID-5/6 ve bunların türevleri önerilmez).
+Hızlı depolama önerilir (7200 RPM diskleri önerilmez) ile düşük gecikme süreli disk erişimi (10 MS'den kısa). RAID yapılandırması ağır yazma yüklerini desteklemelidir (RAID-5/6 ve bunların türevleri önerilmez).
 
 ## <a name="how-many-nics-does-the-ata-gateway-require"></a>ATA Gateway’e kaç NIC gerekir?
-ATA Gateway’e en az iki ağ bağdaştırıcısı gerekir:<br>1. İç ağa ve ATA Center’a bağlanmak için bir NIC<br>2. Bağlantı noktası yansıtma aracılığıyla etki alanı denetleyicisinin ağ trafiğini yakalamak için kullanılan NIC.<br>* Bu, etki alanı denetleyicilerinin kullandığı tüm ağ bağdaştırıcılarını yerel olarak kullanan ATA Lightweight Gateway için geçerli değildir.
+ATA Gateway’e en az iki ağ bağdaştırıcısı gerekir:<br>1. İç ağa ve ATA Center’a bağlanmak için bir NIC<br>2. Bir NIC bağlantı noktası yansıtma aracılığıyla etki alanı denetleyicisinin ağ trafiğini yakalamak için kullanılır.<br>* Bu, etki alanı denetleyicilerinin kullandığı tüm ağ bağdaştırıcılarını yerel olarak kullanan ATA Lightweight Gateway için geçerli değildir.
 
 ## <a name="what-kind-of-integration-does-ata-have-with-siems"></a>ATA’yla SIEM’ler arasında ne tür bir tümleştirme vardır?
 ATA’nın SIEM’lerle şöyle çift yönlü bir tümleştirmesi vardır:
@@ -136,7 +136,7 @@ Bu çözüm şu anda tek başına sunulan bir tekliftir; Azure Active Directory�
 ## <a name="do-you-have-to-write-your-own-rules-and-create-a-thresholdbaseline"></a>Kendi kurallarınızı yazmanız ve bir eşik/temel oluşturmanız gerekiyor mu?
 Microsoft Advanced Threat Analytics ile kurallar, eşikler veya temeller oluşturmanız ve sonra bunların ince ayarını yapmanız gerekmez. ATA hem kullanıcılar, cihazlar ve kaynaklar arasındaki davranışları hem de bunların birbirleriyle ilişkilerini çözümler; kuşkulu etkinlikleri ve bilinen saldırıları hızla algılayabilir. Dağıtımdan üç hafta sonra ATA davranış açısından kuşkulu etkinlikleri algılamaya başlar. Diğer yandan da, ATA dağıtımdan hemen sonra bilinen kötü amaçlı yazılım saldırılarını ve güvenlik sorunlarını algılamaya başlar.
 
-## <a name="if-you-are-already-breached-can-microsoft-advanced-threat-analytics-identify-abnormal-behavior"></a>Zaten ihlal varsa, Microsoft Advanced Threat Analytics anormal davranışları belirleyebilir misiniz?
+## <a name="if-you-are-already-breached-can-microsoft-advanced-threat-analytics-identify-abnormal-behavior"></a>Zaten karşıyaysanız, Microsoft Advanced Threat Analytics anormal davranışları belirleyebilir misiniz?
 Evet, siz güvenlik ihlali yaşadıktan sonra bile yüklenmiş olsa, ATA korsanın kuşkulu etkinliklerini algılayabilir. ATA yalnızca kullanıcının davranışına değil kuruluşun güvenlik haritasındaki diğer kullanıcılara da bakar. İlk çözümleme sırasında, saldırganın davranışı anormalse bir “aykırı değer” olarak tanımlanır ve ATA anormal davranışları raporlamaya devam eder. Buna ek olarak, korsan başka kullanıcıların kimlik bilgilerini çalmaya çalışırsa (Anahtar Geçişi gibi) veya etki alanı denetleyicilerinden birinde uzaktan yürütme gerçekleştirmeye çalışırsa, ATA kuşkulu etkinliği algılayabilir.
 
 ## <a name="does-this-only-leverage-traffic-from-active-directory"></a>Yalnızca Active Directory trafiğinden mi yararlanır?
@@ -149,16 +149,16 @@ SPAN (Anahtarlamalı Bağlantı Noktası Çözümleyicisi) olarak da bilinen ba�
 Hayır. ATA, ağda yer alan ve Windows dışı ve mobil cihazlar da içinde olmak üzere Active Directory’den kimlik doğrulama ve yetkilendirme isteklerinde bulunan tüm cihazları izler.
 
 ## <a name="does-ata-monitor-computer-accounts-as-well-as-user-accounts"></a>ATA, kullanıcı hesaplarının yanı sıra bilgisayar hesaplarını da izler mi?
-Evet. Bilgisayar hesapları (aynı zamanda herhangi bir varlık) kötü amaçlı etkinlikler gerçekleştirmek için kullanılabildiğinden, ATA tüm bilgisayar hesaplarının davranışlarını ve ortamdaki diğer tüm varlıkları izler.
+Evet. Bilgisayar hesapları (yanı sıra diğer tüm varlıklar) kötü amaçlı etkinlikler gerçekleştirmek için kullanılabildiğinden, ATA tüm bilgisayar hesaplarının davranışlarını ve ortamdaki diğer tüm varlıkları izler.
 
 ## <a name="can-ata-support-multi-domain-and-multi-forest"></a>ATA birden çok etki alanını ve birden çok ormanı destekliyor mu?
 Microsoft Advanced Threat Analytics aynı orman sınırı içindeki çok etki alanlı ortamları destekler. Birden çok orman kullanımında, her orman için ayrı ATA dağıtımı gerekir.
 
 ## <a name="can-you-see-the-overall-health-of-the-deployment"></a>Dağıtımın bir bütün olarak durumunu görebilir misiniz?
-Evet, genel durumunu görüntülemek bunlar ortaya çıktığında dağıtım yanı sıra yapılandırması ile ilgili belirli sorunları, bağlantı, vb. ve uyarılırsınız.
+Evet, genel sistem durumunu görüntüleyebilirsiniz oluşunca dağıtım yanı sıra yapılandırması ile ilgili belirli sorunları, bağlantı vb. ve uyarılırsınız.
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

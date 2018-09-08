@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a00a555c0dc4590043f93abcd650f6e38d719e6c
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 0639a1732d542f570b988402d2de72e2519cedcb
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24018278"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44165873"
 ---
 # <a name="whats-new-in-ata-version-15"></a>ATA sürüm 1.5’teki yenilikler
 Bu sürüm notları, Advanced Threat Analytics’in bu sürümündeki bilinen sorunlar hakkında bilgi sağlar.
@@ -48,13 +48,13 @@ ATA dağıtımınızı ATA sürüm 1.5’e güncelleştirdikten sonra, yeni ATA 
 
 ![ATA GW hatası](media/ata-install-error.png)
 
-<b>Geçici çözüm:</b> Geçici çözüm adımlarını istemek için <ataeval@microsoft.com> adresine bir e-posta gönderin.
+<b>Geçici çözüm:</b> bir e-posta Gönder <ataeval@microsoft.com> geçici çözüm adımlarını istemek için.
 ### <a name="deployment"></a>Dağıtım
 "Veritabanı veri yolu" ve "Veritabanı günlük yolu" için belirtilen klasörün boş olması gerekir (hiçbir dosya veya alt klasör olmamalıdır).
-Boş değilse dağıtım devam değil.
+Boş değilse, dağıtım ilerlemiyor.
 
 ### <a name="installation-from-zip-file"></a>Zip dosyasından yükleme
-ATA Gateway’i yüklerken, dosyaları zip dosyasından bir yerel dizine ayıkladığınızdan emin olun ve bileşeni o dizinden yükleyin. ATA Gateway'i doğrudan zip dosyasının içinden yüklemeyin; yoksa yükleme başarısız olur.
+ATA Gateway’i yüklerken, dosyaları zip dosyasından bir yerel dizine ayıkladığınızdan emin olun ve bileşeni o dizinden yükleyin. ATA Gateway'i doğrudan zip dosyasının içinden yüklemeyin veya yükleme başarısız olur.
 
 ### <a name="configuration"></a>Yapılandırma
 ATA Gateway’in yapılandırması ayarlandıktan sonra ATA Gateway ilk kez başlatıldığında, hizmet tümüyle başlatılana kadar "Eşitlenmedi" etiketi görüntülenir; hizmetin ilk kez başlatılması 10 dakika kadar sürebilir.
@@ -65,7 +65,7 @@ ATA Gateway’de, yükleyebileceğiniz desteklenen tek ağ yakalama yazılımı 
 ### <a name="kb-on-virtualization-host"></a>Sanallaştırma ana bilgisayarında KB
 Sanallaştırma ana bilgisayarına KB 3047154’ü yüklemeyin. Bu, bağlantı noktası yansıtma işleminin düzgün çalışmayı durdurmasına neden olur.
 
-## <a name="see-also"></a>Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca Bkz.
 
 [ATA’yı 1.5 sürümüne güncelleştirme: geçiş kılavuzu](ata-update-1.5-migration-guide.md)
 

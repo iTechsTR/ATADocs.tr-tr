@@ -1,68 +1,68 @@
 ---
 title: Azure ATP raporları ile çalışma | Microsoft Docs
-description: Raporları ATP ağınızda izlemek için Azure nasıl oluşturabileceğiniz açıklanmaktadır.
+description: Ağınızı izlemek için Azure ATP'de raporları nasıl oluşturabileceğiniz açıklanır.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/27/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8d9c7f9208ce76e6c2ca915729b9c64f769ae7bd
-ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
+ms.openlocfilehash: eb1a29038d8afb47328970ff7179f0e1ff01614d
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30202298"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44165941"
 ---
-*Uygulandığı öğe: Azure Gelişmiş tehdit koruması*
+*İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 # <a name="azure-atp-reports"></a>Azure ATP raporları
 
-Çalışma portal Azure ATP Raporlar bölümünde sistem durumu ve kuşkulu etkinliklerin bir raporu, ortamınızda algılanan sistem durumu bilgisi ile sağladığınız raporlar oluşturmanıza olanak sağlar.
+Azure ATP çalışma alanı portalı Raporlar bölümünde, sistem durumu ve şüpheli etkinlikler, bir raporu kullanarak ortamınızda algılanan sistem durumu bilgileri sağlayan raporlar oluşturmanıza olanak sağlar.
 
 
 Raporlar sayfasına erişmek için menü çubuğundaki rapor simgesine tıklayın: ![rapor simgesi](./media/atp-report-icon.png).
 Kullanılabilir raporlar şunlardır: 
 
-- **Özet raporu**: Özeti raporu sistem durumu Panosu sunar. -Biri için üç sekme görüntüleyebilirsiniz bir **Özet** ne ağınızdaki algılandı, **açmak kuşkulu etkinlikleri** , dikkatli olun, kuşkulu etkinlikleri listeler ve **açık sistem durumu sorunları** Azure ATP durumu sorunlarını listeler ilişkin halletmeniz emin. Şüpheli etkinlikler ve sistem durumu sorunları türlerine göre listelenmiştir. 
+- **Özet raporu**: Özeti raporu, sistemde bir durumu Panosu sunar. İçin üç sekme görüntüleyebilirsiniz bir **özeti** ağınızda algılandı ' ın **şüpheli etkinlikleri Aç** , ölçeklendirilmesini, şüpheli etkinlikleri listeler ve **açık sistem durumu sorunları** Azure ATP sistem durumu sorunlarını listeleyen algılananlar. Şüpheli etkinlikler ve sistem durumu sorunları türlerine göre listelenmiştir. 
 
-- **Hassas gruplara değiştirilmesini**: Bu rapor, bir değişiklik (örneğin, Yöneticiler veya el ile etiketlenmiş hesapları veya gruplar) hassas gruplara yapılan her zaman listeler. Hassas gruplarınızı hakkında tam bir rapor almak için Azure ATP tek başına algılayıcılar kullanıyorsanız, emin olmak gerekli olan [olayları tek başına algılayıcılar, etki alanı denetleyicilerinden iletildiği](configure-event-forwarding.md). 
+- **Gizli gruplarda değişiklikler**: değişiklik (örneğin, Yöneticiler, veya el ile etiketlenmiş hesapları veya gruplar) hassas gruplara yapılan tüm değişiklikler Bu raporda listelenir. Azure ATP tek başına algılayıcı, hassas gruplarınızı hakkında tam bir rapor almak için kullanıyorsanız, emin olmak gerekli [olayları, tek başına algılayıcı için etki alanı denetleyicilerinizden iletildiği](configure-event-forwarding.md). 
 
-- **Parolalar düz metinde gösterilen**: bazı hizmetler LDAP güvenli olmayan hesap kimlik bilgilerini düz metin olarak göndermek için protokolünü kullanır. Bu durum, hassas hesapları için bile oluşabilir. Ağ trafiğini izleme saldırganlar catch ve bu kimlik bilgileri kötü amaçlı olarak yeniden kullanabilirsiniz. Bu rapor, tüm kaynak bilgisayar ve düz metin olarak Azure olarak algılanan ATP gönderilen hesap parolalarını listeler. 
+- **Düz metin olarak ifşa edilen parolalar**: bazı hizmetleri hesabı kimlik bilgilerini düz metin olarak gönderilecek güvenli olmayan LDAP protokolünü kullanır. Bu durum, hassas hesaplar için bile oluşabilir. Saldırganların ağ trafiğini izleme, catch ve daha sonra bu kimlik bilgilerini kötü amaçlar için yeniden kullanabilirsiniz. Bu rapor, tüm kaynak bilgisayarı ve Azure ATP olarak algılanan düz metin olarak gönderilen hesap parolalarını listeler. 
 
-- **Yanal hareket yolları hassas hesaplarına**: Bu rapor, yanal hareket yolları sunulan hassas hesapları listeler. Daha fazla bilgi için bkz: [yanal hareket yolları](use-case-lateral-movement-path.md). Bu rapor, yalnızca iki gün temsil eden çalışma portalında görüntülenen bilgileri aksine son 60 gün içinde oluşturulan yolları toplar.
+- **Yana hareket yollarını hassas hesaplara yönelik**: Bu rapor, yanal hareket yollarını sunulan hassas hesapları listeler. Daha fazla bilgi için [yana hareket yollarını](use-case-lateral-movement-path.md). Bu rapor, yalnızca iki gün temsil eden çalışma portalında görüntülenen bilgileri aksine son 60 gün içinde oluşturulan yolları toplar.
 
 Bir rapor oluşturmak için iki yolu vardır: isteğe bağlı olarak veya e-postanıza düzenli aralıklarla gönderilmek üzere rapor zamanlayarak.
 
 İsteğe bağlı bir rapor oluşturmak için:
 
-1. Azure ATP çalışma portal menü çubuğunda, menü çubuğundaki rapor simgesine tıklayın: ![rapor simgesi](./media/atp-report-icon.png).
+1. Azure ATP çalışma alanı portal menü çubuğunda, menü çubuğundaki rapor simgesine tıklayın: ![rapor simgesi](./media/atp-report-icon.png).
 
-2. Altında seçilen rapor türünü ayarlayın **gelen** ve **için** tıklatın ve tarihleri **karşıdan**. 
+2. Seçilen rapor türü, altında ayarlanan **gelen** ve **için** tarihleri ve tıklatın **indirme**. 
  ![raporlar](./media/reports.png)
 
 Zamanlanmış bir rapor ayarlamak için:
  
-1. İçinde **raporları** sayfasında, **ayarlamak Zamanlanmış raporlar**, ya da Azure ATP çalışma portal yapılandırma sayfasında, bildirimler ve raporlar, altında tıklatın **zamanlanmış raporları**.
+1. İçinde **raporları** sayfasında **zamanlanan raporları Ayarla**, ya da Azure ATP çalışma alanı portal Yapılandırması sayfasında, bildirimler ve raporlar, altında tıklayın **zamanlanmış raporları**.
 
    ![Rapor zamanlama](./media/atp-sched-reports.png)
  
  > [!NOTE]
  > Günlük raporlar, kısa süre içinde gece yarısından sonra UTC gönderilmek üzere tasarlanmıştır.
 
-2. Tıklatın **zamanlama** rapor teslimini sıklığı ve e-posta adresi ayarlayın ve bunları Ekle öğesini tıklatıp e-posta adresleri yanındaki artı işaretini tıklatın, seçilen rapor türü yanındaki **kaydetmek**.
+2. Tıklayın **zamanlama** rapor sıklığı ve e-posta adresini ayarlayın ve bunları ekleyin ve e-posta adreslerinin yanındaki artı işaretine tıklayın, seçilen rapor türü yanındaki **Kaydet**.
 
    ![Rapor sıklığı ve e-postayı zamanlama](./media/sched-report1.png)
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [Azure ATP önkoşulları](atp-prerequisites.md)
 - [Azure ATP kapasite planlaması](atp-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

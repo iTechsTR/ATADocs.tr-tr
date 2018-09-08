@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 6/26/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1216d70f75376f295e9b6164babdaf24241195b4
-ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
+ms.openlocfilehash: 602dcac31c5fe7e6b0dfb8761d86abfab0f454eb
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948923"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166179"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -93,6 +93,6 @@ Telemetri verilerinin toplanmasını ve Microsoft’a gönderilmesini durdurmak 
 
 2.  **Gelecekte müşteri deneyiminizi geliştirmeye yardımcı olmak için bize kullanım bilgilerini gönderin** kutusunun işaretini kaldırın.
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [Olay günlüğünü kullanarak ATA sorunlarını giderme](troubleshooting-ata-using-logs.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

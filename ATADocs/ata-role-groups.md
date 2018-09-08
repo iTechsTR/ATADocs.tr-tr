@@ -6,21 +6,21 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3fdee9a98adaaacfa354a4ce95ad45c12b9be548
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: b9779476187d22e8fdd35c0958b52de527b3830c
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010202"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126527"
 ---
-*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
+*İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 
 
@@ -34,7 +34,7 @@ Rol grupları ATA için erişim yönetimini etkinleştirin. Rol gruplarını kul
 
 ## <a name="types-of-ata-role-groups"></a>ATA Rol Gruplarının Türleri 
 
-ATA rol grubunu üç tür sunar: ATA Yöneticiler, ATA kullanıcılar ve ATA görüntüleyiciler. Aşağıdaki tabloda ATA’daki her rol için kullanılabilen erişim türü açıklanır. Hangi role bağlı olarak ATA ata, çeşitli ekranlar ve menü seçeneklerini aşağıdaki gibi kullanılabilir değil:
+ATA, üç tür rol grubu tanıtır: ATA Administrators, ATA Users ve ATA Viewers. Aşağıdaki tabloda ATA’daki her rol için kullanılabilen erişim türü açıklanır. Hangi role, bağlı olarak ata, çeşitli ekranlar ve menü seçenekleri gibi kullanılabilir:
 
 |Etkinlik |Microsoft Advanced Threat Analytics Administrators|Microsoft Advanced Threat Analytics Users|Microsoft Advanced Threat Analytics Viewers|
 |----|----|----|----|
@@ -51,7 +51,7 @@ ATA rol grubunu üç tür sunar: ATA Yöneticiler, ATA kullanıcılar ve ATA gö
 |Uyarıları ve şüpheli etkinlikleri görüntüleme|Kullanılabilir|Kullanılabilir|Kullanılabilir|
 
 
-Kullanıcılar kendi rol grubu için kullanılabilir olmayan bir sayfaya erişmeye çalıştığında, bunlar ATA yetkisiz sayfasına yönlendirilirsiniz. 
+Kullanıcılar kendi rol grupları için kullanılabilir olmayan bir sayfaya erişmeye çalıştıklarında, kullanıcılar ATA yetkisiz sayfasına yönlendirilir. 
 
 ## <a name="add--remove-users---ata-role-groups"></a>Kullanıcı Ekleme / Kaldırma - ATA Rol Grupları 
 

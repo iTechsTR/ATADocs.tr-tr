@@ -6,21 +6,21 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8ebc7598128abe1fbebd10418bada5d68d9df9a1
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 37ec9f60c0d77260039748d57762555cae958f93
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009811"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44125983"
 ---
-*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
+*İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 
 
@@ -193,7 +193,7 @@ Betiğin çalıştırılmasına örnek:
     
     
 ## <a name="validate-port-mirroring-using-net-mon"></a>Net Mon kullanarak bağlantı noktası yansıtmayı doğrulama
-1.  Yükleme [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) doğrulamak istediğiniz ATA Gateway.
+1.  Yükleme [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) doğrulamak istediğiniz ATA Gateway'de.
 
     > [!IMPORTANT]
     > ATA Gateway’e Microsoft Message Analyzer’ı veya başka herhangi bir trafik yakalama yazılımını yüklemeyin.
@@ -222,7 +222,7 @@ Betiğin çalıştırılmasına örnek:
 
 5.  Yalnızca bir yöndeki trafiği görüyorsanız, bağlantı noktası yansıtma yapılandırmanızdaki sorunları gidermeye yardımcı olmaları için ağ veya sanallaştırma ekiplerinizle birlikte çalışın.
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md)
 - [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

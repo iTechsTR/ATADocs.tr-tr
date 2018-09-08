@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 9/03/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 71e7f723d02b4e86f1799e5a92998363766de7a2
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 4d8000f7a50b4847f647a9bcc10843786aeb1285
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24019060"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166655"
 ---
 # <a name="whats-new-in-ata-version-18"></a>ATA sürüm 1.8’deki yenilikler
 
@@ -77,12 +77,12 @@ Bu sürüm notları, Advanced Threat Analytics’in bu sürümündeki güncelle�
 
 - Not ekleme seçeneği Kuşkulu Etkinlikler’den kaldırıldı
 - Kuşkulu Etkinlikler’i azaltıcı öneriler, Kuşkulu Etkinlikler zaman satırından kaldırıldı.
-- ATA sürüm 1.8 ile başlayan Lightweight Gateway ve ATA Gateway bileşenleri kendi sertifikaların yönetilmesine ve bunları yönetmek için bir yönetici etkileşimi gerekiyor.
+- ATA sürüm 1.8 ile başlayarak, ATA Gateway ve Lightweight Gateway bileşenlerinin kendi sertifikalarını yönetme ve bunları yönetmek için yönetici etkileşimi gerekir.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
 > [!WARNING]
-> Bu bilinen sorunlar Lütfen güncelleştirme önlemenize veya kullanarak dağıtmak için 1 1.8 güncelleştirin.
+> Bu bilinen sorunları Lütfen güncelleştirmeyi engelleme veya kullanarak dağıtmak için 1 1.8 güncelleştirin.
 
 ### <a name="ata-gateway-on-windows-server-core"></a>Windows Server Core’da ATA Gateway
 
@@ -128,13 +128,13 @@ Windows Server 2016 Core’da hatayı görmeyebilirsiniz. Ancak yüklemeye çal�
 
 **Geçici çözüm**: ATA Gateway hizmet hesabında, ara sunucu kullanımını devre dışı bırakın. Gelecek sürümlerde bu sorunu düzeltmeye yönelik bir güncelleştirme sunulacaktır.
 
-### <a name="report-settings-reset"></a>Rapor ayarlarını sıfırla
+### <a name="report-settings-reset"></a>Rapor ayarları sıfırlama
 
-**Belirtiler**: 1.8 güncelleştirme 1'ı güncelleştirdiğinizde Zamanlanmış raporlar yapılan herhangi bir ayarı temizlenir.
+**Belirtiler**: 1.8 Güncelleştirmesi 1 için güncelleştirme için zamanlanmış raporları yapılan herhangi bir ayarı temizlenir.
 
-**Açıklama**: 1.8 sıfırlar 1.8 güncelleştirme 1 için güncelleştirme raporları zamanlaması ayarlar.
+**Açıklama**: 1.8 sıfırlama 1.8 Güncelleştirmesi 1 için güncelleştirme raporları zamanlama ayarları.
 
-**Geçici çözüm**: 1.8 güncelleştirme 1 güncelleştirmeden önce rapor ayarlarını bir kopyasını oluşturun ve bunları yeniden girin, bu da olabilir, daha fazla bilgi için bir komut dosyası aracılığıyla bkz [ATA yapılandırmasını içeri ve dışarı aktarmak](ata-configuration-file.md).
+**Geçici çözüm**: 1.8 Güncelleştirmesi 1 güncelleştirmeden önce bir rapor ayarlarını kopyasını ve bunları yeniden girin, bu da olabilir aracılığıyla bir komut dosyası hakkında daha fazla bilgi için bkz: [ATA yapılandırmasını içeri ve dışarı](ata-configuration-file.md).
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.

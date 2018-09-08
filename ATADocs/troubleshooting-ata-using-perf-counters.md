@@ -6,21 +6,21 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 78f23d3f2552ed7ddc086be2620fbb627b676722
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 9952eed3557616a63cf137e65d1e968123340924
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010440"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166672"
 ---
-*Uygulandığı öğe: Advanced Threat Analytics sürüm 1.9*
+*İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 
 
@@ -34,17 +34,17 @@ ATA performans sayaçları, ATA’nın her bileşeninin ne kadar iyi çalıştı
 
 2.  Sonunda önceki bileşen **kendi** boyutunu artırmaya başlar ve bu durum kendisinden önceki bileşenin daha fazla varlık göndermesini engelleyene kadar devam eder.
 
-3.  Bu varlıklar artık iletebilir iletemediğinde trafiği Ağdinleyicisi bileşenine geriye gerçekleşir.
+3.  Bu, tüm sürümlerde artık varlıkları iletebilir, trafik bıraktı.%n%ndizinleri Ağdinleyicisi bileşenine gerçekleşir.
 
 
 ## <a name="retrieving-performance-monitor-files-for-troubleshooting"></a>Sorun giderme için performans izleyicisi dosyalarını alma
 
 Çeşitli ATA bileşenlerinden performans izleyicisi dosyalarını (BLG) almak için:
 1.  Perfmon aracını açın.
-2.  Adlandırılmış veri toplayıcı durdurun: **Microsoft ATA Gateway** veya **Microsoft ATA Center**.
+2.  Ada sahip veri toplayıcı grubunu durdurun: **Microsoft ATA Gateway** veya **Microsoft ATA Center**.
 3.  Veri toplayıcı grubu klasörüne (varsayılan olarak "C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs\DataCollectorSets" veya “C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs\DataCollectorSets” konumundadır) gidin.
 4.  En son değiştirilen BLG dosyasını kopyalayın.
-5.  Adlandırılmış veri toplayıcı grubunu yeniden: **Microsoft ATA Gateway** veya **Microsoft ATA Center**.
+5.  Ada sahip veri toplayıcı grubunu yeniden başlatın: **Microsoft ATA Gateway** veya **Microsoft ATA Center**.
 
 
 ## <a name="ata-gateway-performance-counters"></a>ATA Gateway performans sayaçları
@@ -52,7 +52,7 @@ ATA performans sayaçları, ATA’nın her bileşeninin ne kadar iyi çalıştı
 Bu bölümde, ATA Gateway’e yapılan her gönderme aynı zamanda ATA Lightweight Gateway’e de yapılmıştır.
 
 ATA Gateway'in performans sayaçlarını ekleyerek, ATA Gateway gerçek zamanlı performans durumunu gözlemleyebilirsiniz.
-Bu açarak yapılır **Performans İzleyicisi** ve ATA Gateway için tüm sayaçlar eklenerek. Performans sayacı nesnesinin adı: **Microsoft ATA Gateway**.
+Açarak yapıldığını **Performans İzleyicisi** ve ATA Gateway için tüm sayaçlar eklenerek. Performans sayacı nesnesinin adı: **Microsoft ATA Gateway**.
 
 Dikkat edilmesi gereken ana ATA Gateway sayaçlarının listesi:
 
@@ -69,13 +69,13 @@ Dikkat edilmesi gereken ana ATA Gateway sayaçlarının listesi:
 
 > [!NOTE]
 > -   Süre gösteren sayaçlar milisaniye cinsindendir.
-> -   Bu bazen büyük kullanılarak sayaçların tam listesi izlemek kullanışlı **rapor** grafik türü (örnek: tüm sayaçları gerçek zamanlı izleme)
+> -   Bazen daha platformudur kullanılarak sayaçların tam listesi izlemek kullanışlı **rapor** grafik türü (örnek: tüm sayaçları gerçek zamanlı izleme)
 
 ## <a name="ata-lightweight-gateway-performance-counters"></a>ATA Lightweight Gateway performans sayaçları
 Performans sayaçları, ATA’nın yüklü olduğu etki alanı denetleyicilerinde çok fazla kaynak çekmediğinden emin olmak için Lightweight Gateway’de kota yönetimi için kullanılabilir.
 ATA’nın Lightweight Gateway’de uyguladığı kaynak sınırlamalarını ölçmek için şu sayaçları ekleyin.
 
-Bu açarak yapılır **Performans İzleyicisi** ve ATA Lightweight Gateway için tüm sayaçlar eklenerek. Performans sayacı nesneleri adlarıdır: **Microsoft ATA Gateway** ve **Microsoft ATA Gateway güncelleştirici**.
+Açarak yapıldığını **Performans İzleyicisi** ve ATA Lightweight Gateway için tüm sayaçlar eklenerek. Performans sayacı nesne adları: **Microsoft ATA Gateway** ve **Microsoft ATA Gateway Updater**.
 
 > [!div class="mx-tableFixed"]
 |Sayaç|Description|Eşik|Sorun giderme|
@@ -99,7 +99,7 @@ Gerçek kullanımınızı görmek için aşağıdaki sayaçlara bakın:
 ## <a name="ata-center-performance-counters"></a>ATA Center performans sayaçları
 ATA Center’ın performans sayaçlarını ekleyerek, ATA Center ile ilgili gerçek zamanlı performans durumunu gözlemleyebilirsiniz.
 
-Bu açarak yapılır **Performans İzleyicisi** ve ATA Center için tüm sayaçlar eklenerek. Performans sayacı nesnesinin adı: **Microsoft ATA Center**.
+Açarak yapıldığını **Performans İzleyicisi** ve ATA Center için tüm sayaçlar eklenerek. Performans sayacı nesnesinin adı: **Microsoft ATA Center**.
 
 Dikkat edilmesi gereken ana ATA Center sayaçlarının listesi:
 
@@ -114,7 +114,7 @@ Dikkat edilmesi gereken ana ATA Center sayaçlarının listesi:
 
 > [!NOTE]
 > -   Süre gösteren sayaçlar milisaniye cinsindendir.
-> -   Bazen daha fazla olduğu için rapor grafik türü kullanılarak sayaçların tam listesi kullanışlı (örnek: tüm sayaçları gerçek zamanlı izleme).
+> -   Bazen daha platformudur kullanışlı izlemek için rapor grafik türü kullanılarak sayaçların tam listesi (örnek: tüm sayaçları gerçek zamanlı izleme).
 
 ## <a name="operating-system-counters"></a>İşletim sistemi sayaçları
 Aşağıdaki tabloda, dikkat edilmesi gereken ana işletim sistemi sayaçları listelenmiştir:
@@ -124,16 +124,16 @@ Aşağıdaki tabloda, dikkat edilmesi gereken ana işletim sistemi sayaçları l
 |-----------|---------------|-------------|-------------------|
 |İşlemci(_Toplam)\% İşlemci Zamanı|İşlemcinin boş olmayan bir iş parçacığı çalıştırırken harcadığı geçen sürenin yüzdesi.|Ortalamada %80’den az|Gerekenden çok daha fazla işlemci zamanı alan bir işlem olup olmadığını denetleyin.<br /><br />Daha fazla işlemci ekleyin.<br /><br />Sunucu başına trafik miktarını azaltın.<br /><br />"İşlemci(_Toplam)\% İşlemci Zamanı" sayacı sanal sunucularda tam doğru olmayabilir; bu durumda işlemci gücündeki eksilmeyi "Sistem\İşlemci Kuyruğu Uzunluğu" sayacı aracılığıyla ölçmek daha doğru olur.|
 |Sistem\Bağlam Değişimleri\sn|Tüm işlemcilerin bir iş parçacığından diğerine birleşik geçiş hızı.|5000’den az çekirdek (fiziksel çekirdekler)|Gerekenden çok daha fazla işlemci zamanı alan bir işlem olup olmadığını denetleyin.<br /><br />Daha fazla işlemci ekleyin.<br /><br />Sunucu başına trafik miktarını azaltın.<br /><br />"İşlemci(_Toplam)\% İşlemci Zamanı" sayacı sanal sunucularda tam doğru olmayabilir; bu durumda işlemci gücündeki eksilmeyi "Sistem\İşlemci Kuyruğu Uzunluğu" sayacı aracılığıyla ölçmek daha doğru olur.|
-|Sistem\İşlemci Kuyruğu Uzunluğu|Yürütülmeye hazır olan ve zamanlanmayı bekleyen iş parçacıklarının sayısı.|Beşten küçük&#42;çekirdek (fiziksel çekirdekler)|Gerekenden çok daha fazla işlemci zamanı alan bir işlem olup olmadığını denetleyin.<br /><br />Daha fazla işlemci ekleyin.<br /><br />Sunucu başına trafik miktarını azaltın.<br /><br />"İşlemci(_Toplam)\% İşlemci Zamanı" sayacı sanal sunucularda tam doğru olmayabilir; bu durumda işlemci gücündeki eksilmeyi "Sistem\İşlemci Kuyruğu Uzunluğu" sayacı aracılığıyla ölçmek daha doğru olur.|
-|Bellek\Kullanılabilir MBayt|Ayırma için kullanılabilen fiziksel bellek (RAM) miktarı.|En çok 512 olmalıdır|Gerekenden çok daha fazla fiziksel bellek alan bir işlem olup olmadığını denetleyin.<br /><br />Fiziksel bellek miktarını artırın.<br /><br />Sunucu başına trafik miktarını azaltın.|
-|MantıksalDisk(&#42;)\Ort. Disk sn\Okuma|Diskten verileri okumak için ortalama gecikme süresi (örnek olarak veritabanı sürücüsünü seçmelisiniz).|10 milisaniyeden kısa olmalıdır.|Veritabanı sürücüsünü gerektiğinden fazla kullanan belirli bir işlem bulunup bulunmadığını denetleyin.<br /><br />Bu sürücünün 10 MS'den kısa gecikme yaparken geçerli iş yükü sunabilir varsa, depolama ekibinize/satıcınıza başvurun. Geçerli iş yükü, disk kullanım sayaçları aracılığıyla belirlenebilir.|
-|MantıksalDisk(&#42;)\Ort. Disk sn\Yazma|Diske veri yazmak için ortalama gecikme süresi (örnek olarak veritabanı sürücüsünü seçmelisiniz).|10 milisaniyeden kısa olmalıdır.|Veritabanı sürücüsünü gerektiğinden fazla kullanan belirli bir işlem bulunup bulunmadığını denetleyin.<br /><br />Bu sürücünün 10 MS'den kısa gecikme yaparken geçerli iş yükü sunabilir yoksa, depolama team\vendor ile bakın. Geçerli iş yükü, disk kullanım sayaçları aracılığıyla belirlenebilir.|
+|Sistem\İşlemci Kuyruğu Uzunluğu|Yürütülmeye hazır olan ve zamanlanmayı bekleyen iş parçacıklarının sayısı.|Beş&#42;çekirdek (fiziksel çekirdekler)|Gerekenden çok daha fazla işlemci zamanı alan bir işlem olup olmadığını denetleyin.<br /><br />Daha fazla işlemci ekleyin.<br /><br />Sunucu başına trafik miktarını azaltın.<br /><br />"İşlemci(_Toplam)\% İşlemci Zamanı" sayacı sanal sunucularda tam doğru olmayabilir; bu durumda işlemci gücündeki eksilmeyi "Sistem\İşlemci Kuyruğu Uzunluğu" sayacı aracılığıyla ölçmek daha doğru olur.|
+|Bellek\Kullanılabilir MBayt|Ayırma için kullanılabilen fiziksel bellek (RAM) miktarı.|Çok 512 olmalıdır|Gerekenden çok daha fazla fiziksel bellek alan bir işlem olup olmadığını denetleyin.<br /><br />Fiziksel bellek miktarını artırın.<br /><br />Sunucu başına trafik miktarını azaltın.|
+|MantıksalDisk(&#42;)\Ort. Disk sn\Okuma|Diskten verileri okumak için ortalama gecikme süresi (örnek olarak veritabanı sürücüsünü seçmelisiniz).|10 milisaniyeden kısa olmalıdır.|Veritabanı sürücüsünü gerektiğinden fazla kullanan belirli bir işlem bulunup bulunmadığını denetleyin.<br /><br />Bu sürücünün 10 MS'den az gecikme süresi yaparken geçerli iş yükünü sunabilir, depolama ekibinize/satıcınıza danışın. Geçerli iş yükü, disk kullanım sayaçları aracılığıyla belirlenebilir.|
+|MantıksalDisk(&#42;)\Ort. Disk sn\Yazma|Diske veri yazmak için ortalama gecikme süresi (örnek olarak veritabanı sürücüsünü seçmelisiniz).|10 milisaniyeden kısa olmalıdır.|Veritabanı sürücüsünü gerektiğinden fazla kullanan belirli bir işlem bulunup bulunmadığını denetleyin.<br /><br />Bu sürücünün 10 MS'den az gecikme süresi yaparken geçerli iş yükünü sunabilir ile depolama ekibinize/satıcınıza danışın. Geçerli iş yükü, disk kullanım sayaçları aracılığıyla belirlenebilir.|
 |\LogicalDisk(&#42;)\Disk Okuma\sn|Diskte okuma işlemlerini gerçekleştirme hızı.|Eşik yok|Disk kullanım sayaçları, depolama gecikmesi sorunlarını giderirken fikir verebilir.|
 |\LogicalDisk(&#42;)\Disk Okuma Bayt\sn|Diskten bir saniyede okunan bayt sayısı.|Eşik yok|Disk kullanım sayaçları, depolama gecikmesi sorunlarını giderirken fikir verebilir.|
 |\LogicalDisk&#42;\Disk Yazma\sn|Diskte yazma işlemlerini gerçekleştirme hızı.|Eşik yok|Disk kullanım sayaçları (depolama gecikmesi sorunlarını giderirken fikir verebilir).|
 |\LogicalDisk(&#42;)\Disk Yazma Bayt\sn|Diske bir saniyede yazılan bayt sayısı.|Eşik yok|Disk kullanım sayaçları, depolama gecikmesi sorunlarını giderirken fikir verebilir.|
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA önkoşulları](ata-prerequisites.md)
 - [ATA kapasite planlaması](ata-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

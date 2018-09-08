@@ -6,19 +6,19 @@ author: mlottner
 ms.author: mlottner
 manager: mbaldwin
 ms.date: 7/24/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: adca31a6767031fce19f1a14bf8031c911717c9c
-ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
+ms.openlocfilehash: 518e248c013c781a86fa8a4d212ff7079be2175f
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39227249"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166213"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -114,6 +114,6 @@ Bu tür şüpheli etkinlikleri ATA Panosunda görüntüleyebilirsiniz. Aşağıd
 - [ATA dağıtımı genel bakış](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 
 
-## <a name="see-also"></a>Ayrıca bkz:
+## <a name="see-also"></a>Ayrıca Bkz.
 [ATA şüpheli etkinlik playbook](http://aka.ms/ataplaybook)
 [ATA forumuna bakın!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
