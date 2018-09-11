@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 81cbe1d2952bfe57266f084cb1fc05b5558415c5
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 48123c7eab69f40423142e2368c4c37b3b74172b
+ms.sourcegitcommit: 625b56f8069038ea3e45a91f9d449bd7f39f06b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166876"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44326263"
 ---
 # <a name="whats-new-in-ata-version-16"></a>ATA sürüm 1.6’daki yenilikler
 Bu sürüm notları, Advanced Threat Analytics’in bu sürümündeki bilinen sorunlar hakkında bilgi sağlar.
@@ -43,26 +43,27 @@ ATA 1.6 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
 ### <a name="new-detections"></a>Yeni algılamalar
 
 
-- **Kötü Amaçlı Veri Koruma Özel Bilgi İsteği** Veri Koruma API’si (DPAPI) parola tabanlı bir veri koruma hizmetidir. Bu koruma hizmeti web sitesi parolaları ve dosya paylaşımı kimlik bilgileri gibi kullanıcının gizli bilgilerini depolayan çeşitli uygulamalar tarafından kullanılır. Parolanın kaybolması senaryolarını desteklemek için, kullanıcılar parolalarını içermeyen bir kurtarma anahtarı kullanılarak korunan verilerin şifresini çözebilir. Bir etki alanı ortamında, saldırganlar uzaktan kurtarma anahtarını çalabilir ve tüm etki alanına katılmış bilgisayarlarda korunan verilerin şifresini çözmek için kullanabilirler.
+- **Kötü Amaçlı Veri Koruma Özel Bilgi İsteği** Veri Koruma API’si (DPAPI) parola tabanlı bir veri koruma hizmetidir. Bu koruma hizmeti web sitesi parolaları ve dosya paylaşımı kimlik bilgileri gibi kullanıcının gizli bilgilerini depolayan çeşitli uygulamalar tarafından kullanılır. Parolanın kaybolması senaryolarını desteklemek için kullanıcılar parolalarını içermeyen bir kurtarma anahtarı kullanılarak korunan verilerin çözebilir. Bir etki alanı ortamında, saldırganlar uzaktan kurtarma anahtarını çalabilir ve tüm etki alanına katılmış bilgisayarlarda korunan verilerin şifresini çözmek için kullanabilirler.
 
 
-- **Ağ Oturumu Numaralandırma** Keşif, gelişmiş saldırı sonlandırma zinciri içindeki önemli bir aşamadır. Etki Alanı Denetleyicileri (DC’ler) Server Message Block (SMB) protokolünü kullanarak Grup İlke Nesnesi dağıtımı amacıyla dosya sunucuları görevi görür. Saldırganlar keşif aşamasının bir parçası olarak, etki alanı denetleyicisinde sunucudaki tüm etkin SMB oturumlarını sorgulayabilir ve bu da onlara bu SMB oturumlarıyla ilişkili tüm kullanıcılara ve IP adreslerine erişme olanağı sağlar. SMB oturumu numaralandırması saldırganlar tarafından hassas hesapları hedeflemek için kullanılabilir ve bu da saldırganların ağda yanal olarak hareket etmelerine yardımcı olur.
+- **Ağ Oturumu Numaralandırma** Keşif, gelişmiş saldırı sonlandırma zinciri içindeki önemli bir aşamadır. Etki Alanı Denetleyicileri (DC’ler) Server Message Block (SMB) protokolünü kullanarak Grup İlke Nesnesi dağıtımı amacıyla dosya sunucuları görevi görür. Keşif aşamasının bir parçası olarak, saldırganlar etki alanı denetleyicisi sunucudaki tüm etkin SMB oturumlarını sorgulayabilir. Bu izin tüm kullanıcılar ve bu SMB oturumlarıyla ilişkili IP adreslerine erişim elde etmek bunları. SMB oturumu numaralandırması saldırganlar tarafından hassas hesapları hedeflemek için kullanılabilir ve bu da saldırganların ağda yanal olarak hareket etmelerine yardımcı olur.
 
 
-- **Kötü amaçlı çoğaltma istekleri** Active Directory ortamlarında, Etki Alanı Denetleyicileri arasında düzenli olarak çoğaltma yapılır. Bir saldırgan (bazen bir Etki Alanı Denetleyicisinin kimliğe bürünerek), Active Directory çoğaltma isteğini taklit edebilir ve bu da saldırganın Birim Gölge Kopyası gibi daha kullanışsız tekniklerden yararlanmadan, parola karmaları dahil olmak üzere Active Directory’de depolanan verileri almasına izin verir.
+- **Kötü amaçlı çoğaltma istekleri** Active Directory ortamlarında, Etki Alanı Denetleyicileri arasında düzenli olarak çoğaltma yapılır. Bir saldırgan (bazen bir etki alanı denetleyicisinin kimliğe bürünerek), bir Active Directory çoğaltma isteğini taklit. Bu sızma saldırganın birim gölge kopyası gibi daha tekniklerden yararlanmadan, parola karmaları dahil olmak üzere Active Directory'de depolanan verileri almasına olanak tanır.
 
 
-- **MS11-013 açığının algılanması** Bir Kerberos hizmet biletinin belirli yönlerden sahtesini üretmeye olanak sağlayan Kerberos’taki ayrıcalık güvenlik açığından yararlanma söz konusudur. Bu güvenlik açığından yararlanmayı başaran kötü amaçlı bir kullanıcı veya saldırgan Etki Alanı Denetleyicisinde yükseltilmiş ayrıcalıklarla bir belirteç elde edebilir.
+- **MS11-013 açığının algılama**  
+İçin bir Kerberos Hizmet biletinin belirli yönlerden sahtesini üretmeye olanak Kerberos'taki ayrıcalık güvenlik yoktur. Bu güvenlik açığından yararlanmayı başaran kötü amaçlı bir kullanıcı veya saldırgan Etki Alanı Denetleyicisinde yükseltilmiş ayrıcalıklarla bir belirteç elde edebilir.
 
 
-- **Olağan dışı protokol uygulanması** Kimlik doğrulama istekleri (Kerberos veya NTLM) genellikle standart bir dizi yöntem ve protokoller kullanılarak gerçekleştirilir. Ancak başarıyla kimlik doğrulamak için, isteğin yalnızca belirli gereksinimleri karşılaması gerekir. Saldırganlar bu protokolleri, ortamda standart uygulamadan küçük sapmalarla uygulayabilir. Bu sapmalar Karma Değer Geçişi, Deneme Yanılma vb. saldırılar uygulamaya çalışan bir saldırganın varlığına işaret edebilir.
+- **Olağan dışı protokol uygulanması** Kimlik doğrulama istekleri (Kerberos veya NTLM) genellikle standart bir dizi yöntem ve protokoller kullanılarak gerçekleştirilir. Ancak başarıyla kimlik doğrulamak için, isteğin yalnızca belirli gereksinimleri karşılaması gerekir. Saldırganlar bu protokolleri, ortamda standart uygulamadan küçük sapmalarla uygulayabilir. Bu sapmalar, Pass--Hash, deneme yanılma ve diğerleri gibi saldırılar denemeden bir saldırganın varlığına işaret ediyor olabilir.
 
 
 ### <a name="improvements-to-existing-detections"></a>Var olan algılamalarda geliştirmeler
-ATA 1.6 Altın Anahtar, Şanslı Belirteç, Deneme Yanılma ve Uzak Yürütme gibi var olan algılamalar için hatalı pozitif ve hatalı negatif senaryoları azaltan geliştirilmiş bir algılama mantığına sahiptir.
+ATA 1.6 altın bilet, Honey Token, deneme yanılma ve uzak yürütme gibi var olan algılamalar için hatalı pozitif ve hatalı negatif senaryoları azaltan geliştirilmiş bir algılama mantığına içerir.
 
 ### <a name="the-ata-lightweight-gateway"></a>ATA Lightweight Gateway
-ATA’nın bu sürümü ATA Gateway için, doğrudan Etki Alanı Denetleyicisine ATA Gateway yüklenmesine olanak sağlayan yeni bir dağıtım seçeneği sunar. Bu dağıtım seçeneği ATA Gateway’in kritik olmayan işlevlerini kaldırır ve etki alanı denetleyicisindeki kullanılabilir kaynaklara dayalı olarak dinamik kaynak yönetimi sunar ve bu da etki alanı denetleyicisindeki var olan işlemlerin etkilenmemesini sağlar. ATA Lightweight Gateway, ATA dağıtımının maliyetini azaltır. Aynı zamanda, bağlantı noktası yansıtma desteği kurmak için donanım kaynak kapasitesinin veya olanaklarının sınırlı olduğu şubelerde dağıtımı kolaylaştırır.
+ATA’nın bu sürümü ATA Gateway için, doğrudan Etki Alanı Denetleyicisine ATA Gateway yüklenmesine olanak sağlayan yeni bir dağıtım seçeneği sunar. Bu dağıtım seçeneği ATA Gateway’in kritik olmayan işlevlerini kaldırır ve etki alanı denetleyicisindeki kullanılabilir kaynaklara dayalı olarak dinamik kaynak yönetimi sunar ve bu da etki alanı denetleyicisindeki var olan işlemlerin etkilenmemesini sağlar. ATA Lightweight Gateway, ATA dağıtımının maliyetini azaltır. Aynı anda dağıtım olduğu dal siteler sınırlı donanım kaynak kapasitesinin veya ayarlanacak bağlanamama kolaylaştırır yukarı bağlantı noktası yansıtma desteği.
 ATA Lightweight Gateway hakkında daha fazla bilgi için bkz. [ATA mimarisi](ata-architecture.md#ata-gateway-and-ata-lightweight-gateway)
 
 Dağıtım hakkında önemli noktalar ve sizin için doğru türde ağ geçitlerini seçme konusunda daha fazla bilgi için bkz. [ATA kapasite planlaması](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment)
@@ -77,14 +78,14 @@ Bu sürümde daha basit bir veritabanı yükü ve tüm algılamaların daha veri
 ATA 1.6, ATA Veritabanını çalıştırmak için önemli ölçüde daha az depolama alanı gerektirir; şimdi önceki sürümlerde kullanılanın %20’si kadar alan gerekir.
 
 ### <a name="support-for-ibm-qradar"></a>IBM QRadar desteği
-ATA daha önce desteklenen SIEM çözümlerinin yanı sıra şimdi IBM'in QRadar SIEM çözümünden gelen olayları alabilmektedir.
+ATA daha önce desteklenen SIEM çözümlerinin yanı sıra IBM'in QRadar SIEM çözümünden gelen olayları artık alabilir.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 Bu sürümün bilinen sorunları şunlardır:
 
 ### <a name="failure-to-recognize-new-path-in-manually-moved-databases"></a>El ile taşınan veritabanlarında yeni yolu tanıma hatası
 
-Veritabanı yolunun el ile taşındığı dağıtımlarda, ATA dağıtımı güncelleştirme için yeni veritabanı yolunu kullanmaz. Bu aşağıdaki sorunlara neden olabilir:
+Veritabanı yolunun el ile taşındığı dağıtımlarda, ATA dağıtımı güncelleştirme için yeni veritabanı yolunu kullanmaz. Bu, el ile veritabanı yolu aşağıdaki sorunlara neden taşındı:
 
 
 - ATA eski ağ etkinliklerini döngüsel olarak silmeden ATA Center’ın sistem sürücüsündeki tüm boş alanı kullanabilir.
@@ -92,9 +93,10 @@ Veritabanı yolunun el ile taşındığı dağıtımlarda, ATA dağıtımı gün
 
 - ATA’yı 1.6 sürümüne güncelleştirmek, aşağıdaki resimde gösterilen güncelleştirme öncesi Hazırlık Denetimlerinde başarısız olabilir.
     ![Başarısız hazırlık denetimi](media/ata_failed_readinesschecks.png)
-    >[!Important]
-ATA’yı 1.6 sürümüne güncelleştirmeden önce, aşağıdaki kayıt defteri anahtarını doğru veritabanı yoluyla güncelleştirin: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath`
-
+    
+    > [!IMPORTANT]
+    > ATA'yı 1.6 sürümüne güncelleştirmeden önce aşağıdaki kayıt defteri anahtarını doğru veritabanı yoluyla güncelleştirin: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath`
+    
 ### <a name="migration-failure-when-updating-from-ata-15"></a>ATA 1.5’ten güncelleştirirken geçiş hatası
 ATA 1.6’ya güncelleştirirken, güncelleştirme işlemi şu hata koduyla başarısız olabilir:
 
@@ -133,12 +135,11 @@ Bu döndürmelidir bir `WriteResult({ "nRemoved" : XX })` burada "XX" silinen ş
 
 ### <a name="net-framework-461-requires-restarting-the-server"></a>NET Framework 4.6.1, sunucunun yeniden başlatılmasını gerektirir
 
-Bazı durumlarda, .Net Framework 4.6.1 yüklemesi sunucuyu yeniden başlatmanızı gerekebilir. Bu Tamam düğmesine tıkladığınızda fark **Microsoft Advanced Threat Analytics Center Kurulumu** iletişim otomatik olarak sunucuyu yeniden başlatır. Kurulumdan önce bir bakım penceresi planlamak isteyebileceğinizden, bu özellikle ATA Lightweight Gateway’i bir etki alanı denetleyicisine yüklerken önemlidir.
-    ![.NET Framework’ü yeniden başlatma](media/ata-net-framework-restart.png)
+![.Net Framework yeniden başlatması](media/ata-net-framework-restart.png)
 
 ### <a name="historical-network-activities-no-longer-migrated"></a>Geçmiş ağ etkinlikleri artık geçirilmez
 ATA’nın bu sürümü daha doğru algılama sunan ve özellikle Karma Değer Geçirme için birçok hatalı pozitif senaryosunu azaltan geliştirilmiş bir algılama altyapısı sunar.
-Yeni ve geliştirilmiş algılama altyapısı hat içi algılama teknolojisini kullanarak, ATA Center’ın performansını önemli ölçüde artırmak için, geçmiş ağ etkinliğine erişmeksizin algılamaya olanak sağlar. Bu aynı zamanda, güncelleştirme işlemi sırasında geçmiş ağ etkinliğinin aktarılmasına gerek kalmadığı anlamına gelir.
+Yeni ve geliştirilmiş algılama altyapısı, ATA Center'ın performansını önemli ölçüde artırmak için geçmiş ağ etkinliğine erişmeden algılama sağlayan satır içi algılama teknolojisini kullanır. Bu ayrıca, güncelleştirme işlemi sırasında geçmiş ağ etkinliğinin aktarılmasına gerek kalmadığı anlamına gelir.
 Gelecekte araştırmak amacıyla istemeniz halinde, ATA güncelleştirme yordamı verileri JSON dosyası olarak `<Center Installation Path>\Migration` uygulamasına aktarır.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
