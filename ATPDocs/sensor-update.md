@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
+ms.date: 9/12/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8dce45be6b1e4fa383eea3993f120fa504239f34
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 8a6481070abf1188507f31dbd01b26f7221b2e36
+ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125728"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697251"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -28,7 +28,9 @@ Azure Gelişmiş tehdit koruması, kuruluşunuz için en iyi olası korumasını
 
 Azure ATP hizmeti, yeni algılamalar hata düzeltmeleri ve performans geliştirmeleri ile ayda birkaç kez güncelleştirilir. Bazen bu güncelleştirmeler için sensörlerden karşılık gelen bir güncelleştirme gerektirir. 
 
-Algılayıcılar güncelleştirmezseniz, bunlar hizmet düşmesine neden neden Azure ATP bulut hizmetiyle iletişim kurmak mümkün olmayabilir.
+Algılayıcılar güncelleştirmezseniz, bunlar hizmet düşmesine neden neden Azure ATP bulut hizmetiyle iletişim kurmak mümkün olmayabilir. 
+
+Güçlü, sertifika tabanlı karşılıklı kimlik doğrulaması, sensör ve Azure bulut hizmeti arasında kimlik doğrulaması kullanır. 
 
 Her güncelleştirme test ve tüm desteklenen işletim sistemlerinde ağ ve işlemleri için en az etki neden doğrulandı.
 

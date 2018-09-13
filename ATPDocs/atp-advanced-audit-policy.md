@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8889d04063ce4e165104639281322b32178b93ec
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: d7207388702c659a08258862326ee89a49ae3ac2
+ms.sourcegitcommit: f3f80c5d3e2e5c1bcf975ae0cbae1469da7ab74d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126102"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44515517"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -32,7 +32,7 @@ Azure ATP, her bir etki alanı denetleyicisinin Gelişmiş denetim ilkesinin ge�
 ![Gelişmiş Denetim İlkesi sistem durumu Uyarısı](media/atp-health-alert-audit-policy.png)
 
 
-Gelişmiş Güvenlik denetleme ilkesi, GPO etkinleştirilir. Bu denetim olayları, etki alanı denetleyicisinin Windows olaylarına kaydedilir. Bu, içinde etkinleştirilmelidir **varsayılan etki alanı denetleyicileri İlkesi** Active Directory'de.
+Gelişmiş Güvenlik denetleme ilkesi üzerinden etkinleştirilir **varsayılan etki alanı denetleyicileri İlkesi** GPO. Bu denetim olayları, etki alanı denetleyicisinin Windows olaylarına kaydedilir. 
 
 <br>Gelişmiş denetim ilkeleri aşağıdaki yönergeleri kullanarak etki alanı denetleyicinizin değiştirin:
 
@@ -50,7 +50,7 @@ Gelişmiş Güvenlik denetleme ilkesi, GPO etkinleştirilir. Bu denetim olaylar�
 
     ![Kimlik bilgileri doğrulaması](media/atp-advanced-audit-policy-check-step-3.png)
 
-6. Çift tıklayın, hesap oturum açma için Git **güvenlik grubu yönetimini denetleme** seçip **aşağıdaki denetim olaylarını Yapılandır** hem başarılı ve başarısız olaylar için.
+6. Hesap Yönetimi'ne gidin, çift tıklayın **güvenlik grubu yönetimini denetleme** seçip **aşağıdaki denetim olaylarını Yapılandır** hem başarılı ve başarısız olaylar için.
 
     ![Güvenlik Grubu Yönetimini Denetleme](media/atp-advanced-audit-policy-check-step-4.png)
 

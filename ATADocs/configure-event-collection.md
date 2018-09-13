@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 50d23f23432305c47ff14b8a1d68e204de9e32d7
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 0a939f36a86e1ad6cd275a16a4dd4468defa7a76
+ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125813"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697217"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -80,14 +80,14 @@ Ekledikten sonra **ağ hizmeti** için **Event Log Readers** grubunda, değişik
     3.  **Kaynak bilgisayar tarafından başlatılan**’ı seçin ve **Bilgisayar Gruplarını Seç**’e tıklayın.
         1.  **Etki Alanı Bilgisayarı Ekle**’ye tıklayın.
         2.  Etki alanı denetleyicisinin adını **Seçilecek nesne adını girin** alanına girin. Sonra, **Adları Denetle**’ye ve **Tamam**’a tıklayın.  
-          ![Olay Görüntüleyicisi resmi](media/wef3 event viewer.png)  
+          ![Olay Görüntüleyicisi resmi](media/wef3%20event%20viewer.png)  
         3.  **Tamam**'ı tıklatın.
      4. **Olayları Seç**’e tıklayın.
 
         1. **Günlüğe göre**’ye tıklayıp **Güvenlik**’i seçin.
         2. **Olay Kimliklerini Ekler/Dışlar** alanına olay numarasını yazın ve **Tamam**’a tıklayın. Örneğin, 4776 gibi aşağıdaki örnekte yazın.
 
-    ![Sorgu filtresi resmi](media/wef 4 query filter.png)
+        ![Sorgu filtresi resmi](media/wef%204%20query%20filter.png)
 
     5.  Oluşturulan aboneliğe sağ tıklayıp **çalışma zamanı durumu** durumu ile ilgili olup olmadığını görmek için. 
     6.  Birkaç dakika sonra, iletilmek üzere ayarladığınız olayların ATA Gateway’deki İletilen Olaylar kısmında görünüp görünmediğini kontrol edin.

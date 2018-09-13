@@ -2,10 +2,10 @@
 title: Windows Defender ATP ile Azure Gelişmiş tehdit koruması tümleştirme | Microsoft Docs
 description: Azure Gelişmiş tehdit koruması için tam tehdit algılama kapsamının Windows Defender ATP ile tümleştirme
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/5/2018
+ms.date: 9/12/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 097769c53eefd1c6e5242086cd56d47b89b36e68
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: f2f211dd5882b1a671904d3d241eaf21b2fe3133
+ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126272"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697234"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -59,13 +59,9 @@ Bu özelliği etkinleştirmek için hem Azure ATP hem de Windows Defender ATP i�
 
 ## <a name="how-to-integrate-azure-atp-with-windows-defender-atp"></a>Azure ATP Windows Defender ATP ile tümleştirme
 
-1. Olarak tümleştirmek için istediğiniz çalışma alanını ayarlamak **birincil**. Yalnızca bir çalışma, birincil çalışma alanı olabilir ve yalnızca birincil çalışma alanı, diğer hizmetleriyle tümleştirebilirsiniz. Belirli bir noktada gelecekte bu çalışma, birincil çalışma alanı artık hale getirmek isterseniz, öncelikle birincil olmayan ayarlamadan önce tümleştirmeyi Kaldır gerekecektir.
+1. Tıklayın **yapılandırma**, altında **veri kaynakları** seçin **Windows Defender ATP**. Bağlantı ardından **çalışma alanı yönetimi**. Bu yalnızca devreye alma işlemi için Windows Defender ATP zaten gerçekleştirilen ve Windows Defender ATP için lisansınız varsa kullanılabilir. 
 
- ![birincil çalışma alanı](./media/primary-workspace.png)
-
-2. Tıklayın **yapılandırma**, altında **veri kaynakları** seçin **Windows Defender ATP**. Bağlantı ardından **çalışma alanı yönetimi**. Bu yalnızca devreye alma işlemi için Windows Defender ATP zaten gerçekleştirilen ve Windows Defender ATP için lisansınız varsa kullanılabilir. 
-
-3. Birincil çalışma alanınızda ayarlar dişlisine tıklayın.
+2. Çalışma alanınızda ayarlar dişlisine tıklayın.
 
  ![Çalışma alanı tümleştirme](./media/edit-workspace.png)
  

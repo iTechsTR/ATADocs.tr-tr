@@ -2,10 +2,10 @@
 title: Ara sunucunuzda veya güvenlik duvarı ile algılayıcı Azure ATP iletişimi etkinleştirmek için yapılandırma | Microsoft Docs
 description: Azure ATP bulut hizmeti ve Azure ATP algılayıcı arasında iletişime izin vermek için güvenlik duvarınızın veya Ara sunucu ayarlama işlemi açıklanmaktadır
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/29/2018
+ms.date: 9/12/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7aadacc98daa5ff259a4eb14fcd81c1cab9e5acd
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 2e8a4cdccad7f371601941e20ede20000aeef5ec
+ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126510"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697200"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -71,8 +71,8 @@ Bir proxy veya Güvenlik Duvarı varsayılan ve yalnızca belirli etki alanları
 
 
 Ayrıca, bir kural için aşağıdaki DNS kayıtlarını oluşturma tarafından oluşturulan güvenlik duvarı veya proxy kuralları belirli bir çalışma alanı için sağlamlaştırmak:
-- < çalışma alanı-adı >. atp.azure.com – konsol bağlantısı için. Örneğin, contosoATP.atp.azure.com
-- < çalışma alanı-adı > sensorapi.atp.azure.com – algılayıcılar bağlantı. Örneğin, contosoATPsensorapi.atp.azure.com
+- \<uygulamanızın çalışma alanı-adı >. atp.azure.com – konsol bağlantısı için. Örneğin, "Contoso-corp.atp.azure.com"
+- \<uygulamanızın çalışma alanı-adı > sensorapi.atp.azure.com – algılayıcılar bağlantı. Örneğin, "contoso-corpsensorapi.atp.azure.com"
 
  
 > [!NOTE]
