@@ -63,7 +63,7 @@ Ekledikten sonra **ağ hizmeti** için **Event Log Readers** grubunda, değişik
    
     1.  **Etkin**’i seçin.
     2.  Altında **seçenekleri**, tıklayın **Göster**.
-    3.  Altında **SubscriptionManagers**, şu değeri girin ve tıklayın **Tamam**: * Server =`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (örneğin: Server =`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    3.  Altında **SubscriptionManagers**, şu değeri girin ve tıklayın **Tamam**: *Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (örneğin: Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
     
     ![Hedef aboneliği yapılandırma resmi](media/wef%202%20config%20target%20sub%20manager.png)
     
