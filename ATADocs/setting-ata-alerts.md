@@ -7,18 +7,18 @@ ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: conceptual
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 808268a10a4de0bb4d3a1655064ee3c6b08b0943
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 444fd71f4c343619ceeea4056fbe98dce4f06b6a
+ms.sourcegitcommit: 9f02f0f6669b25f39b616bb0885bb55b8c4f050b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166740"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362451"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -42,8 +42,8 @@ Bildirimleri almak için şu parametreleri ayarlayın:
 1. **Bildirimler ve Raporlar** bölümü altında **Bildirimler**’i seçin.
 1. **Posta bildirimleri** altında hangi bildirimlerin (yeni şüpheli etkinlikler ve yeni sistem durumu sorunları) e-posta yoluyla gönderileceğini belirtin. Şüpheli etkinlikler ve sistem durumu uyarıları için ayrı e-posta adresleri belirleyebilirsiniz, böylece örneğin, şüpheli etkinlik bildirimleri güvenlik analistinize gönderilirken sistem durumu uyarı bildirimleri BT yöneticinize gönderilebilir.
     
-    >   [!NOTE]
-    >   Kuşkulu etkinlikler için e-posta uyarıları, yalnızca kuşkulu etkinlik oluşturulduğunda gönderilir.
+  > [!NOTE]
+  > Kuşkulu etkinlikler için e-posta uyarıları, yalnızca kuşkulu etkinlik oluşturulduğunda gönderilir.
 
 1. Altında **Syslog bildirimlerini**, Syslog sunucunuza - yeni şüpheli etkinlikler, güncelleştirilmiş şüpheli etkinlikler ve yeni sistem durumu sorunları hangi bildirimlerin gönderilmesi gerektiğini belirtin.
 1. **Kaydet**'e tıklayın.
