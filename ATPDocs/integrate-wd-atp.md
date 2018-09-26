@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f2f211dd5882b1a671904d3d241eaf21b2fe3133
-ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
+ms.openlocfilehash: 4dca942b6c7b066cfec44e51aaad0f1e003da6ec
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44697234"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750427"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -91,7 +91,8 @@ Rozeti oylayıp tıklarsanız, Windows Defender ATP portalına burada görüntü
 
 Bir uç noktaya tıkladığınızda, Windows Defender ATP Portalı'nda Azure ATP uyarılarını görüntüleyebilirsiniz. Windows Defender ATP bu varlık için uyarıları tıklarsanız, ATA'daki varlığın profil sayfası açılır. 
  
- > ! [NOT] Şu anda yalnızca kullanıcı ve şirket içi makineler Windows Defender ATP ile Azure ATP tümleştirme destekler AD. Azure ad kullanıcıları ve Azure'da yönetilen sanal makineler, tümleşik bir parçası olarak görüntülenmeyecek 
+ > [!NOTE]
+ > Şu anda yalnızca kullanıcı ve şirket içi makineler Windows Defender ATP ile Azure ATP tümleştirme destekler AD. Azure ad kullanıcıları ve Azure'da yönetilen sanal makineler, tümleşik bir parçası olarak görüntülenmeyecek 
 
 ![Windows Defender ATP uyarıları](./media/wd-atp-alerts.png)
 

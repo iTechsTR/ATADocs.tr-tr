@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6f44bbf50cff2e983a7ddb1ef1cf54ebaf928741
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 6874c8a23372950dacdf328b1e885b7d039c8433
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126238"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750512"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -51,7 +51,7 @@ Ağınızı algılayıcı gereksinimlerini karşıladığını doğruladıktan s
 
 1. Tıklayın **çalışma alanı oluşturma**.
 
-2. İçinde **yeni çalışma alanı oluşturma** iletişim kutusunda, çalışma alanınızı adlandırın ve seçin bir **coğrafi konum** veri merkeziniz için. Yalnızca bir çalışma, birincil olarak ayarlanabilir. Bir çalışma alanı, birincil tümleştirmeler etkiler - yalnızca Azure ATP Windows Defender ATP ile birincil çalışma alanınız için tümleştirebilirsiniz olarak ayarlanıyor. Hangi çalışma alanının birincil daha sonra kaldırmak için geçerli birincil çalışma alanı zaten ayarlanmış herhangi tümleştirmeler gerekmez, ancak yapmak üzere olduğunu değiştirebilirsiniz.
+2. İçinde **yeni çalışma alanı oluşturma** iletişim kutusunda, çalışma alanınızı adlandırın ve seçin bir **coğrafi konum** veri merkeziniz için. Bir çalışma, birincil olarak ayarlanabilir. Bir çalışma alanı, birincil tümleştirmeler etkiler - yalnızca Azure ATP Windows Defender ATP ile birincil çalışma alanınız için tümleştirebilirsiniz olarak ayarlanıyor. Hangi çalışma alanının birincil daha sonra kaldırmak için geçerli birincil çalışma alanı zaten ayarlanmış herhangi tümleştirmeler gerekmez, ancak yapmak üzere olduğunu değiştirebilirsiniz.
  > [!NOTE]
  > Bir coğrafi konum seçtikten sonra değiştiremezsiniz.
     ![Azure ATP çalışma alanı](media/create-workspace.png)
@@ -65,7 +65,7 @@ Ağınızı algılayıcı gereksinimlerini karşıladığını doğruladıktan s
 
     ![Azure ATP çalışma alanları](media/atp-workspaces.png)
 
-- Yalnızca birincil çalışma alanı düzenlenebilir. Diğer çalışma alanlarında değişiklik yapmak için bunları silin ve yeniden ekleyin. Birincil çalışma alanını silmek istiyorsanız, önce tümleştirmeler devre dışı açmak ve olmaması için çalışma alanını ayarlamanız gerekir **birincil** silinecek açmadan önce.
+- Yalnızca birincil çalışma alanı düzenlenebilir. Birincil çalışma alanını silmek istiyorsanız, önce tümleştirmeler devre dışı açmak ve olmaması için çalışma alanını ayarlamanız gerekir **birincil** silinecek açmadan önce.
 - Birincil bir çalışma alanı düzenlemek için önce mevcut tümleştirme çalışma alanında kapatmanız gerekir.
 
 - Veri saklama – silinmiş çalışma alanları kullanıcı Arabiriminde görünmez. Azure ATP veri saklama hakkında daha fazla bilgi için bkz. [With Azure ATP verilerinin güvenliğine ve gizliliğine](atp-privacy-compliance.md).

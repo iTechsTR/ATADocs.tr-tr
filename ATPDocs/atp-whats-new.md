@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/05/2018
+ms.date: 9/16/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,32 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f6f291ebed680278391498361737e0f8be5ea710
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: f9959f1b517890b725845f8dd01156f9a3e8198b
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166689"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750563"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 # <a name="whats-new-in-azure-atp"></a>ATA'daki yenilikler 
+
+## <a name="azure-atp-release-248"></a>Azure ATP yayın 2.48
+16 Eylül 2018'de yayınlanan
+- **Güvenlik Uyarısı:** Dizin Hizmetleri kullanarak keşif sorguları
+
+  Bu güvenlik uyarısı, grafikleri ve kanıt artık geliştirdi. 
+
+- **Varlıkları algılamalardan dışlama** 
+
+  Hatalı pozitif sonuçları azaltmak için artık aşağıdaki algılamaların dışında varlıklar seçebilirsiniz: 
+  - Şüpheli VPN bağlantısı (kullanıcı dışlama)
+  - Şüpheli etki alanı denetleyicisi yükseltme (olası DcShadow saldırı)
+  - Şüpheli çoğaltma isteği (olası DcShadow saldırı)
+
+- Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları da içerir.
+
 
 ## <a name="azure-atp-release-247"></a>Azure ATP yayın 2.47
 Yayın Tarihi: 2 Eylül 2018

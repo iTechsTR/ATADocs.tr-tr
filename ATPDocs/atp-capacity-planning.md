@@ -6,18 +6,18 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 5/22/2018
-ms.topic: conceptual
+ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3426829c0c3b9b52ec1c0fb2c7f19e5a0944bfdf
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: d2fce6a4cf3b3440e3ceedc524fe8457e8831bbe
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126374"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750495"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -58,7 +58,7 @@ Algılayıcı dağıtım türüne karar verirken aşağıdaki faydaları göz ö
 Dağıtmak için kaç tane Azure ATP tek başına algılayıcı karar verirken aşağıdaki noktaları dikkate.
 
 -   **Active Directory ormanları ve etki alanları**<br>
-    Azure ATP oluşturduğunuz her bir çalışma alanı için tek bir Active Directory orman içinde birden çok etki alanından trafiği izleyebilir. Birden çok ormanı izlemek için birden çok çalışma alanı oluşturmanız gerekir. 
+    Azure ATP oluşturduğunuz her bir çalışma alanı için birden çok Active Directory ormanları içinde birden çok etki alanından trafiği izleyebilir. 
 
 -   **Bağlantı Noktası Yansıtma**<br>
 Bağlantı noktası yansıtmayla ilgili faktörler, veri merkezi veya şube site başına birden çok Azure ATP tek başına algılayıcı dağıtmanızı gerektirebilir.

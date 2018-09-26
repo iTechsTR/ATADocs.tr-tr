@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b8b48b8090e109c9fc23c52b05f986b34e2549eb
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: ccb87ab6b3fabed5edaf7c32324701c74259f098
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165890"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750446"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -37,7 +37,6 @@ Aşağıdaki listede yer alan grupları, önemli Azure ATP tarafından değerlen
 -   Print Operators
 -   Backup Operators
 -   Replicators
--   Uzak Masaüstü Kullanıcıları 
 -   Ağ Yapılandırması İşleçleri 
 -   Incoming Forest Trust Builders
 -   Etki Alanı Yöneticileri
@@ -48,6 +47,8 @@ Aşağıdaki listede yer alan grupları, önemli Azure ATP tarafından değerlen
 -   Schema Admins 
 -   Enterprise Admins
 
+ > [!NOTE]
+ > Eylül 2018'e kadar Uzak Masaüstü kullanıcıları da otomatik olarak duyarlı Azure ATP tarafından ele alındı. Uzak Masaüstü varlıklar veya bu tarihin artık otomatik olarak işaretlenmiş sonra Uzak Masaüstü varlıkları sırasında hassas olarak eklenen gruplar veya bu tarihten önce eklenen gruplar, hassas olarak işaretlenmiş kalabilir. Bu hassas ayar artık el ile değiştirilebilir.  
 
 ## <a name="tagging-sensitive-accounts"></a>Hassas hesapları etiketleme
 
