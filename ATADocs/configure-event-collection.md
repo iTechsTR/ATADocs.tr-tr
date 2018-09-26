@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 37d3234694b92c988fcd1153c79d37dbba371aaa
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 20360658a310feb4553077b460ee013e268f9239
+ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133608"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168595"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -44,7 +44,7 @@ Bu senaryoda, ATA Gateway etki alanının bir üyesi olduğunu varsayın.
 
 1.  Active Directory Kullanıcıları ve Bilgisayarları'nı açın ve gidin **yerleşik** klasörü ve çift **Event Log Readers**. 
 2.  **Üyeler**’i seçin.
-4.  **Ağ Hizmeti** listede yoksa **Ekle**’ye tıklayın, **Seçilecek nesne adlarını girin** alanına **Ağ Hizmeti** yazın. Sonra, **Adları Denetle**’ye tıklayın ve **Tamam**’a çift tıklayın. 
+3.  **Ağ Hizmeti** listede yoksa **Ekle**’ye tıklayın, **Seçilecek nesne adlarını girin** alanına **Ağ Hizmeti** yazın. Sonra, **Adları Denetle**’ye tıklayın ve **Tamam**’a çift tıklayın. 
 
 Ekledikten sonra **ağ hizmeti** için **Event Log Readers** grubunda, değişikliğin etkili olması etki alanı denetleyicileri yeniden başlatın.
 
@@ -62,7 +62,9 @@ Ekledikten sonra **ağ hizmeti** için **Event Log Readers** grubunda, değişik
    
     1.  **Etkin**’i seçin.
     2.  Altında **seçenekleri**, tıklayın **Göster**.
-    3.  Altında **SubscriptionManagers**, şu değeri girin ve tıklayın **Tamam**: \*Server =`http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (örneğin: Server =`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    3.  Altında **SubscriptionManagers**, şu değeri girin ve tıklayın **Tamam**: *Server = http: / /<fqdnATAGateway>: 5985/wsman/SubscriptionManager/WEC, Refresh = 10* 
+    
+        *(Örneğin: Server =http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, Yenile = 10)*
  
     ![Hedef aboneliği yapılandırma resmi](media/wef%202%20config%20target%20sub%20manager.png)
    

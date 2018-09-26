@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/12/2018
+ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 353845c3fb03d5bd4af18ea467fceea57010f33e
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 03aa84b4288e4155b579acc12f03b7ecdb55b160
+ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126017"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168612"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -32,7 +32,7 @@ ms.locfileid: "44126017"
 
 
 ## <a name="step-5-configure-the-azure-atp-sensor-settings"></a>Adım 5. Azure ATP algılayıcısı ayarlarını yapılandırma
-Azure ATP algılayıcısını yüklendikten sonra Azure ATP algılayıcısını ayarlarını yapılandırmak için aşağıdaki adımları gerçekleştirin.
+Azure ATP algılayıcısını yüklendikten sonra Azure ATP algılayıcısı ayarlarını yapılandırmak için aşağıdaki adımları gerçekleştirin.
 
 1.  Azure ATP çalışma alanı Portalı'nda Git **yapılandırma** ve altında **sistem**seçin **algılayıcı**.
    
@@ -51,12 +51,15 @@ Azure ATP algılayıcısını yüklendikten sonra Azure ATP algılayıcısını 
       - Listedeki etki alanı denetleyicilerinden en az biri genel katalog olmalıdır. Bu bilgisayar ve kullanıcı nesneleri ormanındaki diğer etki alanlarındaki gidermek Azure ATP sağlar.
 
   - **Yakalama Ağ bağdaştırıcıları** (gerekli):
-     - Ayrılmış bir sunucuya bir Azure ATP tek başına algılayıcı için hedef yansıtma bağlantı noktası olarak yapılandırılan ağ bağdaştırıcılarını seçin. Bunlar, yansıtılmış etki alanı denetleyicisi trafiği alır.
+   
      - Bir Azure ATP algılayıcısını için bu, kuruluşunuzdaki diğer bilgisayarlarla iletişim için kullanılan tüm ağ bağdaştırıcıları olmalıdır.
+    - Ayrılmış bir sunucuya bir Azure ATP tek başına algılayıcı için hedef yansıtma bağlantı noktası olarak yapılandırılan ağ bağdaştırıcılarını seçin. Bunlar, yansıtılmış etki alanı denetleyicisi trafiği alır.
 
-    - **Etki alanı Eşitleyici adayı**: herhangi bir Azure ATP tek başına algılayıcı bir etki alanı Eşitleyici adayı olarak ayarlanmalıdır, Azure ATP ile Active Directory etki alanınız arasında eşitlemeden sorumlu olabilir. Etki alanının büyüklüğüne ilk eşitleme biraz zaman alabilir ve yoğun kaynak sahiptir. Varsayılan olarak, yalnızca Azure ATP tek başına algılayıcı etki alanı Eşitleyici adayı olarak ayarlanır.
-   Etki alanı Eşitleyici adayı engeller herhangi bir uzak site Azure ATP algılayıcısını devre dışı bırakmanız önerilir.
-   Etki alanı denetleyiciniz salt okunur ise, onu Etki Alanı eşitleyici adayı olarak ayarlamayın. Daha fazla bilgi için [Azure ATP mimarisi](atp-architecture.md#azure-atp-sensor-features).
+    - **Etki alanı Eşitleyici adayı**: Azure ATP tek başına algılayıcı olsa da varsayılan olarak, Azure ATP algılayıcı etki alanı Eşitleyici adayı değildir. El ile bir Azure ATP algılayıcısını bir etki alanı syncronizer adayı olarak seçmek için geçiş **etki alanı Eşitleyici adayı** Değiştir seçeneğini **ON** yapılandırma ekranında. 
+    
+        Etki alanı Eşitleyicisi Azure ATP ile Active Directory etki alanınız arasında eşitlemeden sorumlu. Etki alanının büyüklüğüne ilk eşitleme biraz zaman alabilir ve yoğun kaynak sahiptir. 
+   Herhangi bir uzak site etki alanı Eşitleyici adayı engeller Azure ATP sensor(s) devre dışı bırakmanız önerilir.
+   Etki alanı denetleyiciniz salt okunur ise, onu Etki Alanı eşitleyici adayı olarak ayarlamayın. Azure ATP etki alanı eşitleme hakkında daha fazla bilgi için bkz: [Azure ATP mimarisi](atp-architecture.md#azure-atp-sensor-features)
   
 4. **Kaydet**'e tıklayın.
 

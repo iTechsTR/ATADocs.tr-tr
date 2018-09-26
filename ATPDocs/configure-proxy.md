@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/12/2018
+ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2e8a4cdccad7f371601941e20ede20000aeef5ec
-ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
+ms.openlocfilehash: fa6bb10b029649a158d7733b10fec51c52acb9f7
+ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44697200"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168561"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -45,15 +45,15 @@ Statik proxy kayıt defteri aracılığıyla yapılandırılabilir. Yerelhizmet 
 
 1.   Bunları değiştirmeden önce kayıt defteri anahtarlarını yedeklemek emin olun.
 
-2. Değerini kayıt defterine arama `DefaultConnectionSetting` REG_BINARY kayıt defteri anahtarı altında olarak `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting` ve kopyalayın.
+2. Değerini kayıt defterine arama `DefaultConnectionSettings` REG_BINARY kayıt defteri anahtarı altında olarak `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings` ve kopyalayın.
  
-2.  LocalSystem doğru ara sunucu ayarları yoksa (bunlar yapılandırılmamış veya Örnein Current_User ' farklıdır), ardından proxy Örnein Current_User LocalSystem ayarı kopyalayın. Kayıt defteri anahtarı altında `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
+2.  LocalSystem doğru ara sunucu ayarları yoksa (bunlar yapılandırılmamış veya Örnein Current_User ' farklıdır), ardından proxy Örnein Current_User LocalSystem ayarı kopyalayın. Kayıt defteri anahtarı altında `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings`.
 
-3.  Örnein Current_user değerini yapıştırın `DefaultConnectionSetting` REG_BINARY olarak.
+3.  Örnein Current_user değerini yapıştırın `DefaultConnectionSettings` REG_BINARY olarak.
 
-4.  Doğru ara sunucu ayarları LocalService sahip değilse, proxy için LocalService Örnein Current_User ayarı'ni kopyalayın. Kayıt defteri anahtarı altında `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
+4.  Doğru ara sunucu ayarları LocalService sahip değilse, proxy için LocalService Örnein Current_User ayarı'ni kopyalayın. Kayıt defteri anahtarı altında `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings`.
 
-5.  Örnein Current_User değerini yapıştırın `DefaultConnectionSetting` REG_BINARY olarak.
+5.  Örnein Current_User değerini yapıştırın `DefaultConnectionSettings` REG_BINARY olarak.
 
 > [!NOTE]
 > Bu WinINet LocalService, LocalSytem bağlamı kullanan Windows Hizmetleri dahil olmak üzere tüm uygulamaları etkiler.
