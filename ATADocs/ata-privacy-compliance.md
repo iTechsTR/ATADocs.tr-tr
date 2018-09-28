@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/04/2018
+ms.date: 9/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 0f4a7546b6231fb263d1734b731f6be3cae7570a
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 08876085e3fe5d86c8219c6b0ad7beb8c44c700a
+ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134023"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403242"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -44,7 +44,7 @@ Kullanıcı ile ilgili verileri ATA veritabanından kalıcı olarak silmek için
 
 1. [İndirme](https://aka.ms/ata-gdpr-script) MongoDB betik (gdpr.js).  
 
-2. ATA Center makinesindeki betiğini kopyalayın ve ATA Center makineden aşağıdaki komutu çalıştırın: 
+2. Betik ATA klasöre kopyalayın (konumundaki `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB` ve ATA Center makineden aşağıdaki komutu çalıştırın: 
 
 Aşağıdaki bölümlerde açıklandığı gibi varlıkları silin ve varlık etkinlik verilerini silmek için ATA GDPR veritabanı betiğini kullanın.
 

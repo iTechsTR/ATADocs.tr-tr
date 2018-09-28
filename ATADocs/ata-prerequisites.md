@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/9/2018
+ms.date: 9/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 06789ac50d52a9b202eea9fb9fb6ea74aaf7a5f3
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: f5a21b1b84d164542e04d77e3a6a57fe5c944102
+ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133972"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403208"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 
 
 # <a name="ata-prerequisites"></a>ATA Önkoşulları
-Bu makalede, ortamınızda başarılı bir ATA dağıtımı için gereksinimler açıklanır.
+Bu makalede, ortamınızda başarılı bir ATA dağıtımı için gereksinimleri anlatılmaktadır.
 
 > [!NOTE]
 > Kaynakları ve kapasiteyi planlama hakkında daha fazla bilgi için bkz. [ATA kapasite planlaması](ata-capacity-planning.md).
@@ -61,7 +61,7 @@ Bu bölümde, hesapları ve ATA yüklemesine başlamadan önce olmalıdır. ağ 
 
 -    Önerilen: Kullanıcının silinmiş nesneler kapsayıcısı üzerinde salt okuma izinleri olmalıdır. Bu, Ata'nın etki alanında toplu nesne silme işlemlerini algılamasını sağlar. Silinmiş nesneler kapsayıcısı üzerinde salt okuma izinlerini yapılandırma hakkında daha fazla bilgi için bkz: **Silinmiş nesne kapsayıcısı üzerindeki izinleri değiştirme** konusundaki [görünümü veyadizinnesnesiüzerindekiizinleriayarlayın](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) makalesi.
 
--   İsteğe bağlı: Ağ etkinlikleri olmayan bir kullanıcının kullanıcı hesabı. Bu hesap ATA Honeytoken kullanıcısı olarak yapılandırılır. Honeytoken kullanıcısını yapılandırmak için kullanıcı adına değil kullanıcı hesabının SID değerine ihtiyacınız vardır. Daha fazla bilgi için [yapılandırma IP adresi dışlamalarını ve Honeytoken kullanıcısını](install-ata-step7.md).
+-   İsteğe bağlı: Ağ etkinliği ile bir kullanıcının kullanıcı hesabı. Bu hesap bir ATA Honeytoken kullanıcısı olarak yapılandırılabilir. Honeytoken kullanıcısı bir hesap yapılandırmak için yalnızca kullanıcı adı gereklidir. Honeytoken yapılandırma bilgileri için bkz. [yapılandırma IP adresi dışlamalarını ve Honeytoken kullanıcısını](install-ata-step7.md).
 
 -   İsteğe bağlı: toplama ve analiz etme ve ağ trafiğini yanı sıra etki alanı denetleyicilerinden ATA Windows olayları 4776, 4732, 4733, 4728, 4729, 4756 ve 4757'yi ATA Pass--Hash, deneme yanılma, gizli Grup değişiklikleri daha da geliştirmek için kullanabilirsiniz ve Token honey. Bu olayları sıem sistemlerinizden alınabileceği gibi veya etki alanı denetleyicinizden Windows Olay iletme'yi ayarlayarak da alınabilir. Toplanan olaylar ATA’ya etki alanı denetleyicisi ağ trafiği yoluyla sağlanmayan ek bilgiler sağlar.
 

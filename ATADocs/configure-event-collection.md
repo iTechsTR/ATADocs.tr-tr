@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 20360658a310feb4553077b460ee013e268f9239
-ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
+ms.openlocfilehash: 512e7fa979a6fd5e140d65836b533b720a6dc03b
+ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168595"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403225"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -27,16 +27,16 @@ ms.locfileid: "47168595"
 # <a name="configuring-windows-event-forwarding"></a>Windows Olay İletme’yi yapılandırma
 
 > [!NOTE]
-> ATA 1.8 ve üzeri sürümlerde artık ATA Lightweight Gateway’ler için olay koleksiyonu yapılandırması gerekli değildir. ATA Lightweight Gateway artık olay iletmeyi yapılandırmaya gerek kalmadan olayları yerel olarak okuyabilir.
-
+> ATA 1.8 ve üzeri sürümlerde artık ATA Lightweight Gateway’ler için olay koleksiyonu yapılandırması gerekli değildir. ATA Lightweight Gateway, artık olay iletmeyi yapılandırmaya gerek kalmadan olayları yerel olarak okuyun.
 
 ATA algılama yeteneklerini artırmak için aşağıdaki Windows olaylarına ihtiyacı vardır: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. Bunlar ya da otomatik olarak ATA Lightweight Gateway tarafından okunabilir veya ATA Lightweight Gateway'in dağıtılmamış olması durumunda, bu ATA gateway'e iki yoldan biriyle ATA Gateway'i SIEM olaylarını dinleyecek şekilde yapılandırarak veya Windows olay yapılandırarak iletilebilir İletme.
 
-
+> [!NOTE]
+> Sunucu Çekirdeği kullanıyorsanız [wecutil](https://docs.microsoft.com/windows-server/administration/windows-commands/wecutil) oluşturun ve abonelikleri iletilen olaylar için uzak bilgisayarlardan yönetmek için kullanılabilir.
 
 ### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>Bağlantı noktası yansıtma ile ATA Gateway’ler için WEF yapılandırması
 
-Bağlantı noktası etki alanı denetleyicilerinden ATA Gateway'e yansıtmayı yapılandırdıktan sonra Windows olay iletmeyi kaynak tarafından başlatılan yapılandırmasını kullanarak yapılandırmak için aşağıdaki yönergeleri izleyin. Windows Olay İletme’yi yapılandırmanın bir yolu budur. 
+Bağlantı noktası etki alanı denetleyicilerinden ATA Gateway'e yansıtmayı yapılandırdıktan sonra Windows olay iletmeyi kaynak tarafından başlatılan yapılandırmasını kullanarak yapılandırmak için aşağıdaki yönergeleri kullanın. Windows Olay İletme’yi yapılandırmanın bir yolu budur. 
 
 **1. Adım: Ağ hizmeti hesabını etki alanının Event Log Readers grubuna ekleyin.** 
 
