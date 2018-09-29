@@ -13,20 +13,20 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e37954252708da31347b0af6479fbafbfd9433a7
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: ea20c87fe7990542ad68de7ae6dfeefad062e378
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133744"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454165"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 
 # <a name="install-ata---step-1"></a>ATA’yı Yükleme - 1. Adım
 
->[!div class="step-by-step"]
-[2. Adım »](install-ata-step2.md)
+> [!div class="step-by-step"]
+> [2. Adım »](install-ata-step2.md)
 
 Bu yükleme yordamında sıfırdan bir ATA 1.8 yüklemesi gerçekleştirmeye yönelik yönergeler sağlanmaktadır. Mevcut bir ATA dağıtımını önceki bir sürümünden güncelleştirme hakkında daha fazla bilgi için bkz: [1.9 sürümü için ATA Geçiş Kılavuzu](ata-update-1.9-migration-guide.md).
 
@@ -64,7 +64,7 @@ ATA Center sunucusunda aşağıdaki adımları gerçekleştirin.
 
 8.  **Center’ı Yapılandırma** sayfasında, ortamınıza bağlı olarak aşağıdaki bilgileri girin:
 
-    |Alan|Description|Açıklamalar|
+    |Alan|Açıklama|Açıklamalar|
     |---------|---------------|------------|
     |Yükleme Yolu|ATA Center'ın yüklendiği konumun budur. Varsayılan olarak %programfiles%\Microsoft Advanced Threat Analytics\Center yoludur.|Varsayılan değeri olduğu gibi bırakın.|
     |Veritabanı Veri Yolu|Bu MongoDB veritabanı dosyalarının bulunduğu konumdur. Varsayılan olarak %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data yoludur.|Boyutunuza bağlı olarak büyümek için yeriniz olan başka bir konumla değiştirin. **Not:** <ul><li>Üretim ortamlarında, kapasite planlamasına göre yeterli yeri olan bir sürücü kullanmalısınız.</li><li>Büyük dağıtımlar için veritabanı ayrı bir fiziksel diskte yer almalıdır.</li></ul>Boyutlandırma bilgileri için bkz. [ATA kapasite planlaması](ata-capacity-planning.md).|
@@ -98,9 +98,9 @@ ATA Center'ı yükledikten sonra tarafından virüsten koruma uygulamanızı sü
 
 
 
->[!div class="step-by-step"]
-[« Yükleme öncesi](configure-port-mirroring.md)
-[2. Adım »](install-ata-step2.md)
+> [!div class="step-by-step"]
+> [« Yükleme öncesi](configure-port-mirroring.md)
+> [2. Adım »](install-ata-step2.md)
 
 ## <a name="related-videos"></a>İlgili videolar
 - [ATA Gateway türü sağ seçme](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)

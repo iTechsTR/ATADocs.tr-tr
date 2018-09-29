@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 409dfa161c12c22d41deb399e9d4e256fa2863dc
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 8a651e177d37361ccbca178075fb2ac33a434a90
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133846"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453927"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -26,9 +26,9 @@ ms.locfileid: "46133846"
 
 # <a name="install-ata---step-7"></a>ATA’yı Yükleme - 7. Adım
 
->[!div class="step-by-step"]
-[«5. adım](install-ata-step5.md)
-[8. adım»](install-ata-step7.md)
+> [!div class="step-by-step"]
+> [«5. adım](install-ata-step5.md)
+> [8. adım»](install-ata-step7.md)
 
 ## <a name="step-7-integrate-vpn"></a>7. Adım VPN tümleştirin
 
@@ -93,9 +93,9 @@ ATA Gateway VPN olaylarını alır ve bunları işlemek için ATA Center'a gönd
 
 
 
->[!div class="step-by-step"]
-[«6. Adım](install-ata-step5.md)
-[8. Adım»](install-ata-step7.md)
+> [!div class="step-by-step"]
+> [«6. Adım](install-ata-step5.md)
+> [8. Adım»](install-ata-step7.md)
 
 
 

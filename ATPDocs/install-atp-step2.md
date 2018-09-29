@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ae8a95f0-278c-4a12-ae69-14282364fba1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b2f83da3192770ddde05b04bed46a558a4491290
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 45c1ddfc80c481549ceb08ed45f535ca029b9626
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125898"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453842"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -26,9 +26,9 @@ ms.locfileid: "44125898"
 
 # <a name="install-azure-atp---step-2"></a>Azure ATP - 2. Adım'ı yükleme
 
->[!div class="step-by-step"]
-[« 1. Adım](install-atp-step1.md)
-[3. Adım »](install-atp-step3.md)
+> [!div class="step-by-step"]
+> [« 1. Adım](install-atp-step1.md)
+> [3. Adım »](install-atp-step3.md)
 
 ## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>2. Adım Bir kullanıcı adı ve Active Directory ormanınıza bağlanmak için parola sağlayın
 
@@ -51,9 +51,9 @@ Azure ATP çalışma alanı portalı ilk açtığınızda aşağıdaki ekran gö
 3. Çalışma alanı portalında **algılayıcı Kurulum indirin ve ilk algılayıcıyı yükleyin** devam etmek için.
 
 
->[!div class="step-by-step"]
-[« 1. Adım](install-atp-step1.md)
-[3. Adım »](install-atp-step3.md)
+> [!div class="step-by-step"]
+> [« 1. Adım](install-atp-step1.md)
+> [3. Adım »](install-atp-step3.md)
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.

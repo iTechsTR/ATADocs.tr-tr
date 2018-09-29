@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4b2e7ae1dad939db3a2394876acfe9ed4042924b
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 431368a1ceee57870a3eadf176b5899b69784c98
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133268"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454131"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -26,9 +26,9 @@ ms.locfileid: "46133268"
 
 # <a name="install-ata---step-2"></a>ATA’yı Yükleme - 2. Adım
 
->[!div class="step-by-step"]
-[« 1. Adım](install-ata-step1.md)
-[3. Adım »](install-ata-step3.md)
+> [!div class="step-by-step"]
+> [« 1. Adım](install-ata-step1.md)
+> [3. Adım »](install-ata-step3.md)
 
 ## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>2. Adım Active Directory Ormanınıza bağlanmak için bir Kullanıcı Adı ve Parola sağlayın
 
@@ -51,9 +51,9 @@ ATA Konsolunu ilk açtığınızda aşağıdaki ekran görünür:
 3. Devam etmek için Konsolda **Ağ Geçidi kurulumunu indir ve ilk Ağ Geçidini yükle**’ye tıklayın.
 
 
->[!div class="step-by-step"]
-[« 1. Adım](install-ata-step1.md)
-[3. Adım »](install-ata-step3.md)
+> [!div class="step-by-step"]
+> [« 1. Adım](install-ata-step1.md)
+> [3. Adım »](install-ata-step3.md)
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.

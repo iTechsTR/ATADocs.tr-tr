@@ -13,20 +13,20 @@ ms.technology: ''
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 63fee52a45913685c75872df156fecdddc5a6803
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 34ee1589d59b0740e9d3b05eb117991325619295
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125830"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454007"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 # <a name="install-azure-atp---step-8"></a>Azure ATP - 8. Adım'ı yükleme
 
->[!div class="step-by-step"]
-[«7. adım](install-atp-step7.md)
-[9. adım»](atp-multi-forest.md)
+> [!div class="step-by-step"]
+> [«7. adım](install-atp-step7.md)
+> [9. adım»](atp-multi-forest.md)
 
 ## <a name="step-8-configure-sam-r-required-permissions"></a>8. Adım SAM-R gerektiren izinleri yapılandırma
 
@@ -53,9 +53,9 @@ Windows emin olmak için istemciler ve sunucular SAM-R, değişiklik gerçekleş
 SAM-R ve bu Grup İlkesi hakkında daha fazla bilgi için bkz. [ağ erişimi: SAM uzak çağrı yapmasına izin istemcileri kısıtlama](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
->[!div class="step-by-step"]
-[«7. adım](install-atp-step7.md)
-[9. adım»](atp-multi-forest.md)
+> [!div class="step-by-step"]
+> [«7. adım](install-atp-step7.md)
+> [9. adım»](atp-multi-forest.md)
 
 
 

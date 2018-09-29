@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9eaa6b37d56c3d8b18c3f5d015581cf7975d6e93
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 87a2b47261293fffffe9d822d698b551a332a481
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126340"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454148"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -26,9 +26,9 @@ ms.locfileid: "44126340"
 
 # <a name="install-azure-atp---step-4"></a>Azure ATP - 4. Adım'ı yükleme
 
->[!div class="step-by-step"]
-[« 3. Adım](install-atp-step3.md)
-[5. Adım »](install-atp-step5.md)
+> [!div class="step-by-step"]
+> [« 3. Adım](install-atp-step3.md)
+> [5. Adım »](install-atp-step5.md)
 
 ## <a name="step-4-install-the-azure-atp-sensor"></a>Adım 4. Azure ATP algılayıcısını yükleme
 
@@ -89,9 +89,9 @@ Azure ATP algılayıcısı sunucu veya etki alanı denetleyicisi üzerinde aşa�
 8.  Yükleme tamamlandıktan sonra tıklayın **başlatma** tarayıcınızı açın ve Azure ATP çalışma alanı portalında oturum açın.
 
 
->[!div class="step-by-step"]
-[« 3. Adım](install-atp-step3.md)
-[5. Adım »](install-atp-step5.md)
+> [!div class="step-by-step"]
+> [« 3. Adım](install-atp-step3.md)
+> [5. Adım »](install-atp-step5.md)
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1a8df6ebb4b2ea6f16f1087b4b615922b4f122ff
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: a347d8666ee8c2628592b8d4c866defd85d67ff8
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133523"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454012"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -26,9 +26,9 @@ ms.locfileid: "46133523"
 
 # <a name="install-ata---step-6"></a>ATA’yı Yükleme - 6. Adım
 
->[!div class="step-by-step"]
-[«5. Adım](install-ata-step5.md)
-[7. Adım»](vpn-integration-install-step.md)
+> [!div class="step-by-step"]
+> [«5. Adım](install-ata-step5.md)
+> [7. Adım»](vpn-integration-install-step.md)
 
 ## <a name="step-6-configure-event-collection"></a>6. Adım. Olay koleksiyonunu yapılandırma
 ### <a name="configure-event-collection"></a>Olay Koleksiyonunu Yapılandırma
@@ -187,9 +187,9 @@ key=value çiftleri arasında \t bulunduğundan emin olun.
 
 
 
->[!div class="step-by-step"]
-[«5. Adım](install-ata-step5.md)
-[7. Adım»](vpn-integration-install-step.md)
+> [!div class="step-by-step"]
+> [«5. Adım](install-ata-step5.md)
+> [7. Adım»](vpn-integration-install-step.md)
 
 
 

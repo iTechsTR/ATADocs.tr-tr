@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f10dd0714b2574ff9e1e476bc1865b1a0ed337b8
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 96d459bd00d39bb21ce363d079b5b24ceca4ace7
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125915"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454029"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -26,9 +26,9 @@ ms.locfileid: "44125915"
 
 # <a name="install-azure-atp---step-3"></a>Azure ATP - 3. Adım'ı yükleme
 
->[!div class="step-by-step"]
-[« 2. Adım](install-atp-step2.md)
-[4. Adım »](install-atp-step4.md)
+> [!div class="step-by-step"]
+> [« 2. Adım](install-atp-step2.md)
+> [4. Adım »](install-atp-step4.md)
 
 ## <a name="step-3-download-the-azure-atp-sensor-setup-package"></a>3. Adım. Azure ATP algılayıcısı Kurulum paketini indirme
 Etki alanı bağlantı ayarlarını yapılandırdıktan sonra Azure ATP algılayıcısı Kurulum paketini indirebilirsiniz. Azure ATP algılayıcısı Kurulum paketini, ayrılmış bir sunucuya veya bir etki alanı denetleyicisine yüklenebilir. Doğrudan bir etki alanı denetleyicisine yüklerken, ayrılmış bir sunucuya yüklerken bir Azure ATP algılayıcısını yüklendikten ve bağlantı noktası yansıtma kullanarak, Azure ATP tek başına algılayıcı yüklenir. Azure ATP algılayıcısını hakkında daha fazla bilgi için bkz. [Azure ATP mimarisi](atp-architecture.md). 
@@ -52,9 +52,9 @@ Zip dosyası aşağıdaki dosyaları içerir:
 -   Azure ATP bulut hizmetine bağlanmak için gereken bilgilerin bulunduğu yapılandırma ayarı dosyası
 
 
->[!div class="step-by-step"]
-[« 2. Adım](install-atp-step2.md)
-[4. Adım »](install-atp-step4.md)
+> [!div class="step-by-step"]
+> [« 2. Adım](install-atp-step2.md)
+> [4. Adım »](install-atp-step4.md)
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.

@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: df128b4f8258a7d937934795db92cf8fb89fb214
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 7fae5fa320aab6a2ad6db4695b0087eab72344e8
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133417"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453961"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 # <a name="install-ata---step-9"></a>Ata'yı 9. adım yükleme
 
->[!div class="step-by-step"]
-[«8. adım](install-ata-step7.md)
+> [!div class="step-by-step"]
+> [«8. adım](install-ata-step7.md)
 
 ## <a name="step-9-configure-sam-r-required-permissions"></a>9. Adım SAM-R gerektiren izinleri yapılandırma
 
@@ -52,8 +52,8 @@ Windows istemcileri ve sunucuları bu SAM-R işlemi, değişiklik gerçekleştir
  SAM-R ve Grup İlkesi hakkında daha fazla bilgi için bkz. [ağ erişimi: SAM uzak çağrı yapmasına izin istemcileri kısıtlama](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
->[!div class="step-by-step"]
-[«8. adım](install-ata-step7.md)
+> [!div class="step-by-step"]
+> [«8. adım](install-ata-step7.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 - [ATA POC Dağıtım Kılavuzu](http://aka.ms/atapoc)

@@ -13,20 +13,20 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6874c8a23372950dacdf328b1e885b7d039c8433
-ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
+ms.openlocfilehash: c9fc833a315c5e2259080d922c24e6a64de98905
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750512"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453825"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 # <a name="creating-a-workspace-in-the-azure-atp-workspace-management-portal---step-1"></a>Azure ATP çalışma alanı Yönetim Portalı'nda - 1. adım bir çalışma alanı oluşturma
 
->[!div class="step-by-step"]
-[2. Adım »](install-atp-step2.md)
+> [!div class="step-by-step"]
+> [2. Adım »](install-atp-step2.md)
 
 Bu yükleme yordamı, oluşturma ve Azure ATP örneğinizin yönetme için yönergeler sağlar. Azure ATP mimarisi hakkında daha fazla bilgi için bkz. [Azure ATP mimarisi](atp-architecture.md).
 
@@ -71,9 +71,9 @@ Ağınızı algılayıcı gereksinimlerini karşıladığını doğruladıktan s
 - Veri saklama – silinmiş çalışma alanları kullanıcı Arabiriminde görünmez. Azure ATP veri saklama hakkında daha fazla bilgi için bkz. [With Azure ATP verilerinin güvenliğine ve gizliliğine](atp-privacy-compliance.md).
 
 
->[!div class="step-by-step"]
-[« Yükleme öncesi](configure-port-mirroring.md)
-[2. Adım »](install-atp-step2.md)
+> [!div class="step-by-step"]
+> [« Yükleme öncesi](configure-port-mirroring.md)
+> [2. Adım »](install-atp-step2.md)
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
