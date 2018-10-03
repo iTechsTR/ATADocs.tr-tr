@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fa6bb10b029649a158d7733b10fec51c52acb9f7
-ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
+ms.openlocfilehash: a007a277641835be292ae6ab0b3004f154dad753
+ms.sourcegitcommit: 0634dda829699edf8bfd984eb9f896a67c5b15e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168561"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48039371"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -29,7 +29,7 @@ ms.locfileid: "47168561"
 Her Azure Gelişmiş tehdit Koruması (ATP) algılayıcı başarılı biçimde çalışması için Azure ATP bulut hizmeti için Internet bağlantısı olmasını gerektirir. Bazı kuruluşlarda, etki alanı denetleyicileri doğrudan Internet'e bağlı olmayan, ancak bir web proxy bağlantısı üzerinden. Her Azure ATP algılayıcısını sensör verilerini raporlamaya Microsoft Windows Internet (WinINet) Ara sunucu yapılandırmasını kullanır ve Azure ATP hizmeti ile iletişim gerektirir. WinHTTP proxy yapılandırması için kullanıyorsanız, hala algılayıcı Azure ATP bulut hizmeti arasında iletişim için Windows Internet (WinINet) Tarayıcı proxy ayarlarını yapılandırmanız gerekir.
 
 
-Proxy yapılandırırken, katıştırılmış Azure ATP algılayıcı hizmetinin sistemi bağlamını kullanarak içinde çalıştığını bilmeniz gerekir **LocalService** kullanaraksistembağlamındahesabıveAzureATPalgılayıcısıUpdaterhizmetiniçalıştıran**LocalSystem** hesabı. 
+Proxy yapılandırırken, katıştırılmış Azure ATP algılayıcı hizmetinin sistemi bağlamını kullanarak içinde çalıştığını bilmeniz gerekir **LocalService** hesabı ve Azure ATP algılayıcısı Updater hizmetini çalıştıran kullanarak sistem bağlamı  **LocalSystem** hesabı. 
 
 > [!NOTE]
 > Ağ topolojinizi saydam proxy ya da WPAD kullanıyorsanız, WinINET proxy için yapılandırma gerekmez.
@@ -45,13 +45,13 @@ Statik proxy kayıt defteri aracılığıyla yapılandırılabilir. Yerelhizmet 
 
 1.   Bunları değiştirmeden önce kayıt defteri anahtarlarını yedeklemek emin olun.
 
-2. Değerini kayıt defterine arama `DefaultConnectionSettings` REG_BINARY kayıt defteri anahtarı altında olarak `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings` ve kopyalayın.
+2. Değerini kayıt defterine arama `DefaultConnectionSettings` REG_BINARY kayıt defteri anahtarı altında olarak `HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings` ve kopyalayın.
  
-2.  LocalSystem doğru ara sunucu ayarları yoksa (bunlar yapılandırılmamış veya Örnein Current_User ' farklıdır), ardından proxy Örnein Current_User LocalSystem ayarı kopyalayın. Kayıt defteri anahtarı altında `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings`.
+2.  LocalSystem doğru ara sunucu ayarları yoksa (bunlar yapılandırılmamış veya Örnein Current_User ' farklıdır), ardından proxy Örnein Current_User LocalSystem ayarı kopyalayın. Kayıt defteri anahtarı altında `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`.
 
 3.  Örnein Current_user değerini yapıştırın `DefaultConnectionSettings` REG_BINARY olarak.
 
-4.  Doğru ara sunucu ayarları LocalService sahip değilse, proxy için LocalService Örnein Current_User ayarı'ni kopyalayın. Kayıt defteri anahtarı altında `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings`.
+4.  Doğru ara sunucu ayarları LocalService sahip değilse, proxy için LocalService Örnein Current_User ayarı'ni kopyalayın. Kayıt defteri anahtarı altında `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`.
 
 5.  Örnein Current_User değerini yapıştırın `DefaultConnectionSettings` REG_BINARY olarak.
 
