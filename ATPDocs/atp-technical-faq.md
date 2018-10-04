@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/2/2018
+ms.date: 10/3/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 33493463eeb4ed23e33d81c9eb60b17c23285649
-ms.sourcegitcommit: 0634dda829699edf8bfd984eb9f896a67c5b15e7
-ms.translationtype: HT
+ms.openlocfilehash: 34a9b1deb9c5d2d709e333e78e87ded09fff134a
+ms.sourcegitcommit: 04ed0b9faf72d82cd10bf84efd9dc5aa525be212
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48039405"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48245392"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -49,7 +49,7 @@ Microsoft bu verileri kullanır:
 Microsoft, verilerinizin size hizmet sağlanması dışındaki başka bir amaç için veya reklam için benim değil. 
 
 ### <a name="does-azure-atp-only-leverage-traffic-from-active-directory"></a>Azure ATP yalnızca trafik Active Directory'den yararlanarak mu?
-Derin paket İnceleme teknolojisini kullanarak Active Directory trafiğini analiz etme, yanı sıra Azure ATP Ayrıca, güvenlik bilgileri ve Olay yönetimi (SIEM) ilgili olayları toplar ve Active Directory bilgilerini temel varlık profilleri oluşturur Etki Alanı Hizmetleri. Azure ATP algılayıcısını kullanırsanız, bu olayları otomatik olarak ayıklar. Azure ATP tek başına algılayıcı için bu olayları göndermek için Windows Olay iletme'yi kullanabilirsiniz. Azure ATP VPN günlüklerini (Microsoft, Cisco, F5 ve kontrol noktası), farklı satıcıların sunduğu alıcı RADIUS hesaplamaları da destekler.
+Derin paket İnceleme teknolojisini kullanarak Active Directory trafiğini analiz etme, yanı sıra Azure ATP ayrıca etki alanı denetleyicinizden Windows ilgili olayları toplar ve Active Directory Domain Services bilgilerini temel varlık profilleri oluşturur. Azure ATP VPN günlüklerini (Microsoft, Cisco, F5 ve kontrol noktası), farklı satıcıların sunduğu alıcı RADIUS hesaplamaları da destekler.
 
 ### <a name="does-azure-atp-monitor-only-domain-joined-devices"></a>Azure ATP yalnızca etki alanına katılan cihazları mı izler?
 Hayır. Azure ATP olmayan Windows ve mobil cihazları dahil olmak üzere Active Directory kimlik doğrulama ve yetkilendirme istekler gerçekleştiren ağdaki tüm cihazları izler.
@@ -89,7 +89,7 @@ Ayrıca, Microsoft, belirli bir operasyon personeli arka plan doğrulama denetim
 Her etki alanı denetleyicisi ortamında, bir ATP algılayıcı veya tek başına algılayıcı tarafından anlatılmıştır. Daha fazla bilgi için [Azure ATP algılayıcısını boyutlandırma](atp-capacity-planning.md#sizing). 
 
 ### <a name="does-azure-atp-work-with-encrypted-traffic"></a>Azure ATP şifrelenmiş trafikle çalışır mı?
-Azure ATP birden çok ağ protokolleri yanı sıra SIEM veya Windows Olay iletme aracılığıyla toplanan olaylara çözümleme üzerinde kullanır.  Ağ protokolleri (örneğin LDAPS ve IPSec gibi) şifrelenmiş trafik ile şifresi, ancak analiz edilir.
+Ağ protokolleri (örneğin LDAPS ve IPSec gibi) şifrelenmiş trafik ile şifresi ancak sensörleri tarafından analiz edilir.
 
 ### <a name="does-azure-atp-work-with-kerberos-armoring"></a>Azure ATP Kerberos koruması ile çalışır mı?
 Kerberos koruması, olarak da bilinir esnek kimlik doğrulaması güvenli tüneli (FAST) etkinleştirme atlayarak Kerberos koruması ile çalışmaz hash algılamasının dışında ATP tarafından desteklenir.
@@ -119,10 +119,7 @@ Evet, genel sistem durumunu görüntüleyebilirsiniz oluşunca dağıtım yanı 
 ## <a name="operation"></a>İşlem
 
 ### <a name="what-kind-of-integration-does-azure-atp-have-with-siems"></a>Azure ATP ata'yla sıem'ler arasında ne tür bir tümleştirme var mı?
-Azure ATP şu şekilde bir çift yönlü tümleştirme sıem'lerle sahiptir:
-
-1. Azure ATP sistem durumu uyarıları ve şüpheli bir etkinlik algılandığında olduğunda CEF biçimini kullanarak herhangi bir SIEM sunucusuna Syslog Uyarısı, gönderecek şekilde yapılandırılabilir.
-2. Azure ATP Windows olayları için Syslog iletileri alacak şekilde yapılandırılabilir [bu Sıem'lerden](configure-event-collection.md).
+Azure ATP sistem durumu uyarıları ve bir güvenlik uyarısı algılandığında olduğunda CEF biçimini kullanarak herhangi bir SIEM sunucusuna Syslog Uyarısı, gönderecek şekilde yapılandırılabilir. Bkz: [SIEM günlük başvurusu](cef-format-sa.md) daha fazla bilgi için.
 
 ### <a name="why-are-certain-accounts-considered-sensitive"></a>Neden bazı hesaplar hassas kabul edilir?
 Böyle bir hesap, hassas olarak ayarlanmış grupların üyesi olduğunda (örneğin: "Domain Admins").

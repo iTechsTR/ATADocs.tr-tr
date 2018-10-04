@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b30c9df27deed308c9c725ff1d6d193329721135
-ms.sourcegitcommit: 0634dda829699edf8bfd984eb9f896a67c5b15e7
-ms.translationtype: HT
+ms.openlocfilehash: 8a6238b6d3cd05c3896b88701c15d17404db43cf
+ms.sourcegitcommit: 04ed0b9faf72d82cd10bf84efd9dc5aa525be212
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48039388"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48245358"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -30,7 +30,7 @@ ms.locfileid: "48039388"
 
 Bu yükleme yordamı, oluşturma ve Azure ATP örneğinizin yönetme için yönergeler sağlar. Azure ATP mimarisi hakkında daha fazla bilgi için bkz. [Azure ATP mimarisi](atp-architecture.md).
 
-Azure ATP içinde tek bir çalışma alanı veya birden çok orman, tek bir cam bölmesinden yönetmenize olanak tanıyan örneği gerekir. 
+Azure ATP içinde tek bir cam bölmesinden birden çok ormanı yönetmenize olanak sağlayan bir tek çalışma alanı veya sahip olacaksınız. 
 
 > [!NOTE]
 > Şu anda Avrupa, Kuzey Amerika/Orta Amerika/Karayipler ve Asya Azure ATP veri merkezlerinde dağıtılır.
@@ -70,9 +70,10 @@ Ağınızı algılayıcı gereksinimlerini karşıladığını doğruladıktan s
 - Veri saklama – daha önce silinmiş çalışma alanları kullanıcı Arabiriminde görünmez. Azure ATP veri saklama hakkında daha fazla bilgi için bkz. [With Azure ATP verilerinin güvenliğine ve gizliliğine](atp-privacy-compliance.md).
 
 
-> [!div class="step-by-step"]
-> [« Yükleme öncesi](configure-port-mirroring.md)
-> [2. Adım »](install-atp-step2.md)
+>[!div class="step-by-step"]
+[« Yükleme öncesi](atp-prerequisites.md)
+[2. Adım »](install-atp-step2.md)
+
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
