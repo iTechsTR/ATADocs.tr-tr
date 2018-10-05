@@ -2,22 +2,22 @@
 title: Azure Gelişmiş tehdit Koruması Dağıtımınızı planlama | Microsoft Docs
 description: Dağıtımınızı planlamanıza ve ağınızı desteklemek için kaç adet Azure ATP sunucusu gerekeceğine karar vermenize yardımcı olur
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: azure-advanced-threat-protection
 ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e894422e7264650186c6f4eea28d5a9099ca7914
-ms.sourcegitcommit: 56065ee43dac299203871cd6f025315520750b3b
+ms.openlocfilehash: 9f2b8f31f88c14f67c8a03b748ac3d2fb6179a62
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233907"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783466"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -26,11 +26,11 @@ ms.locfileid: "47233907"
 # <a name="azure-atp-capacity-planning"></a>Azure ATP kapasite planlaması
 Bu makalede Azure ATP algılayıcı ve ihtiyacınız olan tek başına algılayıcı sayısını belirlemenize yardımcı olur.
 
-> [!NOTE] 
-> İki e-tablolar - boyutlandırma aracı sahip biri ATA, diğeri Azure ATP için. Doğru sayfasında olduğundan emin olun.
-
 ## <a name="using-the-sizing-tool"></a>Boyutlandırma aracını kullanma
 Azure ATP dağıtımınızı kullanmaktır kapasitesini belirlemek için önerilen ve en kolay yolu [Azure ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool). Azure ATP boyutlandırma aracı çalıştırın ve Excel dosyasındaki sonuçlarda, CPU ve bellek belirlemek için aşağıdaki alanları algılayıcı tarafından kullanılan:
+
+> [!NOTE] 
+> İki e-tablolar - boyutlandırma aracı sahip biri ATA, diğeri Azure ATP için. Doğru sayfanın kullandığınızdan emin olun.
 
 - Azure ATP algılayıcısını: eşleşen **meşgul Paket/sn** sonuçları dosyasında Azure ATP algılayıcısı tablosundaki **paket başına saniye** alanındaki [Azure ATP tek başına algılayıcı tablo](#azure-atp-sensor-sizing)veya [Azure ATP algılayıcısı tablo](#azure-atp-standalone-sensor-sizing)bağlı olarak [seçtiğiniz algılayıcı türü](#choosing-the-right-sensor-type-for-your-deployment).
 
@@ -42,10 +42,10 @@ El ile herhangi bir nedenden dolayı Azure ATP boyutlandırma aracını kullanam
 Aşağıdaki bölüm, bir Etki Alanı Denetleyicisi’nden paket/sn sayacı bilgilerini nasıl alabileceğinizi gösteren yönergeleri içerir.
 
 ## Dağıtımınız için doğru algılayıcı türü seçme<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
-Bir Azure ATP dağıtımında herhangi bir birleşimini Azure ATP tek başına algılayıcı türleri desteklenir:
+Bir Azure ATP dağıtımında herhangi bir birleşimini Azure ATP algılayıcısı türleri desteklenir:
 
+- Yalnızca Azure ATP algılayıcı
 - Azure ATP tek başına algılayıcı
-- Yalnızca Azure ATP algılayıcısı
 - Her ikisinin birleşimi
 
 Algılayıcı dağıtım türüne karar verirken aşağıdaki faydaları göz önünde bulundurun:
@@ -61,7 +61,7 @@ Dağıtmak için kaç tane Azure ATP tek başına algılayıcı karar verirken a
     Azure ATP oluşturduğunuz her bir çalışma alanı için birden çok Active Directory ormanları içinde birden çok etki alanından trafiği izleyebilir. 
 
 -   **Bağlantı Noktası Yansıtma**<br>
-Bağlantı noktası yansıtmayla ilgili faktörler, veri merkezi veya şube site başına birden çok Azure ATP tek başına algılayıcı dağıtmanızı gerektirebilir.
+    Bağlantı noktası yansıtmayla ilgili faktörler, veri merkezi veya şube site başına birden çok Azure ATP tek başına algılayıcı dağıtmanızı gerektirebilir.
 
 -   **Kapasite**<br>
     Bir Azure ATP tek başına algılayıcı, izlenmekte olan etki alanı denetleyicilerinin ağ trafiği miktarına bağlı olarak birden çok etki alanı denetleyicisinin izlenmesini destekleyebilir. 
@@ -149,4 +149,4 @@ Paket/saniye oranını belirlemek için her etki alanı denetleyicisinde aşağ�
 - [Azure ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool)
 - [Azure ATP önkoşulları](atp-prerequisites.md)
 - [Azure ATP mimarisi](atp-architecture.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

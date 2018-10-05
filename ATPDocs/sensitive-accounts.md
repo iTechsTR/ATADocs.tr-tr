@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/12/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ccb87ab6b3fabed5edaf7c32324701c74259f098
-ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
+ms.openlocfilehash: 31871a03795b1c08e4fd8954cac80a00538863db
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750446"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783347"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -54,7 +54,7 @@ Aşağıdaki listede yer alan grupları, önemli Azure ATP tarafından değerlen
 
 Bu grupların yanı sıra, grupları veya hesapları hassas olarak algılamaları geliştirmek için el ile etiketleyebilirsiniz. Gizli Grup değişikliği algılama ve yanal hareket yolunun gibi bazı Azure ATP algılamalar hangi gruplar ve hesaplar hassas kabul edilir üzerinde dayandığından, bu önemlidir. Diğer kullanıcı veya grup Panosu üyeleri, şirket Yöneticiler, satış, vb. Direktörü, hassas olarak el ile etiketleyebilir ve Azure ATP bunları gizli olarak değerlendirdiği.
 
-1.  Azure ATP çalışma alanı portalında **yapılandırma** menü çubuğundaki dişli.
+1.  Azure ATP portalında **yapılandırma** menü çubuğundaki dişli.
 
 2.  Altında **algılama** tıklayın **varlık etiketleri**.
 
@@ -70,4 +70,4 @@ Bu grupların yanı sıra, grupları veya hesapları hassas olarak algılamalar�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

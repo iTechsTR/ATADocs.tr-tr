@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/2/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d5ac2ae53dfe13b850a06f6dd4b89a91ffedd946
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 432f55891440975e511ab5cd3e2972a1c7a33f37
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166043"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782939"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 
 # <a name="excluding-entities-from-detections"></a>Varlıkları algılamalardan dışlama
-Bu makalede, doğru zararsız pozitif sonuçları en aza indirmek, ancak aynı zamanda doğru pozitif sonuçları yakalamak emin olmak için uyarılar tetiklemesini önlemek varlıkları açıklanmaktadır. Azure ATP, belirli kullanıcılar tarafından normal ritmi iş parçası olabilecek etkinlikleri hakkında gürültülü engellemek için quiet - edebilir veya hariç tutabilirsiniz - belirli varlıkların uyarılarını susturabilir.
+Bu makalede varlıkları uyarılar emin olarak doğru pozitif sonuçları yakalamak sırada doğru zararsız pozitif sonuçları en aza indirmek için tetiklemesini önlemek nasıl açıklar. Azure ATP, belirli kullanıcılar tarafından normal ritmi iş parçası olabilecek etkinlikleri hakkında gürültülü engellemek için quiet - edebilir veya hariç tutabilirsiniz - belirli varlıkların uyarılarını susturabilir.
 
 Örneğin, kuruluşunuzdaki rutin BT işlemleri gereği DNS keşfi yapan bir güvenlik tarayıcınız veya etki alanı denetleyicisinde uzaktan betik çalıştıran bir yöneticiniz varsa (ve bunlar tasdikli eylemlerse) bu özelliğe ihtiyaç duyabilirsiniz. Hangi varlıkları dışlamak için karar vermenize yardımcı olacak Azure ATP algılamalar hakkında daha fazla bilgi için bkz: [şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md).
 
@@ -63,4 +63,4 @@ Birini veya diğerini - hariç tutabilirsiniz bir IP adresi veya bilgisayar dı�
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Windows Defender ATP ile tümleştirme](integrate-wd-atp.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

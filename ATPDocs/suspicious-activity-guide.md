@@ -1,11 +1,11 @@
 ---
-title: Azure ATP şüpheli etkinlik Kılavuzu | Microsoft Docs
-d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
+title: Azure ATP güvenlik uyarı Kılavuzu | Microsoft Docs
+d|Description: This article provides a list of the security alerts issued by Azure ATP and steps for remediation.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/20/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7146c9830a6d3e4f9f655020aa2711e8aeeba40d
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: af2c7302f97ef8e2d9fca5862246a1b7507c0433
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126459"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783942"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
-# <a name="azure-advanced-threat-protection-suspicious-activity-guide"></a>Azure Gelişmiş tehdit koruması şüpheli etkinlik Kılavuzu
+# <a name="azure-advanced-threat-protection-security-alert-guide"></a>Azure Gelişmiş tehdit koruması güvenlik uyarı Kılavuzu
 
-Uygun araştırma, herhangi bir şüpheli etkinlik olarak sınıflandırılabilir:
+Uygun araştırma tüm Azure ATP güvenlik uyarıları olarak sınıflandırılan:
 
 -   **Gerçek pozitif sonuç**: Azure ATP tarafından algılanan kötü amaçlı bir eylem.
 
@@ -33,7 +33,7 @@ Uygun araştırma, herhangi bir şüpheli etkinlik olarak sınıflandırılabili
 
 -   **Hatalı pozitif sonuç**: etkinlik anlamına gelen bir yanlış alarm gerçekleşmemiştir.
 
-Azure ATP uyarılarla çalışma hakkında daha fazla bilgi için bkz: [kuşkulu etkinliklerle çalışma](working-with-suspicious-activities.md).
+Azure ATP güvenlik uyarıları ile çalışma konusunda daha fazla bilgi için bkz. [güvenlik uyarılarıyla çalışma](working-with-suspicious-activities.md).
 
 
 ## <a name="abnormal-sensitive-group-modification"></a>Anormal Gizli Grup Değişikliği
@@ -41,7 +41,7 @@ Azure ATP uyarılarla çalışma hakkında daha fazla bilgi için bkz: [kuşkulu
 
 **Açıklama**
 
-Saldırganlar kullanıcıların yüksek ayrıcalıklı gruplara ekleyin. Daha fazla kaynaklarına erişmek ve kalıcılığı sağlamak için bunu yapın. Algılama, kullanıcıların Grup değişikliği etkinliklerini profilini oluşturup anormal bir hassas Grup eklemeyi ortaya çıktığında üzerinde kullanır. Profil oluşturma ATP tarafından sürekli olarak gerçekleştirilir. Bir uyarı tetiklenebilir önce en az süre, her etki alanı denetleyicisi başına bir aydır.
+Saldırganlar kullanıcıların yüksek ayrıcalıklı gruplara ekleyin. Daha fazla kaynaklarına erişmek ve kalıcılığı sağlamak için bunu yapın. Algılama, kullanıcıların Grup değişikliği etkinliklerini profilini oluşturup anormal bir hassas Grup eklemeyi ortaya çıktığında üzerinde kullanır. Profil oluşturma, Azure ATP tarafından sürekli olarak gerçekleştirilir. Bir uyarı tetiklenebilir önce en az süre, her etki alanı denetleyicisi başına bir aydır.
 
 Azure ATP gizli gruplarda tanımı için bkz [hassas hesaplar ile çalışma](sensitive-accounts.md).
 
@@ -604,9 +604,9 @@ Bunun bir WannaCry saldırısı olup olmadığını belirlemek için aşağıdak
 
 
 > [!NOTE]
-> Kuşkulu bir etkinlik devre dışı bırakmak için desteğe başvurun.
+> Bir güvenlik uyarısı devre dışı bırakmak için desteğe başvurun.
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 - [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

@@ -1,11 +1,11 @@
 ---
-title: Yükleme Azure Gelişmiş tehdit koruması - 6. adım | Microsoft Docs
-description: ATP yükleme bu adımında, VPN tümleştirin.
+title: Azure Gelişmiş tehdit koruması VPN tümleştirmesi yükleyin | Microsoft Docs
+description: Bir VPN tümleştirerek Azure ATP için hesap bilgilerini toplayın.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/14/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,21 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9ce1bbbda96cc8a10b026f2f422ac79b1b2bae55
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 382b0f31cbc24dde3905d99bab7ed8be8feb5cb4
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454114"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783755"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 
-# <a name="install-azure-atp---step-6"></a>Azure ATP - 6. Adım'ı yükleme
+# <a name="integrate-vpn"></a>VPN tümleştirin
 
+<<<<<<< Baş Azure Gelişmiş tehdit Koruması (ATP) alınan VPN çözümleri hesap bilgilerini toplayabilir. Yapılandırıldığında, kullanıcının profil sayfasını VPN bağlantıları, IP adresleri ve bağlantı geldiği konumlar gibi bilgileri içerir. Bu, olağan dışı VPN bağlantıları için yeni bir algılama yanı sıra, kullanıcı etkinliğinin ek bilgi sağlayarak araştırma işlemi tamamlar. Dış IP adresi için bir konum yapılan çağrının anonimdir. Hiçbir kişisel tanımlayıcı bu çağrıda gönderilir.
+=======
 > [!div class="step-by-step"]
 > [«5. Adım](install-atp-step5.md)
 > [7. Adım»](install-atp-step7.md)
@@ -33,6 +35,7 @@ ms.locfileid: "47454114"
 ## <a name="step-6-integrate-vpn"></a>6. Adım. VPN tümleştirin
 
 Azure Gelişmiş tehdit Koruması (ATP) alınan VPN çözümleri hesap bilgilerini toplayabilirsiniz. Yapılandırıldığında, kullanıcının profil sayfasını VPN bağlantıları, IP adresleri ve bağlantı geldiği konumlar gibi bilgileri içerir. Bu, olağan dışı VPN bağlantıları için yeni bir algılama yanı sıra, kullanıcı etkinliğinin ek bilgi sağlayarak araştırma işlemi tamamlar. Dış IP adresi için bir konum yapılan çağrının anonimdir. Hiçbir kişisel tanımlayıcı bu çağrıda gönderilir.
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 Azure ATP Azure ATP algılayıcı için iletilen RADIUS muhasebe olayları dinleme VPN çözümünüz ile tümleştirilir. Bu mekanizma, RADIUS Standart hesap bağlıdır ([RFC 2866](https://tools.ietf.org/html/rfc2866)), ve aşağıdaki VPN satıcıları desteklenir:
 
@@ -45,7 +48,7 @@ Azure ATP Azure ATP algılayıcı için iletilen RADIUS muhasebe olayları dinle
 
 VPN tümleştirmeyi etkinleştirmek için aşağıdaki parametreleri ayarladığınızdan emin olun:
 
--   Azure ATP tek başına algılayıcı ve Azure ATP algılayıcısını UDP 1813 numaralı bağlantı noktasını açın.
+-   Azure ATP algılayıcı ve/veya Azure ATP tek başına algılayıcı UDP 1813 numaralı bağlantı noktasını açın.
 
 
 Aşağıdaki örnek, Microsoft Routing ve Uzaktan erişim sunucusu (RRAS) VPN yapılandırma işlemi tanımlamak için kullanır.
@@ -72,7 +75,7 @@ Azure ATP ağa ve şüpheli VPN bağlantıları algılamak için hangi bilgisaya
 
 ATP'de VPN verilerini yapılandırmak için:
 
-1.  Azure ATP çalışma alanı Portalı'nda yapılandırma dişlisine tıklayın ve ardından **VPN**.
+1.  Azure ATP Portalı'nda yapılandırma dişlisine tıklayın ve ardından **VPN**.
  
 
 2.  Açma **RADIUS hesap**yazın **paylaşılan gizlilik** RRAS VPN sunucunuzda daha önce yapılandırılmış. Daha sonra **Kaydet**'e tıklayın.
@@ -81,23 +84,20 @@ ATP'de VPN verilerini yapılandırmak için:
   ![Azure ATP VPN yapılandırma](./media/atp-vpn-radius.png)
 
 
-Bu etkinleştirildikten sonra tüm Azure ATP tek başına algılayıcı ve sensörlerden dinler 1813 RADIUS muhasebe olaylar için bağlantı noktası. 
+Bu etkinleştirildikten sonra tüm Azure ATP algılayıcı ve tek başına algılayıcı RADIUS muhasebe olayları için 1813 numaralı bağlantı noktasında dinleme ve kurulumunuz tamamlandıktan. 
 
-Kurulumunuzu tamamlanmıştır. 
+ Azure ATP algılayıcısını VPN olayları alıp bunları işleme için Azure ATP bulut hizmetine gönderir sonra varlık profili ayrı erişilen VPN konumları gösterir ve etkinlikleri profilinde konumlarını gösterir.
 
-Azure ATP algılayıcısını VPN olayları alıp bunları işleme için Azure ATP bulut hizmetine gönderir sonra varlık profili ayrı erişilen VPN konumları gösterir ve etkinlikleri profilinde konumlarını gösterir.
-
-
-
-
-
+<a name="-head"></a><<<<<<< HEAD
+=======
 > [!div class="step-by-step"]
 > [«6. adım](install-atp-step5.md)
 > [7. adım»](install-atp-step7.md)
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 - [Azure ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [Azure ATP önkoşulları](atp-prerequisites.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

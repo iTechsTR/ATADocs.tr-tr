@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/3/2018
+ms.date: 10/4/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 34a9b1deb9c5d2d709e333e78e87ded09fff134a
-ms.sourcegitcommit: 04ed0b9faf72d82cd10bf84efd9dc5aa525be212
+ms.openlocfilehash: 839a21dab3962831e4c62dd4c9c2018e81bd7014
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48245392"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783704"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -86,13 +86,13 @@ Ayrıca, Microsoft, belirli bir operasyon personeli arka plan doğrulama denetim
 ## <a name="deployment"></a>Dağıtım
 ### <a name="how-many-azure-atp-sensors-do-i-need"></a>Kaç tane Azure ATP algılayıcı ihtiyacım var?
 
-Her etki alanı denetleyicisi ortamında, bir ATP algılayıcı veya tek başına algılayıcı tarafından anlatılmıştır. Daha fazla bilgi için [Azure ATP algılayıcısını boyutlandırma](atp-capacity-planning.md#sizing). 
+Her etki alanı denetleyicisi ortamında, bir ATP algılayıcı veya tek başına algılayıcı tarafından anlatılmıştır. Daha fazla bilgi için [Azure ATP algılayıcısı boyutlandırma](atp-capacity-planning.md#sizing). 
 
 ### <a name="does-azure-atp-work-with-encrypted-traffic"></a>Azure ATP şifrelenmiş trafikle çalışır mı?
 Ağ protokolleri (örneğin LDAPS ve IPSec gibi) şifrelenmiş trafik ile şifresi ancak sensörleri tarafından analiz edilir.
 
 ### <a name="does-azure-atp-work-with-kerberos-armoring"></a>Azure ATP Kerberos koruması ile çalışır mı?
-Kerberos koruması, olarak da bilinir esnek kimlik doğrulaması güvenli tüneli (FAST) etkinleştirme atlayarak Kerberos koruması ile çalışmaz hash algılamasının dışında ATP tarafından desteklenir.
+Kerberos koruması, olarak da bilinir esnek kimlik doğrulaması güvenli tüneli (FAST) etkinleştirme zure ATP, Kerberos koruması ile çalışmaz hash algılamasının atlayarak dışında tarafından desteklenir.
 
 ### <a name="how-do-i-monitor-a-virtual-domain-controller-using-azure-atp"></a>Azure ATP kullanarak bir sanal etki alanı denetleyicisini nasıl izlerim?
 Çoğu sanal etki alanı denetleyicilerini Azure ATP algılayıcısı ortamınız için uygun olup olmadığını belirlemek için Azure ATP algılayıcı tarafından ele alınacak [Azure ATP kapasite planlaması](atp-capacity-planning.md).
@@ -142,7 +142,7 @@ Bir uçtan uca test olarak kuşkulu etkinliklerin benzetimini yapabilirsiniz. A�
     -   Enter tuşuna basın
     -   : -D türüdür <FQDN>
     -   Ortamınızın yapılandırmasına bağlı olarak, DNS kayıtlarınızı listesine yanıtları "Sorgu reddetti" değişir. 
-4. Azure ATP konsolunda sanal DNS keşfi ilgili uyarıyı görüntüleyin. 
+4. Azure ATP portalında sanal DNS keşfi ilgili uyarıyı görüntüleyin. 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 - [Azure ATP önkoşulları](atp-prerequisites.md)
@@ -150,4 +150,4 @@ Bir uçtan uca test olarak kuşkulu etkinliklerin benzetimini yapabilirsiniz. A�
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [Windows olay iletme özelliğini yapılandırma](configure-event-forwarding.md#configuring-windows-event-forwarding)
 - [Sorun giderme](troubleshooting-atp-known-issues.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

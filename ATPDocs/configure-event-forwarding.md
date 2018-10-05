@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 08/12/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4adae00e0985a831cddf1d9b5276c937e82523d3
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 43582a95ac1619aaa9ef85b0c662481184a1b98b
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126051"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783381"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -102,4 +102,4 @@ Daha fazla bilgi için bkz: [olayları iletmek ve toplamak için bilgisayarları
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Azure ATP yükleyin](install-atp-step1.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

@@ -1,11 +1,11 @@
 ---
-title: Azure Gelişmiş tehdit koruması çalışma portalı anlama | Microsoft Docs
-description: Azure ATP çalışma alanı portalı ve çalışma alanı portal bileşenlerini günlüğünün nasıl tutulduğunu açıklar
+title: Azure Gelişmiş tehdit koruması portalı anlama | Microsoft Docs
+description: Azure ATP portal ve portal bileşenlerini halinde günlüğünün nasıl tutulduğunu açıklar
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,45 +13,45 @@ ms.technology: ''
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0fa8c1e19fde1ec779699b3a2c5411dea0908451
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: c4a437055c2fec0d242fe9de62ac9220ed2b66e6
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166338"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783806"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 
-# <a name="working-with-the-azure-atp-workspace-portal"></a>Azure ATP çalışma alanı portalıyla çalışma
+# <a name="working-with-the-azure-atp-portal"></a>Azure ATP portalıyla çalışma
 
-Azure ATP çalışma alanı portalı izlemek ve ATP tarafından algılanan kuşkulu etkinliği yanıtlamak için kullanın.
+Azure ATP portalı, izlemek ve ATP tarafından algılanan kuşkulu etkinliği yanıtlamak için kullanın.
 
-Yazarak `?` anahtar Azure ATP çalışma alanı portal erişilebilirliği için klavye kısayolları sağlar. 
+Yazarak `?` anahtar Azure ATP portal erişilebilirliği için klavye kısayolları sağlar. 
 
-Azure ATP çalışma alanı portal kronolojik sırada tüm kuşkulu etkinliklerin hızlı bir görünümünü sunar. Herhangi bir etkinliği detayına gitmenize ve bu etkinliklere dayalı olarak eylemler yapmanıza olanak tanır. Çalışma alanı portal ayrıca uyarılar ve bildirimler Azure ATP veya kuşkulu sayılan yeni etkinlikleri tarafından görülen sorunları vurgulamak için görüntüler.
+Azure ATP portalı kronolojik sırada tüm kuşkulu etkinliklerin hızlı bir görünümünü sağlar. Herhangi bir etkinliği detayına gitmenize ve bu etkinliklere dayalı olarak eylemler yapmanıza olanak tanır. Azure ATP portalında, uyarılar ve bildirimler Azure ATP veya kuşkulu sayılan yeni etkinlikleri tarafından görülen sorunları vurgulamak için de görüntüler.
 
-Bu makalede, Azure ATP çalışma portalının anahtar öğeleri ile çalışma konusunda açıklanır.
-
-
-## <a name="enabling-access-to-the-azure-atp-workspace-portal"></a>Azure ATP çalışma alanı portal erişimini etkinleştirme
-Azure ATP çalışma alanı portalına başarıyla oturum açmak için Azure ATP çalışma alanı portalına erişmek için uygun Azure Active Directory güvenlik grubu atandığı bir kullanıcıyla oturum açmalısınız. Azure ATP rol tabanlı access control (RBAC) hakkında daha fazla bilgi için bkz: [Azure ATP rol gruplarıyla çalışma](atp-role-groups.md).
-
-## <a name="logging-into-the-azure-atp-workspace-portal"></a>Azure ATP çalışma alanı portalda oturumunuzu açarken
-
-1. Çalışma alanı yönetim portalında oturum açarak çalışma portalı girebilirsiniz [ https://portal.atp.azure.com ](https://portal.atp.azure.com) ve ilgili çalışma alanını seçerek veya çalışma alanı URL'sine göz atma: [https:// *workspacename*. atp.azure.com](https://*workspacename*.atp.azure.com).
+Bu makalede, Azure ATP Portalı'nın temel öğeleri ile çalışma konusunda açıklanır.
 
 
-2.  Azure ATP destekleyen tek oturum, zaten bilgisayarınıza Azure ATP oturum açtıysanız, Windows kimlik doğrulaması ile tümleştirilmiş açma, Azure ATP çalışma alanı portalda oturum açarken belirtecini kullanır. Ayrıca bir akıllı kart kullanarak da oturum açabilirsiniz. İzinleriniz, Azure ATP ile karşılık gelen, [Yönetici rolü](atp-role-groups.md).
+## <a name="enabling-access-to-the-azure-atp-portal"></a>Azure ATP portalına erişim etkinleştirme
+Azure ATP portalına başarıyla oturum açmak için Azure ATP portalına erişim ile bir Azure Active Directory güvenlik grubuna atanmış bir kullanıcı oturum açması sahip. Azure ATP rol tabanlı access control (RBAC) hakkında daha fazla bilgi için bkz: [Azure ATP rol gruplarıyla çalışma](atp-role-groups.md).
+
+## <a name="logging-into-the-azure-atp-portal"></a>Azure ATP Portalı'nda oturum açtıktan sonra
+
+1. Portalda oturum açarak Azure ATP portalı girebilirsiniz [ https://portal.atp.azure.com ](https://portal.atp.azure.com) ve ilgili çalışma alanını seçerek ya da çalışma URL'sine göz atma: [https://*workspacename* . atp.azure.com](https://*workspacename*.atp.azure.com).
+
+
+2.  Azure ATP destekleyen tek, zaten bilgisayarınıza Azure ATP oturum açtıysanız, Windows kimlik doğrulaması ile tümleştirilmiş oturum Azure ATP portalında oturum açmak için bu belirteci kullanır. Ayrıca bir akıllı kart kullanarak da oturum açabilirsiniz. İzinleriniz, Azure ATP ile karşılık gelen, [Yönetici rolü](atp-role-groups.md).
 
  > [!NOTE]
- > Azure ATP yönetici kullanıcı adı ve parola kullanarak Azure ATP çalışma alanı portalına erişmek istediğiniz bilgisayara oturum açmak emin olun. Alternatif olarak, tarayıcınızı farklı bir kullanıcı veya oturumunuzu Windows ve günlük olarak, Azure ATP yönetici kullanıcınızla üzerinde çalışabilir. 
+ > Azure ATP yönetici kullanıcı adı ve parola kullanarak Azure ATP portalına erişmek istediğiniz bilgisayara oturum açmak emin olun. Alternatif olarak, tarayıcınızı farklı bir kullanıcı veya oturumunuzu Windows ve günlük olarak, Azure ATP yönetici kullanıcınızla üzerinde çalışabilir. 
 
 
 ### <a name="attack-time-line"></a>Saldırı zaman çizelgesi
 
-Azure ATP çalışma alanı portalında oturum açtığınızda yönlendirilirsiniz varsayılan giriş sayfasıdır. Varsayılan olarak, tüm kuşkulu etkinliler saldırı zaman çizelgesinde gösterilir. Tüm, saldırı zaman çizelgesine filtre uygulayabilirsiniz çıkarıldı veya Suppressed şüpheli etkinlikleri Aç. Ayrıca, her etkinliğe atanmış olan önem düzeyini de görebilirsiniz.
+Saldırı zaman çizelgesine bu Azure ATP çalışma alanı portalında oturum açtığınızda yönlendirilirsiniz varsayılan giriş sayfasıdır. Varsayılan olarak, tüm kuşkulu etkinliler saldırı zaman çizelgesinde gösterilir. Tüm, saldırı zaman çizelgesine filtre uygulayabilirsiniz çıkarıldı veya Suppressed şüpheli etkinlikleri Aç. Ayrıca, her etkinliğe atanmış olan önem düzeyini de görebilirsiniz.
 
 ![Azure ATP saldırı zaman çizelgesi resmi](media/atp-sa-timeline.png)
 
@@ -69,7 +69,7 @@ Kuşkulu etkinlikleri Durum ve Önem Derecesi’ne göre filtreleyerek, saldır�
 
 Üst menüde arama çubuğunu bulabilirsiniz. Belirli bir kullanıcı, bilgisayar veya Azure ATP grupları arayabilirsiniz. Denemek için, yazmaya başlamanız yeterlidir. Arama çubuğunun alt kısmında bulunan Arama sonuç sayısı gösterilir. 
 
-![Azure ATP çalışma alanı portal arama resmi](media/atp-workspace-portal-search.png)
+![Azure ATP portalı arama görüntü](media/atp-workspace-portal-search.png)
 
 Sayıya tıklarsanız, sonuçları araştırılması için varlık türüne göre filtrelemek arama sonuçları sayfası erişebilirsiniz.
 
@@ -87,7 +87,7 @@ Sisteminizde bağlantı hatası veya bağlantısı kesilmiş bir Azure ATP tek b
 
 ### <a name="sensitive-groups"></a>Gizli gruplar
 
-Gizli gruplarda ATP hakkında daha fazla bilgi için bkz: [hassas gruplarıyla çalışma](sensitive-accounts.md).
+Azure ATP gizli gruplarda hakkında daha fazla bilgi için bkz: [hassas gruplarıyla çalışma](sensitive-accounts.md).
 
 ### <a name="mini-profile"></a>Mini profil
 
@@ -115,4 +115,4 @@ Farenizi çalışma Portalı'nda herhangi bir varlığın üzerine durumunda old
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Azure ATP çalışma alanları oluşturma](install-atp-step1.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

@@ -1,11 +1,11 @@
 ---
-title: Azure ATP ile yanal hareket yolu saldırılarını araştırma | Microsoft Docs
-description: Bu makalede, yanal hareket yolu olan Azure Gelişmiş tehdit Koruması (ATP) saldırıları açıklar.
+title: Azure ATP ile yanal hareket saldırılarını araştırma | Microsoft Docs
+description: Bu makalede, yanal hareket saldırıları ile Azure Gelişmiş tehdit Koruması (ATP) açıklar.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/05/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0fcdfdbeaeed7e42aff9d63f4f88300346c73465
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: e6a223405f4aa1e8daa1d393428db43c4e692daa
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165584"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783500"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -32,7 +32,7 @@ Yanal hareket, bir saldırganın hassas hesaplara yönelik erişim elde etmek i�
 
 Hassas olmayan hesapları, grupları ve makineler, bağlantı nedeniyle ağınızdaki hassas hangi hesapların ortaya bulmak için aşağıdaki adımları izleyin. 
 
-1. Azure ATP çalışma alanı portal menüde rapor simgesine tıklayın ![Raporlar simgesi](./media/atp-report-icon.png).
+1. Azure ATP portalı menüsünde, raporların simgesine tıklayın ![Raporlar simgesi](./media/atp-report-icon.png).
 
 2. Altında **yana hareket yolları hassas hesaplara yönelik**, hiçbir olası yanal hareket yollarını bulundu, raporun gri varsa. Olası yanal hareket yollarını varsa, raporu otomatik olarak ilk önceden seçer tarih ilgili verileri olduğunda. Yanal hareket yolu raporun 60 güne kadar verileri sağlar.
 
@@ -47,7 +47,7 @@ Hassas olmayan hesapları, grupları ve makineler, bağlantı nedeniyle ağını
 
 
 
-1. Varlık bir yanal hareket yolu olduğunda varlık profiline eklenir yanal hareket rozet Azure ATP çalışma alanı Portalı'nda arayın ![yanal simgesi](./media/lateral-movement-icon.png) veya ![Yol simgesi](./media/paths-icon.png). Son 48 saat içinde yanal hareket, Göstergeler yalnızca görüneceğini unutmayın. 
+1. Varlık bir yanal hareket yolu olduğunda varlık profiline eklenir yanal hareket rozet Azure ATP Portalı'nda arayın ![yanal simgesi](./media/lateral-movement-icon.png) veya ![Yol simgesi](./media/paths-icon.png). Son 48 saat içinde yanal hareket, Göstergeler yalnızca görüneceğini unutmayın. 
 
 2. Açılan kullanıcı profili sayfasında tıklatın **yana hareket yollarını** sekmesi. 
 
@@ -73,6 +73,6 @@ Hassas olmayan hesapları, grupları ve makineler, bağlantı nedeniyle ağını
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-- [SAM-R gerektiren izinleri yapılandırma](install-atp-step8-samr.md)
-- [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [SAM uzak çağrı yapmak için Azure ATP yapılandırma](install-atp-step8-samr.md)
+- [Güvenlik Uyarıları ile çalışma](working-with-suspicious-activities.md)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

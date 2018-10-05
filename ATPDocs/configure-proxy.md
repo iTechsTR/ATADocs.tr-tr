@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/25/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a007a277641835be292ae6ab0b3004f154dad753
-ms.sourcegitcommit: 0634dda829699edf8bfd984eb9f896a67c5b15e7
+ms.openlocfilehash: a7dc9b6c9243377a613490e166fb7c0294ecde99
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48039371"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783330"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -81,4 +81,4 @@ Ayrıca, bir kural için aşağıdaki DNS kayıtlarını oluşturma tarafından 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 - [Olay iletme'yi yapılandırma](configure-event-forwarding.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

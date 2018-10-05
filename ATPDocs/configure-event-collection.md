@@ -5,20 +5,20 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/15/2018
-ms.topic: conceptual
+ms.date: 10/04/2018
+ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 91e3caf8e15313069e4c2cec194a11855fd45c24
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: eaf798149c828b641ba037ffbb6854ca07c6732a
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126187"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783602"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -29,7 +29,7 @@ ms.locfileid: "44126187"
 Azure ATP algılama yeteneklerini artırmak için aşağıdaki Windows olaylarına ihtiyacı vardır: 4776, 4732, 4733, 4728, 4729, 4756, 4757'yi ve 7045. Bunlar ya da otomatik olarak Azure ATP algılayıcı tarafından okunabilir veya Azure ATP algılayıcısını dağıtılmamış olması durumunda, bu iki yoldan biriyle Azure ATP tek başına algılayıcı Azure ATP tek başına algılayıcı SIEM olaylarını dinleyecek şekilde yapılandırarak veya iletilebilir[Windows Olay iletme özelliğini yapılandırma](configure-event-forwarding.md).
 
 > [!NOTE]
-> Etki alanı denetleyicilerinde gerekli olayları kaydetmek için düzgün yapılandırıldığından emin olmak için olay koleksiyonu yapılandırmadan önce betik denetim ATA çalıştırmak önemlidir. 
+> Etki alanı denetleyicilerinde gerekli olayları kaydetmek için düzgün yapılandırıldığından emin olmak için Azure komut dosyası olay toplama yapılandırmadan önce denetim ATP çalıştırmak önemlidir. 
 
 Azure ATP toplama ve analiz etme ve ağ trafiğini yanı sıra etki alanı denetleyicilerinden Windows olaylarını algılamaları geliştirebilir kullanabilirsiniz. Çeşitli algılamalar ve olay 4732, 4733, 4728, 4729, 4756, 4757'yi ve hizmet oluşturma ve gizli Grup değişikliklerini algılamayı için 7045 geliştiren NTLM için olay 4776'yı kullanır. Bu, SIEM sistemlerinizden alınabileceği gibi etki alanı denetleyicinizden Windows Olay İletme’yi ayarlayarak da alınabilir. Toplanan olaylar, etki alanı denetleyicisi ağ trafiğinin kullanılabilir olmayan ek bilgilerle Azure ATP sağlar.
 
@@ -50,7 +50,7 @@ Azure ATP'ın bir Syslog sunucusundan verileri kullanabilmesi için almak aşağ
 Belirli olayları başka bir sunucuya iletme işlemini yapılandırma hakkında bilgi edinmek için, SIEM/Syslog sunucunuzun ürün belgelerine bakın. 
 
 > [!NOTE]
->SIEM/Syslog sunucusunu kullanmazsanız, Windows etki alanı denetleyicilerinizi toplanacağı ve ATP tarafından analiz için gerekli tüm olayları iletecek şekilde yapılandırabilirsiniz.
+>SIEM/Syslog sunucusunu kullanmazsanız, Windows etki alanı denetleyicilerinizi toplanır ve Azure ATP tarafından analiz için gerekli tüm olayları iletecek şekilde yapılandırabilirsiniz.
 
 ## <a name="configuring-the-azure-atp-sensor-to-listen-for-siem-events"></a>Azure ATP algılayıcısını SIEM olaylarını dinleyecek şekilde yapılandırma
 
@@ -160,7 +160,7 @@ Hata Kodu:         0x0
 -   Anahtar=değer çiftleri için sıra önemli değildir.
 
 ## <a name="qradar"></a>QRadar
-QRadar bir aracı üzerinden olay toplamayı sağlar. Veriler bir aracı kullanarak toplanıyorsa, saat biçimi mili saniye verisi olmadan toplanır. Azure ATP mili saniye verisi duyduğundan, QRadar aracısız Windows olay toplamayı kullanacak şekilde ayarlanması gerekir. Daha fazla bilgi için [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: MSRPC protokolünü kullanarak aracısız Windows olayları koleksiyonu").
+QRadar bir aracı üzerinden olay toplamayı sağlar. Veriler bir aracı kullanarak toplanıyorsa, saat biçimi mili saniye verisi olmadan toplanır. Azure ATP mili saniye verisi duyduğundan, QRadar aracısız Windows olay toplamayı kullanacak şekilde ayarlanması gerekir. Daha fazla bilgi için [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: MSRPC protokolünü kullanarak aracısız Windows olayları koleksiyonu").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 
@@ -188,4 +188,4 @@ key=value çiftleri arasında \t bulunduğundan emin olun.
 - [Azure ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool)
 - [Azure ATP SIEM günlük başvurusu](cef-format-sa.md)
 - [Azure ATP önkoşulları](atp-prerequisites.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

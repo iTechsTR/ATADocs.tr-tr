@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/12/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,16 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4dca942b6c7b066cfec44e51aaad0f1e003da6ec
-ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
+ms.openlocfilehash: a888cbb80bba74d920e236b04c353008c7b56daf
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750427"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783670"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
-# <a name="integrating-azure-atp-with-windows-defender-atp"></a>Azure ATP Windows Defender ATP ile tümleştirme
+# <a name="integrate-azure-atp-with-windows-defender-atp"></a>Azure ATP Windows Defender ATP ile tümleştirme
 
 Azure Gelişmiş tehdit koruması, Azure ATP daha eksiksiz bir tehdit koruması çözümü için Windows Defender ATP ile tümleştirmenize olanak sağlar. Azure ATP etki alanı denetleyicileriniz üzerindeki trafiği izlerken, Windows Defender ATP birlikte ortamınızı korumaya tek bir arabirim sağlayan uç noktalarınızı izler.
 
@@ -73,11 +73,11 @@ Bu özelliği etkinleştirmek için hem Azure ATP hem de Windows Defender ATP i�
 
  ![Windows Defender ATP etkinleştir tümleştirme](./media/wd-atp-enable.png)
 
-5. Azure ATP çalışma alanı portalında Tümleştirme durumunu denetlemek için Git **ayarları** ardından **Windows Defender ATP tümleştirme**. Tümleştirme durumu görebilirsiniz; bir şeyler yanlış ise, bir hata görürsünüz. Ayrıca, Windows Defender ATP ile hangi çalışma alanının tümleşik görebilirsiniz.
+5. Azure ATP portalında Tümleştirme durumunu denetlemek için Git **ayarları** ardından **Windows Defender ATP tümleştirme**. Tümleştirme durumu görebilirsiniz; bir şeyler yanlış ise, bir hata görürsünüz. Ayrıca, Windows Defender ATP ile hangi çalışma alanının tümleşik görebilirsiniz.
 
 ## <a name="how-it-works"></a>Nasıl Çalışır?
 
-Azure ATP ve Windows Defender ATP tam olarak, Azure ATP çalışma alanı portal, Mini profil açılır ve varlık profili sayfası tümleştirilmiştir sonra Windows Defender ATP'de var. her bir varlık ile Windows tümleşik olduğunu göstermek için bir rozet içerir. Defender ATP. 
+Azure ATP ve Windows Defender ATP tam olarak, Azure ATP portalı, Mini profil açılır ve varlık profili sayfası tümleştirilmiştir sonra Windows Defender ATP'de var. her varlık, Windows Defender ATP ile tümleşik olduğunu göstermek için bir rozet içerir. 
 
  ![Windows Defender ATP uyarıları](./media/profile-alerts-wd.png)
 
@@ -103,5 +103,5 @@ Bir uç noktaya tıkladığınızda, Windows Defender ATP Portalı'nda Azure ATP
 - [Azure ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool)
 - [Azure ATP mimarisi](atp-architecture.md)
 - [ATP yükleyin](install-atp-step1.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
 

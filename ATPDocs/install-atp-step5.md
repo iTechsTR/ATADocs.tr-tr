@@ -1,11 +1,11 @@
 ---
-title: Yükleme Azure Gelişmiş tehdit koruması - 5. adım | Microsoft Docs
+title: Azure Gelişmiş tehdit Koruması'nı yükleme | Microsoft Docs
 description: Azure ATP yükleme işleminin beşinci adımı, Azure ATP tek başına algılayıcı için ayarları yapılandırmanıza yardımcı olur.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/25/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 15e3639aa08e48a40ae65bf229964ae589ce1ba8
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 6f65b3af56e683a385f7128a989170c8c4073b3e
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454080"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783874"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -27,14 +27,14 @@ ms.locfileid: "47454080"
 # <a name="install-azure-atp---step-5"></a>Azure ATP - 5. Adım'ı yükleme
 
 > [!div class="step-by-step"]
-> [« 4. Adım](install-atp-step4.md)
-> [6. Adım »](install-atp-step6-vpn.md)
+> [«4. adım](install-atp-step4.md)
+
 
 
 ## <a name="step-5-configure-the-azure-atp-sensor-settings"></a>Adım 5. Azure ATP algılayıcısı ayarlarını yapılandırma
 Azure ATP algılayıcısını yüklendikten sonra Azure ATP algılayıcısı ayarlarını yapılandırmak için aşağıdaki adımları gerçekleştirin.
 
-1.  Azure ATP çalışma alanı Portalı'nda Git **yapılandırma** ve altında **sistem**seçin **algılayıcı**.
+1.  Azure ATP portalında Git **yapılandırma** ve altında **sistem**seçin **algılayıcı**.
    
      ![Algılayıcı ayarlarını yapılandırma resmi](media/atp-sensor-config.png)
 
@@ -59,7 +59,7 @@ Azure ATP algılayıcısını yüklendikten sonra Azure ATP algılayıcısı aya
     
         Etki alanı Eşitleyicisi Azure ATP ile Active Directory etki alanınız arasında eşitlemeden sorumlu. Etki alanının büyüklüğüne ilk eşitleme biraz zaman alabilir ve yoğun kaynak sahiptir. 
    Herhangi bir uzak site etki alanı Eşitleyici adayı engeller Azure ATP sensor(s) devre dışı bırakmanız önerilir.
-   Etki alanı denetleyiciniz salt okunur ise, onu Etki Alanı eşitleyici adayı olarak ayarlamayın. Azure ATP etki alanı eşitleme hakkında daha fazla bilgi için bkz: [Azure ATP mimarisi](atp-architecture.md#azure-atp-sensor-features)
+   Etki alanı denetleyiciniz salt okunur ise, bir etki alanı Eşitleyici adayı olarak ayarlamayın. Azure ATP etki alanı eşitleme hakkında daha fazla bilgi için bkz: [Azure ATP mimarisi](atp-architecture.md#azure-atp-sensor-features)
   
 4. **Kaydet**'e tıklayın.
 
@@ -72,15 +72,15 @@ Azure ATP algılayıcısını başarıyla dağıtıldığını doğrulamak için
 2.  Hizmet başlatılmazsa, "%programfiles%\Azure Gelişmiş tehdit koruması sensor\Version X\Logs" aşağıdaki varsayılan klasörde bulunan "Microsoft.Tri.sensor-Errors.log" dosyasını gözden geçirin.
  
  >[!NOTE]
- > Azure ATP çalışma alanı portalında, en son sürümünü denetlemek için sık sık Azure ATP güncelleştirmelerin sürümünü Git **yapılandırma** ardından **hakkında**. 
+ > Azure ATP portalında, en son sürümünü denetlemek için sık sık Azure ATP güncelleştirmelerin sürümünü Git **yapılandırma** ardından **hakkında**. 
 
-3.  Çalışma alanı URL'nizi gidin. Çalışma alanı Portalı'nda, arama çubuğunda, bir kullanıcı veya etki alanınızdaki Grup gibi bir şey arayın.
+3.  Çalışma alanı URL'nizi gidin. Azure ATP Portalı'nda, arama çubuğunda, bir kullanıcı veya etki alanınızdaki Grup gibi bir şey arayın.
 
 
 
 > [!div class="step-by-step"]
-> [« 4. Adım](install-atp-step4.md)
-> [6. Adım »](install-atp-step6-vpn.md)
+> [«4. adım](install-atp-step4.md)
+
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
@@ -88,4 +88,4 @@ Azure ATP algılayıcısını başarıyla dağıtıldığını doğrulamak için
 - [Azure ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [Azure ATP önkoşulları](atp-prerequisites.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

@@ -2,10 +2,10 @@
 title: Azure ATP raporları ile çalışma | Microsoft Docs
 description: Ağınızı izlemek için Azure ATP'de raporları nasıl oluşturabileceğiniz açıklanır.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/27/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eb1a29038d8afb47328970ff7179f0e1ff01614d
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 367ad07bd1d0be80486bfc10c2b70546d360805c
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165941"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783194"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 # <a name="azure-atp-reports"></a>Azure ATP raporları
 
-Azure ATP çalışma alanı portalı Raporlar bölümünde, sistem durumu ve şüpheli etkinlikler, bir raporu kullanarak ortamınızda algılanan sistem durumu bilgileri sağlayan raporlar oluşturmanıza olanak sağlar.
+Azure ATP portalı Azure ATP Raporlar bölümünde, sistem durumu ve şüpheli etkinlikler, bir raporu kullanarak ortamınızda algılanan sistem durumu bilgileri sağlayan raporlar oluşturmanıza olanak sağlar.
 
 
 Raporlar sayfasına erişmek için menü çubuğundaki rapor simgesine tıklayın: ![rapor simgesi](./media/atp-report-icon.png).
@@ -43,7 +43,7 @@ Bir rapor oluşturmak için iki yolu vardır: isteğe bağlı olarak veya e-post
 
 İsteğe bağlı bir rapor oluşturmak için:
 
-1. Azure ATP çalışma alanı portal menü çubuğunda, menü çubuğundaki rapor simgesine tıklayın: ![rapor simgesi](./media/atp-report-icon.png).
+1. Azure ATP portal menü çubuğunda, menü çubuğundaki rapor simgesine tıklayın: ![rapor simgesi](./media/atp-report-icon.png).
 
 2. Seçilen rapor türü, altında ayarlanan **gelen** ve **için** tarihleri ve tıklatın **indirme**. 
  ![raporlar](./media/reports.png)
@@ -67,4 +67,4 @@ Zamanlanmış bir rapor ayarlamak için:
 - [Azure ATP kapasite planlaması](atp-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [Windows olay iletme özelliğini yapılandırma](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

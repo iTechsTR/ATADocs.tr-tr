@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/25/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fb9e99d43a800f6b7bc080fa3fe0bc2453f3d754
-ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
+ms.openlocfilehash: 6853a2a768fabde94c7aa613c9a6c0403f14e066
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168578"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783568"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 # <a name="azure-atp-architecture"></a>Azure ATP mimarisi
 
-Azure ATP yakalayarak ve ağ trafiği ayrıştırma ve Windows olaylarını (doğrudan etki alanı denetleyicilerinizden veya bir SIEM sunucusundan) yararlanarak etki alanı denetleyicilerinizin izler ve saldırı ve tehdit verilerini analiz eder. Profil oluşturma, belirlenimci algılama, makine öğrenimi ve davranış algoritmalarını Azure ATP ağınız hakkında detaylı bilgi ediniyor yararlanarak anomali algılama sağlar ve şüpheli etkinliklerde sizi uyarır.
+Azure ATP etki alanı denetleyicilerinizin yakalayarak ve ağ trafiği ayrıştırma ve yararlanarak doğrudan etki alanı denetleyicilerinizi Windows olayları izler ve saldırı ve tehdit verilerini analiz eder. Profil oluşturma, belirlenimci algılama, makine öğrenimi ve davranış algoritmalarını Azure ATP ağınız hakkında detaylı bilgi ediniyor yararlanarak anomali algılama sağlar ve şüpheli etkinliklerde sizi uyarır.
 
 Azure Gelişmiş tehdit koruması mimarisi:
 
@@ -40,7 +40,6 @@ Azure ATP aşağıdaki bileşenlerden oluşur:
 
 -   **Azure ATP portalı** <br>
 Azure ATP portalı Azure ATP örneğinizin oluşturmanıza olanak sağlar, Azure ATP algılayıcılardan gelen verileri görüntüler ve izleme, yönetme ve ağ ortamınızdaki tehditlere araştırmanıza olanak sağlar.  
-
 -   **Azure ATP algılayıcısı**<br>
 Azure ATP algılayıcı doğrudan etki alanı denetleyicilerinize yüklenir. Algılayıcı adanmış sunucu veya bağlantı noktası yansıtmaya gerek kalmadan etki alanı denetleyicisi trafiğini doğrudan izler.
 
@@ -57,7 +56,7 @@ Azure ATP portalına kullanın:
 - **İsteğe bağlı**: portal, e-postaları ve güvenlik uyarıları veya sistem durumu sorunu algılandığında olaylar göndermek için de yapılandırılabilir
 
 > [!NOTE]
-> - 60 gün içinde hiçbir algılayıcı, çalışma alanınızda yüklü değilse, çalışma alanı silinebilir ve onu yeniden.
+> - 60 gün içinde hiçbir algılayıcı, çalışma alanınızda yüklü değilse, çalışma alanı silinebilir ve yeniden oluşturmanız gerekir.
 
 ## <a name="azure-atp-sensor"></a>Azure ATP algılayıcısı
 Azure ATP algılayıcısını aşağıdaki temel işlevleri vardır:
@@ -67,11 +66,10 @@ Azure ATP algılayıcısını aşağıdaki temel işlevleri vardır:
 - Active Directory etki alanından kullanıcılar ve bilgisayarlar hakkındaki verileri alma
 - Ağ varlıklarının (kullanıcılar, gruplar ve bilgisayarlar) çözümlemesini yapma
 - Azure ATP bulut hizmetine ilgili veri aktarımı
-> [!NOTE]
-> - Varsayılan olarak, en fazla 100 algılayıcınız Azure ATP destekler. Daha fazla yüklemek istiyorsanız, Azure ATP desteğe başvurun.
+
  
 ## <a name="azure-atp-sensor-features"></a>Azure ATP algılayıcısını özellikleri
-Azure ATP algılayıcısını satın alın ve ek donanım veya yapılandırmaları gerek kalmadan olayları yerel olarak okur. Azure ATP algılayıcısını olay iş parçacığı için Windows (birden çok algılama için günlük bilgileri sağlayan ETW) da destekler. Şüpheli çoğaltma isteği ve şüpheli etki alanı denetleyicisi yükseltme ETW dayalı algılamalar şunları içerir, hem de olası DC gölge saldırılara karşı.
+Azure ATP algılayıcısını satın alın ve ek donanım veya yapılandırmaları gerek kalmadan olayları yerel olarak okur. Azure ATP algılayıcısını olay izleme için Windows (birden çok algılama için günlük bilgileri sağlayan ETW) da destekler. Şüpheli çoğaltma isteği ve şüpheli etki alanı denetleyicisi yükseltme ETW dayalı algılamalar şunları içerir, hem de olası DCShadow saldırılara karşı.
 - Etki alanı eşitleyici adayı
 
     Etki alanı Eşitleyici adayı, belirli bir Active Directory etki alanından tüm varlıkların önceden tedbirli olarak eşitlenmesinden sorumludur (etki alanı denetleyicileri tarafından kendileri çoğaltma için kullanılan mekanizmaya benzer). Bir algılayıcı adaylar listesinden, etki alanı Eşitleyici görevi görmesi için rastgele seçilir. 
@@ -99,4 +97,4 @@ Azure ATP algılayıcısını satın alın ve ek donanım veya yapılandırmalar
 - [Azure ATP kapasite planlaması](atp-capacity-planning.md)
 - [Olay iletme'yi yapılandırma](configure-event-forwarding.md)
 - [Windows olay iletme özelliğini yapılandırma](configure-event-forwarding.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

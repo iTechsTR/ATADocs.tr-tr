@@ -1,24 +1,24 @@
 ---
-title: Yükleme Azure Gelişmiş tehdit koruması - 3. adım | Microsoft Docs
-description: Azure ATP yükleme üç adımda Azure ATP tek başına algılayıcı Kurulum paketini indirme yardımcı olur.
+title: Azure Gelişmiş tehdit Koruması'nı yükleme | Microsoft Docs
+description: Azure ATP yükleme üç adım Azure ATP algılayıcısı Kurulum paketini indirmelisiniz yardımcı olur.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2017
-ms.topic: conceptual
+ms.date: 10/04/2018
+ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 96d459bd00d39bb21ce363d079b5b24ceca4ace7
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 5a9eea9550af90577ad1763384a134f5889edc5f
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454029"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783789"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -42,7 +42,7 @@ Tıklayın **indirme** gitmek için sayfanın üst kısmındaki adımları liste
 
 1.  Tıklayın **algılayıcı**.
 2.  Paketi yerel olarak kaydedin.
-3.  Kopyalama **erişim anahtarı**. Azure ATP algılayıcısını Azure ATP çalışma alanınıza bağlanmak erişim anahtarı gereklidir. Erişim anahtarı bir bir kerelik parola kimlik doğrulaması ve TLS şifreleme için sertifikalar kullanılarak sonra tüm iletişim gerçekleştirilir, algılayıcı dağıtımı için ' dir. Kullanım **yeniden** hiç olmadığı kadar yeni erişim anahtarını yeniden gerekiyorsa, şunları yapabilirsiniz ve daha önceden dağıtılan tüm algılayıcılar etkilemez, yalnızca ilk kayıt algılayıcı için kullanıldığından düğmesi.
+3.  Kopyalama **erişim** **anahtar**. Azure ATP algılayıcısını Azure ATP çalışma alanınıza bağlanmak erişim anahtarı gereklidir. Erişim anahtarı bir bir kerelik parola kimlik doğrulaması ve TLS şifreleme için sertifikalar kullanılarak sonra tüm iletişim gerçekleştirilir, algılayıcı dağıtımı için ' dir. Kullanım **yeniden** hiç olmadığı kadar yeni erişim anahtarını yeniden gerekiyorsa, şunları yapabilirsiniz ve daha önceden dağıtılan tüm algılayıcılar etkilemez, yalnızca ilk kayıt algılayıcı için kullanıldığından düğmesi.
 4.  Ayrılmış sunucudan veya etki alanı denetleyicisi ileride Azure ATP algılayıcısını yükleme paketi kopyalayın. Alternatif olarak, etki alanı denetleyicisi veya adanmış sunucu Azure ATP çalışma alanı portalını açın ve bu adımı atlayın.
 
 Zip dosyası aşağıdaki dosyaları içerir:
@@ -65,4 +65,4 @@ Zip dosyası aşağıdaki dosyaları içerir:
 
 - [Azure ATP önkoşulları](atp-prerequisites.md)
 
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

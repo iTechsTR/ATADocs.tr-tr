@@ -2,22 +2,22 @@
 title: Azure Gelişmiş tehdit koruması bağlantı noktası yansıtmayı doğrulama | Microsoft Docs
 description: Bağlantı noktası yansıtma ATA'daki doğru yapılandırılmış olduğunu doğrulamak açıklar
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: ''
 ms.technology: ''
 ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 15e53ef145b9d7bbbc980730acec6c3b92c1a0fa
-ms.sourcegitcommit: e0b9252c770b3a3695af1642b76e3304f3df15d4
+ms.openlocfilehash: 0d9e2bcbbe2635765f1bcce9ee1367c1d3895080
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46566613"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783449"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -63,4 +63,4 @@ Aşağıdaki adımlar, bağlantı noktası yansıtmanın düzgün yapılandırı
 
 - [Olay iletme'yi yapılandırma](configure-event-forwarding.md)
 - [Bağlantı noktası yansıtmayı yapılandırma](configure-port-mirroring.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

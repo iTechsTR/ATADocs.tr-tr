@@ -1,11 +1,11 @@
 ---
-title: Yükleme Azure Gelişmiş tehdit koruması - 4. adım | Microsoft Docs
-description: Azure ATP yükleme işleminin dördüncü adımı Azure ATP tek başına algılayıcı yüklemek için yardımcı olur.
+title: Azure Gelişmiş tehdit Koruması'nı yükleme | Microsoft Docs
+description: Azure ATP yükleme işleminin dördüncü adımı Azure ATP algılayıcısını yükleme yardımcı olur.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/25/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 87a2b47261293fffffe9d822d698b551a332a481
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 52ffbac6acd762d4cf2898c170d7a026d2a37826
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454148"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783738"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -32,13 +32,10 @@ ms.locfileid: "47454148"
 
 ## <a name="step-4-install-the-azure-atp-sensor"></a>Adım 4. Azure ATP algılayıcısını yükleme
 
-Azure ATP tek başına algılayıcı adanmış bir sunucuda yüklemeden önce bağlantı noktası yansıtmanın düzgün yapılandırıldığını ve Azure ATP tek başına algılayıcı etki alanı denetleyicilerinden gelen ve giden trafiği görebildiğini doğrulayın. 
-
-
 > [!IMPORTANT]
 >Olun emin .net Framework 4.7 makinede yüklü. .NET Framework 4.7 ise, yüklü Azure ATP algılayıcısı Kurulum paketini, sunucunun yeniden başlatılmasını gerektiren yükler.
 
-Azure ATP algılayıcısı sunucu veya etki alanı denetleyicisi üzerinde aşağıdaki adımları gerçekleştirin.
+Etki alanı denetleyicisinde aşağıdaki adımları gerçekleştirin.
 
 1. Makine ilgili Azure ATP bulut Hizmeti uç noktasına bağlanabildiğini doğrulayın:
   - https://triprd1wceuw1sensorapi.atp.azure.com (Avrupa için)  
@@ -73,7 +70,7 @@ Azure ATP algılayıcısı sunucu veya etki alanı denetleyicisi üzerinde aşa�
 
       - Yükleme yolu: Bu Azure ATP tek başına algılayıcı yüklendiği konumdur. Varsayılan olarak %programfiles%\Azure Gelişmiş tehdit koruması algılayıcı budur. Varsayılan değeri olduğu gibi bırakın.
 
-      - Erişim anahtarı: Bu önceki adımda çalışma alanı portalından alınır.
+      - Erişim anahtarı: Bu önceki adımda Azure ATP portalından alınır.
     
 7. **Yükle**’ye tıklayın. Aşağıdaki bileşenler yüklenir ve Azure ATP algılayıcısını yükleme sırasında yapılandırılır:
 
@@ -86,7 +83,7 @@ Azure ATP algılayıcısı sunucu veya etki alanı denetleyicisi üzerinde aşa�
     -   Azure ATP algılayıcı hizmeti ve Azure ATP algılayıcı updater hizmeti
     -   Microsoft Visual C++ 2013 Yeniden Dağıtılabilir
 
-8.  Yükleme tamamlandıktan sonra tıklayın **başlatma** tarayıcınızı açın ve Azure ATP çalışma alanı portalında oturum açın.
+8.  Yükleme tamamlandıktan sonra tıklayın **başlatma** tarayıcınızı açın ve Azure ATP portalında oturum açın.
 
 
 > [!div class="step-by-step"]
@@ -102,4 +99,4 @@ Azure ATP algılayıcısı sunucu veya etki alanı denetleyicisi üzerinde aşa�
 
 - [Azure ATP önkoşulları](atp-prerequisites.md)
 
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

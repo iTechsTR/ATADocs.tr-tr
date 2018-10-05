@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/6/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0c0558dbe0b4eba849adb635a84bc934e406e56f
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 72e26d9cdc539da168d1bc7c274971526eec61d1
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166570"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783313"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -26,13 +26,13 @@ ms.locfileid: "44166570"
 
 # <a name="investigate-an-entity-with-azure-atp"></a>Azure ATP sahip bir varlık araştırın
 
-Bu makalede, Azure Gelişmiş tehdit Koruması (ATP ile) şüpheli etkinlikleri tespit edilen sonra varlıkları araştırma işlemi açıklanır. Zaman çizelgesinde kuşkulu bir etkinlik izledikten sonra etkinliğin ilgili varlık incelemek ve ne olduğunu ve riski azaltmak için yapmanız gerekenler hakkında daha fazla bilgi için ayrıntıları ve aşağıdaki parametreleri kullanın.
+Bu makalede, Azure Gelişmiş tehdit Koruması (ATP ile) şüpheli etkinlikleri tespit edilen sonra varlıkları araştırma işlemi açıklanır. Zaman çizelgesinde bir güvenlik uyarısı görüntüledikten sonra uyarıyı ilgili varlık incelemek ve ne olduğunu ve riski azaltmak için yapmanız gerekenler hakkında daha fazla bilgi için ayrıntıları ve aşağıdaki parametreleri kullanın.
 
 ## <a name="look-at-the-entity-profile"></a>Varlık profili Ara
 
 Varlık profili, kullanıcılar, bilgisayarlar, cihazlar ve geçmişlerini birlikte erişime sahip oldukları kaynakları tam yakından incelenmesi için tasarlanmış kapsamlı varlık sayfa sağlar. Profil sayfasında, bir grup etkinlik (bir dakikaya kadar toplanmış) gerçekleşen bakın ve daha iyi anlamak gerçek etkinliklerini vermek için tek bir mantıksal etkinliğini gruplamak yeni Azure ATP mantıksal etkinliği Çeviricisi yararlanır Kullanıcılarınızın.
 
-Bir varlık profili sayfasına erişmek için şüpheli etkinlik zaman çizelgesinde bir kullanıcı adı gibi varlık adını tıklayın. Varlık adının üzerine gelerek varlık profili kuşkulu etkinlik sayfasında kısa bir sürümünü de görebilirsiniz.
+Bir varlık profili sayfasına erişmek için güvenlik uyarı zaman çizelgesinde bir kullanıcı adı gibi varlık adını tıklayın. Varlık adının üzerine gelerek güvenlik uyarı sayfasında varlık profilinin Mini sürümüne de görebilirsiniz.
 
 Varlık profili, varlık etkinlikleri görüntülemek, dizin verilerini görüntüleyin ve varlığın yanal hareket yollarını görüntülemenize olanak tanır. Daha fazla bilgi için [varlık profilleri anlama ](entity-profiles.md).
 
@@ -112,4 +112,4 @@ Araştırmanızı taşımadan önce varlık bir honeytoken olup olmadığını b
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

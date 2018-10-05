@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/15/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 274e016f7a870b8879fad0dec4628dcea60bc538
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: e05424c8a29d3dc77f7e7bbfe2351bb97d65160f
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126153"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782956"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -28,7 +28,7 @@ ms.locfileid: "44126153"
 
 ## <a name="search-for-and-identify-personal-data"></a>Kişisel verileri tanımlamak ve arayın 
 
-Azure Gelişmiş tehdit koruması kişisel olarak tanımlanabilen verileri görüntüleyebilirsiniz [çalışma portalı](workspace-portal.md) kullanarak [Arama çubuğuna](workspace-portal.md#search-bar). 
+Azure Gelişmiş tehdit koruması kişisel olarak tanımlanabilen verileri görüntüleyebilirsiniz [Azure ATP portalı](workspace-portal.md) kullanarak [Arama çubuğuna](workspace-portal.md#search-bar). 
 
 Belirli bir kullanıcı veya bilgisayar için arama yapın ve kullanıcıya veya bilgisayara getirmek için varlık tıklayın [profil sayfası](entity-profiles.md). Profil, varlık hakkında ayrıntılar kapsamlı, varlık ve buna ait geçmişi ilgili ağ etkinliği de dahil olmak üzere Active Directory sağlar.
 

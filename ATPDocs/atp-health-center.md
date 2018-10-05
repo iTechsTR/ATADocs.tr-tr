@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/05/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 033d338e9c1e5e85673e362069ff0a815cda127c
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 8fdaa7311d39680ed8e9389f5dc9b7cdeca73197
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165601"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782905"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -46,8 +46,7 @@ Azure ATP çalışma alanı sistem durumu Merkezi, ilgili bir sorun olduğunu me
 
     > [!NOTE]
     > Tekrar bir kısa süre içinde aynı etkinlik algılanırsa azure ATP kapalı bir etkinliği yeniden.
-    > Her çalışma alanına kendi sistem durumu merkezi sahiptir.
-
+    
 -   **Gösterme**: Bir etkinliği göstermemek, etkinliği o an için yoksaymak ve yalnızca yeni bir örnek ortaya çıkarsa uyarı almak istediğiniz anlamına gelir. Azure ATP benzer bir uyarı varsa yeniden değil. Ancak, bir uyarı yedi gün boyunca durdurur ve sonra tekrar görülürse ise, yeniden uyarılırsınız.
 
 -   **Yeniden**: açık görünmesi kapalı veya gizlenen bir sorunu açabilirsiniz zaman çizelgesinde yeniden.
@@ -56,7 +55,7 @@ Azure ATP çalışma alanı sistem durumu Merkezi, ilgili bir sorun olduğunu me
 
 
 
-![Azure ATP çalışma alanı sistem durumu merkezi sorunları resmi](media/atp-health-issue.png)
+![Azure ATP sistem durumu merkezi sorunları resmi](media/atp-health-issue.png)
 
 
 
@@ -66,4 +65,4 @@ Azure ATP çalışma alanı sistem durumu Merkezi, ilgili bir sorun olduğunu me
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Şüpheli etkinliklerle çalışma](working-with-suspicious-activities.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

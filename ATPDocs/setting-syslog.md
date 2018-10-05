@@ -2,10 +2,10 @@
 title: E-posta bildirim ayarlarını Azure Gelişmiş tehdit koruması ayarlama | Microsoft Docs
 description: Azure ATP (e-postayla veya Azure ATP Olay iletme'yi) bildirmek açıklar kuşkulu etkinlikler algıladığında
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 399773b174f52cfc26888fcaa9923de4f258e897
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 18f6d38f871539cf0701b697c9d0c5d9d96a27e4
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166893"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783551"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -26,7 +26,7 @@ ms.locfileid: "44166893"
 
 # <a name="integrate-with-syslog"></a>Syslog ile tümleştirme
 
-Azure ATP, şüpheli etkinlikler ve sistem durumu uyarılarını Syslog sunucunuza bildirim göndererek algıladığında size bildirebilir. Syslog bildirimlerini etkinleştirirseniz, bu uyarılar için aşağıdakileri ayarlayabilirsiniz.
+Azure ATP, sistem durumu uyarılarını yanı sıra şüpheli etkinlikler ve sorunları güvenlik uyarıları Syslog sunucunuza bildirim göndererek algıladığında size bildirebilir. Syslog bildirimlerini etkinleştirirseniz, aşağıdaki şekilde ayarlayabilirsiniz:
 
 1.  Syslog bildirimlerini yapılandırmadan önce, SIEM yöneticinizle birlikte çalışarak aşağıdaki bilgileri bulun:
 
@@ -38,7 +38,7 @@ Azure ATP, şüpheli etkinlikler ve sistem durumu uyarılarını Syslog sunucunu
 
     -   Veriler gönderilirken kullanılacak biçim, RFC 3164 veya 5424
 
-2.  Çalışma alanı portalı girin URL'si.
+2.  Çalışma alanı URL'sini girin.
 
 3.  Azure Active Directory kullanıcı adınızı ve parolanızı girin ve tıklayın **oturum**.
 
@@ -48,7 +48,7 @@ Azure ATP, şüpheli etkinlikler ve sistem durumu uyarılarını Syslog sunucunu
 
 5.  Tıklayın **bildirimleri**ve sonra **Syslog bildirimlerini** tıklayın **yapılandırma** ve aşağıdaki bilgileri girin:
 
-    |Alan|Description|
+    |Alan|Açıklama|
     |---------|---------------|
     |Algılayıcı|Belirlenen algılayıcı Syslog olaylarını toplamak ve bunları SIEM sunucusuna iletme için sorumlu seçin.|
     |Hizmet uç noktası|Syslog sunucunuzun FQDN’sini girin ve isteğe bağlı olarak bağlantı noktası numarasını (varsayılan 514) değiştirin|
@@ -63,4 +63,4 @@ Azure ATP, şüpheli etkinlikler ve sistem durumu uyarılarını Syslog sunucunu
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Hassas hesaplar ile çalışma](sensitive-accounts.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

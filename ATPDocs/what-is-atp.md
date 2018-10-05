@@ -1,11 +1,11 @@
 ---
-title: Azure Gelişmiş tehdit Koruması (ATP) nedir? | Microsoft Docs
-description: Azure Gelişmiş tehdit Koruması (ATP) olduğunu açıklar ve ne tür kuşkulu etkinlikleri algılama
+title: Azure Gelişmiş tehdit Koruması (Azure ATP) nedir? | Microsoft Docs
+description: Hangi Azure Gelişmiş tehdit koruması açıklar (Azure ATP) olduğu ve ne tür kuşkulu etkinlikleri algılama
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/16/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f3e03f5307a9a09ffb2a62e7313be4629f4bc060
-ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
+ms.openlocfilehash: 80038b04a95d09c25baf1e2b5d216796cb12c9f6
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750479"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783693"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -33,7 +33,7 @@ Azure Gelişmiş tehdit Koruması (ATP) tanımlar, algılar ve yardımcı olan b
 Azure ATP izler ve izinlerini ve grup üyeliğini, her kullanıcı için davranışsal bir taban çizgisi oluşturmak gibi ağ üzerinden kullanıcı etkinlikleri ve bilgileri analiz eder. Yerleşik Uyarlamalı zeka ile ardından tanımlar anomalileri Öngörüler kuşkulu etkinlikleri ve olayları, Gelişmiş tehditlere ve riskli kullanıcılar kuruluşunuz karşılıklı içeriden gelen tehditleri ortaya çıkaran veren Azure ATP. Kuruluş etki alanı denetleyicileri, her bir CİHAZDAN tüm kullanıcı etkinlikleri için kapsamlı bir görünüm sağlayarak Azure ATP'nin özel algılayıcıları izleyin. 
  
 ## <a name="protect-user-identities-and-reduce-the-attack-surface"></a>Kullanıcı kimliklerini koruyun ve saldırı yüzeyini azaltma   
-Azure ATP her Öngörüler kimlik yapılandırmaları ve önerilen güvenlik en iyi yöntemler sağlar. Güvenlik raporları ve kullanıcı profili analizler üzerinden Azure ATP kuruluş saldırı yüzeyinizi önemli ölçüde düşürebilir kullanıcı kimlik bilgilerinin tehlikeye ve bir saldırı ilerlemek daha zor hale yardımcı olur. ATP'nin visual yanal hareket yollarını tam olarak nasıl bir saldırganın riskli kuruluşunuz içinde hassas hesaplar ve bu riskleri önceden önleme içinde asist tehlikeye taşıyabilirsiniz kısa süre içinde anlamanıza yardımcı olur. Ek ATP güvenlik raporları kullanıcıları ve düz metin parolaları kullanarak kimlik doğrulaması cihazları belirlemek ve kurumsal güvenlik duruşu ve ilkeleri geliştirmek için ek Öngörüler yardımcı olur.  
+Azure ATP her Öngörüler kimlik yapılandırmaları ve önerilen güvenlik en iyi yöntemler sağlar. Güvenlik raporları ve kullanıcı profili analizler üzerinden Azure ATP kuruluş saldırı yüzeyinizi önemli ölçüde düşürebilir kullanıcı kimlik bilgilerinin tehlikeye ve bir saldırı ilerlemek daha zor hale yardımcı olur. Azure ATP'nin visual yanal hareket yollarını tam olarak nasıl bir saldırganın riskli kuruluşunuz içinde hassas hesaplar ve bu riskleri önceden önleme içinde asist tehlikeye taşıyabilirsiniz kısa süre içinde anlamanıza yardımcı olur. Ek olarak, Azure ATP güvenlik raporları kullanıcıları ve düz metin parolaları kullanarak kimlik doğrulaması cihazları belirlemek ve kurumsal güvenlik duruşu ve ilkeleri geliştirmek için ek Öngörüler yardımcı olur.  
  
 ## <a name="identify-suspicious-activities-and-advanced-attacks-across-the-attack-kill-chain"></a>Şüpheli etkinlikleri tanımlamak ve saldırı sonlandırma zinciri Gelişmiş saldırıları 
 Genellikle, saldırılara karşı bir düşük ayrıcalıklı kullanıcı gibi herhangi bir erişilebilir varlık başlatılan ve saldırgan – hassas hesapları, etki alanı yöneticileri ve son derece hassas veriler gibi değerli varlıklara erişimi kazanır kadar hızlı bir şekilde riskli taşıyın. Azure ATP kaynaktaki tüm saldırı sonlandırma zinciri boyunca bu Gelişmiş tehditleri tanımlar: 
@@ -70,7 +70,7 @@ Azure ATP 3 aşamalarında dağıtma öneririz:
 
 ### <a name="phase-1"></a>1. Aşama
 
-1. Birincil ortamlarınızı korumak için Azure ATP ayarlayın. Azure ATP'nin hızlı dağıtım modeli, kuruluşunuzun bugün korumaya başlamak sağlar. [ATP yükleyin](install-atp-step1.md)  
+1. Birincil ortamlarınızı korumak için Azure ATP ayarlayın. Azure ATP'nin hızlı dağıtım modeli, kuruluşunuzun bugün korumaya başlamak sağlar. [Azure ATP yükleyin](install-atp-step1.md)  
 2. Ayarlama [hassas hesapları](sensitive-accounts.md) ve [honeytoken hesapları](install-atp-step7.md).   
 3. Raporları gözden geçirin ve [yana hareket yollarını](use-case-lateral-movement-path.md).  
 
@@ -89,4 +89,4 @@ Azure ATP 3 aşamalarında dağıtma öneririz:
 ## <a name="see-also"></a>Ayrıca Bkz.
 - [Azure ATP sık sorulan sorular](atp-technical-faq.md)
 - [Güvenlik Uyarıları ile çalışma](working-with-suspicious-activities.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

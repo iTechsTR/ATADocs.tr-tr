@@ -1,11 +1,11 @@
 ---
 title: Azure Gelişmiş tehdit koruması bildirimlerini ayarlama | Microsoft Docs
-description: Şüpheli etkinlikler algılandığında bildirim almak için Azure ATP uyarıları ayarlama işlemi açıklanmaktadır.
+description: Şüpheli etkinlikler algılandığında bildirim almak için Azure ATP güvenlik uyarıları ayarlama işlemi açıklanmaktadır.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,24 +13,24 @@ ms.technology: ''
 ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c3fc5adbb700c4b8df66c243a655cf98aacc79af
-ms.sourcegitcommit: 9f02f0f6669b25f39b616bb0885bb55b8c4f050b
+ms.openlocfilehash: e6f3647ecaab82a32950fadd0a101385a2cc0051
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46362434"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783058"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 # <a name="set-azure-atp-notifications"></a>Azure ATP bildirimlerini ayarlama
 
-Azure ATP, kuşkulu bir etkinlik veya sistem durumu uyarısı e-posta yoluyla algıladığında size bildirebilir. 
+Azure ATP kuşkulu bir etkinlik algılar ve bir güvenlik uyarısı veya bir sistem durumu uyarı e-posta yoluyla sorunları size bildirebilir. 
 
 Belirli bir e-posta adresine bildirimleri almak için şu parametreleri ayarlayın:
 
 
-1. Azure ATP çalışma alanı seçin ve araç çubuğunda ayarlar seçeneğini portalında **yapılandırma**.
+1. Azure ATP portalında seçin ve araç çubuğunda ayarlar seçeneğini **yapılandırma**.
 
 ![Azure ATP yapılandırma ayarları simgesi](media/atp-config-menu.png)
 
@@ -51,4 +51,4 @@ Belirli bir e-posta adresine bildirimleri almak için şu parametreleri ayarlay�
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 
 - [Syslog ayarlarını belirleme](setting-syslog.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

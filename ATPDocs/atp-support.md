@@ -2,10 +2,10 @@
 title: Azure ATP desteği | Microsoft Docs
 description: Azure ATP için destek Yardım alma işlemi açıklanmaktadır.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/18/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fa4577377c32562e0441014958e9702cbbb7399b
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 2c4f82ce7bf4e8ba7bf9e6ae56198ca1f6e4aefb
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166438"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783245"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -66,7 +66,7 @@ Azure ATP için sistem durumunu görüntülemek için ziyaret [ **sistem durumu*
 
 #### <a name="on-demand-videos"></a>İsteğe bağlı videolar
 
-- Microsoft Ignite 2017 oturumlarına [Azure Gelişmiş tehdit koruması](https://myignite.microsoft.com/sessions/53476?source=sessions).
+- Microsoft Ignite 2018 oturumlarına [Azure Gelişmiş tehdit koruması](https://myignite.techcommunity.microsoft.com/sessions?t=%257B%2522from%2522%253A%25222018-09-23T08%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222018-09-28T19%253A00%253A00-04%253A00%2522%257D&q=azure%2520advanced%2520threat%2520protection#ignite-html-anchor).
 
 Sorun giderme:
 
@@ -76,8 +76,8 @@ Sorun giderme:
 
 - Windows Defender ATP ortamınızda dağıtılmış varsa ve Azure Gelişmiş tehdit koruması ile tümleştirerek, görmek istediğiniz [Windows Defender ATP ile tümleştirme](integrate-wd-atp.md).
 
-- Kuşkulu bir etkinlik araştırmasını ile ilgili daha fazla bilgi için bkz: [şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md).
+- Bir güvenlik uyarısı araştırmasını ile ilgili daha fazla bilgi için bkz: [güvenlik uyarı Kılavuzu](suspicious-activity-guide.md).
 
 ### <a name="community-resources"></a>Topluluk kaynakları
 
-Öneririz [Azure Gelişmiş tehdit koruması için](https://www.yammer.com/AskIPTeam). Bu kaynak, diğer yöneticiler ve danışmanların paylaşılan deneyimleri avantajı yanı sıra Azure Gelişmiş tehdit koruması ekibinden doğrudan yanıtlar ve bilgi sağlar.
+Öneririz [Azure Gelişmiş tehdit koruması için Yammer grubunda](https://www.yammer.com/AskIPTeam). Bu kaynak, diğer yöneticiler ve danışmanların paylaşılan deneyimleri avantajı yanı sıra Azure Gelişmiş tehdit koruması ekibinden doğrudan yanıtlar ve bilgi sağlar.

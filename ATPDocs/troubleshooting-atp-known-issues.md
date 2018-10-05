@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/13/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a56845c619e93ed2fae0e10876a4d49a49e23e7d
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: e65133fdd09f821c633a3095ae419df01da98b16
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166332"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783721"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -30,9 +30,9 @@ ms.locfileid: "44166332"
  
 Azure ATP dağıtım günlükleri ürünü yükleyen kullanıcının temp dizininde yer alır. Varsayılan yükleme konumunda, şu anda bulunabilir: C:\Users\Administrator\AppData\Local\Temp (veya bir dizin yukarıda % temp %). Daha fazla bilgi için [günlüklerini kullanarak ATP sorunlarını giderme](troubleshooting-atp-using-logs.md)
 
-## <a name="proxy-authentication-problem-presents-as-licensing-error"></a>Proxy kimlik doğrulama sorunu lisans hatası sayısını gösterir.
+## <a name="proxy-authentication-problem-presents-as-a-licensing-error"></a>Proxy kimlik doğrulama sorunu bir lisans hatası sayısını gösterir.
 
-Algılayıcı yükleme sırasında şu hatayı alıyorsunuz: **algılayıcı lisans sorunları nedeniyle kaydedilemedi.**
+Algılayıcı yükleme sırasında şu hatayı alırsanız: **algılayıcı lisans sorunları nedeniyle kaydedilemedi.**
 
 Dağıtım günlük girişlerini: [1C 60: 1AA8] [2018-03-24T23:59:13] i000: 2018-03-25 02:59:13.1237 bilgisi InteractiveDeploymentManager ValidateCreateSensorAsync döndürülen [\[] validateCreateSensorResult LicenseInvalid = [\]] [1 c 60 : 1AA8] [2018-03-24T23:59:56] i000: 2018-03-25 02:59:56.4856 bilgisi InteractiveDeploymentManager ValidateCreateSensorAsync döndürülen [\[] validateCreateSensorResult LicenseInvalid = [\]] [60 1 C: 1AA8] [2018-03-25T00:27:56] i000: 2018-03-25 03:27:56.7399 SensorBootstrapperApplication Engine.Quit hata ayıklama [\[] deploymentResultStatus 1602 isRestartRequired = False = [\]] [60 1 C: 15B8] [2018-03-25T00:27:56] i500: kapatılıyor, çıkış kodu: 0x642
 
@@ -50,9 +50,9 @@ Algılayıcı göz atabilirsiniz emin olun. *. yapılandırılan proxy kimlik do
 
 ## Azure ATP algılayıcısını NIC ekip oluşturma sorunu <a name="nic-teaming"></a>
 
-NIC grubu oluşturma bağdaştırıcısı ile yapılandırılan bir makinede ATP algılayıcısını yüklemeye çalışırsanız, bir yükleme hatasını alıyorsunuz. NIC grubu oluşturma ile yapılandırılmış bir makine üzerinde ATP algılayıcı yüklemek istiyorsanız, lütfen aşağıdaki yönergeleri izleyin:
+NIC grubu oluşturma bağdaştırıcısı ile yapılandırılan bir makinede ATP algılayıcısını yüklemeye çalışırsanız, bir yükleme hatasını alıyorsunuz. NIC grubu oluşturma ile yapılandırılmış bir makine üzerinde ATP algılayıcı yüklemek istiyorsanız, bu yönergeleri izleyin:
 
-Henüz algılayıcı yüklemediyseniz:
+Algılayıcı henüz yüklü değilse:
 
 1.  Gelen Npcap indirme [ https://nmap.org/npcap/ ](https://nmap.org/npcap/).
 2.  Yüklü olduğu, WinPcap kaldırın.
@@ -69,7 +69,7 @@ Algılayıcı zaten yüklediyseniz:
 
 ## <a name="windows-defender-atp-integration-issue"></a>Windows Defender ATP tümleştirme sorunu
 
-Azure Gelişmiş tehdit koruması, Azure ATP Windows Defender ATP ile tümleştirmenize olanak tanır. 
+Azure Gelişmiş tehdit koruması, Azure ATP Windows Defender ATP ile tümleştirmenize olanak tanır. Bkz: [Windows Defender ATP ile tümleştirme Azure ATP](integrate-wd-atp.md) daha fazla bilgi için. 
 
 ## <a name="vmware-virtual-machine-sensor-issue"></a>VMware sanal makine algılayıcı sorunu
 
@@ -88,4 +88,4 @@ Aşağıdaki ayarlar **0** veya **devre dışı** sanal makinenin NIC yapıland�
 - [Azure ATP kapasite planlaması](atp-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [Windows olay iletme özelliğini yapılandırma](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

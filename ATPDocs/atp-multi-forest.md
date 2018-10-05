@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/20/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ad120cfe3e736935a557f66417794cd531fa5b2e
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 84ec02cb1aa999d70808f6eaf76bb28cba9d2110
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454097"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783364"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -55,7 +55,7 @@ Ormanlar arası etkinlikleri algılamak için Azure ATP algılayıcı dahil, kul
 -   Azure ATP tek başına algılayıcı tek başına makineler yerine doğrudan etki alanı denetleyicilerinde yükleniyorsa, makineler tüm LDAP kullanarak uzak bir ormandaki etki alanı denetleyicileri ile iletişim kurmasına izin emin olun. 
 - Altında Azure ATP konsolunda yapılandırdığınız kullanıcı **Dizin Hizmetleri** tüm diğer ormanlara güvenmesi ve en az etki alanı denetleyicilerinde LDAP sorguları gerçekleştirmek için yalnızca okuma izni olmalıdır.
 
-- Azure ATP algılayıcı ve tek başına algılayıcı ATP ile iletişim kurduğu ATP için sırada ATP algılayıcı yüklendiği her Machine aşağıdaki bağlantı noktalarını açın:
+- Azure ATP zure ATP tek başına algılayıcı ve Azure ATP algılayıcı ile iletişim kurmak için sırada Azure ATP algılayıcı yüklendiği her Machine aşağıdaki bağlantı noktalarını açın:
 
  
   |Protokol|Aktarım|Bağlantı Noktası|Hedef/Kaynak|Yön|
@@ -76,7 +76,7 @@ Azure ATP ormanlarınız eşler, aşağıdaki etkileyen bir işlem kullanır:
 -   Azure ATP algılayıcısını çalışmaya başladıktan sonra uzak Active Directory ormanları sorgular ve kullanıcıları ve profil oluşturma için makine verisi listesini alır.
 -   5 dakikada bir, ağdaki tüm ormanlardaki eşlenecek her ormanda her etki alanındaki bir etki alanı denetleyicisi her Azure ATP algılayıcısını sorgular.
 -   Her Azure ATP algılayıcısını "trustedDomain" Nesne Active Directory'de oturum açma ve güven tür denetimini kullanarak orman eşler.
--   ATP algılayıcısını çapraz orman etkinlik algıladığında, geçici trafiği görebilirsiniz. Böyle bir durumda ATP algılayıcı varlık bilgilerini almak için ilgili etki alanı denetleyicileri için bir LDAP sorgusu gönderir. 
+-   Azure ATP algılayıcısını çapraz orman etkinlik algıladığında, geçici trafiği görebilirsiniz. Bu durumda Azure ATP algılayıcı varlık bilgilerini almak için ilgili etki alanı denetleyicileri için bir LDAP sorgusu gönderir. 
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 -   Başka bir ormandaki kaynaklara erişmek için tek bir ormandaki kullanıcıları tarafından gerçekleştirilen etkileşimli oturum açma işlemi Azure ATP Panoda görüntülenmez.
@@ -87,8 +87,8 @@ Azure ATP ormanlarınız eşler, aşağıdaki etkileyen bir işlem kullanır:
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-- [ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool)
-- [ATP mimarisi](atp-architecture.md)
-- [ATP yükleyin](install-atp-step1.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool)
+- [Azure ATP mimarisi](atp-architecture.md)
+- [Azure ATP yükleyin](install-atp-step1.md)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
 

@@ -2,10 +2,10 @@
 title: Azure Gelişmiş tehdit koruması dağıtırken bağlantı noktası yansıtmayı yapılandırma | Microsoft Docs
 description: Bağlantı noktası yansıtma seçenekleri ve bunların Azure ATP için nasıl yapılandırılacağı açıklanmaktadır.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/4/2018
+ms.date: 10/4/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9ac3c584f5eb73b33415c6c1250eee4c41a12763
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 5ca24df927bc91383449926bdcd67a1c29585618
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126000"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783585"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -26,7 +26,7 @@ ms.locfileid: "44126000"
 
 # <a name="configure-port-mirroring"></a>Bağlantı noktası yansıtmayı yapılandırma
 > [!NOTE] 
-> Bu makalede, yalnızca Azure ATP algılayıcısını yerine Azure ATP tek başına algılayıcı dağıttığınızda geçerlidir. Azure ATP tek başına algılayıcı kullanmanız gerekip gerekmediğini belirlemek için bkz: [dağıtımınız için doğru sensörlerden seçme](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
+> Bu makalede, yalnızca Azure ATP algılayıcı yerine Azure ATP tek başına algılayıcı dağıttığınızda geçerlidir. Azure ATP tek başına algılayıcı kullanmanız gerekip gerekmediğini belirlemek için bkz: [dağıtımınız için doğru sensörlerden seçme](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
  
 Azure ATP tarafından kullanılan ana veri kaynağı, etki alanı denetleyicilerinden gelen ve giden ağ trafiğinin derin paket incelemesi ' dir. Azure ATP'ın ağ trafiğini görebilmesi, bağlantı noktası yansıtmayı yapılandırma veya bir ağ TAP'ı kullanın.
 
@@ -74,4 +74,4 @@ Bağlantı noktası yansıtmayı yapılandırdıktan sonra bağlantı noktası y
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 - [Olay iletme'yi yapılandırma](configure-event-forwarding.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

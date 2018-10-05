@@ -2,10 +2,10 @@
 title: Azure Gelişmiş tehdit koruması yapılandırmasını değiştirme - etki alanı bağlantı parolası | Microsoft Docs
 description: Azure ATP tek başına algılayıcı şirket etki alanı bağlantı parolasını değiştirme işlemini açıklamaktadır.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/14/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e5b3fd544fb52cd2979ab95d34918ffba3f56541
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: a175a23a087b11d481dbcf055bff4fe5577b4f8e
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166196"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783126"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -33,12 +33,12 @@ Etki alanı bağlantı parolasını değiştirmeniz gerekiyorsa, girdiğiniz par
 
 Bu, Azure ATP tek başına algılayıcı üzerinde gerçekleştiğini şüpheleniyorsanız Microsoft.Tri.sensor-Errors.log dosyasında şu hatalar bakın: `The supplied credential is invalid.`
 
-Azure ATP çalışma alanı portalında etki alanı bağlantı parolası'nı güncelleştirmek için aşağıdaki yordamı izleyin:
+Azure ATP portalında etki alanı bağlantı parolası'nı güncelleştirmek için aşağıdaki yordamı izleyin:
 
 > [!NOTE]
 > Kullanıcı adı ve parola Active Directory şirket içi dağıtımından ve değil Azure AD'den budur.
 
-1.  Azure ATP çalışma alanı portalı açın erişerek bir çalışma alanı URL'si.
+1.  Azure ATP portalı açın erişerek bir çalışma alanı URL'si.
 
 2.  Araç çubuğunda ayarlar seçeneğini belirtin ve **Yapılandırma**’yı seçin.
 
@@ -57,9 +57,9 @@ Azure ATP çalışma alanı portalında etki alanı bağlantı parolası'nı gü
 
 6.  Parolayı değiştirdikten sonra el ile Azure ATP tek başına algılayıcı sunucularda Azure ATP tek başına algılayıcı hizmetinin çalışıp çalışmadığını denetleyin.
 
-7. Çalışma alanı portalında altında **yapılandırma**Git **algılayıcı** sayfasında ve sensörlerden durumunu denetleyin.
+7. Azure ATP portalında altında **yapılandırma**Git **algılayıcı** sayfasında ve sensörlerden durumunu denetleyin.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Windows Defender ATP ile tümleştirme](integrate-wd-atp.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

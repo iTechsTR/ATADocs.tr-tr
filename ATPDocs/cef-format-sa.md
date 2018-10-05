@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/20/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 9cc4c2d04e1408a1fcae6125aa1f96d7f302f5f3
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 1d01f9cc5024404975b01445f9d379dea4d3d0a4
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166774"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783925"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -118,4 +118,4 @@ Aşağıdaki günlükleri örnek RFC 5242 ile uyumludur, ancak Azure ATP mevcut 
 - [Azure ATP kapasite planlaması](atp-capacity-planning.md)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
 - [Windows olay iletme özelliğini yapılandırma](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

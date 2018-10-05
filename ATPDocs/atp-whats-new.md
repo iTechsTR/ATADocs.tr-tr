@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/16/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f9959f1b517890b725845f8dd01156f9a3e8198b
-ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
+ms.openlocfilehash: bbc0717d6224b3f4173d697f0c751f6bdd1bb062
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750563"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783959"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -286,8 +286,8 @@ Yayın Tarihi: 11 Mart 2018
  -  Azure ATP algılayıcısı altyapı performans için İyileştirildi: Toplu trafik görünümünü CPU ve paket işlem hattının etkinleştirir ve SSL oturumlarını DC'ye en aza indirmek için etki alanı denetleyicilerine yuva kullanır.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
+- [Azure Gelişmiş Tehdit Koruması nedir?](what-is-atp.md)
+- [Sık sorulan sorular](atp-technical-faq.md)
 - [Azure ATP önkoşulları](atp-prerequisites.md)
-- [Azure ATP kapasite planlaması](atp-capacity-planning.md)
-- [Olay koleksiyonunu yapılandırma](configure-event-collection.md)
-- [Windows olay iletme özelliğini yapılandırma](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP kapasite planlaması](atp-capacity-planning.md) (configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)

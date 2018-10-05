@@ -1,55 +1,55 @@
 ---
-title: Azure Gelişmiş tehdit koruması şüpheli etkinliklerle çalışma | Microsoft Docs
-description: Azure ATP tarafından belirlenen kuşkulu etkinliklerin nasıl gözden geçirileceğini açıklar
+title: Azure Gelişmiş tehdit koruması uyarıları güvenlik ile çalışma | Microsoft Docs
+description: Azure ATP tarafından verilen güvenlik uyarıları gözden açıklar
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/22/2018
-ms.topic: conceptual
+ms.date: 10/04/2018
+ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2a254ca9cc81ed48e92b68079f59a99742b296c3
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 72ed08a941b5927599aa39b196634ffc21ac6395
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166842"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783823"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
 
-# <a name="working-with-suspicious-activities"></a>Kuşkulu Etkinliklerle Çalışma
+# <a name="working-with-security-alerts"></a>Güvenlik Uyarıları ile çalışma
 Bu makalede, Azure Gelişmiş tehdit koruması ile çalışmaya ilişkin temel bilgileri açıklar.
 
-## Saldırı zaman çizelgesine şüpheli etkinlikleri gözden geçirin <a name="review-suspicious-activities-on-the-attack-time-line"></a>
-Azure ATP çalışma alanı portalda oturum açtıktan sonra açık olarak otomatik olarak alınır **kuşkulu etkinlikler zaman çizelgesi**. Kuşkulu etkinlikler, en yenileri zaman çizelgesinin en üstünde olacak şekilde kronolojik sırayla listelenir.
-Her kuşkulu etkinliğin aşağıdaki bilgileri bulunur:
+## Güvenlik uyarılarını saldırı zaman çizelgesini gözden geçirin <a name="review-suspicious-activities-on-the-attack-time-line"></a>
+Azure ATP portalında oturum açtıktan sonra açık olarak otomatik olarak alınır **güvenlik uyarıları zaman çizelgesi**. Güvenlik Uyarıları yenileri zaman çizelgesinin en yeni uyarı şekilde kronolojik sırayla listelenir.
+Her güvenlik uyarısı, aşağıdaki bilgileri içerir:
 
 -   Katılan varlıklar; örneğin kullanıcılar, bilgisayarlar, sunucular, etki alanı denetleyicileri ve kaynaklar.
 
--   Kuşkulu etkinliklerin zamanı ve zaman çerçevesi.
+-   Ve güvenlik uyarısı başlatılan şüpheli etkinlik zaman çerçevesi.
 
--   Kuşkulu etkinliğin önem derecesi; Yüksek, Orta veya Düşük
+-   Uyarının önem derecesi: yüksek, Orta veya düşük.
 
 -   Durum: Açık, kapalı veya baskılanmış.
 
 -   Yapılabilecekler
 
-    -   Kuşkulu etkinliği e-postayla kuruluşunuzdaki diğer kişilerle paylaşın.
+    -   Güvenlik Uyarısı, e-postayla kuruluşunuzdaki diğer kişilerle paylaşın.
 
-    -   Kuşkulu etkinliği Excel’e aktarma.
+    -   Güvenlik Uyarısı Excel'e aktarma.
 
 > [!NOTE]
-> -   Farenizi bir kullanıcı veya bilgisayarın üzerine getirdiğinizde, varlık hakkında ek bilgi sağlayan bir varlık mini profili görüntülenir ve varlığın bağlantılı olduğu kuşkulu etkinliklerin sayısını içerir.
+> -   Farenizi bir kullanıcı veya bilgisayarın üzerine getirdiğinizde, varlık hakkında ek bilgi sağlar ve varlığın bağlantılı olduğu güvenlik uyarıları sayısını içeren bir varlık Mini profili görüntülenir.
 > -   Varlığın üzerine tıkladığınızda, kullanıcının veya bilgisayarın varlık profiline alır.
 
-![Azure ATP kuşkulu etkinlikler zaman çizelgesinin resmi](media/atp-sa-timeline.png)
+![Azure ATP güvenlik uyarıları zaman çizelgesinin resmi](media/atp-sa-timeline.png)
 
 ## Önizleme algılamalar<a name="preview-detections"></a>
 
@@ -70,8 +70,8 @@ Varsayılan olarak, Önizleme algılamalar Azure ATP içinde etkinleştirilir.
 ![Önizleme algılamalar](./media/preview-detections.png) 
 
 
-## <a name="filter-suspicious-activities-list"></a>Kuşkulu etkinlikler listesini filtreleme
-Kuşkulu etkinlikler listesini filtrelemek için:
+## <a name="filter-security-alerts-list"></a>Güvenlik Uyarıları listesi filtreleme
+Güvenlik Uyarısı listesini filtrelemek için:
 
 1.  İçinde **filtre** ekranın sol tarafındaki bölmede aşağıdaki seçeneklerden birini seçin: **tüm**, **açık**, **kapalı**, veya **Gizlenen**.
 
@@ -81,39 +81,37 @@ Kuşkulu etkinlikler listesini filtrelemek için:
 
 -   **Düşük**
 
-    Kötü amaçlı kullanıcıların veya yazılımların kuruluş verilerine erişim kazanması için tasarlanmış saldırılara yol açabilecek kuşkulu etkinlikleri gösterir.
+    Kötü amaçlı kullanıcıların veya yazılımların kuruluş verilerine erişim kazanmak için tasarlanmış saldırılara yol açabilecek etkinlikleri gösterir.
 
 -   **Orta**
 
-    Kimlik hırsızlığı veya ayrıcalık yükseltmeyle sonuçlanabilecek daha ciddi saldırılar için belirli kimlikleri riske atabilecek kuşkulu etkinlikleri gösterir.
+    Risk kimlik hırsızlığı veya ayrıcalık yükseltmeyle sonuçlanabilecek daha ciddi saldırılar için belirli kimlikleri riske atabilir etkinlikleri gösterir
 
 -   **Yüksek**
 
-    Kimlik hırsızlığı, ayrıcalık yükseltme saldırısı veya diğer etkili saldırılara yol açabilecek kuşkulu etkinlikleri gösterir
+    Kimlik hırsızlığı, ayrıcalık yükseltme saldırısı veya diğer etkili saldırılara yol açabilecek etkinlikleri gösterir
 
 
+## <a name="managing-security-alerts"></a>Güvenlik uyarılarını yönetme
+Güvenlik Uyarısı geçerli durumuna tıklayıp ve aşağıdakilerden birini seçerek bir güvenlik uyarısı durumunu değiştirebilirsiniz **açık**, **gizlenen**, **kapalı**, veya **Silinmiş**.
+Bunu yapmak için kullanılabilir eylemler listesinden açığa çıkarmak için belirli bir uyarı sağ üst köşesindeki üç noktaya tıklayın.
 
+![Azure ATP eylemleri için güvenlik uyarıları](./media/atp-sa-actions.png)
 
-## <a name="managing-suspicious-activities"></a>Şüpheli etkinlikleri yönetme
-Tıklayarak kuşkulu etkinliğin geçerli durumu ve aşağıdakilerden birini seçerek, kuşkulu bir etkinlik durumunu değiştirebilirsiniz **açık**, **gizlenen**, **kapalı**, veya **silinmiş**.
-Bir şüpheli etkinliğin sağ üst köşesindeki üç nokta simgesine tıklayarak ulaşacağınız kullanılabilir eylemler listesinden bunu yapabilirsiniz.
+**Güvenlik uyarı durumu**
 
-![Şüpheli etkinlikler için Azure ATP eylemleri](./media/atp-sa-actions.png)
+-   **Açık**: tüm yeni güvenlik uyarılarını bu listede görünür.
 
-**Kuşkulu etkinliğin durumu**
-
--   **Açık**: Tüm yeni şüpheli etkinlikler bu listede gösterilir.
-
--   **Kapat**: belirlediğiniz, Araştırdığınız ve azalttığınız kuşkulu etkinlikleri izlemek için kullanılır.
+-   **Kapat**: belirlediğiniz, Araştırdığınız ve azalttığınız güvenlik uyarıları izlemek için kullanılır.
 
     > [!NOTE]
-    > Azure ATP, yeniden bir kısa süre içinde aynı etkinlik algılanırsa, kapalı bir etkinliği yeniden.
+    > Azure ATP, yeniden bir kısa süre içinde aynı etkinlik algılanırsa, kapatılan bir uyarıyı yeniden.
 
--   **Gösterme**: Bir etkinliği göstermemek, etkinliği o an için yoksaymak ve yalnızca yeni bir örnek ortaya çıkarsa uyarı almak istediğiniz anlamına gelir. Başka bir deyişle, benzer bir uyarı Azure ATP ise, yeniden değil. Ancak, bir uyarı yedi gün boyunca durdurur ve sonra tekrar görülürse ise, yeniden uyarılırsınız.
+-   **Bastır**: bir aalert gizleme o an için yoksaymak ve yeni bir örneği ise yalnızca uyarı almak istediğiniz anlamına gelir. Başka bir deyişle, benzer bir uyarı Azure ATP ise, yeniden değil. Ancak, bir uyarı yedi gün boyunca durdurur ve sonra tekrar görülürse ise, yeniden uyarılırsınız.
 
-- **Silme**: bir uyarıyı silerseniz uyarı sistemden veritabanından silinir ve geri yüklemek mümkün olmayacaktır. Sil’e tıkladıktan sonra aynı türdeki tüm şüpheli etkinlikleri silebilirsiniz.
+- **Silme**: bir uyarıyı silerseniz uyarı sistemden veritabanından silinir ve geri yüklemek mümkün olmayacaktır. Sil'e tıkladıktan sonra aynı türdeki tüm güvenlik uyarıları silmek mümkün olacaktır.
 
-- **Dışla**: Bir varlığın belirli bir türdeki uyarıları göndermesini engelleme becerisi. Örneğin, belirli türde bir uzak kod çalıştıran belirli bir yönetici veya DNS keşfi yapan bir güvenlik tarayıcısı gibi şüpheli etkinlik için tekrar uyarmadan gelen belirli bir varlık (kullanıcı veya bilgisayar) dışlamak için Azure ATP ayarlayabilirsiniz. Zaman çizelgesinde algılandığı zaman doğrudan Şüpheli etkinlik üzerinde dışlama yapabileceğiniz gibi, Yapılandırma sayfasında bulunan **Dışlamalar**’a gidip her bir şüpheli etkinlik için dışlanan varlık veya alt ağları (Pass-the-Ticket gibi) el ile ekleyebilir ve kaldırabilirsiniz. 
+- **Dışla**: Bir varlığın belirli bir türdeki uyarıları göndermesini engelleme becerisi. Örneğin, belirli türde bir uzak kod çalıştıran belirli bir yönetici veya DNS keşfi yapan bir güvenlik tarayıcısı gibi bir etkinlik için tekrar uyarmadan gelen belirli bir varlık (kullanıcı veya bilgisayar) dışlamak için Azure ATP ayarlayabilirsiniz. Zaman çizelgesinde algılandığı dışlamaları doğrudan güvenlik uyarısında ekleyebilmek için olmasının yanı sıra, ayrıca yapılandırma sayfasına giderek **dışlamaları**ve her güvenlik uyarısı el ile eklemek ve çıkarılan kaldırmak için varlık veya alt ağları (örneğin Pass--Ticket). 
 
 > [!NOTE]
 > Yapılandırma sayfaları yalnızca Azure ATP yöneticileri tarafından değiştirilebilir.
@@ -122,4 +120,4 @@ Bir şüpheli etkinliğin sağ üst köşesindeki üç nokta simgesine tıklayar
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Azure ATP çalışma alanı portalıyla çalışma](workspace-portal.md)
-- [ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
+- [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
