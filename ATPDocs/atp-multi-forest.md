@@ -1,6 +1,6 @@
 ---
 title: Azure Gelişmiş tehdit koruması aktarılacaksa orman desteği | Microsoft Docs
-description: Azure ATP birden çok Active Directory ormanlarında desteği ayarlama yapma.
+description: Azure ATP birden çok Active Directory ormanlarında desteği.
 keywords: ''
 author: mlottner
 ms.author: mlottner
@@ -13,21 +13,19 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 84ec02cb1aa999d70808f6eaf76bb28cba9d2110
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 40bd468226f3c8db17663d02aed561b77cc2a128
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783364"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848499"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
-# <a name="install-azure-atp---step-9"></a>Azure ATP - 9. Adım'ı yükleme
+# <a name="azure-advanced-threat-protection-multi-forest-support"></a>Azure Gelişmiş tehdit koruması çok ormanlı desteği
 
-> [!div class="step-by-step"]
-> [«8. adım](install-atp-step8-samr.md)
 
-## <a name="step-9--set-up-azure-advanced-threat-protection-multi-forest-support"></a>9. Adım  Azure Gelişmiş tehdit koruması çok ormanlı desteği ayarlayın
+## <a name="multi-forest-support-set-up"></a>Çok ormanlı destek ayarlama 
 
 Azure ATP kuruluşlar arasında tek bir cam bölmeyle ormanlardan etkinliği ve kullanıcı profili kolayca izleme yeteneği sağlayan birden çok ormanlı destekleyebilir. 
 
@@ -81,9 +79,6 @@ Azure ATP ormanlarınız eşler, aşağıdaki etkileyen bir işlem kullanır:
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 -   Başka bir ormandaki kaynaklara erişmek için tek bir ormandaki kullanıcıları tarafından gerçekleştirilen etkileşimli oturum açma işlemi Azure ATP Panoda görüntülenmez.
 
-
-> [!div class="step-by-step"]
-> [«8. adım](install-atp-step8-samr.md)
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.

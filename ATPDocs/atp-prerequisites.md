@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/4/2018
+ms.date: 10/7/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 127d7ad5717837c8723c71de167e04f2fdd7ddde
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: e3cf97c4bd95a1fefc0aef29009f644cd5ef907d
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783908"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848550"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -33,10 +33,9 @@ Bu makalede, ortamınızda başarılı bir Azure ATP dağıtımının gereksinim
 
 Azure ATP portalı, Azure ATP algılayıcısını ve/veya Azure ATP tek başına algılayıcı oluşan Azure ATP bulut hizmeti Azure ATP oluşur. Her bir Azure ATP bileşen hakkında daha fazla bilgi için bkz. [Azure ATP mimarisi](atp-architecture.md).
 
-Her Azure ATP örneği bir birden çok Active Directory orman sınırının ve orman işlevsel düzeyi (FFL) Windows 2003 ve üstünde destekler. 
+Azure ATP örneğinizi oluşturmak için en az bir genel/güvenlik Yöneticisi ile bir AAD kiracısı gerekir. Her Azure ATP örneği bir birden çok Active Directory orman sınırının ve orman işlevsel düzeyi (FFL) Windows 2003 ve üstünde destekler. 
 
 Önkoşul bu kılavuzda, Azure ATP başarıyla dağıtmak için ihtiyacınız olan her şeye sahip olmak için aşağıdaki bölümlere ayrılmıştır. 
-
 
 [Başlamadan önce](#before-you-start): listeler toplamak için bilgi ve hesaplarla ağ varlıkları yüklemeye başlamadan önce olması gerekir.
 
@@ -49,6 +48,8 @@ Her Azure ATP örneği bir birden çok Active Directory orman sınırının ve o
 ## <a name="before-you-start"></a>Başlamadan önce
 Bu bölümde, toplamanız gereken bilgiler ve hesaplarla ağ varlıkları Azure ATP yüklemeye başlamadan önce olmalıdır listelenir.
 
+- Enterprise Mobility + Security (EMS E5) 5 için doğrudan aracılığıyla lisans [Office 365 portalında](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) veya Cloud Solution Partner (CSP) lisans modeli aracılığıyla.  
+
 - Azure ATP algılayıcı yüklemek istediğiniz etki alanı denetleyicileri Azure ATP bulut hizmeti için Internet bağlantınız doğrulayın. Azure ATP algılayıcısını bir ara sunucu kullanımını destekler. Proxy yapılandırması hakkında daha fazla bilgi için bkz. [Azure ATP için Ara sunucu yapılandırma](configure-proxy.md).  
 
 -   Bir **şirket içi** AD kullanıcı hesabı ve parola ile izlenen etki alanlarındaki tüm nesnelere okuma erişimi.
@@ -60,14 +61,14 @@ Bu bölümde, toplamanız gereken bilgiler ve hesaplarla ağ varlıkları Azure 
 
 - Azure ATP algılayıcısını NIC grubu oluşturma bağdaştırıcısı ile yapılandırılan bir makinede yüklemeye çalışırsanız, bir yükleme hatasını alıyorsunuz. Azure ATP algılayıcısını NIC ekibi oluşturma ile yapılandırılmış bir makineye yüklemek isterseniz bkz [Azure ATP algılayıcısını NIC ekip oluşturma sorunu](troubleshooting-atp-known-issues.md#nic-teaming).
 
--    Önerilen: Kullanıcının silinmiş nesneler kapsayıcısı üzerinde salt okuma izinleri olmalıdır. Bu, Azure ATP etki alanında toplu nesne silme işlemlerini algılamasını sağlar. Silinmiş nesneler kapsayıcısı üzerinde salt okuma izinlerini yapılandırma hakkında daha fazla bilgi için bkz: **Silinmiş nesne kapsayıcısı üzerindeki izinleri değiştirme** konusundaki [görünümü veyadizinnesnesiüzerindekiizinleriayarlayın](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) makalesi.
+-    Önerilen: Kullanıcının silinmiş nesneler kapsayıcısı üzerinde salt okuma izinleri olmalıdır. Bu, Azure ATP Active Directory'den kullanıcı silme işlemlerini algılamasını sağlar. Silinmiş nesneler kapsayıcısı üzerinde salt okuma izinlerini yapılandırma hakkında daha fazla bilgi için bkz: **Silinmiş nesne kapsayıcısı üzerindeki izinleri değiştirme** konusundaki [görünümü veyadizinnesnesiüzerindekiizinleriayarlayın](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) makalesi.
 
--   İsteğe bağlı: Ağ etkinlikleri olmayan bir kullanıcının kullanıcı hesabı. Bu hesap Azure ATP Honeytoken kullanıcısı olarak yapılandırılır. Daha fazla bilgi için [Dışlamalar ve Honeytoken kullanıcısını yapılandırma](install-atp-step7.md).
+-   İsteğe bağlı: Ağ etkinlikleri olmayan bir kullanıcının kullanıcı hesabı. Bu hesap bir Azure ATP Honeytoken kullanıcısı olarak yapılandırılır. Daha fazla bilgi için [Dışlamalar ve Honeytoken kullanıcısını yapılandırma](install-atp-step7.md).
 
 -   İsteğe bağlı: tek başına algılayıcı dağıtırken Windows olayları 4776, 4732, 4733, 4728, 4729, 4756, 4757'yi ve 7045 Azure ATP Pass--Hash, deneme yanılma, gizli grup, Honey Token değişiklikleri daha da geliştirmek için ATP zure iletmek gereklidir algılamalar ve kötü amaçlı hizmeti oluşturma. Azure ATP algılayıcısını bu olayları otomatik olarak alır. Azure ATP tek başına algılayıcı bu olayları sıem sistemlerinizden alınabileceği gibi etki alanı denetleyicinizden Windows Olay iletme'yi ayarlayarak alınabilir. Toplanan olaylar, etki alanı denetleyicisi ağ trafiğinin kullanılabilir olmayan ek bilgilerle Azure ATP sağlar.
 
-## <a name="azure-atp-workspace-management-portal-and-workspace-portal-requirements"></a>Azure ATP çalışma alanı Yönetim Portalı ve çalışma alanı portal gereksinimleri
-Azure ATP çalışma alanı portalı ve Azure ATP çalışma alanı yönetim portalına erişim aşağıdaki tarayıcılar ve ayarları destekleyen bir tarayıcı şöyledir:
+## <a name="azure-atp-portal-requirements"></a>Azure ATP portalı gereksinimleri
+Azure ATP portalına erişim aşağıdaki tarayıcılar ve ayarları destekleyen bir tarayıcı şöyledir:
 -   Microsoft Edge
 -   Internet Explorer sürüm 10 ve üstü
 -   Google Chrome 4.0 ve üzeri

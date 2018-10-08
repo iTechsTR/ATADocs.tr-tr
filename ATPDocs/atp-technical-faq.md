@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 839a21dab3962831e4c62dd4c9c2018e81bd7014
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 07c5d67804eb4c74df678e8752a2516af5c52cc7
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783704"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848516"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -107,7 +107,7 @@ Bir sanal etki alanı denetleyicisi tarafından Azure ATP algılayıcısını al
 
 Etki alanı denetleyicilerinizin bulut hizmetiyle iletişim kurmak açmanız gerekir: *. güvenlik duvarı/proxy'sinde atp.azure.com bağlantı noktası 443'tür. Bunun nasıl yapılacağı hakkında yönergeler için bkz [Ara sunucunuzda veya güvenlik duvarı Azure ATP algılayıcı ile iletişimi etkinleştirmek için yapılandırma](configure-proxy.md).
 
-### <a name="can-azure-atp-monitor-domain-controllers-virtualized-on-your-iaas-solution"></a>Azure ATP, Iaas çözümünüzde sanallaştırılan etki alanı denetleyicilerini izleyebilir mi?
+### <a name="can-azure-atp-monitor-domain-controllers-be-virtualized-on-your-iaas-solution"></a>Azure ATP İzleyici etki alanı denetleyicileri, Iaas çözümünüzde sanallaştırılan?
 Evet, Azure ATP algılayıcısını herhangi bir Iaas çözümündeki etki alanı denetleyicilerini izlemek için kullanabilirsiniz.
 
 ### <a name="can-azure-atp-support-multi-domain-and-multi-forest"></a>Azure ATP birden çok etki alanını ve birden çok ormanı destekler?

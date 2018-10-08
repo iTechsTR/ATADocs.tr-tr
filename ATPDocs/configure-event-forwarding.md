@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 43582a95ac1619aaa9ef85b0c662481184a1b98b
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 90de9f0f02fa1b87fd2d741349a1d81e089b6fb1
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783381"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848533"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -45,7 +45,7 @@ Bu senaryoda, Azure ATP tek başına algılayıcı etki alanının bir üyesi ol
 
 1.  Active Directory Kullanıcıları ve Bilgisayarları'nı açın ve gidin **yerleşik** klasörü ve çift **Event Log Readers**. 
 2.  **Üyeler**’i seçin.
-4.  **Ağ Hizmeti** listede yoksa **Ekle**’ye tıklayın, **Seçilecek nesne adlarını girin** alanına **Ağ Hizmeti** yazın. Sonra, **Adları Denetle**’ye tıklayın ve **Tamam**’a çift tıklayın. 
+3.  **Ağ Hizmeti** listede yoksa **Ekle**’ye tıklayın, **Seçilecek nesne adlarını girin** alanına **Ağ Hizmeti** yazın. Sonra, **Adları Denetle**’ye tıklayın ve **Tamam**’a çift tıklayın. 
 
 Ekledikten sonra **ağ hizmeti** için **Event Log Readers** grubunda, değişikliğin etkili olması etki alanı denetleyicileri yeniden başlatın.
 
@@ -63,7 +63,7 @@ Ekledikten sonra **ağ hizmeti** için **Event Log Readers** grubunda, değişik
    
     1.  **Etkin**’i seçin.
     2.  Altında **seçenekleri**, tıklayın **Göster**.
-    3.  Altında **SubscriptionManagers**, şu değeri girin ve tıklayın **Tamam**: *Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (örneğin: Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    3.  Altında **SubscriptionManagers**, şu değeri girin ve tıklayın **Tamam**: * Server =`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` * (örneğin: Server =`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
     
     ![Hedef aboneliği yapılandırma resmi](media/wef%202%20config%20target%20sub%20manager.png)
     
@@ -81,18 +81,11 @@ Ekledikten sonra **ağ hizmeti** için **Event Log Readers** grubunda, değişik
    3.   **Kaynak bilgisayar tarafından başlatılan**’ı seçin ve **Bilgisayar Gruplarını Seç**’e tıklayın.
         1.  **Etki Alanı Bilgisayarı Ekle**’ye tıklayın.
         2.  Etki alanı denetleyicisinin adını **Seçilecek nesne adını girin** alanına girin. Sonra, **Adları Denetle**’ye ve **Tamam**’a tıklayın. 
-       
-        ![Olay Görüntüleyicisi resmi](media/wef3%20event%20viewer.png)
-   
-        
         3.  **Tamam**'ı tıklatın.
+        ![Olay Görüntüleyicisi resmi](media/wef3%20event%20viewer.png)     
    4.   **Olayları Seç**’e tıklayın.
-
         1. **Günlüğe göre**’ye tıklayıp **Güvenlik**’i seçin.
-        2. **Olay Kimliklerini Ekler/Dışlar** alanına olay numarasını yazın ve **Tamam**’a tıklayın. Örneğin, 4776 gibi aşağıdaki örnekte yazın:
-
-        ![Sorgu filtresi resmi](media/wef-4-query-filter.png)
-
+        2. **Olay Kimliklerini Ekler/Dışlar** alanına olay numarasını yazın ve **Tamam**’a tıklayın. Örneğin, 4776, aşağıdaki örnekte gibi yazın: ![sorgu filtresi resmi](media/wef-4-query-filter.png)
    5.   Oluşturulan aboneliğe sağ tıklayıp **çalışma zamanı durumu** durumu ile ilgili olup olmadığını görmek için. 
    6.   Birkaç dakika sonra iletilmek koymak olayları görmek için Azure ATP tek başına algılayıcı iletilen olaylar bazılarındaki denetleyin.
 

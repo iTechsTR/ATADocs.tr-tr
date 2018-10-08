@@ -1,11 +1,11 @@
 ---
 title: Azure ATP yanal hareket yolu algılamasını etkinleştirmek için SAM-r'yi Yapılandır | Microsoft Docs
-description: SAM uzak çağrı yapmak için Azure ATP yapılandırılması açıklanmaktadır
+description: SAM uzak çağrı yapmak için Azure ATP yapılandırma açıklanmaktadır
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,29 +13,19 @@ ms.technology: ''
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d7875202c05deb98c301cb18153f8080fa42459c
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 49372ce2432e90b04e0d10b2e8e102c1b05e9c9a
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782888"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848482"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 # <a name="configure-azure-atp-to-make-remote-calls-to-sam"></a>SAM uzak çağrı yapmak için Azure ATP yapılandırma
-
-<a name="-head"></a><<<<<<< HEAD
-=======
-> [!div class="step-by-step"]
-> [«7. adım](install-atp-step7.md)
-> [9. adım»](atp-multi-forest.md)
->>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
+[Yanal hareket yolunun](use-case-lateral-movement-path.md) algılama özel makinelerde yerel yönetici tanımlamak sorgularını kullanır. Bu sorgular, Azure ATP yükleme işlemi sırasında oluşturulan Azure ATP hizmeti hesabını kullanarak SAM-R protokolü ile gerçekleştirilen [2. adım. AD'ye bağlanma](install-atp-step2.md).
 
 ## <a name="configure-sam-r-required-permissions"></a>SAM-R gerektiren izinleri yapılandırma
-
-
-[Yanal hareket yolunun](use-case-lateral-movement-path.md) algılama özel makinelerde yerel yönetici tanımlamak sorgularını kullanır. Bu sorgular, Azure ATP yükleme işlemi sırasında oluşturulan Azure ATP hizmeti hesabını kullanarak SAM-R protokolü ile gerçekleştirilen [2. adım. AD'ye bağlanma](install-atp-step2.md).
- 
 Windows emin olmak için istemciler ve sunucular SAM-R, değişiklik gerçekleştirmek Azure ATP hesabınızı izin **Grup İlkesi** listelenen yapılandırılmış hesapların yanı sıra Azure ATP hizmet hesabını eklemek için yapılmalıdır  **Ağ erişimi** ilkesi.
 
 1. İlke bulun:
@@ -57,14 +47,6 @@ Windows emin olmak için istemciler ve sunucular SAM-R, değişiklik gerçekleş
 SAM-R ve bu Grup İlkesi hakkında daha fazla bilgi için bkz. [ağ erişimi: SAM uzak çağrı yapmasına izin istemcileri kısıtlama](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
-<a name="-head"></a><<<<<<< HEAD
-=======
-> [!div class="step-by-step"]
-> [«7. adım](install-atp-step7.md)
-> [9. adım»](atp-multi-forest.md)
-
-
->>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 - [Azure ATP ile yanal hareket yolu saldırılarını araştırma](use-case-lateral-movement-path.md)

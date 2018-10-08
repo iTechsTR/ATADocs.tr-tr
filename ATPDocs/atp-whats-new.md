@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,36 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bbc0717d6224b3f4173d697f0c751f6bdd1bb062
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: dc008506e7b19a8d6eafd455a4414b1513608811
+ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783959"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848639"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 # <a name="whats-new-in-azure-atp"></a>ATA'daki yenilikler 
+
+## <a name="azure-atp-release-249"></a>Azure ATP yayın 2.49
+Yayın Tarihi: 7 Ekim 2018
+-   **Yeni algılamalar: şüpheli DNS iletişim** (Önizleme)<br>Şüpheli DNS iletişim saldırılarına karşı korumaya yardımcı olmak için eklenen yeni algılama:
+
+    -   Bu algılama yöntemi, DNS protokolü saldırıları algılamak yardımcı olur. Birçok kuruluşta DNS protokolü değil izlenen ve nadiren kötü amaçlı etkinliği için engellendi. Bu DNS protokolü kötüye kullandığı bir saldırgan güvenliği aşılmış bir makinede sağlar. Kötü amaçlı iletişim DNS üzerinden veri Sızdırma, komut ve denetimi ve/veya evading kurumsal ağ kısıtlamaları için kullanılabilir.
+
+- **Yeni işlevsellik** <br>Azure ATP **kullanıcı rolü** aşağıdaki özelliklerle geliştirilmiştir:
+  - (Yeniden açın, Kapat, dışlama gösterme) güvenlik uyarılarının durumunu değiştirme
+  - Zamanlanan raporları Ayarla
+  - Varlık etiketleri (duyarlı ve honeytoken) ayarlama
+  - Dışlama algılama
+  - Dili Değiştir
+  - E-postayla veya syslog bildirimlerini ayarlama
+
+
+- Geçici bir artış **Dizin Hizmetleri kullanarak keşif sorguları** 16/09/2018 tarihinde gerçekleşen güvenlik uyarılarını tanımlanır ve çözümlendi. 
+
+- Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları da içerir.
+
 
 ## <a name="azure-atp-release-248"></a>Azure ATP yayın 2.48
 16 Eylül 2018'de yayınlanan

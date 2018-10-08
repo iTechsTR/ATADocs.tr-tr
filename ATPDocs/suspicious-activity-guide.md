@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: af2c7302f97ef8e2d9fca5862246a1b7507c0433
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: f0c9dd0572d0b522346d88c09225e426ca412bfb
+ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783942"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848690"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -453,6 +453,24 @@ Bu algılama, Kerberos veya NTLM kullanarak birçok kimlik doğrulama hataları 
 **Düzeltme**
 
 [Uzun ve karmaşık parolalar](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) gerekli ilk deneme yanılma saldırılarına karşı güvenlik düzeyini belirtin.
+
+## <a name="suspicious-communication-over-dns---preview"></a>Şüpheli iletişim DNS - Önizleme
+
+**Açıklama**
+
+Çoğu kuruluş DNS protokolünde genellikle izlenen ve nadiren kötü amaçlı etkinliği için engellendi. Bu DNS protokolü kötüye kullandığı bir saldırgan güvenliği aşılmış bir makinede sağlar. Kötü amaçlı iletişim DNS üzerinden veri Sızdırma, komut ve denetimi ve/veya evading kurumsal ağ kısıtlamaları için kullanılabilir.
+
+**Araştırma**
+> [!NOTE]
+> *DNS üzerinden şüpheli iletişim* şüpheli etki alanı güvenlik uyarıları listesi. Yeni etki alanları veya etki alanı son eklenen olan değil henüz bilinen veya Azure ATP ancak bunlar için bilinen veya parçası tarafından tanınan kuruluşunuz kapatılabilir. 
+
+
+1.  Yasal bazı şirketler, DNS normal iletişim için kullanın. Kayıtlı sorgu etki alanı sağlayıcınız virüsten koruma gibi güvenilen bir kaynağa ait olup olmadığını denetleyin.
+3.   Kayıtlı sorgu etki alanı güvenilir değilse, kaynak makinede isteği oluşturma işlemi tanımlayın. Kullanım [işlem İzleyicisi](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) bu görevle yardımcı olmak için.
+4.  Şüpheli etkinlik zaman başlamak belirlenir? Herhangi bir yeni olan programlar dağıtılan veya kuruluştaki (AV?) yüklü? Aynı zamanda diğer uyarılardan var mı?
+5.  Kaynak bilgisayarda, profili sayfasına erişmek için tıklayın. DNS sorgusunu kimin günlüğe kaydedilen ve hangi kaynakların kullanılmış gibi olağan dışı etkinlikler için arama, zamana yakın ne olduğunu denetleyin. Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP rozet tıklayın ![Windows Defender ATP rozeti](./media/wd-badge.png) Daha fazla makine araştırmak için. Windows Defender ATP kullanarak hangi işlemleri ve uyarılar, uyarının oluştuğu sırada oluştu görebilirsiniz.
+
+**Düzeltme** kayıtlı sorgu etki alanı araştırmanızı sonra güvenilir değilse, gelecekteki tüm iletişim önlemek için hedef etki alanını engelleme öneririz. 
 
 ## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---new"></a>Şüpheli etki alanı denetleyicisi yükseltme (olası DCShadow saldırı) - yeni
 
