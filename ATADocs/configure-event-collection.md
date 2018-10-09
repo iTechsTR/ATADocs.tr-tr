@@ -64,7 +64,7 @@ Ekledikten sonra **ağ hizmeti** için **Event Log Readers** grubunda, değişik
     2.  Altında **seçenekleri**, tıklayın **Göster**.
     3.  Altında **SubscriptionManagers**, şu değeri girin ve tıklayın **Tamam**: *Server = http: / /<fqdnATAGateway>: 5985/wsman/SubscriptionManager/WEC, Refresh = 10* 
     
-        *(Örneğin: Server =http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, Yenile = 10)*
+        *(Örneğin: Server = http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, Yenile = 10)*
  
     ![Hedef aboneliği yapılandırma resmi](media/wef%202%20config%20target%20sub%20manager.png)
    
