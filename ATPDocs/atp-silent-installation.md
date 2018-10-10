@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2017
+ms.date: 10/09/2017
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e15884d46227c9dce32ee48f30d546eab6868116
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 23d92b207c9bcfeb38afa67bdd5e4911b1a16aa4
+ms.sourcegitcommit: 02a4d7a0d44817da8e40580c5fe97f8839a7941f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783398"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48876588"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -46,7 +46,7 @@ Bulunan Azure ATP yükleyici günlükleri, dağıtım ilerlemesini izlemek için
 ## <a name="azure-atp-sensor-silent-installation"></a>Azure ATP algılayıcısı sessiz yükleme
 
 > [!NOTE]
-> System Center Configuration Manager veya başka bir yazılım dağıtım sistem aracılığıyla Azure ATP algılayıcısını sessizce dağıtırken, iki dağıtım paketi oluşturmak için önerilir:</br>-Net Framework 4.7 etki alanı denetleyicisini yeniden başlatma da dahil olmak üzere</br>-Azure ATP algılayıcısını. </br>Azure ATP algılayıcı paketini, .net dağıtımı bağımlı hale Framework paketi dağıtımı. </br>Alma [.Net Framework 4.7 çevrimdışı dağıtım paketi](https://www.microsoft.com/download/details.aspx?id=49982). 
+> System Center Configuration Manager veya başka bir yazılım dağıtım sistem aracılığıyla Azure ATP algılayıcısını sessizce dağıtırken, iki dağıtım paketi oluşturmak için önerilir:</br>-Net Framework 4.7 etki alanı denetleyicisini yeniden başlatma da dahil olmak üzere</br>-Azure ATP algılayıcısını. </br>Azure ATP algılayıcı paketini, .net dağıtımı bağımlı hale Framework paketi dağıtımı. </br>Alma [.Net Framework 4.7 çevrimdışı dağıtım paketi](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows). 
 
 
 Yükleyin Azure ATP algılayıcısını tamamen sessiz gerçekleştirmek için aşağıdaki komutu kullanın:

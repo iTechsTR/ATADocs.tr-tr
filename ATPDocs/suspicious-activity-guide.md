@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/09/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f0c9dd0572d0b522346d88c09225e426ca412bfb
-ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
+ms.openlocfilehash: 5151d2ccad994fabfa8bda224a8e5197abe1e01d
+ms.sourcegitcommit: 02a4d7a0d44817da8e40580c5fe97f8839a7941f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848690"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48876554"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -36,30 +36,6 @@ Uygun araştırma tüm Azure ATP güvenlik uyarıları olarak sınıflandırıla
 Azure ATP güvenlik uyarıları ile çalışma konusunda daha fazla bilgi için bkz. [güvenlik uyarılarıyla çalışma](working-with-suspicious-activities.md).
 
 
-## <a name="abnormal-sensitive-group-modification"></a>Anormal Gizli Grup Değişikliği
-
-
-**Açıklama**
-
-Saldırganlar kullanıcıların yüksek ayrıcalıklı gruplara ekleyin. Daha fazla kaynaklarına erişmek ve kalıcılığı sağlamak için bunu yapın. Algılama, kullanıcıların Grup değişikliği etkinliklerini profilini oluşturup anormal bir hassas Grup eklemeyi ortaya çıktığında üzerinde kullanır. Profil oluşturma, Azure ATP tarafından sürekli olarak gerçekleştirilir. Bir uyarı tetiklenebilir önce en az süre, her etki alanı denetleyicisi başına bir aydır.
-
-Azure ATP gizli gruplarda tanımı için bkz [hassas hesaplar ile çalışma](sensitive-accounts.md).
-
-
-Algılama dayanan [etki alanı denetleyicilerinde Denetlenen olayları](configure-event-collection.md).
-Etki alanınızı emin olmak için gerekli olayları denetleyicileri denetim.
-
-**Araştırma**
-
-1. Grup değişikliği yasal mı? </br>Nadiren oluşur ve "olarak normal", öğrenilen değil yasal Grup değişikliklerini zararsız gerçek pozitif sonuç olarak değerlendirilebilecek bir uyarı neden olabilir.
-
-2. Eklenen nesne bir kullanıcı hesabı varsa, kullanıcı hesabının yönetim grubuna eklendikten sonra geçen hangi eylemleri denetleyin. Daha fazla bağlam almak için Azure ATP kullanıcı sayfasına gidin. Diğer vardı önce veya sonra ek hesapla ilişkili şüpheli etkinlikleri gerçekleşen? İndirme **gizli Grup değişikliği** ne olan diğer değişiklikleri görmek için raporu yapılmış ve aynı süre boyunca kim tarafından.
-
-**Düzeltme**
-
-Gizli gruplarda değişiklik yapabilecek kullanıcı sayısını en aza indirin.
-
-Ayarlanan [Privileged Access Management için Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) varsa.
 
 
 ## <a name="brute-force-attack-using-ldap-simple-bind"></a>Basit LDAP bağlama kullanan deneme yanılma saldırısı
@@ -406,7 +382,7 @@ Bir etki alanı denetleyicisine karşı bir SMB oturumu listeleme işlemi yapıl
 
 Kullanım [Net sona ermesi aracı](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) bu saldırılara karşı ortamınızı güçlendirmek için.
 
-## <a name="remote-execution-attempt"></a>Uzaktan yürütme denemesi
+## <a name="remote-code-execution-attempt"></a>Uzaktan kod yürütme denemesi
 
 **Açıklama**
 
@@ -472,7 +448,7 @@ Bu algılama, Kerberos veya NTLM kullanarak birçok kimlik doğrulama hataları 
 
 **Düzeltme** kayıtlı sorgu etki alanı araştırmanızı sonra güvenilir değilse, gelecekteki tüm iletişim önlemek için hedef etki alanını engelleme öneririz. 
 
-## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---new"></a>Şüpheli etki alanı denetleyicisi yükseltme (olası DCShadow saldırı) - yeni
+## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>Şüpheli etki alanı denetleyicisi yükseltme (olası DCShadow saldırı)
 
 **Açıklama**
 
@@ -510,8 +486,33 @@ Yararlanabileceğiniz [AD ACL tarayıcı](https://blogs.technet.microsoft.com/pf
 > [!NOTE]
 > Şüpheli etki alanı denetleyicisi yükseltme (olası DCShadow saldırı) algılamalar ATP algılayıcı tarafından desteklenir. 
 
+## <a name="suspicious-modification-of-sensitive-groups"></a>Gizli gruplarda şüpheli değişiklikler
 
-## <a name="suspicious-replication-request-potential-dcshadow-attack---new"></a>Şüpheli çoğaltma isteği (olası DCShadow saldırı) - yeni
+**Açıklama**
+
+Saldırganlar kullanıcıların yüksek ayrıcalıklı gruplara ekleyin. Daha fazla kaynaklarına erişmek ve kalıcılığı sağlamak için bunu yapın. Algılama, kullanıcıların Grup değişikliği etkinliklerini profilini oluşturup anormal bir hassas Grup eklemeyi ortaya çıktığında üzerinde kullanır. Profil oluşturma, Azure ATP tarafından sürekli olarak gerçekleştirilir. Bir uyarı tetiklenebilir önce en az süre, her etki alanı denetleyicisi başına bir aydır.
+
+Azure ATP gizli gruplarda tanımı için bkz [hassas hesaplar ile çalışma](sensitive-accounts.md).
+
+
+Algılama dayanan [etki alanı denetleyicilerinde Denetlenen olayları](configure-event-collection.md).
+Etki alanınızı emin olmak için gerekli olayları denetleyicileri denetim.
+
+**Araştırma**
+
+1. Grup değişikliği yasal mı? </br>Nadiren oluşur ve "olarak normal", öğrenilen değil yasal Grup değişikliklerini zararsız gerçek pozitif sonuç olarak değerlendirilebilecek bir uyarı neden olabilir.
+
+2. Eklenen nesne bir kullanıcı hesabı varsa, kullanıcı hesabının yönetim grubuna eklendikten sonra geçen hangi eylemleri denetleyin. Daha fazla bağlam almak için Azure ATP kullanıcı sayfasına gidin. Diğer vardı önce veya sonra ek hesapla ilişkili şüpheli etkinlikleri gerçekleşen? İndirme **gizli Grup değişikliği** ne olan diğer değişiklikleri görmek için raporu yapılmış ve aynı süre boyunca kim tarafından.
+
+**Düzeltme**
+
+Gizli gruplarda değişiklik yapabilecek kullanıcı sayısını en aza indirin.
+
+Ayarlanan [Privileged Access Management için Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) varsa.
+
+
+
+## <a name="suspicious-replication-request-potential-dcshadow-attack"></a>Şüpheli çoğaltma isteği (olası DCShadow saldırı) 
 
 **Açıklama** 
 
@@ -565,7 +566,7 @@ Bir etki alanı denetleyicisine, kuruluşunuzda şüpheli bir hizmet oluşturuld
 - Daha az ayrıcalıklı erişimi yalnızca belirli kullanıcılara yeni hizmetleri oluşturma hakkı izin vermek için etki alanı makinelerde uygulayın.
 
 
-## Şüpheli VPN bağlantısı - yeni <a name="suspicious-vpn-detection"></a>
+## Şüpheli VPN bağlantısı <a name="suspicious-vpn-detection"></a>
 
 **Açıklama**
 
