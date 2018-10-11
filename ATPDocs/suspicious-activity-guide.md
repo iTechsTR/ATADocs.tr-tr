@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/09/2018
+ms.date: 10/10/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5151d2ccad994fabfa8bda224a8e5197abe1e01d
-ms.sourcegitcommit: 02a4d7a0d44817da8e40580c5fe97f8839a7941f
+ms.openlocfilehash: ca22fc6430556d49a6709be2f46c0c0b8746fa38
+ms.sourcegitcommit: 0c05308c832e4b03ea3945788de39feabfdb5671
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48876554"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48914511"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -441,7 +441,7 @@ Bu algılama, Kerberos veya NTLM kullanarak birçok kimlik doğrulama hataları 
 > *DNS üzerinden şüpheli iletişim* şüpheli etki alanı güvenlik uyarıları listesi. Yeni etki alanları veya etki alanı son eklenen olan değil henüz bilinen veya Azure ATP ancak bunlar için bilinen veya parçası tarafından tanınan kuruluşunuz kapatılabilir. 
 
 
-1.  Yasal bazı şirketler, DNS normal iletişim için kullanın. Kayıtlı sorgu etki alanı sağlayıcınız virüsten koruma gibi güvenilen bir kaynağa ait olup olmadığını denetleyin.
+1.  Yasal bazı şirketler, DNS normal iletişim için kullanın. Kayıtlı sorgu etki alanı sağlayıcınız virüsten koruma gibi güvenilen bir kaynağa ait olup olmadığını denetleyin. Etki alanı bilinen ve güvenilen ve DNS sorgularına izin verilir, uyarı kapatıldı ve etki alanı olabilir [dışlanan](excluding-entities-from-detections.md) gelecekteki uyarılar. 
 3.   Kayıtlı sorgu etki alanı güvenilir değilse, kaynak makinede isteği oluşturma işlemi tanımlayın. Kullanım [işlem İzleyicisi](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) bu görevle yardımcı olmak için.
 4.  Şüpheli etkinlik zaman başlamak belirlenir? Herhangi bir yeni olan programlar dağıtılan veya kuruluştaki (AV?) yüklü? Aynı zamanda diğer uyarılardan var mı?
 5.  Kaynak bilgisayarda, profili sayfasına erişmek için tıklayın. DNS sorgusunu kimin günlüğe kaydedilen ve hangi kaynakların kullanılmış gibi olağan dışı etkinlikler için arama, zamana yakın ne olduğunu denetleyin. Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP rozet tıklayın ![Windows Defender ATP rozeti](./media/wd-badge.png) Daha fazla makine araştırmak için. Windows Defender ATP kullanarak hangi işlemleri ve uyarılar, uyarının oluştuğu sırada oluştu görebilirsiniz.
