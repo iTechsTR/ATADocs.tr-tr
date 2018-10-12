@@ -1,13 +1,20 @@
 ---
 layout: LandingPage
-description: Azure Gelişmiş Tehdit Koruması’nı nasıl kullanacağınızı öğrenin.
+title: Azure Gelişmiş Tehdit Koruması belgeleri - Öğreticiler, örnekler, başvuru ve kaynaklar
+description: Azure Gelişmiş Tehdit Koruması'nı nasıl kullanacağınızı öğrenin
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 5c7261a99e1b6209598a29e5d3a751ea77a150ce
-ms.sourcegitcommit: e0b9252c770b3a3695af1642b76e3304f3df15d4
+keywords: gelişmiş tehdit koruması, azure, atp, öğreticiler, örnekler, başvuru
+author: rkarlin
+manager: mbaldwin
+ms.author: rkarlin
+ms.topic: landing-page
+ms.date: 09/26/2018
+ms.openlocfilehash: ac88b5b2acad571ce0d578847fe9eeb795f6b45a
+ms.sourcegitcommit: 56065ee43dac299203871cd6f025315520750b3b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46566596"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233890"
 ---
 # <a name="azure-advanced-threat-protection-documentation"></a>Azure Gelişmiş Tehdit Koruması Belgeleri
 
@@ -105,3 +112,4 @@ Azure Gelişmiş Tehdit Koruması (ATP), kurumsal hibrit ortamlarınızı birden
         </a>
     </li>
 </ul>
+
