@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/11/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,29 +13,19 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 382b0f31cbc24dde3905d99bab7ed8be8feb5cb4
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 9f5caf3ef7c0c986404cfe90a6f8cc40aa9462b4
+ms.sourcegitcommit: 30d874808cfeafd46ee8fbbf34e0bbcb337f6544
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783755"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49089381"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
-
 # <a name="integrate-vpn"></a>VPN tümleştirin
 
-<<<<<<< Baş Azure Gelişmiş tehdit Koruması (ATP) alınan VPN çözümleri hesap bilgilerini toplayabilir. Yapılandırıldığında, kullanıcının profil sayfasını VPN bağlantıları, IP adresleri ve bağlantı geldiği konumlar gibi bilgileri içerir. Bu, olağan dışı VPN bağlantıları için yeni bir algılama yanı sıra, kullanıcı etkinliğinin ek bilgi sağlayarak araştırma işlemi tamamlar. Dış IP adresi için bir konum yapılan çağrının anonimdir. Hiçbir kişisel tanımlayıcı bu çağrıda gönderilir.
-=======
-> [!div class="step-by-step"]
-> [«5. Adım](install-atp-step5.md)
-> [7. Adım»](install-atp-step7.md)
-
-## <a name="step-6-integrate-vpn"></a>6. Adım. VPN tümleştirin
-
 Azure Gelişmiş tehdit Koruması (ATP) alınan VPN çözümleri hesap bilgilerini toplayabilirsiniz. Yapılandırıldığında, kullanıcının profil sayfasını VPN bağlantıları, IP adresleri ve bağlantı geldiği konumlar gibi bilgileri içerir. Bu, olağan dışı VPN bağlantıları için yeni bir algılama yanı sıra, kullanıcı etkinliğinin ek bilgi sağlayarak araştırma işlemi tamamlar. Dış IP adresi için bir konum yapılan çağrının anonimdir. Hiçbir kişisel tanımlayıcı bu çağrıda gönderilir.
->>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 Azure ATP Azure ATP algılayıcı için iletilen RADIUS muhasebe olayları dinleme VPN çözümünüz ile tümleştirilir. Bu mekanizma, RADIUS Standart hesap bağlıdır ([RFC 2866](https://tools.ietf.org/html/rfc2866)), ve aşağıdaki VPN satıcıları desteklenir:
 
@@ -88,12 +78,6 @@ Bu etkinleştirildikten sonra tüm Azure ATP algılayıcı ve tek başına algı
 
  Azure ATP algılayıcısını VPN olayları alıp bunları işleme için Azure ATP bulut hizmetine gönderir sonra varlık profili ayrı erişilen VPN konumları gösterir ve etkinlikleri profilinde konumlarını gösterir.
 
-<a name="-head"></a><<<<<<< HEAD
-=======
-> [!div class="step-by-step"]
-> [«6. adım](install-atp-step5.md)
-> [7. adım»](install-atp-step7.md)
->>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
