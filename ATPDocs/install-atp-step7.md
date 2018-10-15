@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/14/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,28 +13,17 @@ ms.technology: ''
 ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a538ce4596da106d11646e27aa65131bb47380d2
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 9202ba7c2519de0c7cd2eb3103578159dc437e83
+ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782999"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315753"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 
-<<<<<<< HEAD
 # <a name="configure-detection-exclusions-and-honeytoken-accounts"></a>Algılama dışlamalarını ve honeytoken hesapları yapılandırma
-=======
-
-# <a name="install-azure-atp---step-7"></a>Azure ATP - 7. Adım'ı yükleme
-
-> [!div class="step-by-step"]
-> [«6. Adım](install-atp-step6-vpn.md)
-> [8. Adım»](install-atp-step8-samr.md)
-
-## <a name="step-7-configure-detection-exclusions-and-honeytoken-accounts"></a>7. Adım Algılama dışlamalarını ve honeytoken hesapları yapılandırma
->>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 Azure ATP çıkarma algılama sayısı, belirli IP adresleri veya kullanıcılarının sağlar. 
 
@@ -69,14 +58,6 @@ Algılanan kuşkulu etkinlikleri görüntülemek için saldırı zaman çizelges
 Azure ATP şüpheli etkinlikler için tarama hemen başlar. Olağan dışı Grup değişiklikleri gibi bazı algılamalar bir öğrenme dönemi gerekir ve Azure ATP dağıtımdan hemen sonra kullanılamaz.
 
 
-<a name="-head"></a><<<<<<< HEAD
-=======
-
-> [!div class="step-by-step"]
-> [«6. Adım](install-atp-step6-vpn.md)
-> [8. Adım»](install-atp-step8-samr.md)
-
->>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 ## <a name="see-also"></a>Ayrıca Bkz.
 - [Azure ATP boyutlandırma aracı](http://aka.ms/aatpsizingtool)
 - [Olay koleksiyonunu yapılandırma](configure-event-collection.md)

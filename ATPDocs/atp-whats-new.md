@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/07/2018
+ms.date: 10/14/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,21 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: dc008506e7b19a8d6eafd455a4414b1513608811
-ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
+ms.openlocfilehash: 5e400f51281ea9d0dd17be50800f0d0a9d467986
+ms.sourcegitcommit: 7b138a310a6b31a6375d87a95c7866cb9f701a9e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848639"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315910"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 # <a name="whats-new-in-azure-atp"></a>ATA'daki yenilikler 
+
+## <a name="azure-atp-release-250"></a>Azure ATP yayın 2,50
+Yayın Tarihi: 14 Ekim 2018
+- Bu sürüm, düzeltmeleri ve geliştirmeleri için birden çok sorunları içerir.
+
 
 ## <a name="azure-atp-release-249"></a>Azure ATP yayın 2.49
 Yayın Tarihi: 7 Ekim 2018

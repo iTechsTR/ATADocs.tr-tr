@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ca22fc6430556d49a6709be2f46c0c0b8746fa38
-ms.sourcegitcommit: 0c05308c832e4b03ea3945788de39feabfdb5671
+ms.openlocfilehash: 3edcde9466ade71afe22a735256f3cb84f88df17
+ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48914511"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315872"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -99,9 +99,9 @@ Bu algılama, Azure ATP büyük birkaç basit bağlama kimlik doğrulamaları al
 1.  İskelet anahtar – kötü amaçlı yazılımı kaldırın. Daha fazla bilgi için [Skeleton Key kötü amaçlı yazılım Analizine](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
 2.  Altın bilet – yönergeleri izleyin [altın bilet](#golden-ticket) kuşkulu etkinlikler.   
-    Ayrıca, etki alanı yöneticisi haklarına bir altın anahtar oluşturuluyor gerektirdiği için uygulama [Pass the hash önerilerini](http://aka.ms/PtH).
+    Ayrıca, etki alanı yöneticisi haklarına bir altın anahtar oluşturuluyor gerektirdiği için uygulama [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
 
-3.  Karmayı –, ardından ilgili hesabı hassas, değilse o hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilir olsa da bu saldırgan parola karması, yeni Kerberos biletleri oluşturmanızı engeller. Hassas hesap ise, iki kez altın bilet şüpheli etkinliğin olduğu gibi KRBTGT hesap sıfırlama düşünmelisiniz. İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Ayrıca bkz [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Yanal hareket tekniğidir olduğundan, en iyi yöntemleri takip [Pass the hash önerilerini](http://aka.ms/PtH).
+3.  Karmayı –, ardından ilgili hesabı hassas, değilse o hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilir olsa da bu saldırgan parola karması, yeni Kerberos biletleri oluşturmanızı engeller. Hassas hesap ise, iki kez altın bilet şüpheli etkinliğin olduğu gibi KRBTGT hesap sıfırlama düşünmelisiniz. İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Ayrıca bkz [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Yanal hareket tekniğidir olduğundan, en iyi yöntemleri takip [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="honeytoken-activity"></a>Honeytoken etkinliği
 
@@ -140,7 +140,7 @@ Karma hedeflenen kullanıcı sahibi veya düzenli olarak kullandığı bir bilgi
 
 1. Ardından ilgili hesabı önemli değilse, o hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilir olsa da bu saldırgan parola karması, yeni Kerberos biletleri oluşturmanızı engeller. 
 
-2. Hassas hesap ise, iki kez altın bilet şüpheli etkinliğin olduğu gibi KRBTGT hesap sıfırlama düşünmelisiniz. İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), ayrıca bkz [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Yanal hareket tekniğidir olduğundan, en iyi yöntemleri takip [Pass the hash önerilerini](http://aka.ms/PtH).
+2. Hassas hesap ise, iki kez altın bilet şüpheli etkinliğin olduğu gibi KRBTGT hesap sıfırlama düşünmelisiniz. İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), ayrıca bkz [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Yanal hareket tekniğidir olduğundan, en iyi yöntemleri takip [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="identity-theft-using-pass-the-ticket-attack"></a>Pass--Ticket saldırısı kullanan kimlik hırsızlığı
 
@@ -158,7 +158,7 @@ Pass--Ticket bir yanal hareket tekniğidir saldırganlar bir bilgisayardan Kerbe
 
 1. Ardından ilgili hesabı önemli değilse, o hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilir olsa da bu saldırgan parola karması, yeni Kerberos biletleri oluşturmanızı engeller.  
 
-2. Hassas hesap ise, iki kez altın bilet şüpheli etkinliğin olduğu gibi KRBTGT hesap sıfırlama düşünmelisiniz. İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), ayrıca bkz [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Yanal hareket tekniğidir olduğundan, en iyi uygulamaları izlemesi [Pass the hash önerilerini](http://aka.ms/PtH).
+2. Hassas hesap ise, iki kez altın bilet şüpheli etkinliğin olduğu gibi KRBTGT hesap sıfırlama düşünmelisiniz. İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), ayrıca bkz [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Yanal hareket tekniğidir olduğundan, en iyi uygulamaları izlemesi [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Kerberos altın bilet<a name="golden-ticket"></a>
 
@@ -195,7 +195,7 @@ Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP roze
 **Düzeltme**
 
 
-Kerberos anahtar verme anahtarı (KRBTGT) parolayı iki kez kılavuzunda göre değiştirmek [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)kullanarak [KRBTGT hesap parolası/anahtarı sıfırlama Aracı](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Ayrıca, etki alanı yöneticisi haklarına bir altın anahtar oluşturuluyor gerektirdiği için uygulama [Pass the hash önerilerini](http://aka.ms/PtH).
+Kerberos anahtar verme anahtarı (KRBTGT) parolayı iki kez kılavuzunda göre değiştirmek [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)kullanarak [KRBTGT hesap parolası/anahtarı sıfırlama Aracı](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Ayrıca, etki alanı yöneticisi haklarına bir altın anahtar oluşturuluyor gerektirdiği için uygulama [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
 
 
 
@@ -217,7 +217,7 @@ DPAPI yedekleme ana anahtarı almak için kullanıldığında, bu algılama, bir
 
 **Düzeltme**
 
-DPAPI kullanmak için saldırganın etki alanı yönetici hakları gerekir. Uygulama [Pass the hash önerilerini](http://aka.ms/PtH).
+DPAPI kullanmak için saldırganın etki alanı yönetici hakları gerekir. Uygulama [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="malicious-replication-of-directory-services"></a>Dizin hizmetlerinin kötü amaçlı çoğaltması
 
@@ -442,9 +442,9 @@ Bu algılama, Kerberos veya NTLM kullanarak birçok kimlik doğrulama hataları 
 
 
 1.  Yasal bazı şirketler, DNS normal iletişim için kullanın. Kayıtlı sorgu etki alanı sağlayıcınız virüsten koruma gibi güvenilen bir kaynağa ait olup olmadığını denetleyin. Etki alanı bilinen ve güvenilen ve DNS sorgularına izin verilir, uyarı kapatıldı ve etki alanı olabilir [dışlanan](excluding-entities-from-detections.md) gelecekteki uyarılar. 
-3.   Kayıtlı sorgu etki alanı güvenilir değilse, kaynak makinede isteği oluşturma işlemi tanımlayın. Kullanım [işlem İzleyicisi](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) bu görevle yardımcı olmak için.
-4.  Şüpheli etkinlik zaman başlamak belirlenir? Herhangi bir yeni olan programlar dağıtılan veya kuruluştaki (AV?) yüklü? Aynı zamanda diğer uyarılardan var mı?
-5.  Kaynak bilgisayarda, profili sayfasına erişmek için tıklayın. DNS sorgusunu kimin günlüğe kaydedilen ve hangi kaynakların kullanılmış gibi olağan dışı etkinlikler için arama, zamana yakın ne olduğunu denetleyin. Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP rozet tıklayın ![Windows Defender ATP rozeti](./media/wd-badge.png) Daha fazla makine araştırmak için. Windows Defender ATP kullanarak hangi işlemleri ve uyarılar, uyarının oluştuğu sırada oluştu görebilirsiniz.
+2.   Kayıtlı sorgu etki alanı güvenilir değilse, kaynak makinede isteği oluşturma işlemi tanımlayın. Kullanım [işlem İzleyicisi](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) bu görevle yardımcı olmak için.
+3.  Şüpheli etkinlik zaman başlamak belirlenir? Herhangi bir yeni olan programlar dağıtılan veya kuruluştaki (AV?) yüklü? Aynı zamanda diğer uyarılardan var mı?
+4.  Kaynak bilgisayarda, profili sayfasına erişmek için tıklayın. DNS sorgusunu kimin günlüğe kaydedilen ve hangi kaynakların kullanılmış gibi olağan dışı etkinlikler için arama, zamana yakın ne olduğunu denetleyin. Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP rozet tıklayın ![Windows Defender ATP rozeti](./media/wd-badge.png) Daha fazla makine araştırmak için. Windows Defender ATP kullanarak hangi işlemleri ve uyarılar, uyarının oluştuğu sırada oluştu görebilirsiniz.
 
 **Düzeltme** kayıtlı sorgu etki alanı araştırmanızı sonra güvenilir değilse, gelecekteki tüm iletişim önlemek için hedef etki alanını engelleme öneririz. 
 
@@ -470,7 +470,7 @@ Sahte etki alanı denetleyicisi olarak kaydetmek ağ bir makinede çalışırken
    3. Bilgisayar, Windows Server işletim sistemi (veya Windows/Linux) çalıştırıyor mu? Verileri çoğaltmak için bir sunucu olmayan makine beklenmiyor.
 Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP rozet tıklayın ![Windows Defender ATP rozet](./media/wd-badge.png) makine daha fazla araştırmak için. Windows Defender ATP'de uyarı oluştuğu sırada hangi işlemleri ve uyarılar oluştu görebilirsiniz.
 
-4. Konum görmek için Olay Görüntüleyicisi ' [Dizin Hizmetleri günlüğünde kayıtları Active Directory olayları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Günlük, Active Directory'deki değişiklikleri izlemek için kullanabilirsiniz. Varsayılan olarak, Active Directory yalnızca kritik hata olaylarını kaydeder, ancak bu uyarı almaya devam ederseniz, daha fazla bilgi için ilgili etki alanı denetleyicisinde bu denetime olanak tanıyın.
+4. Konum görmek için Olay Görüntüleyicisi ' [Dizin Hizmetleri günlüğünde kayıtları Active Directory olayları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)/). Günlük, Active Directory'deki değişiklikleri izlemek için kullanabilirsiniz. Varsayılan olarak, Active Directory yalnızca kritik hata olaylarını kaydeder, ancak bu uyarı almaya devam ederseniz, daha fazla bilgi için ilgili etki alanı denetleyicisinde bu denetime olanak tanıyın.
 
 **Düzelt**
 
@@ -529,7 +529,7 @@ Azure ATP tarafından korunan bir orijinal etki alanı denetleyicisine karşı �
    2.  Bu kaynaklara erişmek için kullanıcıların gerekir?
    3. Bilgisayar, Windows Server işletim sistemi (veya Windows/Linux) çalıştırıyor mu? Verileri çoğaltmak için bir sunucu olmayan makine beklenmiyor.
 Windows Defender ATP tümleştirme etkinleştirilirse, Windows Defender ATP rozet tıklayın ![Windows Defender ATP rozet](./media/wd-badge.png) makine daha fazla araştırmak için. Windows Defender ATP'de uyarı oluştuğu sırada hangi işlemleri ve uyarılar oluştu görebilirsiniz.
-1. Konum görmek için Olay Görüntüleyicisi ' [Dizin Hizmetleri günlüğünde kayıtları Active Directory olayları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Günlük, Active Directory'deki değişiklikleri izlemek için kullanabilirsiniz. Varsayılan olarak, Active Directory yalnızca kritik hata olaylarını kaydeder, ancak bu uyarı almaya devam ederseniz, daha fazla bilgi için ilgili etki alanı denetleyicisinde bu denetime olanak tanıyın.
+1. Konum görmek için Olay Görüntüleyicisi ' [Dizin Hizmetleri günlüğünde kayıtları Active Directory olayları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)/). Günlük, Active Directory'deki değişiklikleri izlemek için kullanabilirsiniz. Varsayılan olarak, Active Directory yalnızca kritik hata olaylarını kaydeder, ancak bu uyarı almaya devam ederseniz, daha fazla bilgi için ilgili etki alanı denetleyicisinde bu denetime olanak tanıyın.
 
 **Düzeltme**
 

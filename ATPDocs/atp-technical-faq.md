@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 07c5d67804eb4c74df678e8752a2516af5c52cc7
-ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
+ms.openlocfilehash: 13fbc33c1f6aa525382644a48418dceabbb9b652
+ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848516"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315736"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -92,7 +92,7 @@ Her etki alanı denetleyicisi ortamında, bir ATP algılayıcı veya tek başın
 Ağ protokolleri (örneğin LDAPS ve IPSec gibi) şifrelenmiş trafik ile şifresi ancak sensörleri tarafından analiz edilir.
 
 ### <a name="does-azure-atp-work-with-kerberos-armoring"></a>Azure ATP Kerberos koruması ile çalışır mı?
-Kerberos koruması, olarak da bilinir esnek kimlik doğrulaması güvenli tüneli (FAST) etkinleştirme zure ATP, Kerberos koruması ile çalışmaz hash algılamasının atlayarak dışında tarafından desteklenir.
+Kerberos koruması, olarak da bilinir esnek kimlik doğrulaması güvenli tüneli (FAST) etkinleştirme atlayarak Kerberos koruması ile çalışmaz karma değer geçişi algılama hariç olmak üzere Azure ATP tarafından desteklenir.
 
 ### <a name="how-do-i-monitor-a-virtual-domain-controller-using-azure-atp"></a>Azure ATP kullanarak bir sanal etki alanı denetleyicisini nasıl izlerim?
 Çoğu sanal etki alanı denetleyicilerini Azure ATP algılayıcısı ortamınız için uygun olup olmadığını belirlemek için Azure ATP algılayıcı tarafından ele alınacak [Azure ATP kapasite planlaması](atp-capacity-planning.md).

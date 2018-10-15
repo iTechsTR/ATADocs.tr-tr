@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/14/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2c4f82ce7bf4e8ba7bf9e6ae56198ca1f6e4aefb
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a5d6693aa44fd82d10654ebd40533100e8834627
+ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783245"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315770"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -62,7 +62,7 @@ Ek destek seçeneklerini Microsoft temsilcinizden öğrenebilirsiniz.
 
 #### <a name="system-status-page"></a>Sistem durumu sayfası 
 
-Azure ATP için sistem durumunu görüntülemek için ziyaret [ **sistem durumu** ](https://health.atp.azure.com/) sayfası. Algılamalar ve algılayıcı buluta trafik gönderebilmesi ise ile bir sorun varsa bu sayfayı, çalışma alanı Yönetim Portalı ' kurmak olup olmadığını ve etkin, bilgileri sağlar. Erişebildiğiniz **sistem durumu** Azure ATP menü çubuğundan.
+Azure ATP için sistem durumunu görüntülemek için ziyaret [ **sistem durumu** ](https://health.atp.azure.com/) sayfası. Algılamalar ve algılayıcı buluta trafik gönderebilmesi ise ile bir sorun varsa bu sayfa, Azure ATP portalı ayarlama olup olmadığını ve etkin, bilgileri sağlar. Erişebildiğiniz **sistem durumu** Azure ATP menü çubuğundan.
 
 #### <a name="on-demand-videos"></a>İsteğe bağlı videolar
 

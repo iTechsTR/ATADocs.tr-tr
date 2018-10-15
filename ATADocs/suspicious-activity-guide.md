@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/29/2018
+ms.date: 10/14/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: be809f422e797f08655b7841fc7f9ecb7423a0a6
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: be1a699ffd1ab0925df43910aec7f8166d4e423d
+ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133931"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315855"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -42,7 +42,7 @@ Sorularınız veya Geri bildiriminiz için ATA ekibi ile iletişime geçin [ ATA
 
 **Açıklama**
 
-Saldırganlar kullanıcıların yüksek ayrıcalıklı gruplara ekleyin. Daha fazla kaynaklarına erişmek ve kalıcılığı sağlamak için bunu yapın. Algılama, kullanıcıların Grup değişikliği etkinliklerini profilini oluşturup anormal bir hassas Grup eklemeyi ortaya çıktığında üzerinde kullanır. Profil ATA tarafından sürekli olarak gerçekleştirilir. Bir uyarı tetiklenebilir önce en az süre, her etki alanı denetleyicisi başına bir aydır.
+Saldırganlar kullanıcıların yüksek ayrıcalıklı gruplara ekleyin. Daha fazla kaynaklarına erişmek ve kalıcılığı sağlamak için bunu. Kullanıcı grubu değişiklik etkinlikleri profilini oluşturup anormal bir hassas Grup eklemeyi ortaya çıktığında üzerinde algılamalar kullanır. Profil ATA tarafından sürekli olarak gerçekleştirilir. Bir uyarı tetiklenebilir önce en az süre, etki alanı denetleyicisi başına bir aydır.
 
 Gizli gruplarda ata'da tanımı için bkz [ATA Konsolu'yla çalışma](working-with-ata-console.md#sensitive-groups).
 
@@ -64,15 +64,16 @@ Ayarlanan [Privileged Access Management için Active Directory](https://docs.mic
 
 ## <a name="broken-trust-between-computers-and-domain"></a>Bilgisayarlar ve etki alanı arasındaki güvenin Bozulması
 
-> ! [NOT] Bu şüpheli etkinlik, kullanım dışı bırakıldı ve yalnızca ATA sürümlerde 1.9 görüntülenir.
+> [!NOTE]
+> Güvenin Bozulması bilgisayarlar ve etki alanı arasında uyarı kullanım dışı bırakıldı ve yalnızca ATA sürümleri 1.9 önce görünür.
 
 **Açıklama**
 
-Güvenin bozulması, Active Directory güvenlik gereksinimlerinin etkin bilgisayarlar için söz konusu olmayabileceği anlamına gelir. Bu, genelde temel bir güvenlik ve uyumluluk hatası olarak değerlendirilir ve saldırganlar için kolay bir hedeftir. 24 saat içindeki bilgisayar hesabından 5'ten fazla Kerberos kimlik doğrulama hatası görülürse bu algılama, bir uyarı tetiklenir.
+Güvenin bozulması, Active Directory güvenlik gereksinimlerinin bu bilgisayarlar için geçerli olmayabilir anlamına gelir. Bu temel bir güvenlik ve uyumluluk hatası ve bir hedeftir saldırganlar için değerlendirilir. Bir bilgisayar hesabından 24 saat içinde beşten fazla Kerberos kimlik doğrulama hatası görülürse bu algılama, bir uyarı tetiklenir.
 
 **Araştırma**
 
-Söz konusu bilgisayarın etki alanı oturum açmasına izin veriyor mu? 
+Bilgisayarın etki alanı oturum açmasına izin vererek araştırılan? 
 - Yanıt Evet ise, bu bilgisayara düzeltme adımlarını göz ardı edebilirsiniz.
 
 **Düzeltme**
@@ -97,7 +98,7 @@ Bu algılama, ATA basit bağlama kimlik doğrulamaları devasa bir dizi algılad
 
 2. Ayrılmış alt sayfasına gitmek için uyarıyı tıklayın. Tüm oturum açma girişimlerini başarılı bir kimlik doğrulaması ile sona erdi kontrol edin. Deneme olarak görüneceği **hesapları tahmin** bilgi grafiğine sağ tarafında. Yanıt Evet ise, olan **hesapları tahmin** normalde kullanılan kaynak bilgisayardan? Yanıt Evet ise, **bastır** şüpheli etkinlik.
 
-3. Varsa hiçbir **hesapları tahmin**, olan **Saldırıya uğrayan hesaplar** normalde kullanılan kaynak bilgisayardan? Yanıt Evet ise,**bastır** şüpheli etkinlik.
+3. Varsa hiçbir **hesapları tahmin**, olan **Saldırıya uğrayan hesaplar** normalde kullanılan kaynak bilgisayardan? Yanıt Evet ise, **bastır** şüpheli etkinlik.
 
 **Düzeltme**
 
@@ -107,7 +108,7 @@ Bu algılama, ATA basit bağlama kimlik doğrulamaları devasa bir dizi algılad
 
 **Açıklama**
 
-Şifrelemeyi düşürme Kerberos protokolünün genellikle en yüksek düzeyde şifrelemesi kullanılarak şifrelenmiş farklı alanları şifreleme düzeyini eski sürüme düşürme zayıflatmanın bir yöntemdir. Düzeyi düşürülmüş bir şifrelenmiş alan çevrimdışı deneme yanılma girişimleri için daha kolay bir hedef olabilir. Zayıf Kerberos şifreleme cyphers çeşitli saldırı yöntemleri kullanın. Bu algılama, ATA bilgisayarlar ve kullanıcılar tarafından kullanılan Kerberos şifreleme türleri öğrenir ve daha zayıf bir şifreleme olduğunda, kullanılan uyarılar: (1) kaynak bilgisayarı ve/veya kullanıcı; olağandışı bir durumdur ve bilinen saldırı teknikleri (2) eşleşir.
+Şifrelemeyi düşürme Kerberos protokolünün normalde en üst düzeyde şifrelemesi kullanılarak şifrelenmiş farklı alanları şifreleme düzeyini eski sürüme düşürme zayıflatmanın bir yöntemdir. Düzeyi düşürülmüş bir şifrelenmiş alan çevrimdışı deneme yanılma girişimleri için daha kolay bir hedef olabilir. Zayıf Kerberos şifreleme cyphers çeşitli saldırı yöntemleri kullanın. Bu algılama, ATA bilgisayarlar ve kullanıcılar tarafından kullanılan Kerberos şifreleme türleri öğrenir ve daha zayıf bir şifreleme olduğunda, kullanılan uyarılar: (1) kaynak bilgisayarı ve/veya kullanıcı; olağandışı bir durumdur ve bilinen saldırı teknikleri (2) eşleşir.
 
 Üç algılama türleri şunlardır:
 
@@ -121,7 +122,7 @@ Bu algılama, ATA basit bağlama kimlik doğrulamaları devasa bir dizi algılad
 
 İlk olarak, yukarıdaki üç algılama türleri ile ilgili uyarıya açıklamasını denetleyin. Daha fazla bilgi için Excel elektronik tablosunu indirin.
 1.  Maymuncuk – kullanarak etki alanı denetleyicilerinizin Skeleton Key etkilenen, denetleyebilirsiniz [ATA ekibi tarafından yazılan tarayıcıyı](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Tarayıcı 1 veya daha fazla etki alanı denetleyicilerinizin kötü amaçlı yazılım bulması halinde, bu gerçek pozitiftir.
-2.  Altın bilet – Excel elektronik tablosunda Git **ağ etkinliği** sekmesi. İlgili indirgenmiş alanı olduğunu göreceksiniz **istek anahtarı şifreleme türü**, ve **kaynak bilgisayarı desteklenen şifreleme türlerini** daha güçlü şifreleme yöntemlerini içerir.
+2.  Altın bilet – Excel elektronik tablosunda Git **ağ etkinliği** sekmesi. İlgili indirgenmiş alanı olduğunu göreceksiniz **istek anahtarı şifreleme türü**, ve **kaynak bilgisayarı desteklenen şifreleme türlerini** daha güçlü şifreleme yöntemlerini listeler.
   a.    Kaynak bilgisayar ve hesap denetleyin veya varsa birden çok kaynak bilgisayarlar ve hesabı, bir şey (örneğin, tüm tetiklenmesi için uyarıya neden olan belirli bir uygulama pazarlama kullanacağı) ortak sahip olup olmadığınızı denetleyin. Daha düşük bir şifreleme şifreleme kullanarak nadiren kullanılan özel bir uygulama doğrulama durumlar vardır. Kaynak bilgisayar gibi özel uygulamalar olup olmadığını denetleyin. Bu nedenle, bu büyük olasılıkla bir zararsız gerçek pozitiftir ve yapabilecekleriniz **bastır** bu.
   b.    Kaynak denetimi bu anahtarları tarafından erişilen, tüm eriştikleri bir kaynak varsa, doğrulayın, bunlar erişmek için gereken geçerli bir kaynak olduğundan emin olun. Ayrıca, hedef kaynağın güçlü şifreleme yöntemlerini destekleyip desteklemediğini doğrulayın. Öznitelik kontrol ederek bu Active Directory'de denetleyebilirsiniz `msDS-SupportedEncryptionTypes`, kaynak hizmet hesabı.
 3.  Karmayı – Excel elektronik tablosunda Git **ağ etkinliği** sekmesi. İlgili indirgenmiş alanı olduğunu göreceksiniz **şifrelenmiş zaman damgası şifreleme türü** ve **kaynak bilgisayarı desteklenen şifreleme türlerini** daha güçlü şifreleme yöntemlerini içerir.
@@ -133,9 +134,9 @@ Bu algılama, ATA basit bağlama kimlik doğrulamaları devasa bir dizi algılad
 1.  İskelet anahtar – kötü amaçlı yazılımı kaldırın. Daha fazla bilgi için [Skeleton Key kötü amaçlı yazılım Analizine](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
 2.  Altın bilet – yönergeleri izleyin [altın bilet](#golden-ticket) kuşkulu etkinlikler.   
-    Ayrıca, etki alanı yöneticisi haklarına bir altın anahtar oluşturuluyor gerektirdiği için uygulama [Pass the hash önerilerini](http://aka.ms/PtH).
+    Ayrıca, etki alanı yöneticisi haklarına bir altın anahtar oluşturuluyor gerektirdiği için uygulama [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
 
-3.  Karmayı –, ardından ilgili hesabı hassas, değilse o hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilir olsa da bu saldırgan parola karması, yeni Kerberos biletleri oluşturmanızı engeller. Hassas hesap ise, iki kez altın bilet şüpheli etkinliğin olduğu gibi KRBTGT hesap sıfırlama düşünmelisiniz. İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Ayrıca bkz [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Yanal hareket tekniğidir olduğundan, en iyi yöntemleri takip [Pass the hash önerilerini](http://aka.ms/PtH).
+3.  Karmayı –, ardından ilgili hesabı hassas, değilse o hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilir olsa da bu saldırgan parola karması, yeni Kerberos biletleri oluşturmanızı engeller. Hassas hesap ise, iki kez altın bilet şüpheli etkinliğin olduğu gibi KRBTGT hesap sıfırlama düşünmelisiniz. İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Ayrıca bkz [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Yanal hareket tekniğidir olduğundan, en iyi yöntemleri takip [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
 
 
 ## <a name="honeytoken-activity"></a>Honeytoken etkinliği
@@ -145,7 +146,7 @@ Bu algılama, ATA basit bağlama kimlik doğrulamaları devasa bir dizi algılad
 
 Honeytoken hesapları tanımlamak ve bu hesapları içeren kötü amaçlı etkinliği izlemek üzere ayarlanan sahte hesaplardır. Honeytoken hesapları (örneğin, SQL-yönetici) saldırganlar çekici yöntemlerle çekmeye için çekici bir ad yaparken kullanılmamış olarak bırakılmalıdır. Herhangi bir etkinlikten kötü amaçlı davranışları gösterebilir.
 
-Honeytoken hesapları hakkında daha fazla bilgi için bkz. [Ata'yı yükleme - 7. adım](install-ata-step7.md).
+Honey token hesapları hakkında daha fazla bilgi için bkz. [Ata'yı yükleme - 7. adım](install-ata-step7.md).
 
 **Araştırma**
 
@@ -169,13 +170,13 @@ Pass--Hash bir yanal hareket tekniğidir saldırganlar bir bilgisayardan bir kul
 
 **Araştırma**
 
-Karma hedeflenen kullanıcı sahibi veya düzenli olarak kullandığı bir bilgisayardan kullanıldı? Evet, bu bir hatalı pozitif sonuç ise. Aksi takdirde, büyük olasılıkla gerçek pozitiftir.
+Bir bilgisayardan kullanılan karma tarafından hedeflenen kullanıcı borçlu olunan veya düzenli olarak kullandığı kontrol? Yanıt Evet ise, uyarı hatalı pozitiftir, aksi halde, büyük olasılıkla gerçek pozitiftir.
 
 **Düzeltme**
 
-1. Ardından ilgili hesabı önemli değilse, o hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilir olsa da bu saldırgan parola karması, yeni Kerberos biletleri oluşturmanızı engeller. 
+1. İlgili hesap önemli değilse, o hesabın parolasını sıfırlayın. Parola sıfırlama, saldırgan parola karması yeni Kerberos biletleri oluşturmanızı engeller. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilir. 
 
-2. Hassas hesap ise, iki kez altın bilet şüpheli etkinliğin olduğu gibi KRBTGT hesap sıfırlama düşünmelisiniz. İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), ayrıca bkz [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Yanal hareket tekniğidir olduğundan, en iyi yöntemleri takip [Pass the hash önerilerini](http://aka.ms/PtH).
+2. İlgili hesap büyük/küçük harfe duyarlıdır, KRBTGT hesabı altın bilet şüpheli etkinliğin olduğu gibi iki kez sıfırlama göz önünde bulundurun. Tüm etki alanı Kerberos biletleri KRBTGT iki kez sıfırlama geçersiz kılar, bunu yapmadan önce etkisi şekilde planlayın. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), ayrıca kullanarak başvuru [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Bu genellikle bir yanal hareket tekniğidir gibi en iyi yöntemleri takip [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="identity-theft-using-pass-the-ticket-attack"></a>Pass--Ticket saldırısı kullanan kimlik hırsızlığı
 
@@ -185,23 +186,23 @@ Pass--Ticket bir yanal hareket tekniğidir saldırganlar bir bilgisayardan Kerbe
 
 **Araştırma**
 
-1. Tıklayın **indirme ayrıntıları** IP adreslerinin dahil tam listesini görüntülemek için düğme. Bir IP adresi yok veya her iki bilgisayar sayıdan bir DHCP havuzundan WiFi veya VPN gibi ayrılmış bir alt ağa ait? IP adresi paylaşılıyor mu? Örneğin, bir NAT cihazının tarafından? Ardından bu soruları hiçbirini yanıt Evet ise, bir hatalı pozitif sonuç olduğunu.
+1. Tıklayın **indirme ayrıntıları** IP adreslerinin dahil tam listesini görüntülemek için düğme. Bir IP adresi veya bir alt ağ, hem bilgisayarları parçası sayıdan bir DHCP havuzundan, örneğin, VPN veya WiFi ayrılan? IP adresi paylaşılıyor mu? Örneğin, bir NAT cihazının tarafından? Tüm bu soruları yanıt Evet ise, uyarı hatalı pozitiftir.
 
 2. Kullanıcılar adına biletleri ileten özel bir uygulama mı? Bu durumda, bunu bir zararsız gerçek pozitiftir.
 
 **Düzeltme**
 
-1. Ardından ilgili hesabı önemli değilse, o hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilir olsa da bu saldırgan parola karması, yeni Kerberos biletleri oluşturmanızı engeller.  
+1. Ardından ilgili hesabı önemli değilse, o hesabın parolasını sıfırlayın. Parola yeniden, saldırgan, parola karması yeni Kerberos biletleri oluşturmasını engeller. Tüm mevcut biletleri süresi kadar kullanılabilir kalır.  
 
-2. Hassas hesap ise, iki kez altın bilet şüpheli etkinliğin olduğu gibi KRBTGT hesap sıfırlama düşünmelisiniz. İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), ayrıca bkz [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Yanal hareket tekniğidir olduğundan, en iyi uygulamaları izlemesi [Pass the hash önerilerini](http://aka.ms/PtH).
+2. Hassas hesap ise, iki kez altın bilet şüpheli etkinliğin olduğu gibi KRBTGT hesap sıfırlama düşünmelisiniz. İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), ayrıca bkz [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Yanal hareket tekniğidir olduğundan, en iyi uygulamaları izlemesi [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Kerberos altın bilet<a name="golden-ticket"></a>
 
 **Açıklama**
 
-Saldırganlar etki alanı yönetici haklarına sahip tehlikeye [KRBTGT hesabı](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). KRBTGT hesabı kullanarak bunların herhangi bir kaynağa yetkilendirme sağlayan ve rastgele dilediğiniz zaman anahtarı süre sonu Ayarla anahtarı (TGT) sağlayan bir Kerberos bilet oluşturabilirsiniz. Bu sahte TGT "Altın" olarak adlandırılır ve saldırganların ağda kalıcılığı elde etmek sağlar.
+Saldırganlar etki alanı yönetici haklarına sahip tehlikeye, [KRBTGT hesabı](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Saldırganlar, KRBTGT hesabı, herhangi bir kaynağa yetkilendirme sağlayan bilet (TGT) veren bir Kerberos anahtarı oluşturmak için kullanabilirsiniz. Anahtar sona erme rastgele dilediğiniz zaman ayarlayabilirsiniz. Bu sahte TGT "Altın" olarak adlandırılır ve elde etmek ve ağınızdaki kalıcılığı sürdürmek saldırganlar sağlar.
 
-Bu algılama, ekibi tarafından verilmesinin anahtarı için kullanılan bir Kerberos anahtarı, izin verilen süre belirtildiği şekilde birden fazla izin olduğunda bir uyarı tetiklenir [kullanıcı anahtarının en fazla ömrü](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) güvenlik ilkesi.
+Bu algılama, bir Kerberos anahtar verme anahtarı (TGT) için kullanılır, izin verilen süre belirtildiği şekilde birden fazla izin olduğunda bir uyarı tetiklenir [kullanıcı anahtarının en fazla ömrü](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) güvenlik ilkesi.
 
 **Araştırma**
 
@@ -214,7 +215,7 @@ Bu algılama, ekibi tarafından verilmesinin anahtarı için kullanılan bir Ker
 **Düzeltme**
 
 Kerberos anahtar verme anahtarı (KRBTGT) parolayı iki kez kılavuzunda göre değiştirmek [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)kullanarak [KRBTGT hesap parolası/anahtarı sıfırlama Aracı](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar.  
-Ayrıca, etki alanı yöneticisi haklarına bir altın anahtar oluşturuluyor gerektirdiği için uygulama [Pass the hash önerilerini](http://aka.ms/PtH).
+Ayrıca, etki alanı yöneticisi haklarına bir altın anahtar oluşturuluyor gerektirdiği için uygulama [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
 
 
 ## <a name="malicious-data-protection-private-information-request"></a>Kötü Amaçlı Veri Koruma Özel Bilgi İsteği
@@ -228,13 +229,13 @@ DPAPI yedekleme ana anahtarı almak için kullanıldığında, bu algılama, bir
 
 1. Bir kuruluş tarafından onaylanmış çalıştıran kaynak bilgisayar, Active Directory karşı güvenlik tarayıcısı gelişmişse?
 
-2. Yanıt Evet ise ve bu her zaman bunu yapıyor olmanız gereken **Kapat ve dışla** şüpheli etkinlik.
+2. Yanıt Evet ise ve bu her zaman bunu yapıyor olmanız gereken**Kapat ve dışla** şüpheli etkinlik.
 
-3. Yanıt Evet ise ve bu, yapmamalısınız **Kapat** şüpheli etkinlik.
+3. Yanıt Evet ise ve bu, yapmamalısınız ** şüpheli etkinlik kapatın.
 
 **Düzeltme**
 
-DPAPI kullanmak için saldırganın etki alanı yönetici hakları gerekir. Uygulama [Pass the hash önerilerini](http://aka.ms/PtH).
+DPAPI kullanmak için saldırganın etki alanı yönetici hakları gerekir. Uygulama [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="malicious-replication-of-directory-services"></a>Dizin hizmetlerinin kötü amaçlı çoğaltması
 
@@ -267,14 +268,14 @@ Yararlanabileceğiniz [AD ACL tarayıcı](https://blogs.technet.microsoft.com/pf
 
 **Açıklama**
 
-Bazı senaryolarda, saldırganlar, yalnızca bilgi çalarak yerine hizmet (DoS) gerçekleştirin. Çok sayıda hesapları silme bir DoS tekniğidir.
+Bazı senaryolarda, yalnızca bilgi çalarak yerine hizmet (DoS) saldırısı reddi saldırganlar gerçekleştirin. Çok sayıda hesapları silme DoS saldırısı girişiminde bir yöntemdir. 
 
-Birden fazla %5 tüm hesapların silindiğinde bu algılama, bir uyarı tetiklenir. Algılama Silinmiş nesne kapsayıcısı okuma erişimi gerektirir.  
+Bu algılama, tüm hesapların %5 silinir birden fazla dilediğiniz zaman bir uyarı tetiklenir. Algılama Silinmiş nesne kapsayıcısı okuma erişimi gerektirir.  
 Silinmiş nesne kapsayıcısı üzerinde salt okuma izinlerini yapılandırma hakkında daha fazla bilgi için bkz: **Silinmiş nesne kapsayıcısı üzerindeki izinleri değiştirme** içinde [izinleri görüntüleme veya ayarlama dizin nesnesi üzerindeki](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
 **Araştırma**
 
-Silinmiş hesap listesini gözden geçirin ve desen veya bu devasa silme Yasla bir iş neden olup olmadığını anlama.
+Silinmiş hesap listesini gözden geçirin ve bir desen veya büyük ölçekli bir silme işlemi yaslar bir iş neden olup olmadığını belirler.
 
 **Düzeltme**
 
@@ -284,17 +285,17 @@ Active Directory'de hesapları silebilen kullanıcıların izinlerini kaldırın
 
 **Açıklama**
 
-Windows Server'ın eski sürümlerini güvenlik açıkları, saldırganların ayrıcalıklı öznitelik sertifikası (PAC), bir kullanıcının yetkilendirme verilerini içeren Kerberos anahtarındaki bir alan izin bilinen (Active Directory'de Grup üyeliği budur), verme saldırganlar ek ayrıcalık yok.
+Windows Server'ın eski sürümlerinde bilinen güvenlik açıkları, saldırganların ayrıcalıklı öznitelik sertifikası (PAC) sağlar. PAC olan bir alana sahip kullanıcı yetkilendirme verilerini Kerberos anahtarı (Active Directory'de Grup üyeliği budur) ve saldırganlar ek ayrıcalıklar verir.
 
 **Araştırma**
 
-1. Uyarı için Ayrıntılar sayfasını almak için tıklayın.
+1. Ayrıntıları sayfasına erişmek için uyarıya tıklayın.
 
 2. Hedef bilgisayar (altında **ACCESSED** sütun) MS14-068 (etki alanı denetleyicisi) veya MS11-013 (sunucu) ile yama? Yanıt Evet ise, **Kapat** şüpheli etkinlik (Yanlış pozitif değer).
 
-3. Kaynak bilgisayar çalışmazsa (altında **FROM** sütun) PAC'de değişiklik yaptığı bilinen bir işletim sistemini/uygulamayı? Yanıt Evet ise, **bastır** şüpheli etkinlik (zararsız bir doğru pozitif değer).
+3. Kaynak bilgisayarla hedef bilgisayar yama, çalışıyor mu (altında **FROM** sütun) PAC'de değişiklik yaptığı bilinen bir işletim sistemini/uygulamayı? Yanıt Evet ise, **bastır** şüpheli etkinlik (zararsız bir doğru pozitif değer).
 
-4. Yanıt varsa bu, kötü amaçlı Yukarıdaki iki sorulara Hayır varsayılır.
+4. İki önceki sorulara yanıt ise Hayır, bu etkinlik, kötü amaçlı varsayılır.
 
 **Düzeltme**
 
@@ -316,7 +317,7 @@ Bu algılama, ATA saldırı nereden geldiğini, tahmin girişiminde toplam sayı
 Bir betik veya bu davranışı üretebilir ana bilgisayarında çalışan bir uygulama mı? <br></br>
 Ya da bu sorulara yanıt Evet ise **Kapat** şüpheli etkinliği barındıran hariç tutma ve şüpheli etkinlik (zararsız bir doğru pozitif değer).
 
-3. Bir Excel elektronik tablosunda rahatça hesabı girişimleri, var olan ve mevcut olmayan hesaplara ayrılmış listesini görmek için bir uyarının ayrıntılarını indirin. Bakarsanız elektronik tablosunda olmayan mevcut hesapları ve hesapların tanıdık, devre dışı bırakılmış hesapları ya da çalışan şirketten olabilir. Bu durumda, deneme sözlükten geliyor düşüktür. Büyük olasılıkla bir uygulama ya da hangi hesapların Active Directory içinde bir zararsız gerçek pozitif sonuç yani hala mevcut görmek için denetimi betik olduğu.
+3. Bir Excel elektronik tablosunda rahatça hesabı girişimleri, var olan ve mevcut olmayan hesaplara ayrılmış listesini görmek için bir uyarının ayrıntılarını indirin. Elektronik tablodaki mevcut olmayan hesapları sayfası bakmak ve hesapları tanıdık, devre dışı bırakılmış hesapları ya da çalışan şirketten olabilir. Bu durumda, deneme sözlükten geliyor düşüktür. Büyük olasılıkla bir uygulama ya da hangi hesapların Active Directory içinde bir zararsız gerçek pozitif sonuç yani hala mevcut görmek için denetimi betik olduğu.
 
 3. Adlarını büyük ölçüde alışkın değilseniz, tahmin girişiminde Active Directory'deki mevcut hesap adlarıyla hiçbiriyle? Herhangi bir eşleşme varsa, yararsız girişimdi, ancak zaman içinde güncelleştirilir, görmek için uyarı dikkat.
 
@@ -359,9 +360,9 @@ Bu algılama, ATA dağıtıldıktan sonra ilk ay içinde hiçbir uyarı tetiklen
 **Düzeltme**
 
 Kullanım [SAMRi10 aracı](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) bu tekniği karşı ortamınızı güçlendirmek için.
-Araç, DC için geçerli değilse:
+Aracı'nı etki alanı denetleyicinize geçerli değilse:
 1. Bilgisayar bir güvenlik açığı Tarama Aracı çalışıyor mu?  
-2. Belirli sorgulanan kullanıcıları ve grupları saldırı ayrıcalıklı veya yüksek değerli hesapları olup olmadığını araştırın (yani, CEO, CFO, BT yönetimi, vs.).  Bu durumda, diğer uç nokta da faaliyete bakmak ve büyük olasılıkla yatay hareket hedefleri oldukları gibi sorgulanan hesapları, oturum açtığı bilgisayarlar izleyin.
+2. Belirli sorgulanan kullanıcıları ve grupları saldırı ayrıcalıklı veya yüksek değerli hesapları olup olmadığını araştırmak (diğer bir deyişle, CEO, CFO, BT yönetimi, vs.).  Bu durumda, diğer uç nokta da faaliyete bakmak ve büyük olasılıkla yatay hareket hedefleri oldukları gibi sorgulanan hesapları, oturum açtığı bilgisayarlar izleyin.
 
 ## <a name="reconnaissance-using-dns"></a>DNS kullanarak keşif
 
@@ -390,11 +391,11 @@ Bölge aktarımlarını değiştirmek, bir denetim listesi için ele alınması 
 
 Sunucu İleti Bloğu (SMB) hakkında bilgi almak burada son oturum açan kullanıcılar saldırganlar etkinleştirir. Saldırganlar bu bilgileri aldıktan sonra ağdaki belirli bir hassas hesap almak için riskli taşıyabilirsiniz.
 
-Bir etki alanı denetleyicisine karşı bir SMB oturumu listeleme işlemi yapıldığında bu testler bulunmuyor çünkü bu algılama, bir uyarı tetiklenir.
+Bir etki alanı denetleyicisine karşı bir SMB oturumu listeleme gerçekleştirildiğinde bu algılama, bir uyarı tetiklenir.
 
 **Araştırma**
 
-1. Uyarı için Ayrıntılar sayfasını almak için tıklayın. Hangi hesabı/sn işlemin gerçekleştirilmesinden ve hangi hesapların ortaya çıktığını, varsa denetleyin.
+1. Uyarı için Ayrıntılar sayfasını almak için tıklayın. İşlem ve hangi hesapların ortaya çıktığını, varsa gerçekleştirilen hesabı/sn denetleyin.
 
  - Kaynak bilgisayarda çalışmakta olan güvenlik tarayıcısı tür var mı? Yanıt Evet ise, **Kapat ve dışla** şüpheli etkinlik.
 
@@ -402,13 +403,13 @@ Bir etki alanı denetleyicisine karşı bir SMB oturumu listeleme işlemi yapıl
 
 3. Evet ve uyarı güncelleştirilir, **bastır** şüpheli etkinlik.  
 
-4. Yanıt Evet ise ve onu artık yapmamanız gerekir **Kapat** şüpheli etkinlik.
+4. Yanıt Evet ise ve olmayan almalısınız güncelleştirilmiş, **Kapat** şüpheli etkinlik.
 
-5. Yukarıdaki olan tüm yanıt Hayır, bu kötü amaçlı olduğunu varsayarsanız.
+5. Yukarıdaki olan tüm yanıt Hayır, kötü amaçlı bir etkinliktir olduğunu varsayarsanız.
 
 **Düzeltme**
 
-Kullanım [Net sona ermesi aracı](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) bu saldırılara karşı ortamınızı güçlendirmek için.
+Kullanım [Net sona ermesi aracı](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) bu tür saldırılara karşı ortamınızı güçlendirmek için.
 
 ## <a name="remote-execution-attempt-detected"></a>Uzaktan yürütme denemesi algılandı
 
@@ -418,11 +419,11 @@ Yönetici kimlik bilgilerini tehlikeye veya sıfır gün yararlanma kullanmak sa
 
 **Araştırma**
 
-1. Bu yönetim iş istasyonları için de BT ekibi üyelerinde ve hizmet hesapları, etki alanı denetleyicilerinde yönetim görevlerini gerçekleştirmek yaygındır. Bu durum budur ve aynı yönetici veya bilgisayar yapmakta olduğunuz çünkü görev ardından uyarı güncelleştirilir **bastır** uyarı.
+1. Bu yönetim iş istasyonları için de BT ekibi üyelerinde ve hizmet hesapları, etki alanı denetleyicilerinde yönetim görevlerini gerçekleştirmek yaygındır. Bu durum budur ve aynı yönetici veya bilgisayar görevin yapmakta olduğundan Uyarı güncelleştirilir **bastır** uyarı.
 2.  Söz konusu bilgisayarın etki alanı denetleyicinizde Bu uzaktan yürütmeyi gerçekleştirme izni?
   - Söz konusu hesabın etki alanı denetleyicinizde Bu uzaktan yürütmeyi gerçekleştirme izni?
   - Her iki sorulara yanıt Evet, ardından olup olmadığını **Kapat** uyarı.
-3.  Ya da soruların yanıtlanması gerekirse, Hayır, ardından bunu bir doğru pozitif düşünülmelidir. Bilgisayarınızın ve hesabınızın profilleri kontrol ederek deneme kaynağını bulmaya çalışın. Kaynak bilgisayar veya hesap kendi profili sayfasına gitmek için tıklayın. Ne gibi olağan dışı etkinlikler için arama, bu deneme süresini olduğunu kontrol edin: açan, hangi kaynakların erişilebilir olduğunda.
+3.  Ya da soruların yanıtlanması gerekirse, Hayır, bu etkinlik bir doğru pozitif düşünülmelidir. Bilgisayarınızın ve hesabınızın profilleri kontrol ederek deneme kaynağını bulmaya çalışın. Kaynak bilgisayar veya hesap kendi profili sayfasına gitmek için tıklayın. Ne gibi olağan dışı etkinlikler için arama, bu deneme süresini olduğunu kontrol edin: açan, hangi kaynakların erişilebilir olduğunda.
 
 
 **Düzeltme**
@@ -496,7 +497,6 @@ Saldırganlar, ağınızdaki kuşkulu hizmetlerini çalıştırmak çalışır. 
 - Daha az ayrıcalıklı erişimi yalnızca belirli kullanıcılara yeni hizmetleri oluşturma hakkı izin vermek için etki alanı makinelerde uygulayın.
 
 
-
 ## <a name="suspicion-of-identity-theft-based-on-abnormal-behavior"></a>Anormal davranışa bağlı kimlik hırsızlığı şüphesi
 
 **Açıklama**
@@ -512,46 +512,46 @@ ATA, bir kayan üç hafta boyunca kullanıcılar, bilgisayarlar ve kaynaklar iç
 
 **Düzeltme**
 
-Ne gerçekleşmesi bu anormal davranışın nedeni bağlı olarak, farklı eylemler gerçekleştirilmelidir. Bu ağ tarama nedeniyle ise (onaylanmadığı sürece) gibi bu durumun oluştuğu makine ağdan engellenmelidir.
+ Farklı eylemler bu anormal davranış neyin bağlı olarak gerçekleşecek şekilde dikkat edilmelidir. Ağ tarandı, (onaylanmadığı sürece) Örneğin, kaynak makinenin ağdan engellenmelidir.
 
 ## <a name="unusual-protocol-implementation"></a>Olağan dışı protokol uygulanması
 
 
 **Açıklama**
 
-Saldırganlar, standart olmayan şekilde çeşitli protokolleri (SMB, Kerberos, NTLM) uygulayan araçlarını kullanın. Ağ trafiği bu tür uyarılar olmadan Windows tarafından kabul edilir, ancak ATA olası kötü amaçlı tanıyabilirsiniz. Gelişmiş fidye yazılımı tarafından Örneğin, WannaCry kullanılan açıklara yanı sıra, Kerberos'taki-geçiş karma gibi teknikler simulatorda davranıştır.
+Saldırganlar, standart olmayan şekilde çeşitli protokolleri (SMB, Kerberos, NTLM) uygulayan araçlarını kullanın. Ağ trafiği bu tür uyarılar olmadan Windows tarafından kabul edilir, ancak ATA olası kötü amaçlı tanıyabilirsiniz. Simulatorda WannaCry gibi gelişmiş fidye yazılımı tarafından kullanılan açıklara yanı sıra, Kerberos'taki-geçiş karma gibi teknikler davranıştır.
 
 **Araştırma**
 
-Alışılmadık şüpheli etkinlik zaman satırından – Protokolü tanımlayın, şüpheli etkinlik için Ayrıntılar sayfasını almak için tıklayın; protokol oku görünür: Kerberos veya NTLM.
+Alışılmadık şüpheli etkinlik zaman satırından – Protokolü tanımlayın, şüpheli Etkinlik ayrıntıları sayfasına erişmek için tıklayın; protokol oku görünür: Kerberos veya NTLM.
 
-- **Kerberos**: büyük olasılıkla bir adlı istemciden Overpass--Hash saldırısı gerçekleştiren Mimikatz kullanılmış gibi bir deşifre etme aracı, bu genellikle tetiklenir. Kaynak bilgisayar Kerberos RFC uygun olmayan kendi Kerberos yığınını uygulayan bir uygulama çalışıp çalışmadığını denetleyin. Böyle, bunu bir zararsız gerçek pozitiftir ve yapabilecekleriniz **Kapat** uyarı. Uyarıyı tetikleyen tutar ve durum hala geçerlidir, yapabilecekleriniz **bastır** uyarı.
+- **Kerberos**: Mimikatz potansiyel olarak olduğu gibi bir deşifre etme aracı genellikle tetiklenecek bir adlı istemciden Overpass--Hash saldırısı kullanılır. Kaynak bilgisayar Kerberos RFC uygun olarak değil, kendi Kerberos yığınını uygulayan bir uygulama çalışıp çalışmadığını denetleyin. Bu durumda, bunu bir zararsız gerçek pozitiftir ve uyarı olabilir **kapalı**. Uyarıyı tetikleyen tutar ve durum hala geçerlidir, yapabilecekleriniz **bastır** uyarı.
 
 - **NTLM**: WannaCry veya Metasploit Medusa ve Hydra gibi araçları olabilir.  
 
-Bunun bir WannaCry saldırısı olup olmadığını belirlemek için aşağıdaki adımları gerçekleştirin:
+Etkinlik bir WannaCry saldırısı olup olmadığını belirlemek için aşağıdaki adımları gerçekleştirin:
 
 1. Kaynak bilgisayarda bir saldırı aracı Metasploit, Medusa veya Hydra gibi çalışıp çalışmadığını denetleyin.
 
 2. Hiçbir saldırı araçlarının bulunursa, kaynak bilgisayarın kendi NTLM veya SMB yığınını uygulayan bir uygulama çalışıp çalışmadığını denetleyin.
 
-3. Aksi durumda sonra bu WannaCry tarafından örneğin bir WannaCry tarayıcı betiği çalıştırarak neden olup olmadığını denetleyin. [bu tarayıcı](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner) ' teki şüpheli etkinliklerle ilgili kaynak bilgisayara karşı. Tarayıcı, makine makine düzeltme eki uygulama ve kötü amaçlı yazılımı kaldırmak ve ağdan engelleme virüs bulaşmış veya güvenlik açığı, iş olarak bulursa.
+3. Aksi takdirde, örneğin bir WannaCry tarayıcı betiği çalıştırarak WannaCry tarafından neden oluyorsa denetleyin [bu tarayıcı](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner) ' teki şüpheli etkinliklerle ilgili kaynak bilgisayara karşı. Tarayıcı, makine makine düzeltme eki uygulama ve kötü amaçlı yazılımı kaldırmak ve ağdan engelleme virüs bulaşmış veya güvenlik açığı, iş olarak bulursa.
 
 4. Betik makine virüs bulaşmış veya güvenlik açığı, ardından yine de etkilenmiş ancak SMBv1 devre dışı olabilir veya makine yama olduğunu bulamadıysanız, Tarama Aracı etkiler.
 
 **Düzeltme**
 
-Özellikle güvenlik güncelleştirmelerini uygulama tüm makinelerinizi, düzeltme eki.
+En son düzeltme eklerinin makinelerinizin Tümüne Uygula ve tüm güvenlik güncelleştirmelerinin uygulanacağı denetleyin.
 
 1. [SMBv1 devre dışı bırak](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 2. [WannaCry Kaldır](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
-3. Kullanıcı olmayan yeniden başlatıldı veya bilgisayar oturumunu açık varsa WanaKiwi ancak bazı ransom yazılım kullanımına veri şifresini çözebilir. Daha fazla bilgi için [Cry fidye yazılımı için istediğiniz](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+3.  Bazı ransom yazılım denetiminde verileri bazen şifresi çözülebilir. Kullanıcı henüz ya da yeniden bilgisayar oturumunu açık şifre çözme yalnızca mümkündür. Daha fazla bilgi için [Cry fidye yazılımı için istediğiniz](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
 
 
 >[!NOTE]
-> Kuşkulu bir etkinlik devre dışı bırakmak için desteğe başvurun.
+> Şüpheli etkinlik uyarısı devre dışı bırakmak için desteğe başvurun.
 
 ## <a name="related-videos"></a>İlgili videolar
 - [Güvenlik topluluğuna katılmak](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
