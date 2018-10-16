@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e6f3647ecaab82a32950fadd0a101385a2cc0051
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: acbab806e7f49052e0789927f452217c12efd992
+ms.sourcegitcommit: 8cb370eab974652451066570e435d8a4f304fa29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783058"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49326770"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -32,13 +32,13 @@ Belirli bir e-posta adresine bildirimleri almak için şu parametreleri ayarlay�
 
 1. Azure ATP portalında seçin ve araç çubuğunda ayarlar seçeneğini **yapılandırma**.
 
-![Azure ATP yapılandırma ayarları simgesi](media/atp-config-menu.png)
+ ![Azure ATP yapılandırma ayarları simgesi](media/atp-config-menu.png)
 
 2. Tıklayın **bildirimleri**.
 3. Altında **posta bildirimleri**, e-posta aracılığıyla hangi bildirimlerin gönderilmesi gerektiğini belirtin - yeni uyarılar (şüpheli etkinlikler) ve yeni sistem durumu sorunları için gönderilebilir. 
  
  >  [!NOTE]
- >   Kuşkulu etkinlikler için e-posta uyarıları, yalnızca kuşkulu etkinlik oluşturulduğunda gönderilir.
+ > Kuşkulu etkinlikler için e-posta uyarıları, yalnızca kuşkulu etkinlik oluşturulduğunda gönderilir.
  
 4. **Kaydet**'e tıklayın.
 
