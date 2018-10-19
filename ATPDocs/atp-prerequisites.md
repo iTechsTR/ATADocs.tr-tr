@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/7/2018
+ms.date: 10/18/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e3cf97c4bd95a1fefc0aef29009f644cd5ef907d
-ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
+ms.openlocfilehash: f959176ddca045f421af416d5ce9dc3a777cc43a
+ms.sourcegitcommit: fdff488c79729035f89897c2ea0771a45b4c3ecf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848550"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49401921"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -46,7 +46,7 @@ Azure ATP örneğinizi oluşturmak için en az bir genel/güvenlik Yöneticisi i
 [Azure ATP tek başına algılayıcı](#azure-atp-sensor-requirements): Azure ATP tek başına algılayıcı sunucularınızda yapılandırmanız gereken ayarlar yanı sıra Azure ATP listeler tek başına algılayıcı donanım, yazılım gereksinimleri.
 
 ## <a name="before-you-start"></a>Başlamadan önce
-Bu bölümde, toplamanız gereken bilgiler ve hesaplarla ağ varlıkları Azure ATP yüklemeye başlamadan önce olmalıdır listelenir.
+Bu bölüm, hesaplarının yanı sıra toplamanız gereken bilgiler ve Azure ATP yüklemeye başlamadan önce olmalıdır. ağ varlık bilgilerini listeler.
 
 - Enterprise Mobility + Security (EMS E5) 5 için doğrudan aracılığıyla lisans [Office 365 portalında](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) veya Cloud Solution Partner (CSP) lisans modeli aracılığıyla.  
 
@@ -65,7 +65,7 @@ Bu bölümde, toplamanız gereken bilgiler ve hesaplarla ağ varlıkları Azure 
 
 -   İsteğe bağlı: Ağ etkinlikleri olmayan bir kullanıcının kullanıcı hesabı. Bu hesap bir Azure ATP Honeytoken kullanıcısı olarak yapılandırılır. Daha fazla bilgi için [Dışlamalar ve Honeytoken kullanıcısını yapılandırma](install-atp-step7.md).
 
--   İsteğe bağlı: tek başına algılayıcı dağıtırken Windows olayları 4776, 4732, 4733, 4728, 4729, 4756, 4757'yi ve 7045 Azure ATP Pass--Hash, deneme yanılma, gizli grup, Honey Token değişiklikleri daha da geliştirmek için ATP zure iletmek gereklidir algılamalar ve kötü amaçlı hizmeti oluşturma. Azure ATP algılayıcısını bu olayları otomatik olarak alır. Azure ATP tek başına algılayıcı bu olayları sıem sistemlerinizden alınabileceği gibi etki alanı denetleyicinizden Windows Olay iletme'yi ayarlayarak alınabilir. Toplanan olaylar, etki alanı denetleyicisi ağ trafiğinin kullanılabilir olmayan ek bilgilerle Azure ATP sağlar.
+-   İsteğe bağlı: tek başına algılayıcı dağıtırken Windows olayları 4776, 4732, 4733, 4728, 4729, 4756, 4757'yi ve 7045 Azure ATP Pass--Hash, deneme yanılma, gizli grup, Honey Token değişiklikleri daha da geliştirmek için Azure ATP iletmek gereklidir algılamalar ve kötü amaçlı hizmeti oluşturma. Azure ATP algılayıcısını bu olayları otomatik olarak alır. Azure ATP tek başına algılayıcı bu olayları sıem sistemlerinizden alınabileceği gibi etki alanı denetleyicinizden Windows Olay iletme'yi ayarlayarak alınabilir. Toplanan olaylar, etki alanı denetleyicisi ağ trafiğinin kullanılabilir olmayan ek bilgilerle Azure ATP sağlar.
 
 ## <a name="azure-atp-portal-requirements"></a>Azure ATP portalı gereksinimleri
 Azure ATP portalına erişim aşağıdaki tarayıcılar ve ayarları destekleyen bir tarayıcı şöyledir:
