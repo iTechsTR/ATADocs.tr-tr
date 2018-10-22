@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/14/2018
+ms.date: 10/21/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,23 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5e400f51281ea9d0dd17be50800f0d0a9d467986
-ms.sourcegitcommit: 7b138a310a6b31a6375d87a95c7866cb9f701a9e
+ms.openlocfilehash: bf620fd9eb3ee750f19a4fe69aa3efea16b9385a
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2018
-ms.locfileid: "49315910"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480676"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
 # <a name="whats-new-in-azure-atp"></a>ATA'daki yenilikler 
+
+## <a name="azure-atp-release-251"></a>Azure ATP sürüm 2.5.1
+Yayın Tarihi: 21 Ekim 2018
+
+- Artık etkinleştirebilir/devre dışı bırakabilir **WD ATP tümleştirme** Azure ATP Portalı'ndan [yapılandırma](integrate-wd-atp.md#how-to-integrate-azure-atp-with-windows-defender-atp) ekran. (Bu işleve erişmek için Azure ATP kullanıcı bir genel olmalıdır veya Güvenlik Yöneticisi AAD Kiracı).
+
+- Bu sürüm ayrıca geliştirmeleri ve hata düzeltmeleri iç algılayıcı altyapısı için içerir.
 
 ## <a name="azure-atp-release-250"></a>Azure ATP yayın 2,50
 Yayın Tarihi: 14 Ekim 2018

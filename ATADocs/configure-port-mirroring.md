@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e9d5ea1dfce5a162c0bf4642f2159b13a5b0f169
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: b8b9f3b1eeb36e3a4af949d7165ce0a46225b858
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134152"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480659"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -64,9 +64,10 @@ Etki alanı denetleyicileriniz ve ATA Gateway sunucularınız fiziksel veya sana
 **Sanallaştırma kümeleriyle çalışıyorsanız:**
 
 -   ATA Gateway’in bulunduğu bir sanal makinedeki sanallaştırma kümesinde çalışan her etki alanı denetleyicisi için, etki alanı denetleyicisiyle ATA Gateway arasında benzeşimi yapılandırın. Etki alanı denetleyicisi ATA Gateway kümedeki başka bir konağa taşındığında bu şekilde, izler. Bu, az sayıda etki alanı denetleyicisi olduğunda iyi çalışır.
+
 > [!NOTE]
 > Ortamınız farklı ana bilgisayarlarda Sanal-Sanal (RSPAN) iletişimi destekliyorsa benzeşim hakkında endişelenmeniz gerekmez.
-> 
+
 -   ATA Gateway’lerin kendi başlarına tüm DC’leri izleme işlemini yapabilecek şekilde doğru boyutlarda olduğundan emin olmak için şu seçeneği deneyin: Her sanallaştırma ana bilgisayarına bir sanal makine yükleyin ve her ana bilgisayara bir ATA Gateway yükleyin. Her ATA Gateway’i, kümede çalışan etki alanı denetleyicilerinin tümü izleyecek şekilde yapılandırın. Bu şekilde, etki alanı denetleyicilerinin çalıştığı her ana bilgisayar izlenir.
 
 Bağlantı noktası yansıtma yapılandırıldıktan sonra, ATA Gateway’i yüklemeden önce bağlantı noktası yansıtmanın çalışır durumda olduğunu doğrulayın.

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: ddbcd8877ca36afe9e56e9bc6febee19ff9957ff
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 5069fdda7c27a54705a17da79dbb536d412c4113
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133512"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480642"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -31,7 +31,7 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 ## <a name="ata-gateway-and-lightweight-gateway-errors"></a>ATA Gateway ve Lightweight Gateway hataları
 
 > [!div class="mx-tableFixed"]
-|Hata|Description|Çözüm|
+|Hata|Açıklama|Çözüm|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: Yerel bir hata oluştu|ATA Gateway, etki alanı denetleyicisine karşı kimlik doğrulaması yapamadı.|1. Etki alanı denetleyicisinin DNS kaydının DNS sunucusunda düzgün şekilde yapılandırıldığını doğrulayın. <br>2. ATA Gateway saatinin etki alanı denetleyicisinin saatiyle eşitlendiğini doğrulayın.|
 |System.IdentityModel.Tokens.SecurityTokenValidationException: Sertifika zinciri doğrulanamadı|ATA Gateway, ATA Center sertifikasını doğrulayamadı.|1. Kök CA sertifikasının ATA Gateway’de güvenilir sertifika yetkilisi sertifika deposuna yüklendiğini doğrulayın. <br>2. Sertifika iptal listesinin (CRL) kullanılabildiğini ve sertifika iptali doğrulama işleminin yapılabildiğini doğrulayın.|
@@ -57,7 +57,7 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
  
 ## <a name="deployment-errors"></a>Dağıtım hataları
 > [!div class="mx-tableFixed"]
-|Hata|Description|Çözüm|
+|Hata|Açıklama|Çözüm|
 |-------------|----------|---------|
 |.Net Framework 4.6.1 yüklemesi 0x800713ec hatasıyla başarısız oldu|.Net Framework 4.6.1 ön koşulları sunucuda yüklü değil. |ATA’yı yüklemeden önce, [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) ve [KB2919355](https://support.microsoft.com/kb/2919355) Windows güncelleştirmelerinin sunucuda yüklü olduğunu doğrulayın.|
 |System.Threading.Tasks.TaskCanceledException: Bir görev iptal edildi|Dağıtım işlemi, ATA Center’a erişemediği için zaman aşımına uğradı.|1.    IP adresi ile ATA Center’a gözatarak ağ bağlantısını kontrol edin. <br></br>2.    Ara sunucu veya güvenlik duvarı yapılandırması olup olmadığını denetleyin.|
@@ -68,7 +68,7 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 
 ## <a name="ata-center-errors"></a>ATA Center hataları
 > [!div class="mx-tableFixed"]
-|Hata|Description|Çözüm|
+|Hata|Açıklama|Çözüm|
 |-------------|----------|---------|
 |System.Security.Cryptography.CryptographicException: erişim reddedildi.|ATA Center, şifre çözme için sertifikayı kullanmak başarısız oldu. Bu büyük olasılıkla son bir sertifikanın imza ayarlamak KeySpec öğesinin (KeyNumber) ile kullanılacak gerçekleştiği (ADRESİNDEKİ\_imzası) desteklenmeyen KeyExchange kullanmak yerine şifre çözme için (en\_KEYEXCHANGE).|1.    ATA Center hizmeti durdurun. <br></br>2.     ATA Center sertifikasını merkezi sertifika deposundan silin. (Silmeden önce bir PFX dosyasında özel anahtarla yedeklediğiniz sertifikayı sahip olduğunuzdan emin olun.) <br></br>3.    Yükseltilmiş bir komut istemi açın ve certutil - importpfx "CenterCertificate.pfx" AT çalıştırma\_KEYEXCHANGE <br></br>4.     ATA Center hizmeti başlatın. <br></br>5.     Her şeyin beklendiği gibi çalıştığını doğrulayın.|
 
@@ -76,10 +76,10 @@ Bu bölüm, ATA dağıtımlarındaki olası hataları ve bunları gidermek için
 ## <a name="ata-gateway-and-lightweight-gateway-issues"></a>ATA Gateway ve Lightweight Gateway sorunları
 
 > [!div class="mx-tableFixed"]
-|Sorun|Description|Çözüm|
+|Sorun|Açıklama|Çözüm|
 |-------------|----------|---------|
 |Etki alanı denetleyicisinden trafik alınmıyor ama izleme uyarıları gözlemleniyor|    ATA Gateway’den bağlantı noktası yansıtma kullanan bir etki alanı denetleyicisinden trafik alınmadı|ATA Gateway yakalama NIC’sindeki **Gelişmiş Ayarlar**’da şu özellikleri devre dışı bırakın:<br></br>Alma Kesimi Birleştirme (IPv4)<br></br>Alma Kesimi Birleştirme (IPv6)|
-|Bu uyarı görüntülenir: **ağ trafiğinin bir kısmı analiz edilmiyor**|VMware sanal makinelerindeki bir ATA Gateway veya Lightweight Gateway varsa, bu uyarı alabilirsiniz. Bu, bir VMware yapılandırma uyuşmazlık nedeniyle olur.|Aşağıdaki ayarlar **0** veya **devre dışı** sanal makine NIC yapılandırması: TsoEnable, LargeSendOffload, tso veri boşaltma, büyük TSO boşaltma|TLS 1.0, ATA Gateway'de devre dışı bırakıldı ancak .net TLS 1.2 kullanmak üzere ayarlanmış|
+|Bu uyarı görüntülenir: **ağ trafiğinin bir kısmı analiz edilmiyor**|VMware sanal makinelerindeki bir ATA Gateway veya Lightweight Gateway varsa, bu uyarı alabilirsiniz. Bu, bir VMware yapılandırma uyuşmazlık nedeniyle olur.|Aşağıdaki ayarlar **0** veya **devre dışı** sanal makine NIC yapılandırması: TsoEnable, LargeSendOffload, tso veri boşaltma, büyük TSO boşaltma|TLS 1.0, ATA Gateway'de devre dışı bırakıldı ancak .net TLS 1.2 kullanmak üzere ayarlanmış|<!-- line contains 5 vertical lines -->
 
 
 

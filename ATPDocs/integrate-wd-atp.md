@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/18/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c0bda95fb789225cf7d05616974f9a333f3c8e4f
-ms.sourcegitcommit: 30d874808cfeafd46ee8fbbf34e0bbcb337f6544
+ms.openlocfilehash: 52445e15a4465f0fa4b399cf99ccf6620db7a572
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49089364"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480693"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -30,15 +30,15 @@ Windows Defender ATP Azure ATP ile tümleştirerek, iki hizmet de tam gücünden
 
 - Azure ATP algılayıcı ve tek başına algılayıcı: doğrudan etki alanı denetleyicileri veya kimlik doğrulaması (Kerberos, DNS, RPC, NTLM ve diğerleri gibi) birden çok protokolün ağ trafiğini yakalamak ve ayrıştırmak için ATP için bağlantı noktası yansıtma etki alanı denetleyicilerinizden üzerine yerleştirilebilir Yetkilendirme ve bilgi toplama. 
 
--   Uç nokta davranış sensörlerini: Windows 10'da katıştırılmış, algılayıcınız toplayıp işletim sisteminden (örneğin, işlem, kayıt defteri, dosya ve ağ iletişimi) davranış sinyalleri işlemek ve bu algılayıcı verileri için özel, yalıtılmış, bulut gönderir Windows Defender ATP örneği.
+-   Uç nokta davranış sensörlerini: Windows 10'da katıştırılmış, bu sensörlerden ve davranış sinyalleri işletim sisteminden (örneğin, işlem, kayıt defteri, dosya ve ağ iletişimi) işlem verilerini toplar ve bu algılayıcı, özel, yalıtılmış, buluta gönderir Windows Defender ATP örneği.
 
 - Bulut güvenlik analizleri: büyük veri, makine öğrenimi ve benzersiz Microsoft görünümü yararlanarak Windows ekosisteminde (gibi [Microsoft Kötü Amaçlı Yazılımları Temizleme Aracı](https://www.microsoft.com/download/malicious-software-removal-tool-details.aspx)), Kurumsal bulut ürünleri (örneğin, Office 365 için) ve çevrimiçi varlıkların (Bing ve SmartScreen URL saygınlığı gibi), davranış sinyalleri Öngörüler algılamalar, çevrilmiş ve Gelişmiş tehditlere yanıt önerilir.
 
-- Tehdit bilgileri: güvenliği ekiplerinin Microsoft arayanlar tarafından oluşturulan ve iş ortakları tarafından sağlanan tehdit bilgileri tarafından Genişletilmiş, tehdit zekası sağlar saldırgan araçları, teknikleri ve yordamları tanımlamak ve oluşturmak Windows Defender ATP uyarıları Bu toplanan algılayıcı verilerini gözlenmiştir.
+- Tehdit bilgileri: güvenliği ekiplerinin Microsoft arayanlar tarafından oluşturulan ve iş ortakları tarafından sağlanan tehdit bilgileri tarafından Genişletilmiş, tehdit zekası sağlar saldırgan araçları, teknikleri, yordamları tanımlamak ve oluşturmak Windows Defender ATP uyarıları Bu etkinlikler toplanan algılayıcı verilerini gözlenmiştir.
 
 Azure ATP teknolojisi siber saldırı ölüm zincirinin, belirtilen çeşitli aşamalarına odaklanarak birden çok şüpheli etkinliği algılar:
 
-- Keşif aşamasında saldırganlar ortamın nasıl oluşturulduğunu bilgi toplamak, hangi farklı varlıklardır ve hangi varlık yoktur. Bunlar genellikle saldırının sonraki aşamaları için planlarına oluşturma.
+- Keşif aşamasında saldırganlar ortamın nasıl oluşturulduğunu bilgi toplamak, hangi farklı varlıklardır ve hangi varlık yoktur. Bunlar genellikle burada saldırının sonraki aşamaları için kendi planı oluşturun.
 
 - Yanal hareket döngüsü aşamasında saldırgan, ağınızdaki saldırı yüzeyini genişletmek için zaman ve çaba harcar.
 
@@ -50,7 +50,7 @@ Aynı anda sağlayarak Microsoft teknolojisini ve uzmanlığını Gelişmiş sib
 
 - Adli araştırma ve risk azaltma için zengin zaman çizelgesi<br></br>Kolayca ihlal ya da zengin makine zaman çizelgesi aracılığıyla herhangi bir makinede şüpheli davranış kapsamını araştırın. Dosya, URL'ler ve ağ üzerinden ağ bağlantısı envanteri. Herhangi bir dosya veya URL için ayrıntılı toplama ve çözümleme ("detonation") kullanarak ek Öngörüler elde edin.
 
-- Benzersiz tehdit zekası Bilgi Bankası'ndaki yerleşik<br></br>Eşsiz iş parçacığı optik her Intel tabanlı algılama için – birleştirme birinci ve üçüncü taraf iş zekası kaynakları aktör ayrıntıları ve hedefi bağlam sağlar.
+- Benzersiz tehdit zekası Bilgi Bankası'ndaki yerleşik<br></br>Optik her tehdit için aktör ayrıntıları ve hedefi bağlam sağlar benzersiz tehdit algılama-birleştirme birinci ve üçüncü taraf iş zekası kaynakları temel.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -59,21 +59,19 @@ Bu özelliği etkinleştirmek için hem Azure ATP hem de Windows Defender ATP i�
 
 ## <a name="how-to-integrate-azure-atp-with-windows-defender-atp"></a>Azure ATP Windows Defender ATP ile tümleştirme
 
-1. Tıklayın **yapılandırma**, altında **veri kaynakları** seçin **Windows Defender ATP**. Bağlantı ardından **çalışma alanı yönetimi**. Bu yalnızca devreye alma işlemi için Windows Defender ATP zaten gerçekleştirilen ve Windows Defender ATP için lisansınız varsa kullanılabilir. 
+1. Azure ATP Portalı'nda açmak **yapılandırma**. 
 
-2. Çalışma alanınızda ayarlar dişlisine tıklayın.
+    ![Azure ATP yapılandırma menüsü](./media/atp-configuration-wd.png)
+2. Yapılandırmaları listesinde **Windows Defender ATP** ve tümleştirme getirin **üzerinde**. 
 
- ![Çalışma alanı tümleştirme](./media/edit-workspace.png)
- 
-3. Tümleştirmeyi ayarlamak **üzerinde**. 
+    ![Windows Defender'ın tümleştirmesini etkinleştirme](./media/enable-integration.png)
 
- ![Tümleştirmeyi Etkinleştir](./media/enable-integration.png)
 
-4. İçinde [Windows Defender ATP portalına](https://securitycenter.windows.com/preferences/advanced)Git **ayarları**, **Gelişmiş Özellikler** ayarlayıp **Azure ATP tümleştirme** için  **ON**. 
+3. İçinde [Windows Defender ATP portalına](https://securitycenter.windows.com/preferences/advanced)Git **ayarları**, **Gelişmiş Özellikler** ayarlayıp **Azure ATP tümleştirme** için  **ON**. 
 
- ![Windows Defender ATP etkinleştir tümleştirme](./media/wd-atp-enable.png)
+    ![Windows Defender ATP etkinleştir tümleştirme](./media/wd-atp-enable.png)
 
-5. Azure ATP portalında Tümleştirme durumunu denetlemek için Git **ayarları** ardından **Windows Defender ATP tümleştirme**. Tümleştirme durumu görebilirsiniz; bir şeyler yanlış ise, bir hata görürsünüz. Ayrıca, Windows Defender ATP ile hangi çalışma alanının tümleşik görebilirsiniz.
+4. Azure ATP portalında Tümleştirme durumunu denetlemek için Git **ayarları** > **Windows Defender ATP tümleştirme**. Tümleştirme durumunu görebilir ve bir şeyler yanlış ise, bir hata görürsünüz. 
 
 ## <a name="how-it-works"></a>Nasıl Çalışır?
 
@@ -89,7 +87,7 @@ Rozeti oylayıp tıklarsanız, Windows Defender ATP portalına burada görüntü
 
  ![Windows Defender ATP gri](./media/wd-grey.png)
 
-Bir uç noktaya tıkladığınızda, Windows Defender ATP Portalı'nda Azure ATP uyarılarını görüntüleyebilirsiniz. Windows Defender ATP bu varlık için uyarıları tıklarsanız, ATA'daki varlığın profil sayfası açılır. 
+Windows Defender ATP Portalı'ndan Azure ATP uyarıları görüntülemek için bir uç noktaya tıklayın. Windows Defender ATP bu varlık için uyarıları tıklarsanız, ATA'daki varlığın profil sayfası açılır. 
  
  > [!NOTE]
  > Şu anda yalnızca kullanıcı ve şirket içi makineler Windows Defender ATP ile Azure ATP tümleştirme destekler AD. Azure ad kullanıcıları ve Azure'da yönetilen sanal makineler, tümleşik bir parçası olarak görüntülenmeyecek 

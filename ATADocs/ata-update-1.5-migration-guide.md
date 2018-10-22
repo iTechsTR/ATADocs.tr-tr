@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f448242f43f8034e2b94b62cda2ec7c4409fc3f4
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: cdf7966b9e3cfc68a9cb593cb12ef76aecddb1d9
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133659"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480727"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>ATA’yı 1.5’e güncelleştirme geçiş kılavuzu
 ATA 1.5 güncelleştirmesi aşağıdaki alanlarda geliştirmeler sağlar:
@@ -47,7 +47,7 @@ ATA sürüm 1.5’e güncelleştirmek için bu adımları izleyin:
 
 1.  VLSC veya MSDN’den ATA v1.5’i indirin.
       > [!NOTE]
-         Sürüm 1.5’e güncelleştirmek için, ATA’nın güncelleştirilmiş tam sürümünü de kullanabilirsiniz.
+      > Sürüm 1.5’e güncelleştirmek için, ATA’nın güncelleştirilmiş tam sürümünü de kullanabilirsiniz.
 
 
 2.  ATA Center’ı güncelleştirme
