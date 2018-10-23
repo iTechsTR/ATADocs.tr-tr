@@ -1,5 +1,5 @@
 ---
-title: Gelişmiş Threat Analytics kaynakları ve hazırlık roadamp | Microsoft Docs
+title: Gelişmiş Threat Analytics kaynakları ve hazırlık yol haritası | Microsoft Docs
 description: ATA kaynakları, videoları, kullanmaya başlama, dağıtım ve hazırlık yol haritası bağlantıların bir listesini sağlar.
 keywords: ''
 author: rkarlin
@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 48756cbde8b288116975c05567beeac76e83a717
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 069ee0f367c52de897486291f761bf0dde6016e0
+ms.sourcegitcommit: 8ecb76ddfbf48c361d3637d15bd48313a3e68685
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133778"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49634758"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
 # <a name="ata-readiness-roadmap"></a>ATA hazırlık yol haritası 
-Bu belge, Advanced Threat Analytics ile çalışmaya başlamanıza yardımcı olacak bir hazırlık yol haritası sağlar.
+Bu makalede, Advanced Threat Analytics ile çalışmaya başlamanıza yardımcı olacak bir hazırlık yol haritası sağlar.
 
 ## <a name="understanding-ata"></a>Ata'yı anlama
 
@@ -38,9 +38,9 @@ Advanced Threat Analytics (ATA), kuruluşunuzu çeşitli türlerdeki, gelişmiş
 
 ## <a name="deployment-decisions"></a>Dağıtım kararları
 
-ATA Lightweight Gateway doğrudan etki alanı denetleyicilerinize kullanarak veya ayrı bilgisayarlara yükleyebileceğiniz bir ATA Gateway ve bir sunucuya yükleyebilirsiniz, ATA Center oluşur. Çalışır duruma geçmeden önce aşağıdaki dağıtım kararları önemlidir:
+ATA bir sunucuya yükleyebilirsiniz, ATA Center ve ATA Gateway bileşenleri ayrı bilgisayarlara veya Lightweight Gateway doğrudan etki alanı denetleyicilerinize kullanarak yükleyebileceğiniz oluşur. Çalışır duruma geçmeden önce aşağıdaki dağıtım kararları önemlidir:
 
-|YAPILANDIRMA|KARAR VERME|
+|Yapılandırma | Karar verme |
 |----|----|
 |Donanım türü|Fiziksel, sanal Azure VM|
 |Çalışma grubu veya etki alanı|Çalışma grubu, etki alanı|
@@ -51,11 +51,13 @@ Fiziksel sunucuları kullanıyorsanız, kapasite planlamanız gerekir. ATA için
 
 [ATA boyutlandırma aracı](ata-capacity-planning.md) -boyutlandırma aracı gereken ATA trafik miktarını koleksiyonunu otomatikleştirir. Bu otomatik olarak desteklenebilirliği ve kaynak öneriler ATA Center ve ATA Lightweight Gateway için sağlar.
 
+
 [ATA kapasite planlaması](ata-capacity-planning.md)
+
 
 ## <a name="deploy-ata"></a>Ata'yı dağıtma
 
-Bu kaynaklar, indirin ve ATA Center'ı yüklemek, Active Directory'ye bağlanın, ATA Gateway paketini indirme, olay toplamayı ayarlama ve isteğe bağlı olarak, VPN ile tümleştirin ve Dışlamalar ve honeytoken hesapları ayarlama yardımcı olur.
+Bu kaynaklar, indirin ve ATA Center'ı yüklemek, Active Directory'ye bağlanın, ATA Gateway paketini indirme, olay toplamayı ayarlama ve isteğe bağlı olarak VPN'iniz ile tümleştirin ve Dışlamalar ve honeytoken hesapları ayarlama yardımcı olur.
 
 [Ata'yı indirin](http://aka.ms/ataeval) -kararı, ATA satın oluşturmadıysanız, Ata'yı dağıtmadan önce değerlendirme sürümünü indirebilirsiniz. 
 
@@ -65,7 +67,7 @@ Bu kaynaklar, indirin ve ATA Center'ı yüklemek, Active Directory'ye bağlanın
 
 ## <a name="ata-settings"></a>ATA ayarları
 
-Ata'da temel gerekli ayarları, yükleme sihirbazının bir parçası olarak yapılandırılır. Ancak, bir dizi SIEM tümleştirmesi gibi ortamınız için daha doğru algılama yapmak ve denetim ayarları, ATA ince ayar yapmak için yapılandırabileceğiniz diğer ayar vardır.
+Ata'da temel gerekli ayarları, yükleme sihirbazının bir parçası olarak yapılandırılır. Ancak, ATA algılamaları SIEM tümleştirmesi gibi ortamınız için daha doğru yapan ince ayar yapmak ve denetim ayarları yapılandırabileceğiniz diğer ayar vardır.
 
 [Denetim ayarları](https://aka.ms/ataauditingblog) – önce ve sonra bir ATA dağıtımı, etki alanı denetleyicisi sistem durumu Denetim.
 
@@ -73,9 +75,9 @@ Ata'da temel gerekli ayarları, yükleme sihirbazının bir parçası olarak yap
 
 ## <a name="work-with-ata"></a>ATA ile çalışma
 
-ATA çalışır duruma geldikten sonra saldırı zaman çizelgesinde algılanan kuşkulu etkinlikleri görüntüleme olanağınız olacaktır. Bu, ATA Konsolu’nda oturum açtığınızda gittiğiniz varsayılan giriş sayfasıdır. Varsayılan olarak, tüm kuşkulu etkinliler saldırı zaman çizelgesinde gösterilir. Ayrıca, her etkinliğe atanmış olan önem düzeyini de görebilirsiniz. Daha fazla bilgi sağlayan varlıklarının içinde (bilgisayarlar, cihazlar, kullanıcılar) kendi profili sayfalarını açmak için aşağı indikçe her kuşkulu etkinlik araştırın. Bu kaynaklar, ATA'ın kuşkulu etkinlikler ile çalışmanıza yardımcı olur:
+ATA çalışır duruma geldikten sonra saldırı zaman çizelgesinde algılanan kuşkulu etkinlikleri görüntüleyebilirsiniz. Bu, ATA Konsolu’nda oturum açtığınızda gittiğiniz varsayılan giriş sayfasıdır. Varsayılan olarak, tüm kuşkulu etkinliler saldırı zaman çizelgesinde gösterilir. Ayrıca, her etkinliğe atanmış olan önem düzeyini de görebilirsiniz. Daha fazla bilgi sağlayan varlıklarının içinde (bilgisayarlar, cihazlar, kullanıcılar) kendi profili sayfalarını açmak için aşağı indikçe her kuşkulu etkinlik araştırın. Bu kaynaklar, ATA'ın kuşkulu etkinlikler ile çalışmanıza yardımcı olur:
 
-[ATA şüpheli etkinlik playbook](http://aka.ms/ataplaybook) -bu makalede, Internet'te kullanıma açık araştırma araçlarının kullanarak kimlik bilgisi hırsızlığı saldırı tekniklerini gösterilmektedir. Saldırının her noktada ATA, bu tehditleri görmenize nasıl yardımcı olduğunu görebilirsiniz.
+[ATA şüpheli etkinlik playbook](http://aka.ms/ataplaybook) -bu makalede, internet'te kullanıma açık araştırma araçlarının kullanarak kimlik bilgisi hırsızlığı saldırı tekniklerini gösterilmektedir. Saldırının her noktada ATA, bu tehditleri görmenize nasıl yardımcı olduğunu görebilirsiniz.
 
 [ATA şüpheli etkinlik Kılavuzu](suspicious-activity-guide.md)
 
