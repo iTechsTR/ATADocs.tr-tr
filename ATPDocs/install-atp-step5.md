@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6f65b3af56e683a385f7128a989170c8c4073b3e
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: b7ddaca0f0c5691c90873cef9af6cef13fa9650a
+ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783874"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49800058"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -27,7 +27,8 @@ ms.locfileid: "48783874"
 # <a name="install-azure-atp---step-5"></a>Azure ATP - 5. Adım'ı yükleme
 
 > [!div class="step-by-step"]
-> [«4. adım](install-atp-step4.md)
+> [« 4. Adım](install-atp-step4.md)
+> [6. Adım »](install-atp-step6-vpn.md)
 
 
 
@@ -61,7 +62,7 @@ Azure ATP algılayıcısını yüklendikten sonra Azure ATP algılayıcısı aya
    Herhangi bir uzak site etki alanı Eşitleyici adayı engeller Azure ATP sensor(s) devre dışı bırakmanız önerilir.
    Etki alanı denetleyiciniz salt okunur ise, bir etki alanı Eşitleyici adayı olarak ayarlamayın. Azure ATP etki alanı eşitleme hakkında daha fazla bilgi için bkz: [Azure ATP mimarisi](atp-architecture.md#azure-atp-sensor-features)
   
-4. **Kaydet**'e tıklayın.
+3. **Kaydet**'e tıklayın.
 
 
 ## <a name="validate-installations"></a>Yüklemeleri doğrulama
@@ -79,7 +80,8 @@ Azure ATP algılayıcısını başarıyla dağıtıldığını doğrulamak için
 
 
 > [!div class="step-by-step"]
-> [«4. adım](install-atp-step4.md)
+> [« 4. Adım](install-atp-step4.md)
+> [6. Adım »](install-atp-step6-vpn.md)
 
 
 

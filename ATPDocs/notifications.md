@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: acbab806e7f49052e0789927f452217c12efd992
-ms.sourcegitcommit: 8cb370eab974652451066570e435d8a4f304fa29
+ms.openlocfilehash: 79368731bcfef923466d566f06fe775ebf1caeac
+ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49326770"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49800057"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -37,7 +37,7 @@ Belirli bir e-posta adresine bildirimleri almak için şu parametreleri ayarlay�
 2. Tıklayın **bildirimleri**.
 3. Altında **posta bildirimleri**, e-posta aracılığıyla hangi bildirimlerin gönderilmesi gerektiğini belirtin - yeni uyarılar (şüpheli etkinlikler) ve yeni sistem durumu sorunları için gönderilebilir. 
  
- >  [!NOTE]
+ > [!NOTE]
  > Kuşkulu etkinlikler için e-posta uyarıları, yalnızca kuşkulu etkinlik oluşturulduğunda gönderilir.
  
 4. **Kaydet**'e tıklayın.

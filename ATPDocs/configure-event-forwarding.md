@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 90de9f0f02fa1b87fd2d741349a1d81e089b6fb1
-ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
+ms.openlocfilehash: 16a32e8d6d46fb843bf3afea20b3520612ede24c
+ms.sourcegitcommit: 412400488c79bf7e2450355ee08681fcb9bb836a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848533"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806889"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -72,22 +72,23 @@ Ekledikten sonra **ağ hizmeti** için **Event Log Readers** grubunda, değişik
 
 **3. adım: Azure ATP tek başına algılayıcı üzerinde aşağıdaki adımları gerçekleştirin.** 
 
-1.  Yükseltilmiş bir komut istemi açın ve *wecutil qc* yazın
-2.  **Olay Görüntüleyicisi**’ni açın. 
-3.  Sağ **abonelikleri** seçip **aboneliği oluşturma**. 
-
-   1.   Abonelik için bir ad ve açıklama girin. 
-   2.   İçin **hedef günlük**, onaylayın **iletilen olaylar** seçilir. Azure ATP'ın olayları okuması hedef günlüğün olmalıdır **iletilen olaylar**. 
-   3.   **Kaynak bilgisayar tarafından başlatılan**’ı seçin ve **Bilgisayar Gruplarını Seç**’e tıklayın.
-        1.  **Etki Alanı Bilgisayarı Ekle**’ye tıklayın.
-        2.  Etki alanı denetleyicisinin adını **Seçilecek nesne adını girin** alanına girin. Sonra, **Adları Denetle**’ye ve **Tamam**’a tıklayın. 
-        3.  **Tamam**'ı tıklatın.
+1. Yükseltilmiş bir komut istemi açın ve *wecutil qc* yazın
+2. **Olay Görüntüleyicisi**’ni açın. 
+3. Sağ **abonelikleri** seçip **aboneliği oluşturma**. 
+    
+    1. Abonelik için bir ad ve açıklama girin. 
+    2. İçin **hedef günlük**, onaylayın **iletilen olaylar** seçilir. Azure ATP'ın olayları okuması hedef günlüğün olmalıdır **iletilen olaylar**. 
+    3. **Kaynak bilgisayar tarafından başlatılan**’ı seçin ve **Bilgisayar Gruplarını Seç**’e tıklayın.
+        1. **Etki Alanı Bilgisayarı Ekle**’ye tıklayın.
+        2. Etki alanı denetleyicisinin adını **Seçilecek nesne adını girin** alanına girin. Sonra, **Adları Denetle**’ye ve **Tamam**’a tıklayın. 
+        3. **Tamam**'ı tıklatın.
         ![Olay Görüntüleyicisi resmi](media/wef3%20event%20viewer.png)     
-   4.   **Olayları Seç**’e tıklayın.
+    4. **Olayları Seç**’e tıklayın.
         1. **Günlüğe göre**’ye tıklayıp **Güvenlik**’i seçin.
-        2. **Olay Kimliklerini Ekler/Dışlar** alanına olay numarasını yazın ve **Tamam**’a tıklayın. Örneğin, 4776, aşağıdaki örnekte gibi yazın: ![sorgu filtresi resmi](media/wef-4-query-filter.png)
-   5.   Oluşturulan aboneliğe sağ tıklayıp **çalışma zamanı durumu** durumu ile ilgili olup olmadığını görmek için. 
-   6.   Birkaç dakika sonra iletilmek koymak olayları görmek için Azure ATP tek başına algılayıcı iletilen olaylar bazılarındaki denetleyin.
+        2. **Olay Kimliklerini Ekler/Dışlar** alanına olay numarasını yazın ve **Tamam**’a tıklayın. Örneğin, 4776 gibi aşağıdaki örnekte yazın:<br/>
+        ![Sorgu filtresi resmi](media/wef-4-query-filter.png)
+   5. Oluşturulan aboneliğe sağ tıklayıp **çalışma zamanı durumu** durumu ile ilgili olup olmadığını görmek için. 
+   6. Birkaç dakika sonra iletilmek koymak olayları görmek için Azure ATP tek başına algılayıcı iletilen olaylar bazılarındaki denetleyin.
 
 
 Daha fazla bilgi için bkz: [olayları iletmek ve toplamak için bilgisayarları yapılandırma](https://technet.microsoft.com/library/cc748890)
