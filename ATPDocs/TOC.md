@@ -36,6 +36,7 @@
 ## [Azure ATP portalı](workspace-portal.md)
 ## [Azure ATP raporları](reports.md)
 ## [Varlık profillerini anlama](entity-profiles.md)
+## [İzlenen etkinlikler](monitored-activities.md)
 ## [Hassas hesapları yönetme](sensitive-accounts.md)
 ## [Varlıkları algılamalardan dışlama](excluding-entities-from-detections.md)
 ## [Dışlamalar ve honeytoken hesapları](install-atp-step7.md)
