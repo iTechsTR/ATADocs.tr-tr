@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9209d48206e1f8da182f8ded50672362211dafe2
-ms.sourcegitcommit: 8ecb76ddfbf48c361d3637d15bd48313a3e68685
+ms.openlocfilehash: 5424c997de43ac186564b929ab50c7668333ed06
+ms.sourcegitcommit: 63ec9181f71edce6a950f5cc0d69428405436c48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49634775"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49963310"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -33,7 +33,8 @@ Geçerli bir tehdit söz konusu olduğunda veya **gerçek pozitif sonuç**, Azur
 Azure ATP tarafından izlenen bilgi etkinlikleri biçiminde görüntülenir. Azure ATP şu anda aşağıdaki etkinlik türlerini izlenmesini de destekler:
 
 > [!NOTE] 
-> Bu makalede, tüm Azure ATP algılayıcısı türleri için geçerlidir.
+> - Bu makalede, tüm Azure ATP algılayıcısı türleri için geçerlidir.
+>- Azure ATP izlenen etkinlikler, hem kullanıcı hem de makine profil sayfası görüntülenir. 
  
 
 ## <a name="monitored-user-activities-user-account-ad-attribute-changes"></a>İzlenen kullanıcı etkinlikleri: kullanıcı hesabı AD öznitelik değişiklikleri
@@ -59,7 +60,7 @@ Azure ATP tarafından izlenen bilgi etkinlikleri biçiminde görüntülenir. Azu
 |Değiştirilmiş grup üyeliği  |Kullanıcı Ekleme/Kaldırma yapıldığında, başka bir kullanıcı tarafından veya başlarına grubu içine/dışına.|
 |Hesap UPN adı değiştirildi  |Kullanıcının asıl adı değiştirildi.|
 
-## <a name="monitored-user-activities-ad-service-principal-operations"></a>İzlenen kullanıcı etkinlikleri: AD hizmet sorumlusu işlemleri
+## <a name="monitored-user-activities-ad-security-principal-operations"></a>İzlenen kullanıcı etkinlikleri: AD güvenlik sorumlusu işlemleri
 
 |İzlenen etkinliği|Açıklama|
 |---------------------|------------------|
@@ -106,6 +107,6 @@ Azure ATP tarafından izlenen bilgi etkinlikleri biçiminde görüntülenir. Azu
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 - [Güvenlik uyarılarını yönetme](working-with-suspicious-activities.md)
-- [Güvenlik Uyarısı Kılavuzu](suspicious-activity-guide.md)
+- [Güvenlik uyarısı kılavuzu](suspicious-activity-guide.md)
 - [Varlıkları araştırma](investigate-entity.md)
 - [Azure ATP forumuna bakın!](https://aka.ms/azureatpcommunity)
