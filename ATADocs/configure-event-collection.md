@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 512e7fa979a6fd5e140d65836b533b720a6dc03b
-ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
+ms.openlocfilehash: 6e15f09ff03402e7aed499e032bac018999ab538
+ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403225"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50132614"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -63,13 +63,13 @@ Ekledikten sonra **ağ hizmeti** için **Event Log Readers** grubunda, değişik
     1.  **Etkin**’i seçin.
     2.  Altında **seçenekleri**, tıklayın **Göster**.
     3.  Altında **SubscriptionManagers**, şu değeri girin ve tıklayın **Tamam**: *Server = http: / /<fqdnATAGateway>: 5985/wsman/SubscriptionManager/WEC, Refresh = 10* 
-    
-        *(Örneğin: Server = http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, Yenile = 10)*
- 
-    ![Hedef aboneliği yapılandırma resmi](media/wef%202%20config%20target%20sub%20manager.png)
-   
-    5.  **Tamam**'ı tıklatın.
-    6.  Yükseltilmiş bir komut isteminden şunu yazın: *gpupdate /force*. 
+      
+         *(Örneğin: Server = http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, Yenile = 10)*
+      
+         ![Hedef aboneliği yapılandırma resmi](media/wef%202%20config%20target%20sub%20manager.png)
+      
+    4.  **Tamam**'ı tıklatın.
+    5.  Yükseltilmiş bir komut isteminden şunu yazın: *gpupdate /force*. 
 
 **3. Adım: ATA Gateway’de aşağıdaki adımları gerçekleştirin** 
 

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3edcde9466ade71afe22a735256f3cb84f88df17
-ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
+ms.openlocfilehash: 5843d007eb89c1aae14b466e5b06dd4bddee447b
+ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2018
-ms.locfileid: "49315872"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50132716"
 ---
 *İçin geçerlidir: Azure Gelişmiş tehdit koruması*
 
@@ -83,25 +83,25 @@ Bu algılama, Azure ATP büyük birkaç basit bağlama kimlik doğrulamaları al
 
 2.  Altın bilet – excel elektronik tablosunda, ağ etkinliği sekmesini gidin. İlgili indirgenmiş alanı olduğunu göreceksiniz **istek anahtarı şifreleme türü**, ve **kaynak bilgisayarı desteklenen şifreleme türlerini** daha güçlü şifreleme yöntemlerini içerir.
 
-  1. Kaynak denetimi bu anahtarları tarafından erişilen, tüm eriştikleri bir kaynak varsa, doğrulayın, bunlar erişmek için gereken geçerli bir kaynak olduğundan emin olun. Ayrıca, hedef kaynağın güçlü şifreleme yöntemlerini destekleyip desteklemediğini doğrulayın. Bu öznitelik msDS-SupportedEncryptionTypes, kaynak hizmet hesabının denetleyerek Active Directory'de denetleyebilirsiniz.
+  a. Kaynak denetimi bu anahtarları tarafından erişilen, tüm eriştikleri bir kaynak varsa, doğrulayın, bunlar erişmek için gereken geçerli bir kaynak olduğundan emin olun. Ayrıca, hedef kaynağın güçlü şifreleme yöntemlerini destekleyip desteklemediğini doğrulayın. Bu öznitelik msDS-SupportedEncryptionTypes, kaynak hizmet hesabının denetleyerek Active Directory'de denetleyebilirsiniz.
   
-  2. Kaynak bilgisayar ve hesap denetleyin veya varsa birden çok kaynak bilgisayarlar ve hesabı, bir ortak olup olmadığını kontrol edin. Örneğin, tüm pazarlama sorumlunuza tetiklenmesi için uyarıya neden olan belirli bir uygulamayı kullanın. Hangi nadiren kullanılır, özel bir uygulama kimlik doğrulaması daha düşük bir şifreleme şifreleme kullanarak durumlar vardır. Kaynak bilgisayar gibi özel uygulamalar olup olmadığını denetleyin. Bu durumda, büyük olasılıkla bir zararsız gerçek pozitiftir ve kaldırılabilir.
+  b. Kaynak bilgisayar ve hesap denetleyin veya varsa birden çok kaynak bilgisayarlar ve hesabı, bir ortak olup olmadığını kontrol edin. Örneğin, tüm pazarlama sorumlunuza tetiklenmesi için uyarıya neden olan belirli bir uygulamayı kullanın. Hangi nadiren kullanılır, özel bir uygulama kimlik doğrulaması daha düşük bir şifreleme şifreleme kullanarak durumlar vardır. Kaynak bilgisayar gibi özel uygulamalar olup olmadığını denetleyin. Bu durumda, büyük olasılıkla bir zararsız gerçek pozitiftir ve kaldırılabilir.
   
 
 
 3.  Karmayı – excel elektronik tablosunda, ağ etkinliği sekmesini gidin. İlgili indirgenmiş alanı olduğunu göreceksiniz **şifrelenmiş zaman damgası şifreleme türü** ve **kaynak bilgisayarı desteklenen şifreleme türlerini** daha güçlü şifreleme yöntemlerini içerir.
 
-  1. Akıllı kart kullanarak akıllı kart yapılandırması yakın zamanda değiştirdiyseniz kullanıcılar oturum açtığında, bu uyarı tetiklenebilir durumlar vardır. İlgili hesapları için bunun gibi değişiklikler olup olmadığını denetleyin. Bu durumda, bu büyük olasılıkla bir zararsız gerçek pozitiftir ve kaldırılabilir.
-  2. Kaynak denetimi bu anahtarları tarafından erişilen, tüm eriştikleri bir kaynak varsa, doğrulayın, bunlar erişmek için gereken geçerli bir kaynak olduğundan emin olun. Ayrıca, hedef kaynağın güçlü şifreleme yöntemlerini destekleyip desteklemediğini doğrulayın. Bu öznitelik msDS-SupportedEncryptionTypes, kaynak hizmet hesabının denetleyerek Active Directory'de denetleyebilirsiniz.
+  a. Akıllı kart kullanarak akıllı kart yapılandırması yakın zamanda değiştirdiyseniz kullanıcılar oturum açtığında, bu uyarı tetiklenebilir durumlar vardır. İlgili hesapları için bunun gibi değişiklikler olup olmadığını denetleyin. Bu durumda, bu büyük olasılıkla bir zararsız gerçek pozitiftir ve kaldırılabilir.
+  b. Kaynak denetimi bu anahtarları tarafından erişilen, tüm eriştikleri bir kaynak varsa, doğrulayın, bunlar erişmek için gereken geçerli bir kaynak olduğundan emin olun. Ayrıca, hedef kaynağın güçlü şifreleme yöntemlerini destekleyip desteklemediğini doğrulayın. Bu öznitelik msDS-SupportedEncryptionTypes, kaynak hizmet hesabının denetleyerek Active Directory'de denetleyebilirsiniz.
 
 **Düzeltme**
 
 1.  İskelet anahtar – kötü amaçlı yazılımı kaldırın. Daha fazla bilgi için [Skeleton Key kötü amaçlı yazılım Analizine](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
-2.  Altın bilet – yönergeleri izleyin [altın bilet](#golden-ticket) kuşkulu etkinlikler.   
-    Ayrıca, etki alanı yöneticisi haklarına bir altın anahtar oluşturuluyor gerektirdiği için uygulama [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
+2.  Altın bilet – yönergeleri izleyin [altın bilet](#golden-ticket) kuşkulu etkinlikler.   
+    Ayrıca, etki alanı yöneticisi haklarına bir altın anahtar oluşturuluyor gerektirdiği için uygulama [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
 
-3.  Karmayı –, ardından ilgili hesabı hassas, değilse o hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilir olsa da bu saldırgan parola karması, yeni Kerberos biletleri oluşturmanızı engeller. Hassas hesap ise, iki kez altın bilet şüpheli etkinliğin olduğu gibi KRBTGT hesap sıfırlama düşünmelisiniz. İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Ayrıca bkz [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Yanal hareket tekniğidir olduğundan, en iyi yöntemleri takip [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
+3.  Karmayı –, ardından ilgili hesabı hassas, değilse o hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilir olsa da bu saldırgan parola karması, yeni Kerberos biletleri oluşturmanızı engeller. Hassas hesap ise, iki kez altın bilet şüpheli etkinliğin olduğu gibi KRBTGT hesap sıfırlama düşünmelisiniz. İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Ayrıca bkz [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Yanal hareket tekniğidir olduğundan, en iyi yöntemleri takip [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="honeytoken-activity"></a>Honeytoken etkinliği
 
@@ -140,7 +140,7 @@ Karma hedeflenen kullanıcı sahibi veya düzenli olarak kullandığı bir bilgi
 
 1. Ardından ilgili hesabı önemli değilse, o hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilir olsa da bu saldırgan parola karması, yeni Kerberos biletleri oluşturmanızı engeller. 
 
-2. Hassas hesap ise, iki kez altın bilet şüpheli etkinliğin olduğu gibi KRBTGT hesap sıfırlama düşünmelisiniz. İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), ayrıca bkz [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Yanal hareket tekniğidir olduğundan, en iyi yöntemleri takip [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
+2. Hassas hesap ise, iki kez altın bilet şüpheli etkinliğin olduğu gibi KRBTGT hesap sıfırlama düşünmelisiniz. İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), ayrıca bkz [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Yanal hareket tekniğidir olduğundan, en iyi yöntemleri takip [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="identity-theft-using-pass-the-ticket-attack"></a>Pass--Ticket saldırısı kullanan kimlik hırsızlığı
 
@@ -158,7 +158,7 @@ Pass--Ticket bir yanal hareket tekniğidir saldırganlar bir bilgisayardan Kerbe
 
 1. Ardından ilgili hesabı önemli değilse, o hesabın parolasını sıfırlayın. Mevcut biletleri, süreleri doluncaya kadar hala kullanılabilir olsa da bu saldırgan parola karması, yeni Kerberos biletleri oluşturmanızı engeller.  
 
-2. Hassas hesap ise, iki kez altın bilet şüpheli etkinliğin olduğu gibi KRBTGT hesap sıfırlama düşünmelisiniz. İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), ayrıca bkz [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Yanal hareket tekniğidir olduğundan, en iyi uygulamaları izlemesi [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
+2. Hassas hesap ise, iki kez altın bilet şüpheli etkinliğin olduğu gibi KRBTGT hesap sıfırlama düşünmelisiniz. İki kez KRBTGT sıfırlama tüm Kerberos biletleri bu etki alanında bunu yapmadan önce plan geçersiz kılar. Kılavuzunda bkz [KRBTGT hesap parolası sıfırlama betikleri artık müşteriler tarafından kullanılabilir](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), ayrıca bkz [KRBTGT hesap parolası/anahtarı sıfırlama aracını](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Yanal hareket tekniğidir olduğundan, en iyi uygulamaları izlemesi [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Kerberos altın bilet<a name="golden-ticket"></a>
 
@@ -217,7 +217,7 @@ DPAPI yedekleme ana anahtarı almak için kullanıldığında, bu algılama, bir
 
 **Düzeltme**
 
-DPAPI kullanmak için saldırganın etki alanı yönetici hakları gerekir. Uygulama [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
+DPAPI kullanmak için saldırganın etki alanı yönetici hakları gerekir. Uygulama [Pass the hash önerilerini](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="malicious-replication-of-directory-services"></a>Dizin hizmetlerinin kötü amaçlı çoğaltması
 
@@ -244,12 +244,12 @@ Bir çoğaltma isteği bir etki alanı denetleyicisi olmayan bir bilgisayardan b
 
 Şu izinleri doğrulayın: 
 
-- Dizin Değişikliklerini Çoğaltma   
+- Dizin Değişikliklerini Çoğaltma   
 
 - Tüm dizin değişikliklerini çoğaltma  
 
-Daha fazla bilgi için [SharePoint Server 2013'te profil eşitleme izinleri verme Active Directory Domain Services](https://technet.microsoft.com/library/hh296982.aspx).
-Yararlanabileceğiniz [AD ACL tarayıcı](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) veya etki alanında kimin bu izinlere sahip olduğunu belirlemek için bir Windows PowerShell Betiği oluşturabilirsiniz.
+Daha fazla bilgi için [SharePoint Server 2013'te profil eşitleme izinleri verme Active Directory Domain Services](https://technet.microsoft.com/library/hh296982.aspx).
+Yararlanabileceğiniz [AD ACL tarayıcı](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) veya etki alanında kimin bu izinlere sahip olduğunu belirlemek için bir Windows PowerShell Betiği oluşturabilirsiniz.
 
 
 ## <a name="privilege-escalation-using-forged-authorization-data"></a>Sahte yetkilendirme verileri kullanan ayrıcalık yükseltme
@@ -270,7 +270,7 @@ Windows Server'ın eski sürümlerini güvenlik açıkları, saldırganların ay
 
 **Düzeltme**
 
-Windows Server 2012 R2 ve altı işletim sistemi sürümleri kullanan etki alanı denetleyicilerinde [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege)’in yüklü olduğundan ve tüm üye sunucularla 2012 R2 ve altı sürümlerdeki etki alanı denetleyicilerinin KB2496930 güncel sürümünde olduğundan emin olun. Daha fazla bilgi için bkz. [Gümüş PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) ve [Sahte PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
+Emin tüm etki alanı denetleyicileri Windows Server 2012 R2 işletim sistemi ile birlikte yüklenen [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) ve tüm üye sunuculara ve 2012 R2 etki alanı denetleyicilerinin KB2496930 güncel. Daha fazla bilgi için [Gümüş PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) ve [sahte PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
 ## <a name="reconnaissance-using-account-enumeration"></a>Hesap numaralandırma kullanarak keşif
 
@@ -353,7 +353,7 @@ DNS protokolünde birkaç sorgu türü vardır. Azure ATP olmayan DNS sunucular�
 **Düzeltme**
 
 DNS kullanarak keşfi önlemek amacıyla DNS sunucusunu güvenlik altına almak için bölge aktarımlarını yalnızca belirtilen IP adresleriyle kısıtlamak veya devre dışı bırakmak mümkündür. Bölge aktarımlarını kısıtlamak hakkında daha fazla bilgi için bkz. [bölge aktarımlarını kısıtlama](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx).
-Bölge aktarımlarını değiştirmek, bir denetim listesi için ele alınması gereken görevlerden biridir [DNS sunucularınızı iç ve dış saldırılara karşı güvenli hale getirme](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
+Bölge aktarımlarını değiştirmek, bir denetim listesi için ele alınması gereken görevlerden biridir [DNS sunucularınızı iç ve dış saldırılara karşı güvenli hale getirme](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
 
 ## <a name="reconnaissance-using-smb-session-enumeration"></a>SMB Oturumu Listeleme kullanarak Keşif
 
@@ -404,7 +404,7 @@ Yönetici kimlik bilgilerini tehlikeye veya sıfır gün yararlanma kullanmak sa
 
 1. Katman 0 olmayan makinelerden etki alanı denetleyicilerine uzaktan erişimi kısıtlayın.
 
-2. Uygulama [ayrıcalıklı erişim](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) yalnızca güçlendirilmiş makinelerin yöneticileri için etki alanı denetleyicilerine bağlanmasına izin vermek için.
+2. Uygulama [ayrıcalıklı erişim](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) yalnızca güçlendirilmiş makinelerin yöneticileri için etki alanı denetleyicilerine bağlanmasına izin vermek için.
 
 ## <a name="suspicious-authentication-failures"></a>Şüpheli kimlik doğrulaması hataları
 
@@ -500,7 +500,7 @@ Etki alanınızı emin olmak için gerekli olayları denetleyicileri denetim.
 
 **Araştırma**
 
-1. Grup değişikliği yasal mı? </br>Nadiren oluşur ve "olarak normal", öğrenilen değil yasal Grup değişikliklerini zararsız gerçek pozitif sonuç olarak değerlendirilebilecek bir uyarı neden olabilir.
+1. Grup değişikliği yasal mı? </br>Nadiren oluşur ve "olarak normal", öğrenilen değil yasal Grup değişikliklerini zararsız gerçek pozitif sonuç olarak değerlendirilebilecek bir uyarı neden olabilir.
 
 2. Eklenen nesne bir kullanıcı hesabı varsa, kullanıcı hesabının yönetim grubuna eklendikten sonra geçen hangi eylemleri denetleyin. Daha fazla bağlam almak için Azure ATP kullanıcı sayfasına gidin. Diğer vardı önce veya sonra ek hesapla ilişkili şüpheli etkinlikleri gerçekleşen? İndirme **gizli Grup değişikliği** ne olan diğer değişiklikleri görmek için raporu yapılmış ve aynı süre boyunca kim tarafından.
 

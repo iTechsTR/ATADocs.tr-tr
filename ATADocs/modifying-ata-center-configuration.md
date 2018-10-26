@@ -12,12 +12,12 @@ ms.service: ''
 ms.technology: ''
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 80f96966a1ba9e62b23311cc19ed8fc5a8210bba
-ms.sourcegitcommit: 56065ee43dac299203871cd6f025315520750b3b
+ms.openlocfilehash: b1b8b1fb9c1bf5a11c8a05daf3567f4a25c35c3f
+ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233873"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50132699"
 ---
 *İçin geçerlidir: Advanced Threat Analytics sürüm 1.9*
 
@@ -54,6 +54,7 @@ URL aşağıdaki senaryolarda kullanılır:
 3. ATA Gateway eşitleme bekleyin. Şimdi, ATA konsoluna erişmek iki olası URL sahiptirler. ATA Gateway özgün URL'yi kullanarak bağlantı kurabilir sürece, yeni bir tane denemez.
 
 4. Merkezi yapılandırma sayfasında, güncelleştirilmiş yapılandırma ile eşitlenen tüm ATA Gateway'ler tıkladıktan sonra **etkinleştirme** yeni URL'sini etkinleştirmek için düğme. Yeni URL etkinleştirdiğinizde, ATA Gateway bileşenlerinin ATA Center erişmek için artık yeni URL'yi kullanır. ATA Center hizmetine bağlandıktan sonra ATA Gateway en yeni yapılandırmayı çeker ve ATA Konsolu için yalnızca yeni URL'ye sahiptir. 
+
 5. 
  ![Sertifikayı etkinleştirin](media/center-activation.png)
 
