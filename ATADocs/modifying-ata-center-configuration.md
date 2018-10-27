@@ -26,30 +26,30 @@ ms.locfileid: "50132699"
 # <a name="modifying-the-ata-center-configuration"></a>ATA Center yapılandırmasını değiştirme
 
 
-İlk dağıtımdan sonra, ATA Center’da değişiklik yaparken dikkatli olmak gerekir. Konsol URL'si ve sertifikasını güncelleştirirken aşağıdaki yordamları kullanın.
+İlk dağıtımdan sonra, ATA Center’da değişiklik yaparken dikkatli olmak gerekir. Konsol URL'si ve sertifikasını güncelleştirirken aşağıdaki yöntemleri kullanın.
 
 ## <a name="the-ata-console-url"></a>ATA Konsolu URL'si
 
-URL aşağıdaki senaryolarda kullanılır:
+Bu URL aşağıdaki senaryolarda kullanılır:
 
--   Bu, ATA Gateway'ler tarafından ATA Center ile iletişim kurmak için kullanılan URL'dir.
+-   Bu URL, ATA Gateway'ler tarafından ATA Center ile iletişim kurmak için kullanılan URL'dir.
 
 - ATA Gateway bileşenleri yüklemesi – ATA Gateway yüklenirken, kendini ATA Center’a kaydeder. Bu kayıt işlemi ATA Konsolu’na bağlantı kurularak gerçekleştirilir. ATA Konsolu URL'si için bir FQDN girerseniz, ATA Gateway FQDN'yi ATA Konsolu'nda bağlı IP adresine çözümleyebileceğinden emin olun.
 
 -   Uyarılar – ATA bir SIEM veya e-posta uyarısı gönderdiğinde, kuşkulu etkinliğin bağlantısını içerir. Bağlantının ana bilgisayar bölümü, ATA Konsolu URL ayarıdır.
 
--   Kendi iç sertifika yetkilisi (CA) bir sertifika yüklediyseniz, sertifika konu adında URL'sine eşleştirin. Bu, kullanıcıların ATA Konsolu'na bağlanırken uyarı iletisi almalarını önler.
+-   Kendi iç sertifika yetkisinden (CA) bir sertifika yüklediyseniz, sertifikadaki konu adıyla URL'yi eşleştirin. Bu, kullanıcıların ATA Konsolu'na bağlanırken uyarı iletisi almalarını önler.
 
--   ATA Konsolu URL'si için bir FQDN kullanmak, önceki uyarıları kesmeden veya ATA Gateway paketini karşıdan yüklemeyi yeniden ATA Konsolu tarafından kullanılan IP adresini değiştirebilmenizi sağlar. DNS’yi yeni IP adresiyle güncelleştirmeniz yeterli olur.
+-   ATA Konsolu URL'si için bir FQDN kullanmak, önceki uyarıları kesmeden veya ATA Gateway paketini yeniden indirmeden ATA Konsolu tarafından kullanılan IP adresini değiştirebilmenizi sağlar. DNS’yi yeni IP adresiyle güncelleştirmeniz yeterli olur.
 
 1. Kullanmak istediğiniz yeni URL ATA Konsolu'nun IP adresine çözümlenen emin olun.
 
-2. ATA ayarlarında altında **Merkezi**, yeni URL'yi girin. Bu noktada, ATA Center hizmeti hala özgün URL'yi kullanır. 
+2. ATA ayarlarında **Merkez** ayarlar bölümünde, yeni URL'yi girin. Bu noktada, ATA Center hizmeti hala orijinal URL'yi kullanır. 
 
  ![ATA yapılandırmasını değiştirme](media/change-center-config.png)
 
   > [!NOTE]
-  > Özel bir IP adresi girdiyseniz tıklayamazsınız **etkinleştirme** IP adresini ATA Center'a yükleyene kadar.
+  > Özel bir IP adresi girdiyseniz IP adresini ATA Center'a yükleyene kadar **etkinleştirme**'ye tıklayamazsınız.
     
 3. ATA Gateway eşitleme bekleyin. Şimdi, ATA konsoluna erişmek iki olası URL sahiptirler. ATA Gateway özgün URL'yi kullanarak bağlantı kurabilir sürece, yeni bir tane denemez.
 
